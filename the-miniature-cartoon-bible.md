@@ -2,118 +2,120 @@
 
 ## Canonical Master Prompt and World Definition
 
-Version: 1.0
-Source: "De Miniatuur (Een hedendaagse klucht in één bedrijf)"
-Purpose: Single authoritative document for generating cartoons, comics, illustrations, character sheets, storyboards and future scenes.
+Version: 1.1
 
----
+### Canonical Corrections
+- "Dieje van den Overkant" is the Black King, not an unseen opponent.
+- The central bump affects d4, e4, d5 and e5.
+- The cola stain almost completely covers f6.
 
-# 1. Core Concept
+# Core Concept
+A living chess set prepares for a glorious battle while board defects, stains and imperfections make proper play nearly impossible.
 
-A living chess set prepares for a glorious battle.
-
-The King believes he is leading a historic military campaign and a brilliant chess game.
-
-Unfortunately, the pieces are more concerned with a deformation in the board, dirt, stains, paprika chips and spilled cola than with winning the game.
-
-The resulting story is a comedy of incompetence, hierarchy, rebellion and absurd priorities.
-
----
-
-# 2. One-Sentence Premise
-
-An overconfident King attempts to conduct a glorious chess battle while his living chess pieces refuse to cooperate because the chessboard is damaged, dirty and uncomfortable.
-
----
-
-# 3. World Rules
-
+# World Rules
 - Chess pieces are alive.
 - Chess pieces can speak.
 - Chess moves are military orders.
+- The chessboard is a physical world.
 - Board defects are real terrain features.
 - Pieces possess free will.
-- The opponent is never shown directly.
-
----
 
 # Characters
 
 ## Koning
-- Arrogant, nostalgic, strategic, dramatic.
-- Obsessed with proper chess.
-- Constantly frustrated by the incompetence around him.
+- Overconfident commander.
+- Nostalgic about old wooden boards.
+- Loves strategy.
+- Easily frustrated.
 
 ## Regina
-- Voice of reason.
-- Practical and intelligent.
+- Intelligent.
+- Practical.
+- Usually correct.
 
 ## Alfil
 - Diplomatic advisor.
-- Loyal and intelligent.
-- Often mediates between classes.
+- Often mediates conflict.
+- Paprika chip crumbs on mitre.
 
 ## Caballo
 - Brave but foolish knight.
 - Refuses dirty squares.
-- Causes chaos unintentionally.
+- Causes accidental chaos.
 
 ## Pionnen
-- Rebellious worker class.
-- Refuse to march over the bump in the board.
+- Working-class collective.
+- Trigger the story through rebellion.
 
-## Dieje van den Overkant
-- Invisible opponent.
-- Never shown directly.
+## Black King (Dieje van den Overkant)
+- Opposing monarch.
+- Rival commander.
+- Lives on the opposite side of the board.
 
----
-
-# Environmental Hazards
+# Board Geography
 
 ## Central Bump
-The central comic conflict of the story.
+Affected squares:
+- d4
+- e4
+- d5
+- e5
 
-## Paprika Chips
-Visible crumbs associated with Alfil.
+Visual rule:
+A modest plastic deformation treated by the characters as a major obstacle.
 
-## Sticky Board Squares
-Several locations are considered dirty terrain.
+## Cola Stain
+Location:
+- f6
 
-## Cola Spill
-Located near f6.
-Prevents a winning checkmate.
+Visual rule:
+The stain almost completely covers the square.
 
----
+Narrative importance:
+A winning move is refused because of it.
+
+# Character Designs
+
+## Koning
+- Burgundy robe
+- Gold crown
+- Medals from former campaigns
+- Large expressive moustache
+
+## Regina
+- Elegant white-and-gold design
+- Refined crown
+- Calm visual presence
+
+## Alfil
+- Tall mitre
+- Advisor robes
+- Permanently visible paprika crumbs
+
+## Caballo
+- Horse-headed officer
+- Military decorations
+- Heroic posture
+
+## Pionnen
+- Small worker-like pawns
+- Usually shown in groups
+
+# Themes
+- Grand strategy defeated by trivial problems
+- Leadership failure
+- Working-class resistance
+- Nostalgia
+- Absurd bureaucracy
 
 # Visual Style
+Preferred direction:
+- Franco-Belgian comic style
+- Flemish humor
+- Bright colors
+- Strong outlines
+- Expressive faces
+- Family friendly tone
 
-- Franco-Belgian comic style.
-- Bright colors.
-- Strong outlines.
-- Family friendly.
-- Exaggerated physical comedy.
-- Theatrical staging.
-
----
-
-# Universal Master Illustration Prompt
-
-Create a high-quality Franco-Belgian comic-style illustration based on the world of De Miniatuur.
-
-The setting is a living plastic chessboard populated by anthropomorphic chess pieces acting as military officers and soldiers.
-
-The King is an overconfident and theatrical commander obsessed with proper chess strategy and nostalgic for older generations of chess equipment.
-
-Regina is intelligent, elegant and practical.
-
-Alfil is a diplomatic advisor wearing a mitre with visible paprika chip crumbs.
-
-Caballo is a brave but foolish knight who refuses to stand on dirty squares.
-
-The pawns are rebellious workers who initiated the crisis by refusing to cross a raised bump in the center of the board.
-
-The board contains visible wear, terrain defects, sticky squares and a notable cola stain near f6.
-
-Tone must be humorous, theatrical, family-friendly and absurd.
-
-Use expressive poses, strong outlines, bright colors, visual comedy and exaggerated military behavior.
+# Universal Master Prompt
+Create a high-quality Franco-Belgian comic-style illustration based on De Miniatuur. The setting is a worn plastic chessboard populated by living chess pieces behaving as military officers and soldiers. The White King is dramatic, nostalgic and overconfident. Regina is intelligent and practical. Alfil is a diplomatic advisor with visible paprika-chip crumbs on his mitre. Caballo is a brave but foolish knight who refuses dirty squares. The pawns are rebellious workers. The Black King is the rival monarch on the opposite side of the board. The board contains a raised deformation covering d4, e4, d5 and e5, plus a large cola stain nearly covering f6. Emphasize humor, theatricality, military overreaction, bright colors, expressive poses and visual comedy.
