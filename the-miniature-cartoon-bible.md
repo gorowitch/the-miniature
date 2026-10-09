@@ -240,7 +240,7 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 
 ## Board
 - Plastic tournament board.
-- Green/beige tournament board.
+- Dark brown (almost black)/beige tournament board: dark squares very dark brown with a near-black flavour, light squares beige. (Supersedes green/beige, see Appendix A.)
 - Plastic board less than three years old.
 - Worn but functional.
 - Earlier wooden boards existed.
@@ -259,6 +259,14 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - A modest plastic deformation that the characters treat as a major obstacle.
 - Main source of conflict.
 
+### Boebel Appearance (approved by the author on panel 2b)
+- A smooth, rounded rise of the board surface, highest at the point where d4, e4, d5 and e5 meet, sloping gently down to flat board at the edges of those four squares.
+- Modest height (slightly exaggerated for readability), like plastic that has warped upwards.
+- The squares themselves bend with it: their edges and the colour pattern follow the curve; nothing sits on top of the board.
+- Made readable only by light and shadow: one slope catches the light, the opposite slope is in soft shadow.
+- No outline, no rings or contour lines, no separate object, no dome with a hard edge.
+- Reference sketch: `references/boebel-panel-2b-sketch.png` (layout preview, not final art).
+
 ## Cola Stain
 - Square f6.
 - Specifically cola.
@@ -266,12 +274,18 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - Wet ("natten drets").
 - Critical plot element: it prevents the winning mate 7. Pf6#.
 
+### Cola Stain Visibility
+- Scenes 1 to 14: the stain may be visible, but subtly: a faint discolouration of f6, easy to overlook.
+- Scene 15 (Caballo refuses f6): the stain is shown explicitly, wet, dark and glossy.
+- The explicit stain is the reveal of Caballo's complaint; it must not be given away earlier.
+
 ## Greasy Spot (f3)
 - Square f3.
 - Named in the play: "vies veld in die vettige plek".
 - Sticky as it dries.
 - Reason Caballo plays 3. Ph3 instead of 3. Pf3.
-- Visual definition still open (see Appendix B, item 3).
+- Visual: a faint, translucent, yellowish greasy smear with a slight shine.
+- Smaller and subtler than the cola stain on f6, but clearly visible.
 
 ## Paprika
 - Paprika stains only on Alfil's mitre.
@@ -340,6 +354,11 @@ Felt:
 ## Gestures
 - Mixed gesture style: theatrical gestures and pointing gestures.
 
+## Knight Orientation
+- All knights (white and black) look towards the centre files (d and e), in every image.
+- A knight on the kingside (f, g, h files) faces towards the queenside; a knight on the queenside (a, b, c files) faces towards the kingside.
+- Applies regardless of camera angle: the knight faces the centre of the board, not the camera.
+
 ---
 
 # SECTION 7 - CHARACTER DOSSIERS
@@ -380,6 +399,7 @@ Felt:
 - Elegant and regal.
 - Regal.
 - Visible hair.
+- Hair colour: light, roughly blonde with a slight red tint. Never dark hair. The exact shade is not specified.
 - Clearly characterful queen.
 - Voice of reason.
 - Practical and intelligent.
@@ -412,6 +432,7 @@ Felt:
 - Protects his felt bottom.
 - Felt safety over discipline.
 - Starts on g1: g1-h3-g5xh7.
+- Always looks towards the centre files (see Section 6, Knight Orientation).
 
 ## White Pawns
 - Soldiers.
@@ -619,17 +640,28 @@ ALWAYS:
 - Exact board position.
 - Board position as listed in Section 12.
 - Correct piece count.
+- Every visible square that holds a piece shows that piece. This holds for all images, including close-ups and cropped frames: if any part of an occupied square is in frame, its piece is drawn (it may be cut off by the frame edge).
 - Original dialogue only.
 - Only original story text in speech balloons.
 - Visible felt.
 - Boebel integrated into the board surface on d4/e4/d5/e5.
 - Cola stain on f6 when visible.
+- Cola stain subtle before Scene 15, explicit from Scene 15 (see Section 4).
+- Greasy spot on f3 when visible.
 - Paprika only on Alfil's mitre.
 
 If a panel contains an incorrect position, the panel is wrong.
 
+## Script Fidelity Rule
+- What is shown visually must be in the script (Section 1).
+- Do not invent visual content that is not in the script: no extra objects, props, settings, events or actions.
+- Character appearance and board details come from the canon in this bible, which is derived from the script or decided by the author.
+- Anything that is neither in the script nor decided by the author is an open question (Appendix B), not something to fill in.
+- Staging is allowed when it supports the line: poses, gestures, gaze and facial expressions may be chosen if they follow from the dialogue or the character canon (for example, the King gestures while talking and looks at whoever he addresses). Staging never adds new actions, events or objects.
+- Characters in conversation look slightly at each other, also when seen from behind (heads turned a little towards each other, showing a partial profile).
+
 ## Master Illustration Prompt
-Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a green/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. The boebel is a deformation of the board surface itself spanning d4, e4, d5 and e5. The cola stain nearly covers f6. No invented text. No coordinate labels. No extra pieces. No board inaccuracies.
+Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. The boebel is a deformation of the board surface itself spanning d4, e4, d5 and e5. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. No coordinate labels. No extra pieces. No board inaccuracies.
 
 ## Cover Direction
 - The entire cast dominates the cover.
@@ -641,6 +673,7 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 
 # SECTION 14 - FORBIDDEN ELEMENTS
 NEVER:
+- Visual content that is not in the script or decided by the author.
 - Narrator boxes.
 - Invented captions.
 - Coordinate labels.
@@ -649,6 +682,7 @@ NEVER:
 - Invented jokes.
 - Extra pieces.
 - Missing pieces.
+- A visible occupied square without its piece (also in close-ups).
 - Duplicated pieces.
 - Decorative rearrangement.
 - Approximations.
@@ -679,7 +713,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | J2 | Distinctive noses. |
 | K1 | Moustaches mainly for important characters. |
 | L2 | Medium beard for White King. |
-| M1 | Green/beige tournament board. |
+| M1 | Green/beige tournament board. (Superseded in 7.0: dark brown/beige, see Corrections.) |
 | N2 | Veteran pawns may have moustaches or short beards. |
 | O2 | Mixed pawn age distribution. |
 | P2 | Balanced officer/pawn visibility. |
@@ -701,6 +735,17 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.0 | Section 1 replaced by the original play text supplied by the author; the 5.0 copy had shortened four speeches. |
 | 7.0 | Captured pieces stand beside the board (from the play text). |
 | 7.0 | Added f3 greasy spot to board canon (from the play text). |
+| 7.0 | f3 greasy spot visual approved by the author: faint yellowish greasy smear, subtler than the cola stain. |
+| 7.0 | Cola stain on f6 is subtle until Caballo complains about it (Scene 15); only then is it shown explicitly (author feedback on Scene 1). |
+| 7.0 | Universal rule: every visible square that holds a piece shows that piece, in every image including close-ups (author feedback on panel 1b). |
+| 7.0 | Script fidelity rule: what is shown visually must be in the script; nothing may be invented (author feedback on panel 1b). |
+| 7.0 | Staging (pose, gesture, gaze, expression) is allowed when it supports the line or the character canon; no new actions or objects. |
+| 7.0 | Regina's hair is light, roughly blonde with a slight red tint, never dark; exact shade not specified. |
+| 7.0 | All knights look towards the centre files, in every image. |
+| 7.0 | Board colours: dark squares very dark brown (near black) instead of green; light squares stay beige (author feedback on panel 1c). Replaces M1. |
+| 7.0 | Characters in conversation look slightly at each other, also when seen from behind (author feedback on panel 1c). |
+| 7.0 | Boebel appearance approved: smooth warped rise shown only by light and shadow, squares bending with it (author feedback on panel 2b). |
+| 7.0 | Final images are generated by Copilot; this bible is the script it follows. Sketches are layout previews only. |
 
 ---
 
@@ -708,13 +753,18 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Exact board position (matches one state in Section 12).
 - Correct piece count for that state.
 - No extra, missing or duplicated pieces.
+- Every visible occupied square shows its piece (check the frame edges of close-ups).
+- Every knight looks towards the centre files.
 - White second-rank pawns have the major pieces behind them.
 - Boebel integrated into d4/e4/d5/e5.
 - Cola stain on f6 when visible.
+- Cola stain subtle before Scene 15; explicit only from Scene 15.
+- Greasy spot on f3 when visible.
 - Paprika only on Alfil's mitre; none on the board.
 - Felt visible.
 - Realistic pawn faces.
 - Only original dialogue; no invented text.
+- Nothing shown that is not in the script or decided by the author (Script Fidelity Rule, Section 13).
 - No narrator boxes.
 - No coordinates or field labels.
 
@@ -728,12 +778,41 @@ Each scene lists the board state shown, the characters and the dialogue it cover
 - Characters: White King, Alfil; White army in formation.
 - Dialogue: Koning "Wat is het vandaag toch een heuglijke dag..." / Alfil "Jawel Sire...".
 - Purpose: Introduce the White King and the army.
+- Full panel script: Section 18.
+- Panels:
+  - 1a: Koning "Wat is het vandaag toch een heuglijke dag. ... klaar voor deze dappere strijd."
+    - Camera: from Black's perspective, zoomed in on the white pieces only.
+    - Framing: Caballo (g1), Alfil (f1), White King (e1) and Regina (d1); from Black's side they appear left to right in that order.
+    - The second-rank white pawns stand in the foreground; the officers tower behind them.
+  - 1b: Koning "Dat "Dieje van den overkant" ... klaar voor deze heldhaftige strijd ?"
+    - Camera: from Black's perspective, zoomed in on the white pieces only.
+    - Framing: Alfil (f1) and White King (e1); from Black's side Alfil appears left, the King right.
+    - Caballo (g1) and Regina (d1) are fully included in the image, flanking Alfil and the King.
+    - The King gestures to Alfil.
+  - 1c: Alfil "Jawel Sire, zij wachten op uw bevel !"
+    - Camera: over Alfil's shoulder, from behind White's back rank, looking towards Black.
+    - Framing: Alfil and the White King in the foreground seen from behind; the white troops before them; the black army in the distance.
+    - Alfil and the King look slightly at each other (partial profiles).
 
 ## Scene 2 - Ten Aanval
 - Position: State 0.
 - Characters: White King, White Pawns, Regina.
 - Dialogue: Koning "Wel laat ons dan niet langer talmen..." / (hoorbaar gemor) / Regina "Awel ? Waarom gebeurt er niks ?".
 - Purpose: The 1. e4 order fails.
+- Full panel script: Section 18.
+- Panels:
+  - 2a: Koning "Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4"
+    - Camera: from Black's perspective, zoomed in on the White King (he is talking).
+    - Framing: Alfil (f1) and Regina (d1) remain fully in the image.
+  - 2b: (hoorbaar gemor vanop de tweede rij)
+    - Camera: from Black's side, slightly off-centre, at an angle that keeps as many pawns as possible in the image: all eight pawns in frame, the officers behind them.
+    - Wide panel format (landscape) to avoid empty background above the pieces.
+    - The grumbling is shown with wordless scribble balloons and grumpy faces; the e2 pawn does not move.
+    - Only half the board is in frame: up to the fourth rank.
+    - Part of the boebel (on d4/e4) is visible in the image, in the foreground: seen from Black's side, rank 4 is the near edge of the frame.
+  - 2c: Regina "Awel ? Waarom gebeurt er niks ?"
+    - Camera: from Black's perspective, zoomed in on Regina (she is talking).
+    - Regina looks at the White King.
 
 ## Scene 3 - Alfil Sent to the Pawns
 - Position: State 0.
@@ -812,12 +891,95 @@ Each scene lists the board state shown, the characters and the dialogue it cover
 - Characters: Alfil, White King, Caballo.
 - Dialogue: Alfil "Vergeef me dat ik u onderbreek Sire..." / Koning "Bedankt voor dieje info..." / Caballo "Absoluut geen sprake van Sire !...".
 - Purpose: The cola stain blocks the winning mate.
+- Note: First scene in which the cola stain on f6 is shown explicitly.
 
 ## Scene 16 - Draw Accepted
 - Position: State 12.
 - Characters: White King, Caballo, Black King.
 - Dialogue: Koning (zucht) "Pakt dat dan maar aan." / 1/2 - 1/2.
 - Purpose: Final punchline.
+
+---
+
+# SECTION 18 - PANEL SCRIPT (COPILOT-READY)
+The final images are generated by Copilot. For each panel, give Copilot the **Common Prompt Block** followed by that panel's block. Each panel block is self-contained: it lists everything that must be in the frame.
+
+Orientation reminder: seen from Black's side, the files run from h (left) to a (right). Seen from White's side, from a (left) to h (right).
+
+## Common Prompt Block
+Belgian comic panel in the style of Suske en Wiske: clean ink outlines, bright flat colours, family friendly, highly expressive eyes, a distinctive nose for every character.
+
+The characters are living wooden chess pieces with classic chess-piece bodies, faces, simple arms and hands, and no feet. White pieces are light natural wood with visible grain; black pieces are very dark brown stained wood with visible grain. Every piece has a traditional green felt bottom that is always visible.
+
+The board is a plastic tournament board: very dark brown, almost black, dark squares and beige light squares, with a beige border. No coordinate letters or numbers anywhere.
+
+Recurring characters:
+- White King: ancient but pristine, simple medieval crown, medium white beard and moustache, proud and theatrical.
+- Regina (White Queen): elegant and regal, light hair (roughly blonde with a slight red tint, never dark).
+- Alfil (White bishop that starts on f1): scholar and advisor with a mitre that has small orange-red paprika stains.
+- Caballo (White knight that starts on g1): highly expressive horse-headed knight.
+- Pawns: soldiers with realistic faces (not blob-like); some veterans have moustaches or short beards; they show wear.
+
+Board details:
+- Boebel: the board surface itself is warped upwards where d4, e4, d5 and e5 meet: a smooth rounded rise, highest at that shared corner, sloping gently down to flat board at the edges of those four squares. The squares bend with it. It is visible only through light on one slope and soft shadow on the other. No outline, no rings, no separate object, no hard-edged dome.
+- Greasy spot on f3: a faint, translucent, yellowish greasy smear with a slight shine, smaller and subtler than a stain.
+- Cola stain on f6 (Scenes 1 to 14): only a faint discolouration of the square, easy to overlook.
+
+Rules:
+- Every knight faces towards the centre files (d and e).
+- Every visible square that holds a piece shows that piece (pieces may be cut off by the frame edge).
+- No extra, missing or moved pieces.
+- Background: plain and neutral (the surroundings of the board are not defined).
+- Speech balloons contain exactly the text given, nothing else.
+- No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
+
+## Scene 1 - Opening Speech
+Board position for all panels: the standard starting position (State 0). Nothing has moved.
+
+### Panel 1a
+- Camera: from Black's side of the board, close to the white army, at about the height of the officers' heads, looking at White's first rank.
+- In frame, back row from left to right: the rook on h1 (partly, at the left edge), Caballo on g1, Alfil on f1, the White King on e1, Regina on d1, the bishop on c1 (partly, at the right edge). Caballo, Alfil, the King and Regina are fully in frame.
+- In frame, front row: the white pawns on h2, g2, f2, e2, d2 and c2, standing lower in front of the officers. The officers' heads rise above the pawns.
+- Board: the empty third and fourth ranks in the foreground; the greasy spot on f3 faintly visible. No black pieces (they are behind the camera).
+- Characters: the King proud, mouth open mid-speech, one arm sweeping out towards his troops. Caballo faces right (towards the centre). Alfil, Regina and the pawns stand at attention.
+- Balloon (White King): Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd.
+
+### Panel 1b
+- Camera: from Black's side, closer than 1a, centred between Alfil (f1) and the White King (e1).
+- In frame: Alfil (left of centre) and the King (right of centre); Caballo (g1) fully in frame at the left, Regina (d1) fully in frame at the right; the bishop on c1 and the rook on h1 partly at the frame edges. The pawns on g2, f2, e2 and d2 cross the bottom of the frame in front of them.
+- Characters: the King turns towards Alfil and gestures to him with an open hand; Alfil looks back at the King. Caballo faces right (towards the centre).
+- Balloon (White King): Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen. Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
+
+### Panel 1c
+- Camera: over Alfil's shoulder. Behind White's first rank, just behind and to the left of Alfil (between Alfil and the King), slightly above head height, looking across the whole board towards Black.
+- Foreground, seen from behind: Alfil on f1 (right of centre; paprika stains visible on his mitre) and the White King on e1 (left of centre). Their heads are turned slightly towards each other, showing partial profiles. Regina (d1, light hair) seen from behind to the left of the King; Caballo (g1) in profile at the right, facing left towards the centre. The other white pieces of the first rank as far as they are in frame.
+- Middle ground: all eight white pawns seen from behind, then the empty board: the boebel visible in the centre, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
+- Background: the complete black army in its starting formation in the distance, all 16 pieces, facing the camera; the black knights face the centre.
+- Balloon (Alfil, tail to Alfil): Jawel Sire, zij wachten op uw bevel !
+
+## Scene 2 - Ten Aanval
+Board position for all panels: the standard starting position (State 0). Nothing moves: the e2 pawn stays on e2.
+
+### Panel 2a
+- Camera: from Black's side, zoomed in on the White King on e1 (he is talking).
+- In frame: the King large in the centre; Alfil (f1) fully in frame at the left; Regina (d1) fully in frame at the right. The heads of the pawns on f2, e2 and d2 cross the bottom of the frame in front of them.
+- Characters: the King raises one arm high, commanding the attack, proud, mouth wide open. Alfil and Regina look at the King.
+- Balloon (White King): Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4
+
+### Panel 2b
+- Format: wide landscape panel.
+- Camera: from Black's side, slightly off-centre and somewhat elevated, showing the white army from the front. Only half the board is in frame: the near (bottom) edge of the frame is at the fourth rank.
+- In frame: all eight white pawns (a2 to h2) in one row across the frame, all sixteen white pieces with the officers standing behind the pawns. Caballo (g1) and the b1 knight face the centre.
+- Board: the third and fourth ranks in the foreground. The boebel rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
+- Characters: the pawns frown, stubborn and grumbling; none of them moves. The officers look on.
+- Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters) beside several pawn heads, placed so they do not cover the officers' faces.
+- No dialogue balloons.
+
+### Panel 2c
+- Camera: from Black's side, zoomed in on Regina on d1 (she is talking).
+- In frame: Regina large in the centre; the White King (e1) partly in frame at the left; the bishop on c1 partly at the right; the heads of the pawns on e2, d2 and c2 cross the bottom of the frame.
+- Characters: Regina turns her head towards the King and looks at him, puzzled (one eyebrow raised), mouth open. The King looks back at her. No lip colour or make-up.
+- Balloon (Regina): Awel ? Waarom gebeurt er niks ?
 
 ---
 
@@ -830,6 +992,7 @@ Kept for history. Do not use for generation.
 - v1.0 / 1.1: Pawns as "small worker-like pawns". → Superseded by realistic soldier pawns.
 - v1.1: White King with gold crown and large expressive moustache. → Superseded by simple medieval crown and medium beard and moustache (L2).
 - v3.0 to 5.1: Board is "several years old". → Superseded in 6.0: less than three years old.
+- v5.1 to 7.0: Green/beige tournament board (M1). → Superseded in 7.0: dark brown (near black)/beige.
 - v1.0 to 3.0: English notation (Bd3, Nh3, Qh5, Ne7, Ng5, Nxh7). → Dutch notation since 5.0.
 
 ---
@@ -839,11 +1002,12 @@ Items that need a decision from the author.
 
 1. ~~**Play text completeness.**~~ Resolved in 7.0: the original play text was supplied by the author and replaces the shortened copy.
 2. ~~**Quote marks.**~~ Resolved in 7.0: the mixed quote marks are in the original and are kept as is.
-3. **f3 greasy spot.** How should it look (size, colour, substance)?
+3. ~~**f3 greasy spot.**~~ Resolved in 7.0: approved by the author as a faint yellowish greasy smear (see Section 4).
 4. ~~**Board condition.**~~ Resolved in 7.0: the original confirms the plastic board is less than three years old and the pieces already complain about it.
 5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8.
 6. **Clothing.** Version 1.1 gave the King a burgundy robe and medals, Regina a white-and-gold design, Alfil advisor robes and Caballo military decorations. Later versions describe wooden pieces with faces. Are there painted or carved costumes, or none?
 7. **Language of speech balloons.** Original Flemish only, or translations allowed?
+8. **Surroundings of the board.** What is visible around and behind the board (table, room, background)? Not yet defined; the brown table and backdrop in the early sketches are placeholders, not canon.
 
 ---
 
@@ -857,4 +1021,4 @@ Items that need a decision from the author.
 | 5.0 | 9a7ed4e | Full play text embedded; anthropomorphism; Dutch notation. |
 | 5.1 | fc4e769 | Decision log with meanings; visual style details. Play text truncated. |
 | 6.0 | f50d551 | Materials, relationship matrix, production rules. Lost content: play text, running gags, decision meanings. |
-| 7.0 | - | Consolidation of all versions into the 17-section structure; original play text from the author; board history; scene catalog; full board-state tables. |
+| 7.0 | - | Consolidation of all versions into the 17-section structure; original play text from the author; board history; scene catalog; full board-state tables; Section 18 panel script for Scenes 1 and 2. |
