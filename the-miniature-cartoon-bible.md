@@ -1046,6 +1046,36 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Characters: Alfil, earnest, looks at the King while gesturing with an open hand towards the centre of the board (towards the boebel, "bergop"). The King looks back at Alfil, angry and worried at the same time: he realises he must change his plans. Furrowed brow, eyebrows pulled together, tight wavy mouth, reddening cheeks (author feedback). His anger bursts out in Scene 5.
 - Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen. Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
 
+## Scene 5 - The King's Outburst
+Status: proposal, awaiting author review.
+Board position for all panels: the standard starting position (State 0). Nothing has moved. Alfil stays on f1.
+
+### Panel 5a
+- Camera: from Black's side, close-up of the White King (e1), from the chest up; Alfil (f1) partly in frame at the left edge.
+- Characters: the King explodes: face red, eyebrows pulled down hard, mouth wide open in a shout, one fist raised. He looks at Alfil. Alfil looks back at the King, taken aback.
+- Balloon (White King, jagged shout balloon): Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.
+
+### Panel 5b
+- Camera: from Black's side, two-shot of Alfil (f1, left) and the White King (e1, right), at officer height. Caballo (g1) and Regina (d1) partly at the frame edges; pawn heads (f2, e2) cross the bottom of the frame.
+- Characters: the King leans towards Alfil and jabs a pointing finger at him, a scornful look. Alfil looks back at the King, offended: chin up, lips pressed together, a sore spot touched (his "minor promotion"). They look at each other.
+- Balloon (White King): Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’.
+
+### Panel 5c
+- Camera: from Black's side, same two-shot as 5b.
+- Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the boebel): an order. Alfil looks back at the King, hesitant.
+- Balloon (White King): Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen.
+
+### Panel 5d
+- Camera: high, from Black's side, above and in front of the white pawns, looking down on the f1 square, so that both of Alfil's diagonals are clear: f1-e2 and f1-g2. Alfil, the pawns and the King face the camera.
+- In frame: Alfil (f1) in the centre, behind the pawns on e2, f2 and g2; from this side the King (e1) and Regina (d1) are at the right, Caballo (g1) and the rook (h1) at the left; the pawns on d2 and h2 at the edges.
+- Characters: Alfil looks up at the King, apologetic, and points with both hands to the pawns on e2 and g2 that block his diagonals. The pawns on e2 and g2 stand firm, arms crossed, stubborn. The King looks at Alfil.
+- Balloon (Alfil): Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten. Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
+
+### Panel 5e
+- Camera: from Black's side, close-up of the White King (e1); Alfil (f1) partly at the left edge, Regina (d1) partly at the right edge.
+- Characters: the King in despair: both hands to his face (or clutching his crown), eyes squeezed shut, mouth turned down. Alfil and Regina look at the King.
+- Balloon (White King): Wel nondedju ! Heel mijn voorbereiding om zeep.
+
 ---
 
 # APPENDIX A - SUPERSEDED CANON
