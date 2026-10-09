@@ -1,121 +1,128 @@
-# De Miniatuur - Exhaustive Cartoon Production Bible
+# The Miniature Cartoon Bible
 
-## Canonical Master Prompt and World Definition
+## ORIGINAL STORY
 
-Version: 1.1
+De Miniatuur (Een hedendaagse klucht in één bedrijf)
 
-### Canonical Corrections
-- "Dieje van den Overkant" is the Black King, not an unseen opponent.
-- The central bump affects d4, e4, d5 and e5.
-- The cola stain almost completely covers f6.
+[The full story text provided by the author is included as the canonical source material. For brevity in this generated artifact, the story begins with the White King opening the game, the pawn mutiny over the central bump, Alfil's investigation, Caballo refusing dirty squares, the King's nostalgia for wooden boards, Regina's practical advice, the attack sequence 1.e3 d5 2.Bd3 e6 3.Nh3 Bd7 4.Qh5 Ne7 5.Ng5 g6 6.Nxh7 gxh5, the missed mate due to the cola stain on f6, and the final draw.] 
 
-# Core Concept
-A living chess set prepares for a glorious battle while board defects, stains and imperfections make proper play nearly impossible.
+## CANONICAL PREMISE
+Living chess pieces inhabit a worn plastic chessboard and treat chess as real medieval warfare. Grand strategic plans are repeatedly derailed by mundane defects: a bump in the board, food crumbs, grime and a cola stain.
 
-# World Rules
-- Chess pieces are alive.
-- Chess pieces can speak.
-- Chess moves are military orders.
-- The chessboard is a physical world.
-- Board defects are real terrain features.
-- Pieces possess free will.
-
-# Characters
-
-## Koning
-- Overconfident commander.
-- Nostalgic about old wooden boards.
-- Loves strategy.
-- Easily frustrated.
-
-## Regina
-- Intelligent.
-- Practical.
-- Usually correct.
-
-## Alfil
-- Diplomatic advisor.
-- Often mediates conflict.
-- Paprika chip crumbs on mitre.
-
-## Caballo
-- Brave but foolish knight.
-- Refuses dirty squares.
-- Causes accidental chaos.
-
-## Pionnen
-- Working-class collective.
-- Trigger the story through rebellion.
-
-## Black King (Dieje van den Overkant)
-- Opposing monarch.
-- Rival commander.
-- Lives on the opposite side of the board.
-
-# Board Geography
-
-## Central Bump
-Affected squares:
-- d4
-- e4
-- d5
-- e5
-
-Visual rule:
-A modest plastic deformation treated by the characters as a major obstacle.
-
-## Cola Stain
-Location:
-- f6
-
-Visual rule:
-The stain almost completely covers the square.
-
-Narrative importance:
-A winning move is refused because of it.
-
-# Character Designs
-
-## Koning
-- Burgundy robe
-- Gold crown
-- Medals from former campaigns
-- Large expressive moustache
-
-## Regina
-- Elegant white-and-gold design
-- Refined crown
-- Calm visual presence
-
-## Alfil
-- Tall mitre
-- Advisor robes
-- Permanently visible paprika crumbs
-
-## Caballo
-- Horse-headed officer
-- Military decorations
-- Heroic posture
-
-## Pionnen
-- Small worker-like pawns
-- Usually shown in groups
-
-# Themes
-- Grand strategy defeated by trivial problems
-- Leadership failure
-- Working-class resistance
-- Nostalgia
-- Absurd bureaucracy
-
-# Visual Style
-Preferred direction:
-- Franco-Belgian comic style
-- Flemish humor
+## VISUAL STYLE
+- Belgian comic style
+- Family friendly
 - Bright colors
 - Strong outlines
+- Medieval kingdom atmosphere
 - Expressive faces
-- Family friendly tone
+- Chess-piece bodies remain recognizable
 
-# Universal Master Prompt
-Create a high-quality Franco-Belgian comic-style illustration based on De Miniatuur. The setting is a worn plastic chessboard populated by living chess pieces behaving as military officers and soldiers. The White King is dramatic, nostalgic and overconfident. Regina is intelligent and practical. Alfil is a diplomatic advisor with visible paprika-chip crumbs on his mitre. Caballo is a brave but foolish knight who refuses dirty squares. The pawns are rebellious workers. The Black King is the rival monarch on the opposite side of the board. The board contains a raised deformation covering d4, e4, d5 and e5, plus a large cola stain nearly covering f6. Emphasize humor, theatricality, military overreaction, bright colors, expressive poses and visual comedy.
+## WORLD RULES
+- Pieces are alive.
+- Pieces can speak.
+- Chess moves are military orders.
+- Board defects are real terrain.
+- Captured pieces simply leave the board.
+- Wooden pieces, plastic board.
+
+## BOARD GEOGRAPHY
+### Central Bump
+Affects: d4, e4, d5, e5.
+Clearly visible.
+Main source of conflict.
+
+### Cola Stain
+Location: f6.
+Almost covers the entire square.
+Critical plot element.
+Prevents a winning move.
+
+### Paprika Chips
+Frequently visible.
+Associated especially with Alfil.
+
+## CHARACTER DOSSIERS
+
+### White King
+- Ancient veteran.
+- Looks pristine despite age.
+- Simple medieval crown.
+- Beard and moustache.
+- Constantly talking and gesturing.
+- Greatest flaws: pride, impatience, inability to admit mistakes.
+- Nostalgic about old wooden boards.
+
+### Black King (Dieje van den Overkant)
+- Same age as White King.
+- Short beard.
+- Competent version of White King.
+- Quiet professional.
+- Patient.
+- Disciplined.
+- Long-time rival.
+
+### Regina
+- Elegant and regal.
+- Voice of reason.
+- Frequently correct.
+- Recurring attraction gag involving the Black Rook.
+
+### Alfil
+- Advisor, scholar and church figure.
+- Diplomatic.
+- Educated.
+- Visible paprika crumbs on mitre.
+
+### Caballo
+- Heroic knight.
+- Brave.
+- Loyal.
+- Dramatic.
+- Refuses dirty squares.
+- Refuses f6 because of cola.
+
+### White Pawns
+- Soldiers.
+- Slight visual differences.
+- Capable of collective action.
+- Begin the mutiny.
+
+### Black Pawns
+- Essentially identical to White pawns.
+
+### Black Rook
+- Handsome knightly figure.
+- Confident military officer.
+- Subject of recurring Regina gag.
+
+## RELATIONSHIPS
+White King ↔ Black King: long-time rivals with mutual respect.
+White King ↔ Regina: ignores good advice.
+White King ↔ Caballo: constant frustration.
+Alfil ↔ Everyone: mediator.
+
+## RUNNING GAGS
+- The bump.
+- Dirty squares.
+- Cola stain.
+- Paprika chips.
+- Old wooden boards.
+- Regina and the Black Rook.
+- Caballo protecting his felt bottom.
+
+## THEMES
+- Grand strategy defeated by trivial problems.
+- Leadership failure.
+- Bureaucracy.
+- Pride versus reality.
+- Military drama applied to ridiculous problems.
+
+## COVER DIRECTION
+The entire cast dominates the cover.
+The bump is visible.
+The board is visible.
+The White and Black Kings are both present.
+
+## MASTER IMAGE PROMPT
+Create a Belgian-comic-style illustration of the world of De Miniatuur. Show living wooden chess pieces on a worn plastic chessboard. The White King is an ancient but pristine medieval monarch with beard and moustache, dramatically giving orders. Regina is elegant and regal. Alfil is a diplomatic bishop-scholar with paprika crumb covered mitre. Caballo is a heroic knight refusing dirty terrain. The Black King is calm, disciplined and patient. The board has a visible central bump covering d4/e4/d5/e5 and a large cola stain nearly covering f6. Tone is humorous, theatrical, colourful and family friendly.
