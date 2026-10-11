@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.19
+Version 7.20
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -27,6 +27,7 @@ Version 7.16 approves panels 6d, 7a, 7b, 7c and 7d (author decision): full panel
 Version 7.17 approves panels 8a, 8b and 8c (author decision): full panel blocks in Section 18 (Scene 8) and manifests 30 to 32 in Section 20.3.
 Version 7.18 adds the author's name to the cover: S. Gorts, right aligned below the board image (Section 13, Cover Direction).
 Version 7.19 zooms panel 9a out a little (author feedback) and approves it (author decision): full panel block in Section 18 (Scene 9) and manifest 33 in Section 20.3.
+Version 7.20 reframes the proposal panel 9b (author feedback): camera beside the board so the King and the whole black army are in sight; the King visibly shocked, looking at Caballo.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1013,6 +1014,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.18 | Author decision: the cover shows the author's name, "S. Gorts", right aligned below the board image (Section 13, Cover Direction). |
 | 7.19 | Author feedback on the proposal panel 9a: "zoom a little out". Camera line of the 9a proposal block updated; the balloon moved to the top left so its tail no longer runs through the King's crown. 9a stays a proposal. |
 | 7.19 | Author decision: panel 9a accepted as good enough ("to remove the orange banner"), as shown in the SVG preview after the zoom-out. Written as a full panel block in Section 18 (new heading Scene 9 - Caballo Refuses f3) and as manifest 33 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 22 updated. Panels 9b to 9g stay proposals. |
+| 7.20 | Author feedback on the proposal panel 9b: "shift the image down so that all black pieces are fully in sight", "shift the image to the right so that the empty space there is reduced", "make sure that the white king is now fully in sight", "the king looks visibly surprised/shocked as Caballo jumps to h3", "I want the king's face looking at Caballo". A camera behind White's back rank can never show the King's face, so the camera was moved beside the board (behind the h-file, between the armies): the King at the left and the black army at the right both face the camera. The King's hands-on-head pose was replaced by spread arms so his face, turned to Caballo, stays free. Then: "make sure that the rooks are fully in sight": zoomed out a little so the near rooks on h1 and h8 are fully in frame. Camera and character lines of the 9b proposal block updated; 9b stays a proposal. |
 
 ---
 
@@ -1598,8 +1600,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 9b (PROPOSAL)
 - Board state: 5.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
-- Characters: Caballo (stubborn); White King (surprised).
+- Camera (author feedback in 7.20): from beside the board, behind the h-file, between the two armies, so that the White King and the black pieces both face the camera. At the left the White King (e1) fully in sight, with the white army behind him; in the middle Caballo jumping from g1 to h3; at the right the complete black army. The rooks on h1 (bottom left) and h8 (right) are fully in sight; the rooks on a1 and a8 stand behind their armies. Little empty space at the right.
+- Characters (author feedback in 7.20): the White King is visibly surprised and shocked as Caballo jumps to h3 instead of f3: eyes wide, mouth open, both arms spread, sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn.
 - Move shown: g1-h3 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
@@ -3407,3 +3409,4 @@ Items that need a decision from the author.
 | 7.17 | - | Panels 8a, 8b, 8c approved: panel blocks (Section 18, Scene 8) and manifests 30 to 32 (Section 20.3). |
 | 7.18 | - | Author's name S. Gorts on the cover, right aligned below the board image. |
 | 7.19 | - | Panel 9a zoomed out a little (balloon at the top left) and approved: panel block (Section 18, Scene 9) and manifest 33 (Section 20.3). |
+| 7.20 | - | Proposal 9b reframed from beside the board; the King shocked, looking at Caballo. |

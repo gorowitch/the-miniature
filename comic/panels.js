@@ -110,7 +110,7 @@ window.PANELS = [
 { id: "9a", scene: 9, status: A, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 580 }),
   cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { lookAt: "koning" } },
   balloons: [{ who: "koning", x: 40, text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
-{ id: "9b", scene: 9, status: Pr, movebox: "3. Ph3", state: 5, cam: { from: [7.3, -1.2, 2.8], at: [6.2, 2.8, 0.1], f: 640 }, fx: [{ move: ["g1", "h3"] }], cast: { caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true } }, balloons: [] },
+{ id: "9b", scene: 9, status: Pr, movebox: "3. Ph3", state: 5, cam: { from: [13.6, 2.7, 3.6], at: [5.3, 4.1, 0.55], f: 660 }, fx: [{ move: ["g1", "h3"] }], cast: { caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "caballo", gest: "both-open", sweat: true } }, balloons: [] },
 { id: "9c", scene: 9, status: Pr, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
   cast: { koning: { expr: "furious", talk: true, lookAt: "caballo", gest: "fist-up-r" }, caballo: { expr: "stubborn" } },
   balloons: [{ who: "koning", shout: true, text: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !" }] },
