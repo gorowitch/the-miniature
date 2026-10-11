@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.21
+Version 7.22
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -29,6 +29,7 @@ Version 7.18 adds the author's name to the cover: S. Gorts, right aligned below 
 Version 7.19 zooms panel 9a out a little (author feedback) and approves it (author decision): full panel block in Section 18 (Scene 9) and manifest 33 in Section 20.3.
 Version 7.20 reframes the proposal panel 9b (author feedback): camera beside the board so the King and the whole black army are in sight; the King visibly shocked, looking at Caballo.
 Version 7.21 makes the black pieces in panel 1c look a little scared (author decision); the Black King stays calm.
+Version 7.22 makes the black pieces in panel 3a-1 look a little surprised (author decision); the Black King stays calm.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1017,6 +1018,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.19 | Author decision: panel 9a accepted as good enough ("to remove the orange banner"), as shown in the SVG preview after the zoom-out. Written as a full panel block in Section 18 (new heading Scene 9 - Caballo Refuses f3) and as manifest 33 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 22 updated. Panels 9b to 9g stay proposals. |
 | 7.20 | Author feedback on the proposal panel 9b: "shift the image down so that all black pieces are fully in sight", "shift the image to the right so that the empty space there is reduced", "make sure that the white king is now fully in sight", "the king looks visibly surprised/shocked as Caballo jumps to h3", "I want the king's face looking at Caballo". A camera behind White's back rank can never show the King's face, so the camera was moved beside the board (behind the h-file, between the armies): the King at the left and the black army at the right both face the camera. The King's hands-on-head pose was replaced by spread arms so his face, turned to Caballo, stays free. Then: "make sure that the rooks are fully in sight": zoomed out a little so the near rooks on h1 and h8 are fully in frame. Camera and character lines of the 9b proposal block updated; 9b stays a proposal. |
 | 7.21 | Author decision on the approved panel 1c: "make the black pieces look a little scared". The 15 black pieces other than the Black King now look a little scared (raised eyebrows, wide eyes, small wobbly mouths, mouths closed); panel block and manifest 1c (fields 8 and 13) updated. The Black King keeps his calm, composed expression, because his dossier (Section 7) and panel 3b describe him as calm and patient (Claude's reading, open for correction: Appendix B, item 19). |
+| 7.22 | Author decision on the approved panel 3a-1: "I want the black pieces look a little surprised". The 15 black pieces other than the Black King now look a little surprised (high arched eyebrows, wide round eyes, mouths closed); panel block and manifest 3a-1 (fields 8 and 13) updated. The Black King stays calm, as in 1c (Appendix B, item 19, now covering both panels). |
 
 ---
 
@@ -1320,6 +1322,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Camera: behind White's first rank, behind and slightly to the right of Alfil on f1 (seen from White's side), at about head height, looking towards the White King on e1.
 - In frame: Alfil (f1) in the right foreground, seen from behind and partly from the side; the White King (e1) left of centre, turned towards Alfil so his face is seen in three-quarter view; Regina (d1) at the left edge beside the King. In the middle ground the white pawns on d2, e2, f2 and g2, seen from behind. Further away, the empty board and the black army in its starting position, small and out of focus: every black piece on a square that is in frame is shown.
 - Characters: the King looks at Alfil, chin raised, nose in the air ("lage boerenvolk"), mouth open. Alfil listens, head slightly bowed towards the King, mouth closed. Regina looks at the King.
+- Black army (author decision in 7.22): the black pieces in the background look a little surprised (high arched eyebrows, wide round eyes, mouths closed), except the Black King, who stays calm and composed.
 - Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek.
 
 ### Panel 3a-2
@@ -2313,11 +2316,12 @@ PANEL 3a-1   (sequence number 8)
 7.  Camera behind White's first rank, behind and right of Alfil, at head height.
 8.  Koning: mouth open, chin raised, nose in the air; looks at Alfil.
     Alfil: mouth closed; looks at the King.
+    Black pieces in the background: a little surprised (high arched eyebrows, wide round eyes, mouths closed); the Black King calm and composed (author decision in 7.22).
 9.  Balloon 1 top left; tail to Koning's mouth, passing left of his crown.
 10. Stage directions: none.
 11. State 0. No move.
 12. Continuity: after Regina's question in 2c. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
-13. Must not appear: the King looking at the pawns; a tail near Alfil.
+13. Must not appear: the King looking at the pawns; a tail near Alfil; a surprised or laughing Black King.
 14. Dialogue length: 15 words, 85 characters.
 15. Segmentation: the first sentence of speech 5; continues in 3a-2.
 16. Visual priority: the King's haughty face.
@@ -3379,7 +3383,7 @@ Items that need a decision from the author.
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
 18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box; in 7.14 the author added one to panel 4a as well, with the first part of its stage direction: (Alfil overlegt met de pionnen). Still open: do the other stage directions get one too, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
-19. **The Black King in panel 1c.** In 7.21 the black pieces in panel 1c became a little scared. The Black King was left calm, because his dossier and panel 3b describe him as calm and patient. Should he look a little scared too? (Added in 7.21.)
+19. **The Black King in panels 1c and 3a-1.** In 7.21 the black pieces in panel 1c became a little scared, in 7.22 those in panel 3a-1 a little surprised. In both panels the Black King was left calm, because his dossier and panel 3b describe him as calm and patient. Should he show the same reaction? (Added in 7.21, extended in 7.22.)
 
 ---
 
@@ -3415,3 +3419,4 @@ Items that need a decision from the author.
 | 7.19 | - | Panel 9a zoomed out a little (balloon at the top left) and approved: panel block (Section 18, Scene 9) and manifest 33 (Section 20.3). |
 | 7.20 | - | Proposal 9b reframed from beside the board; the King shocked, looking at Caballo. |
 | 7.21 | - | Panel 1c: the black pieces a little scared, the Black King calm; open question 19. |
+| 7.22 | - | Panel 3a-1: the black pieces a little surprised, the Black King calm. |
