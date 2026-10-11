@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.18
+Version 7.19
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -26,6 +26,7 @@ Version 7.15 reframes the proposal panel 6d (author feedback): ranks 5 to 8 only
 Version 7.16 approves panels 6d, 7a, 7b, 7c and 7d (author decision): full panel blocks in Section 18 (Scenes 6 and 7) and manifests 25 to 29 in Section 20.3.
 Version 7.17 approves panels 8a, 8b and 8c (author decision): full panel blocks in Section 18 (Scene 8) and manifests 30 to 32 in Section 20.3.
 Version 7.18 adds the author's name to the cover: S. Gorts, right aligned below the board image (Section 13, Cover Direction).
+Version 7.19 zooms panel 9a out a little (author feedback) and approves it (author decision): full panel block in Section 18 (Scene 9) and manifest 33 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1010,6 +1011,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.16 | Author decision: panels 6d, 7a, 7b, 7c and 7d accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (6d under Scene 6; new heading Scene 7 - Black Takes the Centre) and as manifests 25 (6d) to 29 (7d) in Section 20.3; the proposal blocks are kept and marked as approved; Script Coverage Map items 15 to 19 updated. Scene 6 and Scene 7 are now fully approved. The paprika stains stay on Alfil's mitre in 7c and 7d (the King's order is not carried out on screen). |
 | 7.17 | Author decision: panels 8a, 8b and 8c accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 8 - Stratego) and as manifests 30 (8a) to 32 (8c) in Section 20.3; the King's speech 20 is split over 8a and 8b at the sentence boundary after "Boebel, boebel." (approved with the panels); the proposal blocks are kept and marked as approved; Script Coverage Map items 20 and 21 updated. Scene 8 is now fully approved. |
 | 7.18 | Author decision: the cover shows the author's name, "S. Gorts", right aligned below the board image (Section 13, Cover Direction). |
+| 7.19 | Author feedback on the proposal panel 9a: "zoom a little out". Camera line of the 9a proposal block updated; the balloon moved to the top left so its tail no longer runs through the King's crown. 9a stays a proposal. |
+| 7.19 | Author decision: panel 9a accepted as good enough ("to remove the orange banner"), as shown in the SVG preview after the zoom-out. Written as a full panel block in Section 18 (new heading Scene 9 - Caballo Refuses f3) and as manifest 33 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 22 updated. Panels 9b to 9g stay proposals. |
 
 ---
 
@@ -1495,6 +1498,16 @@ Board position: State 3 (after 2. Ld3) in 8a and 8b; State 4 (after 2. ... e6) i
 - Move box (bottom-left corner, bold, white rectangle): 2. ... e6
 - No balloons.
 
+## Scene 9 - Caballo Refuses f3
+Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panels 9b to 9g are still proposals (Section 18, Proposed Panels).
+Board position: State 4 (after 2. ... e6) in 9a. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
+
+### Panel 9a
+- Camera: from Black's side, at officer height, framed on the King (e1) and Caballo (g1), zoomed out a little (author feedback in 7.19): from this side, left to right, the rook (h1), Caballo (g1), the empty f1 square, the King (e1), Regina (d1) and the c1 bishop at the right edge. In front the pawns on h2, g2 and f2; the head of the e3 pawn at the bottom centre; at the bottom right the d2 pawn and Alfil on d3 (his mitre with the paprika stains).
+- Characters: the King gives the order proudly, mouth open, looking at Caballo, and points with one arm down and towards Caballo's side, to the square in front (f3). Caballo looks at the King, mouth closed, facing the centre files. Regina and the others look on, mouths closed.
+- Balloon placement: top left; the tail comes in diagonally to the King's mouth and does not run through his crown.
+- Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
+
 ---
 
 ## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
@@ -1577,9 +1590,9 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 2. ... e6
 - No balloons.
 
-### Panel 9a (PROPOSAL)
+### Panel 9a (approved in 7.19: the approved panel block is in Section 18, Scene 9)
 - Board state: 4.
-- Camera: from Black's side (the white pieces face the camera), framed on e1, g1.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, g1; zoomed out a little (author feedback in 7.19) so that the rook (h1), Caballo (g1), the King (e1) and Regina (d1) all stand with room around them. The balloon sits at the top left, its tail coming in diagonally to the King's mouth.
 - Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (looks at White King).
 - Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
 
@@ -3027,6 +3040,39 @@ PANEL 8c   (sequence number 32)
 21. Continuity requirements: State 4 into Scene 9.
 ```
 
+### Scene 9 - Caballo Refuses f3
+Added in 7.19 for the panel the author approved (9a). Panels 9b to 9g are still proposals and have no manifests yet.
+
+```
+PANEL 9a   (sequence number 33)
+
+1.  Scene 9, panel a: the King orders Caballo to f3.
+2.  Script excerpt:
+      Koning:
+      Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
+3.  Dialogue:
+      Balloon 1: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren."
+4.  Balloon 1 -> Koning
+5.  Visible: the rook h1, Caballo g1, the empty f1 square, Koning e1, Regina d1, the c1 bishop at the right edge; pawns h2, g2, f2 in front; the head of the e3 pawn at the bottom centre; the d2 pawn and Alfil on d3 at the bottom right.
+6.  Listening: Caballo, mouth closed, looking at the King; Regina and the others, mouths closed.
+7.  Camera on Black's side, at officer height, zoomed out a little (author, 7.19); from this side left to right: h1, g1, f1 (empty), e1, d1, c1.
+8.  Koning: proud, commanding, mouth open, looking at Caballo, one arm pointing down towards the f3 square.
+    Listeners: mouths closed; Caballo looks back at the King and faces the centre files.
+9.  Balloon 1 top left; tail diagonally to Koning's mouth, not through his crown and not crossing Caballo's head. Round balloon.
+10. Stage directions: none.
+11. State 4 (after 2. ... e6). No move in this panel: f3 is ordered, not played (no move box).
+12. Continuity: after 2. ... e6 in 8c; Alfil on d3. From Scene 9 the greasy spot on f3 is clearly visible where f3 is in frame.
+13. Must not appear: an open mouth on Caballo or Regina; a knight on f3; a move box; Alfil on f1.
+14. Dialogue length: 10 words, 61 characters.
+15. Segmentation: the whole of speech 22.
+16. Visual priority: the King's order and Caballo's attention.
+17. Lettering space: top left, above the rook and Caballo.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium shot of the white kingside officers; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: in 9b Caballo jumps to h3 instead (3. Ph3).
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -3138,7 +3184,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 19 | Move: 2. Ld3 | 7 | 7d | Panel script written (approved in 7.16); manifest written (Section 20.3). |
 | 20 | Koning: "Boebel, boebel. Zo zullen we de partij wel winnen..." | 8 | 8a, 8b | Panel script written (approved in 7.17); manifest written (Section 20.3). |
 | 21 | Move: 2. ... e6 | 8 | 8c | Panel script written (approved in 7.17); manifest written (Section 20.3). |
-| 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | - | Scene catalog only. |
+| 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | 9a | Panel script written (approved in 7.19); manifest written (Section 20.3). |
 | 23 | Move: 3. Ph3 | 9 | - | Scene catalog only. |
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | - | Scene catalog only. |
 | 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | - | Scene catalog only. |
@@ -3360,3 +3406,4 @@ Items that need a decision from the author.
 | 7.16 | - | Panels 6d and 7a to 7d approved: panel blocks (Section 18, Scenes 6 and 7) and manifests 25 to 29 (Section 20.3). |
 | 7.17 | - | Panels 8a, 8b, 8c approved: panel blocks (Section 18, Scene 8) and manifests 30 to 32 (Section 20.3). |
 | 7.18 | - | Author's name S. Gorts on the cover, right aligned below the board image. |
+| 7.19 | - | Panel 9a zoomed out a little (balloon at the top left) and approved: panel block (Section 18, Scene 9) and manifest 33 (Section 20.3). |

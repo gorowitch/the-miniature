@@ -107,9 +107,9 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Zo zullen we de partij wel winnen als \"Dieje van den overkant\" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen." }] },
 { id: "8c", scene: 8, status: A, movebox: "2. ... e6", state: 4, cam: { from: [4.5, -1.0, 2.6], at: [4.5, 6.2, 0.2], f: 600 }, fx: [{ move: ["e7", "e6"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 9 - Caballo Refuses f3 (PROPOSAL)
-{ id: "9a", scene: 9, status: Pr, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 700 }),
+{ id: "9a", scene: 9, status: A, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 580 }),
   cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
+  balloons: [{ who: "koning", x: 40, text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
 { id: "9b", scene: 9, status: Pr, movebox: "3. Ph3", state: 5, cam: { from: [7.3, -1.2, 2.8], at: [6.2, 2.8, 0.1], f: 640 }, fx: [{ move: ["g1", "h3"] }], cast: { caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true } }, balloons: [] },
 { id: "9c", scene: 9, status: Pr, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
   cast: { koning: { expr: "furious", talk: true, lookAt: "caballo", gest: "fist-up-r" }, caballo: { expr: "stubborn" } },
