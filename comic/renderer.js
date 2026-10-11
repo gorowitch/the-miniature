@@ -290,6 +290,10 @@ function renderPanel(svg, P, opts) {
   });
   // grumble balloons (wordless)
   for (const gq of (P.grumble || [])) { const sp = placed.find(p => p.sq === gq); if (!sp) continue; const r = Math.max(12, Math.min(26, 7 * sp.s)), cx = sp.head[0] + r * 1.6, cy = sp.head[1] - r * .9; let d = ""; for (let k = 0; k <= 24; k++) { const a = k / 24 * Math.PI * 2, rr = r * (k % 2 ? 1 : 1.2); d += (k ? "L" : "M") + (cx + Math.cos(a) * rr * 1.35).toFixed(1) + " " + (cy + Math.sin(a) * rr).toFixed(1); } const g = mk("g", {}, root); mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 1.6 }, g); mk("path", { d: `M${cx - r * .85} ${cy} c${r * .2} ${-r * .55} ${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0`, stroke: INK, "stroke-width": 2, fill: "none" }, g); }
+  // move box (bible Section 13, Move Box): the played move, verbatim, bold, in a small white rectangle bottom-left
+  if (P.movebox) { const fs = 32, bw = Math.round(P.movebox.length * fs * 0.5 + 34), bh = fs + 20, bx = 24, by = H - 24 - bh;
+    mk("rect", { x: bx, y: by, width: bw, height: bh, fill: "#ffffff", stroke: INK, "stroke-width": 2.5 }, svg);
+    const e = mk("text", { x: bx + bw / 2, y: by + bh / 2 + fs * 0.36, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, svg); e.textContent = P.movebox; }
   // panel border
   mk("rect", { x: 3, y: 3, width: W0 - 6, height: H - 6, rx: 6, fill: "none", stroke: INK, "stroke-width": 7 }, svg);
   if (opts.mark && P.status === "proposal") mk("rect", { x: 10, y: 10, width: W0 - 20, height: H - 20, rx: 6, fill: "none", stroke: "#e08a1e", "stroke-width": 6, "stroke-dasharray": "22 12" }, svg);

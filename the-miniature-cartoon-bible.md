@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.7
+Version 7.8
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -15,6 +15,7 @@ Version 7.4 adds the panel manifests for all 21 panels of Scenes 1 to 5 (Section
 Version 7.5 specifies the boebel for image generation: a standard descriptive sentence (no name in prompts), a positive description with comparisons, dimensions, and a no-text rule for images (Sections 4 and 18).
 Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved source is immutable during production; illustration and lettering are separate from story authority; prohibited changes; what to do when the source is incomplete.
 Version 7.7 adds proposed panels for Scenes 6 to 16 to Section 18, clearly marked as proposals awaiting author approval, made for the full SVG preview of the comic (`comic/`). Nothing from 7.6 was removed.
+Version 7.8 adds the move box (author decision): every panel in which a move is played shows that move, verbatim from the play, in bold in a small white rectangle in the bottom-left corner, in the preview and in the final images (Section 13, Move Box). It replaces the rule that chess notation appears only inside dialogue.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -58,7 +59,7 @@ The production process must never:
 - Change the identity of a speaker (Section 19.F).
 - Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
 - Invent chess moves or change the board state (Sections 11 and 12).
-- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4"); the title appears only on the cover (Section 13, Cover Direction).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
 - Use previously generated images as authority for story content.
 - Fill gaps or resolve contradictions through creative guesswork.
 
@@ -818,6 +819,29 @@ If a panel contains an incorrect position, the panel is wrong.
 ## Master Illustration Prompt
 Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
+## Move Box (author decision in 7.8)
+- Every panel in which a move is played on the board shows that move, with its move number, in bold black text in a small white rectangle with a thin black ink outline, in the bottom-left corner of the panel. It applies to the preview and to the final images.
+- The text is copied verbatim from the move lines of Section 1, letter for letter, including the dots and spaces of Black's moves and the "x" of a capture: for example "3. Ph3", "1. ... d5", "6. Pxh7".
+- Only moves that are actually played on the board get a move box, and only in the panel where the move happens. A move that is only spoken or ordered gets none: "1. e4" in panel 2a (the pawns refuse to move), the King's order to f3 in panel 9a (Caballo jumps to h3 instead), the order to g5 in panel 12c (the box appears in 12d, where the move is played), the order to f6 in panel 15b (refused).
+- One move box per panel. It sits in the corner, clear of faces, hands and important board details; balloons stay at the top of the panel.
+- Apart from the title on the cover, the move box is the only text in the image outside the speech balloons.
+- The moves and their panels (proposals until the panels are approved; Section 18, Proposed Panels):
+
+| Move box | Panel | Move on the board |
+|---|---|---|
+| 1. e3 | 6c | pawn e2-e3 |
+| 1. ... d5 | 6d | pawn d7-d5 |
+| 2. Ld3 | 7d | Alfil f1-d3 |
+| 2. ... e6 | 8c | pawn e7-e6 |
+| 3. Ph3 | 9b | Caballo g1-h3 |
+| 3. ... Ld7 | 9g | bishop c8-d7 |
+| 4. Dh5 | 11g | Regina d1-h5 |
+| 4. ... Pe7 | 11h | knight g8-e7 |
+| 5. Pg5 | 12d | Caballo h3-g5 |
+| 5. ... g6 | 12e | pawn g7-g6 |
+| 6. Pxh7 | 13b | Caballo g5xh7 |
+| 6. ... gxh5 | 14d | pawn g6xh5, Regina captured |
+
 ## Cover Direction
 - The entire cast dominates the cover.
 - The boebel is visible.
@@ -953,6 +977,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.7 | Proposed panels for Scenes 6 to 16 added to Section 18 (author request: the full comic in SVG, Scenes 6 to 16 as proposals). 57 proposal blocks: dialogue copied from Section 1 and checked by script; moves from Sections 11 and 12; camera and character lines from the SVG preview. Not approved script: they are not sent to the image generator before the author approves them. |
 | 7.7 | SVG preview of the whole comic added outside the bible: `comic/renderer.js`, `comic/panels.js` (all 78 panels: 21 approved, 57 proposals) and `comic/index.html` (cover plus A4 album pages, proposals marked with a dashed orange border). The preview is an illustration aid only; the bible remains the source. |
 | 7.7 | Preview staging choices that are not canon until approved: costume colours beyond Section 5, the move streaks, the camera positions of Scenes 6 to 16, a captured piece standing beside the board next to the h-file. |
+| 7.8 | Author decision: move box. Every panel in which a move is played shows the move with its move number in bold black text in a small white rectangle (thin black outline) in the bottom-left corner, in the preview and in the final images. Text verbatim from the move lines of Section 1 (Black's moves as "1. ... d5", captures as "6. Pxh7"; author: "use the verbatim format from the original text"). Only played moves, only in the panel where the move happens; spoken or ordered moves get none (2a, 9a, 12c, 15b). New Section 13, Move Box, with the table of the 12 moves; instruction added to the Common Prompt Block; cross-references in the Strict Adaptation Protocol (P.3), Sections 16, 20 (field 11 and the must-never-appear line), 21, 22 and 23, and Appendix B item 15. |
+| 7.8 | The 12 proposal move panels in Section 18 (6c, 6d, 7d, 8c, 9b, 9g, 11g, 11h, 12d, 12e, 13b, 14d): "no caption, no notation in the image" replaced by a move box line with the verbatim move. The SVG preview draws the box (`comic/renderer.js`, `movebox` in `comic/panels.js`). |
 
 ---
 
@@ -967,7 +993,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel integrated into d4/e4/d5/e5.
 - Boebel (centre hump) check: one smooth, low, rounded hill of the board itself; peak on the shared corner of d4, e4, d5 and e5; about 2 squares across; about as high as a piece's base; the grid lines and colours bend over it.
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
-- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons (Section 18, Common Prompt Block).
+- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons and, in a panel in which a move is played, in the move box (Section 18, Common Prompt Block; Section 13, Move Box).
+- A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
 - Greasy spot on f3 when visible.
@@ -1179,7 +1206,8 @@ Rules:
 - A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
-- The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons. When the speech balloons are drawn empty, the image contains no text at all.
+- The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, and the move box when the panel description gives one. When the speech balloons are drawn empty and there is no move box, the image contains no text at all.
+- Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
 
 ## Scene 1 - Opening Speech
 Board position for all panels: the standard starting position (State 0). Nothing has moved.
@@ -1358,14 +1386,16 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 ### Panel 6c (PROPOSAL)
 - Board state: 1.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
-- Move shown: e2-e3 (move streak; no caption, no notation in the image).
+- Move shown: e2-e3 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 1. e3
 - No balloons.
 
 ### Panel 6d (PROPOSAL)
 - Board state: 2.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: the piece on d5 (calm).
-- Move shown: d7-d5 (move streak; no caption, no notation in the image).
+- Move shown: d7-d5 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 1. ... d5
 - No balloons.
 
 ### Panel 7a (PROPOSAL)
@@ -1390,7 +1420,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 3.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d3, f1.
 - Characters: Alfil (calm); White King (looks at Alfil).
-- Move shown: f1-d3 (move streak; no caption, no notation in the image).
+- Move shown: f1-d3 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 2. Ld3
 - No balloons.
 
 ### Panel 8a (PROPOSAL)
@@ -1409,7 +1440,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 4.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Black King (calm).
-- Move shown: e7-e6 (move streak; no caption, no notation in the image).
+- Move shown: e7-e6 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 2. ... e6
 - No balloons.
 
 ### Panel 9a (PROPOSAL)
@@ -1422,7 +1454,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 5.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (stubborn); White King (surprised).
-- Move shown: g1-h3 (move streak; no caption, no notation in the image).
+- Move shown: g1-h3 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
 
 ### Panel 9c (PROPOSAL)
@@ -1453,7 +1486,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 6.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Black King (calm).
-- Move shown: c8-d7 (move streak; no caption, no notation in the image).
+- Move shown: c8-d7 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 3. ... Ld7
 - No balloons.
 
 ### Panel 10a (PROPOSAL)
@@ -1550,14 +1584,16 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 7.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (calm).
-- Move shown: d1-h5 (move streak; no caption, no notation in the image).
+- Move shown: d1-h5 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 4. Dh5
 - No balloons.
 
 ### Panel 11h (PROPOSAL)
 - Board state: 8.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Black King (calm).
-- Move shown: g8-e7 (move streak; no caption, no notation in the image).
+- Move shown: g8-e7 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 4. ... Pe7
 - No balloons.
 
 ### Panel 12a (PROPOSAL)
@@ -1582,14 +1618,16 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 9.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
-- Move shown: h3-g5 (move streak; no caption, no notation in the image).
+- Move shown: h3-g5 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 5. Pg5
 - No balloons.
 
 ### Panel 12e (PROPOSAL)
 - Board state: 10.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (worried); the piece on g6 (calm).
-- Move shown: g7-g6 (move streak; no caption, no notation in the image).
+- Move shown: g7-g6 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 5. ... g6
 - No balloons.
 
 ### Panel 13a (PROPOSAL)
@@ -1602,7 +1640,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 11.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
-- Move shown: g5-h7 (move streak; no caption, no notation in the image).
+- Move shown: g5-h7 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 6. Pxh7
 - Beside the board: the captured black pawn (h7) stands beside the board.
 - No balloons.
 
@@ -1631,7 +1670,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (surprised, looks at the piece on h5).
-- Move shown: g6-h5 (move streak; no caption, no notation in the image).
+- Move shown: g6-h5 (move streak).
+- Move box (bottom-left corner, bold, white rectangle): 6. ... gxh5
 - Beside the board: the captured black pawn (h7) and Regina stand beside the board.
 - No balloons.
 
@@ -1832,7 +1872,7 @@ PANEL <scene><letter>   (sequence number <n> in the cartoon)
       Listener <name>: mouth <closed>, reaction <...>, looks at <...>
 9.  Balloon ownership and reading order (where each balloon sits, where its tail points):
 10. Stage directions (verbatim, or "none"):
-11. Board state and moves (State number from Section 12; move notation if a move happens):
+11. Board state and moves (State number from Section 12; move notation if a move happens; if a move is played in this panel, the move box text copied verbatim from Section 1, Section 13 Move Box):
 12. Continuity constraints inherited from earlier panels:
 13. Must not appear:
 
@@ -1892,7 +1932,7 @@ Derived from the approved panel script (Section 18) and the play (Section 1). Fi
 - Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
 - Every knight faces the centre files; every visible occupied square shows its piece.
 - Lettering: the image generator writes the balloon text exactly as in field 3; every balloon is checked letter for letter afterwards (Section 21). Fallback: empty balloons, text inserted afterwards.
-- Must never appear (in addition to field 13): invented text, captions, narrator boxes, coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
+- Must never appear (in addition to field 13): invented text, captions, narrator boxes (the move box of Section 13 is not a caption), coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
 
 ### Scene 1 - Opening Speech
 
@@ -2555,6 +2595,7 @@ The three responsibilities (story authority, illustration, lettering and assembl
 - Add this to the prompt when using empty balloons (fallback): "Draw the speech balloons empty, with no letters. The tail of each balloon points to the mouth of the speaking character named below. Listening characters keep their mouths closed."
 - Never use the word "boebel", or any other name for it, in a prompt: the image generator does not know the word, and a name makes it draw a label or an explanation. Describe it with the standard sentence from Section 4 (Boebel Specification), which the Common Prompt Block already contains.
 - Always include the no-text rule of the Common Prompt Block: the image contains no written words, labels, arrows, captions or explanations; the only text is the dialogue in the balloons, or none at all when the balloons are drawn empty (added in 7.5).
+- For a panel in which a move is played, include the move box line with the exact move text from the panel block (Section 13, Move Box; added in 7.8). Check it letter for letter like a balloon.
 
 ## Stage 3 - Add the Original Dialogue
 - Check every balloon written by the image generator letter for letter against the manifest (field 3): every letter, space, punctuation mark, quote mark and capital. Any deviation, however small, means the balloon fails.
@@ -2595,7 +2636,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 
 ## 22.B Dialogue Fidelity
 - Section 1 is the sole authority for dialogue.
-- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon; Section 14).
+- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
 - Any uncertainty is flagged in Appendix B, never resolved by guessing.
 
 ## 22.C Speaker Attribution
@@ -2708,7 +2749,7 @@ Chess positions and established canon are hard requirements, not trade-offs (Sec
 - Avoid excessively narrow balloons, tiny lettering, distorted text and awkwardly stretched balloon shapes.
 - Leave room for natural lettering with comfortable margins inside the balloon.
 - Do not shrink the text to force a long passage into an undersized balloon.
-- No unnecessary balloons, no captions, no narration boxes, no invented text (Section 14).
+- No unnecessary balloons, no captions, no narration boxes, no invented text (Section 14). The move box of a move panel (Section 13, Move Box) is required, not optional.
 
 ## 23.D Panel Composition Serves the Scene
 Choose the shot for the dramatic purpose of the panel:
@@ -2798,6 +2839,7 @@ Kept for history. Do not use for generation.
 - First 7.5 wording of the standard sentence (named the bump, which made the image generator draw an explanation): "In the exact centre of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill - the centre hump - like a vinyl roll-up chessboard that has warped from heat. Its highest point is the corner where the four centre squares meet, about as high as the base of a chess piece, and from there it slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over the hill. The hill is seen only through soft light on the side facing the light and soft shadow on the other side." -> Superseded within 7.5 by the unnamed sentence (Section 4).
 - v7.1 to 7.6 (first wording): "Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards" (Common Prompt Block), "Preferred: request empty speech balloons ... Do not ask the image generator to write long Flemish passages" (Section 21), "Where practical: generate the illustration with empty speech balloons" (Section 23.E), and in the first 7.6 protocol "empty speech balloons" as the generator's only output. -> Superseded in 7.6 by author decision: the generator writes the exact text itself; every balloon is checked letter for letter; empty balloons are the fallback.
 
+- Up to 7.7: "This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue" (Strict Adaptation Protocol P.3, Section 16, Common Prompt Block, proposal move panels: "no caption, no notation in the image"). -> Superseded in 7.8 by author decision: a panel in which a move is played shows the move verbatim in a move box (Section 13, Move Box). Captions and narration remain forbidden.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -2817,7 +2859,7 @@ Items that need a decision from the author.
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
 14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
-15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions and chess notation only inside dialogue. How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
+15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 
 ---
@@ -2840,3 +2882,4 @@ Items that need a decision from the author.
 | 7.5 | - | Boebel specification for image generation: standard descriptive sentence without a name, positive description, dimensions (Section 4); prompt texts describe instead of naming; no-text rule for images; generator-neutral (Copilot and ChatGPT), Section 18 renamed. |
 | 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; the image generator writes the exact balloon text, checked letter for letter, empty balloons as fallback (author decision); cross-references in Sections 13, 14, 16, 21 and 23. |
 | 7.7 | - | Proposed panels for Scenes 6 to 16 in Section 18 (awaiting approval); SVG preview of the whole comic in `comic/`; open questions 14 to 16. |
+| 7.8 | - | Move box for every played move (author decision): Section 13, Move Box; Common Prompt Block; proposal move panels; cross-references; superseded rule in Appendix A. |
