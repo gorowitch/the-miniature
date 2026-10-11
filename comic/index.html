@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De Miniatuur - SVG album</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #5b5047; font-family: system-ui, sans-serif; color: #eee; }
+  header { padding: 14px 20px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 18px; margin: 0; }
+  .legend span { display: inline-block; width: 22px; height: 12px; border: 2px dashed #e8862a; vertical-align: middle; margin-right: 6px; }
+  .page { width: min(900px, calc(100vw - 32px)); margin: 0 auto 28px; }
+  .page .bar { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 4px; }
+  .page svg { display: block; width: 100%; height: auto; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
+  button { font: inherit; font-size: 12px; padding: 3px 10px; cursor: pointer; }
+  #err { color: #ffb4a8; white-space: pre-wrap; padding: 0 20px; }
+</style></head><body>
+<header><h1>De Miniatuur - SVG album preview</h1>
+  <div class="legend"><span></span>Scenes 6-16: proposal, awaiting author approval</div>
+  <div>Scenes 1-5: approved script</div></header>
+<pre id="err"></pre>
+<div id="album"></div>
+<script>window.onerror = (m, s, l) => { document.getElementById("err").textContent += m + " @" + l + "\n"; };</script>
+<script src="renderer.js"></script>
+<script src="panels.js"></script>
+<script>
+const NS = "http://www.w3.org/2000/svg", R = window.MiniatuurRenderer;
+const PW = 1700, PH = 2404, MX = 33, GX = 34, MY = 31, GY = 20, CW = 800, CH = 570;
+const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+
+// Lay panels out in rows of two cells; a wide panel takes a whole row; a lone panel before a wide one takes the whole strip.
+const rows = []; let cur = [];
+for (const P of window.PANELS) {
+  if (P.wide) { if (cur.length) rows.push(cur); rows.push([P]); cur = []; continue; }
+  cur.push(P); if (cur.length === 2) { rows.push(cur); cur = []; }
+}
+if (cur.length) rows.push(cur);
+const pages = []; for (let i = 0; i < rows.length; i += 4) pages.push(rows.slice(i, i + 4));
+
+function newPage(label, scenes) {
+  const wrap = document.createElement("div"); wrap.className = "page";
+  const bar = document.createElement("div"); bar.className = "bar";
+  const t = document.createElement("span"); t.textContent = label + (scenes ? "  ·  scene " + scenes : ""); bar.appendChild(t);
+  const btn = document.createElement("button"); btn.textContent = "Download SVG"; bar.appendChild(btn);
+  wrap.appendChild(bar);
+  const svg = el("svg", { xmlns: NS, viewBox: `0 0 ${PW} ${PH}`, width: "210mm", height: "297mm" }); wrap.appendChild(svg);
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: "#fff" }, svg);
+  btn.onclick = () => {
+    const blob = new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "de-miniatuur-" + label.toLowerCase().replace(/\s+/g, "-") + ".svg"; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+  document.getElementById("album").appendChild(wrap);
+  return svg;
+}
+function panelAt(page, P, x, y, w, h) {
+  const s = el("svg", { x, y, width: w, height: h, preserveAspectRatio: "xMidYMid slice", overflow: "hidden" }, page);
+  R.renderPanel(s, P, { mark: true });
+  return s;
+}
+
+// Cover: title and subtitle only here; the whole cast, the board and the raised centre visible; both kings.
+(function cover() {
+  const s = newPage("Cover");
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: "#f6d34a" }, s);
+  const t = el("text", { x: PW / 2, y: 560, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 230, fill: "#c8202e", stroke: "#141414", "stroke-width": 9, "paint-order": "stroke" }, s); t.textContent = "De Miniatuur";
+  const st = el("text", { x: PW / 2, y: 700, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 76, fill: "#141414" }, s); st.textContent = "Een hedendaagse klucht in één bedrijf";
+  const C = { id: "cover", scene: 1, state: 0, cam: { from: [11.6, -2.6, 5.4], at: [4.0, 4.1, 0.2], f: 700 },
+    cast: { koning: { expr: "proud", gest: "raise-r" }, bking: { expr: "calm" }, regina: { lookAt: "koning" }, alfil: { lookAt: "koning" }, caballo: { expr: "heroic" }, brookh8: { expr: "proud" } } };
+  const box = el("svg", { x: 60, y: 880, width: PW - 120, height: 1126 }, s);
+  el("rect", { x: 56, y: 876, width: PW - 112, height: 1134, fill: "none", stroke: "#141414", "stroke-width": 8 }, s);
+  R.renderPanel(box, C, {});
+})();
+
+pages.forEach((rowsOnPage, pi) => {
+  const sc = [...new Set(rowsOnPage.flat().map(p => p.scene))];
+  const s = newPage("Page " + (pi + 1), sc.length > 1 ? sc[0] + "-" + sc[sc.length - 1] : sc[0]);
+  rowsOnPage.forEach((row, ri) => {
+    const y = MY + ri * (CH + GY);
+    if (row[0].wide) panelAt(s, row[0], MX, y, CW * 2 + GX, CH);
+    else if (row.length === 1) panelAt(s, Object.assign({}, row[0], { wide: true }), MX, y, CW * 2 + GX, CH);  // a lone panel takes the whole strip
+    else row.forEach((P, ci) => panelAt(s, P, MX + ci * (CW + GX), y, CW, CH));
+  });
+});
+
+// Export mode (index.html?export=1): every page and every panel as SVG source in one JSON block,
+// read by headless Edge (--dump-dom) and written to comic/svg/ by export-svg.ps1.
+if (new URLSearchParams(location.search).has("export")) {
+  const XML = '<?xml version="1.0" encoding="UTF-8"?>\n', ser = s => XML + new XMLSerializer().serializeToString(s);
+  const files = {};
+  document.querySelectorAll(".page > svg").forEach((s, i) => { files["pages/page-" + String(i).padStart(2, "0") + (i ? "" : "-cover") + ".svg"] = ser(s); });
+  window.PANELS.forEach((P, i) => {
+    const s = document.createElementNS(NS, "svg"); R.renderPanel(s, P, { mark: true });
+    const [, , w, h] = s.getAttribute("viewBox").split(" "); s.setAttribute("width", w); s.setAttribute("height", h);
+    files["panels/" + String(i + 1).padStart(2, "0") + "-panel-" + P.id + ".svg"] = ser(s);
+  });
+  const pre = document.createElement("pre"); pre.id = "export"; pre.textContent = JSON.stringify(files);
+  document.body.innerHTML = ""; document.body.appendChild(pre);
+}
+</script></body></html>

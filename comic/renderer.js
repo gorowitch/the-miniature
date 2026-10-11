@@ -1,0 +1,299 @@
+// De Miniatuur - clean comic-style SVG renderer (layout previews; final art is made with an image generator).
+// Draws one panel from panel data: camera, board state, cast overrides, balloons, effects.
+(function () {
+"use strict";
+const NS = "http://www.w3.org/2000/svg", INK = "#17110d";
+const FEN = ["rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR","rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR","rnbqkbnr/ppp1pppp/8/3p4/8/4P3/PPPP1PPP/RNBQKBNR","rnbqkbnr/ppp1pppp/8/3p4/8/3BP3/PPPP1PPP/RNBQK1NR","rnbqkbnr/ppp2ppp/4p3/3p4/8/3BP3/PPPP1PPP/RNBQK1NR","rnbqkbnr/ppp2ppp/4p3/3p4/8/3BP2N/PPPP1PPP/RNBQK2R","rn1qkbnr/pppb1ppp/4p3/3p4/8/3BP2N/PPPP1PPP/RNBQK2R","rn1qkbnr/pppb1ppp/4p3/3p3Q/8/3BP2N/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnppp/4p3/3p3Q/8/3BP2N/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnppp/4p3/3p2NQ/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1p/4p1p1/3p2NQ/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1N/4p1p1/3p3Q/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1N/4p3/3p3p/8/3BP3/PPPP1PPP/RNB1K2R"];
+const W_ = { w:{f:"#efd2a2",s:"#d6ae78",n:"#e0a77c"}, b:{f:"#6b4630",s:"#4a2f1f",n:"#9a6a4c"} };
+const COST = {
+  koning:{robe:"#7d1f2e",shade:"#5e1622",trim:"#d4a72c"}, bking:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
+  regina:{robe:"#f7f3ea",shade:"#ddd3bf",trim:"#d4a72c",hair:"#e8b77a",hairS:"#c99556"}, bqueen:{robe:"#4a2a44",shade:"#341d30",trim:"#a7afc0",hair:"#2b1b14",hairS:"#160d09"},
+  alfil:{robe:"#46607f",shade:"#35496a",trim:"#d9c69a"}, wbishop:{robe:"#5d7a6a",shade:"#465e51",trim:"#d9c69a"}, bbishop:{robe:"#3b3346",shade:"#29233a",trim:"#9c98aa"},
+  caballo:{robe:"#7d1f2e",shade:"#5e1622",trim:"#d4a72c"}, wknight:{robe:"#8a6a3a",shade:"#6b522c",trim:"#d9c69a"}, bknight:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
+  wrook:{robe:"#8a6a3a",shade:"#6b522c",trim:"#d9c69a"}, brook:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
+  wpawn:{robe:"#6d84a3",shade:"#56698a",trim:"#c9d3e0"}, bpawn:{robe:"#4d5a3a",shade:"#39432a",trim:"#9aa58a"} };
+
+function mk(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], nrm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)}, cr=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+const sqXY = sq => ["abcdefgh".indexOf(sq[0]) + 0.5, +sq[1] - 0.5];
+
+// Which named character stands on a square in a given board state.
+function roleOf(sq, ch, state) {
+  if (sq === "e1" && ch === "K") return "koning";
+  if (sq === "e8" && ch === "k") return "bking";
+  if (sq === "h8" && ch === "r") return "brookh8";
+  if (ch === "B" && ((state < 3 && sq === "f1") || (state >= 3 && sq === "d3"))) return "alfil";
+  if (ch === "Q") return "regina";
+  if (ch === "N" && ((state < 5 && sq === "g1") || (state >= 5 && state < 9 && sq === "h3") || (state >= 9 && state < 11 && sq === "g5") || (state >= 11 && sq === "h7"))) return "caballo";
+  return null;
+}
+function costumeOf(type, col, role) {
+  if (role === "koning") return COST.koning; if (role === "bking") return COST.bking; if (role === "regina") return COST.regina;
+  if (role === "alfil") return COST.alfil; if (role === "caballo") return COST.caballo; if (role === "brookh8") return COST.brook;
+  return ({k:col==="w"?COST.koning:COST.bking, q:col==="w"?COST.regina:COST.bqueen, b:col==="w"?COST.wbishop:COST.bbishop, n:col==="w"?COST.wknight:COST.bknight, r:col==="w"?COST.wrook:COST.brook, p:col==="w"?COST.wpawn:COST.bpawn})[type];
+}
+
+// ---------------------------------------------------------------- piece sprites (unit: 50 = one square)
+function face(g, x, y, r, col, o) {
+  const W = W_[col], lx = (o.look || 0), E = o.expr || "neutral", talk = !!o.talk, brC = col === "w" ? "#5a3a1e" : "#efe2cf";
+  const sw = r * 0.13;
+  const brow = (s, dy, slope) => mk("path", { d: `M${x+s*r*.64} ${y-r*.42+dy} l${-s*r*.46} ${slope}`, stroke: brC, "stroke-width": sw, "stroke-linecap": "round", fill: "none" }, g);
+  const browArc = (s, h) => mk("path", { d: `M${x+s*r*.66} ${y-r*.48} q${-s*r*.22} ${-h} ${-s*r*.46} ${-r*.06}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
+  if (E === "surprised" || E === "proud" || E === "pleading-up") { browArc(-1, r*.22); browArc(1, r*.22); }
+  else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
+  else if (E === "worried" || E === "despair" || E === "sigh" || E === "pleading" || E === "apologetic") { brow(-1, r*.04, -r*.22); brow(1, r*.04, -r*.22); }
+  else if (E === "offended" || E === "puzzled") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
+  else if (E === "calm" || E === "smug") { brow(-1, 0, -r*.02); brow(1, 0, -r*.02); }
+  else { brow(-1, 0, -r*.08); brow(1, 0, -r*.08); }
+  const closed = E === "despair" || E === "sigh";
+  if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
+  else {
+    const ry = E === "surprised" ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug") ? .17 : .29;
+    for (const s of [-1, 1]) {
+      mk("ellipse", { cx: x+s*r*.32, cy: y-r*.12, rx: r*(E === "surprised" ? .27 : .24), ry: r*ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
+      mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08, r: r*(E === "surprised" ? .1 : .12), fill: INK }, g);
+      mk("circle", { cx: x+s*r*.32+lx*r*.11-r*.04, cy: y-r*.12, r: r*.035, fill: "#fff" }, g);
+      if (E === "calm" || E === "smug") mk("path", { d: `M${x+s*r*.32-r*.26} ${y-r*.2} q${r*.26} ${-r*.1} ${r*.52} 0`, stroke: W_[col].f, "stroke-width": r*.16, fill: "none" }, g);
+    }
+  }
+  mk("path", { d: `M${x+lx*r*.08} ${y+r*.02} C${x+lx*r*.08-r*.26} ${y+r*.1} ${x+lx*r*.08-r*.22} ${y+r*.48} ${x+lx*r*.08} ${y+r*.48} C${x+lx*r*.08+r*.22} ${y+r*.48} ${x+lx*r*.08+r*.26} ${y+r*.1} ${x+lx*r*.08} ${y+r*.02} Z`, fill: W_[col].n, stroke: INK, "stroke-width": r*.05 }, g);
+  if (o.must) mk("path", { d: `M${x} ${y+r*.47} c${-r*.2} ${-r*.1} ${-r*.62} ${-r*.05} ${-r*.78} ${r*.22} c${r*.3} ${r*.05} ${r*.58} 0 ${r*.78} ${-r*.12} c${r*.2} ${r*.12} ${r*.48} ${r*.17} ${r*.78} ${r*.12} c${-r*.16} ${-r*.27} ${-r*.58} ${-r*.32} ${-r*.78} ${-r*.22}Z`, fill: o.mustC || "#f4f0e6", stroke: INK, "stroke-width": r*.04 }, g);
+  const my = o.must ? y + r*.84 : y + r*.7;
+  if (talk && (E === "furious" || E === "heroic")) {
+    mk("path", { d: `M${x-r*.34} ${my-r*.08} q${r*.34} ${-r*.08} ${r*.68} 0 q${-r*.04} ${r*.46} ${-r*.34} ${r*.46} q${-r*.3} 0 ${-r*.34} ${-r*.46}Z`, fill: "#4a130d", stroke: INK, "stroke-width": r*.05 }, g);
+    mk("path", { d: `M${x-r*.28} ${my-r*.07} q${r*.28} ${r*.07} ${r*.56} 0 l${-r*.02} ${r*.1} q${-r*.26} ${r*.05} ${-r*.52} 0Z`, fill: "#fffaf0" }, g);
+    mk("path", { d: `M${x-r*.18} ${my+r*.3} q${r*.18} ${-r*.14} ${r*.36} 0 q${-r*.18} ${r*.08} ${-r*.36} 0Z`, fill: "#c4584a" }, g);
+  } else if (talk) {
+    mk("ellipse", { cx: x, cy: my + r*.03, rx: r*.19, ry: r*.15, fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
+    mk("path", { d: `M${x-r*.1} ${my+r*.1} q${r*.1} ${-r*.06} ${r*.2} 0`, fill: "#c4584a", stroke: "none" }, g);
+  } else if (E === "surprised" && o.mouthOpen) {
+    mk("ellipse", { cx: x, cy: my, rx: r*.14, ry: r*.19, fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
+  } else {
+    const d = (E === "worried" || E === "pleading" || E === "apologetic") ? `M${x-r*.26} ${my} q${r*.13} ${-r*.1} ${r*.26} 0 q${r*.13} ${r*.1} ${r*.26} 0`
+      : (E === "despair" || E === "angry" || E === "furious") ? `M${x-r*.24} ${my+r*.08} q${r*.24} ${-r*.18} ${r*.48} 0`
+      : (E === "offended" || E === "stubborn") ? `M${x-r*.2} ${my} l${r*.4} ${-r*.03}`
+      : (E === "smug") ? `M${x-r*.2} ${my} q${r*.26} ${r*.12} ${r*.36} ${-r*.08}`
+      : (E === "sigh") ? `M${x-r*.1} ${my} q${r*.1} ${r*.1} ${r*.2} 0`
+      : `M${x-r*.2} ${my} q${r*.2} ${r*.11} ${r*.4} 0`;
+    if (!o.must || E === "despair" || E === "worried" || E === "angry") mk("path", { d, stroke: INK, "stroke-width": r*.085, fill: "none", "stroke-linecap": "round" }, g);
+  }
+  if (o.flush || E === "furious") for (const s of [-1, 1]) mk("ellipse", { cx: x+s*r*.62, cy: y+r*.3, rx: r*.22, ry: r*.13, fill: "#d9543a", opacity: .55 }, g);
+}
+function backHead(g, x, y, r, col) { mk("circle", { cx: x, cy: y, r, fill: W_[col].f, stroke: INK, "stroke-width": r*.07 }, g); mk("path", { d: `M${x+r*.3} ${y-r*.7} q${r*.6} ${r*.5} ${r*.4} ${r*1.2}`, stroke: W_[col].s, "stroke-width": r*.18, fill: "none" }, g); }
+function felt(g) { mk("ellipse", { cx: 0, cy: 2, rx: 20, ry: 6.5, fill: "#2e7a3a", stroke: INK, "stroke-width": 1.4 }, g); }
+function base(g, col) { const W = W_[col]; felt(g);
+  mk("path", { d: "M-19 0 L-19 -8 L19 -8 L19 0 A19 6 0 0 1 -19 0Z", fill: W.s, stroke: INK, "stroke-width": 1.6 }, g);
+  mk("ellipse", { cx: 0, cy: -8, rx: 19, ry: 5.5, fill: W.f, stroke: INK, "stroke-width": 1.6 }, g); }
+function robe(g, h, top, c, back) {
+  mk("path", { d: `M-15 -9 C-13 ${-h*.5} -9 ${-h*.82} -${top} ${-h} L${top} ${-h} C9 ${-h*.82} 13 ${-h*.5} 15 -9 Z`, fill: c.robe, stroke: INK, "stroke-width": 1.8 }, g);
+  mk("path", { d: `M4 -9 C6 ${-h*.4} 6 ${-h*.7} ${top*.6} ${-h} L${top} ${-h} C9 ${-h*.82} 13 ${-h*.5} 15 -9 Z`, fill: c.shade, stroke: "none" }, g);
+  mk("path", { d: `M-15 -9 C-13 ${-h*.5} -9 ${-h*.82} -${top} ${-h} L${top} ${-h} C9 ${-h*.82} 13 ${-h*.5} 15 -9 Z`, fill: "none", stroke: INK, "stroke-width": 1.8 }, g);
+  if (!back) mk("path", { d: `M0 ${-h+2} V-9`, stroke: c.trim, "stroke-width": 2.6 }, g);
+  mk("ellipse", { cx: 0, cy: -h, rx: top + 4, ry: 3.2, fill: c.trim, stroke: INK, "stroke-width": 1.4 }, g);
+}
+function arm(g, sx, sy, angDeg, len, c, hand, col) {
+  const a = angDeg * Math.PI / 180, ex = sx + Math.cos(a) * len, ey = sy + Math.sin(a) * len, mx = sx + Math.cos(a)*len*.5 - Math.sin(a)*3, my = sy + Math.sin(a)*len*.5 + Math.cos(a)*3;
+  mk("path", { d: `M${sx} ${sy} Q${mx} ${my} ${ex} ${ey}`, stroke: INK, "stroke-width": 7.6, fill: "none", "stroke-linecap": "round" }, g);
+  mk("path", { d: `M${sx} ${sy} Q${mx} ${my} ${ex} ${ey}`, stroke: c.robe, "stroke-width": 5.4, fill: "none", "stroke-linecap": "round" }, g);
+  const hx = ex + Math.cos(a) * 3, hy = ey + Math.sin(a) * 3, F = W_[col].f;
+  if (hand === "point") { mk("path", { d: `M${hx} ${hy} l${Math.cos(a)*8} ${Math.sin(a)*8}`, stroke: INK, "stroke-width": 3.6, "stroke-linecap": "round" }, g); mk("path", { d: `M${hx} ${hy} l${Math.cos(a)*8} ${Math.sin(a)*8}`, stroke: F, "stroke-width": 2, "stroke-linecap": "round" }, g); }
+  if (hand === "open") for (const d of [-0.5, 0, 0.5]) { const b = a + d; mk("path", { d: `M${hx} ${hy} l${Math.cos(b)*6} ${Math.sin(b)*6}`, stroke: INK, "stroke-width": 3, "stroke-linecap": "round" }, g); mk("path", { d: `M${hx} ${hy} l${Math.cos(b)*6} ${Math.sin(b)*6}`, stroke: F, "stroke-width": 1.6, "stroke-linecap": "round" }, g); }
+  mk("circle", { cx: hx, cy: hy, r: hand === "fist" ? 5.2 : 4, fill: F, stroke: INK, "stroke-width": 1.4 }, g);
+  if (hand === "fist") mk("path", { d: `M${hx-3} ${hy-1.5} h5 M${hx-3} ${hy+1.5} h5`, stroke: INK, "stroke-width": .8 }, g);
+}
+const SH = { p: -24, b: -30, q: -36, k: -40, r: -30, n: -32 }, HEAD = { p: [-35, 11], b: [-41, 10], q: [-50, 10.5], k: [-57, 11.5], r: [-26, 10], n: [-50, 5] };
+function gestureArms(g, type, col, c, gest) {
+  const s = SH[type], L = 22;
+  const map = {
+    "fist-up-l": [[-12, s, -115, 26, "fist"]], "fist-up-r": [[12, s, -65, 26, "fist"]],
+    "point-l": [[-12, s, 190, L, "point"]], "point-r": [[12, s, -10, L, "point"]],
+    "point-down-l": [[-12, s, 140, L, "point"]], "point-down-r": [[12, s, 40, L, "point"]],
+    "point-up-l": [[-12, s, -140, L, "point"]], "point-up-r": [[12, s, -40, L, "point"]],
+    "open-l": [[-12, s, 200, 18, "open"]], "open-r": [[12, s, -20, 18, "open"]],
+    "both-open": [[-12, s, 150, 16, "open"], [12, s, 30, 16, "open"]],
+    "raise-l": [[-12, s, -125, 24, "open"]], "raise-r": [[12, s, -55, 24, "open"]],
+    "hands-head": [[-11, s, -86, 16, "open"], [11, s, -94, 16, "open"]],
+    "crossed": [[-11, s + 4, 15, 14, "fist"], [11, s + 4, 165, 14, "fist"]],
+    "hand-chest": [[11, s, 160, 11, "open"]],
+    "wave-r": [[12, s, -35, 20, "open"]], "wave-l": [[-12, s, -145, 20, "open"]] };
+  for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
+}
+function crown(g, y, col, gem) { const F = W_[col].f;
+  mk("path", { d: `M-12 ${y} L-12 ${y-10} L-6 ${y-5} L0 ${y-12} L6 ${y-5} L12 ${y-10} L12 ${y} Z`, fill: F, stroke: INK, "stroke-width": 1.5 }, g);
+  mk("path", { d: `M-12 ${y} H12 V${y-3} H-12 Z`, fill: W_[col].s, stroke: INK, "stroke-width": 1 }, g);
+  if (gem) mk("circle", { cx: 0, cy: y - 1.5, r: 1.6, fill: "#b8202e", stroke: INK, "stroke-width": .6 }, g); }
+const SPR = {
+  p(g, col, c, o) { base(g, col); robe(g, 24, 6, c, o.back); mk("circle", { cx: 0, cy: -35, r: 11, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
+    if (o.back) backHead(g, 0, -35, 11, col); else face(g, 0, -35, 11, col, o); },
+  r(g, col, c, o) { const F = W_[col].f; felt(g); mk("path", { d: "M-18 0 L-18 -8 L18 -8 L18 0 A18 6 0 0 1 -18 0Z", fill: W_[col].s, stroke: INK, "stroke-width": 1.6 }, g);
+    mk("path", { d: "M-14 -8 L-12 -42 L12 -42 L14 -8 Z", fill: F, stroke: INK, "stroke-width": 1.7 }, g);
+    mk("path", { d: "M-14 -18 L14 -18 L13 -10 L-13 -10 Z", fill: c.robe, stroke: INK, "stroke-width": 1.3 }, g);
+    mk("path", { d: "M-15 -42 L-15 -54 L-10 -54 L-10 -49 L-3 -49 L-3 -54 L3 -54 L3 -49 L10 -49 L10 -54 L15 -54 L15 -42 Z", fill: F, stroke: INK, "stroke-width": 1.7 }, g);
+    if (!o.back) face(g, 0, -28, 10, col, o); },
+  n(g, col, c, o) { const F = W_[col].f; felt(g); mk("path", { d: "M-19 0 L-19 -8 L19 -8 L19 0 A19 6 0 0 1 -19 0Z", fill: W_[col].s, stroke: INK, "stroke-width": 1.6 }, g);
+    const h = mk("g", { transform: `scale(${o.dir || 1},1)` }, g);
+    mk("path", { d: "M-12 -7 C-15 -24 -13 -40 -6 -52 C-2 -60 7 -62 13 -57 L24 -46 C27 -41 24 -37 18 -38 L9 -40 C7 -31 11 -19 13 -7Z", fill: F, stroke: INK, "stroke-width": 1.8 }, h);
+    mk("path", { d: "M-12 -14 C-2 -12 6 -12 13 -14 L13 -7 L-12 -7 Z", fill: c.robe, stroke: INK, "stroke-width": 1.3 }, h);
+    if (o.role === "caballo") { mk("path", { d: "M-11 -34 L11 -18", stroke: "#b8202e", "stroke-width": 4 }, h); mk("circle", { cx: -2, cy: -24, r: 3, fill: "#e2b33a", stroke: INK, "stroke-width": 1 }, h); }
+    mk("path", { d: "M-1 -59 L2 -69 L6 -58Z", fill: F, stroke: INK, "stroke-width": 1.5 }, h);
+    mk("path", { d: "M-8 -54 q-6 4 -5 10 M-11 -45 q-6 4 -5 10 M-13 -36 q-5 4 -4 10", stroke: col === "w" ? "#7a5530" : "#c9a27a", "stroke-width": 2, fill: "none" }, h);
+    const E = o.expr || "neutral", eyeR = E === "surprised" ? 6 : 5.2;
+    mk("ellipse", { cx: 6, cy: -50, rx: 4.6, ry: eyeR, fill: "#fff", stroke: INK, "stroke-width": 1.1 }, h);
+    mk("circle", { cx: 7.6, cy: -49.5, r: 2.4, fill: INK }, h);
+    const bs = E === "furious" || E === "heroic" || E === "angry" || E === "stubborn" ? "M1 -55 l10 2.5" : E === "worried" || E === "pleading" || E === "apologetic" ? "M1 -57 l10 -3" : "M1 -57.5 l10 -1.5";
+    mk("path", { d: bs, stroke: col === "w" ? "#5a3a1e" : "#efe2cf", "stroke-width": 2, "stroke-linecap": "round" }, h);
+    mk("circle", { cx: 20, cy: -43, r: 1.2, fill: INK }, h);
+    if (o.talk) mk("path", { d: E === "heroic" || E === "furious" ? "M12 -40 Q18 -34 23 -40 Q18 -37 12 -40Z" : "M13 -39 Q18 -36 22 -39", fill: "#4a130d", stroke: INK, "stroke-width": 1.2 }, h);
+    else mk("path", { d: "M13 -39 q4 2 8 1", stroke: INK, "stroke-width": 1.2, fill: "none" }, h); },
+  b(g, col, c, o) { base(g, col); robe(g, 32, 6, c, o.back); mk("circle", { cx: 0, cy: -41, r: 10, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
+    if (o.back) backHead(g, 0, -41, 10, col); else face(g, 0, -41, 10, col, o);
+    const mc = col === "w" ? "#f2e3c2" : "#5b4a3c";
+    mk("path", { d: "M-9 -47 C-11 -58 -5 -68 0 -74 C5 -68 11 -58 9 -47 C3 -49 -3 -49 -9 -47Z", fill: mc, stroke: INK, "stroke-width": 1.6 }, g);
+    mk("path", { d: "M0 -73 V-48", stroke: c.trim, "stroke-width": 2.4 }, g);
+    if (o.role === "alfil") for (const [x, y, r] of [[-4, -56, 1.6], [4, -62, 1.3], [5, -52, 1.4], [-3, -65, 1.1], [-6, -51, 1]]) mk("ellipse", { cx: x, cy: y, rx: r, ry: r * .8, fill: "#d9541e" }, g); },
+  q(g, col, c, o) { base(g, col); robe(g, 40, 6, c, o.back);
+    for (const [sw, cl] of [[7.4, INK], [5.6, c.hair]]) mk("path", { d: "M-11 -52 C-17 -42 -16 -32 -11 -27 M11 -52 C17 -42 16 -32 11 -27", stroke: cl, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
+    mk("circle", { cx: 0, cy: -50, r: 10.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
+    if (o.back) { mk("path", { d: "M-11 -54 C-12 -44 -6 -38 0 -37 C6 -38 12 -44 11 -54 C8 -62 -8 -62 -11 -54Z", fill: c.hair, stroke: INK, "stroke-width": 1.2 }, g); }
+    else { mk("path", { d: "M-11 -53 C-8 -64 8 -64 11 -53 C6 -59 -6 -59 -11 -53Z", fill: c.hair, stroke: INK, "stroke-width": 1 }, g); face(g, 0, -49, 10.5, col, o); }
+    crown(g, -58, col, o.role === "regina"); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: W_[col].f, stroke: INK, "stroke-width": 1 }, g); },
+  k(g, col, c, o) { base(g, col); robe(g, 44, 7, c, o.back); mk("circle", { cx: 0, cy: -57, r: 11.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.7 }, g);
+    if (o.role === "koning" && !o.back) for (const [x, cc] of [[-6, "#2e7a3a"], [5, "#1f4e8c"], [9, "#b8202e"]]) { mk("path", { d: `M${x-1.6} -38 L${x} -33 L${x+1.6} -38 Z`, fill: cc, stroke: INK, "stroke-width": .6 }, g); mk("circle", { cx: x, cy: -31.5, r: 2, fill: "#e2b33a", stroke: INK, "stroke-width": .6 }, g); }
+    if (o.back) backHead(g, 0, -57, 11.5, col);
+    else { const bc = col === "w" ? "#f4f0e6" : "#2a1d16"; const long = col === "w";
+      mk("path", { d: `M-10 -53 C-11 ${long ? -40 : -46} 11 ${long ? -40 : -46} 10 -53 C5 -49 -5 -49 -10 -53Z`, fill: bc, stroke: INK, "stroke-width": 1.1 }, g);
+      face(g, 0, -57, 11.5, col, Object.assign({ must: true, mustC: bc }, o)); }
+    crown(g, -66, col, o.role === "koning");
+    mk("path", { d: "M-2 -78 V-83 H-6 V-87 H-2 V-91 H2 V-87 H6 V-83 H2 V-78 Z", fill: W_[col].f, stroke: INK, "stroke-width": 1.3 }, g); }
+};
+function drawPiece(parent, p, sw) {
+  const g = mk("g", { transform: `translate(${p.x.toFixed(1)},${p.y.toFixed(1)}) scale(${p.s.toFixed(3)})` }, parent);
+  const inner = p.o.lean ? mk("g", { transform: `rotate(${p.o.lean}) scale(1,${p.o.bow || 1})` }, g) : g;
+  inner.setAttribute("style", `stroke-width:${sw}`);
+  SPR[p.t](inner, p.col, p.c, p.o);
+  if (!p.o.back) gestureArms(inner, p.t, p.col, p.c, p.o.gest);
+  if (p.o.back && p.o.gest) gestureArms(inner, p.t, p.col, p.c, p.o.gest);
+  const [hy, hr] = HEAD[p.t];
+  if (p.o.anger) { const sd = [].concat(p.o.gest || []).some(x => /-r$/.test(x)) ? -1 : 1, ax = sd > 0 ? hr * .75 : -hr * 1.55;
+    mk("path", { d: `M${ax+hr*.15} ${hy-hr*1.1} q3 -5 6 0 M${ax+hr*.15} ${hy-hr*.6} q3 5 6 0 M${ax} ${hy-hr*.95} q-5 3 0 6 M${ax+hr*.8} ${hy-hr*.95} q5 3 0 6`, stroke: "#c0392b", "stroke-width": 1.7, fill: "none", "stroke-linecap": "round" }, inner); }
+  if (p.o.sweat) for (const [dx, dy] of [[hr*1.2, hy-hr*.5], [hr*1.45, hy+hr*.1]]) mk("path", { d: `M${dx} ${dy} q3 -6 4 0 q-1 4 -4 0Z`, fill: "#bfe3f5", stroke: INK, "stroke-width": .9 }, inner);
+  if (p.o.sigh) mk("path", { d: `M${hr*.9} ${hy+hr*.6} q6 -3 8 2 q4 -3 7 2 q-3 5 -8 3 q-4 4 -7 -7Z`, fill: "#f4f6f8", stroke: INK, "stroke-width": .9 }, inner);
+  if (p.o.shake) mk("path", { d: `M${-hr*1.8} ${hy-hr*1.6} l-6 -4 M${-hr*2} ${hy-hr*.8} l-7 0 M${hr*1.8} ${hy-hr*1.6} l6 -4`, stroke: INK, "stroke-width": 1.6, "stroke-linecap": "round" }, inner);
+  return g;
+}
+
+// ---------------------------------------------------------------- panel
+function wrap(text, fs, maxW) { const cv = wrap.cv || (wrap.cv = document.createElement("canvas").getContext("2d")); cv.font = `700 ${fs}px 'Comic Neue','Comic Sans MS',cursive`;
+  const words = text.split(" "), lines = []; let cur = ""; for (const w of words) { const t = cur ? cur + " " + w : w; if (cv.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur);
+  return { lines, w: Math.max(...lines.map(l => cv.measureText(l).width)) }; }
+
+function camFor(P) {
+  if (P.cam && P.cam.from) return [P.cam.from, P.cam.at, P.cam.f || 700];
+  const c = P.cam || {}; const pts = (c.frame || ["e1"]).map(sq => (sq.length === 2 ? [...sqXY(sq)] : sq));
+  const cx = pts.reduce((a, p) => a + p[0], 0) / pts.length, cy = pts.reduce((a, p) => a + p[1], 0) / pts.length;
+  const spread = Math.max(0.8, ...pts.map(p => Math.hypot(p[0] - cx, p[1] - cy) * 2));
+  const side = c.side || "b", dist = (c.dist || 1.9) + spread * 0.9, h = (c.h || 1.55) + spread * 0.25, dir = side === "b" ? 1 : -1;
+  const at = [cx, cy, c.th !== undefined ? c.th : 0.95], k = c.tele || 1.8;  // telephoto: same framing, flatter perspective, so near pawns do not swamp the speakers
+  const from = [at[0] + (c.ox || 0) * k, at[1] + dir * dist * k, at[2] + (h - at[2]) * k * (c.lift || 2.6)];
+  return [from, at, (c.f || 640) * k];
+}
+
+function renderPanel(svg, P, opts) {
+  opts = opts || {};
+  const W0 = P.wide ? 1634 : 800, H = 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const defs = mk("defs", {}, svg);
+  defs.innerHTML = `<style>@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;display=swap');</style>
+  <filter id="soft${P.id}" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="3"/></filter>
+  <pattern id="ht${P.id}" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="4.5" cy="4.5" r="1.5" fill="#000" opacity=".09"/></pattern>
+  <clipPath id="clip${P.id}"><rect x="0" y="0" width="${W0}" height="${H}"/></clipPath>`;
+  const root = mk("g", { "clip-path": `url(#clip${P.id})` }, svg);
+  const state = P.state || 0, scene = P.scene || 1;
+  const [C, T, F] = camFor(P), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
+  const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [W0 / 2 + F * dot(v, rt) / Math.max(d, .01), H / 2 - F * dot(v, up) / Math.max(d, .01), d]; };
+  const bump = (x, y) => { const r = Math.hypot((x - 4) / 1.15, (y - 4) / 1.15); return r >= 1 ? 0 : 0.14 * (0.5 + 0.5 * Math.cos(Math.PI * r)); };
+  const pz = (x, y) => pr(x, y, bump(x, y));
+  // room background (soft, no people, no text)
+  const bg = mk("g", { filter: `url(#soft${P.id})` }, root);
+  const hz = pr(4, C[1] > 4 ? -6 : 14, 0)[1];
+  mk("rect", { width: W0, height: H, fill: "#cfd8c6" }, bg);
+  const wallY = Math.max(-40, Math.min(H * .8, hz - 40));
+  for (let i = 0; i < W0; i += 330) { mk("rect", { x: i + 40, y: wallY - 230, width: 120, height: 200, fill: "#e9eedc" }, bg); mk("path", { d: `M${i + 100} ${wallY - 230} V${wallY - 30} M${i + 40} ${wallY - 130} H${i + 160}`, stroke: "#b9c2ad", "stroke-width": 6 }, bg); }
+  mk("rect", { x: 0, y: wallY, width: W0, height: H, fill: "#8d6b4a" }, bg);
+  for (let i = 0; i < W0; i += 300) { mk("rect", { x: i + 20, y: wallY - 22, width: 200, height: 18, fill: "#5d4330" }, bg); mk("path", { d: `M${i + 240} ${wallY + 4} V${wallY - 70} Q${i + 268} ${wallY - 84} ${i + 296} ${wallY - 70} V${wallY + 4}`, fill: "#6b4c33" }, bg); }
+  mk("rect", { width: W0, height: H, fill: `url(#ht${P.id})` }, root);
+  // board
+  const poly = (pts, a, par) => { const q = pts.map(([x, y]) => pz(x, y)); if (q.some(p => p[2] < 0.25)) return; mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") }, a), par || root); };
+  const bd = mk("g", {}, root);
+  poly([[-0.4, -0.4], [8.4, -0.4], [8.4, 8.4], [-0.4, 8.4]], { fill: "#7a5a3c" }, bd);
+  for (let s = 0; s < 8; s++) for (const r of [[[s, -0.15], [s + 1, -0.15], [s + 1, 0], [s, 0]], [[8, s], [8.15, s], [8.15, s + 1], [8, s + 1]], [[-0.15, s], [0, s], [0, s + 1], [-0.15, s + 1]], [[s, 8], [s + 1, 8], [s + 1, 8.15], [s, 8.15]]]) poly(r, { fill: "#e6d6ae", stroke: INK, "stroke-width": .5 }, bd);
+  for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; for (let k = 0; k < 4; k++) pts.push([i + k / 4, a]); for (let k = 0; k < 4; k++) pts.push([i + 1, a + k / 4]); for (let k = 0; k < 4; k++) pts.push([i + 1 - k / 4, a + 1]); for (let k = 0; k < 4; k++) pts.push([i, a + 1 - k / 4]); poly(pts, { fill: (i + n) % 2 ? "#33241b" : "#e6d6ae", stroke: "#20160f", "stroke-width": .6 }, bd); }
+  { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
+    for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min(v > 0 ? .55 : .2, Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
+  const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
+  poly([[5.12, 5.3], [5.4, 5.16], [5.78, 5.24], [5.9, 5.5], [5.82, 5.82], [5.45, 5.88], [5.14, 5.76], [5.06, 5.5]], { fill: colaExplicit ? "#3a1608" : "#6a3418", opacity: colaExplicit ? .92 : .16 }, bd);
+  if (colaExplicit) poly([[5.3, 5.36], [5.55, 5.3], [5.62, 5.42], [5.36, 5.48]], { fill: "#e9c7a8", opacity: .55 }, bd);
+  { const pts = []; for (let k = 0; k < 20; k++) { const a = k / 20 * Math.PI * 2; pts.push([5.5 + Math.cos(a) * .34, 2.5 + Math.sin(a) * .2]); } poly(pts, { fill: "#c9a83a", opacity: f3Explicit ? .45 : .14 }, bd);
+    if (f3Explicit) { const p2 = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; p2.push([5.42 + Math.cos(a) * .1, 2.46 + Math.sin(a) * .05]); } poly(p2, { fill: "#fffbe0", opacity: .7 }, bd); } }
+  // pieces
+  const items = [], cast = P.cast || {};
+  FEN[state].split("/").forEach((row, ri) => { let i = 0; for (const ch of row) { if (/\d/.test(ch)) { i += +ch; continue; } const n = 8 - ri, sq = "abcdefgh"[i] + n; items.push({ sq, ch, x0: i + .5, y0: n - .5 }); i++; } });
+  for (const b of (P.beside || [])) items.push({ sq: b.id, ch: b.ch, x0: b.at[0], y0: b.at[1], beside: true, role: b.role });
+  const placed = [];
+  for (const it of items) {
+    const col = it.ch === it.ch.toUpperCase() ? "w" : "b", t = it.ch.toLowerCase(), role = it.role || roleOf(it.sq, it.ch, state);
+    const [x, y, d] = pr(it.x0, it.y0, it.beside ? 0 : bump(it.x0, it.y0)); if (d < 0.7) continue;
+    const ov = Object.assign({}, cast[it.sq] || {}, role ? cast[role] || {} : {});
+    const faceDir = col === "w" ? 1 : -1, back = ov.back !== undefined ? ov.back : (C[1] - it.y0) * faceDir < 0;
+    const o = Object.assign({ role, back }, ov);
+    if (t === "n") o.dir = pr(4, it.y0, 0)[0] > x ? 1 : -1;
+    if (o.lookAt) { const tg = items.find(q => q.sq === o.lookAt || roleOf(q.sq, q.ch, state) === o.lookAt || q.role === o.lookAt); if (tg) { const tx = pr(tg.x0, tg.y0, 0)[0]; o.look = tx < x - 4 ? -1 : tx > x + 4 ? 1 : 0; } }
+    const s = F / d / 50;
+    placed.push({ t, col, o, x, y, d, s, sq: it.sq, role, c: costumeOf(t, col, role) });
+  }
+  placed.sort((a, b) => b.d - a.d);
+  // effects behind pieces
+  for (const fx of (P.fx || [])) {
+    if (fx.burst) { const sp = placed.find(p => p.role === fx.burst || p.sq === fx.burst); if (sp) { const [hy] = HEAD[sp.t]; const cx = sp.x, cy = sp.y + hy * sp.s; const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .9 }, root); mk("circle", { cx, cy, r: 260, fill: "#fff6d6", opacity: .35, stroke: "none" }, gg); for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2 + .2; mk("path", { d: `M${cx + Math.cos(a) * 70} ${cy + Math.sin(a) * 70} L${cx + Math.cos(a) * 900} ${cy + Math.sin(a) * 900}`, "stroke-width": 5 + (k % 3) * 2 }, gg); } } }
+    if (fx.move) { const [a, b] = fx.move; const p0 = pr(...sqXY(a), 0.4), p1 = pr(...sqXY(b), 0.4); const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .95 }, root); for (const off of [-12, 0, 12]) { const dd = `M${p0[0]} ${p0[1] + off} Q${(p0[0] + p1[0]) / 2} ${Math.min(p0[1], p1[1]) - 60 + off} ${p1[0]} ${p1[1] + off}`; mk("path", { d: dd, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12" }, gg); mk("path", { d: dd, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12" }, gg); } }
+  }
+  for (const p of placed) { const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
+  // balloons
+  const fs = 25, bal = P.balloons || [];
+  let nextX = 16;
+  bal.forEach((b, i) => {
+    const sp = placed.find(p => p.role === b.who || p.sq === b.who);
+    const maxW = Math.min(W0 * 0.46, b.w || 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36));
+    const bw = wr.w + (b.shout ? 76 : 44), lh = fs * 1.18, bh = wr.lines.length * lh + (b.shout ? 46 : 26);
+    const by = b.y !== undefined ? b.y : 14;
+    let bx;
+    if (b.x !== undefined) bx = b.x;
+    else {
+      // choose the x that covers the fewest heads (faces, crowns, mitres), preferring a spot near the speaker
+      const boxes = placed.filter(p => p.s > 0.6).map(p => { const hw = (p.t === "k" ? 17 : p.t === "n" ? 20 : 15) * p.s; return [p.head[0] - hw, p.top - 4, p.head[0] + hw, p.mouth[1] + 6 * p.s]; });
+      let best = null;
+      for (let cx = Math.max(nextX, 16); cx <= W0 - bw - 16; cx += 10) {
+        let ov = 0; for (const [x1, y1, x2, y2] of boxes) { const ox = Math.max(0, Math.min(cx + bw, x2) - Math.max(cx, x1)), oy = Math.max(0, Math.min(by + bh, y2) - Math.max(by, y1)); ov += ox * oy; }
+        const near = sp ? Math.abs(cx + bw / 2 - sp.mouth[0]) : 0, score = ov * 4 + near;
+        if (!best || score < best[0]) best = [score, cx];
+      }
+      bx = best ? best[1] : nextX;
+    }
+    nextX = bx + bw + 14;
+    const g = mk("g", {}, root);
+    if (sp && !b.noTail) { const tx = sp.mouth[0], ty = Math.max(by + bh + 8, sp.head[1] - HEAD[sp.t][1] * sp.s * 0.2); const mx = Math.max(bx + 30, Math.min(bx + bw - 30, tx)); const ex = tx + (tx < mx ? 4 : -4), ey = ty;
+      mk("path", { d: `M${mx - 14} ${by + bh - 6} Q${(mx + ex) / 2} ${(by + bh + ey) / 2} ${ex} ${ey} Q${(mx + ex) / 2 + 10} ${(by + bh + ey) / 2} ${mx + 14} ${by + bh - 6} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g); }
+    if (b.shout) { const cx = bx + bw / 2, cy = by + bh / 2, rx = bw / 2, ry = bh / 2, N = 30; let d = ""; for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, f = k % 2 ? .86 : 1; d += (k ? "L" : "M") + (cx + Math.cos(a) * rx * f).toFixed(1) + " " + (cy + Math.sin(a) * ry * f).toFixed(1); } mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 3.4, "stroke-linejoin": "miter" }, g); }
+    else mk("rect", { x: bx, y: by, width: bw, height: bh, rx: Math.min(30, bh / 2), fill: "#fffdf5", stroke: INK, "stroke-width": 3 }, g);
+    if (sp && !b.noTail) { const tx = sp.mouth[0], mx = Math.max(bx + 30, Math.min(bx + bw - 30, tx)); mk("path", { d: `M${mx - 12} ${by + bh - (b.shout ? 10 : 2)} L${mx + 12} ${by + bh - (b.shout ? 10 : 2)}`, stroke: "#fffdf5", "stroke-width": 8 }, g); }
+    wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: by + (b.shout ? 23 : 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
+  });
+  // grumble balloons (wordless)
+  for (const gq of (P.grumble || [])) { const sp = placed.find(p => p.sq === gq); if (!sp) continue; const r = Math.max(12, Math.min(26, 7 * sp.s)), cx = sp.head[0] + r * 1.6, cy = sp.head[1] - r * .9; let d = ""; for (let k = 0; k <= 24; k++) { const a = k / 24 * Math.PI * 2, rr = r * (k % 2 ? 1 : 1.2); d += (k ? "L" : "M") + (cx + Math.cos(a) * rr * 1.35).toFixed(1) + " " + (cy + Math.sin(a) * rr).toFixed(1); } const g = mk("g", {}, root); mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 1.6 }, g); mk("path", { d: `M${cx - r * .85} ${cy} c${r * .2} ${-r * .55} ${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0`, stroke: INK, "stroke-width": 2, fill: "none" }, g); }
+  // panel border
+  mk("rect", { x: 3, y: 3, width: W0 - 6, height: H - 6, rx: 6, fill: "none", stroke: INK, "stroke-width": 7 }, svg);
+  if (opts.mark && P.status === "proposal") mk("rect", { x: 10, y: 10, width: W0 - 20, height: H - 20, rx: 6, fill: "none", stroke: "#e08a1e", "stroke-width": 6, "stroke-dasharray": "22 12" }, svg);
+  return placed;
+}
+window.MiniatuurRenderer = { renderPanel, FEN };
+})();
