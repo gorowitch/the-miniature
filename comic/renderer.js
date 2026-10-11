@@ -18,6 +18,13 @@ const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]
 const sqXY = sq => ["abcdefgh".indexOf(sq[0]) + 0.5, +sq[1] - 0.5];
 
 // Which named character stands on a square in a given board state.
+// Pawn moustaches (bible Section 7, author decision 7.9): the b-pawn and g-pawn of both armies, always.
+// The moustache belongs to the pawn, so follow it to its starting file: the black g-pawn takes on h5 (6. ... gxh5, state 12).
+function pawnHasMoustache(sq, ch, state) {
+  if (ch !== "P" && ch !== "p") return false;
+  const startFile = (ch === "p" && sq === "h5" && state >= 12) ? "g" : sq[0];
+  return startFile === "b" || startFile === "g";
+}
 function roleOf(sq, ch, state) {
   if (sq === "e1" && ch === "K") return "koning";
   if (sq === "e8" && ch === "k") return "bking";
@@ -245,7 +252,7 @@ function renderPanel(svg, P, opts) {
     const [x, y, d] = pr(it.x0, it.y0, it.beside ? 0 : bump(it.x0, it.y0)); if (d < 0.7) continue;
     const ov = Object.assign({}, cast[it.sq] || {}, role ? cast[role] || {} : {});
     const faceDir = col === "w" ? 1 : -1, back = ov.back !== undefined ? ov.back : (C[1] - it.y0) * faceDir < 0;
-    const o = Object.assign({ role, back }, ov);
+    const o = Object.assign({ role, back, must: !it.beside && pawnHasMoustache(it.sq, it.ch, state) }, ov);
     if (t === "n") o.dir = pr(4, it.y0, 0)[0] > x ? 1 : -1;
     if (o.lookAt) { const tg = items.find(q => q.sq === o.lookAt || roleOf(q.sq, q.ch, state) === o.lookAt || q.role === o.lookAt); if (tg) { const tx = pr(tg.x0, tg.y0, 0)[0]; o.look = tx < x - 4 ? -1 : tx > x + 4 ? 1 : 0; } }
     const s = F / d / 50;

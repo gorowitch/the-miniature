@@ -19,6 +19,7 @@ Check every panel against this list in the screenshot before showing it to the a
 - [ ] Captured pieces stand beside the board, never on it.
 - [ ] Greasy spot on f3: subtle before Scene 9, clearly visible from Scene 9. Cola stain on f6: subtle before Scene 15, clearly visible from Scene 15.
 - [ ] Paprika stains only on Alfil's mitre; costumes per Section 5; knights face the centre files.
+- [ ] Moustaches on exactly the b-pawns and g-pawns of both armies (also after they change file); no other pawn has one.
 - [ ] Dark brown and beige board; empty club room, soft and out of focus.
 
 ## 4. Composition (bible Section 23)

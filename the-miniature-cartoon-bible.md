@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.8
+Version 7.9
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -16,6 +16,7 @@ Version 7.5 specifies the boebel for image generation: a standard descriptive se
 Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved source is immutable during production; illustration and lettering are separate from story authority; prohibited changes; what to do when the source is incomplete.
 Version 7.7 adds proposed panels for Scenes 6 to 16 to Section 18, clearly marked as proposals awaiting author approval, made for the full SVG preview of the comic (`comic/`). Nothing from 7.6 was removed.
 Version 7.8 adds the move box (author decision): every panel in which a move is played shows that move, verbatim from the play, in bold in a small white rectangle in the bottom-left corner, in the preview and in the final images (Section 13, Move Box). It replaces the rule that chess notation appears only inside dialogue.
+Version 7.9 fixes which pawns have a moustache (author decision): the b-pawn and the g-pawn of both armies, in every image, and no other pawn (Section 7, White Pawns and Black Pawns).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -566,7 +567,7 @@ Felt:
 - Simple soldier uniforms (author decision in 7.3).
 - The working class ("boerenvolk", "boeren").
 - Mix of young and veteran soldiers.
-- Some veterans may have moustaches or short beards.
+- Moustache rule (author decision in 7.9): the b-pawn and the g-pawn of each army have a moustache, in every image; no other pawn has one. No pawn has a beard (author decision in 7.9). The moustache belongs to the pawn, not to the square: a b-pawn or g-pawn keeps it when it captures onto another file (the black g-pawn on h5 after 6. ... gxh5). Replaces "some veterans may have moustaches or short beards".
 - Distinct noses allowed.
 - More realistic faces; no blob-like cartoon faces.
 - Slight individual differences.
@@ -577,6 +578,7 @@ Felt:
 ## Black Pawns
 - Similar to white pawns.
 - Nearly identical army appearance.
+- The same moustache rule as the white pawns (author decision in 7.9): the black b-pawn and g-pawn have a moustache in every image, the other black pawns none.
 
 ## Black Rook (h8)
 - Specifically the rook on h8.
@@ -817,7 +819,7 @@ If a panel contains an incorrect position, the panel is wrong.
 - The listener reacts visibly to what is said: for example surprise at unexpected news, anger and worry when plans have to change (author feedback on panels 4b and 4c).
 
 ## Master Illustration Prompt
-Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
+Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms; in both armies the b-pawn and the g-pawn have a moustache, the other pawns none. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
 ## Move Box (author decision in 7.8)
 - Every panel in which a move is played on the board shows that move, with its move number, in bold black text in a small white rectangle with a thin black ink outline, in the bottom-left corner of the panel. It applies to the preview and to the final images.
@@ -979,6 +981,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.7 | Preview staging choices that are not canon until approved: costume colours beyond Section 5, the move streaks, the camera positions of Scenes 6 to 16, a captured piece standing beside the board next to the h-file. |
 | 7.8 | Author decision: move box. Every panel in which a move is played shows the move with its move number in bold black text in a small white rectangle (thin black outline) in the bottom-left corner, in the preview and in the final images. Text verbatim from the move lines of Section 1 (Black's moves as "1. ... d5", captures as "6. Pxh7"; author: "use the verbatim format from the original text"). Only played moves, only in the panel where the move happens; spoken or ordered moves get none (2a, 9a, 12c, 15b). New Section 13, Move Box, with the table of the 12 moves; instruction added to the Common Prompt Block; cross-references in the Strict Adaptation Protocol (P.3), Sections 16, 20 (field 11 and the must-never-appear line), 21, 22 and 23, and Appendix B item 15. |
 | 7.8 | The 12 proposal move panels in Section 18 (6c, 6d, 7d, 8c, 9b, 9g, 11g, 11h, 12d, 12e, 13b, 14d): "no caption, no notation in the image" replaced by a move box line with the verbatim move. The SVG preview draws the box (`comic/renderer.js`, `movebox` in `comic/panels.js`). |
+| 7.9 | Author decision: pawn moustaches are fixed for consistency across images. The b-pawn and the g-pawn of both armies (white and black) have a moustache in every image; no other pawn has one. Replaces N2 ("veteran pawns may have moustaches or short beards"). Sections 7 (White Pawns, Black Pawns), 13 (Master Illustration Prompt), 16 and the Common Prompt Block updated. |
+| 7.9 | Author decision (confirmed): the moustache belongs to the pawn, not to the file, so the black g-pawn keeps it on h5 after 6. ... gxh5. Pawns have no beards, so that "no other pawn" holds for all facial hair (confirmed by the author; Appendix B, item 17 resolved). |
 
 ---
 
@@ -995,6 +999,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons and, in a panel in which a move is played, in the move box (Section 18, Common Prompt Block; Section 13, Move Box).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
+- In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
 - Greasy spot on f3 when visible.
@@ -1186,7 +1191,7 @@ Recurring characters:
 - Regina (White Queen): elegant and regal, light hair (roughly blonde with a slight red tint, never dark), an elegant white-and-gold costume.
 - Alfil (White bishop that starts on f1): scholar and advisor in advisor robes, with a mitre that has small orange-red paprika stains.
 - Caballo (White knight that starts on g1): highly expressive horse-headed knight with military decorations.
-- Pawns: soldiers in simple soldier uniforms, with realistic faces (not blob-like); some veterans have moustaches or short beards; they show wear.
+- Pawns: soldiers in simple soldier uniforms, with realistic faces (not blob-like); they show wear. In both armies the pawn that started on the b-file and the pawn that started on the g-file have a moustache (also after they move or capture); all other pawns have no moustache and no beard.
 - Black officers: costumes in darker colours; the Black King is calm, with a short beard.
 
 Board details:
@@ -2840,6 +2845,7 @@ Kept for history. Do not use for generation.
 - v7.1 to 7.6 (first wording): "Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards" (Common Prompt Block), "Preferred: request empty speech balloons ... Do not ask the image generator to write long Flemish passages" (Section 21), "Where practical: generate the illustration with empty speech balloons" (Section 23.E), and in the first 7.6 protocol "empty speech balloons" as the generator's only output. -> Superseded in 7.6 by author decision: the generator writes the exact text itself; every balloon is checked letter for letter; empty balloons are the fallback.
 
 - Up to 7.7: "This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue" (Strict Adaptation Protocol P.3, Section 16, Common Prompt Block, proposal move panels: "no caption, no notation in the image"). -> Superseded in 7.8 by author decision: a panel in which a move is played shows the move verbatim in a move box (Section 13, Move Box). Captions and narration remain forbidden.
+- v1.0 to 7.8: "Veteran pawns may have moustaches or short beards" (N2; Section 7, White Pawns; Common Prompt Block). -> Superseded in 7.9 by author decision: the b-pawn and the g-pawn of both armies have a moustache in every image, no other pawn.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -2861,6 +2867,7 @@ Items that need a decision from the author.
 14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
 15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
+17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
 
 ---
 
@@ -2883,3 +2890,4 @@ Items that need a decision from the author.
 | 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; the image generator writes the exact balloon text, checked letter for letter, empty balloons as fallback (author decision); cross-references in Sections 13, 14, 16, 21 and 23. |
 | 7.7 | - | Proposed panels for Scenes 6 to 16 in Section 18 (awaiting approval); SVG preview of the whole comic in `comic/`; open questions 14 to 16. |
 | 7.8 | - | Move box for every played move (author decision): Section 13, Move Box; Common Prompt Block; proposal move panels; cross-references; superseded rule in Appendix A. |
+| 7.9 | - | Pawn moustache rule (author decision): b-pawn and g-pawn of both armies, every image; open question 17. |
