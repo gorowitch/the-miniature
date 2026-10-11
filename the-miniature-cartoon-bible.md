@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.2
+Version 7.3
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -10,6 +10,7 @@ This document is the cumulative canon established so far.
 Version 7.0 is a consolidation: it restores content that was lost between versions 5.0 and 6.0 and merges every earlier version (1.0 through 6.0) into one file.
 Version 7.1 adds the dialogue attribution specification, the panel manifest standard, the artwork/lettering workflow and the completeness checklist (Sections 19 to 22). Nothing from 7.0 was removed.
 Version 7.2 adds dialogue density and visual composition rules (Section 23), eight manifest fields (Section 20) and density steps in the workflow (Section 21). Nothing from 7.1 was removed.
+Version 7.3 records the author's answers to the open questions: five long panels split, album format, original text always (Flemish only), greasy spot subtle until Scene 9, Scene 5 approved, shout balloons, panel 4a camera corrected, title on the cover, a chess club room without people, full costumes for the officers, proposed dossiers for the remaining pieces.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -223,6 +224,14 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - Wooden pieces, plastic board.
 - The opponent ("Dieje van den overkant") is the Black King. He is shown.
 
+## Surroundings (author decision in 7.3)
+- The board lies on a table in a chess club room.
+- The room is empty: no people at all - no players, no spectators, no hands. The pieces are the only characters, as in the play, and they move themselves.
+- Background furniture: other tables, chairs, other chess boards and chess clocks.
+- The background stays soft and slightly out of focus, so the pieces and the board stand out.
+- No readable text anywhere in the room (no signs, posters or labels): the Script Fidelity Rule and Section 14 still apply.
+- Replaces the plain neutral placeholder background used in the early sketches (Appendix A).
+
 ## Scale
 - Chess-piece scale.
 - Small defects create major drama.
@@ -287,7 +296,12 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - Sticky as it dries.
 - Reason Caballo plays 3. Ph3 instead of 3. Pf3.
 - Visual: a faint, translucent, yellowish greasy smear with a slight shine.
-- Smaller and subtler than the cola stain on f6, but clearly visible.
+- Smaller and subtler than the cola stain on f6; clearly visible from Scene 9 (see Greasy Spot Visibility).
+
+### Greasy Spot Visibility (decided in 7.3)
+- Scenes 1 to 8: barely noticeable, a faint sheen on f3 that is easy to overlook.
+- From Scene 9 (Caballo refuses f3): clearly visible as described above.
+- Same logic as the cola stain on f6: the explicit stain is the reveal of Caballo's complaint and must not be given away earlier.
 
 ## Paprika
 - Paprika stains only on Alfil's mitre.
@@ -318,6 +332,18 @@ Felt:
 
 ## Condition
 - Officers pristine, pawns show wear.
+
+## Costumes (author decision in 7.3)
+- The officers of both armies (kings, queens, bishops, knights and rooks) wear full costumes.
+- The pawns of both armies wear simple soldier uniforms.
+- White officers, as first described in version 1.1:
+  - White King: burgundy robe and medals; he keeps the simple medieval crown (not the gold crown of 1.1).
+  - Regina: an elegant white-and-gold design.
+  - Alfil: advisor robes; the paprika stains stay on his mitre.
+  - Caballo: military decorations.
+- Black officers wear costumes in darker colours.
+- The felt bottoms stay visible under every costume, and the character of each piece still comes from face, crown, mitre, hair and gestures.
+- Open (Appendix B, item 13): how a costume combines with the wooden body (cloth over the wood, or painted or carved on it), the exact colours of the black costumes, and the costumes of the white officers without a dossier.
 
 ---
 
@@ -375,6 +401,7 @@ Felt:
 - Pristine condition.
 - Pristine despite age.
 - Simple medieval crown.
+- Costume: burgundy robe and medals (author decision in 7.3; see Section 5, Costumes).
 - Medium beard and moustache.
 - Proud, strategic, charismatic.
 - Determined.
@@ -389,6 +416,7 @@ Felt:
 - Long-time rival.
 - Same age as White King.
 - Short beard.
+- Costume in darker colours, like all black officers (author decision in 7.3).
 - Calm, patient, disciplined.
 - Professional.
 - Greatest strength: patience.
@@ -402,6 +430,7 @@ Felt:
 - Regal.
 - Visible hair.
 - Hair colour: light, roughly blonde with a slight red tint. Never dark hair. The exact shade is not specified.
+- Costume: an elegant white-and-gold design (author decision in 7.3).
 - Clearly characterful queen.
 - Voice of reason.
 - Practical and intelligent.
@@ -420,12 +449,14 @@ Felt:
 - Diplomat.
 - Mediator.
 - Paprika stains on mitre.
+- Costume: advisor robes (author decision in 7.3).
 - Former pawn who would rather have been promoted to queen.
 - Starts on f1, moves to d3 (2. Ld3).
 
 ## Caballo
 - White knight ("Ridder Caballo").
 - Highly expressive horse-headed knight.
+- Costume: military decorations (author decision in 7.3).
 - Brave and loyal.
 - Heroic and dramatic.
 - Brave but foolish; causes accidental chaos.
@@ -438,6 +469,7 @@ Felt:
 
 ## White Pawns
 - Soldiers.
+- Simple soldier uniforms (author decision in 7.3).
 - The working class ("boerenvolk", "boeren").
 - Mix of young and veteran soldiers.
 - Some veterans may have moustaches or short beards.
@@ -463,6 +495,17 @@ Felt:
 
 ## Other Pieces
 White rooks (a1, h1), White knight (b1), White bishop (c1), Black Queen, Black bishops, Black knights and Black rook (a8) have no dossier yet. See Appendix B, item 5.
+
+### Proposed Dossiers (7.3, awaiting author approval)
+Drafted from the play and existing canon only. They become canon after the author approves them; until then, show these pieces only as described in their army's general canon.
+
+- **White rooks (a1, h1):** steady, silent towers at the corners of the army; they never move in the game. Officer costume. Mostly background figures that stand at attention.
+- **White knight (b1):** Caballo's counterpart on the other wing; never moves in the game. Calmer than Caballo, faces the centre like every knight. Officer costume.
+- **White bishop (c1):** Alfil's colleague on the queenside; never moves in the game. A quiet scholar like Alfil, but without paprika stains, which stay unique to Alfil. Officer costume.
+- **Black Queen (d8):** composed and elegant, a mirror of the Black King's calm. Never moves in the game. Officer costume in the darker black colours.
+- **Black bishops (c8, f8):** disciplined like their king. The c8 bishop makes the only black bishop move of the game (3...Ld7); the f8 bishop never moves (Caballo's offer to capture on f8 is never played).
+- **Black knights (b8, g8):** the g8 knight is "Dieje van den overkant zijnen ezel" in the King's words: he goes to e7 (4...Pe7) and avoids f6, which makes the King suspect a stain there. Faces the centre like every knight. The b8 knight never moves.
+- **Black rook (a8):** a plain, dependable rook, in contrast to the handsome h8 rook who is the object of Regina's interest. Never moves in the game.
 
 ---
 
@@ -501,6 +544,7 @@ The board acts almost as a character. Its defects drive every plot turn:
 - Characters take events completely seriously.
 - The audience laughs at the contrast between grand strategy and trivial obstacles.
 - Humorous, theatrical, absurd, family friendly.
+- "Family friendly" applies to the visuals and the tone. The dialogue always stays exactly as in the play, including rough words such as "godverdoemme", "gene slappen kak", "nondedju" and "Dju miljaar" (author decision in 7.3).
 
 ## Running Gags
 - The boebel.
@@ -650,6 +694,7 @@ ALWAYS:
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15, explicit from Scene 15 (see Section 4).
 - Greasy spot on f3 when visible.
+- Greasy spot subtle before Scene 9, clearly visible from Scene 9 (see Section 4).
 - Paprika only on Alfil's mitre.
 
 If a panel contains an incorrect position, the panel is wrong.
@@ -677,13 +722,14 @@ If a panel contains an incorrect position, the panel is wrong.
 - The listener reacts visibly to what is said: for example surprise at unexpected news, anger and worry when plans have to change (author feedback on panels 4b and 4c).
 
 ## Master Illustration Prompt
-Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. The boebel is a deformation of the board surface itself spanning d4, e4, d5 and e5. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. No coordinate labels. No extra pieces. No board inaccuracies.
+Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. The boebel is a deformation of the board surface itself spanning d4, e4, d5 and e5. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
 ## Cover Direction
 - The entire cast dominates the cover.
 - The boebel is visible.
 - The board is visible.
 - The White and Black Kings are both present.
+- The title and subtitle appear on the cover: De Miniatuur (Een hedendaagse klucht in één bedrijf). There is no title inside the panels (author decision in 7.3).
 
 ---
 
@@ -710,7 +756,10 @@ NEVER:
 - A balloon tail pointing to a listener or to any character other than the speaker (Section 19.B).
 - A listener drawn as if speaking: open speaking mouth or speaking gesture without a line in that panel (Section 19.C).
 - One balloon holding lines of different speakers (Section 19.B).
-- Paraphrased, shortened or reordered dialogue (Section 20). Whether translations are allowed is still open (Appendix B, item 7).
+- Paraphrased, shortened or reordered dialogue (Section 20).
+- Translated dialogue: the balloons are in the original Flemish only (author decision in 7.3).
+- Softened or censored dialogue, or symbols replacing words (author decision in 7.3: the original text always takes precedence).
+- People in the chess club room: no players, spectators or hands (author decision in 7.3).
 - Dialogue omitted to simplify a panel (Section 22.A).
 - A speech balloon that takes up most of a panel, or covers faces, important gestures, props or relevant board details (Section 23.A and 23.C).
 - Lettering shrunk until it is hard to read, or text squeezed into narrow or distorted balloons (Section 23.C).
@@ -782,6 +831,17 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.2 | Priority order extended (Section 23.0): complete story and exact dialogue, speaker attribution, readable lettering, visual continuity, composition, fewest panels. Chess positions and canon are hard requirements, never traded away. |
 | 7.2 | Panel manifest extended with fields 14 to 21 (dialogue length, segmentation, visual priority, lettering space, balloon-area estimate, layout strategy, overflow action, continuity); worked example 5b extended. |
 | 7.2 | Workflow (Section 21) extended with density steps in all four stages; cross-references in Sections 13, 14, 16, 18, 19, 20 and 22. Nothing removed. |
+| 7.3 | Panels 1b, 3a, 4c, 5b and 5d split into two panels each at natural boundaries (author decision); Section 17, 18, 22.E and 23.H updated. |
+| 7.3 | Output format: printed album page (A4, Suske en Wiske style), lettering about 8 pt; capacity estimates in Section 23.F (author decision). |
+| 7.3 | The original text always takes precedence over "family friendly", which applies to visuals and tone; balloons in the original Flemish only, no translations (author decisions). |
+| 7.3 | Greasy spot on f3 barely noticeable in Scenes 1 to 8, clearly visible from Scene 9 (author decision). |
+| 7.3 | Scene 5 approved by the author. |
+| 7.3 | Shout balloons (jagged outline) are the standard for shouted lines; the manifest marks them (author decision). |
+| 7.3 | Panel 4a camera text corrected to the approved sketch: somewhat elevated, looking down over the boebel (author decision). |
+| 7.3 | Title and subtitle on the album cover; no title in the panels (author decision). |
+| 7.3 | Surroundings: an empty chess club room, soft and out of focus, no people, no readable text; replaces the plain placeholder background (author decision). |
+| 7.3 | Full costumes for the officers of both armies (v1.1 descriptions for the white officers, darker colours for black), simple soldier uniforms for the pawns; the White King keeps the simple medieval crown (author decisions). |
+| 7.3 | Proposed dossiers for the remaining pieces added to Section 7, awaiting approval (author asked for proposals). |
 
 ---
 
@@ -797,6 +857,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
 - Greasy spot on f3 when visible.
+- Greasy spot subtle before Scene 9, clearly visible from Scene 9 (see Section 4).
 - Paprika only on Alfil's mitre; none on the board.
 - Felt visible.
 - Realistic pawn faces.
@@ -827,7 +888,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
     - Camera: from Black's perspective, zoomed in on the white pieces only.
     - Framing: Caballo (g1), Alfil (f1), White King (e1) and Regina (d1); from Black's side they appear left to right in that order.
     - The second-rank white pawns stand in the foreground; the officers tower behind them.
-  - 1b: Koning "Dat "Dieje van den overkant" ... klaar voor deze heldhaftige strijd ?"
+  - 1b: Koning "Dat "Dieje van den overkant" ... klaar voor deze heldhaftige strijd ?" (split in 7.3 into 1b-1 "Dat ... te bibberen." and 1b-2 "Want, ik voel ... strijd ?")
     - Camera: from Black's perspective, zoomed in on the white pieces only.
     - Framing: Alfil (f1) and White King (e1); from Black's side Alfil appears left, the King right.
     - Caballo (g1) and Regina (d1) are fully included in the image, flanking Alfil and the King.
@@ -864,7 +925,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Purpose: The King will not speak to the pawns.
 - Full panel script: Section 18 (approved by the author).
 - Panels:
-  - 3a: Koning "Alfil m’n raadsheer, ... wat er aan de hand is."
+  - 3a: Koning "Alfil m’n raadsheer, ... wat er aan de hand is." (split in 7.3 into 3a-1 "... boerenvolk spreek." and 3a-2 "Vraag aan die luie pitten ...")
     - Camera: behind White's first rank, over Alfil's shoulder, so the King's face is seen as he turns to Alfil.
     - The King points dismissively sideways at the pawns on the second rank without looking at them.
   - 3b: Koning "En maak voort want “Dieje van den overkant" ... al met ons te lachen."
@@ -881,19 +942,19 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Panels:
   - 4a: (Alfil overlegt met pionnen en komt terug), first part: Alfil leans over the second rank and confers with the pawns; the pawns point towards the boebel. No balloons.
   - 4b: Alfil "Muiterij Sire! ... nen boebel in het bord zit."
-  - 4c: Alfil "Als ze de hele tijd bergop ... iets anders moeten spelen."
+  - 4c: Alfil "Als ze de hele tijd bergop ... iets anders moeten spelen." (split in 7.3 into 4c-1 "... hebben deelgenomen." and 4c-2 "Als u de partij vandaag wil winnen ...")
 
 ## Scene 5 - The King's Outburst
 - Position: State 0.
 - Characters: White King, Alfil.
 - Dialogue: Koning "Wie is er hier nu godverdoemme eigenlijk koning ?..." / Alfil "Vergeef me dat ik u tegenspreek Sire..." / Koning "Wel nondedju !...".
 - Purpose: Alfil's minor-promotion complex; Alfil is blocked by e2 and g2.
-- Full panel script: Section 18 (status: proposal, awaiting author review).
+- Full panel script: Section 18 (approved by the author in 7.3).
 - Panels:
   - 5a: Koning "Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever." The King explodes.
-  - 5b: Koning "Ik weet maar al te goed ... ‘gene slappen kak’." The King jabs at Alfil's sore spot; Alfil is offended.
+  - 5b: Koning "Ik weet maar al te goed ... ‘gene slappen kak’." The King jabs at Alfil's sore spot; Alfil is offended. (Split in 7.3 into 5b-1 "... tot dame waart gepromoveerd" and 5b-2 "en dat complex ...")
   - 5c: Koning "Ga buiten zien ... het centrum in handen nemen." The King orders Alfil out towards the centre.
-  - 5d: Alfil "Vergeef me ... door opstandige boeren bezet." Alfil shows that the pawns on e2 and g2 block both his diagonals.
+  - 5d: Alfil "Vergeef me ... door opstandige boeren bezet." Alfil shows that the pawns on e2 and g2 block both his diagonals. (Split in 7.3 into 5d-1 "Vergeef me ... naar buiten." as a two-shot and 5d-2 "Immers, ..." as the high view.)
   - 5e: Koning "Wel nondedju ! Heel mijn voorbereiding om zeep." The King in despair.
 
 ## Scene 6 - Regina's Advice
@@ -978,15 +1039,16 @@ The characters are living wooden chess pieces with classic chess-piece bodies, f
 The board is a plastic tournament board: very dark brown, almost black, dark squares and beige light squares, with a beige border. No coordinate letters or numbers anywhere.
 
 Recurring characters:
-- White King: ancient but pristine, simple medieval crown, medium white beard and moustache, proud and theatrical.
-- Regina (White Queen): elegant and regal, light hair (roughly blonde with a slight red tint, never dark).
-- Alfil (White bishop that starts on f1): scholar and advisor with a mitre that has small orange-red paprika stains.
-- Caballo (White knight that starts on g1): highly expressive horse-headed knight.
-- Pawns: soldiers with realistic faces (not blob-like); some veterans have moustaches or short beards; they show wear.
+- White King: ancient but pristine, simple medieval crown, medium white beard and moustache, burgundy robe with medals, proud and theatrical.
+- Regina (White Queen): elegant and regal, light hair (roughly blonde with a slight red tint, never dark), an elegant white-and-gold costume.
+- Alfil (White bishop that starts on f1): scholar and advisor in advisor robes, with a mitre that has small orange-red paprika stains.
+- Caballo (White knight that starts on g1): highly expressive horse-headed knight with military decorations.
+- Pawns: soldiers in simple soldier uniforms, with realistic faces (not blob-like); some veterans have moustaches or short beards; they show wear.
+- Black officers: costumes in darker colours; the Black King is calm, with a short beard.
 
 Board details:
 - Boebel: the board surface itself is warped upwards where d4, e4, d5 and e5 meet: a smooth rounded rise, highest at that shared corner, sloping gently down to flat board at the edges of those four squares. The squares bend with it. It is visible only through light on one slope and soft shadow on the other. No outline, no rings, no separate object, no hard-edged dome.
-- Greasy spot on f3: a faint, translucent, yellowish greasy smear with a slight shine, smaller and subtler than a stain.
+- Greasy spot on f3: a faint, translucent, yellowish greasy smear with a slight shine, smaller and subtler than a stain. Scenes 1 to 8: barely noticeable; from Scene 9: clearly visible.
 - Cola stain on f6 (Scenes 1 to 14): only a faint discolouration of the square, easy to overlook.
 
 Rules:
@@ -994,10 +1056,11 @@ Rules:
 - Pieces that talk to each other look at each other: the speaker looks at the one addressed, who looks back.
 - Every visible square that holds a piece shows that piece (pieces may be cut off by the frame edge).
 - No extra, missing or moved pieces.
-- Background: plain and neutral (the surroundings of the board are not defined).
+- Background: the board lies on a table in an empty chess club room - other tables, chairs, chess boards and chess clocks, soft and slightly out of focus. No people, no hands, no readable text or signs.
 - Speech balloons contain exactly the text given, nothing else.
 - The speaker named in each panel block owns the balloon: its tail points to that character's mouth. All other characters listen with closed mouths unless the panel block says otherwise (Section 19).
 - Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards (Section 21).
+- A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
 
@@ -1012,11 +1075,19 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Characters: the King proud, mouth open mid-speech, one arm sweeping out towards his troops. Caballo faces right (towards the centre). Alfil, Regina and the pawns stand at attention.
 - Balloon (White King): Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd.
 
-### Panel 1b
+### Panel 1b-1
+Split from panel 1b in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, closer than 1a, centred between Alfil (f1) and the White King (e1).
 - In frame: Alfil (left of centre) and the King (right of centre); Caballo (g1) fully in frame at the left, Regina (d1) fully in frame at the right; the bishop on c1 and the rook on h1 partly at the frame edges. The pawns on g2, f2, e2 and d2 cross the bottom of the frame in front of them.
-- Characters: the King turns towards Alfil and gestures to him with an open hand; Alfil looks back at the King. Caballo faces right (towards the centre).
-- Balloon (White King): Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen. Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
+- Characters: the King, proud and mocking, mouth open mid-speech, looks straight ahead past the camera, towards the black army ("Dieje van den overkant"), with a dismissive wave of one hand. Alfil, Regina and Caballo look at the King, mouths closed. Caballo faces right (towards the centre).
+- Balloon (White King): Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen.
+
+### Panel 1b-2
+Split from panel 1b in 7.3 (author decision, Section 23.B).
+- Camera: the same as 1b-1 (continuity: same positions, same framing).
+- In frame: the same as 1b-1.
+- Characters: the King turns towards Alfil and gestures to him with an open hand, mouth open; Alfil looks back at the King, attentive, mouth closed. Regina looks at the King. Caballo faces right (towards the centre).
+- Balloon (White King): Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
 
 ### Panel 1c
 - Camera: over Alfil's shoulder. Behind White's first rank, just behind and to the left of Alfil (between Alfil and the King), slightly above head height, looking across the whole board towards Black.
@@ -1053,11 +1124,19 @@ Board position for all panels: the standard starting position (State 0). Nothing
 Status: approved by the author.
 Board position for all panels: the standard starting position (State 0). Nothing has moved.
 
-### Panel 3a
+### Panel 3a-1
+Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Camera: behind White's first rank, behind and slightly to the right of Alfil on f1 (seen from White's side), at about head height, looking towards the White King on e1.
 - In frame: Alfil (f1) in the right foreground, seen from behind and partly from the side; the White King (e1) left of centre, turned towards Alfil so his face is seen in three-quarter view; Regina (d1) at the left edge beside the King. In the middle ground the white pawns on d2, e2, f2 and g2, seen from behind. Further away, the empty board and the black army in its starting position, small and out of focus: every black piece on a square that is in frame is shown.
-- Characters: the King looks at Alfil, chin raised, nose in the air ("lage boerenvolk"), and points sideways (towards the second rank, in front of the officers) at the pawns without looking at them. Alfil listens, head slightly bowed towards the King. Regina looks at the King.
-- Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek. Vraag aan die luie pitten op de tweede rij wat er aan de hand is.
+- Characters: the King looks at Alfil, chin raised, nose in the air ("lage boerenvolk"), mouth open. Alfil listens, head slightly bowed towards the King, mouth closed. Regina looks at the King.
+- Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek.
+
+### Panel 3a-2
+Split from panel 3a in 7.3 (author decision, Section 23.B).
+- Camera: the same as 3a-1.
+- In frame: the same as 3a-1.
+- Characters: the King keeps looking at Alfil, mouth open, and points sideways (towards the second rank, in front of the officers) at the pawns without looking at them. Alfil looks at the King, mouth closed. Regina looks at the King.
+- Balloon (White King): Vraag aan die luie pitten op de tweede rij wat er aan de hand is.
 
 ### Panel 3b
 - Camera: over the White King's shoulder. Behind e1, slightly above the King's crown, looking across the whole board towards Black.
@@ -1072,7 +1151,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 
 ### Panel 4a
 - Stage direction: (Alfil overlegt met pionnen en komt terug).
-- Camera: from Black's side, low, just above the board at the fourth rank, looking towards White's second rank. The boebel rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
+- Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the boebel towards White's second rank (corrected in 7.3 to match the approved sketch). The boebel rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
 - In frame: the white pawns on c2, d2, e2, f2, g2 and h2 facing the camera; behind them the officers on c1 to h1 (rook h1 and bishop c1 may be cut off by the frame edges). Every piece on a square that is in frame is shown.
 - Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him; one or two of them point past the camera towards the boebel in the centre. The other pawns look on, arms crossed. The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
 - No balloons, no text.
@@ -1082,13 +1161,20 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Characters: Alfil has turned back to the King and looks straight at him, upright again, alarmed, one hand raised. The King looks back at Alfil, surprised by the news: eyebrows shot up, eyes wide, mouth open (author feedback).
 - Balloon (Alfil): Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit.
 
-### Panel 4c
+### Panel 4c-1
+Split from panel 4c in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, slightly closer than 4b, the same two characters; the King now more in focus.
-- Characters: Alfil, earnest, looks at the King while gesturing with an open hand towards the centre of the board (towards the boebel, "bergop"). The King looks back at Alfil, angry and worried at the same time: he realises he must change his plans. Furrowed brow, eyebrows pulled together, tight wavy mouth, reddening cheeks (author feedback). His anger bursts out in Scene 5.
-- Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen. Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
+- Characters: Alfil, earnest, mouth open, looks at the King while gesturing with an open hand towards the centre of the board (towards the boebel, "bergop"). The King looks back at Alfil, mouth closed, a frown forming: the bad news is sinking in.
+- Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen.
+
+### Panel 4c-2
+Split from panel 4c in 7.3 (author decision, Section 23.B).
+- Camera: the same as 4c-1.
+- Characters: Alfil, mouth open, looks at the King with both hands open: advice. The King looks back at Alfil, angry and worried at the same time: he realises he must change his plans. Furrowed brow, eyebrows pulled together, tight wavy mouth, reddening cheeks (author feedback on 4c). His anger bursts out in Scene 5.
+- Balloon (Alfil): Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
 
 ## Scene 5 - The King's Outburst
-Status: proposal, awaiting author review.
+Status: approved by the author (7.3).
 Board position for all panels: the standard starting position (State 0). Nothing has moved. Alfil stays on f1.
 
 ### Panel 5a
@@ -1096,21 +1182,35 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Characters: the King explodes: face red, eyebrows pulled down hard, mouth wide open in a shout, one fist raised. He looks at Alfil. Alfil looks back at the King, taken aback.
 - Balloon (White King, jagged shout balloon): Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.
 
-### Panel 5b
+### Panel 5b-1
+Split from panel 5b in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, two-shot of Alfil (f1, left) and the White King (e1, right), at officer height. Caballo (g1) and Regina (d1) partly at the frame edges; pawn heads (f2, e2) cross the bottom of the frame.
-- Characters: the King leans towards Alfil and jabs a pointing finger at him, a scornful look. Alfil looks back at the King, offended: chin up, lips pressed together, a sore spot touched (his "minor promotion"). They look at each other.
-- Balloon (White King): Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’.
+- Characters: the King leans towards Alfil and jabs a pointing finger at him, a scornful look, mouth open. Alfil looks back at the King, mouth closed, stiffening: a sore spot is touched (his "minor promotion"). They look at each other.
+- Balloon (White King): Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd
+
+### Panel 5b-2
+Split from panel 5b in 7.3 (author decision, Section 23.B).
+- Camera: the same as 5b-1.
+- Characters: the King, mocking, mouth open, finger still raised at Alfil. Alfil looks back at the King, openly offended: chin up, lips pressed together. They look at each other.
+- Balloon (White King): en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’.
 
 ### Panel 5c
 - Camera: from Black's side, same two-shot as 5b.
 - Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the boebel): an order. Alfil looks back at the King, hesitant.
 - Balloon (White King): Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen.
 
-### Panel 5d
+### Panel 5d-1
+Split from panel 5d in 7.3 (author decision, Section 23.B).
+- Camera: from Black's side, the same two-shot as 5c.
+- Characters: Alfil looks at the King, apologetic, mouth open, both hands slightly spread. The King looks back at Alfil, impatient, mouth closed.
+- Balloon (Alfil): Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten.
+
+### Panel 5d-2
+Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Camera: high, from Black's side, above and in front of the white pawns, looking down on the f1 square, so that both of Alfil's diagonals are clear: f1-e2 and f1-g2. Alfil, the pawns and the King face the camera.
 - In frame: Alfil (f1) in the centre, behind the pawns on e2, f2 and g2; from this side the King (e1) and Regina (d1) are at the right, Caballo (g1) and the rook (h1) at the left; the pawns on d2 and h2 at the edges.
-- Characters: Alfil looks up at the King, apologetic, and points with both hands to the pawns on e2 and g2 that block his diagonals. The pawns on e2 and g2 stand firm, arms crossed, stubborn. The King looks at Alfil.
-- Balloon (Alfil): Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten. Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
+- Characters: Alfil looks up at the King, apologetic, mouth open, and points with both hands to the pawns on e2 and g2 that block his diagonals. The pawns on e2 and g2 stand firm, arms crossed, stubborn, mouths closed. The King looks at Alfil, mouth closed.
+- Balloon (Alfil): Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
 
 ### Panel 5e
 - Camera: from Black's side, close-up of the White King (e1); Alfil (f1) partly at the left edge, Regina (d1) partly at the right edge.
@@ -1149,6 +1249,7 @@ Never infer the speaker from a character's position, size or prominence in the i
 - Do not merge dialogue from different speakers into one balloon.
 - One speaker's long speech may be split over several balloons or panels; each part keeps the same owner and the original wording.
 - Preserve the original order of dialogue: within a panel, the balloon that is read first (top-left first, then left to right, then top to bottom) holds the earlier line.
+- Shouted lines (decided in 7.3): a jagged shout balloon instead of a round one. The manifest (field 9) states which balloons are shout balloons; all other lines use round balloons. Panel 5a is the reference.
 
 ## 19.C Speaking and Listening Poses
 The artwork makes the speaking role visually unambiguous.
@@ -1286,6 +1387,7 @@ PANEL 5b   (sequence number 13)
 ```
 
 Mirror case (Alfil speaks, Koning listens), panel 4b: Balloon 1 -> Alfil, tail to Alfil's mouth; Alfil mouth open with a raised hand; Koning's mouth open only because of surprise, as the manifest says explicitly (Section 19.C exception), with no balloon or tail near him.
+Note (7.3): panel 5b has since been split into 5b-1 and 5b-2 (Section 18), and the sequence numbers changed with the splits. The example above shows 5b before the split and stays as an illustration of the format.
 
 ---
 
@@ -1368,18 +1470,18 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 
 | # | Script item (speaker and first words) | Scene | Panels | Status |
 |---|---|---|---|---|
-| 0 | Title: De Miniatuur (Een hedendaagse klucht in één bedrijf) | - | - | Not assigned: how the title appears is an open question (Appendix B, item 11). |
-| 1 | Koning: "Wat is het vandaag toch een heuglijke dag..." | 1 | 1a, 1b | Panel script written; manifest to do. |
+| 0 | Title: De Miniatuur (Een hedendaagse klucht in één bedrijf) | Cover | - | Decided in 7.3: title and subtitle on the album cover (Section 13, Cover Direction). |
+| 1 | Koning: "Wat is het vandaag toch een heuglijke dag..." | 1 | 1a, 1b-1, 1b-2 | Panel script written; manifest to do. |
 | 2 | Alfil: "Jawel Sire, zij wachten op uw bevel !" | 1 | 1c | Panel script written; manifest to do. |
 | 3 | Koning: "Wel laat ons dan niet langer talmen ... Ten aanval ! 1. e4" | 2 | 2a | Panel script written; manifest to do. |
 | 4 | Stage direction: (hoorbaar gemor vanop de tweede rij) | 2 | 2b | Panel script written; manifest to do. |
 | 5 | Regina: "Awel ? Waarom gebeurt er niks ?" | 2 | 2c | Panel script written; manifest to do. |
-| 6 | Koning: "Alfil m’n raadsheer, ge weet dat ik als koning..." | 3 | 3a, 3b | Panel script written (approved); manifest to do. |
+| 6 | Koning: "Alfil m’n raadsheer, ge weet dat ik als koning..." | 3 | 3a-1, 3a-2, 3b | Panel script written (approved); manifest to do. |
 | 7 | Stage direction: (Alfil overlegt met pionnen en komt terug) | 4 | 4a | Panel script written (approved); manifest to do. |
-| 8 | Alfil: "Muiterij Sire! De pionnen willen niet opspelen..." | 4 | 4b, 4c | Panel script written (approved); manifest to do. |
-| 9 | Koning: "Wie is er hier nu godverdoemme eigenlijk koning ?..." | 5 | 5a, 5b, 5c | Panel script written (proposal); manifest for 5b in Section 20.2. |
-| 10 | Alfil: "Vergeef me dat ik u tegenspreek Sire..." | 5 | 5d | Panel script written (proposal); manifest to do. |
-| 11 | Koning: "Wel nondedju ! Heel mijn voorbereiding om zeep." | 5 | 5e | Panel script written (proposal); manifest to do. |
+| 8 | Alfil: "Muiterij Sire! De pionnen willen niet opspelen..." | 4 | 4b, 4c-1, 4c-2 | Panel script written (approved); manifest to do. |
+| 9 | Koning: "Wie is er hier nu godverdoemme eigenlijk koning ?..." | 5 | 5a, 5b-1, 5b-2, 5c | Panel script written (approved); manifest to do (20.2 shows 5b before the split). |
+| 10 | Alfil: "Vergeef me dat ik u tegenspreek Sire..." | 5 | 5d-1, 5d-2 | Panel script written (approved); manifest to do. |
+| 11 | Koning: "Wel nondedju ! Heel mijn voorbereiding om zeep." | 5 | 5e | Panel script written (approved); manifest to do. |
 | 12 | Regina: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." | 6 | - | Scene catalog only. |
 | 13 | Koning: "Allee goed dan, want "Dieje van den overkant" wordt precies..." | 6 | - | Scene catalog only. |
 | 14 | Move: 1. e3 | 6 | - | Scene catalog only. |
@@ -1491,6 +1593,7 @@ For planning (manifest fields 14 and 18):
 - Estimate the balloon area that text needs at the intended lettering size, including margins.
 - Rule of thumb, to be calibrated once the output size and font are decided (Appendix B, item 12): at a comfortable reading size, a quarter to a third of a standard panel holds roughly 20 to 30 words of Flemish dialogue. Panels with more text are candidates for splitting at a natural boundary (23.B), or for a wider or taller panel format.
 - After the first lettered page, replace this rule of thumb with measured values.
+- Output format decided in 7.3 (author decision): a printed album page (A4, Suske en Wiske style), about 8 panels per page, a panel about 85 x 75 mm, lettering about 8 pt in a comic font. Calculated capacity at that size: about 60 words within 30% of a panel with a wide balloon (about 80% of the panel width); with the narrower balloons usual in albums, plan with about 35 to 45 words per panel. The 20 to 30 words above stay as a comfortable target. Measure the first lettered page and record the real value here.
 
 ## 23.G Visual-Composition Acceptance Checklist
 For every panel, verify:
@@ -1514,18 +1617,18 @@ Word counts of the balloons in the panel script (Section 18) as of version 7.2. 
 | Panel | Speaker | Words | Review |
 |---|---|---|---|
 | 1a | Koning | 26 | Within range. |
-| 1b | Koning | 39 | Review. Possible split: "...dat hij nu al begint te bibberen." / "Want, ik voel het aan mijn viltje, ... Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" (two balloons, or a reaction panel for Alfil before 1c). |
+| 1b | Koning | 39 | Split in 7.3 into 1b-1 and 1b-2 (author decision). Original note: Review. Possible split: "...dat hij nu al begint te bibberen." / "Want, ik voel het aan mijn viltje, ... Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" (two balloons, or a reaction panel for Alfil before 1c). |
 | 1c | Alfil | 7 | Within range. |
 | 2a | Koning | 17 | Within range. |
 | 2c | Regina | 5 | Within range. |
-| 3a | Koning | 30 | At the upper limit. Possible split: "...niet met dat lage boerenvolk spreek." / "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." |
+| 3a | Koning | 30 | Split in 7.3 into 3a-1 and 3a-2 (author decision). Original note: At the upper limit. Possible split: "...niet met dat lage boerenvolk spreek." / "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." |
 | 3b | Koning | 26 | Within range. |
 | 4b | Alfil | 22 | Within range. |
-| 4c | Alfil | 33 | Review. Possible split: "...aan de strijd hebben deelgenomen." / "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." |
+| 4c | Alfil | 33 | Split in 7.3 into 4c-1 and 4c-2 (author decision). Original note: Review. Possible split: "...aan de strijd hebben deelgenomen." / "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." |
 | 5a | Koning | 11 | Within range. |
-| 5b | Koning | 34 | Review. Possible split: "...liever tot dame waart gepromoveerd" / "en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’." (see manifest 20.2, field 20). |
+| 5b | Koning | 34 | Split in 7.3 into 5b-1 and 5b-2 (author decision). Original note: Review. Possible split: "...liever tot dame waart gepromoveerd" / "en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’." (see manifest 20.2, field 20). |
 | 5c | Koning | 22 | Within range. |
-| 5d | Alfil | 29 | At the upper limit. Possible split: "...nog niet naar buiten." / "Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet." |
+| 5d | Alfil | 29 | Split in 7.3 into 5d-1 and 5d-2 (author decision). Original note: At the upper limit. Possible split: "...nog niet naar buiten." / "Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet." |
 | 5e | Koning | 7 | Within range. |
 
 ---
@@ -1541,6 +1644,11 @@ Kept for history. Do not use for generation.
 - v3.0 to 5.1: Board is "several years old". → Superseded in 6.0: less than three years old.
 - v5.1 to 7.0: Green/beige tournament board (M1). → Superseded in 7.0: dark brown (near black)/beige.
 - v1.0 to 3.0: English notation (Bd3, Nh3, Qh5, Ne7, Ng5, Nxh7). → Dutch notation since 5.0.
+- v7.0 to 7.2: Plain, neutral placeholder background around the board. -> Superseded in 7.3: an empty chess club room (Section 3, Surroundings).
+- v7.0 to 7.2: Panels 1b, 3a, 4c, 5b and 5d as single panels with one long balloon each. -> Split in 7.3 into 1b-1/1b-2, 3a-1/3a-2, 4c-1/4c-2, 5b-1/5b-2, 5d-1/5d-2 (author decision, Section 23.B).
+- v7.0 to 7.2: Greasy spot on f3 "clearly visible" in every scene. -> Superseded in 7.3: barely noticeable in Scenes 1 to 8, clearly visible from Scene 9.
+- v7.0 to 7.2: Panel 4a camera "low, just above the board at the fourth rank". -> Corrected in 7.3: somewhat elevated, as in the approved sketch.
+- v3.0 to 7.2: Pieces described without costumes (plain wood with faces). -> Superseded in 7.3: full costumes for the officers of both armies, soldier uniforms for the pawns (Section 5, Costumes). The v1.1 costume descriptions return; the v1.1 gold crown stays superseded.
 
 ---
 
@@ -1551,14 +1659,15 @@ Items that need a decision from the author.
 2. ~~**Quote marks.**~~ Resolved in 7.0: the mixed quote marks are in the original and are kept as is.
 3. ~~**f3 greasy spot.**~~ Resolved in 7.0: approved by the author as a faint yellowish greasy smear (see Section 4).
 4. ~~**Board condition.**~~ Resolved in 7.0: the original confirms the plastic board is less than three years old and the pieces already complain about it.
-5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8.
-6. **Clothing.** Version 1.1 gave the King a burgundy robe and medals, Regina a white-and-gold design, Alfil advisor robes and Caballo military decorations. Later versions describe wooden pieces with faces. Are there painted or carved costumes, or none?
-7. **Language of speech balloons.** Original Flemish only, or translations allowed?
-8. **Surroundings of the board.** What is visible around and behind the board (table, room, background)? Not yet defined; the brown table and backdrop in the early sketches are placeholders, not canon.
-9. **Coarse language versus "family friendly".** The play contains words such as "godverdoemme", "gene slappen kak", "nondedju" and "Dju miljaar". The rules say original dialogue only (kept verbatim in all panels); the tone canon says family friendly. Confirm that the original text always takes precedence.
+5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8. Status 7.3: proposals in Section 7 (Proposed Dossiers), awaiting author approval.
+6. ~~**Clothing.**~~ Resolved in 7.3: full costumes for the officers of both armies, soldier uniforms for the pawns (Section 5, Costumes). Remaining details in item 13.
+7. ~~**Language of speech balloons.**~~ Resolved in 7.3: original Flemish only; no translations.
+8. ~~**Surroundings of the board.**~~ Resolved in 7.3: an empty chess club room, without people (Section 3, Surroundings).
+9. ~~**Coarse language versus "family friendly".**~~ Resolved in 7.3: the original text always takes precedence; "family friendly" applies to the visuals and the tone (Section 10).
 10. **Lettering tool.** Which tool is used to typeset the original dialogue into the balloons (Section 21, Stage 3)?
-11. **Title.** How does the title "De Miniatuur (Een hedendaagse klucht in één bedrijf)" appear: on a cover or title page, or not at all? Panels have no captions (Section 14).
-12. **Output format and lettering size.** For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
+11. ~~**Title.**~~ Resolved in 7.3: title and subtitle on the album cover (Section 13, Cover Direction).
+12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
+13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
 
 ---
 
@@ -1574,4 +1683,5 @@ Items that need a decision from the author.
 | 6.0 | f50d551 | Materials, relationship matrix, production rules. Lost content: play text, running gags, decision meanings. |
 | 7.0 | bfade89, c56823a | Consolidation of all versions into the 17-section structure; original play text from the author; board history; scene catalog; full board-state tables; Section 18 panel script for Scenes 1 and 2. |
 | 7.1 | 1bddc59 | Dialogue attribution specification (Section 19), panel manifest standard (Section 20), artwork/lettering workflow (Section 21), completeness and fidelity checklist with script coverage map (Section 22); cross-references in Sections 13, 14, 16, 17, 18; open questions 9 to 11. |
-| 7.2 | - | Dialogue density and visual composition (Section 23); manifest fields 14 to 21; density steps in the workflow; cross-references in Sections 13, 14, 16, 18, 19, 20, 22; open question 12. |
+| 7.2 | (with 7.3) | Dialogue density and visual composition (Section 23); manifest fields 14 to 21; density steps in the workflow; cross-references in Sections 13, 14, 16, 18, 19, 20, 22; open question 12. |
+| 7.3 | - | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
