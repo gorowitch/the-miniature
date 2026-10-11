@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.24
+Version 7.25
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -32,6 +32,7 @@ Version 7.21 makes the black pieces in panel 1c look a little scared (author dec
 Version 7.22 makes the black pieces in panel 3a-1 look a little surprised (author decision); the Black King stays calm.
 Version 7.23 makes the black army in panel 3b visibly amused (author decision); the Black King stays calm and does not laugh. New expression "amused" in the SVG preview.
 Version 7.24 zooms panels 4c-1 and 4c-2 out a little for more room for the balloon above Alfil (author feedback).
+Version 7.25 changes the balloon tails (author decision): curved, rounded cartoon tails that end beside the speaker's mouth and never cross a face or hat (Common Prompt Block, Section 16).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1023,6 +1024,11 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.22 | Author decision on the approved panel 3a-1: "I want the black pieces look a little surprised". The 15 black pieces other than the Black King now look a little surprised (high arched eyebrows, wide round eyes, mouths closed); panel block and manifest 3a-1 (fields 8 and 13) updated. The Black King stays calm, as in 1c (Appendix B, item 19, now covering both panels). |
 | 7.23 | Author decision on the approved panel 3b: "the black army realises that white has some kind of trouble and looks visibly amused". The black pieces other than the Black King now laugh: broad grins with teeth showing, eyes squeezed shut, eyebrows raised. Panel block and manifest 3b (fields 6 and 8) updated. The Black King stays calm and does not laugh: the approved panel block 3b says so explicitly ("He is not laughing") and field 13 forbids a laughing Black King; this keeps the irony of the King's line ("zit op dit moment waarschijnlijk al met ons te lachen"): the troops laugh, their King does not (Appendix B, item 19, now also covering 3b). The SVG preview got a new expression "amused". |
 | 7.24 | Author feedback on the approved panels 4c-1 and 4c-2: "zoom out a little so there is more room for the text balloon above Alfil". Both panels zoomed out a little, with the characters lower in the frame, so the balloon no longer covers the tip of Alfil's mitre. Then: "both images can be shifted up a little so we see the entire face of the pawns": the picture shifted up, zoomed out slightly more, and the balloon of 4c-1 made wider (four lines instead of five) so it stays clear of the mitre. Then: "this is too much, so unshift a little; just the faces of the pawns in sight would do; the first rank must be completely in sight": shifted back down a little, so the first rank is completely in sight and only the pawns' faces show at the bottom edge. Camera line of panel block 4c-1 (4c-2 uses the same camera) and manifest fields 7 (4c-1) and 9 (both) updated. |
+| 7.25 | Author decision: "in some images the pointy part of a text balloon goes straight through the face/hat of a character. Instead I want text balloons that use roundings like is common in cartoons." New rule in the Common Prompt Block and Section 16: tails are short, curved, tapering wedges with rounded sides that stop just beside the speaker's mouth and never cross a face, crown, mitre, hair or hat. An audit of the SVG preview found that 61 of the 63 tails crossed a face or hat (the old straight tails ran to the middle of the speaker's head); after the change 8 remain, each needing a panel-specific fix (balloon position or size). |
+| 7.25 | Author feedback on the proposal panel 10e: "the text balloon should point to the king". The picture was moved down and zoomed out slightly so the balloon fits above the King at the top left, clear of his face and crown, with its tail ending beside his mouth. Camera line of the 10e proposal block updated; 10e stays a proposal. |
+| 7.25 | Author feedback on the proposal panel 11c: "the text balloon should point to the king". The balloon covered Regina's face and its tail was only a notch. The picture was moved down and zoomed out, and the balloon made wider (five lines instead of seven), so it sits at the top clear of all faces with its tail pointing to the King's mouth. Camera line of the 11c proposal block updated; 11c stays a proposal. |
+| 7.25 | Author feedback on the proposal panel 12a: "zoom a little out so that the text balloon fits in the image". The balloon was pinned at a fixed position and ran off the right edge; the panel was zoomed out and moved down, and the balloon placed automatically above the King, completely inside the panel. Camera line of the 12a proposal block updated; 12a stays a proposal. |
+| 7.25 | Author feedback on the proposal panel 14a: "the text balloon is too small for the text". The cause was general: the jagged shout balloon is an ellipse, but it was sized like a rectangle, so the corners of the text stuck out past its points (5a, 9c, 13a, 14a). The SVG preview now sizes shout balloons so the whole text fits inside the inner points; the rule is added to the Common Prompt Block. The larger balloons covered crowns in 5a, 13a and 14a, so those panels got room above the characters (camera lines updated; 5a is approved, 13a and 14a stay proposals). |
 
 ---
 
@@ -1038,6 +1044,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel (centre hump) check: one smooth, low, rounded hill of the board itself; peak on the shared corner of d4, e4, d5 and e5; about 2 squares across; about as high as a piece's base; the grid lines and colours bend over it.
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
+- Balloon tails are curved and rounded, end just beside the speaker's mouth, and never cross a face, crown, mitre, hair or hat (Section 18, Common Prompt Block; author decision in 7.25).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
@@ -1247,8 +1254,9 @@ Rules:
 - Background: the board lies on a table in an empty chess club room - other tables, chairs, chess boards and chess clocks, soft and slightly out of focus. No people, no hands, no readable text or signs.
 - Speech balloons contain exactly the text given, nothing else.
 - The speaker named in each panel block owns the balloon: its tail points to that character's mouth. All other characters listen with closed mouths unless the panel block says otherwise (Section 19).
+- Balloon tails (author decision in 7.25): draw each tail the way cartoons do: a short, curved, tapering wedge with rounded sides that leaves the balloon and stops just beside the speaker's mouth. A tail never runs through a face, a crown, a mitre, hair or a hat, neither the speaker's nor anyone else's; where needed it curves around them.
 - Write the text of each speech balloon exactly as given in the panel description, letter for letter, including every space before "!" and "?", every quote mark and every chess notation. The words are Flemish dialect dialogue: do not translate, correct, complete, explain, label or illustrate them.
-- A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
+- A balloon marked as a shout balloon has a jagged outline; all other balloons are round. The jagged shout balloon is large enough that the whole text fits inside its inner points; no letter touches or crosses the jagged edge (author feedback in 7.25).
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
 - The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, the move box and the caption box when the panel description gives them, and the symbols in grumble balloons when the panel description gives them. When the speech balloons are drawn empty and there is no move box or caption box, the image contains no text at all.
@@ -1385,7 +1393,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 
 ### Panel 5a
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
-- Camera: from Black's side, close-up of the White King (e1), from the chest up; Alfil (f1) partly in frame at the left edge.
+- Camera: from Black's side, close-up of the White King (e1), from the chest up; Alfil (f1) partly in frame at the left edge, Regina (d1) at the right. Room above them for the shout balloon at the top left (adjusted in 7.25), clear of all crowns and faces.
 - Characters: the King explodes: face red, eyebrows pulled down hard, mouth wide open in a shout, one fist raised. He looks at Alfil. Alfil looks back at the King, taken aback.
 - Balloon (White King, jagged shout balloon): Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.
 
@@ -1674,7 +1682,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 10e (PROPOSAL)
 - Board state: 6.
-- Camera: from Black's side (the white pieces face the camera), framed on e1, e2.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, e2, with room above the King (author feedback in 7.25): the balloon sits at the top left and its tail points to the King's mouth; the balloon does not cover his face or crown.
 - Characters: White King (angry, speaking, gesture point-down-l).
 - Balloon (White King): de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand.
 
@@ -1716,7 +1724,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 11c (PROPOSAL)
 - Board state: 6.
-- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Camera: from Black's side (the white pieces face the camera), framed on the King (e1) and Regina (d1), with room above them (author feedback in 7.25): a wide balloon at the top, clear of all faces, its tail pointing down to the King's mouth.
 - Characters: White King (proud, speaking, gesture hand-chest).
 - Balloon (White King): Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé.
 
@@ -1756,7 +1764,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 12a (PROPOSAL)
 - Board state: 8.
-- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Camera: from Black's side (the white pieces face the camera), framed on the King (e1), zoomed out a little (author feedback in 7.25) so the balloon fits completely inside the panel, above the King, with its tail pointing to his mouth.
 - Characters: White King (puzzled, speaking, gesture point-up-l).
 - Balloon (White King): Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee.
 
@@ -1790,7 +1798,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 13a (PROPOSAL)
 - Board state: 10.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Camera: special angle (see comic/panels.js), with room above Regina and Caballo for the shout balloon (adjusted in 7.25).
 - Characters: Caballo (heroic, speaking).
 - Balloon (Caballo), shout balloon: Voor de glorie en de overwinning ! Ten aanval !
 
@@ -1805,7 +1813,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 14a (PROPOSAL)
 - Board state: 11.
-- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Camera: from Black's side (the white pieces face the camera), framed on the King (e1) with room above him for the large shout balloon, which covers neither his face nor his crown (author feedback in 7.25).
 - Characters: White King (furious, speaking, gesture fist-up-r); Regina (worried).
 - Beside the board: the captured black pawn (h7) stands beside the board.
 - Balloon (White King), shout balloon: Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
@@ -3428,3 +3436,4 @@ Items that need a decision from the author.
 | 7.22 | - | Panel 3a-1: the black pieces a little surprised, the Black King calm. |
 | 7.23 | - | Panel 3b: the black army visibly amused, the Black King calm; new preview expression "amused". |
 | 7.24 | - | Panels 4c-1 and 4c-2 zoomed out a little; room for the balloon above Alfil. |
+| 7.25 | - | Curved, rounded balloon tails that end beside the mouth and never cross a face or hat (Common Prompt Block, Section 16). |

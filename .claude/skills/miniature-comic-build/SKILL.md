@@ -15,6 +15,7 @@ Read `references/renderer-guide.md` (panel data, cameras, pitfalls) before chang
 - Server: `comic/serve.ps1 -Port 8768` (run in the background; check first whether one is already running).
 - Screenshots: `scripts/shot.ps1` (headless Edge; works with a minimised window and always loads the current files). Read the PNG to inspect it. Script execution is disabled on this machine, so run the `.ps1` files as `powershell -NoProfile -ExecutionPolicy Bypass -File <script> <args>`, for example `... -File .claude/skills/miniature-comic-build/scripts/shot.ps1 -Out <scratchpad>\s.png -From 9a -N 8 -H 1650`.
 - Text check: `bash .claude/skills/miniature-comic-build/scripts/check-panel-texts.sh` from the project root.
+- Tail check: `powershell -NoProfile -ExecutionPolicy Bypass -File .claude/skills/miniature-comic-build/scripts/tail-audit.ps1` lists every balloon tail that crosses a face or hat (uses `comic/audit.html`).
 - Export: `powershell -NoProfile -ExecutionPolicy Bypass -File comic/export-svg.ps1`.
 - No Python or Node on this machine: use PowerShell, Git Bash and headless Edge.
 

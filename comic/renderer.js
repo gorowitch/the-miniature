@@ -277,13 +277,23 @@ function renderPanel(svg, P, opts) {
     if (fx.move) { const [a, b] = fx.move; const p0 = pr(...sqXY(a), 0.4), p1 = pr(...sqXY(b), 0.4); const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .95 }, root); for (const off of [-12, 0, 12]) { const dd = `M${p0[0]} ${p0[1] + off} Q${(p0[0] + p1[0]) / 2} ${Math.min(p0[1], p1[1]) - 60 + off} ${p1[0]} ${p1[1] + off}`; mk("path", { d: dd, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12" }, gg); mk("path", { d: dd, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12" }, gg); } }
   }
   for (const p of placed) { const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
+  // keep-clear zones for balloon tails: every head with its hat (crown, mitre, cross), from the top of the piece to the chin
+  const HATW = { k: 13, q: 14, b: 11, p: 11, r: 17, n: 20 };  // half-width of the hat (crown, mitre, battlements) in sprite units
+  const zones = placed.filter(p => p.s > 0.3 && !p.beside).map(p => { const r = HEAD[p.t][1] * p.s, hx = p.head[0], hy = p.head[1];
+    const boxes = p.t === "n" ? [[hx - 20 * p.s, p.top - 4, hx + 20 * p.s, p.mouth[1] + 6 * p.s]] : [[hx - r * 1.05, hy - r, hx + r * 1.05, p.mouth[1] + 4 * p.s], [hx - HATW[p.t] * p.s, p.top - 4, hx + HATW[p.t] * p.s, hy - r * 0.5]];
+    return { p, boxes }; });
+  const inBox = (x, y, b) => x > b[0] && x < b[2] && y > b[1] && y < b[3];
+  const quad = (a, c, e, n) => Array.from({ length: n + 1 }, (_, k) => { const t = k / n; return [(1 - t) * (1 - t) * a[0] + 2 * (1 - t) * t * c[0] + t * t * e[0], (1 - t) * (1 - t) * a[1] + 2 * (1 - t) * t * c[1] + t * t * e[1]]; });
+  const tailHits = (pts, sp) => { const hits = new Set(); pts.forEach(([x, y], k) => { for (const z of zones) { if (z.p === sp && k >= pts.length * 0.8) continue; if (z.boxes.some(bx4 => inBox(x, y, bx4))) hits.add(z.p.role || z.p.sq); } }); return [...hits]; };
+  const audit = (typeof window !== "undefined") ? (window.__tailAudit = window.__tailAudit || []) : [];
   // balloons
   const fs = 25, bal = P.balloons || [];
   let nextX = 16;
   bal.forEach((b, i) => {
     const sp = placed.find(p => p.role === b.who || p.sq === b.who);
     const maxW = b.w ? Math.min(W0 * 0.7, b.w) : Math.min(W0 * 0.46, 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36));
-    const bw = wr.w + (b.shout ? 76 : 44), lh = fs * 1.18, bh = wr.lines.length * lh + (b.shout ? 46 : 26);
+    // a shout balloon is a jagged ellipse: size it so the whole text block fits inside its inner points (bible 7.25)
+    const lh = fs * 1.18, th = wr.lines.length * lh, bw = b.shout ? 2 * (wr.w / 2 * 1.2 / 0.9 + 8) : wr.w + 44, bh = b.shout ? 2 * (th / 2 * 1.3 / 0.9 + 8) : th + 26;
     const by = b.y !== undefined ? b.y : 14;
     let bx;
     if (b.x !== undefined) bx = b.x;
@@ -300,12 +310,40 @@ function renderPanel(svg, P, opts) {
     }
     nextX = bx + bw + 14;
     const g = mk("g", {}, root);
-    if (sp && !b.noTail) { const tx = sp.mouth[0], ty = Math.max(by + bh + 8, sp.head[1] - HEAD[sp.t][1] * sp.s * 0.2); const mx = Math.max(bx + 30, Math.min(bx + bw - 30, tx)); const ex = tx + (tx < mx ? 4 : -4), ey = ty;
-      mk("path", { d: `M${mx - 14} ${by + bh - 6} Q${(mx + ex) / 2} ${(by + bh + ey) / 2} ${ex} ${ey} Q${(mx + ex) / 2 + 10} ${(by + bh + ey) / 2} ${mx + 14} ${by + bh - 6} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g); }
-    if (b.shout) { const cx = bx + bw / 2, cy = by + bh / 2, rx = bw / 2, ry = bh / 2, N = 30; let d = ""; for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, f = k % 2 ? .86 : 1; d += (k ? "L" : "M") + (cx + Math.cos(a) * rx * f).toFixed(1) + " " + (cy + Math.sin(a) * ry * f).toFixed(1); } mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 3.4, "stroke-linejoin": "miter" }, g); }
+    // Cartoon tail (bible 7.25): a curved, tapering wedge that leaves the balloon and stops just beside the speaker's mouth,
+    // never inside a face or hat. Candidates: tip left or right of the face; start points along the balloon's lower edge
+    // (or its side edge when the mouth is level with the balloon); straight or curving outward. The route that crosses
+    // no head or hat wins (the speaker's own included), then the shortest.
+    let tail = null;
+    if (sp && !b.noTail) {
+      const r = HEAD[sp.t][1] * sp.s, bottom = by + bh - (b.shout ? 10 : 6), tw = Math.max(14, Math.min(24, bw * 0.08));
+      let best = null;
+      for (const side of [-1, 1]) {
+        const tip = [sp.mouth[0] + side * (r * (sp.t === "n" ? 2.4 : 1.3) + 8), sp.mouth[1] - r * 0.2];
+        const bases = [];
+        for (const f of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) bases.push({ p: [bx + 26 + (bw - 52) * f, bottom], o: "h" });
+        if (tip[1] < by + bh + 30) for (const e of [bx + (b.shout ? 14 : 6), bx + bw - (b.shout ? 14 : 6)]) bases.push({ p: [e, by + bh / 2], o: "v" });
+        for (const B of bases) for (const bend of [0, 0.3, -0.3]) {
+          const dx = tip[0] - B.p[0], dy = tip[1] - B.p[1];
+          const c = [B.p[0] + dx * 0.5 - dy * bend, B.p[1] + dy * 0.5 + dx * bend];
+          const pts = quad(B.p, c, tip, 28), hits = tailHits(pts, null);
+          const inside = pts.slice(6).some(([x, y]) => x > bx && x < bx + bw && y > by && y < by + bh);
+          const gap = Math.hypot(Math.max(bx - tip[0], 0, tip[0] - bx - bw), Math.max(by - tip[1], 0, tip[1] - by - bh));  // how far the tip sticks out of the balloon
+          const len = Math.hypot(dx, dy), out = tip[0] < 8 || tip[0] > W0 - 8 || tip[1] > H - 8;
+          const score = hits.length * 5000 + (inside ? 3000 : 0) + (gap < 30 ? 4000 : 0) + (out ? 1e5 : 0) + len + Math.abs(bend) * 40 + (B.o === "v" ? 30 : 0);
+          if (!best || score < best.score) best = { score, B, c, tip, hits };
+        }
+      }
+      const { B, c, tip } = best, h = tw / 2, off = B.o === "h" ? [h, 0] : [0, h];
+      const L = [B.p[0] - off[0], B.p[1] - off[1]], R = [B.p[0] + off[0], B.p[1] + off[1]];
+      mk("path", { d: `M${L[0]} ${L[1]} Q${c[0] - off[0] * 0.5} ${c[1] - off[1] * 0.5} ${tip[0]} ${tip[1]} Q${c[0] + off[0] * 0.5} ${c[1] + off[1] * 0.5} ${R[0]} ${R[1]} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g);
+      tail = { B, h };
+      audit.push({ panel: P.id, who: b.who, hits: best.hits });
+    }
+    if (b.shout) { const cx = bx + bw / 2, cy = by + bh / 2, rx = bw / 2, ry = bh / 2, N = 30; let d = ""; for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, f = k % 2 ? .9 : 1; d += (k ? "L" : "M") + (cx + Math.cos(a) * rx * f).toFixed(1) + " " + (cy + Math.sin(a) * ry * f).toFixed(1); } mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 3.4, "stroke-linejoin": "miter" }, g); }
     else mk("rect", { x: bx, y: by, width: bw, height: bh, rx: Math.min(30, bh / 2), fill: "#fffdf5", stroke: INK, "stroke-width": 3 }, g);
-    if (sp && !b.noTail) { const tx = sp.mouth[0], mx = Math.max(bx + 30, Math.min(bx + bw - 30, tx)); mk("path", { d: `M${mx - 12} ${by + bh - (b.shout ? 10 : 2)} L${mx + 12} ${by + bh - (b.shout ? 10 : 2)}`, stroke: "#fffdf5", "stroke-width": 8 }, g); }
-    wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: by + (b.shout ? 23 : 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
+    if (tail) { const { B, h } = tail; const d = B.o === "h" ? `M${B.p[0] - h + 3} ${by + bh - (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + bh - (b.shout ? 10 : 2)}` : `M${B.p[0] < bx + bw / 2 ? bx + (b.shout ? 12 : 2) : bx + bw - (b.shout ? 12 : 2)} ${B.p[1] - h + 3} l0 ${2 * h - 6}`; mk("path", { d, stroke: "#fffdf5", "stroke-width": 8 }, g); }  // open the balloon outline where the tail joins
+    wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: (b.shout ? by + bh / 2 - th / 2 - 3 : by + 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
   });
   // grumble balloons: a wavy scribble, or grumble symbols (P.grumbleText, e.g. "#@!%&*!") in a wider balloon
   // Placement: try spots around the grumbler's head and take the one that covers the least of the pawns' faces and
