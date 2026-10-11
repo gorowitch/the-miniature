@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.5
+Version 7.6
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -13,6 +13,7 @@ Version 7.2 adds dialogue density and visual composition rules (Section 23), eig
 Version 7.3 records the author's answers to the open questions: five long panels split, album format, original text always (Flemish only), greasy spot subtle until Scene 9, Scene 5 approved, shout balloons, panel 4a camera corrected, title on the cover, a chess club room without people, full costumes for the officers, proposed dossiers for the remaining pieces.
 Version 7.4 adds the panel manifests for all 21 panels of Scenes 1 to 5 (Section 20.3).
 Version 7.5 specifies the boebel for image generation: a standard descriptive sentence (no name in prompts), a positive description with comparisons, dimensions, and a no-text rule for images (Sections 4 and 18).
+Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved source is immutable during production; illustration and lettering are separate from story authority; prohibited changes; what to do when the source is incomplete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -21,6 +22,63 @@ Version 7.5 specifies the boebel for image generation: a standard descriptive se
 - Never: new version = summary(previous version).
 - Never remove or rewrite a whole section. Remove information only when explicitly correcting an error, and record the correction in Section 15 and Appendix A.
 - Every version is committed so it can be diffed. Milestones can be tagged (for example `v1.0-canon-complete`).
+
+---
+
+# STRICT ADAPTATION PROTOCOL — NO CREATIVE DEVIATION
+Added in 7.6. Mandatory for every person and every tool that produces pages from this bible. It applies before and above every other production rule in this document.
+
+The production process illustrates the existing story. It does not write, rewrite, improve, summarise or creatively continue it. The image generator is never an author and never a source of text.
+
+## P.1 Three Separate Responsibilities
+1. **Story authority.** The approved source (P.2) determines everything that happens and everything that is said. Only the author changes it, through this bible (Maintenance Rules; Section 15).
+2. **Illustration.** The image generator (Copilot or ChatGPT) produces the visual artwork only: characters, expressions, environment, composition, and empty speech balloons placed and tailed as specified (Section 21, Stage 2). It receives the Common Prompt Block and one panel block or manifest (Section 18, Section 20.3), nothing else.
+3. **Lettering and assembly.** A separate, deterministic step inserts the exact approved dialogue into the empty balloons, assembles the page and validates it (Section 21, Stages 3 and 4). It copies text; it never writes text.
+
+## P.2 Script Authority: the Approved Source
+The approved source is immutable during production. It consists of:
+- **The play (Section 1), verbatim.** The sole authority for dialogue, speakers, the order of events, stage directions and chess moves.
+- **The author-approved specifications in this bible**, which are derived from the play or decided by the author: the canon (Sections 2 to 12), the production rules (Sections 13, 14, 19, 21, 23), the approved panel script (Section 18) and the panel manifests (Section 20.3), and the decisions recorded in Section 15.
+
+Approved staging is part of the approved source: the poses, gestures, gaze, listener reactions and camera of each panel are fixed in its approved panel block and manifest (Script Fidelity Rule, Section 13). The production process reproduces them; it does not add others.
+
+Not part of the approved source:
+- Previously generated images, sketches and layout previews. They are never an authority for story content, dialogue, panel structure or chess positions. The reference images in `references/` only illustrate canon that is written in this bible.
+- Proposals that are not yet approved (for example the Proposed Dossiers in Section 7, or panel scripts marked "proposal").
+- Conversations, chat messages and tool output, until the author's decision is recorded in this bible.
+
+## P.3 Prohibited Changes
+The production process must never:
+- Invent dialogue or narration.
+- Paraphrase, translate, shorten, expand or modernise dialogue.
+- Correct or alter spelling, punctuation, capitalisation or grammar in approved dialogue (including the play's own spacing variants, quote marks and "Dieje van de overkant").
+- Invent, remove, reorder, combine or duplicate panels.
+- Move dialogue between panels.
+- Change the identity of a speaker (Section 19.F).
+- Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
+- Invent chess moves or change the board state (Sections 11 and 12).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4"); the title appears only on the cover (Section 13, Cover Direction).
+- Use previously generated images as authority for story content.
+- Fill gaps or resolve contradictions through creative guesswork.
+
+Changing the panel structure (for example splitting a crowded panel, Section 23) is not production work: it is a change to the bible, made before production through the Maintenance Rules and approved by the author.
+
+## P.4 When the Source Is Incomplete or Contradictory
+- Stop producing the affected panel.
+- Flag the issue in Appendix B (Open Questions), quoting the conflicting or missing text and naming the panels affected.
+- Request a decision from the author. Continue that panel only after the decision is recorded in this bible (Section 15).
+- Never resolve the issue by inventing a solution, by following a previously generated image, or by choosing the "most likely" reading.
+
+## P.5 Relation to the Rest of This Bible
+This protocol does not replace existing rules; it states their common principle. Detailed rules remain where they are:
+- Script Fidelity Rule and staging: Section 13.
+- Forbidden elements: Section 14.
+- Dialogue attribution: Section 19.
+- Panel manifests: Section 20.
+- Artwork and lettering workflow: Section 21.
+- Completeness and fidelity checks: Section 22.
+- Dialogue density and composition, priority order: Section 23 (23.0).
+If any rule elsewhere in this bible appears to allow what this protocol prohibits, the protocol applies and the conflict is flagged under P.4.
 
 ---
 
@@ -746,6 +804,7 @@ If a panel contains an incorrect position, the panel is wrong.
 - Full priority order: Section 23.0.
 
 ## Script Fidelity Rule
+- All production is governed by the Strict Adaptation Protocol at the start of this bible (added in 7.6): the image generator never adds content beyond the approved source.
 - What is shown visually must be in the script (Section 1).
 - Do not invent visual content that is not in the script: no extra objects, props, settings, events or actions.
 - Character appearance and board details come from the canon in this bible, which is derived from the script or decided by the author.
@@ -769,6 +828,7 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 
 # SECTION 14 - FORBIDDEN ELEMENTS
 NEVER:
+- Anything prohibited by the Strict Adaptation Protocol (P.3), at the start of this bible.
 - Visual content that is not in the script or decided by the author.
 - Narrator boxes.
 - Invented captions.
@@ -886,6 +946,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.5 | Correction within 7.5: the boebel is not named at all in prompts. The image generator drew an explanation of the word in the image (author feedback). The standard sentence lost its name ("- the centre hump -"); panel blocks and manifests now describe it ("the gentle rise in the middle of the board", "the board bulging gently in the middle"); "centre hump" stays an internal term for people only. |
 | 7.5 | No-text rule added to the Common Prompt Block: the image contains no written words, labels, arrows, captions or explanations; the only text is the dialogue in the balloons, or none when the balloons are empty (author feedback). Cross-references in Sections 14, 16 and 21. |
 | 7.5 | The author generates images with both Copilot and ChatGPT: the bible now refers to "the image generator (Copilot or ChatGPT)"; Section 18 renamed "Panel Script (Ready for Image Generation)". |
+| 7.6 | Strict Adaptation Protocol added before Section 1 (author request): three separate responsibilities (story authority, illustration, lettering and assembly); the approved source (the play plus author-approved specifications, including approved staging); prohibited changes; stop-and-flag procedure for gaps and contradictions; relation to existing rules. |
+| 7.6 | Clarified, not changed: listener reactions and staging remain allowed as decided by the author, but only as fixed in the approved panel block and manifest; panel splits remain possible, but only as an approved bible change before production; the cartoon has no captions, chess notation only inside dialogue, the title only on the cover. |
 
 ---
 
@@ -910,6 +972,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Realistic pawn faces.
 - Only original dialogue; no invented text.
 - Nothing shown that is not in the script or decided by the author (Script Fidelity Rule, Section 13).
+- Nothing in the page comes from a previous generated image instead of the approved source; any gap or contradiction was flagged, not guessed (Strict Adaptation Protocol, P.2 to P.4).
 - No narrator boxes.
 - No coordinates or field labels.
 - Every balloon belongs to the speaker named in the script, and its tail points to that speaker (Section 19.B).
@@ -2083,6 +2146,7 @@ PANEL 5e   (sequence number 21)
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
 Added in 7.1. Image generators tend to misattribute speakers and to alter or invent long Flemish text. The workflow therefore separates the artwork from the lettering.
+The three responsibilities (story authority, illustration, lettering and assembly) are defined in the Strict Adaptation Protocol (P.1), added in 7.6.
 
 ## Stage 1 - Prepare the Panel Specification
 - Extract every dialogue line and stage direction from Section 1, preserving wording and order.
@@ -2381,3 +2445,4 @@ Items that need a decision from the author.
 | 7.3 | 13d295a | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
 | 7.4 | 812366d | Panel manifests for Scenes 1 to 5 (Section 20.3). |
 | 7.5 | - | Boebel specification for image generation: standard descriptive sentence without a name, positive description, dimensions (Section 4); prompt texts describe instead of naming; no-text rule for images; generator-neutral (Copilot and ChatGPT), Section 18 renamed. |
+| 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; cross-references in Sections 13, 14, 16 and 21. |
