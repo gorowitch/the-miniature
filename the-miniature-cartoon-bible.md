@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.9
+Version 7.10
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -17,6 +17,7 @@ Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved
 Version 7.7 adds proposed panels for Scenes 6 to 16 to Section 18, clearly marked as proposals awaiting author approval, made for the full SVG preview of the comic (`comic/`). Nothing from 7.6 was removed.
 Version 7.8 adds the move box (author decision): every panel in which a move is played shows that move, verbatim from the play, in bold in a small white rectangle in the bottom-left corner, in the preview and in the final images (Section 13, Move Box). It replaces the rule that chess notation appears only inside dialogue.
 Version 7.9 fixes which pawns have a moustache (author decision): the b-pawn and the g-pawn of both armies, in every image, and no other pawn (Section 7, White Pawns and Black Pawns).
+Version 7.10 adds the pawns' solidarity (author decision): in panels 2b to 5d-2 every white pawn in frame stands with its arms crossed (Section 7, White Pawns; Sections 18 and 20.3).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -567,6 +568,7 @@ Felt:
 - Simple soldier uniforms (author decision in 7.3).
 - The working class ("boerenvolk", "boeren").
 - Mix of young and veteran soldiers.
+- Solidarity in the mutiny (author decision in 7.10): from panel 2b up to and including panel 5d-2, every white pawn in frame stands with its arms crossed, all of them, as a sign of solidarity; no pawn points or gestures in those panels. Where only the pawns' heads are in frame (the close-ups 2c, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c and 5d-1), the framing stays as approved: the camera is not changed to bring the crossed arms into view (author decision in 7.10).
 - Moustache rule (author decision in 7.9): the b-pawn and the g-pawn of each army have a moustache, in every image; no other pawn has one. No pawn has a beard (author decision in 7.9). The moustache belongs to the pawn, not to the square: a b-pawn or g-pawn keeps it when it captures onto another file (the black g-pawn on h5 after 6. ... gxh5). Replaces "some veterans may have moustaches or short beards".
 - Distinct noses allowed.
 - More realistic faces; no blob-like cartoon faces.
@@ -983,6 +985,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.8 | The 12 proposal move panels in Section 18 (6c, 6d, 7d, 8c, 9b, 9g, 11g, 11h, 12d, 12e, 13b, 14d): "no caption, no notation in the image" replaced by a move box line with the verbatim move. The SVG preview draws the box (`comic/renderer.js`, `movebox` in `comic/panels.js`). |
 | 7.9 | Author decision: pawn moustaches are fixed for consistency across images. The b-pawn and the g-pawn of both armies (white and black) have a moustache in every image; no other pawn has one. Replaces N2 ("veteran pawns may have moustaches or short beards"). Sections 7 (White Pawns, Black Pawns), 13 (Master Illustration Prompt), 16 and the Common Prompt Block updated. |
 | 7.9 | Author decision (confirmed): the moustache belongs to the pawn, not to the file, so the black g-pawn keeps it on h5 after 6. ... gxh5. Pawns have no beards, so that "no other pawn" holds for all facial hair (confirmed by the author; Appendix B, item 17 resolved). |
+| 7.10 | Author decision: pawn solidarity during the mutiny. In panels 2b, 2c, 3a-1, 3a-2, 3b, 4a, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c, 5d-1 and 5d-2 every white pawn in frame stands with its arms crossed ("since the pawns are in solidarity the arms of all white pawns need to be crossed"). Section 7 (White Pawns), the 15 panel blocks in Section 18 and field 12 of the 15 manifests in Section 20.3 updated. |
+| 7.10 | Consequence in panel 4a: the pawns on e2, f2 and g2 no longer point at the gentle rise in the middle of the board; they turn to Alfil with their arms crossed (panel block, manifest fields 8 and 16 of 4a, and the Scene Catalog in Section 17). The rise stays visible in the frame. |
+| 7.10 | Author decision: in the close-ups where only the pawns' heads are in frame (2c, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c, 5d-1) the approved framing stays; the camera is not lowered to show the crossed arms ("leave the images where there are no arms in sight as-is"). Section 7, White Pawns. |
 
 ---
 
@@ -1088,7 +1093,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Full panel script: Section 18 (approved by the author).
 - Staging constraint: Alfil cannot leave f1 (e2 and g2 block him, as he says in Scene 5). He consults the pawns from his own square by leaning forward over the f2 pawn; "en komt terug" means he turns back to the King. No piece leaves its square.
 - Panels:
-  - 4a: (Alfil overlegt met pionnen en komt terug), first part: Alfil leans over the second rank and confers with the pawns; the pawns point towards the boebel. No balloons.
+  - 4a: (Alfil overlegt met pionnen en komt terug), first part: Alfil leans over the second rank and confers with the pawns; the pawns face him with their arms crossed (changed in 7.10: no pawn points; the boebel stays visible). No balloons.
   - 4b: Alfil "Muiterij Sire! ... nen boebel in het bord zit."
   - 4c: Alfil "Als ze de hele tijd bergop ... iets anders moeten spelen." (split in 7.3 into 4c-1 "... hebben deelgenomen." and 4c-2 "Als u de partij vandaag wil winnen ...")
 
@@ -1256,6 +1261,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Balloon (White King): Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4
 
 ### Panel 2b
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Format: wide landscape panel.
 - Camera: from Black's side, slightly off-centre and somewhat elevated, showing the white army from the front. Only half the board is in frame: the near (bottom) edge of the frame is at the fourth rank.
 - In frame: all eight white pawns (a2 to h2) in one row across the frame, all sixteen white pieces with the officers standing behind the pawns. Caballo (g1) and the b1 knight face the centre.
@@ -1265,6 +1271,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - No dialogue balloons.
 
 ### Panel 2c
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, zoomed in on Regina on d1 (she is talking).
 - In frame: Regina large in the centre; the White King (e1) partly in frame at the left; the bishop on c1 partly at the right; the heads of the pawns on e2, d2 and c2 cross the bottom of the frame.
 - Characters: Regina turns her head towards the King and looks at him, puzzled (one eyebrow raised), mouth open. The King looks back at her. No lip colour or make-up.
@@ -1275,6 +1282,7 @@ Status: approved by the author.
 Board position for all panels: the standard starting position (State 0). Nothing has moved.
 
 ### Panel 3a-1
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Camera: behind White's first rank, behind and slightly to the right of Alfil on f1 (seen from White's side), at about head height, looking towards the White King on e1.
 - In frame: Alfil (f1) in the right foreground, seen from behind and partly from the side; the White King (e1) left of centre, turned towards Alfil so his face is seen in three-quarter view; Regina (d1) at the left edge beside the King. In the middle ground the white pawns on d2, e2, f2 and g2, seen from behind. Further away, the empty board and the black army in its starting position, small and out of focus: every black piece on a square that is in frame is shown.
@@ -1282,6 +1290,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek.
 
 ### Panel 3a-2
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Camera: the same as 3a-1.
 - In frame: the same as 3a-1.
@@ -1289,6 +1298,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Balloon (White King): Vraag aan die luie pitten op de tweede rij wat er aan de hand is.
 
 ### Panel 3b
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: over the White King's shoulder. Behind e1, slightly above the King's crown, looking across the whole board towards Black.
 - Foreground: the back of the White King's crown and shoulder (left of centre), his arm pointing impatiently towards the black army. Alfil (f1) partly in frame at the right, seen from behind.
 - Middle ground: all eight white pawns seen from behind, then the empty board: the board bulging gently in the middle, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
@@ -1300,24 +1310,28 @@ Status: approved by the author.
 Board position for all panels: the standard starting position (State 0). Nothing has moved. Alfil stays on f1 in every panel: he cannot leave his square.
 
 ### Panel 4a
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Stage direction: (Alfil overlegt met pionnen en komt terug).
 - Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the gentle rise in the middle of the board towards White's second rank (corrected in 7.3 to match the approved sketch). The gentle rise in the middle of the board rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
 - In frame: the white pawns on c2, d2, e2, f2, g2 and h2 facing the camera; behind them the officers on c1 to h1 (rook h1 and bishop c1 may be cut off by the frame edges). Every piece on a square that is in frame is shown.
-- Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him; one or two of them point past the camera towards the gentle rise in the middle of the board in the centre. The other pawns look on, arms crossed. The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
+- Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him, arms crossed; the other pawns look on, arms crossed (author decision in 7.10: all white pawns keep their arms crossed, no pawn points). The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
 - No balloons, no text.
 
 ### Panel 4b
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, at officer height, zoomed in on Alfil (f1) and the White King (e1) (author feedback): their heads and upper bodies fill the frame. From this side Alfil is left, the King right. Caballo (g1) and Regina (d1) only partly at the frame edges; the heads of the pawns on f2 and e2 cross the bottom of the frame.
 - Characters: Alfil has turned back to the King and looks straight at him, upright again, alarmed, one hand raised. The King looks back at Alfil, surprised by the news: eyebrows shot up, eyes wide, mouth open (author feedback).
 - Balloon (Alfil): Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit.
 
 ### Panel 4c-1
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 4c in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, slightly closer than 4b, the same two characters; the King now more in focus.
 - Characters: Alfil, earnest, mouth open, looks at the King while gesturing with an open hand towards the centre of the board (towards the gentle rise in the middle of the board, "bergop"). The King looks back at Alfil, mouth closed, a frown forming: the bad news is sinking in.
 - Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen.
 
 ### Panel 4c-2
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 4c in 7.3 (author decision, Section 23.B).
 - Camera: the same as 4c-1.
 - Characters: Alfil, mouth open, looks at the King with both hands open: advice. The King looks back at Alfil, angry and worried at the same time: he realises he must change his plans. Furrowed brow, eyebrows pulled together, tight wavy mouth, reddening cheeks (author feedback on 4c). His anger bursts out in Scene 5.
@@ -1328,34 +1342,40 @@ Status: approved by the author (7.3).
 Board position for all panels: the standard starting position (State 0). Nothing has moved. Alfil stays on f1.
 
 ### Panel 5a
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, close-up of the White King (e1), from the chest up; Alfil (f1) partly in frame at the left edge.
 - Characters: the King explodes: face red, eyebrows pulled down hard, mouth wide open in a shout, one fist raised. He looks at Alfil. Alfil looks back at the King, taken aback.
 - Balloon (White King, jagged shout balloon): Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.
 
 ### Panel 5b-1
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 5b in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, two-shot of Alfil (f1, left) and the White King (e1, right), at officer height. Caballo (g1) and Regina (d1) partly at the frame edges; pawn heads (f2, e2) cross the bottom of the frame.
 - Characters: the King leans towards Alfil and jabs a pointing finger at him, a scornful look, mouth open. Alfil looks back at the King, mouth closed, stiffening: a sore spot is touched (his "minor promotion"). They look at each other.
 - Balloon (White King): Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd
 
 ### Panel 5b-2
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 5b in 7.3 (author decision, Section 23.B).
 - Camera: the same as 5b-1.
 - Characters: the King, mocking, mouth open, finger still raised at Alfil. Alfil looks back at the King, openly offended: chin up, lips pressed together. They look at each other.
 - Balloon (White King): en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’.
 
 ### Panel 5c
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, same two-shot as 5b.
 - Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the gentle rise in the middle of the board): an order. Alfil looks back at the King, hesitant.
 - Balloon (White King): Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen.
 
 ### Panel 5d-1
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, the same two-shot as 5c.
 - Characters: Alfil looks at the King, apologetic, mouth open, both hands slightly spread. The King looks back at Alfil, impatient, mouth closed.
 - Balloon (Alfil): Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten.
 
 ### Panel 5d-2
+- White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Camera: high, from Black's side, above and in front of the white pawns, looking down on the f1 square, so that both of Alfil's diagonals are clear: f1-e2 and f1-g2. Alfil, the pawns and the King face the camera.
 - In frame: Alfil (f1) in the centre, behind the pawns on e2, f2 and g2; from this side the King (e1) and Regina (d1) are at the right, Caballo (g1) and the rook (h1) at the left; the pawns on d2 and h2 at the edges.
@@ -2108,7 +2128,7 @@ PANEL 2b   (sequence number 6)
 9.  Small wordless grumble balloons (jagged outline, wavy scribble, no letters) beside several pawn heads; they do not cover officers' faces.
 10. Stage directions: (hoorbaar gemor vanop de tweede rij).
 11. State 0. No move.
-12. Continuity: right after the order in 2a.
+12. Continuity: right after the order in 2a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: letters or words in the grumble balloons; a pawn off its square.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 3.
@@ -2138,7 +2158,7 @@ PANEL 2c   (sequence number 7)
 9.  Balloon 1 top right; tail to Regina's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: after the grumbling in 2b.
+12. Continuity: after the grumbling in 2b. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: lip colour or make-up on Regina; a tail near the King.
 14. Dialogue length: 5 words, 31 characters.
 15. Segmentation: the whole of speech 4.
@@ -2170,7 +2190,7 @@ PANEL 3a-1   (sequence number 8)
 9.  Balloon 1 top left; tail to Koning's mouth, passing left of his crown.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: after Regina's question in 2c.
+12. Continuity: after Regina's question in 2c. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: the King looking at the pawns; a tail near Alfil.
 14. Dialogue length: 15 words, 85 characters.
 15. Segmentation: the first sentence of speech 5; continues in 3a-2.
@@ -2200,7 +2220,7 @@ PANEL 3a-2   (sequence number 9)
 9.  Balloon 1 top left; tail to Koning's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: same camera and positions as 3a-1.
+12. Continuity: same camera and positions as 3a-1. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: the King looking at the pawns; a tail near Alfil.
 14. Dialogue length: 15 words, 65 characters.
 15. Segmentation: the second sentence of speech 5; continues in 3b.
@@ -2230,7 +2250,7 @@ PANEL 3b   (sequence number 10)
 9.  Balloon 1 top left; tail to the King's head.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: end of speech 5; the King's impatience from 3a-2.
+12. Continuity: end of speech 5; the King's impatience from 3a-2. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: a laughing Black King; a tail near Alfil.
 14. Dialogue length: 26 words, 145 characters.
 15. Segmentation: the last sentence of speech 5 (ends the speech).
@@ -2256,15 +2276,15 @@ PANEL 4a   (sequence number 11)
 6.  Watching: Koning and Regina wait upright, mouths closed, looking at Alfil.
 7.  Camera on Black's side, somewhat elevated, looking down over the gentle rise in the middle of the board at the second rank.
 8.  Alfil: leans far forward over the f2 pawn, listening; does not leave f1.
-    Pawns e2, f2, g2: turned to Alfil, one or two pointing past the camera at the gentle rise in the middle of the board; the other pawns look on, arms crossed.
+    Pawns e2, f2, g2: turned to Alfil, arms crossed; the other pawns look on, arms crossed (author decision in 7.10: no pawn points).
 9.  No balloons.
 10. Stage directions: (Alfil overlegt met pionnen en komt terug).
 11. State 0. No move.
-12. Continuity: Alfil is still blocked on f1 (e2, g2).
+12. Continuity: Alfil is still blocked on f1 (e2, g2). All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: Alfil off f1; any text.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 5.
-16. Visual priority: the gentle rise in the middle of the board and the pawns pointing at it; Alfil leaning over them.
+16. Visual priority: Alfil leaning over the pawns, who face him with their arms crossed; the gentle rise in the middle of the board visible in front of them (changed in 7.10: no pawn points).
 17. Lettering space: none needed.
 18. Balloon-area estimate: 0%.
 19. Layout: wide-medium shot, elevated.
@@ -2290,7 +2310,7 @@ PANEL 4b   (sequence number 12)
 9.  Balloon 1 top left, narrow enough to keep the King's crown clear; tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: Alfil upright again after 4a.
+12. Continuity: Alfil upright again after 4a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: a balloon or tail at the King; the King's mouth shaped as if speaking.
 14. Dialogue length: 22 words, 125 characters.
 15. Segmentation: the first sentence of speech 6; continues in 4c-1.
@@ -2320,7 +2340,7 @@ PANEL 4c-1   (sequence number 13)
 9.  Balloon 1 top left; tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: after 4b; the King's surprise turns into worry.
+12. Continuity: after 4b; the King's surprise turns into worry. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on the King.
 14. Dialogue length: 20 words, 116 characters.
 15. Segmentation: the second sentence of speech 6; continues in 4c-2.
@@ -2350,7 +2370,7 @@ PANEL 4c-2   (sequence number 14)
 9.  Balloon 1 top left; tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: the King's anger bursts out in 5a.
+12. Continuity: the King's anger bursts out in 5a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on the King.
 14. Dialogue length: 13 words, 67 characters.
 15. Segmentation: the last sentence of speech 6 (ends the speech).
@@ -2381,7 +2401,7 @@ PANEL 5a   (sequence number 15)
 9.  Balloon 1 is a SHOUT balloon (jagged outline), top right, clear of the crown; tail to Koning's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: anger from 4c-2.
+12. Continuity: anger from 4c-2. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: a round balloon for this line; an open mouth on Alfil.
 14. Dialogue length: 11 words, 68 characters.
 15. Segmentation: the first two sentences of speech 7; continues in 5b-1.
@@ -2411,7 +2431,7 @@ PANEL 5b-1   (sequence number 16)
 9.  Balloon 1 top right; tail to Koning's mouth, not passing Alfil's head.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: after 5a.
+12. Continuity: after 5a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on Alfil; a tail near Alfil.
 14. Dialogue length: 14 words, 74 characters.
 15. Segmentation: speech 7, third sentence, first part (ends after "gepromoveerd"); continues in 5b-2.
@@ -2441,7 +2461,7 @@ PANEL 5b-2   (sequence number 17)
 9.  Balloon 1 top right; tail to Koning's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: same camera as 5b-1.
+12. Continuity: same camera as 5b-1. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on Alfil.
 14. Dialogue length: 20 words, 106 characters.
 15. Segmentation: speech 7, third sentence, second part (starts with "en dat complex"); continues in 5c.
@@ -2471,7 +2491,7 @@ PANEL 5c   (sequence number 18)
 9.  Balloon 1 top right; tail to Koning's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: same camera as 5b-1 and 5b-2.
+12. Continuity: same camera as 5b-1 and 5b-2. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on Alfil.
 14. Dialogue length: 22 words, 120 characters.
 15. Segmentation: the last sentence of speech 7 (ends the speech; the double space in the play is collapsed).
@@ -2501,7 +2521,7 @@ PANEL 5d-1   (sequence number 19)
 9.  Balloon 1 top left; tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: answers 5c.
+12. Continuity: answers 5c. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: an open mouth on the King; a tail near the King.
 14. Dialogue length: 16 words, 86 characters.
 15. Segmentation: the first sentence of speech 8; continues in 5d-2.
@@ -2530,7 +2550,7 @@ PANEL 5d-2   (sequence number 20)
 9.  Balloon 1 top left; tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
-12. Continuity: the blocked diagonals explain why Alfil cannot leave f1 until 2. Ld3.
+12. Continuity: the blocked diagonals explain why Alfil cannot leave f1 until 2. Ld3. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
 13. Must not appear: Alfil off f1; empty e2 or g2.
 14. Dialogue length: 13 words, 69 characters.
 15. Segmentation: the last sentence of speech 8 (ends the speech).
@@ -2846,6 +2866,7 @@ Kept for history. Do not use for generation.
 
 - Up to 7.7: "This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue" (Strict Adaptation Protocol P.3, Section 16, Common Prompt Block, proposal move panels: "no caption, no notation in the image"). -> Superseded in 7.8 by author decision: a panel in which a move is played shows the move verbatim in a move box (Section 13, Move Box). Captions and narration remain forbidden.
 - v1.0 to 7.8: "Veteran pawns may have moustaches or short beards" (N2; Section 7, White Pawns; Common Prompt Block). -> Superseded in 7.9 by author decision: the b-pawn and the g-pawn of both armies have a moustache in every image, no other pawn.
+- v7.0 to 7.9, panel 4a: "one or two of them point past the camera towards the gentle rise in the middle of the board" (panel block and manifest 4a). -> Superseded in 7.10 by author decision: all white pawns keep their arms crossed in panels 2b to 5d-2; no pawn points.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -2891,3 +2912,4 @@ Items that need a decision from the author.
 | 7.7 | - | Proposed panels for Scenes 6 to 16 in Section 18 (awaiting approval); SVG preview of the whole comic in `comic/`; open questions 14 to 16. |
 | 7.8 | - | Move box for every played move (author decision): Section 13, Move Box; Common Prompt Block; proposal move panels; cross-references; superseded rule in Appendix A. |
 | 7.9 | - | Pawn moustache rule (author decision): b-pawn and g-pawn of both armies, every image; open question 17. |
+| 7.10 | - | Pawn solidarity (author decision): all white pawns arms crossed in panels 2b to 5d-2; panel 4a without pointing. |

@@ -179,7 +179,7 @@ function drawPiece(parent, p, sw) {
   inner.setAttribute("style", `stroke-width:${sw}`);
   SPR[p.t](inner, p.col, p.c, p.o);
   if (!p.o.back) gestureArms(inner, p.t, p.col, p.c, p.o.gest);
-  if (p.o.back && p.o.gest) gestureArms(inner, p.t, p.col, p.c, p.o.gest);
+  if (p.o.back && p.o.gest && p.o.gest !== "crossed") gestureArms(inner, p.t, p.col, p.c, p.o.gest);  // crossed arms are hidden in front of the body
   const [hy, hr] = HEAD[p.t];
   if (p.o.anger) { const sd = [].concat(p.o.gest || []).some(x => /-r$/.test(x)) ? -1 : 1, ax = sd > 0 ? hr * .75 : -hr * 1.55;
     mk("path", { d: `M${ax+hr*.15} ${hy-hr*1.1} q3 -5 6 0 M${ax+hr*.15} ${hy-hr*.6} q3 5 6 0 M${ax} ${hy-hr*.95} q-5 3 0 6 M${ax+hr*.8} ${hy-hr*.95} q5 3 0 6`, stroke: "#c0392b", "stroke-width": 1.7, fill: "none", "stroke-linecap": "round" }, inner); }
@@ -253,6 +253,7 @@ function renderPanel(svg, P, opts) {
     const ov = Object.assign({}, cast[it.sq] || {}, role ? cast[role] || {} : {});
     const faceDir = col === "w" ? 1 : -1, back = ov.back !== undefined ? ov.back : (C[1] - it.y0) * faceDir < 0;
     const o = Object.assign({ role, back, must: !it.beside && pawnHasMoustache(it.sq, it.ch, state) }, ov);
+    if (P.crossArms && it.ch === "P" && !it.beside) o.gest = "crossed";  // pawn solidarity during the mutiny (bible Section 7, author decision 7.10)
     if (t === "n") o.dir = pr(4, it.y0, 0)[0] > x ? 1 : -1;
     if (o.lookAt) { const tg = items.find(q => q.sq === o.lookAt || roleOf(q.sq, q.ch, state) === o.lookAt || q.role === o.lookAt); if (tg) { const tx = pr(tg.x0, tg.y0, 0)[0]; o.look = tx < x - 4 ? -1 : tx > x + 4 ? 1 : 0; } }
     const s = F / d / 50;
