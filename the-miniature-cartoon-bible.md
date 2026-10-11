@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.4
+Version 7.5
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -12,6 +12,7 @@ Version 7.1 adds the dialogue attribution specification, the panel manifest stan
 Version 7.2 adds dialogue density and visual composition rules (Section 23), eight manifest fields (Section 20) and density steps in the workflow (Section 21). Nothing from 7.1 was removed.
 Version 7.3 records the author's answers to the open questions: five long panels split, album format, original text always (Flemish only), greasy spot subtle until Scene 9, Scene 5 approved, shout balloons, panel 4a camera corrected, title on the cover, a chess club room without people, full costumes for the officers, proposed dossiers for the remaining pieces.
 Version 7.4 adds the panel manifests for all 21 panels of Scenes 1 to 5 (Section 20.3).
+Version 7.5 specifies the boebel for image generation: a standard descriptive sentence (no name in prompts), a positive description with comparisons, dimensions, and a no-text rule for images (Sections 4 and 18).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -270,6 +271,7 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - The four squares form one raised region.
 - A modest plastic deformation that the characters treat as a major obstacle.
 - Main source of conflict.
+- In prompts the boebel is never named: it is described with the standard sentence (see Boebel Specification for Image Generation below). The "not a ..." lines above are review checks for people, not prompt text.
 
 ### Boebel Appearance (approved by the author on panel 2b)
 - A smooth, rounded rise of the board surface, highest at the point where d4, e4, d5 and e5 meet, sloping gently down to flat board at the edges of those four squares.
@@ -278,6 +280,37 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - Made readable only by light and shadow: one slope catches the light, the opposite slope is in soft shadow.
 - No outline, no rings or contour lines, no separate object, no dome with a hard edge.
 - Reference sketch: `references/boebel-panel-2b-sketch.png` (layout preview, not final art).
+
+### Boebel Specification for Image Generation (added in 7.5)
+Image generators were confused by the boebel. Three causes: the word itself (Flemish dialect for a bump, which models do not know and read as "bubble"), descriptions that mostly say what it is not (naming "bubble" or "dome" in a prompt tends to produce one), and no dimensions. This subsection fixes the term, describes the boebel positively and gives its size.
+
+#### 1. Term and standard sentence
+- "Boebel" is the canon name. It is used in the dialogue (lettered exactly as in Section 1) and in this bible, never in a prompt.
+- In prompts, panel blocks and manifests the boebel is never named: it is described. The Common Prompt Block (Section 18) contains the standard sentence below; panel blocks and manifests refer to it descriptively, as "the gentle rise in the middle of the board" or "the board bulging gently in the middle". A name in a prompt reads like a label, and image generators then draw the label or an explanation (author feedback, 7.5).
+- "Centre hump" is only an internal term in this bible (for people), never prompt text.
+- Standard sentence, to be used word for word in every prompt where the centre of the board is visible:
+
+> In the middle of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, like a vinyl roll-up chessboard that has warped from heat. The hill is about as high as the base of a chess piece and slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over it; it is seen only through soft light on one side and soft shadow on the other.
+
+- Adjusting this sentence is a canon change: record it in Section 15 and keep the previous wording in Appendix A.
+
+#### 2. Positive description and comparisons
+What the boebel is:
+- A warp of the board itself: the plastic sheet of a roll-up tournament board that has bulged upward, as vinyl does when it has lain in the sun or near a radiator.
+- One single, smooth, rounded hill, like a gentle swell in a vinyl floor or a small hill under a tablecloth.
+- Covered by the board pattern: the four centre squares (d4, e4, d5, e5) lie over it, and their edges and colours follow its curve without a break.
+- Low and wide: wider than it is high, with no flat top and no edge where it meets the flat board.
+- Visible through light and shade, and in low views through the board's surface line rising in the middle.
+
+The checks of what the boebel must not look like (a bubble, a dome with a hard edge, a separate object, an outline, rings or contour lines, a crack, a hole, a stain, a sticker) are review checks for people, in the Validation Checklist (Section 16). Do not put them in prompts.
+
+#### 3. Dimensions (proposed in 7.5, to be confirmed by the image tests)
+Measured in square widths (one square = 1):
+- **Centre:** exactly on the shared corner of d4, e4, d5 and e5.
+- **Footprint:** roughly round, about 2 squares across. It reaches the middle of the outer edges of the four centre squares; the outer corners of those squares (for example the corner of d4 towards c3) are flat again. The surrounding squares (c3 to f6 around the centre) are flat.
+- **Height at the peak:** about 1/8 of a square width, roughly as high as a chess piece's base (wooden base plus felt). On a board with 50 mm squares that is about 6 mm. This is slightly exaggerated for readability: a real warp would be lower (decision G2, slightly exaggerated defects).
+- **Profile:** a smooth bell shape: steepest about halfway between the peak and the edge, rounded at the top, blending into the flat board at the edge.
+- **Relative to the pieces:** much lower than any piece; a pawn standing next to it is about eight times as tall as the hump.
 
 ## Cola Stain
 - Square f6.
@@ -723,7 +756,7 @@ If a panel contains an incorrect position, the panel is wrong.
 - The listener reacts visibly to what is said: for example surprise at unexpected news, anger and worry when plans have to change (author feedback on panels 4b and 4c).
 
 ## Master Illustration Prompt
-Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. The boebel is a deformation of the board surface itself spanning d4, e4, d5 and e5. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
+Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
 ## Cover Direction
 - The entire cast dominates the cover.
@@ -758,6 +791,8 @@ NEVER:
 - A listener drawn as if speaking: open speaking mouth or speaking gesture without a line in that panel (Section 19.C).
 - One balloon holding lines of different speakers (Section 19.B).
 - Paraphrased, shortened or reordered dialogue (Section 20).
+- The word "boebel", or any name for it, in a prompt, panel block or manifest outside the dialogue: describe it with the standard sentence instead (Section 4, added in 7.5).
+- Labels, arrows, annotations, legends or explanatory text in the image, for example a caption explaining the boebel (added in 7.5).
 - Translated dialogue: the balloons are in the original Flemish only (author decision in 7.3).
 - Softened or censored dialogue, or symbols replacing words (author decision in 7.3: the original text always takes precedence).
 - People in the chess club room: no players, spectators or hands (author decision in 7.3).
@@ -844,6 +879,13 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.3 | Full costumes for the officers of both armies (v1.1 descriptions for the white officers, darker colours for black), simple soldier uniforms for the pawns; the White King keeps the simple medieval crown (author decisions). |
 | 7.3 | Proposed dossiers for the remaining pieces added to Section 7, awaiting approval (author asked for proposals). |
 | 7.4 | Panel manifests (all 21 fields) for the 21 panels of Scenes 1 to 5 added as Section 20.3; script excerpts copied automatically from Section 1; Script Coverage Map updated (author request). |
+| 7.5 | Boebel Specification for Image Generation (Section 4): "boebel" is never used in prompts; the prompt term is "the centre hump", defined by a standard sentence used word for word. Reason: image generation was confused by the insufficiently defined boebel (author feedback). |
+| 7.5 | Boebel described positively with comparisons (a vinyl roll-up board warped by heat, a gentle swell, a hill under a tablecloth); the "not a ..." checks moved to the Validation Checklist for human review. |
+| 7.5 | Boebel dimensions (proposed, to be confirmed by image tests): peak on the shared corner of d4/e4/d5/e5, footprint about 2 squares across, height about 1/8 of a square (about a piece's base), smooth bell profile. |
+| 7.5 | "Boebel" replaced by "the centre hump" in the Master Illustration Prompt, the Common Prompt Block, the panel blocks (Section 18) and the manifests (Section 20.3); the dialogue keeps "boebel" verbatim. |
+| 7.5 | Correction within 7.5: the boebel is not named at all in prompts. The image generator drew an explanation of the word in the image (author feedback). The standard sentence lost its name ("- the centre hump -"); panel blocks and manifests now describe it ("the gentle rise in the middle of the board", "the board bulging gently in the middle"); "centre hump" stays an internal term for people only. |
+| 7.5 | No-text rule added to the Common Prompt Block: the image contains no written words, labels, arrows, captions or explanations; the only text is the dialogue in the balloons, or none when the balloons are empty (author feedback). Cross-references in Sections 14, 16 and 21. |
+| 7.5 | The author generates images with both Copilot and ChatGPT: the bible now refers to "the image generator (Copilot or ChatGPT)"; Section 18 renamed "Panel Script (Ready for Image Generation)". |
 
 ---
 
@@ -856,6 +898,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Pieces that talk to each other look at each other.
 - White second-rank pawns have the major pieces behind them.
 - Boebel integrated into d4/e4/d5/e5.
+- Boebel (centre hump) check: one smooth, low, rounded hill of the board itself; peak on the shared corner of d4, e4, d5 and e5; about 2 squares across; about as high as a piece's base; the grid lines and colours bend over it.
+- Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
+- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons (Section 18, Common Prompt Block).
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
 - Greasy spot on f3 when visible.
@@ -1028,8 +1073,8 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 
 ---
 
-# SECTION 18 - PANEL SCRIPT (COPILOT-READY)
-The final images are generated by Copilot. For each panel, give Copilot the **Common Prompt Block** followed by that panel's block. Each panel block is self-contained: it lists everything that must be in the frame.
+# SECTION 18 - PANEL SCRIPT (READY FOR IMAGE GENERATION)
+The final images are generated by an image generator: the author uses both Copilot and ChatGPT. The prompts are written to work in either. For each panel, give the image generator the **Common Prompt Block** followed by that panel's block. When a result differs between the two generators, record the difference in this bible rather than writing a separate prompt per generator. Each panel block is self-contained: it lists everything that must be in the frame.
 
 Orientation reminder: seen from Black's side, the files run from h (left) to a (right). Seen from White's side, from a (left) to h (right).
 
@@ -1049,7 +1094,7 @@ Recurring characters:
 - Black officers: costumes in darker colours; the Black King is calm, with a short beard.
 
 Board details:
-- Boebel: the board surface itself is warped upwards where d4, e4, d5 and e5 meet: a smooth rounded rise, highest at that shared corner, sloping gently down to flat board at the edges of those four squares. The squares bend with it. It is visible only through light on one slope and soft shadow on the other. No outline, no rings, no separate object, no hard-edged dome.
+- The middle of the board: In the middle of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, like a vinyl roll-up chessboard that has warped from heat. The hill is about as high as the base of a chess piece and slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over it; it is seen only through soft light on one side and soft shadow on the other.
 - Greasy spot on f3: a faint, translucent, yellowish greasy smear with a slight shine, smaller and subtler than a stain. Scenes 1 to 8: barely noticeable; from Scene 9: clearly visible.
 - Cola stain on f6 (Scenes 1 to 14): only a faint discolouration of the square, easy to overlook.
 
@@ -1065,6 +1110,7 @@ Rules:
 - A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
+- The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons. When the speech balloons are drawn empty, the image contains no text at all.
 
 ## Scene 1 - Opening Speech
 Board position for all panels: the standard starting position (State 0). Nothing has moved.
@@ -1094,7 +1140,7 @@ Split from panel 1b in 7.3 (author decision, Section 23.B).
 ### Panel 1c
 - Camera: over Alfil's shoulder. Behind White's first rank, just behind and to the left of Alfil (between Alfil and the King), slightly above head height, looking across the whole board towards Black.
 - Foreground, seen from behind: Alfil on f1 (right of centre; paprika stains visible on his mitre) and the White King on e1 (left of centre). Their heads are turned slightly towards each other, showing partial profiles. Regina (d1, light hair) seen from behind to the left of the King; Caballo (g1) in profile at the right, facing left towards the centre. The other white pieces of the first rank as far as they are in frame.
-- Middle ground: all eight white pawns seen from behind, then the empty board: the boebel visible in the centre, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
+- Middle ground: all eight white pawns seen from behind, then the empty board: the board bulging gently in the middle, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
 - Background: the complete black army in its starting formation in the distance, all 16 pieces, facing the camera; the black knights face the centre.
 - Balloon (Alfil, tail to Alfil): Jawel Sire, zij wachten op uw bevel !
 
@@ -1111,7 +1157,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Format: wide landscape panel.
 - Camera: from Black's side, slightly off-centre and somewhat elevated, showing the white army from the front. Only half the board is in frame: the near (bottom) edge of the frame is at the fourth rank.
 - In frame: all eight white pawns (a2 to h2) in one row across the frame, all sixteen white pieces with the officers standing behind the pawns. Caballo (g1) and the b1 knight face the centre.
-- Board: the third and fourth ranks in the foreground. The boebel rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
+- Board: the third and fourth ranks in the foreground. The gentle rise in the middle of the board rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
 - Characters: the pawns frown, stubborn and grumbling; none of them moves. The officers look on.
 - Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters) beside several pawn heads, placed so they do not cover the officers' faces.
 - No dialogue balloons.
@@ -1143,7 +1189,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 ### Panel 3b
 - Camera: over the White King's shoulder. Behind e1, slightly above the King's crown, looking across the whole board towards Black.
 - Foreground: the back of the White King's crown and shoulder (left of centre), his arm pointing impatiently towards the black army. Alfil (f1) partly in frame at the right, seen from behind.
-- Middle ground: all eight white pawns seen from behind, then the empty board: the boebel in the centre, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
+- Middle ground: all eight white pawns seen from behind, then the empty board: the board bulging gently in the middle, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
 - Background: the complete black army in its starting formation, all 16 pieces, facing the camera. The Black King on e8 is clearly recognisable: calm, patient, short beard, waiting with composure. He is not laughing. The black knights face the centre.
 - Balloon (White King): En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
 
@@ -1153,9 +1199,9 @@ Board position for all panels: the standard starting position (State 0). Nothing
 
 ### Panel 4a
 - Stage direction: (Alfil overlegt met pionnen en komt terug).
-- Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the boebel towards White's second rank (corrected in 7.3 to match the approved sketch). The boebel rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
+- Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the gentle rise in the middle of the board towards White's second rank (corrected in 7.3 to match the approved sketch). The gentle rise in the middle of the board rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
 - In frame: the white pawns on c2, d2, e2, f2, g2 and h2 facing the camera; behind them the officers on c1 to h1 (rook h1 and bishop c1 may be cut off by the frame edges). Every piece on a square that is in frame is shown.
-- Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him; one or two of them point past the camera towards the boebel in the centre. The other pawns look on, arms crossed. The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
+- Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him; one or two of them point past the camera towards the gentle rise in the middle of the board in the centre. The other pawns look on, arms crossed. The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
 - No balloons, no text.
 
 ### Panel 4b
@@ -1166,7 +1212,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 ### Panel 4c-1
 Split from panel 4c in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, slightly closer than 4b, the same two characters; the King now more in focus.
-- Characters: Alfil, earnest, mouth open, looks at the King while gesturing with an open hand towards the centre of the board (towards the boebel, "bergop"). The King looks back at Alfil, mouth closed, a frown forming: the bad news is sinking in.
+- Characters: Alfil, earnest, mouth open, looks at the King while gesturing with an open hand towards the centre of the board (towards the gentle rise in the middle of the board, "bergop"). The King looks back at Alfil, mouth closed, a frown forming: the bad news is sinking in.
 - Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen.
 
 ### Panel 4c-2
@@ -1198,7 +1244,7 @@ Split from panel 5b in 7.3 (author decision, Section 23.B).
 
 ### Panel 5c
 - Camera: from Black's side, same two-shot as 5b.
-- Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the boebel): an order. Alfil looks back at the King, hesitant.
+- Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the gentle rise in the middle of the board): an order. Alfil looks back at the King, hesitant.
 - Balloon (White King): Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen.
 
 ### Panel 5d-1
@@ -1394,7 +1440,7 @@ Note (7.3): panel 5b has since been split into 5b-1 and 5b-2 (Section 18), and t
 ## 20.3 Manifests: Scenes 1 to 5 (added in 7.4)
 Derived from the approved panel script (Section 18) and the play (Section 1). Field 2 is copied from Section 1 automatically, character for character. Balloon area estimates use the album format of Section 23.F (about 85 x 75 mm, lettering about 8 pt). Common to all 21 panels:
 - Board: State 0 (starting position); no piece moves in Scenes 1 to 5. Alfil stays on f1 throughout (e2 and g2 block him).
-- Board details: boebel on d4/e4/d5/e5 as a warped rise; cola stain on f6 and greasy spot on f3 only barely noticeable (Sections 4 and 23).
+- Board details: the gentle rise in the middle of the board on d4/e4/d5/e5 (the board's own warp, Section 4); cola stain on f6 and greasy spot on f3 only barely noticeable (Sections 4 and 23).
 - Surroundings: empty chess club room, soft and out of focus, no people (Section 3).
 - Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
 - Every knight faces the centre files; every visible occupied square shows its piece.
@@ -1563,7 +1609,7 @@ PANEL 2b   (sequence number 6)
       (hoorbaar gemor vanop de tweede rij)
 3.  Dialogue: none (wordless grumble balloons only).
 4.  No speaker; the white pawns grumble.
-5.  Visible: all eight white pawns and all eight white officers; the third and fourth ranks with the boebel in the foreground; no black pieces.
+5.  Visible: all eight white pawns and all eight white officers; the third and fourth ranks with the gentle rise in the middle of the board in the foreground; no black pieces.
 6.  Listening: the officers look on, mouths closed.
 7.  Camera on Black's side, slightly off-centre and elevated; wide landscape panel; the frame ends at the fourth rank.
 8.  Pawns: frowning, stubborn, grumbling (mouths in a wavy line); none moves.
@@ -1574,7 +1620,7 @@ PANEL 2b   (sequence number 6)
 13. Must not appear: letters or words in the grumble balloons; a pawn off its square.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 3.
-16. Visual priority: the row of grumbling pawns and the boebel in front of them.
+16. Visual priority: the row of grumbling pawns and the gentle rise in the middle of the board in front of them.
 17. Lettering space: small grumble balloons beside the pawn heads.
 18. Balloon-area estimate: about 5%.
 19. Layout: wide shot (Section 23.D); landscape format.
@@ -1684,7 +1730,7 @@ PANEL 3b   (sequence number 10)
 3.  Dialogue:
       Balloon 1: "En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen."
 4.  Balloon 1 -> Koning
-5.  Visible: the back of Koning's crown and shoulder in the foreground; Alfil f1 partly at the right, from behind; all white pawns from behind; the board with the boebel; the complete black army in the distance, the Black King on e8 recognisable.
+5.  Visible: the back of Koning's crown and shoulder in the foreground; Alfil f1 partly at the right, from behind; all white pawns from behind; the board with the gentle rise in the middle of the board; the complete black army in the distance, the Black King on e8 recognisable.
 6.  Listening: Alfil (from behind); the Black King far away, calm and patient, mouth closed, not laughing.
 7.  Camera over the King's shoulder towards Black.
 8.  Koning: seen from behind, arm pointing impatiently at the black army (speaking gesture).
@@ -1714,11 +1760,11 @@ PANEL 4a   (sequence number 11)
       (Alfil overlegt met pionnen en komt terug)
 3.  Dialogue: none.
 4.  No speaker.
-5.  Visible: the boebel in the foreground; white pawns c2 to h2; officers c1 to h1 (rook h1 and bishop c1 may be cut off).
+5.  Visible: the gentle rise in the middle of the board in the foreground; white pawns c2 to h2; officers c1 to h1 (rook h1 and bishop c1 may be cut off).
 6.  Watching: Koning and Regina wait upright, mouths closed, looking at Alfil.
-7.  Camera on Black's side, somewhat elevated, looking down over the boebel at the second rank.
+7.  Camera on Black's side, somewhat elevated, looking down over the gentle rise in the middle of the board at the second rank.
 8.  Alfil: leans far forward over the f2 pawn, listening; does not leave f1.
-    Pawns e2, f2, g2: turned to Alfil, one or two pointing past the camera at the boebel; the other pawns look on, arms crossed.
+    Pawns e2, f2, g2: turned to Alfil, one or two pointing past the camera at the gentle rise in the middle of the board; the other pawns look on, arms crossed.
 9.  No balloons.
 10. Stage directions: (Alfil overlegt met pionnen en komt terug).
 11. State 0. No move.
@@ -1726,7 +1772,7 @@ PANEL 4a   (sequence number 11)
 13. Must not appear: Alfil off f1; any text.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 5.
-16. Visual priority: the boebel and the pawns pointing at it; Alfil leaning over them.
+16. Visual priority: the gentle rise in the middle of the board and the pawns pointing at it; Alfil leaning over them.
 17. Lettering space: none needed.
 18. Balloon-area estimate: 0%.
 19. Layout: wide-medium shot, elevated.
@@ -2057,6 +2103,8 @@ Added in 7.1. Image generators tend to misattribute speakers and to alter or inv
   6. Clear panel composition.
 - Also plan adequate space for lettering before the composition is final: balloons in negative space, roughly 25 to 30% of the panel area in total, never over faces, gestures, props or relevant board details (Section 23.C and 23.E).
 - Add this to the prompt when using empty balloons: "Draw the speech balloons empty, with no letters. The tail of each balloon points to the mouth of the speaking character named below. Listening characters keep their mouths closed."
+- Never use the word "boebel", or any other name for it, in a prompt: the image generator does not know the word, and a name makes it draw a label or an explanation. Describe it with the standard sentence from Section 4 (Boebel Specification), which the Common Prompt Block already contains.
+- Always include the no-text rule of the Common Prompt Block: the image contains no written words, labels, arrows, captions or explanations; the only text is the dialogue in the balloons, or none at all when the balloons are drawn empty (added in 7.5).
 
 ## Stage 3 - Add the Original Dialogue
 - Typeset the dialogue separately in the correct balloons, using a lettering or page-layout tool (tool not yet chosen; see Appendix B, item 10).
@@ -2293,6 +2341,8 @@ Kept for history. Do not use for generation.
 - v7.0 to 7.2: Greasy spot on f3 "clearly visible" in every scene. -> Superseded in 7.3: barely noticeable in Scenes 1 to 8, clearly visible from Scene 9.
 - v7.0 to 7.2: Panel 4a camera "low, just above the board at the fourth rank". -> Corrected in 7.3: somewhat elevated, as in the approved sketch.
 - v3.0 to 7.2: Pieces described without costumes (plain wood with faces). -> Superseded in 7.3: full costumes for the officers of both armies, soldier uniforms for the pawns (Section 5, Costumes). The v1.1 costume descriptions return; the v1.1 gold crown stays superseded.
+- v7.0 to 7.4: Common Prompt Block described the boebel by name with negative wording ("Boebel: the board surface itself is warped upwards ... No outline, no rings, no separate object, no hard-edged dome."). -> Superseded in 7.5: the prompt term "the centre hump" with the standard sentence (Section 4); the negative checks moved to Section 16.
+- First 7.5 wording of the standard sentence (named the bump, which made the image generator draw an explanation): "In the exact centre of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill - the centre hump - like a vinyl roll-up chessboard that has warped from heat. Its highest point is the corner where the four centre squares meet, about as high as the base of a chess piece, and from there it slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over the hill. The hill is seen only through soft light on the side facing the light and soft shadow on the other side." -> Superseded within 7.5 by the unnamed sentence (Section 4).
 
 ---
 
@@ -2329,4 +2379,5 @@ Items that need a decision from the author.
 | 7.1 | 1bddc59 | Dialogue attribution specification (Section 19), panel manifest standard (Section 20), artwork/lettering workflow (Section 21), completeness and fidelity checklist with script coverage map (Section 22); cross-references in Sections 13, 14, 16, 17, 18; open questions 9 to 11. |
 | 7.2 | (with 7.3) | Dialogue density and visual composition (Section 23); manifest fields 14 to 21; density steps in the workflow; cross-references in Sections 13, 14, 16, 18, 19, 20, 22; open question 12. |
 | 7.3 | 13d295a | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
-| 7.4 | - | Panel manifests for Scenes 1 to 5 (Section 20.3). |
+| 7.4 | 812366d | Panel manifests for Scenes 1 to 5 (Section 20.3). |
+| 7.5 | - | Boebel specification for image generation: standard descriptive sentence without a name, positive description, dimensions (Section 4); prompt texts describe instead of naming; no-text rule for images; generator-neutral (Copilot and ChatGPT), Section 18 renamed. |

@@ -18,7 +18,7 @@ Key landmarks (check the actual headings, they may have grown):
 - Section 1: the original play, **verbatim** - never touch it.
 - Sections 2-12: extracted facts, world, board, materials, visual canon, dossiers, relationships, board-as-character, tone, game, board states.
 - Section 13 Production Rules, 14 Forbidden Elements, 15 Canon Decision Log, 16 Validation Checklist.
-- Section 17 Scene Catalog, 18 Panel Script (Copilot-ready), 19 Dialogue Attribution, 20 Panel Manifests, 21 Workflow, 22 Completeness Checklist + Script Coverage Map.
+- Section 17 Scene Catalog, 18 Panel Script (Ready for Image Generation), 19 Dialogue Attribution, 20 Panel Manifests, 21 Workflow, 22 Completeness Checklist + Script Coverage Map.
 - Appendix A superseded canon, B open questions, C version history.
 
 ### 2. Snapshot
@@ -32,7 +32,7 @@ Copy the bible to the session scratchpad (or a temp directory) before editing, e
 
 ### 4. Apply the change additively
 - Use small, targeted edits; never rewrite whole sections.
-- Keep the author's wording when they give it. Where you phrase new canon yourself, keep it concrete and checkable (what must or must not be visible), because Copilot generates the images from this text.
+- Keep the author's wording when they give it. Where you phrase new canon yourself, keep it concrete and checkable (what must or must not be visible), because the image generator (Copilot or ChatGPT) generates the images from this text.
 - Dialogue anywhere in the bible (balloons, manifests, examples) is copied from Section 1; the only allowed normalisation is collapsing runs of spaces. Quote marks (straight and curly), spelling and punctuation stay exactly as in the play.
 - Do not invent visual content that is not in the script or decided by the author (Script Fidelity Rule, Section 13).
 - Shell gotcha: Flemish text contains curly quotes and apostrophes (’ “ ” ‘). Inline heredocs and `sed` replacements can break on them; for larger insertions write the text to a file with the Write tool and insert it from there.
