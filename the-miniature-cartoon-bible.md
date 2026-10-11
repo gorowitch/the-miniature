@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.12
+Version 7.13
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -20,6 +20,7 @@ Version 7.9 fixes which pawns have a moustache (author decision): the b-pawn and
 Version 7.10 adds the pawns' solidarity (author decision): in panels 2b to 5d-2 every white pawn in frame stands with its arms crossed (Section 7, White Pawns; Sections 18 and 20.3).
 Version 7.11 forbids anger symbols such as the red "popping vein" mark (author feedback on panel 5a; Section 14 and the Common Prompt Block).
 Version 7.12 changes panel 2b (author decision after an experiment in the preview): grumble balloons with chess annotation symbols and the hash sign, each with a short tail to its pawn and clear of all faces, and the stage direction verbatim in a caption box in the lower right corner, the only caption in the cartoon.
+Version 7.13 approves panels 6a, 6b and 6c (author decision): full panel blocks in Section 18 (Scene 6) and manifests 22 to 24 in Section 20.3; panel 6d stays a proposal.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -994,6 +995,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.11 | Author feedback on panel 5a: the four red curved strokes on the King's head (a cartoon "popping vein" anger symbol, added in the SVG preview, never part of the script) are unwanted. Anger symbols are now forbidden (Section 14, Common Prompt Block); anger is shown by the face, the gesture and the shout balloon. Removed from the preview panels 5a, 9c and 14a and from the proposal blocks 9c and 14a ("anger mark"). |
 | 7.12 | Author decision on panel 2b ("it needs to be clear that all pawns are protesting in solidarity"), after an experiment in the SVG preview: (1) the stage direction (hoorbaar gemor vanop de tweede rij) appears verbatim, parentheses included, in a pale-yellow caption box in the lower right corner; this is the only caption in the cartoon; (2) the grumble balloons stay small and separate (a shared balloon with eight tails was tried and rejected) and contain only chess annotation symbols and the hash sign ("you can only mix them with the # symbol"): ??#, ?!, #!?, ??, #?!; (3) each grumble balloon has a short tail to its own pawn and covers no pawn face or crossed arms ("the pawns are the focus"), nor an officer's face or crown. Panel block and manifest 2b, Scene Catalog (Section 17), stage-direction table (Section 19), Strict Adaptation Protocol P.3, Common Prompt Block, Sections 16, 20 and 22 updated. |
 | 7.12 | Claude's reading, open for correction (Appendix B, item 18): the caption exception covers panel 2b only, and the parentheses of the stage direction are kept. |
+| 7.13 | Author decision: panels 6a, 6b and 6c accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 6 - Regina's Advice) and as manifests 22 (6a), 23 (6b) and 24 (6c) in Section 20.3; the proposal blocks 6a to 6c are kept and marked as approved, pointing to the new blocks; Script Coverage Map items 12 to 14 updated, item 15 (1. ... d5) marked as a proposal (6d). Panel 6d is not approved. |
 
 ---
 
@@ -1397,6 +1399,28 @@ Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Characters: the King in despair: both hands to his face (or clutching his crown), eyes squeezed shut, mouth turned down. Alfil and Regina look at the King.
 - Balloon (White King): Wel nondedju ! Heel mijn voorbereiding om zeep.
 
+## Scene 6 - Regina's Advice
+Status: panels 6a, 6b and 6c approved by the author in 7.13 (from the proposals of 7.7, as shown in the SVG preview); panel 6d is still a proposal (Section 18, Proposed Panels).
+Board position: the standard starting position (State 0) in 6a and 6b; State 1 (after 1. e3) in 6c. Alfil stays on f1: the pawns no longer cross their arms (the solidarity of 7.10 ends with panel 5d-2).
+
+### Panel 6a
+- Camera: from Black's side, at officer height, close on the White King (e1) and Regina (d1), who stand side by side in the centre of the frame (from this side the King is left, Regina right). Alfil (f1) partly at the left edge, the bishop on c1 partly at the right edge; the heads of the pawns on d2 and e2 (and partly c2 and f2) cross the bottom of the frame.
+- Characters: Regina turns to the King and looks at him, mouth open, giving advice; she holds one open hand out towards him. The King looks back at her, puzzled (one eyebrow raised), mouth closed. Alfil and the c1 bishop look on, mouths closed.
+- Balloon (Regina): Speelt dan e3 Sire, dan kan Alfil toch al gaan zien.
+
+### Panel 6b
+- Camera: the same as 6a.
+- In frame: the same as 6a.
+- Characters: the King gives in, stubborn and impatient: mouth open, frowning, one hand raised in a dismissive wave on the side away from Regina (the hand does not cover her face). Regina looks at the King, mouth closed. Alfil and the c1 bishop look on, mouths closed.
+- Balloon (White King): Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig.
+
+### Panel 6c
+- Camera: high, from White's side, behind the kingside corner of the board (behind h1/g1), looking diagonally across the whole board towards Black. The white army is seen from behind and from the side in the foreground and at the left; the complete black army stands in its starting formation in the distance, facing the camera.
+- In frame: in the foreground Caballo (g1) and the rook (h1), partly cut off by the bottom edge; the white officers and pawns along the left side; the pawn that has just moved from e2 to e3 in the middle ground; the gentle rise in the middle of the board, shown only by light and shadow; the greasy spot on f3 barely noticeable; the cola stain on f6 only a faint discolouration.
+- Action: the pawn moves from e2 to e3 (1. e3): a short motion streak behind it shows the step. Every other piece stands on its starting square.
+- Move box (bottom-left corner, bold, white rectangle): 1. e3
+- No balloons.
+
 ---
 
 ## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
@@ -1406,19 +1430,19 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Captured pieces stand beside the board, next to the h-file, from the capture onwards.
 - Open points for these scenes are in Appendix B, items 14 and 15.
 
-### Panel 6a (PROPOSAL)
+### Panel 6a (approved in 7.13: the approved panel block is in Section 18, Scene 6)
 - Board state: 0.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: Regina (speaking, looks at White King, gesture open-l); White King (puzzled, looks at Regina).
 - Balloon (Regina): Speelt dan e3 Sire, dan kan Alfil toch al gaan zien.
 
-### Panel 6b (PROPOSAL)
+### Panel 6b (approved in 7.13: the approved panel block is in Section 18, Scene 6)
 - Board state: 0.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (stubborn, speaking, gesture wave-l); Regina (looks at White King).
 - Balloon (White King): Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig.
 
-### Panel 6c (PROPOSAL)
+### Panel 6c (approved in 7.13: the approved panel block is in Section 18, Scene 6)
 - Board state: 1.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Move shown: e2-e3 (move streak).
@@ -2601,6 +2625,97 @@ PANEL 5e   (sequence number 21)
 21. Continuity requirements: positions unchanged into Scene 6.
 ```
 
+
+### Scene 6 - Regina's Advice
+Added in 7.13 for the panels the author approved (6a, 6b, 6c). Panel 6d is still a proposal and has no manifest yet.
+
+```
+PANEL 6a   (sequence number 22)
+
+1.  Scene 6, panel a: Regina advises the King to play e3.
+2.  Script excerpt:
+      Regina:
+      Speelt dan e3 Sire, dan kan Alfil toch al gaan zien.
+3.  Dialogue:
+      Balloon 1: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien."
+4.  Balloon 1 -> Regina
+5.  Visible: Koning e1 and Regina d1 side by side in the centre; Alfil f1 partly at the left; the c1 bishop partly at the right; heads of the pawns d2 and e2 (partly c2, f2) at the bottom.
+6.  Listening: Koning, puzzled (one eyebrow raised), mouth closed, looking at Regina; Alfil and the c1 bishop, mouths closed.
+7.  Camera on Black's side, at officer height, close on the King and Regina; from this side left to right: Alfil, Koning, Regina, c1 bishop.
+8.  Regina: mouth open, giving advice, looking at the King, one open hand held out towards him.
+    Listeners: mouths closed; the King looks back at Regina.
+9.  Balloon 1 top right, above Regina, clear of both crowns; tail to Regina's mouth, not crossing the King's head. Round balloon.
+10. Stage directions: none.
+11. State 0. No move in this panel: e3 is advised, not yet played.
+12. Continuity: right after the King's despair in 5e. The pawns no longer cross their arms (the solidarity ends with 5d-2).
+13. Must not appear: an open mouth on the King, Alfil or the c1 bishop; a pawn on e3; Alfil off f1.
+14. Dialogue length: 11 words, 52 characters.
+15. Segmentation: the whole of Regina's speech.
+16. Visual priority: Regina's advising gesture and the King's puzzled look.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 8%.
+19. Layout: medium close-up of two characters; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the same camera and positions in 6b.
+```
+
+```
+PANEL 6b   (sequence number 23)
+
+1.  Scene 6, panel b: the King gives in.
+2.  Script excerpt:
+      Koning:
+      Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig.
+3.  Dialogue:
+      Balloon 1: "Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 6a.
+6.  Listening: Regina, mouth closed, looking at the King; Alfil and the c1 bishop, mouths closed.
+7.  Camera the same as 6a.
+8.  Koning: mouth open, stubborn and impatient (frowning), one hand raised in a dismissive wave on the side away from Regina.
+    Listeners: mouths closed; Regina looks at the King.
+9.  Balloon 1 top right, clear of both crowns; tail to Koning's mouth, not crossing Regina's head. Round balloon.
+10. Stage directions: none.
+11. State 0. No move in this panel; 1. e3 follows in 6c.
+12. Continuity: answers Regina in 6a.
+13. Must not appear: an open mouth on Regina, Alfil or the c1 bishop; the King's hand over Regina's face; a pawn on e3.
+14. Dialogue length: 13 words, 82 characters.
+15. Segmentation: the whole of the King's answer, up to the move 1. e3.
+16. Visual priority: the King's impatient wave.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium close-up of two characters; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: in 6c the e2 pawn moves to e3.
+```
+
+```
+PANEL 6c   (sequence number 24)
+
+1.  Scene 6, panel c: the first move is played.
+2.  Script excerpt:
+      1. e3
+3.  Dialogue: none. Move box (bottom-left corner): "1. e3".
+4.  No speaker.
+5.  Visible: the whole board diagonally; in the foreground Caballo g1 and the rook h1 (partly cut off); the white officers and pawns along the left side; the e3 pawn in the middle ground; the complete black army in the distance.
+6.  Listening: no reactions; every piece is at rest except the moving pawn.
+7.  Camera high, on White's side, behind the kingside corner (behind h1/g1), looking diagonally across the board towards Black.
+8.  The e-pawn: calm, mid-step from e2 to e3; all other pieces neutral.
+9.  No balloons. The move box sits in the bottom-left corner, clear of the pieces.
+10. Stage directions: none.
+11. State 1: the move 1. e3 (pawn e2-e3) happens in this panel; a short motion streak shows the step.
+12. Continuity: follows the King's consent in 6b; the pawns no longer cross their arms.
+13. Must not appear: any other moved piece; a black move (1. ... d5 follows in 6d); a balloon; text other than the move box; a pawn on e4.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after the King's answer.
+16. Visual priority: the e-pawn stepping to e3; the gentle rise in the middle of the board ahead of it.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: wide establishing view of the board (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 1 into 6d, where Black answers 1. ... d5.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -2702,10 +2817,10 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 9 | Koning: "Wie is er hier nu godverdoemme eigenlijk koning ?..." | 5 | 5a, 5b-1, 5b-2, 5c | Panel script written (approved); manifest written (Section 20.3). |
 | 10 | Alfil: "Vergeef me dat ik u tegenspreek Sire..." | 5 | 5d-1, 5d-2 | Panel script written (approved); manifest written (Section 20.3). |
 | 11 | Koning: "Wel nondedju ! Heel mijn voorbereiding om zeep." | 5 | 5e | Panel script written (approved); manifest written (Section 20.3). |
-| 12 | Regina: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." | 6 | - | Scene catalog only. |
-| 13 | Koning: "Allee goed dan, want "Dieje van den overkant" wordt precies..." | 6 | - | Scene catalog only. |
-| 14 | Move: 1. e3 | 6 | - | Scene catalog only. |
-| 15 | Move: 1. ... d5 | 6 | - | Scene catalog only. |
+| 12 | Regina: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." | 6 | 6a | Panel script written (approved in 7.13); manifest written (Section 20.3). |
+| 13 | Koning: "Allee goed dan, want "Dieje van den overkant" wordt precies..." | 6 | 6b | Panel script written (approved in 7.13); manifest written (Section 20.3). |
+| 14 | Move: 1. e3 | 6 | 6c | Panel script written (approved in 7.13); manifest written (Section 20.3). |
+| 15 | Move: 1. ... d5 | 6 | 6d | Proposal (Section 18, Proposed Panels), awaiting author approval. |
 | 16 | Koning: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ?..." | 7 | - | Scene catalog only. |
 | 17 | Alfil: "Jamaar Sire, met dieje boebel." | 7 | - | Scene catalog only. |
 | 18 | Koning: "Alfil veegt dieje paprika chips van uwe mijter..." | 7 | - | Scene catalog only. |
@@ -2927,3 +3042,4 @@ Items that need a decision from the author.
 | 7.10 | - | Pawn solidarity (author decision): all white pawns arms crossed in panels 2b to 5d-2; panel 4a without pointing. |
 | 7.11 | - | Anger symbols (red popping-vein mark) forbidden after author feedback on panel 5a; removed from the preview. |
 | 7.12 | - | Panel 2b: grumble balloons with chess annotation symbols and #, short tails, faces clear; stage direction verbatim in a caption box (only caption in the cartoon); open question 18. |
+| 7.13 | - | Panels 6a, 6b, 6c approved: panel blocks (Section 18, Scene 6) and manifests 22 to 24 (Section 20.3). |
