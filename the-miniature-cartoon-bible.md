@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.15
+Version 7.16
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -23,6 +23,7 @@ Version 7.12 changes panel 2b (author decision after an experiment in the previe
 Version 7.13 approves panels 6a, 6b and 6c (author decision): full panel blocks in Section 18 (Scene 6) and manifests 22 to 24 in Section 20.3; panel 6d stays a proposal.
 Version 7.14 changes panel 4a (author decision): Alfil visibly talks to the pawns, the pawns on e2, f2 and g2 turn towards him (f2 seen from behind, e2 and g2 half turned), the camera is raised, and a caption box shows (Alfil overlegt met de pionnen).
 Version 7.15 reframes the proposal panel 6d (author feedback): ranks 5 to 8 only, both black rooks fully in sight.
+Version 7.16 approves panels 6d, 7a, 7b, 7c and 7d (author decision): full panel blocks in Section 18 (Scenes 6 and 7) and manifests 25 to 29 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1003,6 +1004,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.14 | Author decision on panel 4a: "g2 f2 and e2 are completely turned". All three pawns in front of Alfil now face him and are seen from behind; replaces the half turn of g2 and e2 (panel block and manifest 4a, field 13 included). |
 | 7.14 | Author decision on panel 4a: the caption reads "(Alfil overlegt met de pionnen)" ("Make the text: Alfil overlegt met de pionnen"). This deliberately differs from the play, which has "Alfil overlegt met pionnen en komt terug": "de" is added and "en komt terug" left out. The play text in Section 1 is unchanged; only the caption uses the author's wording. Parentheses kept, as in the caption of 2b. Panel block and manifest 4a, Scene Catalog, Appendix A and B updated. |
 | 7.15 | Author feedback on the proposal panel 6d: "zoom in so we see the second half of the board - that is from the 5th rank to the 8th rank. Be sure that both black rooks are fully in sight." Camera line of the 6d proposal block updated; 6d stays a proposal. Follow-up: "zoom in a little further so we don't see the head of the pawn on e3": zoomed in further; no white piece is in frame. Then: "This is to much - zoom out again - keep the constraint that the head of the pawn at e3 should not be in sight": zoomed out again, with the camera kept above the third rank so that the e3 pawn stays out of frame. Then: "zoom out more - to the max extent that leaves the head of the white pawn out of sight": zoomed out to that limit (computed: the top of the e3 pawn's head lands just below the bottom edge); the fourth rank is now partly in view. Then: "I see half of the fourth rank - so zoom in a little again": zoomed in so that the bottom edge of the frame cuts the fourth rank in half (computed). Camera line of the 6d proposal block rewritten accordingly. |
+| 7.16 | Author decision: panels 6d, 7a, 7b, 7c and 7d accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (6d under Scene 6; new heading Scene 7 - Black Takes the Centre) and as manifests 25 (6d) to 29 (7d) in Section 20.3; the proposal blocks are kept and marked as approved; Script Coverage Map items 15 to 19 updated. Scene 6 and Scene 7 are now fully approved. The paprika stains stay on Alfil's mitre in 7c and 7d (the King's order is not carried out on screen). |
 
 ---
 
@@ -1408,8 +1410,8 @@ Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Balloon (White King): Wel nondedju ! Heel mijn voorbereiding om zeep.
 
 ## Scene 6 - Regina's Advice
-Status: panels 6a, 6b and 6c approved by the author in 7.13 (from the proposals of 7.7, as shown in the SVG preview); panel 6d is still a proposal (Section 18, Proposed Panels).
-Board position: the standard starting position (State 0) in 6a and 6b; State 1 (after 1. e3) in 6c. Alfil stays on f1: the pawns no longer cross their arms (the solidarity of 7.10 ends with panel 5d-2).
+Status: panels 6a, 6b and 6c approved by the author in 7.13, panel 6d in 7.16 (from the proposals of 7.7, as shown in the SVG preview).
+Board position: the standard starting position (State 0) in 6a and 6b; State 1 (after 1. e3) in 6c; State 2 (after 1. ... d5) in 6d. Alfil stays on f1: the pawns no longer cross their arms (the solidarity of 7.10 ends with panel 5d-2).
 
 ### Panel 6a
 - Camera: from Black's side, at officer height, close on the White King (e1) and Regina (d1), who stand side by side in the centre of the frame (from this side the King is left, Regina right). Alfil (f1) partly at the left edge, the bishop on c1 partly at the right edge; the heads of the pawns on d2 and e2 (and partly c2 and f2) cross the bottom of the frame.
@@ -1427,6 +1429,43 @@ Board position: the standard starting position (State 0) in 6a and 6b; State 1 (
 - In frame: in the foreground Caballo (g1) and the rook (h1), partly cut off by the bottom edge; the white officers and pawns along the left side; the pawn that has just moved from e2 to e3 in the middle ground; the gentle rise in the middle of the board, shown only by light and shadow; the greasy spot on f3 barely noticeable; the cola stain on f6 only a faint discolouration.
 - Action: the pawn moves from e2 to e3 (1. e3): a short motion streak behind it shows the step. Every other piece stands on its starting square.
 - Move box (bottom-left corner, bold, white rectangle): 1. e3
+- No balloons.
+
+### Panel 6d
+Approved in 7.16 (camera as set by the author in 7.15).
+- Camera: from White's side, high above the third rank, looking at the second half of the board: the black army with both rooks (a8, h8) fully in sight, the d5 pawn in front of it, and the board down to the middle of the fourth rank (the bottom edge of the frame cuts the fourth rank in half). The head of the white pawn on e3 is out of sight; no white pieces in frame. The black pieces face the camera.
+- In frame: the complete black army on ranks 7 and 8 (from this side the a-file is left, the h-file right), with the d7 square empty; the black pawn that has just moved to d5 in front, in the centre; the gentle rise in the middle of the board, shown only by light and shadow, in front of it; the cola stain on f6 only a faint discolouration.
+- Action: the black pawn moves from d7 to d5 (1. ... d5), two squares forward: a short motion streak behind it shows the step. It now stands on the near slope of the gentle rise (Appendix B, item 14).
+- Characters: the d5 pawn calm and determined, mouth closed; the other black pieces neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 1. ... d5
+- No balloons.
+
+## Scene 7 - Black Takes the Centre
+Status: panels 7a to 7d approved by the author in 7.16 (from the proposals of 7.7, as shown in the SVG preview).
+Board position: State 2 (after 1. e3 d5) in 7a to 7c; State 3 (after 2. Ld3) in 7d. In State 2 the e2 square is empty (the pawn stands on e3), so Alfil's diagonal f1-e2-d3 is open. Paprika stains stay on Alfil's mitre throughout (Section 7): the King's order to wipe them off is not carried out on screen.
+
+### Panel 7a
+- Camera: from Black's side, at officer height, somewhat further back than in Scene 6, on the White King (e1) with Alfil (f1) at his left and Regina (d1) at his right (from this side the h-file is left); Caballo (g1) at the left, the rook (h1) cut off at the left edge. The pawns on g2, f2 and d2 stand in front; the e2 square is empty and the head of the e3 pawn crosses the bottom edge.
+- Characters: the King is angry, mouth open, frowning, and points with one arm down towards the centre of the board, where Black has just played d5. Alfil and Regina look at the King, mouths closed. The pawns and Caballo neutral, mouths closed.
+- Balloon (White King): Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in.
+
+### Panel 7b
+- Camera: from Black's side, at officer height, zoomed in on Alfil (f1) and the White King (e1): from this side Alfil is left, the King right. Caballo (g1) partly at the left edge, Regina (d1) partly at the right edge; the head of the f2 pawn crosses the bottom of the frame.
+- Characters: Alfil looks at the King, apologetic, mouth open, one hand held open towards him. The King looks back at Alfil, angry (frowning, eyebrows pulled together), mouth closed. Regina looks at them, mouth closed.
+- Balloon (Alfil): Jamaar Sire, met dieje boebel.
+
+### Panel 7c
+- Camera: the same as 7b.
+- In frame: the same as 7b.
+- Characters: the King looks at Alfil, angry, mouth open, and points up and away with one arm (out with you). Alfil looks back at him, offended, mouth closed; the paprika stains remain on his mitre. Regina looks at the King, mouth closed.
+- Balloon (White King): Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt.
+
+### Panel 7d
+- Camera: high, from Black's side, from behind the black pawn on d5 (seen from behind, in the foreground at the bottom), looking down across the gentle rise in the middle of the board at the whole white army.
+- In frame: all white pieces on their squares (from this side the h-file is left): the rooks, knights, Regina, the King, the c1 bishop, the pawns on a2, b2, c2, d2, f2, g2 and h2, the pawn on e3; Alfil on d3, in front of the white pawn row; the f1 square empty. The greasy spot on f3 barely noticeable.
+- Action: Alfil moves from f1 over e2 to d3 (2. Ld3): a short motion streak from f1 to d3 shows his path. The paprika stains are still on his mitre.
+- Characters: Alfil calm and dignified, mouth closed; the King looks at Alfil, mouth closed; the other pieces neutral.
+- Move box (bottom-left corner, bold, white rectangle): 2. Ld3
 - No balloons.
 
 ---
@@ -1457,7 +1496,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 1. e3
 - No balloons.
 
-### Panel 6d (PROPOSAL)
+### Panel 6d (approved in 7.16: the approved panel block is in Section 18, Scene 6)
 - Board state: 2.
 - Camera (author feedback in 7.15): from White's side, high above the third rank, looking at the second half of the board: the black army with both rooks (a8, h8) fully in sight, the d5 pawn in front of it, and the board down to the middle of the fourth rank (the bottom edge of the frame cuts the fourth rank in half). The head of the white pawn on e3 is out of sight; no white pieces in frame.
 - Characters: the piece on d5 (calm).
@@ -1465,25 +1504,25 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 1. ... d5
 - No balloons.
 
-### Panel 7a (PROPOSAL)
+### Panel 7a (approved in 7.16: the approved panel block is in Section 18, Scene 7)
 - Board state: 2.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, f1.
 - Characters: White King (angry, speaking, gesture point-down-l); Alfil (looks at White King); Regina (looks at White King).
 - Balloon (White King): Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in.
 
-### Panel 7b (PROPOSAL)
+### Panel 7b (approved in 7.16: the approved panel block is in Section 18, Scene 7)
 - Board state: 2.
 - Camera: from Black's side (the white pieces face the camera), framed on f1, e1.
 - Characters: Alfil (apologetic, speaking, looks at White King, gesture open-r); White King (angry, looks at Alfil).
 - Balloon (Alfil): Jamaar Sire, met dieje boebel.
 
-### Panel 7c (PROPOSAL)
+### Panel 7c (approved in 7.16: the approved panel block is in Section 18, Scene 7)
 - Board state: 2.
 - Camera: from Black's side (the white pieces face the camera), framed on f1, e1.
 - Characters: White King (angry, speaking, looks at Alfil, gesture point-up-l); Alfil (offended, looks at White King).
 - Balloon (White King): Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt.
 
-### Panel 7d (PROPOSAL)
+### Panel 7d (approved in 7.16: the approved panel block is in Section 18, Scene 7)
 - Board state: 3.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d3, f1.
 - Characters: Alfil (calm); White King (looks at Alfil).
@@ -2724,6 +2763,153 @@ PANEL 6c   (sequence number 24)
 21. Continuity requirements: State 1 into 6d, where Black answers 1. ... d5.
 ```
 
+```
+PANEL 6d   (sequence number 25)
+
+1.  Scene 6, panel d: Black answers in the centre.
+2.  Script excerpt:
+      1. ... d5
+3.  Dialogue: none. Move box (bottom-left corner): "1. ... d5".
+4.  No speaker.
+5.  Visible: the complete black army on ranks 7 and 8, both rooks (a8, h8) fully in frame; the d5 pawn in front, in the centre; the board down to the middle of the fourth rank; no white pieces.
+6.  Listening: no reactions; the black pieces neutral, mouths closed.
+7.  Camera high, on White's side, above the third rank, looking at the second half of the board; from this side the a-file is left, the h-file right; the bottom edge cuts the fourth rank in half (author, 7.15).
+8.  The d5 pawn: calm, determined, mouth closed, having just stepped two squares forward.
+9.  No balloons. The move box sits in the bottom-left corner, over the fourth rank.
+10. Stage directions: none.
+11. State 2: the move 1. ... d5 (pawn d7-d5) happens in this panel; a short motion streak shows the step.
+12. Continuity: after 1. e3 in 6c. The d5 pawn stands on the near slope of the gentle rise in the middle of the board (Appendix B, item 14). The cola stain on f6 only a faint discolouration.
+13. Must not appear: the head of the white pawn on e3 or any other white piece; a black piece other than the d-pawn moved; a balloon; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after 1. e3.
+16. Visual priority: the d5 pawn in front of the black army.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: wide view of the black half of the board (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 2 into Scene 7.
+```
+
+### Scene 7 - Black Takes the Centre
+Added in 7.16 for the panels the author approved (7a to 7d).
+
+```
+PANEL 7a   (sequence number 26)
+
+1.  Scene 7, panel a: the King is angry that Black takes the centre.
+2.  Script excerpt:
+      Koning:
+      Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in.
+3.  Dialogue:
+      Balloon 1: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 in the centre; Alfil f1 at his left, Regina d1 at his right; Caballo g1 at the left, the rook h1 cut off at the left edge; pawns g2, f2, d2 in front; the e2 square empty; the head of the e3 pawn at the bottom.
+6.  Listening: Alfil and Regina, mouths closed, looking at the King.
+7.  Camera on Black's side, at officer height, somewhat further back than in Scene 6; from this side left to right: h1, g1, f1, e1, d1.
+8.  Koning: angry, frowning, mouth open, one arm pointing down towards the centre of the board.
+    Listeners: mouths closed; eyes on the King.
+9.  Balloon 1 top left, clear of the crown; tail to Koning's mouth, not crossing Alfil's head. Round balloon.
+10. Stage directions: none.
+11. State 2 (after 1. e3 d5). No move in this panel.
+12. Continuity: right after 1. ... d5 in 6d; the e2 square is empty, the pawn stands on e3.
+13. Must not appear: an open mouth on Alfil or Regina; a pawn on e2; Alfil off f1.
+14. Dialogue length: 22 words, 105 characters.
+15. Segmentation: the whole of the King's speech.
+16. Visual priority: the King's angry pointing gesture.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot of the white officers; one balloon.
+20. Overflow: if the balloon covers a crown, split after "Wat had ik jullie gezegd ?" into two balloons of the same speaker.
+21. Continuity requirements: Alfil answers in 7b.
+```
+
+```
+PANEL 7b   (sequence number 27)
+
+1.  Scene 7, panel b: Alfil blames the rise in the board.
+2.  Script excerpt:
+      Alfil:
+      Jamaar Sire, met dieje boebel.
+3.  Dialogue:
+      Balloon 1: "Jamaar Sire, met dieje boebel."
+4.  Balloon 1 -> Alfil
+5.  Visible: Alfil f1 (left) and Koning e1 (right), large; Caballo g1 partly at the left edge; Regina d1 partly at the right edge; the head of the f2 pawn at the bottom.
+6.  Listening: Koning, angry, mouth closed, looking at Alfil; Regina, mouth closed.
+7.  Camera on Black's side, at officer height, zoomed in on Alfil and the King; from this side Alfil is left, the King right.
+8.  Alfil: apologetic, mouth open, one hand held open towards the King.
+    Listeners: mouths closed; the King looks back at Alfil.
+9.  Balloon 1 top left, above Alfil, clear of the mitre; tail to Alfil's mouth. Round balloon.
+10. Stage directions: none.
+11. State 2. No move.
+12. Continuity: answers the King in 7a.
+13. Must not appear: an open mouth on the King or Regina; any label or explanation of the word in the balloon (the rise in the board is never named or explained in the image).
+14. Dialogue length: 5 words, 30 characters.
+15. Segmentation: the whole of Alfil's answer.
+16. Visual priority: Alfil's apologetic gesture and the King's anger.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 5%.
+19. Layout: medium close-up of two characters; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the same camera in 7c.
+```
+
+```
+PANEL 7c   (sequence number 28)
+
+1.  Scene 7, panel c: the King sends Alfil out.
+2.  Script excerpt:
+      Koning:
+      Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt.
+3.  Dialogue:
+      Balloon 1: "Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 7b.
+6.  Listening: Alfil, offended, mouth closed, looking at the King; Regina, mouth closed.
+7.  Camera the same as 7b.
+8.  Koning: angry, mouth open, looking at Alfil, one arm pointing up and away.
+    Listeners: mouths closed; Alfil looks back at the King.
+9.  Balloon 1 top left, between Alfil's mitre and the King's crown, clear of both; tail to Koning's mouth, not crossing Alfil's head. Round balloon.
+10. Stage directions: none.
+11. State 2. No move in this panel; 2. Ld3 follows in 7d.
+12. Continuity: answers Alfil in 7b. The paprika stains stay on Alfil's mitre.
+13. Must not appear: an open mouth on Alfil or Regina; a clean mitre; Alfil wiping his mitre; Alfil off f1.
+14. Dialogue length: 14 words, 75 characters.
+15. Segmentation: the whole of the King's order, up to the move 2. Ld3.
+16. Visual priority: the King's pointing arm; the paprika stains on the mitre.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium close-up of two characters; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: Alfil leaves f1 for d3 in 7d.
+```
+
+```
+PANEL 7d   (sequence number 29)
+
+1.  Scene 7, panel d: Alfil goes out.
+2.  Script excerpt:
+      2. Ld3
+3.  Dialogue: none. Move box (bottom-left corner): "2. Ld3".
+4.  No speaker.
+5.  Visible: the whole white army; Alfil on d3 in front of the white pawn row; the f1 square empty; the e3 pawn; the black pawn on d5 seen from behind in the foreground.
+6.  Listening: the King looks at Alfil, mouth closed; the other pieces neutral.
+7.  Camera high, on Black's side, behind the d5 pawn, looking down across the gentle rise in the middle of the board at the white army; from this side the h-file is left.
+8.  Alfil: calm and dignified, mouth closed, stepping out; the paprika stains still on his mitre.
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 3: the move 2. Ld3 (bishop f1-d3, over the empty e2) happens in this panel; a short motion streak from f1 to d3 shows the path.
+12. Continuity: Alfil can leave f1 because e2 is empty since 1. e3. The greasy spot on f3 barely noticeable.
+13. Must not appear: Alfil on f1; any other moved piece; a balloon; text other than the move box; a clean mitre.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after the King's order.
+16. Visual priority: Alfil on d3 and his path from f1.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: wide establishing view of the white army (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 3 into Scene 8; Alfil stays on d3.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -2828,11 +3014,11 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 12 | Regina: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." | 6 | 6a | Panel script written (approved in 7.13); manifest written (Section 20.3). |
 | 13 | Koning: "Allee goed dan, want "Dieje van den overkant" wordt precies..." | 6 | 6b | Panel script written (approved in 7.13); manifest written (Section 20.3). |
 | 14 | Move: 1. e3 | 6 | 6c | Panel script written (approved in 7.13); manifest written (Section 20.3). |
-| 15 | Move: 1. ... d5 | 6 | 6d | Proposal (Section 18, Proposed Panels), awaiting author approval. |
-| 16 | Koning: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ?..." | 7 | - | Scene catalog only. |
-| 17 | Alfil: "Jamaar Sire, met dieje boebel." | 7 | - | Scene catalog only. |
-| 18 | Koning: "Alfil veegt dieje paprika chips van uwe mijter..." | 7 | - | Scene catalog only. |
-| 19 | Move: 2. Ld3 | 7 | - | Scene catalog only. |
+| 15 | Move: 1. ... d5 | 6 | 6d | Panel script written (approved in 7.16); manifest written (Section 20.3). |
+| 16 | Koning: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ?..." | 7 | 7a | Panel script written (approved in 7.16); manifest written (Section 20.3). |
+| 17 | Alfil: "Jamaar Sire, met dieje boebel." | 7 | 7b | Panel script written (approved in 7.16); manifest written (Section 20.3). |
+| 18 | Koning: "Alfil veegt dieje paprika chips van uwe mijter..." | 7 | 7c | Panel script written (approved in 7.16); manifest written (Section 20.3). |
+| 19 | Move: 2. Ld3 | 7 | 7d | Panel script written (approved in 7.16); manifest written (Section 20.3). |
 | 20 | Koning: "Boebel, boebel. Zo zullen we de partij wel winnen..." | 8 | - | Scene catalog only. |
 | 21 | Move: 2. ... e6 | 8 | - | Scene catalog only. |
 | 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | - | Scene catalog only. |
@@ -3054,3 +3240,4 @@ Items that need a decision from the author.
 | 7.13 | - | Panels 6a, 6b, 6c approved: panel blocks (Section 18, Scene 6) and manifests 22 to 24 (Section 20.3). |
 | 7.14 | - | Panel 4a: Alfil talks to the pawns, who turn towards him; camera raised; caption (Alfil overlegt met de pionnen). |
 | 7.15 | - | Proposal 6d reframed: ranks 5 to 8, both black rooks fully in sight. |
+| 7.16 | - | Panels 6d and 7a to 7d approved: panel blocks (Section 18, Scenes 6 and 7) and manifests 25 to 29 (Section 20.3). |
