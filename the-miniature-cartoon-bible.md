@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.17
+Version 7.18
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -25,6 +25,7 @@ Version 7.14 changes panel 4a (author decision): Alfil visibly talks to the pawn
 Version 7.15 reframes the proposal panel 6d (author feedback): ranks 5 to 8 only, both black rooks fully in sight.
 Version 7.16 approves panels 6d, 7a, 7b, 7c and 7d (author decision): full panel blocks in Section 18 (Scenes 6 and 7) and manifests 25 to 29 in Section 20.3.
 Version 7.17 approves panels 8a, 8b and 8c (author decision): full panel blocks in Section 18 (Scene 8) and manifests 30 to 32 in Section 20.3.
+Version 7.18 adds the author's name to the cover: S. Gorts, right aligned below the board image (Section 13, Cover Direction).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -859,6 +860,7 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 - The board is visible.
 - The White and Black Kings are both present.
 - The title and subtitle appear on the cover: De Miniatuur (Een hedendaagse klucht in één bedrijf). There is no title inside the panels (author decision in 7.3).
+- The author's name appears on the cover: S. Gorts, right aligned directly below the board image (author decision in 7.18). Apart from the title, the subtitle and this name, the cover carries no text.
 
 ---
 
@@ -1007,6 +1009,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.15 | Author feedback on the proposal panel 6d: "zoom in so we see the second half of the board - that is from the 5th rank to the 8th rank. Be sure that both black rooks are fully in sight." Camera line of the 6d proposal block updated; 6d stays a proposal. Follow-up: "zoom in a little further so we don't see the head of the pawn on e3": zoomed in further; no white piece is in frame. Then: "This is to much - zoom out again - keep the constraint that the head of the pawn at e3 should not be in sight": zoomed out again, with the camera kept above the third rank so that the e3 pawn stays out of frame. Then: "zoom out more - to the max extent that leaves the head of the white pawn out of sight": zoomed out to that limit (computed: the top of the e3 pawn's head lands just below the bottom edge); the fourth rank is now partly in view. Then: "I see half of the fourth rank - so zoom in a little again": zoomed in so that the bottom edge of the frame cuts the fourth rank in half (computed). Camera line of the 6d proposal block rewritten accordingly. |
 | 7.16 | Author decision: panels 6d, 7a, 7b, 7c and 7d accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (6d under Scene 6; new heading Scene 7 - Black Takes the Centre) and as manifests 25 (6d) to 29 (7d) in Section 20.3; the proposal blocks are kept and marked as approved; Script Coverage Map items 15 to 19 updated. Scene 6 and Scene 7 are now fully approved. The paprika stains stay on Alfil's mitre in 7c and 7d (the King's order is not carried out on screen). |
 | 7.17 | Author decision: panels 8a, 8b and 8c accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 8 - Stratego) and as manifests 30 (8a) to 32 (8c) in Section 20.3; the King's speech 20 is split over 8a and 8b at the sentence boundary after "Boebel, boebel." (approved with the panels); the proposal blocks are kept and marked as approved; Script Coverage Map items 20 and 21 updated. Scene 8 is now fully approved. |
+| 7.18 | Author decision: the cover shows the author's name, "S. Gorts", right aligned below the board image (Section 13, Cover Direction). |
 
 ---
 
@@ -3356,3 +3359,4 @@ Items that need a decision from the author.
 | 7.15 | - | Proposal 6d reframed: ranks 5 to 8, both black rooks fully in sight. |
 | 7.16 | - | Panels 6d and 7a to 7d approved: panel blocks (Section 18, Scenes 6 and 7) and manifests 25 to 29 (Section 20.3). |
 | 7.17 | - | Panels 8a, 8b, 8c approved: panel blocks (Section 18, Scene 8) and manifests 30 to 32 (Section 20.3). |
+| 7.18 | - | Author's name S. Gorts on the cover, right aligned below the board image. |

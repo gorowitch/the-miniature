@@ -68,6 +68,8 @@ function panelAt(page, P, x, y, w, h) {
   const box = el("svg", { x: 60, y: 880, width: PW - 120, height: 1126 }, s);
   el("rect", { x: 56, y: 876, width: PW - 112, height: 1134, fill: "none", stroke: "#141414", "stroke-width": 8 }, s);
   R.renderPanel(box, C, {});
+  // author, right aligned below the board image (bible Section 13, Cover Direction; 7.18)
+  const au = el("text", { x: PW - 60, y: 2130, "text-anchor": "end", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 84, fill: "#141414" }, s); au.textContent = "S. Gorts";
 })();
 
 pages.forEach((rowsOnPage, pi) => {
