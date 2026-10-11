@@ -99,13 +99,13 @@ window.PANELS = [
 { id: "7d", scene: 7, status: A, movebox: "2. Ld3", state: 3, cam: zb(["e1", "d3", "f1"], { dist: 2.2, h: 2.2, th: 0.5, f: 620 }), fx: [{ move: ["f1", "d3"] }],
   cast: { alfil: { expr: "calm" }, koning: { lookAt: "alfil" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 8 - Stratego (PROPOSAL)
-{ id: "8a", scene: 8, status: Pr, state: 3, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+{ id: "8a", scene: 8, status: A, state: 3, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "worried", talk: true, gest: "both-open" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Boebel, boebel." }] },
-{ id: "8b", scene: 8, status: Pr, state: 3, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
+{ id: "8b", scene: 8, status: A, state: 3, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
   cast: { koning: { expr: "angry", talk: true, gest: "point-down-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Zo zullen we de partij wel winnen als \"Dieje van den overkant\" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen." }] },
-{ id: "8c", scene: 8, status: Pr, movebox: "2. ... e6", state: 4, cam: { from: [4.5, -1.0, 2.6], at: [4.5, 6.2, 0.2], f: 600 }, fx: [{ move: ["e7", "e6"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
+{ id: "8c", scene: 8, status: A, movebox: "2. ... e6", state: 4, cam: { from: [4.5, -1.0, 2.6], at: [4.5, 6.2, 0.2], f: 600 }, fx: [{ move: ["e7", "e6"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 9 - Caballo Refuses f3 (PROPOSAL)
 { id: "9a", scene: 9, status: Pr, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 700 }),
   cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { lookAt: "koning" } },

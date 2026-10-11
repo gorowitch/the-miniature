@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.16
+Version 7.17
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -24,6 +24,7 @@ Version 7.13 approves panels 6a, 6b and 6c (author decision): full panel blocks 
 Version 7.14 changes panel 4a (author decision): Alfil visibly talks to the pawns, the pawns on e2, f2 and g2 turn towards him (f2 seen from behind, e2 and g2 half turned), the camera is raised, and a caption box shows (Alfil overlegt met de pionnen).
 Version 7.15 reframes the proposal panel 6d (author feedback): ranks 5 to 8 only, both black rooks fully in sight.
 Version 7.16 approves panels 6d, 7a, 7b, 7c and 7d (author decision): full panel blocks in Section 18 (Scenes 6 and 7) and manifests 25 to 29 in Section 20.3.
+Version 7.17 approves panels 8a, 8b and 8c (author decision): full panel blocks in Section 18 (Scene 8) and manifests 30 to 32 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1005,6 +1006,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.14 | Author decision on panel 4a: the caption reads "(Alfil overlegt met de pionnen)" ("Make the text: Alfil overlegt met de pionnen"). This deliberately differs from the play, which has "Alfil overlegt met pionnen en komt terug": "de" is added and "en komt terug" left out. The play text in Section 1 is unchanged; only the caption uses the author's wording. Parentheses kept, as in the caption of 2b. Panel block and manifest 4a, Scene Catalog, Appendix A and B updated. |
 | 7.15 | Author feedback on the proposal panel 6d: "zoom in so we see the second half of the board - that is from the 5th rank to the 8th rank. Be sure that both black rooks are fully in sight." Camera line of the 6d proposal block updated; 6d stays a proposal. Follow-up: "zoom in a little further so we don't see the head of the pawn on e3": zoomed in further; no white piece is in frame. Then: "This is to much - zoom out again - keep the constraint that the head of the pawn at e3 should not be in sight": zoomed out again, with the camera kept above the third rank so that the e3 pawn stays out of frame. Then: "zoom out more - to the max extent that leaves the head of the white pawn out of sight": zoomed out to that limit (computed: the top of the e3 pawn's head lands just below the bottom edge); the fourth rank is now partly in view. Then: "I see half of the fourth rank - so zoom in a little again": zoomed in so that the bottom edge of the frame cuts the fourth rank in half (computed). Camera line of the 6d proposal block rewritten accordingly. |
 | 7.16 | Author decision: panels 6d, 7a, 7b, 7c and 7d accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (6d under Scene 6; new heading Scene 7 - Black Takes the Centre) and as manifests 25 (6d) to 29 (7d) in Section 20.3; the proposal blocks are kept and marked as approved; Script Coverage Map items 15 to 19 updated. Scene 6 and Scene 7 are now fully approved. The paprika stains stay on Alfil's mitre in 7c and 7d (the King's order is not carried out on screen). |
+| 7.17 | Author decision: panels 8a, 8b and 8c accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 8 - Stratego) and as manifests 30 (8a) to 32 (8c) in Section 20.3; the King's speech 20 is split over 8a and 8b at the sentence boundary after "Boebel, boebel." (approved with the panels); the proposal blocks are kept and marked as approved; Script Coverage Map items 20 and 21 updated. Scene 8 is now fully approved. |
 
 ---
 
@@ -1468,6 +1470,28 @@ Board position: State 2 (after 1. e3 d5) in 7a to 7c; State 3 (after 2. Ld3) in 
 - Move box (bottom-left corner, bold, white rectangle): 2. Ld3
 - No balloons.
 
+## Scene 8 - Stratego
+Status: panels 8a, 8b and 8c approved by the author in 7.17 (from the proposals of 7.7, as shown in the SVG preview).
+Board position: State 3 (after 2. Ld3) in 8a and 8b; State 4 (after 2. ... e6) in 8c. Alfil stands on d3; the f1 and e2 squares are empty. The King's speech is split over 8a and 8b at the sentence boundary (Section 23).
+
+### Panel 8a
+- Camera: from Black's side, at officer height, close-up of the White King (e1); Regina (d1) at the right. The f1 square at the left is empty (Alfil has gone to d3). The heads of the pawns on f2 and d2 cross the bottom corners; the e2 square in between is empty.
+- Characters: the King, bewildered and worried, eyebrows raised, mouth open, spreads both arms wide, palms open: he cannot believe it. Regina looks at the King, mouth closed.
+- Balloon (White King): Boebel, boebel.
+
+### Panel 8b
+- Camera: from Black's side, at officer height, further back than in 8a, on the White King (e1) with Regina (d1) at his right; at the left Caballo (g1) and the rook (h1, cut off at the left edge); in front the pawns on g2 and f2, the head of the e3 pawn at the bottom; at the right edge Alfil on d3 (his mitre at the bottom right) and the d2 pawn. The f1 square is empty.
+- Characters: the King is angry, frowning, mouth open, and points with one arm down towards the centre of the board, which his pieces cannot reach. Regina looks at the King, mouth closed. The others neutral, mouths closed.
+- Balloon (White King): Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen.
+
+### Panel 8c
+- Camera: from White's side, low, just behind the White King (e1), looking across the board at the black army. In the foreground the backs of the King's crown (centre), Regina (left) and white pawns (right); in the middle ground Alfil on d3, seen from behind; the gentle rise in the middle of the board, shown only by light and shadow; the greasy spot on f3 barely noticeable.
+- In frame: the complete black army, facing the camera, with the pawns on d5 and e6 in front of it; the e7 and d7 squares empty.
+- Action: the black pawn moves from e7 to e6 (2. ... e6): a short motion streak behind it shows the step.
+- Characters: the Black King calm, mouth closed; the other black pieces neutral.
+- Move box (bottom-left corner, bold, white rectangle): 2. ... e6
+- No balloons.
+
 ---
 
 ## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
@@ -1530,19 +1554,19 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 2. Ld3
 - No balloons.
 
-### Panel 8a (PROPOSAL)
+### Panel 8a (approved in 7.17: the approved panel block is in Section 18, Scene 8)
 - Board state: 3.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (worried, speaking, gesture both-open); Regina (looks at White King).
 - Balloon (White King): Boebel, boebel.
 
-### Panel 8b (PROPOSAL)
+### Panel 8b (approved in 7.17: the approved panel block is in Section 18, Scene 8)
 - Board state: 3.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, f1.
 - Characters: White King (angry, speaking, gesture point-down-r); Alfil (looks at White King); Regina (looks at White King).
 - Balloon (White King): Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen.
 
-### Panel 8c (PROPOSAL)
+### Panel 8c (approved in 7.17: the approved panel block is in Section 18, Scene 8)
 - Board state: 4.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Black King (calm).
@@ -2910,6 +2934,96 @@ PANEL 7d   (sequence number 29)
 21. Continuity requirements: State 3 into Scene 8; Alfil stays on d3.
 ```
 
+### Scene 8 - Stratego
+Added in 7.17 for the panels the author approved (8a to 8c).
+
+```
+PANEL 8a   (sequence number 30)
+
+1.  Scene 8, panel a: the King cannot believe it.
+2.  Script excerpt:
+      Koning:
+      Boebel, boebel. Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen.
+3.  Dialogue:
+      Balloon 1: "Boebel, boebel."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 close-up; Regina d1 at the right; the empty f1 square at the left; the heads of the pawns f2 and d2 in the bottom corners; the e2 square empty.
+6.  Listening: Regina, mouth closed, looking at the King.
+7.  Camera on Black's side, at officer height, close-up of the King; from this side f1 is left, d1 right.
+8.  Koning: bewildered and worried, eyebrows raised, mouth open, both arms spread wide, palms open.
+    Listeners: mouth closed; eyes on the King.
+9.  Balloon 1 top left, clear of the crown; tail to Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 3 (after 2. Ld3). No move.
+12. Continuity: after Alfil's move to d3 in 7d; Alfil is not on f1.
+13. Must not appear: an open mouth on Regina; Alfil on f1; any label or explanation of the word in the balloon.
+14. Dialogue length: 2 words, 15 characters.
+15. Segmentation: speech 20, from its start up to "Boebel, boebel." (first sentence).
+16. Visual priority: the King's spread arms and bewildered face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 3%.
+19. Layout: close-up; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the speech continues in 8b.
+```
+
+```
+PANEL 8b   (sequence number 31)
+
+1.  Scene 8, panel b: stratego instead of chess.
+2.  Script excerpt:
+      Koning:
+      Boebel, boebel. Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen.
+3.  Dialogue:
+      Balloon 1: "Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 in the centre; Regina d1 at his right; Caballo g1 and the rook h1 (cut off) at the left; pawns g2 and f2 in front; the head of the e3 pawn at the bottom; Alfil on d3 and the d2 pawn at the right edge; the f1 square empty.
+6.  Listening: Regina, mouth closed, looking at the King; the others neutral, mouths closed.
+7.  Camera on Black's side, at officer height, further back than in 8a; from this side left to right: h1, g1, f1 (empty), e1, d1.
+8.  Koning: angry, frowning, mouth open, one arm pointing down towards the centre of the board.
+    Listeners: mouths closed.
+9.  Balloon 1 top left, clear of the crown; tail to Koning's mouth, not crossing another head. Round balloon.
+10. Stage directions: none.
+11. State 3. No move in this panel; 2. ... e6 follows in 8c.
+12. Continuity: continues speech 20 from 8a.
+13. Must not appear: an open mouth on Regina or Alfil; Alfil on f1; a stratego board or stratego pieces (the word is only in the dialogue).
+14. Dialogue length: 28 words, 153 characters.
+15. Segmentation: speech 20, from "Zo zullen we" to its end, up to the move 2. ... e6.
+16. Visual priority: the King's angry gesture towards the centre.
+17. Lettering space: top left, over Caballo and the background.
+18. Balloon-area estimate: about 25%.
+19. Layout: medium shot of the white officers; one balloon.
+20. Overflow: if the balloon covers a face or crown, split after "mag schaken" into two balloons of the same speaker, or add a panel at that boundary.
+21. Continuity requirements: Black answers 2. ... e6 in 8c.
+```
+
+```
+PANEL 8c   (sequence number 32)
+
+1.  Scene 8, panel c: Black calmly plays on.
+2.  Script excerpt:
+      2. ... e6
+3.  Dialogue: none. Move box (bottom-left corner): "2. ... e6".
+4.  No speaker.
+5.  Visible: the complete black army with the pawns on d5 and e6 in front; in the foreground, seen from behind, the King's crown (centre), Regina (left), white pawns (right); Alfil on d3 from behind in the middle ground.
+6.  Listening: no reactions; the Black King calm, mouth closed.
+7.  Camera on White's side, low, just behind the White King, looking across the board at the black army; from this side the a-file is left.
+8.  The e-pawn: calm, stepping from e7 to e6; the Black King calm.
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 4: the move 2. ... e6 (pawn e7-e6) happens in this panel; a short motion streak shows the step.
+12. Continuity: after the King's complaint in 8b; Alfil stays on d3.
+13. Must not appear: any other moved piece; a balloon; text other than the move box; a laughing Black King.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after speech 20.
+16. Visual priority: the e6 pawn and the calm black army.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: over-the-shoulder view from behind the white army (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 4 into Scene 9.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -3019,8 +3133,8 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 17 | Alfil: "Jamaar Sire, met dieje boebel." | 7 | 7b | Panel script written (approved in 7.16); manifest written (Section 20.3). |
 | 18 | Koning: "Alfil veegt dieje paprika chips van uwe mijter..." | 7 | 7c | Panel script written (approved in 7.16); manifest written (Section 20.3). |
 | 19 | Move: 2. Ld3 | 7 | 7d | Panel script written (approved in 7.16); manifest written (Section 20.3). |
-| 20 | Koning: "Boebel, boebel. Zo zullen we de partij wel winnen..." | 8 | - | Scene catalog only. |
-| 21 | Move: 2. ... e6 | 8 | - | Scene catalog only. |
+| 20 | Koning: "Boebel, boebel. Zo zullen we de partij wel winnen..." | 8 | 8a, 8b | Panel script written (approved in 7.17); manifest written (Section 20.3). |
+| 21 | Move: 2. ... e6 | 8 | 8c | Panel script written (approved in 7.17); manifest written (Section 20.3). |
 | 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | - | Scene catalog only. |
 | 23 | Move: 3. Ph3 | 9 | - | Scene catalog only. |
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | - | Scene catalog only. |
@@ -3241,3 +3355,4 @@ Items that need a decision from the author.
 | 7.14 | - | Panel 4a: Alfil talks to the pawns, who turn towards him; camera raised; caption (Alfil overlegt met de pionnen). |
 | 7.15 | - | Proposal 6d reframed: ranks 5 to 8, both black rooks fully in sight. |
 | 7.16 | - | Panels 6d and 7a to 7d approved: panel blocks (Section 18, Scenes 6 and 7) and manifests 25 to 29 (Section 20.3). |
+| 7.17 | - | Panels 8a, 8b, 8c approved: panel blocks (Section 18, Scene 8) and manifests 30 to 32 (Section 20.3). |
