@@ -58,7 +58,7 @@ Use the Section 20.1 template exactly. Points that are easy to get wrong:
 - Only content from the script or decided by the author; staging (pose, gaze, expression) is allowed when it supports the line.
 
 ### 5. Put the manifests in the bible
-- Add them to Section 20 under a heading per scene, e.g. `## 20.3 Manifests: Scene 6 - Regina's Advice`, after the existing manifest subsections and before Section 21. Each manifest in a fenced block, like the worked example.
+- Add them to Section 20.3 (Manifests) under a heading per scene, e.g. `### Scene 6 - Regina's Advice`, after the last scene there and before Section 21. Each manifest in a fenced block, like the existing ones; continue the sequence numbers (Scene 5 ends at 21). Field 2 (the script excerpt) must be a character-for-character copy of Section 1: copy it with a script from the play rather than retyping it.
 - Update the Status column of the Script Coverage Map (Section 22.E) for every script item the scene covers.
 - Do not change Section 18 panel blocks unless the author asks; if a manifest reveals a mistake in a Section 18 block (e.g. a camera note that no longer matches an approved sketch), report it.
 

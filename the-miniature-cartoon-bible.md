@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.3
+Version 7.4
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -11,6 +11,7 @@ Version 7.0 is a consolidation: it restores content that was lost between versio
 Version 7.1 adds the dialogue attribution specification, the panel manifest standard, the artwork/lettering workflow and the completeness checklist (Sections 19 to 22). Nothing from 7.0 was removed.
 Version 7.2 adds dialogue density and visual composition rules (Section 23), eight manifest fields (Section 20) and density steps in the workflow (Section 21). Nothing from 7.1 was removed.
 Version 7.3 records the author's answers to the open questions: five long panels split, album format, original text always (Flemish only), greasy spot subtle until Scene 9, Scene 5 approved, shout balloons, panel 4a camera corrected, title on the cover, a chess club room without people, full costumes for the officers, proposed dossiers for the remaining pieces.
+Version 7.4 adds the panel manifests for all 21 panels of Scenes 1 to 5 (Section 20.3).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -842,6 +843,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.3 | Surroundings: an empty chess club room, soft and out of focus, no people, no readable text; replaces the plain placeholder background (author decision). |
 | 7.3 | Full costumes for the officers of both armies (v1.1 descriptions for the white officers, darker colours for black), simple soldier uniforms for the pawns; the White King keeps the simple medieval crown (author decisions). |
 | 7.3 | Proposed dossiers for the remaining pieces added to Section 7, awaiting approval (author asked for proposals). |
+| 7.4 | Panel manifests (all 21 fields) for the 21 panels of Scenes 1 to 5 added as Section 20.3; script excerpts copied automatically from Section 1; Script Coverage Map updated (author request). |
 
 ---
 
@@ -1389,6 +1391,648 @@ PANEL 5b   (sequence number 13)
 Mirror case (Alfil speaks, Koning listens), panel 4b: Balloon 1 -> Alfil, tail to Alfil's mouth; Alfil mouth open with a raised hand; Koning's mouth open only because of surprise, as the manifest says explicitly (Section 19.C exception), with no balloon or tail near him.
 Note (7.3): panel 5b has since been split into 5b-1 and 5b-2 (Section 18), and the sequence numbers changed with the splits. The example above shows 5b before the split and stays as an illustration of the format.
 
+## 20.3 Manifests: Scenes 1 to 5 (added in 7.4)
+Derived from the approved panel script (Section 18) and the play (Section 1). Field 2 is copied from Section 1 automatically, character for character. Balloon area estimates use the album format of Section 23.F (about 85 x 75 mm, lettering about 8 pt). Common to all 21 panels:
+- Board: State 0 (starting position); no piece moves in Scenes 1 to 5. Alfil stays on f1 throughout (e2 and g2 block him).
+- Board details: boebel on d4/e4/d5/e5 as a warped rise; cola stain on f6 and greasy spot on f3 only barely noticeable (Sections 4 and 23).
+- Surroundings: empty chess club room, soft and out of focus, no people (Section 3).
+- Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
+- Every knight faces the centre files; every visible occupied square shows its piece.
+- Lettering: empty balloons in the artwork, original text typeset afterwards (Section 21).
+- Must never appear (in addition to field 13): invented text, captions, narrator boxes, coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
+
+### Scene 1 - Opening Speech
+
+```
+PANEL 1a   (sequence number 1)
+
+1.  Scene 1, panel a: first part of the King's opening speech.
+2.  Script excerpt:
+      Koning:
+      Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd. Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen. Want, ik   voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
+3.  Dialogue:
+      Balloon 1: "Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd."
+4.  Balloon 1 -> Koning
+5.  Visible: rook h1 (partly, left edge), Caballo g1, Alfil f1, Koning e1, Regina d1, bishop c1 (partly, right edge); pawns h2, g2, f2, e2, d2, c2 in front.
+6.  Listening: Alfil, Regina, Caballo and the pawns, mouths closed, standing at attention, looking at the King.
+7.  Camera on Black's side, files h to a from left to right. Officers' heads rise above the pawns; Koning central and largest.
+8.  Koning: mouth open, proud, one arm sweeping out towards his troops; looks out over his army.
+    Listeners: mouths closed; eyes on the King.
+9.  Balloon 1 in the top left; tail to Koning's mouth, not crossing Alfil's or Caballo's head.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: opening panel of the cartoon; sets the positions used in 1b-1 and 1b-2.
+13. Must not appear: an open mouth on any listener; black pieces (behind the camera).
+14. Dialogue length: 26 words, 159 characters.
+15. Segmentation: the first two sentences of speech 1; continues in 1b-1 with "Dat "Dieje van den overkant" ...".
+16. Visual priority: the King's sweeping gesture and the army in perfect formation.
+17. Lettering space: top left, above Caballo and Alfil.
+18. Balloon-area estimate: about 15%.
+19. Layout: wide-medium shot (Section 23.D) of the white officers with the pawns in front; one round balloon.
+20. Overflow: if it does not fit, split after "heuglijke dag." into two balloons for Koning in reading order.
+21. Continuity requirements: positions and framing carry over to 1b-1.
+```
+
+```
+PANEL 1b-1   (sequence number 2)
+
+1.  Scene 1, panel b-1: second part of the opening speech, about the opponent.
+2.  Script excerpt:
+      Koning:
+      Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd. Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen. Want, ik   voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
+3.  Dialogue:
+      Balloon 1: "Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen."
+4.  Balloon 1 -> Koning
+5.  Visible: Caballo g1 (fully, left), Alfil f1, Koning e1, Regina d1 (fully, right); bishop c1 and rook h1 partly at the edges; pawns g2, f2, e2, d2 crossing the bottom.
+6.  Listening: Alfil, Regina, Caballo, mouths closed, looking at the King; amused confidence.
+7.  Left to right: Caballo, Alfil, Koning, Regina; Alfil and Koning central and largest.
+8.  Koning: mouth open, proud and mocking, dismissive wave of one hand; looks straight ahead past the camera, towards the black army.
+    Listeners: mouths closed; eyes on the King.
+9.  Balloon 1 top right, above Regina; tail to Koning's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: same positions as 1a, closer camera.
+13. Must not appear: an open mouth on Alfil; a tail near Alfil.
+14. Dialogue length: 16 words, 79 characters.
+15. Segmentation: the third sentence of speech 1; continues in 1b-2 with "Want, ik voel ...".
+16. Visual priority: the King's mocking confidence.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium shot of the four officers; one round balloon.
+20. Overflow: not expected; if needed, widen the balloon in the top band.
+21. Continuity requirements: same camera and positions in 1b-2.
+```
+
+```
+PANEL 1b-2   (sequence number 3)
+
+1.  Scene 1, panel b-2: end of the opening speech; the King turns to Alfil with his question.
+2.  Script excerpt:
+      Koning:
+      Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd. Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen. Want, ik   voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
+3.  Dialogue:
+      Balloon 1: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?"
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 1b-1.
+6.  Listening: Alfil, mouth closed, attentive, looks back at the King; Regina looks at the King; Caballo faces the centre.
+7.  Left to right: Caballo, Alfil, Koning, Regina; Koning turned towards Alfil.
+8.  Koning: mouth open, turned to Alfil, open-hand gesture towards him; looks at Alfil.
+    Alfil: mouth closed; looks at Koning.
+9.  Balloon 1 top right; tail to Koning's mouth, not crossing Alfil's head.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: same camera as 1b-1.
+13. Must not appear: an open mouth on Alfil; a tail near Alfil.
+14. Dialogue length: 23 words, 139 characters.
+15. Segmentation: the last two sentences of speech 1 (ends the speech).
+16. Visual priority: the King turning to Alfil; the exchange of looks.
+17. Lettering space: top right and top centre.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot; one round balloon.
+20. Overflow: split before "Alfil, zijn ook onze pionnen ..." into two balloons for Koning.
+21. Continuity requirements: Alfil's answer follows in 1c.
+```
+
+```
+PANEL 1c   (sequence number 4)
+
+1.  Scene 1, panel c: Alfil answers.
+2.  Script excerpt:
+      Alfil:
+      Jawel Sire, zij wachten op uw bevel !
+3.  Dialogue:
+      Balloon 1: "Jawel Sire, zij wachten op uw bevel !"
+4.  Balloon 1 -> Alfil
+5.  Visible: Alfil f1 and Koning e1 from behind in the foreground; Regina d1 from behind; Caballo g1 in profile; all white pawns from behind; the whole board; the complete black army (16 pieces) in the distance.
+6.  Listening: Koning, mouth closed, head turned slightly towards Alfil (partial profile).
+7.  Camera over Alfil's shoulder from White's side; Alfil right of centre, Koning left of centre in the foreground; black army small in the distance.
+8.  Alfil: seen from behind, head turned slightly to the King (partial profile); speaking gesture: one hand raised towards the troops (the mouth is hidden, Section 19.C).
+    Koning: partial profile towards Alfil, mouth closed.
+9.  Balloon 1 above Alfil; tail to Alfil's head and mouth side.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: answers 1b-2.
+13. Must not appear: a tail near the King; black pieces out of their starting squares.
+14. Dialogue length: 7 words, 37 characters.
+15. Segmentation: the whole of speech 2.
+16. Visual priority: the two armies facing each other; Alfil and the King in the foreground.
+17. Lettering space: top right, above Alfil, clear of the black army.
+18. Balloon-area estimate: about 5%.
+19. Layout: over-the-shoulder wide shot (Section 23.D); one round balloon.
+20. Overflow: not expected.
+21. Continuity requirements: positions of 1a; the black army in its starting formation.
+```
+
+### Scene 2 - Ten Aanval
+
+```
+PANEL 2a   (sequence number 5)
+
+1.  Scene 2, panel a: the order to attack.
+2.  Script excerpt:
+      Koning:
+      Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4
+3.  Dialogue:
+      Balloon 1: "Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4"
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 large in the centre; Alfil f1 fully at the left; Regina d1 fully at the right; heads of the pawns f2, e2, d2 at the bottom.
+6.  Listening: Alfil and Regina, mouths closed, looking at the King.
+7.  Camera on Black's side, zoomed in on the King.
+8.  Koning: mouth wide open, one arm raised high, commanding; proud.
+    Listeners: mouths closed; eyes on the King.
+9.  Balloon 1 top left, clear of the crown; tail to Koning's mouth. Round balloon (the manifest does not mark this line as shouted).
+10. Stage directions: none in this panel; "(hoorbaar gemor vanop de tweede rij)" follows in 2b.
+11. State 0. No move: the ordered 1. e4 is not played.
+12. Continuity: after Alfil's answer in 1c.
+13. Must not appear: an e-pawn on e4; an open mouth on Alfil or Regina.
+14. Dialogue length: 17 words, 86 characters.
+15. Segmentation: the whole of speech 3.
+16. Visual priority: the King's raised arm.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium close-up of the King; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the pawns stay on the second rank in 2b.
+```
+
+```
+PANEL 2b   (sequence number 6)
+
+1.  Scene 2, panel b: the pawns grumble and do not move.
+2.  Script excerpt:
+      (hoorbaar gemor vanop de tweede rij)
+3.  Dialogue: none (wordless grumble balloons only).
+4.  No speaker; the white pawns grumble.
+5.  Visible: all eight white pawns and all eight white officers; the third and fourth ranks with the boebel in the foreground; no black pieces.
+6.  Listening: the officers look on, mouths closed.
+7.  Camera on Black's side, slightly off-centre and elevated; wide landscape panel; the frame ends at the fourth rank.
+8.  Pawns: frowning, stubborn, grumbling (mouths in a wavy line); none moves.
+9.  Small wordless grumble balloons (jagged outline, wavy scribble, no letters) beside several pawn heads; they do not cover officers' faces.
+10. Stage directions: (hoorbaar gemor vanop de tweede rij).
+11. State 0. No move.
+12. Continuity: right after the order in 2a.
+13. Must not appear: letters or words in the grumble balloons; a pawn off its square.
+14. Dialogue length: none.
+15. Segmentation: the stage direction after speech 3.
+16. Visual priority: the row of grumbling pawns and the boebel in front of them.
+17. Lettering space: small grumble balloons beside the pawn heads.
+18. Balloon-area estimate: about 5%.
+19. Layout: wide shot (Section 23.D); landscape format.
+20. Overflow: not applicable.
+21. Continuity requirements: all pieces on their starting squares.
+```
+
+```
+PANEL 2c   (sequence number 7)
+
+1.  Scene 2, panel c: Regina asks why nothing happens.
+2.  Script excerpt:
+      Regina:
+      Awel ? Waarom gebeurt er niks ?
+3.  Dialogue:
+      Balloon 1: "Awel ? Waarom gebeurt er niks ?"
+4.  Balloon 1 -> Regina
+5.  Visible: Regina d1 large in the centre; Koning e1 partly at the left; bishop c1 partly at the right; heads of the pawns e2, d2, c2 at the bottom.
+6.  Listening: Koning, mouth closed, looks back at Regina.
+7.  Camera on Black's side, zoomed in on Regina.
+8.  Regina: head turned to the King, puzzled, one eyebrow raised, mouth open.
+    Koning: mouth closed, looks at Regina.
+9.  Balloon 1 top right; tail to Regina's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: after the grumbling in 2b.
+13. Must not appear: lip colour or make-up on Regina; a tail near the King.
+14. Dialogue length: 5 words, 31 characters.
+15. Segmentation: the whole of speech 4.
+16. Visual priority: Regina's puzzled face.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 5%.
+19. Layout: close-up (Section 23.D).
+20. Overflow: not expected.
+21. Continuity requirements: positions of 2a.
+```
+
+### Scene 3 - Alfil Sent to the Pawns
+
+```
+PANEL 3a-1   (sequence number 8)
+
+1.  Scene 3, panel a-1: the King will not speak to the pawns.
+2.  Script excerpt:
+      Koning:
+      Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek. Vraag aan die luie pitten op de tweede rij wat er aan de hand is. En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
+3.  Dialogue:
+      Balloon 1: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek."
+4.  Balloon 1 -> Koning
+5.  Visible: Alfil f1 in the right foreground (from behind, partly from the side); Koning e1 left of centre in three-quarter view; Regina d1 at the left edge; pawns d2, e2, f2, g2 from behind; the black army small and out of focus.
+6.  Listening: Alfil, mouth closed, head slightly bowed; Regina looks at the King.
+7.  Camera behind White's first rank, behind and right of Alfil, at head height.
+8.  Koning: mouth open, chin raised, nose in the air; looks at Alfil.
+    Alfil: mouth closed; looks at the King.
+9.  Balloon 1 top left; tail to Koning's mouth, passing left of his crown.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: after Regina's question in 2c.
+13. Must not appear: the King looking at the pawns; a tail near Alfil.
+14. Dialogue length: 15 words, 85 characters.
+15. Segmentation: the first sentence of speech 5; continues in 3a-2.
+16. Visual priority: the King's haughty face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium over-the-shoulder shot.
+20. Overflow: not expected.
+21. Continuity requirements: same camera in 3a-2.
+```
+
+```
+PANEL 3a-2   (sequence number 9)
+
+1.  Scene 3, panel a-2: the King orders Alfil to ask the pawns.
+2.  Script excerpt:
+      Koning:
+      Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek. Vraag aan die luie pitten op de tweede rij wat er aan de hand is. En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
+3.  Dialogue:
+      Balloon 1: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 3a-1.
+6.  Listening: Alfil, mouth closed, looks at the King; Regina looks at the King.
+7.  The same camera as 3a-1.
+8.  Koning: mouth open; keeps looking at Alfil while pointing sideways at the pawns on the second rank without looking at them.
+    Alfil: mouth closed.
+9.  Balloon 1 top left; tail to Koning's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: same camera and positions as 3a-1.
+13. Must not appear: the King looking at the pawns; a tail near Alfil.
+14. Dialogue length: 15 words, 65 characters.
+15. Segmentation: the second sentence of speech 5; continues in 3b.
+16. Visual priority: the pointing hand and the haughty look.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium over-the-shoulder shot.
+20. Overflow: not expected.
+21. Continuity requirements: speech continues in 3b from a new camera.
+```
+
+```
+PANEL 3b   (sequence number 10)
+
+1.  Scene 3, panel b: the King imagines the opponent laughing.
+2.  Script excerpt:
+      Koning:
+      Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek. Vraag aan die luie pitten op de tweede rij wat er aan de hand is. En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
+3.  Dialogue:
+      Balloon 1: "En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen."
+4.  Balloon 1 -> Koning
+5.  Visible: the back of Koning's crown and shoulder in the foreground; Alfil f1 partly at the right, from behind; all white pawns from behind; the board with the boebel; the complete black army in the distance, the Black King on e8 recognisable.
+6.  Listening: Alfil (from behind); the Black King far away, calm and patient, mouth closed, not laughing.
+7.  Camera over the King's shoulder towards Black.
+8.  Koning: seen from behind, arm pointing impatiently at the black army (speaking gesture).
+    Black King: calm, composed, not laughing.
+9.  Balloon 1 top left; tail to the King's head.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: end of speech 5; the King's impatience from 3a-2.
+13. Must not appear: a laughing Black King; a tail near Alfil.
+14. Dialogue length: 26 words, 145 characters.
+15. Segmentation: the last sentence of speech 5 (ends the speech).
+16. Visual priority: the contrast between the impatient King and the calm Black King.
+17. Lettering space: top left, clear of the black army.
+18. Balloon-area estimate: about 15%.
+19. Layout: over-the-shoulder wide shot.
+20. Overflow: split after "dat wij schrik hebben" into two balloons for Koning.
+21. Continuity requirements: the black army in its starting formation.
+```
+
+### Scene 4 - Pawn Mutiny
+
+```
+PANEL 4a   (sequence number 11)
+
+1.  Scene 4, panel a: Alfil confers with the pawns and turns back.
+2.  Script excerpt:
+      (Alfil overlegt met pionnen en komt terug)
+3.  Dialogue: none.
+4.  No speaker.
+5.  Visible: the boebel in the foreground; white pawns c2 to h2; officers c1 to h1 (rook h1 and bishop c1 may be cut off).
+6.  Watching: Koning and Regina wait upright, mouths closed, looking at Alfil.
+7.  Camera on Black's side, somewhat elevated, looking down over the boebel at the second rank.
+8.  Alfil: leans far forward over the f2 pawn, listening; does not leave f1.
+    Pawns e2, f2, g2: turned to Alfil, one or two pointing past the camera at the boebel; the other pawns look on, arms crossed.
+9.  No balloons.
+10. Stage directions: (Alfil overlegt met pionnen en komt terug).
+11. State 0. No move.
+12. Continuity: Alfil is still blocked on f1 (e2, g2).
+13. Must not appear: Alfil off f1; any text.
+14. Dialogue length: none.
+15. Segmentation: the stage direction after speech 5.
+16. Visual priority: the boebel and the pawns pointing at it; Alfil leaning over them.
+17. Lettering space: none needed.
+18. Balloon-area estimate: 0%.
+19. Layout: wide-medium shot, elevated.
+20. Overflow: not applicable.
+21. Continuity requirements: Alfil returns upright in 4b.
+```
+
+```
+PANEL 4b   (sequence number 12)
+
+1.  Scene 4, panel b: Alfil reports the mutiny.
+2.  Script excerpt:
+      Alfil:
+      Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit. Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen. Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
+3.  Dialogue:
+      Balloon 1: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit."
+4.  Balloon 1 -> Alfil
+5.  Visible: Alfil f1 and Koning e1, heads and upper bodies filling the frame; Caballo g1 and Regina d1 partly at the edges; heads of pawns f2 and e2 at the bottom.
+6.  Listening: Koning, surprised: eyebrows shot up, eyes wide, mouth open in surprise (Section 19.C exception: no balloon, no tail near him).
+7.  Camera on Black's side, zoomed in; Alfil left, Koning right.
+8.  Alfil: mouth open, alarmed, one hand raised; looks at Koning.
+    Koning: surprised; looks at Alfil.
+9.  Balloon 1 top left, narrow enough to keep the King's crown clear; tail to Alfil's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: Alfil upright again after 4a.
+13. Must not appear: a balloon or tail at the King; the King's mouth shaped as if speaking.
+14. Dialogue length: 22 words, 125 characters.
+15. Segmentation: the first sentence of speech 6; continues in 4c-1.
+16. Visual priority: Alfil's alarm and the King's surprise.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 15%.
+19. Layout: close two-shot.
+20. Overflow: split after "Muiterij Sire!" into two balloons for Alfil.
+21. Continuity requirements: positions carry over to 4c-1.
+```
+
+```
+PANEL 4c-1   (sequence number 13)
+
+1.  Scene 4, panel c-1: Alfil explains the pawns' reason.
+2.  Script excerpt:
+      Alfil:
+      Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit. Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen. Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
+3.  Dialogue:
+      Balloon 1: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen."
+4.  Balloon 1 -> Alfil
+5.  Visible: Alfil f1 and Koning e1; Caballo and Regina partly at the edges; pawn heads at the bottom.
+6.  Listening: Koning, mouth closed, a frown forming.
+7.  Camera on Black's side, slightly closer than 4b; the King more in focus.
+8.  Alfil: mouth open, earnest, open hand towards the centre of the board ("bergop"); looks at Koning.
+    Koning: mouth closed; looks at Alfil.
+9.  Balloon 1 top left; tail to Alfil's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: after 4b; the King's surprise turns into worry.
+13. Must not appear: an open mouth on the King.
+14. Dialogue length: 20 words, 116 characters.
+15. Segmentation: the second sentence of speech 6; continues in 4c-2.
+16. Visual priority: Alfil's gesture towards the centre and the King's darkening face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 12%.
+19. Layout: close two-shot.
+20. Overflow: not expected.
+21. Continuity requirements: same camera in 4c-2.
+```
+
+```
+PANEL 4c-2   (sequence number 14)
+
+1.  Scene 4, panel c-2: Alfil's advice.
+2.  Script excerpt:
+      Alfil:
+      Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit. Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen. Als u de partij vandaag wil winnen zal u iets anders moeten spelen.
+3.  Dialogue:
+      Balloon 1: "Als u de partij vandaag wil winnen zal u iets anders moeten spelen."
+4.  Balloon 1 -> Alfil
+5.  Visible: the same as 4c-1.
+6.  Listening: Koning, angry and worried: furrowed brow, eyebrows pulled together, tight wavy mouth, reddening cheeks; mouth closed.
+7.  The same camera as 4c-1.
+8.  Alfil: mouth open, both hands open; looks at Koning.
+    Koning: looks at Alfil.
+9.  Balloon 1 top left; tail to Alfil's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: the King's anger bursts out in 5a.
+13. Must not appear: an open mouth on the King.
+14. Dialogue length: 13 words, 67 characters.
+15. Segmentation: the last sentence of speech 6 (ends the speech).
+16. Visual priority: the King's angry, worried face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 8%.
+19. Layout: close two-shot; reaction emphasis on the King.
+20. Overflow: not expected.
+21. Continuity requirements: the King's red cheeks carry into 5a.
+```
+
+### Scene 5 - The King's Outburst
+
+```
+PANEL 5a   (sequence number 15)
+
+1.  Scene 5, panel a: the King explodes.
+2.  Script excerpt:
+      Koning:
+      Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever. Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’. Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum  in handen nemen.
+3.  Dialogue:
+      Balloon 1: "Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 from the chest up; Alfil f1 partly at the left edge; Regina d1 partly at the right edge.
+6.  Listening: Alfil, taken aback, eyes wide, mouth closed.
+7.  Camera on Black's side, close-up of the King.
+8.  Koning: face red, eyebrows pulled down hard, mouth wide open in a shout, one fist raised; looks at Alfil.
+9.  Balloon 1 is a SHOUT balloon (jagged outline), top right, clear of the crown; tail to Koning's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: anger from 4c-2.
+13. Must not appear: a round balloon for this line; an open mouth on Alfil.
+14. Dialogue length: 11 words, 68 characters.
+15. Segmentation: the first two sentences of speech 7; continues in 5b-1.
+16. Visual priority: the King's furious face and raised fist.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 10%.
+19. Layout: close-up (Section 23.D).
+20. Overflow: not expected.
+21. Continuity requirements: the King stays angry through 5c.
+```
+
+```
+PANEL 5b-1   (sequence number 16)
+
+1.  Scene 5, panel b-1: the jab at Alfil's past.
+2.  Script excerpt:
+      Koning:
+      Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever. Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’. Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum  in handen nemen.
+3.  Dialogue:
+      Balloon 1: "Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd"
+4.  Balloon 1 -> Koning
+5.  Visible: Alfil f1 and Koning e1 (two-shot); Caballo g1 and Regina d1 partly at the edges; pawn heads f2, e2 at the bottom.
+6.  Listening: Alfil, mouth closed, stiffening.
+7.  Camera on Black's side, two-shot at officer height; Alfil left, Koning right.
+8.  Koning: mouth open, leans towards Alfil, jabs a pointing finger at him, scornful; looks at Alfil.
+    Alfil: looks at Koning.
+9.  Balloon 1 top right; tail to Koning's mouth, not passing Alfil's head.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: after 5a.
+13. Must not appear: an open mouth on Alfil; a tail near Alfil.
+14. Dialogue length: 14 words, 74 characters.
+15. Segmentation: speech 7, third sentence, first part (ends after "gepromoveerd"); continues in 5b-2.
+16. Visual priority: the pointing finger and Alfil's stiffening.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 8%.
+19. Layout: medium two-shot.
+20. Overflow: not expected.
+21. Continuity requirements: same camera in 5b-2.
+```
+
+```
+PANEL 5b-2   (sequence number 17)
+
+1.  Scene 5, panel b-2: the punchline of the jab.
+2.  Script excerpt:
+      Koning:
+      Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever. Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’. Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum  in handen nemen.
+3.  Dialogue:
+      Balloon 1: "en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 5b-1.
+6.  Listening: Alfil, openly offended: chin up, lips pressed together.
+7.  The same camera as 5b-1.
+8.  Koning: mouth open, mocking, finger still raised at Alfil; looks at Alfil.
+    Alfil: looks back at Koning.
+9.  Balloon 1 top right; tail to Koning's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: same camera as 5b-1.
+13. Must not appear: an open mouth on Alfil.
+14. Dialogue length: 20 words, 106 characters.
+15. Segmentation: speech 7, third sentence, second part (starts with "en dat complex"); continues in 5c.
+16. Visual priority: Alfil's offended face.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 12%.
+19. Layout: medium two-shot; reaction emphasis on Alfil.
+20. Overflow: not expected.
+21. Continuity requirements: same two-shot in 5c.
+```
+
+```
+PANEL 5c   (sequence number 18)
+
+1.  Scene 5, panel c: the order to go to the centre.
+2.  Script excerpt:
+      Koning:
+      Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever. Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’. Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum  in handen nemen.
+3.  Dialogue:
+      Balloon 1: "Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 5b-1.
+6.  Listening: Alfil, hesitant, mouth closed.
+7.  The same two-shot as 5b-1.
+8.  Koning: mouth open, looks at Alfil, points with his whole arm forward over the pawns towards the centre of the board.
+    Alfil: looks at Koning.
+9.  Balloon 1 top right; tail to Koning's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: same camera as 5b-1 and 5b-2.
+13. Must not appear: an open mouth on Alfil.
+14. Dialogue length: 22 words, 120 characters.
+15. Segmentation: the last sentence of speech 7 (ends the speech; the double space in the play is collapsed).
+16. Visual priority: the King's commanding arm.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 12%.
+19. Layout: medium two-shot.
+20. Overflow: not expected.
+21. Continuity requirements: same two-shot in 5d-1.
+```
+
+```
+PANEL 5d-1   (sequence number 19)
+
+1.  Scene 5, panel d-1: Alfil apologises.
+2.  Script excerpt:
+      Alfil:
+      Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten. Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
+3.  Dialogue:
+      Balloon 1: "Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten."
+4.  Balloon 1 -> Alfil
+5.  Visible: the same two-shot as 5c.
+6.  Listening: Koning, impatient, mouth closed.
+7.  The same two-shot as 5c.
+8.  Alfil: mouth open, apologetic, both hands slightly spread; looks at Koning.
+    Koning: looks at Alfil.
+9.  Balloon 1 top left; tail to Alfil's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: answers 5c.
+13. Must not appear: an open mouth on the King; a tail near the King.
+14. Dialogue length: 16 words, 86 characters.
+15. Segmentation: the first sentence of speech 8; continues in 5d-2.
+16. Visual priority: Alfil's apologetic gesture.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium two-shot.
+20. Overflow: not expected.
+21. Continuity requirements: the reason follows in 5d-2 from a high camera.
+```
+
+```
+PANEL 5d-2   (sequence number 20)
+
+1.  Scene 5, panel d-2: why Alfil cannot go out.
+2.  Script excerpt:
+      Alfil:
+      Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten. Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
+3.  Dialogue:
+      Balloon 1: "Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet."
+4.  Balloon 1 -> Alfil
+5.  Visible: Alfil f1 behind the pawns e2, f2, g2; Koning e1 and Regina d1 at the right; Caballo g1 and rook h1 at the left; pawns d2 and h2 at the edges.
+6.  Listening: Koning, mouth closed, looks at Alfil; pawns e2 and g2 stubborn, arms crossed, mouths closed.
+7.  High camera on Black's side, looking down on f1 so both diagonals f1-e2 and f1-g2 are clear.
+8.  Alfil: mouth open, looks up at the King, points with both hands at the pawns on e2 and g2.
+9.  Balloon 1 top left; tail to Alfil's mouth.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: the blocked diagonals explain why Alfil cannot leave f1 until 2. Ld3.
+13. Must not appear: Alfil off f1; empty e2 or g2.
+14. Dialogue length: 13 words, 69 characters.
+15. Segmentation: the last sentence of speech 8 (ends the speech).
+16. Visual priority: the two blocked diagonals.
+17. Lettering space: top left, clear of the pawns' heads.
+18. Balloon-area estimate: about 8%.
+19. Layout: high-angle medium shot.
+20. Overflow: not expected.
+21. Continuity requirements: positions unchanged.
+```
+
+```
+PANEL 5e   (sequence number 21)
+
+1.  Scene 5, panel e: the King's despair.
+2.  Script excerpt:
+      Koning:
+      Wel nondedju ! Heel mijn voorbereiding om zeep.
+3.  Dialogue:
+      Balloon 1: "Wel nondedju ! Heel mijn voorbereiding om zeep."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 close-up; Alfil f1 partly at the left; Regina d1 partly at the right.
+6.  Listening: Alfil and Regina, worried, mouths closed, looking at the King.
+7.  Camera on Black's side, close-up of the King.
+8.  Koning: head in his hands (or clutching his crown), eyes squeezed shut, mouth turned down, speaking.
+9.  Balloon 1 top right; tail to Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 0. No move.
+12. Continuity: closes Scene 5; Regina's advice follows in Scene 6.
+13. Must not appear: an open mouth on Alfil or Regina.
+14. Dialogue length: 7 words, 47 characters.
+15. Segmentation: the whole of speech 9.
+16. Visual priority: the King's despair.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 5%.
+19. Layout: close-up.
+20. Overflow: not expected.
+21. Continuity requirements: positions unchanged into Scene 6.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -1471,17 +2115,17 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | # | Script item (speaker and first words) | Scene | Panels | Status |
 |---|---|---|---|---|
 | 0 | Title: De Miniatuur (Een hedendaagse klucht in één bedrijf) | Cover | - | Decided in 7.3: title and subtitle on the album cover (Section 13, Cover Direction). |
-| 1 | Koning: "Wat is het vandaag toch een heuglijke dag..." | 1 | 1a, 1b-1, 1b-2 | Panel script written; manifest to do. |
-| 2 | Alfil: "Jawel Sire, zij wachten op uw bevel !" | 1 | 1c | Panel script written; manifest to do. |
-| 3 | Koning: "Wel laat ons dan niet langer talmen ... Ten aanval ! 1. e4" | 2 | 2a | Panel script written; manifest to do. |
-| 4 | Stage direction: (hoorbaar gemor vanop de tweede rij) | 2 | 2b | Panel script written; manifest to do. |
-| 5 | Regina: "Awel ? Waarom gebeurt er niks ?" | 2 | 2c | Panel script written; manifest to do. |
-| 6 | Koning: "Alfil m’n raadsheer, ge weet dat ik als koning..." | 3 | 3a-1, 3a-2, 3b | Panel script written (approved); manifest to do. |
-| 7 | Stage direction: (Alfil overlegt met pionnen en komt terug) | 4 | 4a | Panel script written (approved); manifest to do. |
-| 8 | Alfil: "Muiterij Sire! De pionnen willen niet opspelen..." | 4 | 4b, 4c-1, 4c-2 | Panel script written (approved); manifest to do. |
-| 9 | Koning: "Wie is er hier nu godverdoemme eigenlijk koning ?..." | 5 | 5a, 5b-1, 5b-2, 5c | Panel script written (approved); manifest to do (20.2 shows 5b before the split). |
-| 10 | Alfil: "Vergeef me dat ik u tegenspreek Sire..." | 5 | 5d-1, 5d-2 | Panel script written (approved); manifest to do. |
-| 11 | Koning: "Wel nondedju ! Heel mijn voorbereiding om zeep." | 5 | 5e | Panel script written (approved); manifest to do. |
+| 1 | Koning: "Wat is het vandaag toch een heuglijke dag..." | 1 | 1a, 1b-1, 1b-2 | Panel script written; manifest written (Section 20.3). |
+| 2 | Alfil: "Jawel Sire, zij wachten op uw bevel !" | 1 | 1c | Panel script written; manifest written (Section 20.3). |
+| 3 | Koning: "Wel laat ons dan niet langer talmen ... Ten aanval ! 1. e4" | 2 | 2a | Panel script written; manifest written (Section 20.3). |
+| 4 | Stage direction: (hoorbaar gemor vanop de tweede rij) | 2 | 2b | Panel script written; manifest written (Section 20.3). |
+| 5 | Regina: "Awel ? Waarom gebeurt er niks ?" | 2 | 2c | Panel script written; manifest written (Section 20.3). |
+| 6 | Koning: "Alfil m’n raadsheer, ge weet dat ik als koning..." | 3 | 3a-1, 3a-2, 3b | Panel script written (approved); manifest written (Section 20.3). |
+| 7 | Stage direction: (Alfil overlegt met pionnen en komt terug) | 4 | 4a | Panel script written (approved); manifest written (Section 20.3). |
+| 8 | Alfil: "Muiterij Sire! De pionnen willen niet opspelen..." | 4 | 4b, 4c-1, 4c-2 | Panel script written (approved); manifest written (Section 20.3). |
+| 9 | Koning: "Wie is er hier nu godverdoemme eigenlijk koning ?..." | 5 | 5a, 5b-1, 5b-2, 5c | Panel script written (approved); manifest written (Section 20.3). |
+| 10 | Alfil: "Vergeef me dat ik u tegenspreek Sire..." | 5 | 5d-1, 5d-2 | Panel script written (approved); manifest written (Section 20.3). |
+| 11 | Koning: "Wel nondedju ! Heel mijn voorbereiding om zeep." | 5 | 5e | Panel script written (approved); manifest written (Section 20.3). |
 | 12 | Regina: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." | 6 | - | Scene catalog only. |
 | 13 | Koning: "Allee goed dan, want "Dieje van den overkant" wordt precies..." | 6 | - | Scene catalog only. |
 | 14 | Move: 1. e3 | 6 | - | Scene catalog only. |
@@ -1684,4 +2328,5 @@ Items that need a decision from the author.
 | 7.0 | bfade89, c56823a | Consolidation of all versions into the 17-section structure; original play text from the author; board history; scene catalog; full board-state tables; Section 18 panel script for Scenes 1 and 2. |
 | 7.1 | 1bddc59 | Dialogue attribution specification (Section 19), panel manifest standard (Section 20), artwork/lettering workflow (Section 21), completeness and fidelity checklist with script coverage map (Section 22); cross-references in Sections 13, 14, 16, 17, 18; open questions 9 to 11. |
 | 7.2 | (with 7.3) | Dialogue density and visual composition (Section 23); manifest fields 14 to 21; density steps in the workflow; cross-references in Sections 13, 14, 16, 18, 19, 20, 22; open question 12. |
-| 7.3 | - | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
+| 7.3 | 13d295a | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
+| 7.4 | - | Panel manifests for Scenes 1 to 5 (Section 20.3). |
