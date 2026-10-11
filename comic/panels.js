@@ -20,7 +20,7 @@ window.PANELS = [
   cast: { koning: { expr: "proud", talk: true, lookAt: "alfil", gest: "open-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" }] },
 { id: "1c", scene: 1, status: A, state: 0, cam: { from: [4.85, -1.55, 2.15], at: [4.1, 8, 0.05], f: 560 },
-  cast: { alfil: { talk: true, gest: "raise-r" }, koning: {} },
+  cast: { alfil: { talk: true, gest: "raise-r" }, koning: {}, a7: { expr: "worried" }, a8: { expr: "worried" }, b7: { expr: "worried" }, b8: { expr: "worried" }, c7: { expr: "worried" }, c8: { expr: "worried" }, d7: { expr: "worried" }, d8: { expr: "worried" }, e7: { expr: "worried" }, f7: { expr: "worried" }, f8: { expr: "worried" }, g7: { expr: "worried" }, g8: { expr: "worried" }, h7: { expr: "worried" }, h8: { expr: "worried" }, bking: { expr: "calm" } },  // black pieces a little scared (bible 7.21); the Black King stays calm
   balloons: [{ who: "alfil", text: "Jawel Sire, zij wachten op uw bevel !" }] },
 // ---------------------------------------------------------------- Scene 2 - Ten Aanval (approved)
 { id: "2a", scene: 2, status: A, state: 0, cam: zb(["e1"], { dist: 1.25, h: 1.35, th: 1.0, f: 760 }),
