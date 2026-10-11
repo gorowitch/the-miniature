@@ -28,12 +28,12 @@ Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved
 # STRICT ADAPTATION PROTOCOL — NO CREATIVE DEVIATION
 Added in 7.6. Mandatory for every person and every tool that produces pages from this bible. It applies before and above every other production rule in this document.
 
-The production process illustrates the existing story. It does not write, rewrite, improve, summarise or creatively continue it. The image generator is never an author and never a source of text.
+The production process illustrates the existing story. It does not write, rewrite, improve, summarise or creatively continue it. The image generator is never an author and never a source of text: when it writes balloon text, it only copies the exact approved text it is given (P.1), and every balloon is checked letter for letter.
 
 ## P.1 Three Separate Responsibilities
 1. **Story authority.** The approved source (P.2) determines everything that happens and everything that is said. Only the author changes it, through this bible (Maintenance Rules; Section 15).
-2. **Illustration.** The image generator (Copilot or ChatGPT) produces the visual artwork only: characters, expressions, environment, composition, and empty speech balloons placed and tailed as specified (Section 21, Stage 2). It receives the Common Prompt Block and one panel block or manifest (Section 18, Section 20.3), nothing else.
-3. **Lettering and assembly.** A separate, deterministic step inserts the exact approved dialogue into the empty balloons, assembles the page and validates it (Section 21, Stages 3 and 4). It copies text; it never writes text.
+2. **Illustration.** The image generator (Copilot or ChatGPT) produces the artwork: characters, expressions, environment, composition and the speech balloons, placed and tailed as specified. By author decision (7.6) it also writes the balloon text, but only by copying the exact text given in the panel block or manifest, letter for letter; it never composes, completes or changes text (Section 21, Stage 2). It receives the Common Prompt Block and one panel block or manifest (Section 18, Section 20.3), nothing else.
+3. **Text verification, correction and assembly.** A separate step compares every balloon letter for letter with the manifest, corrects or rejects any deviation, assembles the page and validates it (Section 21, Stages 3 and 4). Fallback: when the generator keeps getting the text wrong, the balloons are generated empty and the exact text is inserted in this step. This step copies text; it never writes text.
 
 ## P.2 Script Authority: the Approved Source
 The approved source is immutable during production. It consists of:
@@ -794,7 +794,7 @@ If a panel contains an incorrect position, the panel is wrong.
 ## Dialogue Attribution (added in 7.1)
 - Every panel follows the Dialogue Attribution Specification (Section 19): the speaker named in the script owns the balloon, the tail points to the speaker, listeners keep their mouths closed.
 - A panel manifest (Section 20) is prepared before any image is generated.
-- Artwork and lettering are separate steps (Section 21): prefer empty balloons in the generated image, with the original text typeset afterwards.
+- The image generator writes the balloon text by copying it exactly from the panel block or manifest (author decision, 7.6); every balloon is then checked letter for letter and any deviation is corrected or the panel is regenerated (Section 21). Empty balloons with the text inserted afterwards are the fallback.
 - Priority order when rules conflict: source fidelity, speaker attribution, visual continuity, artistic composition (Section 19).
 
 ## Dialogue Density (added in 7.2)
@@ -948,6 +948,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.5 | The author generates images with both Copilot and ChatGPT: the bible now refers to "the image generator (Copilot or ChatGPT)"; Section 18 renamed "Panel Script (Ready for Image Generation)". |
 | 7.6 | Strict Adaptation Protocol added before Section 1 (author request): three separate responsibilities (story authority, illustration, lettering and assembly); the approved source (the play plus author-approved specifications, including approved staging); prohibited changes; stop-and-flag procedure for gaps and contradictions; relation to existing rules. |
 | 7.6 | Clarified, not changed: listener reactions and staging remain allowed as decided by the author, but only as fixed in the approved panel block and manifest; panel splits remain possible, but only as an approved bible change before production; the cartoon has no captions, chess notation only inside dialogue, the title only on the cover. |
+| 7.6 | Author decision: the image generator writes the balloon text itself, by copying the exact text from the panel block or manifest letter for letter (prompt format in Section 21, Stage 2; instruction in the Common Prompt Block). Every balloon is checked letter for letter; a deviation is corrected or the panel regenerated, never accepted. Empty balloons with separate lettering become the fallback. Replaces "empty balloons preferred" (Sections 13, 18, 20.3, 21, 23.E and Strict Adaptation Protocol P.1). |
 
 ---
 
@@ -976,6 +977,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - No narrator boxes.
 - No coordinates or field labels.
 - Every balloon belongs to the speaker named in the script, and its tail points to that speaker (Section 19.B).
+- Every balloon written by the image generator matches its manifest text letter for letter (spaces, punctuation, quote marks, capitals); any deviation was corrected or the panel regenerated (Section 21, Stage 3).
 - Listeners have closed mouths and listening poses; no listener appears to speak (Section 19.C).
 - The page matches its panel manifests (Section 20).
 - Every line of Section 1 is accounted for in the Script Coverage Map (Section 22.E).
@@ -1169,7 +1171,7 @@ Rules:
 - Background: the board lies on a table in an empty chess club room - other tables, chairs, chess boards and chess clocks, soft and slightly out of focus. No people, no hands, no readable text or signs.
 - Speech balloons contain exactly the text given, nothing else.
 - The speaker named in each panel block owns the balloon: its tail points to that character's mouth. All other characters listen with closed mouths unless the panel block says otherwise (Section 19).
-- Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards (Section 21).
+- Write the text of each speech balloon exactly as given in the panel description, letter for letter, including every space before "!" and "?", every quote mark and every chess notation. The words are Flemish dialect dialogue: do not translate, correct, complete, explain, label or illustrate them.
 - A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
@@ -1507,7 +1509,7 @@ Derived from the approved panel script (Section 18) and the play (Section 1). Fi
 - Surroundings: empty chess club room, soft and out of focus, no people (Section 3).
 - Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
 - Every knight faces the centre files; every visible occupied square shows its piece.
-- Lettering: empty balloons in the artwork, original text typeset afterwards (Section 21).
+- Lettering: the image generator writes the balloon text exactly as in field 3; every balloon is checked letter for letter afterwards (Section 21). Fallback: empty balloons, text inserted afterwards.
 - Must never appear (in addition to field 13): invented text, captions, narrator boxes, coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
 
 ### Scene 1 - Opening Speech
@@ -2157,7 +2159,9 @@ The three responsibilities (story authority, illustration, lettering and assembl
 
 ## Stage 2 - Generate the Artwork
 - Generate the scene from the manifest, using the Common Prompt Block (Section 18).
-- Preferred: request empty speech balloons, placed and with their tails attached exactly as in manifest field 9, or deliberately reserved lettering areas. Do not ask the image generator to write long Flemish passages.
+- Standard (author decision, 7.6): the image generator draws the speech balloons, placed and tailed exactly as in manifest field 9, and writes their text by copying it exactly from the panel block or manifest. Give each balloon's text in the prompt like this: Speech balloon 1, spoken by <speaker> (tail to <speaker>'s mouth); copy this text exactly, letter for letter: "<text>".
+- Long balloons are the riskiest for copying errors; keep them within the density limits (Section 23) so the generator writes the text at a readable size.
+- Fallback: if a panel's text still deviates after regenerating, generate that panel with empty balloons (prompt below) and insert the exact text in Stage 3.
 - Priorities for the artwork, in this order:
   1. Correct character identity.
   2. Correct speaking and listening roles (mouths, gestures).
@@ -2166,12 +2170,14 @@ The three responsibilities (story authority, illustration, lettering and assembl
   5. Correct chess position and continuity.
   6. Clear panel composition.
 - Also plan adequate space for lettering before the composition is final: balloons in negative space, roughly 25 to 30% of the panel area in total, never over faces, gestures, props or relevant board details (Section 23.C and 23.E).
-- Add this to the prompt when using empty balloons: "Draw the speech balloons empty, with no letters. The tail of each balloon points to the mouth of the speaking character named below. Listening characters keep their mouths closed."
+- Add this to the prompt when using empty balloons (fallback): "Draw the speech balloons empty, with no letters. The tail of each balloon points to the mouth of the speaking character named below. Listening characters keep their mouths closed."
 - Never use the word "boebel", or any other name for it, in a prompt: the image generator does not know the word, and a name makes it draw a label or an explanation. Describe it with the standard sentence from Section 4 (Boebel Specification), which the Common Prompt Block already contains.
 - Always include the no-text rule of the Common Prompt Block: the image contains no written words, labels, arrows, captions or explanations; the only text is the dialogue in the balloons, or none at all when the balloons are drawn empty (added in 7.5).
 
 ## Stage 3 - Add the Original Dialogue
-- Typeset the dialogue separately in the correct balloons, using a lettering or page-layout tool (tool not yet chosen; see Appendix B, item 10).
+- Check every balloon written by the image generator letter for letter against the manifest (field 3): every letter, space, punctuation mark, quote mark and capital. Any deviation, however small, means the balloon fails.
+- A failed balloon is corrected (the exact text placed over it with a lettering tool) or the panel is regenerated. It is never accepted as it is (Strict Adaptation Protocol, P.3).
+- Fallback: for panels generated with empty balloons, typeset the dialogue separately in the correct balloons, using a lettering or page-layout tool (tool not yet chosen; see Appendix B, item 10).
 - Copy the text from the manifest, which copies it from Section 1.
 - Preserve Flemish spelling, punctuation, capitalisation, quotation marks (straight and curly, as in Section 1) and chess notation exactly.
 - Do not ask the image generator to reconstruct, paraphrase or improvise the dialogue.
@@ -2335,13 +2341,14 @@ Do not use a close-up merely to hide an overcrowded layout. A composition never 
 ## 23.E Reserving Space for Lettering
 Plan the balloon layout before the composition is final (manifest fields 17 and 19).
 
-Where practical:
-- Generate the illustration with empty speech balloons or reserved lettering areas (Section 21, Stage 2).
+By author decision (7.6) the image generator writes the balloon text itself (Section 21, Stage 2). Plan for it:
+- Specify the balloon positions and sizes in the manifest (fields 9, 17 and 19), so the generator leaves room for the exact text at a readable size.
 - Keep important visual information out of the areas intended for dialogue.
 - Make the character and background composition work on its own, independent of the text.
-- Add the original dialogue afterwards in a separate lettering step (Section 21, Stage 3).
+- Check the text letter for letter afterwards (Section 21, Stage 3).
+- Fallback: generate the illustration with empty speech balloons or reserved lettering areas, and add the original dialogue afterwards in a separate lettering step (Section 21, Stage 3).
 
-The artwork is still designed around the scene and its dialogue: empty balloons sit where the text will naturally be read, at the size the text needs. They must not become arbitrary blank areas that damage the composition.
+The artwork is designed around the scene and its dialogue: balloons sit where the text will naturally be read, at the size the text needs. Empty balloons (fallback) must not become arbitrary blank areas that damage the composition.
 
 ## 23.F Estimating Dialogue Length and Balloon Area
 For planning (manifest fields 14 and 18):
@@ -2407,6 +2414,7 @@ Kept for history. Do not use for generation.
 - v3.0 to 7.2: Pieces described without costumes (plain wood with faces). -> Superseded in 7.3: full costumes for the officers of both armies, soldier uniforms for the pawns (Section 5, Costumes). The v1.1 costume descriptions return; the v1.1 gold crown stays superseded.
 - v7.0 to 7.4: Common Prompt Block described the boebel by name with negative wording ("Boebel: the board surface itself is warped upwards ... No outline, no rings, no separate object, no hard-edged dome."). -> Superseded in 7.5: the prompt term "the centre hump" with the standard sentence (Section 4); the negative checks moved to Section 16.
 - First 7.5 wording of the standard sentence (named the bump, which made the image generator draw an explanation): "In the exact centre of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill - the centre hump - like a vinyl roll-up chessboard that has warped from heat. Its highest point is the corner where the four centre squares meet, about as high as the base of a chess piece, and from there it slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over the hill. The hill is seen only through soft light on the side facing the light and soft shadow on the other side." -> Superseded within 7.5 by the unnamed sentence (Section 4).
+- v7.1 to 7.6 (first wording): "Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards" (Common Prompt Block), "Preferred: request empty speech balloons ... Do not ask the image generator to write long Flemish passages" (Section 21), "Where practical: generate the illustration with empty speech balloons" (Section 23.E), and in the first 7.6 protocol "empty speech balloons" as the generator's only output. -> Superseded in 7.6 by author decision: the generator writes the exact text itself; every balloon is checked letter for letter; empty balloons are the fallback.
 
 ---
 
@@ -2422,7 +2430,7 @@ Items that need a decision from the author.
 7. ~~**Language of speech balloons.**~~ Resolved in 7.3: original Flemish only; no translations.
 8. ~~**Surroundings of the board.**~~ Resolved in 7.3: an empty chess club room, without people (Section 3, Surroundings).
 9. ~~**Coarse language versus "family friendly".**~~ Resolved in 7.3: the original text always takes precedence; "family friendly" applies to the visuals and the tone (Section 10).
-10. **Lettering tool.** Which tool is used to typeset the original dialogue into the balloons (Section 21, Stage 3)?
+10. **Lettering tool.** Which tool is used to correct a deviating balloon text, or to typeset the dialogue into empty balloons in the fallback (Section 21, Stage 3)? Since 7.6 the image generator writes the text itself, so the tool is only needed for corrections and the fallback.
 11. ~~**Title.**~~ Resolved in 7.3: title and subtitle on the album cover (Section 13, Cover Direction).
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
@@ -2445,4 +2453,4 @@ Items that need a decision from the author.
 | 7.3 | 13d295a | Author decisions on the open questions: five panel splits, album format, original Flemish text, f3 visibility, Scene 5 approved, shout balloons, 4a camera, title on the cover, chess club room, costumes, proposed dossiers; open question 13. |
 | 7.4 | 812366d | Panel manifests for Scenes 1 to 5 (Section 20.3). |
 | 7.5 | - | Boebel specification for image generation: standard descriptive sentence without a name, positive description, dimensions (Section 4); prompt texts describe instead of naming; no-text rule for images; generator-neutral (Copilot and ChatGPT), Section 18 renamed. |
-| 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; cross-references in Sections 13, 14, 16 and 21. |
+| 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; the image generator writes the exact balloon text, checked letter for letter, empty balloons as fallback (author decision); cross-references in Sections 13, 14, 16, 21 and 23. |
