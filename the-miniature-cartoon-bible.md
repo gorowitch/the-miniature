@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.6
+Version 7.7
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -14,6 +14,7 @@ Version 7.3 records the author's answers to the open questions: five long panels
 Version 7.4 adds the panel manifests for all 21 panels of Scenes 1 to 5 (Section 20.3).
 Version 7.5 specifies the boebel for image generation: a standard descriptive sentence (no name in prompts), a positive description with comparisons, dimensions, and a no-text rule for images (Sections 4 and 18).
 Version 7.6 adds the Strict Adaptation Protocol (before Section 1): the approved source is immutable during production; illustration and lettering are separate from story authority; prohibited changes; what to do when the source is incomplete.
+Version 7.7 adds proposed panels for Scenes 6 to 16 to Section 18, clearly marked as proposals awaiting author approval, made for the full SVG preview of the comic (`comic/`). Nothing from 7.6 was removed.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -949,6 +950,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.6 | Strict Adaptation Protocol added before Section 1 (author request): three separate responsibilities (story authority, illustration, lettering and assembly); the approved source (the play plus author-approved specifications, including approved staging); prohibited changes; stop-and-flag procedure for gaps and contradictions; relation to existing rules. |
 | 7.6 | Clarified, not changed: listener reactions and staging remain allowed as decided by the author, but only as fixed in the approved panel block and manifest; panel splits remain possible, but only as an approved bible change before production; the cartoon has no captions, chess notation only inside dialogue, the title only on the cover. |
 | 7.6 | Author decision: the image generator writes the balloon text itself, by copying the exact text from the panel block or manifest letter for letter (prompt format in Section 21, Stage 2; instruction in the Common Prompt Block). Every balloon is checked letter for letter; a deviation is corrected or the panel regenerated, never accepted. Empty balloons with separate lettering become the fallback. Replaces "empty balloons preferred" (Sections 13, 18, 20.3, 21, 23.E and Strict Adaptation Protocol P.1). |
+| 7.7 | Proposed panels for Scenes 6 to 16 added to Section 18 (author request: the full comic in SVG, Scenes 6 to 16 as proposals). 57 proposal blocks: dialogue copied from Section 1 and checked by script; moves from Sections 11 and 12; camera and character lines from the SVG preview. Not approved script: they are not sent to the image generator before the author approves them. |
+| 7.7 | SVG preview of the whole comic added outside the bible: `comic/renderer.js`, `comic/panels.js` (all 78 panels: 21 approved, 57 proposals) and `comic/index.html` (cover plus A4 album pages, proposals marked with a dashed orange border). The preview is an illustration aid only; the bible remains the source. |
+| 7.7 | Preview staging choices that are not canon until approved: costume colours beyond Section 5, the move streaks, the camera positions of Scenes 6 to 16, a captured piece standing beside the board next to the h-file. |
 
 ---
 
@@ -1329,6 +1333,384 @@ Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, close-up of the White King (e1); Alfil (f1) partly at the left edge, Regina (d1) partly at the right edge.
 - Characters: the King in despair: both hands to his face (or clutching his crown), eyes squeezed shut, mouth turned down. Alfil and Regina look at the King.
 - Balloon (White King): Wel nondedju ! Heel mijn voorbereiding om zeep.
+
+---
+
+## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
+Added in 7.7. The author asked for the full comic as an SVG preview and chose to have Scenes 6 to 16 proposed by Claude and approved or corrected afterwards. These blocks are **proposals, not approved script**: under the Strict Adaptation Protocol (P.2) they must not be sent to the image generator until the author approves them. After approval each block is rewritten as a full panel block in the style of Scenes 1 to 5, with a manifest in Section 20.3 (sequence numbers from 22).
+- Source: the dialogue is copied from Section 1 letter for letter (only runs of spaces collapsed) and checked by script; the panel splits follow sentence boundaries (Section 23). The moves follow Section 11 and the board states of Section 12.
+- Camera and character lines describe the SVG preview (`comic/panels.js`, rendered by `comic/index.html`); gesture names are the preview's (for example "point-down-l": arm pointing down, to the left as seen in the image).
+- Captured pieces stand beside the board, next to the h-file, from the capture onwards.
+- Open points for these scenes are in Appendix B, items 14 and 15.
+
+### Panel 6a (PROPOSAL)
+- Board state: 0.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: Regina (speaking, looks at White King, gesture open-l); White King (puzzled, looks at Regina).
+- Balloon (Regina): Speelt dan e3 Sire, dan kan Alfil toch al gaan zien.
+
+### Panel 6b (PROPOSAL)
+- Board state: 0.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (stubborn, speaking, gesture wave-l); Regina (looks at White King).
+- Balloon (White King): Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig.
+
+### Panel 6c (PROPOSAL)
+- Board state: 1.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Move shown: e2-e3 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 6d (PROPOSAL)
+- Board state: 2.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: the piece on d5 (calm).
+- Move shown: d7-d5 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 7a (PROPOSAL)
+- Board state: 2.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, f1.
+- Characters: White King (angry, speaking, gesture point-down-l); Alfil (looks at White King); Regina (looks at White King).
+- Balloon (White King): Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in.
+
+### Panel 7b (PROPOSAL)
+- Board state: 2.
+- Camera: from Black's side (the white pieces face the camera), framed on f1, e1.
+- Characters: Alfil (apologetic, speaking, looks at White King, gesture open-r); White King (angry, looks at Alfil).
+- Balloon (Alfil): Jamaar Sire, met dieje boebel.
+
+### Panel 7c (PROPOSAL)
+- Board state: 2.
+- Camera: from Black's side (the white pieces face the camera), framed on f1, e1.
+- Characters: White King (angry, speaking, looks at Alfil, gesture point-up-l); Alfil (offended, looks at White King).
+- Balloon (White King): Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt.
+
+### Panel 7d (PROPOSAL)
+- Board state: 3.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d3, f1.
+- Characters: Alfil (calm); White King (looks at Alfil).
+- Move shown: f1-d3 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 8a (PROPOSAL)
+- Board state: 3.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (worried, speaking, gesture both-open); Regina (looks at White King).
+- Balloon (White King): Boebel, boebel.
+
+### Panel 8b (PROPOSAL)
+- Board state: 3.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, f1.
+- Characters: White King (angry, speaking, gesture point-down-r); Alfil (looks at White King); Regina (looks at White King).
+- Balloon (White King): Zo zullen we de partij wel winnen als "Dieje van den overkant" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen.
+
+### Panel 8c (PROPOSAL)
+- Board state: 4.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Black King (calm).
+- Move shown: e7-e6 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 9a (PROPOSAL)
+- Board state: 4.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, g1.
+- Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (looks at White King).
+- Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
+
+### Panel 9b (PROPOSAL)
+- Board state: 5.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (stubborn); White King (surprised).
+- Move shown: g1-h3 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 9c (PROPOSAL)
+- Board state: 5.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
+- Characters: White King (furious, speaking, looks at Caballo, gesture fist-up-r, anger mark); Caballo (stubborn).
+- Balloon (White King), shout balloon: Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !
+
+### Panel 9d (PROPOSAL)
+- Board state: 5.
+- Camera: from Black's side (the white pieces face the camera), framed on h3.
+- Characters: Caballo (angry, speaking).
+- Balloon (Caballo): Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire !
+
+### Panel 9e (PROPOSAL)
+- Board state: 5.
+- Camera: from Black's side (the white pieces face the camera), framed on h3, f3.
+- Characters: Caballo (offended, speaking).
+- Balloon (Caballo): Dat ge uw voetvolk erdoor jaagt tot daar nog aan toe maar een officier laat ge niet met zijn voetstuk in zo'n vieze vuile plek staan verkommeren.
+
+### Panel 9f (PROPOSAL)
+- Board state: 5.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
+- Characters: Caballo (smug, speaking); White King (angry, looks at Caballo).
+- Balloon (Caballo): Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !
+
+### Panel 9g (PROPOSAL)
+- Board state: 6.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Black King (calm).
+- Move shown: c8-d7 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 10a (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (sigh, speaking, sigh puff); Regina (looks at White King).
+- Balloon (White King): Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt.
+
+### Panel 10b (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (calm, speaking, gesture hand-chest); Regina (looks at White King).
+- Balloon (White King): In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld.
+
+### Panel 10c (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (proud, speaking, gesture raise-r).
+- Balloon (White King): En veel gewonnen hé want dat was nog in mijne jongen tijd.
+
+### Panel 10d (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (angry, speaking, gesture both-open); Regina (looks at White King).
+- Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :
+
+### Panel 10e (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, e2.
+- Characters: White King (angry, speaking, gesture point-down-l).
+- Balloon (White King): de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand.
+
+### Panel 10f (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (worried, speaking, gesture open-l); Regina (looks at White King).
+- Balloon (White King): Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn.
+
+### Panel 10g (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (angry, speaking, gesture fist-up-r).
+- Balloon (White King): En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen.
+
+### Panel 10h (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (stubborn, speaking, looks at Regina, gesture raise-l); Regina (looks at White King).
+- Balloon (White King): Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+
+### Panel 10i (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: Regina (speaking, looks at White King, gesture open-l); White King (stubborn, looks at Regina).
+- Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
+
+### Panel 11a (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (angry, speaking, looks at Regina, gesture point-up-l); Regina (surprised, looks at White King).
+- Balloon (White King): Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?
+
+### Panel 11b (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (smug, speaking, looks at Regina, gesture wave-l); Regina (offended, looks at White King).
+- Balloon (White King): Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is.
+
+### Panel 11c (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (proud, speaking, gesture hand-chest).
+- Balloon (White King): Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé.
+
+### Panel 11d (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (proud, speaking, gesture raise-l); Regina (looks at White King).
+- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
+
+### Panel 11e (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (smug, speaking, looks at Regina); Regina (offended, looks at White King).
+- Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
+
+### Panel 11f (PROPOSAL)
+- Board state: 6.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
+- Characters: White King (angry, speaking, looks at Regina, gesture point-down-l); Regina (worried, looks at White King).
+- Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+
+### Panel 11g (PROPOSAL)
+- Board state: 7.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Regina (calm).
+- Move shown: d1-h5 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 11h (PROPOSAL)
+- Board state: 8.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Black King (calm).
+- Move shown: g8-e7 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 12a (PROPOSAL)
+- Board state: 8.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (puzzled, speaking, gesture point-up-l).
+- Balloon (White King): Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee.
+
+### Panel 12b (PROPOSAL)
+- Board state: 8.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (surprised, speaking, gesture point-up-r).
+- Balloon (White King): Seg, maar wacht eens effe … .
+
+### Panel 12c (PROPOSAL)
+- Board state: 8.
+- Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
+- Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (heroic).
+- Balloon (White King): Ridder Caballo, hop naar g5. Allez vooruit, ju !
+
+### Panel 12d (PROPOSAL)
+- Board state: 9.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (heroic).
+- Move shown: h3-g5 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 12e (PROPOSAL)
+- Board state: 10.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Regina (worried); the piece on g6 (calm).
+- Move shown: g7-g6 (move streak; no caption, no notation in the image).
+- No balloons.
+
+### Panel 13a (PROPOSAL)
+- Board state: 10.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (heroic, speaking).
+- Balloon (Caballo), shout balloon: Voor de glorie en de overwinning ! Ten aanval !
+
+### Panel 13b (PROPOSAL)
+- Board state: 11.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (heroic).
+- Move shown: g5-h7 (move streak; no caption, no notation in the image).
+- Beside the board: the captured black pawn (h7) stands beside the board.
+- No balloons.
+
+### Panel 14a (PROPOSAL)
+- Board state: 11.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (furious, speaking, gesture fist-up-r, anger mark); Regina (worried).
+- Beside the board: the captured black pawn (h7) stands beside the board.
+- Balloon (White King), shout balloon: Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
+
+### Panel 14b (PROPOSAL)
+- Board state: 11.
+- Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
+- Characters: White King (angry, speaking, looks at Alfil, gesture point-down-r); Alfil (surprised, looks at White King).
+- Beside the board: the captured black pawn (h7) stands beside the board.
+- Balloon (White King): Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets.
+
+### Panel 14c (PROPOSAL)
+- Board state: 11.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (worried, speaking, gesture point-up-l, sweat drops).
+- Beside the board: the captured black pawn (h7) stands beside the board.
+- Balloon (White King): Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, "Dieje van den overkant" is al aan zet.
+
+### Panel 14d (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Regina (surprised, looks at the piece on h5).
+- Move shown: g6-h5 (move streak; no caption, no notation in the image).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- No balloons.
+
+### Panel 14e (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (despair, speaking).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): Lap, daar hebt ge’t al. Regina geslagen.
+
+### Panel 14f (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
+- Characters: White King (angry, speaking, gesture both-open); Alfil (looks at White King).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): En terwijl ik hier weer zit te zwoegen om de partij te winnen
+
+### Panel 14g (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
+- Characters: White King (speaking, gesture point-up-r); Regina (smug, looks at black rook (h8)); black rook (h8) (proud, looks at Regina).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
+
+### Panel 14h (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (smug, speaking, gesture wave-r).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
+
+### Panel 15a (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
+- Characters: Alfil (apologetic, speaking, looks at White King, gesture point-up-l); White King (surprised, looks at Alfil).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
+
+### Panel 15b (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
+- Characters: White King (proud, speaking, gesture point-up-l); Alfil (looks at White King).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
+
+### Panel 15c (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (furious, speaking).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
+
+### Panel 15d (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (smug, speaking).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
+
+### Panel 15e (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Characters: Caballo (neutral, speaking); Black King (calm, gesture open-l).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
+
+### Panel 16a (PROPOSAL)
+- Board state: 12.
+- Camera: from Black's side (the white pieces face the camera), framed on e1.
+- Characters: White King (sigh, speaking, sigh puff).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Balloon (White King): Pakt dat dan maar aan.
+
+### Panel 16b (PROPOSAL)
+- Board state: 12.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
+- Characters: White King (sigh); Black King (calm); Regina (looks at black rook (h8)).
+- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- No balloons.
 
 ---
 
@@ -2434,6 +2816,9 @@ Items that need a decision from the author.
 11. ~~**Title.**~~ Resolved in 7.3: title and subtitle on the album cover (Section 13, Cover Direction).
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
+14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
+15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions and chess notation only inside dialogue. How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
+16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 
 ---
 
@@ -2454,3 +2839,4 @@ Items that need a decision from the author.
 | 7.4 | 812366d | Panel manifests for Scenes 1 to 5 (Section 20.3). |
 | 7.5 | - | Boebel specification for image generation: standard descriptive sentence without a name, positive description, dimensions (Section 4); prompt texts describe instead of naming; no-text rule for images; generator-neutral (Copilot and ChatGPT), Section 18 renamed. |
 | 7.6 | - | Strict Adaptation Protocol (no creative deviation) before Section 1; the image generator writes the exact balloon text, checked letter for letter, empty balloons as fallback (author decision); cross-references in Sections 13, 14, 16, 21 and 23. |
+| 7.7 | - | Proposed panels for Scenes 6 to 16 in Section 18 (awaiting approval); SVG preview of the whole comic in `comic/`; open questions 14 to 16. |
