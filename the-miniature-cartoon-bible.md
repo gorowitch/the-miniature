@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.14
+Version 7.15
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -22,6 +22,7 @@ Version 7.11 forbids anger symbols such as the red "popping vein" mark (author f
 Version 7.12 changes panel 2b (author decision after an experiment in the preview): grumble balloons with chess annotation symbols and the hash sign, each with a short tail to its pawn and clear of all faces, and the stage direction verbatim in a caption box in the lower right corner, the only caption in the cartoon.
 Version 7.13 approves panels 6a, 6b and 6c (author decision): full panel blocks in Section 18 (Scene 6) and manifests 22 to 24 in Section 20.3; panel 6d stays a proposal.
 Version 7.14 changes panel 4a (author decision): Alfil visibly talks to the pawns, the pawns on e2, f2 and g2 turn towards him (f2 seen from behind, e2 and g2 half turned), the camera is raised, and a caption box shows (Alfil overlegt met de pionnen).
+Version 7.15 reframes the proposal panel 6d (author feedback): ranks 5 to 8 only, both black rooks fully in sight.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1001,6 +1002,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.14 | Author feedback on panel 4a: "the g and e pawn can be turned a little further". The pawns on g2 and e2 are now turned most of the way towards Alfil: only a narrow side of the face shows, towards the f-file, with the far ear visible (panel block and manifest 4a). |
 | 7.14 | Author decision on panel 4a: "g2 f2 and e2 are completely turned". All three pawns in front of Alfil now face him and are seen from behind; replaces the half turn of g2 and e2 (panel block and manifest 4a, field 13 included). |
 | 7.14 | Author decision on panel 4a: the caption reads "(Alfil overlegt met de pionnen)" ("Make the text: Alfil overlegt met de pionnen"). This deliberately differs from the play, which has "Alfil overlegt met pionnen en komt terug": "de" is added and "en komt terug" left out. The play text in Section 1 is unchanged; only the caption uses the author's wording. Parentheses kept, as in the caption of 2b. Panel block and manifest 4a, Scene Catalog, Appendix A and B updated. |
+| 7.15 | Author feedback on the proposal panel 6d: "zoom in so we see the second half of the board - that is from the 5th rank to the 8th rank. Be sure that both black rooks are fully in sight." Camera line of the 6d proposal block updated; 6d stays a proposal. Follow-up: "zoom in a little further so we don't see the head of the pawn on e3": zoomed in further; no white piece is in frame. Then: "This is to much - zoom out again - keep the constraint that the head of the pawn at e3 should not be in sight": zoomed out again, with the camera kept above the third rank so that the e3 pawn stays out of frame. Then: "zoom out more - to the max extent that leaves the head of the white pawn out of sight": zoomed out to that limit (computed: the top of the e3 pawn's head lands just below the bottom edge); the fourth rank is now partly in view. Then: "I see half of the fourth rank - so zoom in a little again": zoomed in so that the bottom edge of the frame cuts the fourth rank in half (computed). Camera line of the 6d proposal block rewritten accordingly. |
 
 ---
 
@@ -1457,7 +1459,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 6d (PROPOSAL)
 - Board state: 2.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Camera (author feedback in 7.15): from White's side, high above the third rank, looking at the second half of the board: the black army with both rooks (a8, h8) fully in sight, the d5 pawn in front of it, and the board down to the middle of the fourth rank (the bottom edge of the frame cuts the fourth rank in half). The head of the white pawn on e3 is out of sight; no white pieces in frame.
 - Characters: the piece on d5 (calm).
 - Move shown: d7-d5 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 1. ... d5
@@ -3051,3 +3053,4 @@ Items that need a decision from the author.
 | 7.12 | - | Panel 2b: grumble balloons with chess annotation symbols and #, short tails, faces clear; stage direction verbatim in a caption box (only caption in the cartoon); open question 18. |
 | 7.13 | - | Panels 6a, 6b, 6c approved: panel blocks (Section 18, Scene 6) and manifests 22 to 24 (Section 20.3). |
 | 7.14 | - | Panel 4a: Alfil talks to the pawns, who turn towards him; camera raised; caption (Alfil overlegt met de pionnen). |
+| 7.15 | - | Proposal 6d reframed: ranks 5 to 8, both black rooks fully in sight. |
