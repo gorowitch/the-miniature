@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.22
+Version 7.23
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -30,6 +30,7 @@ Version 7.19 zooms panel 9a out a little (author feedback) and approves it (auth
 Version 7.20 reframes the proposal panel 9b (author feedback): camera beside the board so the King and the whole black army are in sight; the King visibly shocked, looking at Caballo.
 Version 7.21 makes the black pieces in panel 1c look a little scared (author decision); the Black King stays calm.
 Version 7.22 makes the black pieces in panel 3a-1 look a little surprised (author decision); the Black King stays calm.
+Version 7.23 makes the black army in panel 3b visibly amused (author decision); the Black King stays calm and does not laugh. New expression "amused" in the SVG preview.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1019,6 +1020,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.20 | Author feedback on the proposal panel 9b: "shift the image down so that all black pieces are fully in sight", "shift the image to the right so that the empty space there is reduced", "make sure that the white king is now fully in sight", "the king looks visibly surprised/shocked as Caballo jumps to h3", "I want the king's face looking at Caballo". A camera behind White's back rank can never show the King's face, so the camera was moved beside the board (behind the h-file, between the armies): the King at the left and the black army at the right both face the camera. The King's hands-on-head pose was replaced by spread arms so his face, turned to Caballo, stays free. Then: "make sure that the rooks are fully in sight": zoomed out a little so the near rooks on h1 and h8 are fully in frame. Camera and character lines of the 9b proposal block updated; 9b stays a proposal. |
 | 7.21 | Author decision on the approved panel 1c: "make the black pieces look a little scared". The 15 black pieces other than the Black King now look a little scared (raised eyebrows, wide eyes, small wobbly mouths, mouths closed); panel block and manifest 1c (fields 8 and 13) updated. The Black King keeps his calm, composed expression, because his dossier (Section 7) and panel 3b describe him as calm and patient (Claude's reading, open for correction: Appendix B, item 19). |
 | 7.22 | Author decision on the approved panel 3a-1: "I want the black pieces look a little surprised". The 15 black pieces other than the Black King now look a little surprised (high arched eyebrows, wide round eyes, mouths closed); panel block and manifest 3a-1 (fields 8 and 13) updated. The Black King stays calm, as in 1c (Appendix B, item 19, now covering both panels). |
+| 7.23 | Author decision on the approved panel 3b: "the black army realises that white has some kind of trouble and looks visibly amused". The black pieces other than the Black King now laugh: broad grins with teeth showing, eyes squeezed shut, eyebrows raised. Panel block and manifest 3b (fields 6 and 8) updated. The Black King stays calm and does not laugh: the approved panel block 3b says so explicitly ("He is not laughing") and field 13 forbids a laughing Black King; this keeps the irony of the King's line ("zit op dit moment waarschijnlijk al met ons te lachen"): the troops laugh, their King does not (Appendix B, item 19, now also covering 3b). The SVG preview got a new expression "amused". |
 
 ---
 
@@ -1339,6 +1341,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Foreground: the back of the White King's crown and shoulder (left of centre), his arm pointing impatiently towards the black army. Alfil (f1) partly in frame at the right, seen from behind.
 - Middle ground: all eight white pawns seen from behind, then the empty board: the board bulging gently in the middle, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
 - Background: the complete black army in its starting formation, all 16 pieces, facing the camera. The Black King on e8 is clearly recognisable: calm, patient, short beard, waiting with composure. He is not laughing. The black knights face the centre.
+- Black army (author decision in 7.23): the black army realises that White has some kind of trouble and is visibly amused: the black pieces other than the Black King laugh with their mouths closed in a broad grin (teeth showing), eyes squeezed shut with laughter, eyebrows raised. The Black King alone stays calm and composed and does not laugh.
 - Balloon (White King): En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
 
 ## Scene 4 - Pawn Mutiny
@@ -2373,10 +2376,11 @@ PANEL 3b   (sequence number 10)
       Balloon 1: "En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen."
 4.  Balloon 1 -> Koning
 5.  Visible: the back of Koning's crown and shoulder in the foreground; Alfil f1 partly at the right, from behind; all white pawns from behind; the board with the gentle rise in the middle of the board; the complete black army in the distance, the Black King on e8 recognisable.
-6.  Listening: Alfil (from behind); the Black King far away, calm and patient, mouth closed, not laughing.
+6.  Listening: Alfil (from behind); the Black King far away, calm and patient, mouth closed, not laughing. The other black pieces are visibly amused at White's trouble (7.23).
 7.  Camera over the King's shoulder towards Black.
 8.  Koning: seen from behind, arm pointing impatiently at the black army (speaking gesture).
     Black King: calm, composed, not laughing.
+    Other black pieces: visibly amused, broad grins with teeth showing, eyes squeezed shut with laughter, eyebrows raised (author decision in 7.23).
 9.  Balloon 1 top left; tail to the King's head.
 10. Stage directions: none.
 11. State 0. No move.
@@ -3383,7 +3387,7 @@ Items that need a decision from the author.
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
 18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box; in 7.14 the author added one to panel 4a as well, with the first part of its stage direction: (Alfil overlegt met de pionnen). Still open: do the other stage directions get one too, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
-19. **The Black King in panels 1c and 3a-1.** In 7.21 the black pieces in panel 1c became a little scared, in 7.22 those in panel 3a-1 a little surprised. In both panels the Black King was left calm, because his dossier and panel 3b describe him as calm and patient. Should he show the same reaction? (Added in 7.21, extended in 7.22.)
+19. **The Black King in panels 1c, 3a-1 and 3b.** In 7.21 the black pieces in panel 1c became a little scared, in 7.22 those in panel 3a-1 a little surprised, in 7.23 those in panel 3b visibly amused. In all three panels the Black King was left calm, because his dossier and panel 3b describe him as calm and patient. Should he show the same reaction? (Added in 7.21, extended in 7.22.)
 
 ---
 
@@ -3420,3 +3424,4 @@ Items that need a decision from the author.
 | 7.20 | - | Proposal 9b reframed from beside the board; the King shocked, looking at Caballo. |
 | 7.21 | - | Panel 1c: the black pieces a little scared, the Black King calm; open question 19. |
 | 7.22 | - | Panel 3a-1: the black pieces a little surprised, the Black King calm. |
+| 7.23 | - | Panel 3b: the black army visibly amused, the Black King calm; new preview expression "amused". |

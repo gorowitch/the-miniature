@@ -47,7 +47,7 @@ function face(g, x, y, r, col, o) {
   const sw = r * 0.13;
   const brow = (s, dy, slope) => mk("path", { d: `M${x+s*r*.64} ${y-r*.42+dy} l${-s*r*.46} ${slope}`, stroke: brC, "stroke-width": sw, "stroke-linecap": "round", fill: "none" }, g);
   const browArc = (s, h) => mk("path", { d: `M${x+s*r*.66} ${y-r*.48} q${-s*r*.22} ${-h} ${-s*r*.46} ${-r*.06}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
-  if (E === "surprised" || E === "proud" || E === "pleading-up") { browArc(-1, r*.22); browArc(1, r*.22); }
+  if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
   else if (E === "worried" || E === "despair" || E === "sigh" || E === "pleading" || E === "apologetic") { brow(-1, r*.04, -r*.22); brow(1, r*.04, -r*.22); }
   else if (E === "offended" || E === "puzzled") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
@@ -55,6 +55,7 @@ function face(g, x, y, r, col, o) {
   else { brow(-1, 0, -r*.08); brow(1, 0, -r*.08); }
   const closed = E === "despair" || E === "sigh";
   if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
+  else if (E === "amused") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.04} q${r*.2} ${-r*.26} ${r*.4} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g); }  // eyes squeezed with laughter
   else {
     const ry = E === "surprised" ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug") ? .17 : .29;
     for (const s of [-1, 1]) {
@@ -74,6 +75,9 @@ function face(g, x, y, r, col, o) {
   } else if (talk) {
     mk("ellipse", { cx: x, cy: my + r*.03, rx: r*.19, ry: r*.15, fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
     mk("path", { d: `M${x-r*.1} ${my+r*.1} q${r*.1} ${-r*.06} ${r*.2} 0`, fill: "#c4584a", stroke: "none" }, g);
+  } else if (E === "amused") {  // broad grin with teeth (bible 7.23)
+    mk("path", { d: `M${x-r*.34} ${my-r*.06} q${r*.34} ${r*.5} ${r*.68} 0 Z`, fill: "#4a130d", stroke: INK, "stroke-width": r*.05, "stroke-linejoin": "round" }, g);
+    mk("path", { d: `M${x-r*.3} ${my-r*.04} l${r*.6} 0 l${-r*.04} ${r*.08} l${-r*.52} 0 Z`, fill: "#fffaf0" }, g);
   } else if (E === "surprised" && o.mouthOpen) {
     mk("ellipse", { cx: x, cy: my, rx: r*.14, ry: r*.19, fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
   } else {

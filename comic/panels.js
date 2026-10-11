@@ -40,7 +40,7 @@ window.PANELS = [
   cast: { koning: { back: false, expr: "proud", talk: true, lookAt: "alfil", gest: "point-r" } },
   balloons: [{ who: "koning", text: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." }] },
 { id: "3b", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [4.25, -1.35, 2.25], at: [4.5, 7.5, 0.25], f: 560 },
-  cast: { koning: { talk: true, gest: "point-up-r" }, bking: { expr: "calm" } },
+  cast: { koning: { talk: true, gest: "point-up-r" }, a7: { expr: "amused" }, a8: { expr: "amused" }, b7: { expr: "amused" }, b8: { expr: "amused" }, c7: { expr: "amused" }, c8: { expr: "amused" }, d7: { expr: "amused" }, d8: { expr: "amused" }, e7: { expr: "amused" }, f7: { expr: "amused" }, f8: { expr: "amused" }, g7: { expr: "amused" }, g8: { expr: "amused" }, h7: { expr: "amused" }, h8: { expr: "amused" }, bking: { expr: "calm" } },  // black army visibly amused (bible 7.23); the Black King stays calm, not laughing
   balloons: [{ who: "koning", text: "En maak voort want “Dieje van den overkant\" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen." }] },
 // ---------------------------------------------------------------- Scene 4 - Pawn Mutiny (approved)
 { id: "4a", scene: 4, status: A, crossArms: true, state: 0, cam: { from: [5.2, 5.9, 2.9], at: [5.3, 1.3, 0.6], f: 780 }, caption: "(Alfil overlegt met de pionnen)",
