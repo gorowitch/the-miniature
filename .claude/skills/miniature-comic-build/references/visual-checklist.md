@@ -4,7 +4,7 @@ Check every panel against this list in the screenshot before showing it to the a
 
 ## 1. Fidelity (bible: Strict Adaptation Protocol)
 - [ ] Balloon text matches the panel block or manifest; `check-panel-texts.sh` passes.
-- [ ] No content that is not in the approved source: no extra props, captions, labels, notation outside dialogue and the move box, people in the room. Staging choices in proposals are listed as proposals.
+- [ ] No content that is not in the approved source: no extra props, captions, labels, notation outside dialogue and the move box, people in the room. No anger symbols (red popping-vein marks) on heads. Staging choices in proposals are listed as proposals.
 - [ ] Only the cover carries the title.
 - [ ] A panel in which a move is played has the move box bottom-left, with the move line of the play verbatim (e.g. "1. ... d5", "6. Pxh7"); a move that is only spoken or ordered has none (bible Section 13, Move Box).
 

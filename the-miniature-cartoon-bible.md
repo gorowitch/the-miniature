@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.10
+Version 7.11
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -18,6 +18,7 @@ Version 7.7 adds proposed panels for Scenes 6 to 16 to Section 18, clearly marke
 Version 7.8 adds the move box (author decision): every panel in which a move is played shows that move, verbatim from the play, in bold in a small white rectangle in the bottom-left corner, in the preview and in the final images (Section 13, Move Box). It replaces the rule that chess notation appears only inside dialogue.
 Version 7.9 fixes which pawns have a moustache (author decision): the b-pawn and the g-pawn of both armies, in every image, and no other pawn (Section 7, White Pawns and Black Pawns).
 Version 7.10 adds the pawns' solidarity (author decision): in panels 2b to 5d-2 every white pawn in frame stands with its arms crossed (Section 7, White Pawns; Sections 18 and 20.3).
+Version 7.11 forbids anger symbols such as the red "popping vein" mark (author feedback on panel 5a; Section 14 and the Common Prompt Block).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -860,6 +861,7 @@ NEVER:
 - Anything prohibited by the Strict Adaptation Protocol (P.3), at the start of this bible.
 - Visual content that is not in the script or decided by the author.
 - Narrator boxes.
+- Anger symbols such as the red "popping vein" mark (four curved red strokes) on a head; anger is shown by the face, the gesture and a shout balloon only (author feedback on panel 5a, 7.11).
 - Invented captions.
 - Coordinate labels.
 - Field labels.
@@ -988,6 +990,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.10 | Author decision: pawn solidarity during the mutiny. In panels 2b, 2c, 3a-1, 3a-2, 3b, 4a, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c, 5d-1 and 5d-2 every white pawn in frame stands with its arms crossed ("since the pawns are in solidarity the arms of all white pawns need to be crossed"). Section 7 (White Pawns), the 15 panel blocks in Section 18 and field 12 of the 15 manifests in Section 20.3 updated. |
 | 7.10 | Consequence in panel 4a: the pawns on e2, f2 and g2 no longer point at the gentle rise in the middle of the board; they turn to Alfil with their arms crossed (panel block, manifest fields 8 and 16 of 4a, and the Scene Catalog in Section 17). The rise stays visible in the frame. |
 | 7.10 | Author decision: in the close-ups where only the pawns' heads are in frame (2c, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c, 5d-1) the approved framing stays; the camera is not lowered to show the crossed arms ("leave the images where there are no arms in sight as-is"). Section 7, White Pawns. |
+| 7.11 | Author feedback on panel 5a: the four red curved strokes on the King's head (a cartoon "popping vein" anger symbol, added in the SVG preview, never part of the script) are unwanted. Anger symbols are now forbidden (Section 14, Common Prompt Block); anger is shown by the face, the gesture and the shout balloon. Removed from the preview panels 5a, 9c and 14a and from the proposal blocks 9c and 14a ("anger mark"). |
 
 ---
 
@@ -1217,6 +1220,7 @@ Rules:
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
 - The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, and the move box when the panel description gives one. When the speech balloons are drawn empty and there is no move box, the image contains no text at all.
+- No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
 
 ## Scene 1 - Opening Speech
@@ -1486,7 +1490,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 ### Panel 9c (PROPOSAL)
 - Board state: 5.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
-- Characters: White King (furious, speaking, looks at Caballo, gesture fist-up-r, anger mark); Caballo (stubborn).
+- Characters: White King (furious, speaking, looks at Caballo, gesture fist-up-r); Caballo (stubborn).
 - Balloon (White King), shout balloon: Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !
 
 ### Panel 9d (PROPOSAL)
@@ -1673,7 +1677,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 ### Panel 14a (PROPOSAL)
 - Board state: 11.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
-- Characters: White King (furious, speaking, gesture fist-up-r, anger mark); Regina (worried).
+- Characters: White King (furious, speaking, gesture fist-up-r); Regina (worried).
 - Beside the board: the captured black pawn (h7) stands beside the board.
 - Balloon (White King), shout balloon: Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
 
@@ -2913,3 +2917,4 @@ Items that need a decision from the author.
 | 7.8 | - | Move box for every played move (author decision): Section 13, Move Box; Common Prompt Block; proposal move panels; cross-references; superseded rule in Appendix A. |
 | 7.9 | - | Pawn moustache rule (author decision): b-pawn and g-pawn of both armies, every image; open question 17. |
 | 7.10 | - | Pawn solidarity (author decision): all white pawns arms crossed in panels 2b to 5d-2; panel 4a without pointing. |
+| 7.11 | - | Anger symbols (red popping-vein mark) forbidden after author feedback on panel 5a; removed from the preview. |

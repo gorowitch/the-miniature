@@ -57,7 +57,7 @@ window.PANELS = [
   balloons: [{ who: "alfil", text: "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." }] },
 // ---------------------------------------------------------------- Scene 5 - The King's Outburst (approved)
 { id: "5a", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.15, f: 820 }),
-  cast: { koning: { expr: "furious", talk: true, lookAt: "alfil", gest: "fist-up-r", anger: true, shake: true }, alfil: { expr: "surprised", lookAt: "koning", sweat: true }, regina: { expr: "worried", lookAt: "koning" } },
+  cast: { koning: { expr: "furious", talk: true, lookAt: "alfil", gest: "fist-up-r", shake: true }, alfil: { expr: "surprised", lookAt: "koning", sweat: true }, regina: { expr: "worried", lookAt: "koning" } },
   fx: [{ burst: "koning" }], balloons: [{ who: "koning", shout: true, text: "Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.", w: 360 }] },
 { id: "5b-1", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
   cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-l", lean: -5 }, alfil: { expr: "stubborn", lookAt: "koning" } },
@@ -112,7 +112,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
 { id: "9b", scene: 9, status: Pr, movebox: "3. Ph3", state: 5, cam: { from: [7.3, -1.2, 2.8], at: [6.2, 2.8, 0.1], f: 640 }, fx: [{ move: ["g1", "h3"] }], cast: { caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true } }, balloons: [] },
 { id: "9c", scene: 9, status: Pr, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
-  cast: { koning: { expr: "furious", talk: true, lookAt: "caballo", gest: "fist-up-r", anger: true }, caballo: { expr: "stubborn" } },
+  cast: { koning: { expr: "furious", talk: true, lookAt: "caballo", gest: "fist-up-r" }, caballo: { expr: "stubborn" } },
   balloons: [{ who: "koning", shout: true, text: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !" }] },
 { id: "9d", scene: 9, status: Pr, state: 5, cam: zb(["h3"], { dist: 1.2, h: 1.1, th: 0.8, f: 780, ox: 0.4 }),
   cast: { caballo: { expr: "angry", talk: true } },
@@ -192,7 +192,7 @@ window.PANELS = [
 { id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.15, f: 820 }), fx: [{ burst: "koning" }],
-  cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", anger: true, shake: true }, regina: { expr: "worried" } },
+  cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
   balloons: [{ who: "koning", shout: true, w: 400, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
 { id: "14b", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: KING_ALFIL,
   cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "surprised", lookAt: "koning" } },
