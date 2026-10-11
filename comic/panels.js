@@ -43,8 +43,8 @@ window.PANELS = [
   cast: { koning: { talk: true, gest: "point-up-r" }, bking: { expr: "calm" } },
   balloons: [{ who: "koning", text: "En maak voort want “Dieje van den overkant\" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen." }] },
 // ---------------------------------------------------------------- Scene 4 - Pawn Mutiny (approved)
-{ id: "4a", scene: 4, status: A, crossArms: true, state: 0, cam: { from: [4.7, 6.6, 1.85], at: [5.1, 1.6, 0.45], f: 700 },
-  cast: { alfil: { lean: 10, bow: 0.88, lookAt: "f2" }, e2: { lookAt: "alfil" }, g2: { lookAt: "alfil" }, f2: { lookAt: "alfil" }, d2: { expr: "stubborn" }, c2: { expr: "stubborn" }, h2: { expr: "stubborn" }, koning: { lookAt: "alfil" }, regina: { lookAt: "alfil" } },
+{ id: "4a", scene: 4, status: A, crossArms: true, state: 0, cam: { from: [5.2, 5.9, 2.9], at: [5.3, 1.3, 0.6], f: 780 }, caption: "(Alfil overlegt met de pionnen)",
+  cast: { alfil: { expr: "pleading", talk: true, lean: 14, bow: 0.86, lookAt: "f2", gest: "both-open" }, e2: { back: true }, g2: { back: true }, f2: { back: true }, d2: { expr: "stubborn" }, c2: { expr: "stubborn" }, h2: { expr: "stubborn" }, koning: { lookAt: "alfil" }, regina: { lookAt: "alfil" } },
   balloons: [] },
 { id: "4b", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.25, h: 1.4, th: 1.0, f: 760 }),
   cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "raise-l" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "alfil" } },

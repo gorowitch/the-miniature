@@ -41,6 +41,7 @@ function costumeOf(type, col, role) {
 }
 
 // ---------------------------------------------------------------- piece sprites (unit: 50 = one square)
+let TURN_N = 0;  // ids for the clip paths of half-turned faces
 function face(g, x, y, r, col, o) {
   const W = W_[col], lx = (o.look || 0), E = o.expr || "neutral", talk = !!o.talk, brC = col === "w" ? "#5a3a1e" : "#efe2cf";
   const sw = r * 0.13;
@@ -131,7 +132,13 @@ function crown(g, y, col, gem) { const F = W_[col].f;
   if (gem) mk("circle", { cx: 0, cy: y - 1.5, r: 1.6, fill: "#b8202e", stroke: INK, "stroke-width": .6 }, g); }
 const SPR = {
   p(g, col, c, o) { base(g, col); robe(g, 24, 6, c, o.back); mk("circle", { cx: 0, cy: -35, r: 11, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
-    if (o.back) backHead(g, 0, -35, 11, col); else face(g, 0, -35, 11, col, o); },
+    if (o.back) backHead(g, 0, -35, 11, col);
+    else if (o.turn) {  // half turned (-1 = towards the left of the image, 1 = right): the face slides to that side, the far ear shows
+      const id = "pt" + (++TURN_N), cp = mk("clipPath", { id }, g); mk("circle", { cx: 0, cy: -35, r: 10.2 }, cp);
+      const tg = mk("g", { transform: `translate(${o.turn * 5} -35) scale(${Math.max(0.45, 1 - 0.28 * Math.abs(o.turn))} 1) translate(0 35)` }, mk("g", { "clip-path": `url(#${id})` }, g));  // |turn| up to about 1.8: the further turned, the narrower the face
+      face(tg, 0, -35, 11, col, Object.assign({}, o, { look: o.turn }));
+      mk("ellipse", { cx: -Math.sign(o.turn) * Math.min(10, 8.6 * Math.abs(o.turn)), cy: -34, rx: 2, ry: 3, fill: W_[col].f, stroke: INK, "stroke-width": 1 }, g);
+    } else face(g, 0, -35, 11, col, o); },
   r(g, col, c, o) { const F = W_[col].f; felt(g); mk("path", { d: "M-18 0 L-18 -8 L18 -8 L18 0 A18 6 0 0 1 -18 0Z", fill: W_[col].s, stroke: INK, "stroke-width": 1.6 }, g);
     mk("path", { d: "M-14 -8 L-12 -42 L12 -42 L14 -8 Z", fill: F, stroke: INK, "stroke-width": 1.7 }, g);
     mk("path", { d: "M-14 -18 L14 -18 L13 -10 L-13 -10 Z", fill: c.robe, stroke: INK, "stroke-width": 1.3 }, g);

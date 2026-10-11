@@ -23,11 +23,15 @@ while IFS= read -r t; do
   if ! grep -qxF -- "$t" "$MOVES"; then mb=$((mb+1)); bad=$((bad+1)); echo "MOVE BOX NOT A MOVE LINE OF THE PLAY: $t"; fi
 done < <(grep -oE 'movebox: "[^"]*"' "$PANELS" | sed 's/^movebox: "//; s/"$//')
 echo "Checked $mt move boxes, $mb not a move line of the play"
-# Captions (bible 7.12): each must be a stage direction of the play, verbatim.
+# Captions (bible 7.12, 7.14): the text inside the parentheses must be (part of) a stage direction of the play, verbatim.
+# Captions whose wording the author chose, deliberately not verbatim (logged in the bible's Section 15).
+AUTHOR_CAPTIONS=("(Alfil overlegt met de pionnen)")   # panel 4a, bible 7.14
 ct=0; cb=0
 while IFS= read -r t; do
   ct=$((ct+1))
-  if ! grep -qF -- "$t" "$PLAY"; then cb=$((cb+1)); bad=$((bad+1)); echo "CAPTION NOT IN PLAY: $t"; fi
+  inner=$(printf '%s' "$t" | sed 's/^(//; s/)$//')
+  if printf '%s\n' "${AUTHOR_CAPTIONS[@]}" | grep -qxF -- "$t"; then echo "Caption with author's wording (not verbatim, approved): $t"; continue; fi
+  if ! grep -qF -- "($inner" "$PLAY"; then cb=$((cb+1)); bad=$((bad+1)); echo "CAPTION NOT IN PLAY: $t"; fi
 done < <(grep -oE 'caption: "[^"]*"' "$PANELS" | sed 's/^caption: "//; s/"$//')
 echo "Checked $ct captions, $cb not found in the play"
 rm -f "$MOVES"

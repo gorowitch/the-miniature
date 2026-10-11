@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.13
+Version 7.14
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -21,6 +21,7 @@ Version 7.10 adds the pawns' solidarity (author decision): in panels 2b to 5d-2 
 Version 7.11 forbids anger symbols such as the red "popping vein" mark (author feedback on panel 5a; Section 14 and the Common Prompt Block).
 Version 7.12 changes panel 2b (author decision after an experiment in the preview): grumble balloons with chess annotation symbols and the hash sign, each with a short tail to its pawn and clear of all faces, and the stage direction verbatim in a caption box in the lower right corner, the only caption in the cartoon.
 Version 7.13 approves panels 6a, 6b and 6c (author decision): full panel blocks in Section 18 (Scene 6) and manifests 22 to 24 in Section 20.3; panel 6d stays a proposal.
+Version 7.14 changes panel 4a (author decision): Alfil visibly talks to the pawns, the pawns on e2, f2 and g2 turn towards him (f2 seen from behind, e2 and g2 half turned), the camera is raised, and a caption box shows (Alfil overlegt met de pionnen).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -64,7 +65,7 @@ The production process must never:
 - Change the identity of a speaker (Section 19.F).
 - Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
 - Invent chess moves or change the board state (Sections 11 and 12).
-- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with one exception decided by the author: the stage direction of panel 2b in a caption box (Section 18, panel 2b; 7.12); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with exceptions decided by the author: the stage directions of panels 2b and 4a in a caption box (Section 18, panels 2b and 4a; 7.12, 7.14); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
 - Use previously generated images as authority for story content.
 - Fill gaps or resolve contradictions through creative guesswork.
 
@@ -996,6 +997,10 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.12 | Author decision on panel 2b ("it needs to be clear that all pawns are protesting in solidarity"), after an experiment in the SVG preview: (1) the stage direction (hoorbaar gemor vanop de tweede rij) appears verbatim, parentheses included, in a pale-yellow caption box in the lower right corner; this is the only caption in the cartoon; (2) the grumble balloons stay small and separate (a shared balloon with eight tails was tried and rejected) and contain only chess annotation symbols and the hash sign ("you can only mix them with the # symbol"): ??#, ?!, #!?, ??, #?!; (3) each grumble balloon has a short tail to its own pawn and covers no pawn face or crossed arms ("the pawns are the focus"), nor an officer's face or crown. Panel block and manifest 2b, Scene Catalog (Section 17), stage-direction table (Section 19), Strict Adaptation Protocol P.3, Common Prompt Block, Sections 16, 20 and 22 updated. |
 | 7.12 | Claude's reading, open for correction (Appendix B, item 18): the caption exception covers panel 2b only, and the parentheses of the stage direction are kept. |
 | 7.13 | Author decision: panels 6a, 6b and 6c accepted as good enough ("to remove the orange banner"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 6 - Regina's Advice) and as manifests 22 (6a), 23 (6b) and 24 (6c) in Section 20.3; the proposal blocks 6a to 6c are kept and marked as approved, pointing to the new blocks; Script Coverage Map items 12 to 14 updated, item 15 (1. ... d5) marked as a proposal (6d). Panel 6d is not approved. |
+| 7.14 | Author decision on panel 4a ("Alfil is talking to the pawns"): (1) the pawns on e2, f2 and g2 face Alfil: f2 turned completely round and seen from behind, e2 and g2 half turned towards him (the author wrote "g2, f3 and e3"; in State 0 these pawns stand on e2, f2 and g2, read as such); (2) Alfil's posture clearly shows that he talks to them: leaning forward over f2, head bent towards it, mouth open, both hands open; (3) a caption box in the lower right corner with "Alfil overlegt met pionnen", shown in parentheses like the caption of 2b: (Alfil overlegt met pionnen). This is the first part of the stage direction; "en komt terug" is shown by 4b, where Alfil stands upright again. (4) The camera is raised so that Alfil's head and hands are clearly visible above the pawns. Panel block and manifest 4a, Scene Catalog (Section 17) and the caption rules (P.3, Common Prompt Block, Sections 16, 20, 22) updated; Appendix B item 18 partly answered. |
+| 7.14 | Author feedback on panel 4a: "the g and e pawn can be turned a little further". The pawns on g2 and e2 are now turned most of the way towards Alfil: only a narrow side of the face shows, towards the f-file, with the far ear visible (panel block and manifest 4a). |
+| 7.14 | Author decision on panel 4a: "g2 f2 and e2 are completely turned". All three pawns in front of Alfil now face him and are seen from behind; replaces the half turn of g2 and e2 (panel block and manifest 4a, field 13 included). |
+| 7.14 | Author decision on panel 4a: the caption reads "(Alfil overlegt met de pionnen)" ("Make the text: Alfil overlegt met de pionnen"). This deliberately differs from the play, which has "Alfil overlegt met pionnen en komt terug": "de" is added and "en komt terug" left out. The play text in Section 1 is unchanged; only the caption uses the author's wording. Parentheses kept, as in the caption of 2b. Panel block and manifest 4a, Scene Catalog, Appendix A and B updated. |
 
 ---
 
@@ -1010,7 +1015,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel integrated into d4/e4/d5/e5.
 - Boebel (centre hump) check: one smooth, low, rounded hill of the board itself; peak on the shared corner of d4, e4, d5 and e5; about 2 squares across; about as high as a piece's base; the grid lines and colours bend over it.
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
-- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption box of panel 2b (Section 18, Common Prompt Block; 7.12).
+- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
@@ -1101,7 +1106,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Full panel script: Section 18 (approved by the author).
 - Staging constraint: Alfil cannot leave f1 (e2 and g2 block him, as he says in Scene 5). He consults the pawns from his own square by leaning forward over the f2 pawn; "en komt terug" means he turns back to the King. No piece leaves its square.
 - Panels:
-  - 4a: (Alfil overlegt met pionnen en komt terug), first part: Alfil leans over the second rank and confers with the pawns; the pawns face him with their arms crossed (changed in 7.10: no pawn points; the boebel stays visible). No balloons.
+  - 4a: (Alfil overlegt met pionnen en komt terug), first part: Alfil leans over the second rank and talks to the pawns, who turn towards him with their arms crossed (changed in 7.10 and 7.14: no pawn points; the boebel stays visible). No balloons; caption "(Alfil overlegt met de pionnen)" (7.14).
   - 4b: Alfil "Muiterij Sire! ... nen boebel in het bord zit."
   - 4c: Alfil "Als ze de hele tijd bergop ... iets anders moeten spelen." (split in 7.3 into 4c-1 "... hebben deelgenomen." and 4c-2 "Als u de partij vandaag wil winnen ...")
 
@@ -1227,7 +1232,7 @@ Rules:
 - The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, the move box and the caption box when the panel description gives them, and the symbols in grumble balloons when the panel description gives them. When the speech balloons are drawn empty and there is no move box or caption box, the image contains no text at all.
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
-- Caption box (only when the panel description gives one; so far only panel 2b): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
+- Caption box (only when the panel description gives one; so far panels 2b and 4a): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
 - Grumble balloons with symbols (only when the panel description gives them): small jagged balloons with a short tail to the grumbling piece, containing exactly the symbols given (chess annotation symbols such as ??, ?! and !?, and the hash sign #), nothing else; they never cover a face.
 
 ## Scene 1 - Opening Speech
@@ -1279,7 +1284,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Board: the third and fourth ranks in the foreground. The gentle rise in the middle of the board rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
 - Characters: the pawns frown, stubborn and grumbling; none of them moves. The officers look on.
 - Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): five small grumble balloons (jagged outline) beside the heads of the pawns on h2, f2, d2, b2 and e2, each with a short tail to its own pawn. Each balloon contains only chess annotation symbols and the hash sign, exactly: ??#, ?!, #!?, ??, #?! (one string per balloon; no letters, no other symbols). The balloons never cover a pawn's face or crossed arms, nor an officer's face or crown: the pawns are the focus of this panel (author decision in 7.12).
-- Caption (author decision in 7.12, only in this panel): in the lower right corner a pale-yellow rectangle with a thin black outline containing the stage direction verbatim, in italic letters, parentheses included: (hoorbaar gemor vanop de tweede rij)
+- Caption (author decision in 7.12; the first caption in the cartoon, followed by panel 4a in 7.14): in the lower right corner a pale-yellow rectangle with a thin black outline containing the stage direction verbatim, in italic letters, parentheses included: (hoorbaar gemor vanop de tweede rij)
 - No dialogue balloons.
 
 ### Panel 2c
@@ -1324,10 +1329,11 @@ Board position for all panels: the standard starting position (State 0). Nothing
 ### Panel 4a
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Stage direction: (Alfil overlegt met pionnen en komt terug).
-- Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the gentle rise in the middle of the board towards White's second rank (corrected in 7.3 to match the approved sketch). The gentle rise in the middle of the board rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
-- In frame: the white pawns on c2, d2, e2, f2, g2 and h2 facing the camera; behind them the officers on c1 to h1 (rook h1 and bishop c1 may be cut off by the frame edges). Every piece on a square that is in frame is shown.
-- Characters: Alfil (f1) leans far forward over the f2 pawn, his mitre bent towards the pawns on e2, f2 and g2, listening. Those pawns turn towards him, arms crossed; the other pawns look on, arms crossed (author decision in 7.10: all white pawns keep their arms crossed, no pawn points). The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
-- No balloons, no text.
+- Camera: from Black's side, somewhat elevated (above the black side of the board, at about twice the King's height), looking down across the gentle rise in the middle of the board towards White's second rank (corrected in 7.3 to match the approved sketch; raised in 7.14 so that Alfil's head, mitre and open hands are clearly visible above the pawns in front of him). The gentle rise in the middle of the board rises in the foreground (on d4/e4, its near half towards the camera); behind it the white pawns and officers.
+- In frame: the white pawns on c2, d2, e2, f2, g2 and h2 (c2, d2 and h2 facing the camera; e2, f2 and g2 turned completely round towards Alfil, seen from behind); behind them the officers on c1 to h1 (rook h1 and bishop c1 may be cut off by the frame edges). Every piece on a square that is in frame is shown.
+- Characters (author decision in 7.14): Alfil (f1) talks to the pawns: he leans forward over the f2 pawn, head bent down towards it, eyes on the pawns, mouth open, both hands held open in front of him as he explains; he does not leave f1. The pawns face Alfil: the pawns on g2, f2 and e2 have turned completely round towards him and are seen from behind (no faces visible; adjusted by the author in 7.14). All white pawns keep their arms crossed (7.10); no pawn points. The other pawns look on, stubborn. The King and Regina (e1, d1) wait upright, looking at Alfil. Caballo (g1) faces the centre.
+- No balloons.
+- Caption (author decision in 7.14): in the lower right corner a pale-yellow rectangle with a thin black outline containing, in italic letters: (Alfil overlegt met de pionnen) The wording is the author's: "met de pionnen" instead of the play's "met pionnen" (7.14).
 
 ### Panel 4b
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
@@ -1991,7 +1997,7 @@ Derived from the approved panel script (Section 18) and the play (Section 1). Fi
 - Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
 - Every knight faces the centre files; every visible occupied square shows its piece.
 - Lettering: the image generator writes the balloon text exactly as in field 3; every balloon is checked letter for letter afterwards (Section 21). Fallback: empty balloons, text inserted afterwards.
-- Must never appear (in addition to field 13): invented text, captions (except the caption box of panel 2b, 7.12), narrator boxes (the move box of Section 13 is not a caption), coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
+- Must never appear (in addition to field 13): invented text, captions (except the caption boxes of panels 2b and 4a, 7.12 and 7.14), narrator boxes (the move box of Section 13 is not a caption), coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
 
 ### Scene 1 - Opening Speech
 
@@ -2304,23 +2310,23 @@ PANEL 4a   (sequence number 11)
 1.  Scene 4, panel a: Alfil confers with the pawns and turns back.
 2.  Script excerpt:
       (Alfil overlegt met pionnen en komt terug)
-3.  Dialogue: none.
+3.  Dialogue: none. Caption, lower right: "(Alfil overlegt met de pionnen)" (author decision in 7.14: the first part of the stage direction, with "de" added by the author; not verbatim).
 4.  No speaker.
 5.  Visible: the gentle rise in the middle of the board in the foreground; white pawns c2 to h2; officers c1 to h1 (rook h1 and bishop c1 may be cut off).
 6.  Watching: Koning and Regina wait upright, mouths closed, looking at Alfil.
-7.  Camera on Black's side, somewhat elevated, looking down over the gentle rise in the middle of the board at the second rank.
-8.  Alfil: leans far forward over the f2 pawn, listening; does not leave f1.
-    Pawns e2, f2, g2: turned to Alfil, arms crossed; the other pawns look on, arms crossed (author decision in 7.10: no pawn points).
-9.  No balloons.
+7.  Camera on Black's side, elevated (raised in 7.14 so that Alfil's head and hands are clearly above the pawns), looking down over the gentle rise in the middle of the board at the second rank; from this side left to right: h2, g2, f2, e2, d2, c2.
+8.  Alfil: talks to the pawns (author decision in 7.14): leans forward over the f2 pawn, head bent towards it, eyes on the pawns, mouth open, both hands open in front of him; does not leave f1.
+    Pawns facing Alfil (7.14): g2, f2 and e2 turned completely round towards him, seen from behind (their crossed arms are hidden in front of them); no pawn points. The other pawns look on, stubborn, arms crossed.
+9.  No balloons. Caption box in the lower right corner, over the empty board (7.14).
 10. Stage directions: (Alfil overlegt met pionnen en komt terug).
 11. State 0. No move.
 12. Continuity: Alfil is still blocked on f1 (e2, g2). All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
-13. Must not appear: Alfil off f1; any text.
+13. Must not appear: Alfil off f1; any text other than the caption; a pawn pointing; the faces of the g2, f2 and e2 pawns.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 5.
-16. Visual priority: Alfil leaning over the pawns, who face him with their arms crossed; the gentle rise in the middle of the board visible in front of them (changed in 7.10: no pawn points).
-17. Lettering space: none needed.
-18. Balloon-area estimate: 0%.
+16. Visual priority: Alfil talking to the pawns (open mouth, open hands, leaning over f2), the pawns turned towards him with their arms crossed; the gentle rise in the middle of the board visible in front of them (changed in 7.10: no pawn points).
+17. Lettering space: the caption box in the lower right corner.
+18. Balloon-area estimate: about 4% (caption box).
 19. Layout: wide-medium shot, elevated.
 20. Overflow: not applicable.
 21. Continuity requirements: Alfil returns upright in 4b.
@@ -2786,7 +2792,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 
 ## 22.B Dialogue Fidelity
 - Section 1 is the sole authority for dialogue.
-- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption box of panel 2b with its stage direction verbatim; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
+- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption boxes of panels 2b and 4a with their stage directions; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
 - Any uncertainty is flagged in Appendix B, never resolved by guessing.
 
 ## 22.C Speaker Attribution
@@ -2993,6 +2999,7 @@ Kept for history. Do not use for generation.
 - v1.0 to 7.8: "Veteran pawns may have moustaches or short beards" (N2; Section 7, White Pawns; Common Prompt Block). -> Superseded in 7.9 by author decision: the b-pawn and the g-pawn of both armies have a moustache in every image, no other pawn.
 - v7.0 to 7.9, panel 4a: "one or two of them point past the camera towards the gentle rise in the middle of the board" (panel block and manifest 4a). -> Superseded in 7.10 by author decision: all white pawns keep their arms crossed in panels 2b to 5d-2; no pawn points.
 - v7.0 to 7.11, panel 2b: "small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters)" and no caption (panel block, manifest, Scene Catalog, stage-direction table). -> Superseded in 7.12 by author decision: grumble balloons with chess annotation symbols and #, with short tails, and the stage direction verbatim in a caption box.
+- v7.0 to 7.13, panel 4a: Alfil "listening", the pawns e2, f2, g2 facing the camera, "no balloons, no text", camera "somewhat elevated" (panel block, manifest 4a, Scene Catalog). -> Superseded in 7.14 by author decision: Alfil talks to the pawns, f2 seen from behind, e2 and g2 half turned towards him, camera raised, caption (Alfil overlegt met de pionnen).
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -3015,7 +3022,7 @@ Items that need a decision from the author.
 15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
-18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box. Does this apply only to 2b (current reading), or to every stage direction in the play, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
+18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box; in 7.14 the author added one to panel 4a as well, with the first part of its stage direction: (Alfil overlegt met de pionnen). Still open: do the other stage directions get one too, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
 
 ---
 
@@ -3043,3 +3050,4 @@ Items that need a decision from the author.
 | 7.11 | - | Anger symbols (red popping-vein mark) forbidden after author feedback on panel 5a; removed from the preview. |
 | 7.12 | - | Panel 2b: grumble balloons with chess annotation symbols and #, short tails, faces clear; stage direction verbatim in a caption box (only caption in the cartoon); open question 18. |
 | 7.13 | - | Panels 6a, 6b, 6c approved: panel blocks (Section 18, Scene 6) and manifests 22 to 24 (Section 20.3). |
+| 7.14 | - | Panel 4a: Alfil talks to the pawns, who turn towards him; camera raised; caption (Alfil overlegt met de pionnen). |
