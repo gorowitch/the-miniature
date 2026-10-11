@@ -20,7 +20,9 @@ The preview comic lives in `comic/`:
   cast: { koning: {...}, e2: {...} },                                  // overrides by role or by square
   beside: [{ id: "xh7", ch: "p", at: [8.95, 7.3] }, { id: "xQ", ch: "Q", role: "regina", at: [9.05, 6.1] }],  // captured pieces next to the board
   fx: [{ burst: "koning" }, { move: ["g1", "h3"] }],                   // speed lines behind a role; dashed move streak
-  grumble: ["h2", "f2"],                                               // wordless grumble balloons (squares)
+  grumble: ["h2", "f2"],                                               // small grumble balloons (squares), placed automatically clear of faces, with a short tail
+  grumbleText: ["??#", "?!"],                                          // optional: symbols per grumble balloon (bible 7.12: only chess annotation symbols and #); omitted = wavy scribble
+  caption: "(hoorbaar gemor vanop de tweede rij)",                     // optional: stage direction verbatim in a caption box, lower right (bible 7.12: panel 2b only)
   movebox: "3. Ph3",                                                   // only in the panel where a move is played: verbatim move line of the play (bible Section 13, Move Box)
   balloons: [{ who: "koning", text: "...", shout: true, w: 360, x: 470, y: 20, noTail: true }] }
 ```

@@ -23,6 +23,13 @@ while IFS= read -r t; do
   if ! grep -qxF -- "$t" "$MOVES"; then mb=$((mb+1)); bad=$((bad+1)); echo "MOVE BOX NOT A MOVE LINE OF THE PLAY: $t"; fi
 done < <(grep -oE 'movebox: "[^"]*"' "$PANELS" | sed 's/^movebox: "//; s/"$//')
 echo "Checked $mt move boxes, $mb not a move line of the play"
+# Captions (bible 7.12): each must be a stage direction of the play, verbatim.
+ct=0; cb=0
+while IFS= read -r t; do
+  ct=$((ct+1))
+  if ! grep -qF -- "$t" "$PLAY"; then cb=$((cb+1)); bad=$((bad+1)); echo "CAPTION NOT IN PLAY: $t"; fi
+done < <(grep -oE 'caption: "[^"]*"' "$PANELS" | sed 's/^caption: "//; s/"$//')
+echo "Checked $ct captions, $cb not found in the play"
 rm -f "$MOVES"
 grep -q 'â€\|Ã©\|Ã«' "$PANELS" && echo "WARNING: mojibake (double-encoded UTF-8) in $PANELS"
 rm -f "$PLAY"

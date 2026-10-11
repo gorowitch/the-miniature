@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.11
+Version 7.12
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -19,6 +19,7 @@ Version 7.8 adds the move box (author decision): every panel in which a move is 
 Version 7.9 fixes which pawns have a moustache (author decision): the b-pawn and the g-pawn of both armies, in every image, and no other pawn (Section 7, White Pawns and Black Pawns).
 Version 7.10 adds the pawns' solidarity (author decision): in panels 2b to 5d-2 every white pawn in frame stands with its arms crossed (Section 7, White Pawns; Sections 18 and 20.3).
 Version 7.11 forbids anger symbols such as the red "popping vein" mark (author feedback on panel 5a; Section 14 and the Common Prompt Block).
+Version 7.12 changes panel 2b (author decision after an experiment in the preview): grumble balloons with chess annotation symbols and the hash sign, each with a short tail to its pawn and clear of all faces, and the stage direction verbatim in a caption box in the lower right corner, the only caption in the cartoon.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -62,7 +63,7 @@ The production process must never:
 - Change the identity of a speaker (Section 19.F).
 - Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
 - Invent chess moves or change the board state (Sections 11 and 12).
-- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with one exception decided by the author: the stage direction of panel 2b in a caption box (Section 18, panel 2b; 7.12); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
 - Use previously generated images as authority for story content.
 - Fill gaps or resolve contradictions through creative guesswork.
 
@@ -991,6 +992,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.10 | Consequence in panel 4a: the pawns on e2, f2 and g2 no longer point at the gentle rise in the middle of the board; they turn to Alfil with their arms crossed (panel block, manifest fields 8 and 16 of 4a, and the Scene Catalog in Section 17). The rise stays visible in the frame. |
 | 7.10 | Author decision: in the close-ups where only the pawns' heads are in frame (2c, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c, 5d-1) the approved framing stays; the camera is not lowered to show the crossed arms ("leave the images where there are no arms in sight as-is"). Section 7, White Pawns. |
 | 7.11 | Author feedback on panel 5a: the four red curved strokes on the King's head (a cartoon "popping vein" anger symbol, added in the SVG preview, never part of the script) are unwanted. Anger symbols are now forbidden (Section 14, Common Prompt Block); anger is shown by the face, the gesture and the shout balloon. Removed from the preview panels 5a, 9c and 14a and from the proposal blocks 9c and 14a ("anger mark"). |
+| 7.12 | Author decision on panel 2b ("it needs to be clear that all pawns are protesting in solidarity"), after an experiment in the SVG preview: (1) the stage direction (hoorbaar gemor vanop de tweede rij) appears verbatim, parentheses included, in a pale-yellow caption box in the lower right corner; this is the only caption in the cartoon; (2) the grumble balloons stay small and separate (a shared balloon with eight tails was tried and rejected) and contain only chess annotation symbols and the hash sign ("you can only mix them with the # symbol"): ??#, ?!, #!?, ??, #?!; (3) each grumble balloon has a short tail to its own pawn and covers no pawn face or crossed arms ("the pawns are the focus"), nor an officer's face or crown. Panel block and manifest 2b, Scene Catalog (Section 17), stage-direction table (Section 19), Strict Adaptation Protocol P.3, Common Prompt Block, Sections 16, 20 and 22 updated. |
+| 7.12 | Claude's reading, open for correction (Appendix B, item 18): the caption exception covers panel 2b only, and the parentheses of the stage direction are kept. |
 
 ---
 
@@ -1005,7 +1008,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel integrated into d4/e4/d5/e5.
 - Boebel (centre hump) check: one smooth, low, rounded hill of the board itself; peak on the shared corner of d4, e4, d5 and e5; about 2 squares across; about as high as a piece's base; the grid lines and colours bend over it.
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
-- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons and, in a panel in which a move is played, in the move box (Section 18, Common Prompt Block; Section 13, Move Box).
+- No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption box of panel 2b (Section 18, Common Prompt Block; 7.12).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
@@ -1067,7 +1070,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
   - 2b: (hoorbaar gemor vanop de tweede rij)
     - Camera: from Black's side, slightly off-centre, at an angle that keeps as many pawns as possible in the image: all eight pawns in frame, the officers behind them.
     - Wide panel format (landscape) to avoid empty background above the pieces.
-    - The grumbling is shown with wordless scribble balloons and grumpy faces; the e2 pawn does not move.
+    - The grumbling is shown with small grumble balloons containing chess annotation symbols (??, ?!, !?) and the hash sign, grumpy faces, and the stage direction verbatim in a caption box (changed in 7.12); the e2 pawn does not move.
     - Only half the board is in frame: up to the fourth rank.
     - Part of the boebel (on d4/e4) is visible in the image, in the foreground: seen from Black's side, rank 4 is the near edge of the frame.
   - 2c: Regina "Awel ? Waarom gebeurt er niks ?"
@@ -1219,9 +1222,11 @@ Rules:
 - A balloon marked as a shout balloon has a jagged outline; all other balloons are round.
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
-- The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, and the move box when the panel description gives one. When the speech balloons are drawn empty and there is no move box, the image contains no text at all.
+- The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, the move box and the caption box when the panel description gives them, and the symbols in grumble balloons when the panel description gives them. When the speech balloons are drawn empty and there is no move box or caption box, the image contains no text at all.
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
+- Caption box (only when the panel description gives one; so far only panel 2b): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
+- Grumble balloons with symbols (only when the panel description gives them): small jagged balloons with a short tail to the grumbling piece, containing exactly the symbols given (chess annotation symbols such as ??, ?! and !?, and the hash sign #), nothing else; they never cover a face.
 
 ## Scene 1 - Opening Speech
 Board position for all panels: the standard starting position (State 0). Nothing has moved.
@@ -1271,7 +1276,8 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - In frame: all eight white pawns (a2 to h2) in one row across the frame, all sixteen white pieces with the officers standing behind the pawns. Caballo (g1) and the b1 knight face the centre.
 - Board: the third and fourth ranks in the foreground. The gentle rise in the middle of the board rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
 - Characters: the pawns frown, stubborn and grumbling; none of them moves. The officers look on.
-- Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters) beside several pawn heads, placed so they do not cover the officers' faces.
+- Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): five small grumble balloons (jagged outline) beside the heads of the pawns on h2, f2, d2, b2 and e2, each with a short tail to its own pawn. Each balloon contains only chess annotation symbols and the hash sign, exactly: ??#, ?!, #!?, ??, #?! (one string per balloon; no letters, no other symbols). The balloons never cover a pawn's face or crossed arms, nor an officer's face or crown: the pawns are the focus of this panel (author decision in 7.12).
+- Caption (author decision in 7.12, only in this panel): in the lower right corner a pale-yellow rectangle with a thin black outline containing the stage direction verbatim, in italic letters, parentheses included: (hoorbaar gemor vanop de tweede rij)
 - No dialogue balloons.
 
 ### Panel 2c
@@ -1866,7 +1872,7 @@ Use these names exactly, in manifests and prompts:
 | Regina | White Queen | d1 | Captured on h5 by 6...gxh5; afterwards beside the board. |
 | Caballo | White knight (the one that starts on g1) | g1 | The b1 knight is a different, unnamed piece. |
 | "Dieje van den overkant" | Black King | e8 | Never speaks in the script; his draw offer is reported by Caballo. |
-| (hoorbaar gemor vanop de tweede rij) | White pawns | second rank | No words: shown as wordless grumble balloons (panel 2b). |
+| (hoorbaar gemor vanop de tweede rij) | White pawns | second rank | No words: shown as grumble balloons with chess annotation symbols and #, and the stage direction verbatim in a caption box (panel 2b; author decision in 7.12). |
 
 No other character speaks in the play.
 
@@ -1961,7 +1967,7 @@ Derived from the approved panel script (Section 18) and the play (Section 1). Fi
 - Costumes: officers in full costume, pawns in soldier uniforms (Section 5).
 - Every knight faces the centre files; every visible occupied square shows its piece.
 - Lettering: the image generator writes the balloon text exactly as in field 3; every balloon is checked letter for letter afterwards (Section 21). Fallback: empty balloons, text inserted afterwards.
-- Must never appear (in addition to field 13): invented text, captions, narrator boxes (the move box of Section 13 is not a caption), coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
+- Must never appear (in addition to field 13): invented text, captions (except the caption box of panel 2b, 7.12), narrator boxes (the move box of Section 13 is not a caption), coordinate labels, people, moved pieces, an explicit cola stain, an explicit greasy spot.
 
 ### Scene 1 - Opening Speech
 
@@ -2123,21 +2129,21 @@ PANEL 2b   (sequence number 6)
 1.  Scene 2, panel b: the pawns grumble and do not move.
 2.  Script excerpt:
       (hoorbaar gemor vanop de tweede rij)
-3.  Dialogue: none (wordless grumble balloons only).
+3.  Dialogue: none. Grumble balloons with chess symbols only: "??#", "?!", "#!?", "??", "#?!". Caption, lower right, verbatim: "(hoorbaar gemor vanop de tweede rij)" (author decision in 7.12).
 4.  No speaker; the white pawns grumble.
 5.  Visible: all eight white pawns and all eight white officers; the third and fourth ranks with the gentle rise in the middle of the board in the foreground; no black pieces.
 6.  Listening: the officers look on, mouths closed.
 7.  Camera on Black's side, slightly off-centre and elevated; wide landscape panel; the frame ends at the fourth rank.
 8.  Pawns: frowning, stubborn, grumbling (mouths in a wavy line); none moves.
-9.  Small wordless grumble balloons (jagged outline, wavy scribble, no letters) beside several pawn heads; they do not cover officers' faces.
+9.  Five small grumble balloons (jagged outline) beside the heads of h2, f2, d2, b2 and e2, each with a short tail to its own pawn, containing "??#", "?!", "#!?", "??", "#?!"; they cover no pawn face, no crossed arms, no officer face or crown. Caption box lower right (author decision in 7.12).
 10. Stage directions: (hoorbaar gemor vanop de tweede rij).
 11. State 0. No move.
 12. Continuity: right after the order in 2a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
-13. Must not appear: letters or words in the grumble balloons; a pawn off its square.
+13. Must not appear: letters or words in the grumble balloons; symbols other than ? ! # in them; any other caption; a pawn off its square.
 14. Dialogue length: none.
 15. Segmentation: the stage direction after speech 3.
 16. Visual priority: the row of grumbling pawns and the gentle rise in the middle of the board in front of them.
-17. Lettering space: small grumble balloons beside the pawn heads.
+17. Lettering space: small grumble balloons beside the pawn heads; the caption box in the lower right corner, over the empty board.
 18. Balloon-area estimate: about 5%.
 19. Layout: wide shot (Section 23.D); landscape format.
 20. Overflow: not applicable.
@@ -2665,7 +2671,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 
 ## 22.B Dialogue Fidelity
 - Section 1 is the sole authority for dialogue.
-- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
+- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption box of panel 2b with its stage direction verbatim; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
 - Any uncertainty is flagged in Appendix B, never resolved by guessing.
 
 ## 22.C Speaker Attribution
@@ -2871,6 +2877,7 @@ Kept for history. Do not use for generation.
 - Up to 7.7: "This cartoon has no captions and no narration; chess notation appears only where it is part of the dialogue" (Strict Adaptation Protocol P.3, Section 16, Common Prompt Block, proposal move panels: "no caption, no notation in the image"). -> Superseded in 7.8 by author decision: a panel in which a move is played shows the move verbatim in a move box (Section 13, Move Box). Captions and narration remain forbidden.
 - v1.0 to 7.8: "Veteran pawns may have moustaches or short beards" (N2; Section 7, White Pawns; Common Prompt Block). -> Superseded in 7.9 by author decision: the b-pawn and the g-pawn of both armies have a moustache in every image, no other pawn.
 - v7.0 to 7.9, panel 4a: "one or two of them point past the camera towards the gentle rise in the middle of the board" (panel block and manifest 4a). -> Superseded in 7.10 by author decision: all white pawns keep their arms crossed in panels 2b to 5d-2; no pawn points.
+- v7.0 to 7.11, panel 2b: "small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters)" and no caption (panel block, manifest, Scene Catalog, stage-direction table). -> Superseded in 7.12 by author decision: grumble balloons with chess annotation symbols and #, with short tails, and the stage direction verbatim in a caption box.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -2893,6 +2900,7 @@ Items that need a decision from the author.
 15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
+18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box. Does this apply only to 2b (current reading), or to every stage direction in the play, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
 
 ---
 
@@ -2918,3 +2926,4 @@ Items that need a decision from the author.
 | 7.9 | - | Pawn moustache rule (author decision): b-pawn and g-pawn of both armies, every image; open question 17. |
 | 7.10 | - | Pawn solidarity (author decision): all white pawns arms crossed in panels 2b to 5d-2; panel 4a without pointing. |
 | 7.11 | - | Anger symbols (red popping-vein mark) forbidden after author feedback on panel 5a; removed from the preview. |
+| 7.12 | - | Panel 2b: grumble balloons with chess annotation symbols and #, short tails, faces clear; stage direction verbatim in a caption box (only caption in the cartoon); open question 18. |

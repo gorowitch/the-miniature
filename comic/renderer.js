@@ -296,8 +296,30 @@ function renderPanel(svg, P, opts) {
     if (sp && !b.noTail) { const tx = sp.mouth[0], mx = Math.max(bx + 30, Math.min(bx + bw - 30, tx)); mk("path", { d: `M${mx - 12} ${by + bh - (b.shout ? 10 : 2)} L${mx + 12} ${by + bh - (b.shout ? 10 : 2)}`, stroke: "#fffdf5", "stroke-width": 8 }, g); }
     wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: by + (b.shout ? 23 : 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
   });
-  // grumble balloons (wordless)
-  for (const gq of (P.grumble || [])) { const sp = placed.find(p => p.sq === gq); if (!sp) continue; const r = Math.max(12, Math.min(26, 7 * sp.s)), cx = sp.head[0] + r * 1.6, cy = sp.head[1] - r * .9; let d = ""; for (let k = 0; k <= 24; k++) { const a = k / 24 * Math.PI * 2, rr = r * (k % 2 ? 1 : 1.2); d += (k ? "L" : "M") + (cx + Math.cos(a) * rr * 1.35).toFixed(1) + " " + (cy + Math.sin(a) * rr).toFixed(1); } const g = mk("g", {}, root); mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 1.6 }, g); mk("path", { d: `M${cx - r * .85} ${cy} c${r * .2} ${-r * .55} ${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0`, stroke: INK, "stroke-width": 2, fill: "none" }, g); }
+  // grumble balloons: a wavy scribble, or grumble symbols (P.grumbleText, e.g. "#@!%&*!") in a wider balloon
+  // Placement: try spots around the grumbler's head and take the one that covers the least of the pawns' faces and
+  // crossed arms (weight 4), the officers' faces (weight 3) and the earlier grumble balloons (weight 3); prefer upward spots.
+  const keepClear = placed.filter(p => p.s > 0.3 && !p.o.back).map(p => { const hw = (p.t === "k" ? 17 : p.t === "n" ? 20 : 15) * p.s;
+    return { sq: p.sq, w: p.t === "p" ? 4 : 3, box: [p.head[0] - hw, p.top - (p.t === "k" ? 22 : 4) * Math.max(1, p.s), p.head[0] + hw, p.t === "p" ? p.y - 12 * p.s : p.mouth[1] + 6 * p.s] }; });
+  const overlap = (a, b) => Math.max(0, Math.min(a[2], b[2]) - Math.max(a[0], b[0])) * Math.max(0, Math.min(a[3], b[3]) - Math.max(a[1], b[1]));
+  const grumbleBoxes = [];
+  for (const gq of (P.grumble || [])) { const sp = placed.find(p => p.sq === gq); if (!sp) continue; const r = Math.max(12, Math.min(26, 7 * sp.s)), gt = Array.isArray(P.grumbleText) ? P.grumbleText[grumbleBoxes.length % P.grumbleText.length] : P.grumbleText, gfs = r * 1.05, sx = gt ? Math.max(1.35, gt.length * gfs * 0.62 / (2 * r)) : 1.35;
+    const hw = r * 1.2 * sx, hh = r * 1.2, hr = HEAD[sp.t][1] * sp.s; let best = null;
+    for (const ring of [1, 1.5, 2]) for (const deg of [-90, -65, -115, -40, -140, -15, -165, 0, 180]) { const a = deg * Math.PI / 180, dist = (Math.abs(Math.cos(a)) * (hr + hw) + Math.abs(Math.sin(a)) * (hr + hh)) * ring + 6;
+      const x = sp.head[0] + Math.cos(a) * dist, y = sp.head[1] + Math.sin(a) * dist, bx = [x - hw, y - hh, x + hw, y + hh];
+      let tailHit = 0; for (let t = 0.3; t < 0.95; t += 0.08) { const px = x + (sp.head[0] - x) * t, py = y + (sp.head[1] - y) * t; for (const k of keepClear) if (k.sq !== gq && px > k.box[0] && px < k.box[2] && py > k.box[1] && py < k.box[3]) tailHit += k.w * 300; }
+      let score = tailHit + keepClear.reduce((s, k) => s + k.w * overlap(bx, k.box), 0) + grumbleBoxes.reduce((s, b) => s + 3 * overlap(bx, b), 0) + Math.abs(deg + 90) * 0.5 + (ring - 1) * 60;
+      if (bx[0] < 12 || bx[2] > W0 - 12 || bx[1] < 12) score += 1e6;
+      if (!best || score < best.score) best = { score, x, y, bx }; }
+    grumbleBoxes.push(best.bx); const cx = best.x, cy = best.y; let d = "";
+    { const ang = Math.atan2(sp.head[1] - cy, sp.head[0] - cx), tipD = Math.hypot(sp.head[0] - cx, sp.head[1] - cy) - hr * 1.1, tx = cx + Math.cos(ang) * tipD, ty = cy + Math.sin(ang) * tipD, nx = -Math.sin(ang) * r * .35, ny = Math.cos(ang) * r * .35;  // short tail to the grumbling pawn
+      mk("path", { d: `M${cx + nx} ${cy + ny} L${tx} ${ty} L${cx - nx} ${cy - ny} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 1.6, "stroke-linejoin": "round" }, root); } for (let k = 0; k <= 24; k++) { const a = k / 24 * Math.PI * 2, rr = r * (k % 2 ? 1 : 1.2); d += (k ? "L" : "M") + (cx + Math.cos(a) * rr * sx).toFixed(1) + " " + (cy + Math.sin(a) * rr).toFixed(1); } const g = mk("g", {}, root); mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 1.6 }, g);
+    if (gt) { const e = mk("text", { x: cx, y: cy + gfs * 0.36, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": gfs, fill: INK }, g); e.textContent = gt; }
+    else mk("path", { d: `M${cx - r * .85} ${cy} c${r * .2} ${-r * .55} ${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0 s${r * .35} ${r * .55} ${r * .55} 0`, stroke: INK, "stroke-width": 2, fill: "none" }, g); }
+  // caption: a rectangular text area in the lower right corner (stage direction, verbatim from the play)
+  if (P.caption) { const cfs = 24, wr = wrap(P.caption, cfs, 640), bw = wr.w + 36, lh = cfs * 1.2, bh = wr.lines.length * lh + 22, bx = W0 - 24 - bw, by = H - 24 - bh;
+    mk("rect", { x: bx, y: by, width: bw, height: bh, fill: "#fff6c8", stroke: INK, "stroke-width": 2.5 }, svg);
+    wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: by + 11 + cfs + j * lh - 4, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-style": "italic", "font-size": cfs, fill: INK }, svg); e.textContent = l; }); }
   // move box (bible Section 13, Move Box): the played move, verbatim, bold, in a small white rectangle bottom-left
   if (P.movebox) { const fs = 32, bw = Math.round(P.movebox.length * fs * 0.5 + 34), bh = fs + 20, bx = 24, by = H - 24 - bh;
     mk("rect", { x: bx, y: by, width: bw, height: bh, fill: "#ffffff", stroke: INK, "stroke-width": 2.5 }, svg);
