@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.23
+Version 7.24
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -31,6 +31,7 @@ Version 7.20 reframes the proposal panel 9b (author feedback): camera beside the
 Version 7.21 makes the black pieces in panel 1c look a little scared (author decision); the Black King stays calm.
 Version 7.22 makes the black pieces in panel 3a-1 look a little surprised (author decision); the Black King stays calm.
 Version 7.23 makes the black army in panel 3b visibly amused (author decision); the Black King stays calm and does not laugh. New expression "amused" in the SVG preview.
+Version 7.24 zooms panels 4c-1 and 4c-2 out a little for more room for the balloon above Alfil (author feedback).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1021,6 +1022,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.21 | Author decision on the approved panel 1c: "make the black pieces look a little scared". The 15 black pieces other than the Black King now look a little scared (raised eyebrows, wide eyes, small wobbly mouths, mouths closed); panel block and manifest 1c (fields 8 and 13) updated. The Black King keeps his calm, composed expression, because his dossier (Section 7) and panel 3b describe him as calm and patient (Claude's reading, open for correction: Appendix B, item 19). |
 | 7.22 | Author decision on the approved panel 3a-1: "I want the black pieces look a little surprised". The 15 black pieces other than the Black King now look a little surprised (high arched eyebrows, wide round eyes, mouths closed); panel block and manifest 3a-1 (fields 8 and 13) updated. The Black King stays calm, as in 1c (Appendix B, item 19, now covering both panels). |
 | 7.23 | Author decision on the approved panel 3b: "the black army realises that white has some kind of trouble and looks visibly amused". The black pieces other than the Black King now laugh: broad grins with teeth showing, eyes squeezed shut, eyebrows raised. Panel block and manifest 3b (fields 6 and 8) updated. The Black King stays calm and does not laugh: the approved panel block 3b says so explicitly ("He is not laughing") and field 13 forbids a laughing Black King; this keeps the irony of the King's line ("zit op dit moment waarschijnlijk al met ons te lachen"): the troops laugh, their King does not (Appendix B, item 19, now also covering 3b). The SVG preview got a new expression "amused". |
+| 7.24 | Author feedback on the approved panels 4c-1 and 4c-2: "zoom out a little so there is more room for the text balloon above Alfil". Both panels zoomed out a little, with the characters lower in the frame, so the balloon no longer covers the tip of Alfil's mitre. Then: "both images can be shifted up a little so we see the entire face of the pawns": the picture shifted up, zoomed out slightly more, and the balloon of 4c-1 made wider (four lines instead of five) so it stays clear of the mitre. Then: "this is too much, so unshift a little; just the faces of the pawns in sight would do; the first rank must be completely in sight": shifted back down a little, so the first rank is completely in sight and only the pawns' faces show at the bottom edge. Camera line of panel block 4c-1 (4c-2 uses the same camera) and manifest fields 7 (4c-1) and 9 (both) updated. |
 
 ---
 
@@ -1366,7 +1368,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 ### Panel 4c-1
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 Split from panel 4c in 7.3 (author decision, Section 23.B).
-- Camera: from Black's side, slightly closer than 4b, the same two characters; the King now more in focus.
+- Camera: from Black's side, on the same two characters, the King more in focus; zoomed out a little and with the characters lower in the frame (author feedback in 7.24), so there is clear room for the balloon above Alfil's mitre: Caballo (g1), Alfil (f1), the King (e1) and Regina (d1) all fully in view, the first rank completely in sight, and the faces of the pawns in front of them (h2, g2, f2, e2, d2) visible at the bottom edge (their bodies cut off).
 - Characters: Alfil, earnest, mouth open, looks at the King while gesturing with an open hand towards the centre of the board (towards the gentle rise in the middle of the board, "bergop"). The King looks back at Alfil, mouth closed, a frown forming: the bad news is sinking in.
 - Balloon (Alfil): Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen.
 
@@ -2468,10 +2470,10 @@ PANEL 4c-1   (sequence number 13)
 4.  Balloon 1 -> Alfil
 5.  Visible: Alfil f1 and Koning e1; Caballo and Regina partly at the edges; pawn heads at the bottom.
 6.  Listening: Koning, mouth closed, a frown forming.
-7.  Camera on Black's side, slightly closer than 4b; the King more in focus.
+7.  Camera on Black's side, on Alfil and the King, the King more in focus; zoomed out a little, characters lower in the frame (author, 7.24); Caballo, Alfil, the King and Regina fully in view; the first rank completely in sight; the faces of the pawns in front visible at the bottom edge.
 8.  Alfil: mouth open, earnest, open hand towards the centre of the board ("bergop"); looks at Koning.
     Koning: mouth closed; looks at Alfil.
-9.  Balloon 1 top left; tail to Alfil's mouth.
+9.  Balloon 1 top left, with clear room between the balloon and the tip of Alfil's mitre (7.24); tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
 12. Continuity: after 4b; the King's surprise turns into worry. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
@@ -2501,7 +2503,7 @@ PANEL 4c-2   (sequence number 14)
 7.  The same camera as 4c-1.
 8.  Alfil: mouth open, both hands open; looks at Koning.
     Koning: looks at Alfil.
-9.  Balloon 1 top left; tail to Alfil's mouth.
+9.  Balloon 1 top left, with clear room between the balloon and the tip of Alfil's mitre (7.24); tail to Alfil's mouth.
 10. Stage directions: none.
 11. State 0. No move.
 12. Continuity: the King's anger bursts out in 5a. All white pawns in frame: arms crossed, in solidarity with the mutiny (author decision in 7.10).
@@ -3425,3 +3427,4 @@ Items that need a decision from the author.
 | 7.21 | - | Panel 1c: the black pieces a little scared, the Black King calm; open question 19. |
 | 7.22 | - | Panel 3a-1: the black pieces a little surprised, the Black King calm. |
 | 7.23 | - | Panel 3b: the black army visibly amused, the Black King calm; new preview expression "amused". |
+| 7.24 | - | Panels 4c-1 and 4c-2 zoomed out a little; room for the balloon above Alfil. |

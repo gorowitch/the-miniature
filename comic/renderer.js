@@ -282,7 +282,7 @@ function renderPanel(svg, P, opts) {
   let nextX = 16;
   bal.forEach((b, i) => {
     const sp = placed.find(p => p.role === b.who || p.sq === b.who);
-    const maxW = Math.min(W0 * 0.46, b.w || 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36));
+    const maxW = b.w ? Math.min(W0 * 0.7, b.w) : Math.min(W0 * 0.46, 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36));
     const bw = wr.w + (b.shout ? 76 : 44), lh = fs * 1.18, bh = wr.lines.length * lh + (b.shout ? 46 : 26);
     const by = b.y !== undefined ? b.y : 14;
     let bx;

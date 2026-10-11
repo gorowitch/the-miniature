@@ -49,10 +49,10 @@ window.PANELS = [
 { id: "4b", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.25, h: 1.4, th: 1.0, f: 760 }),
   cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "raise-l" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "alfil" } },
   balloons: [{ who: "alfil", text: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit." }] },
-{ id: "4c-1", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.0, f: 780 }),
+{ id: "4c-1", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
   cast: { alfil: { talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "worried", lookAt: "alfil" } },
-  balloons: [{ who: "alfil", text: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen." }] },
-{ id: "4c-2", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.0, f: 780 }),
+  balloons: [{ who: "alfil", w: 470, text: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen." }] },
+{ id: "4c-2", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
   cast: { alfil: { talk: true, lookAt: "koning", gest: "both-open" }, koning: { expr: "angry", flush: true, lookAt: "alfil" } },
   balloons: [{ who: "alfil", text: "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." }] },
 // ---------------------------------------------------------------- Scene 5 - The King's Outburst (approved)
@@ -193,7 +193,7 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.15, f: 820 }), fx: [{ burst: "koning" }],
   cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
-  balloons: [{ who: "koning", shout: true, w: 400, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
+  balloons: [{ who: "koning", shout: true, w: 368, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
 { id: "14b", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: KING_ALFIL,
   cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "surprised", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets." }] },
