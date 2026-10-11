@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.1
+Version 7.2
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -9,6 +9,7 @@ Single canonical source of truth for all comic, cartoon, illustration, character
 This document is the cumulative canon established so far.
 Version 7.0 is a consolidation: it restores content that was lost between versions 5.0 and 6.0 and merges every earlier version (1.0 through 6.0) into one file.
 Version 7.1 adds the dialogue attribution specification, the panel manifest standard, the artwork/lettering workflow and the completeness checklist (Sections 19 to 22). Nothing from 7.0 was removed.
+Version 7.2 adds dialogue density and visual composition rules (Section 23), eight manifest fields (Section 20) and density steps in the workflow (Section 21). Nothing from 7.1 was removed.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -659,6 +660,12 @@ If a panel contains an incorrect position, the panel is wrong.
 - Artwork and lettering are separate steps (Section 21): prefer empty balloons in the generated image, with the original text typeset afterwards.
 - Priority order when rules conflict: source fidelity, speaker attribution, visual continuity, artistic composition (Section 19).
 
+## Dialogue Density (added in 7.2)
+- The story determines the number of panels; the space in a panel never determines how much of the story is shown (Section 23).
+- Speech balloons take roughly 25 to 30% of a panel in total, where practical, and never cover faces, gestures, props or relevant board details.
+- Long speeches are divided over consecutive panels at natural boundaries, every word kept in order (Section 23.B).
+- Full priority order: Section 23.0.
+
 ## Script Fidelity Rule
 - What is shown visually must be in the script (Section 1).
 - Do not invent visual content that is not in the script: no extra objects, props, settings, events or actions.
@@ -705,6 +712,9 @@ NEVER:
 - One balloon holding lines of different speakers (Section 19.B).
 - Paraphrased, shortened or reordered dialogue (Section 20). Whether translations are allowed is still open (Appendix B, item 7).
 - Dialogue omitted to simplify a panel (Section 22.A).
+- A speech balloon that takes up most of a panel, or covers faces, important gestures, props or relevant board details (Section 23.A and 23.C).
+- Lettering shrunk until it is hard to read, or text squeezed into narrow or distorted balloons (Section 23.C).
+- Dialogue shortened, reworded or dropped to fit a panel or to reduce the page count (Section 23).
 
 ---
 
@@ -768,6 +778,10 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.1 | Added Section 22 (Completeness and Fidelity Checklist) with a Script Coverage Map of all 45 items of Section 1. |
 | 7.1 | Priority order recorded: source fidelity, speaker attribution, visual continuity, artistic composition. |
 | 7.1 | Cross-references added in Sections 13, 14, 16, 17 and 18; nothing removed. |
+| 7.2 | Added Section 23 (Dialogue Density and Visual Composition): the story determines the panel count; balloons roughly 25 to 30% of a panel; long speeches split at natural boundaries; balloon layout; shot types; reserved lettering space; acceptance checklist; density review of existing panels. Reason: generated panels were dominated by enormous speech balloons. |
+| 7.2 | Priority order extended (Section 23.0): complete story and exact dialogue, speaker attribution, readable lettering, visual continuity, composition, fewest panels. Chess positions and canon are hard requirements, never traded away. |
+| 7.2 | Panel manifest extended with fields 14 to 21 (dialogue length, segmentation, visual priority, lettering space, balloon-area estimate, layout strategy, overflow action, continuity); worked example 5b extended. |
+| 7.2 | Workflow (Section 21) extended with density steps in all four stages; cross-references in Sections 13, 14, 16, 18, 19, 20 and 22. Nothing removed. |
 
 ---
 
@@ -794,6 +808,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Listeners have closed mouths and listening poses; no listener appears to speak (Section 19.C).
 - The page matches its panel manifests (Section 20).
 - Every line of Section 1 is accounted for in the Script Coverage Map (Section 22.E).
+- Balloons do not overwhelm the artwork; faces, gestures, props and board details stay visible; text is readable (Section 23.G).
 
 ---
 
@@ -983,6 +998,7 @@ Rules:
 - Speech balloons contain exactly the text given, nothing else.
 - The speaker named in each panel block owns the balloon: its tail points to that character's mouth. All other characters listen with closed mouths unless the panel block says otherwise (Section 19).
 - Preferred: draw the speech balloons empty, with no letters, placed as described; the original text is typeset afterwards (Section 21).
+- Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
 
 ## Scene 1 - Opening Speech
@@ -1112,6 +1128,7 @@ Priority order (applies whenever rules conflict):
 3. Visual continuity: canon, chess positions, board details (Sections 3 to 12).
 4. Artistic composition: camera, framing, layout.
 If composition conflicts with the script or with correct speaker attribution, the script and attribution win: change the composition or split the panel.
+Extended in 7.2: Section 23.0 adds readable lettering (after speaker attribution) and minimising the number of panels (last). Chess positions and canon are never traded away.
 
 ## 19.A Explicit Speaker Assignment
 Every panel that contains dialogue must state, before any image is generated (see the Panel Manifest, Section 20):
@@ -1199,6 +1216,7 @@ Rules:
 - Do not omit dialogue to make a panel easier to compose: add panels or pages instead.
 - Continuity constraints carry over from earlier panels (position, who has moved, who has been captured, which stains are explicit).
 - Panels written in Section 18 before version 7.1 are the source for their manifests; they must be converted to the manifest format before generation (status in Section 22.E).
+- Fields 14 to 21 (added in 7.2) plan dialogue density, lettering space and overflow (Section 23). The overflow action always adds or redesigns panels; it never shortens the original text.
 
 ## 20.1 Manifest Template
 ```
@@ -1221,6 +1239,16 @@ PANEL <scene><letter>   (sequence number <n> in the cartoon)
 11. Board state and moves (State number from Section 12; move notation if a move happens):
 12. Continuity constraints inherited from earlier panels:
 13. Must not appear:
+
+    Dialogue density and composition (added in 7.2, Section 23):
+14. Dialogue length (words and characters of the exact dialogue in this panel):
+15. Dialogue segmentation (the original lines or sentence fragments assigned to this panel, in original order, and where the speech continues):
+16. Visual priority (the character, action, interaction or board detail that must stay prominent):
+17. Lettering space (the area reserved for the balloons, e.g. "top third, above the heads"):
+18. Balloon-area estimate (all balloons together, % of panel area; target roughly 25 to 30%):
+19. Layout strategy (shot type from Section 23.D and balloon placement):
+20. Overflow action (what to do if the text does not fit comfortably: add a panel, split at a named natural boundary, use a wider panel; never shorten the text):
+21. Continuity requirements (positions, expressions, props and chess position carried over from the adjacent panels):
 ```
 
 ## 20.2 Worked Example: Panel 5b (the King speaks, Alfil listens)
@@ -1245,6 +1273,16 @@ PANEL 5b   (sequence number 13)
 11. State 0 (starting position). No move.
 12. Continuity: same two-shot as 5c; Alfil stays on f1 (e2 and g2 block him); cola stain on f6 subtle; Koning angry since 5a.
 13. Must not appear: an open mouth on Alfil; a balloon or tail at Alfil; any other text; any moved piece; an explicit cola stain.
+
+    Dialogue density and composition (added in 7.2):
+14. Dialogue length: 34 words, 181 characters.
+15. Segmentation: the second sentence of Koning's speech (it starts after "Alfil, gene zever." in 5a and continues with "Ga buiten zien ..." in 5c).
+16. Visual priority: Koning's pointing finger and scornful face, and Alfil's offended reaction.
+17. Lettering space: the top band of the panel, above Koning and Regina, right of Alfil's mitre.
+18. Balloon-area estimate: about 30% (upper limit of the target).
+19. Layout strategy: medium two-shot (Section 23.D); one balloon in the top band; tail short and straight down to Koning's mouth.
+20. Overflow action: split at the natural boundary after "liever tot dame waart gepromoveerd" into two balloons for Koning in reading order, or into panels 5b-1 and 5b-2 with Alfil's reaction growing in the second; never shorten the text.
+21. Continuity: same camera as 5c; Koning angry since 5a; Alfil on f1; State 0; cola stain subtle.
 ```
 
 Mirror case (Alfil speaks, Koning listens), panel 4b: Balloon 1 -> Alfil, tail to Alfil's mouth; Alfil mouth open with a raised hand; Koning's mouth open only because of surprise, as the manifest says explicitly (Section 19.C exception), with no balloon or tail near him.
@@ -1259,6 +1297,7 @@ Added in 7.1. Image generators tend to misattribute speakers and to alter or inv
 - Assign each line to the speaker named in the script (Section 19.F).
 - Write the panel manifest (Section 20) for every panel.
 - Tick the line off in the Script Coverage Map (Section 22.E).
+- Divide the dialogue into panels by dramatic beats, natural language boundaries and visual needs (Section 23.B); estimate the lettering space and the balloon area (Section 23.F); choose the shot type (Section 23.D). Fill manifest fields 14 to 21.
 
 ## Stage 2 - Generate the Artwork
 - Generate the scene from the manifest, using the Common Prompt Block (Section 18).
@@ -1270,6 +1309,7 @@ Added in 7.1. Image generators tend to misattribute speakers and to alter or inv
   4. Correct character design.
   5. Correct chess position and continuity.
   6. Clear panel composition.
+- Also plan adequate space for lettering before the composition is final: balloons in negative space, roughly 25 to 30% of the panel area in total, never over faces, gestures, props or relevant board details (Section 23.C and 23.E).
 - Add this to the prompt when using empty balloons: "Draw the speech balloons empty, with no letters. The tail of each balloon points to the mouth of the speaking character named below. Listening characters keep their mouths closed."
 
 ## Stage 3 - Add the Original Dialogue
@@ -1277,6 +1317,8 @@ Added in 7.1. Image generators tend to misattribute speakers and to alter or inv
 - Copy the text from the manifest, which copies it from Section 1.
 - Preserve Flemish spelling, punctuation, capitalisation, quotation marks (straight and curly, as in Section 1) and chess notation exactly.
 - Do not ask the image generator to reconstruct, paraphrase or improvise the dialogue.
+- Size the balloons to the actual text and font; keep the text readable at the intended output size (Appendix B, item 12); keep speaker attribution and reading order.
+- If a passage does not fit, revise the layout or split the scene into more panels. Never silently shorten or rewrite it.
 
 ## Stage 4 - Validate the Result
 Compare the finished page with the manifest and with Section 1. Verify that:
@@ -1289,6 +1331,7 @@ Compare the finished page with the manifest and with Section 1. Verify that:
 - Chess moves and board positions are consistent (Section 12).
 - Character designs and visual canon are preserved (Sections 4 to 7).
 - Everything in Section 16 (Validation Checklist) holds.
+- Everything in the Visual-Composition Acceptance Checklist (Section 23.G) holds: no balloon overwhelms the art, characters stay visible and expressive, board details stay unobstructed, text is readable, panel transitions preserve the story.
 
 If an image fails any check, mark it for correction. Never accept an error silently.
 
@@ -1300,6 +1343,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 ## 22.A Story Completeness
 - Every scene, dialogue line and meaningful stage direction in Section 1 is accounted for in the Script Coverage Map (22.E).
 - No part of the story is omitted to save space.
+- No scene or dialogue is omitted to reduce the page or panel count (Section 23).
 - The opening, the intermediate developments and the ending stay in the original order.
 - The original ending is preserved: the draw is offered (reported by Caballo) and accepted by the King; result 1/2 - 1/2.
 
@@ -1374,6 +1418,118 @@ Totals: 29 speeches, 2 stage directions, 12 moves, 1 result line, 1 title line.
 
 ---
 
+# SECTION 23 - DIALOGUE DENSITY AND VISUAL COMPOSITION
+Added in 7.2. Purpose: panels must keep the complete original play and still be attractive, readable and visually balanced. Generated panels were sometimes dominated by one enormous speech balloon, because long Flemish passages were forced into a small area.
+
+**Fundamental principle: the story determines how many panels are needed. The space in a panel never determines how much of the story is shown.**
+
+## 23.0 Priority Order (extends Section 19)
+When goals conflict, resolve them in this order:
+1. Complete story and exact dialogue (Section 1).
+2. Correct speaker attribution (Section 19).
+3. Readable lettering (this section).
+4. Visual continuity: canon, chess positions, board details (Sections 3 to 12).
+5. Visual composition and artistic quality.
+6. Minimising the number of panels.
+
+Chess positions and established canon are hard requirements, not trade-offs (Section 13: "If a panel contains an incorrect position, the panel is wrong"). A conflict between any of these goals is always resolved by adding panels or redesigning the composition, never by shortening, rewording, reordering or dropping the play, and never by breaking canon.
+
+## 23.A Visual Storytelling Takes Priority
+- Characters, expressions, gestures, interactions and relevant scenery (the board, the boebel, stains) stay visually prominent.
+- Speech balloons do not dominate the composition. Avoid panels in which one balloon takes up most of the area.
+- General target: all speech balloons of a panel together take roughly 25 to 30% of the panel area, where practical.
+- This percentage is a composition guideline. It is never a reason to omit or alter dialogue.
+- If the dialogue does not fit comfortably, redesign the panel or add panels.
+- Never sacrifice source fidelity to reach a particular panel count.
+
+## 23.B Dividing Long Speeches
+- Do not force a long monologue into one panel.
+- Divide long speeches into consecutive panels at natural boundaries: sentence ends, clause boundaries, a change of addressee, or a dramatic beat (a new idea, an outburst, an order).
+- Every word is kept, in the original reading order.
+- Use several balloons of a comfortable size across successive panels rather than one oversized balloon. Two balloons for the same speaker in one panel are allowed when the speech has a natural pause; they are read in order and both tails point to the speaker (Section 19.B).
+- Keep continuity across the sequence: character positions, expressions, gestures and scene details carry over (Section 20, field 21).
+- The speaker stays identifiable in every panel of the sequence: speaking mouth, gesture, tail to the speaker.
+- Add listener reactions where they belong to the scene (Section 13: the listener reacts visibly to what is said).
+- Never split in a way that changes the meaning or makes the speaker ambiguous (for example in the middle of a quotation, or so that a fragment seems to answer another character).
+- No arbitrary maximum word count when it would force an unnatural split. The capacity estimate in 23.F is a planning aid, not a cut-off.
+- Additional panels and pages are preferable to crowded or unreadable compositions.
+
+## 23.C Speech-Balloon Layout
+- Place balloons in negative space: sky or background areas, above heads, beside the composition.
+- Keep tails clear, short and directed at the correct speaker (Section 19.B).
+- Never cover faces, important gestures, significant props (Alfil's mitre with paprika, crowns) or relevant board details (the piece positions, the boebel, the stains when they matter).
+- Keep a clear reading order that follows the script (top-left first, then left to right, then top to bottom).
+- Avoid excessively narrow balloons, tiny lettering, distorted text and awkwardly stretched balloon shapes.
+- Leave room for natural lettering with comfortable margins inside the balloon.
+- Do not shrink the text to force a long passage into an undersized balloon.
+- No unnecessary balloons, no captions, no narration boxes, no invented text (Section 14).
+
+## 23.D Panel Composition Serves the Scene
+Choose the shot for the dramatic purpose of the panel:
+- **Wide shot:** establishes the board, the piece positions, group interactions or the overall situation (for example panel 2b, the grumbling pawns; panel 1c, both armies).
+- **Medium shot:** conversations, gestures and interactions between characters (for example the two-shots of Alfil and the King in Scenes 4 and 5).
+- **Close-up:** an important expression or emotional reaction (for example panel 5a, the outburst; panel 5e, despair).
+- **Reaction panel:** a listener's response, when it advances the original scene (no balloon; the reaction follows from the line before).
+- **Sequential dialogue panels:** a long speech over several panels, with variation in camera distance or angle while positions and continuity are kept.
+
+Do not use a close-up merely to hide an overcrowded layout. A composition never changes the original action, the character relationships or the chess position.
+
+## 23.E Reserving Space for Lettering
+Plan the balloon layout before the composition is final (manifest fields 17 and 19).
+
+Where practical:
+- Generate the illustration with empty speech balloons or reserved lettering areas (Section 21, Stage 2).
+- Keep important visual information out of the areas intended for dialogue.
+- Make the character and background composition work on its own, independent of the text.
+- Add the original dialogue afterwards in a separate lettering step (Section 21, Stage 3).
+
+The artwork is still designed around the scene and its dialogue: empty balloons sit where the text will naturally be read, at the size the text needs. They must not become arbitrary blank areas that damage the composition.
+
+## 23.F Estimating Dialogue Length and Balloon Area
+For planning (manifest fields 14 and 18):
+- Count the words and characters of the exact dialogue assigned to the panel.
+- Estimate the balloon area that text needs at the intended lettering size, including margins.
+- Rule of thumb, to be calibrated once the output size and font are decided (Appendix B, item 12): at a comfortable reading size, a quarter to a third of a standard panel holds roughly 20 to 30 words of Flemish dialogue. Panels with more text are candidates for splitting at a natural boundary (23.B), or for a wider or taller panel format.
+- After the first lettered page, replace this rule of thumb with measured values.
+
+## 23.G Visual-Composition Acceptance Checklist
+For every panel, verify:
+- The panel communicates one clear visual event or dramatic beat.
+- The relevant characters are sufficiently visible.
+- The speaking character is immediately identifiable.
+- Listener reactions are clear and appropriate.
+- Speech balloons do not overwhelm the artwork (roughly 25 to 30% of the area in total, where practical).
+- Important faces, gestures, props and board details remain visible.
+- The lettering area is sufficient for the exact dialogue.
+- The text is readable at the intended output size.
+- The dialogue is complete, verbatim and correctly attributed.
+- The panel keeps visual and chess-position continuity.
+- Any overflow was handled by redesigning the layout or adding panels, never by changing the text.
+
+For the entire comic, additionally verify that no scene or dialogue has been omitted to reduce the page or panel count (Section 22.A).
+
+## 23.H Density Review of Existing Panels
+Word counts of the balloons in the panel script (Section 18) as of version 7.2. Panels above the rule of thumb in 23.F are listed for review once the output size is known. Split points are suggestions at natural boundaries; the author decides, and approved panels stay as they are until then.
+
+| Panel | Speaker | Words | Review |
+|---|---|---|---|
+| 1a | Koning | 26 | Within range. |
+| 1b | Koning | 39 | Review. Possible split: "...dat hij nu al begint te bibberen." / "Want, ik voel het aan mijn viltje, ... Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" (two balloons, or a reaction panel for Alfil before 1c). |
+| 1c | Alfil | 7 | Within range. |
+| 2a | Koning | 17 | Within range. |
+| 2c | Regina | 5 | Within range. |
+| 3a | Koning | 30 | At the upper limit. Possible split: "...niet met dat lage boerenvolk spreek." / "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." |
+| 3b | Koning | 26 | Within range. |
+| 4b | Alfil | 22 | Within range. |
+| 4c | Alfil | 33 | Review. Possible split: "...aan de strijd hebben deelgenomen." / "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." |
+| 5a | Koning | 11 | Within range. |
+| 5b | Koning | 34 | Review. Possible split: "...liever tot dame waart gepromoveerd" / "en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’." (see manifest 20.2, field 20). |
+| 5c | Koning | 22 | Within range. |
+| 5d | Alfil | 29 | At the upper limit. Possible split: "...nog niet naar buiten." / "Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet." |
+| 5e | Koning | 7 | Within range. |
+
+---
+
 # APPENDIX A - SUPERSEDED CANON
 Kept for history. Do not use for generation.
 
@@ -1402,6 +1558,7 @@ Items that need a decision from the author.
 9. **Coarse language versus "family friendly".** The play contains words such as "godverdoemme", "gene slappen kak", "nondedju" and "Dju miljaar". The rules say original dialogue only (kept verbatim in all panels); the tone canon says family friendly. Confirm that the original text always takes precedence.
 10. **Lettering tool.** Which tool is used to typeset the original dialogue into the balloons (Section 21, Stage 3)?
 11. **Title.** How does the title "De Miniatuur (Een hedendaagse klucht in één bedrijf)" appear: on a cover or title page, or not at all? Panels have no captions (Section 14).
+12. **Output format and lettering size.** For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 
 ---
 
@@ -1416,4 +1573,5 @@ Items that need a decision from the author.
 | 5.1 | fc4e769 | Decision log with meanings; visual style details. Play text truncated. |
 | 6.0 | f50d551 | Materials, relationship matrix, production rules. Lost content: play text, running gags, decision meanings. |
 | 7.0 | bfade89, c56823a | Consolidation of all versions into the 17-section structure; original play text from the author; board history; scene catalog; full board-state tables; Section 18 panel script for Scenes 1 and 2. |
-| 7.1 | - | Dialogue attribution specification (Section 19), panel manifest standard (Section 20), artwork/lettering workflow (Section 21), completeness and fidelity checklist with script coverage map (Section 22); cross-references in Sections 13, 14, 16, 17, 18; open questions 9 to 11. |
+| 7.1 | 1bddc59 | Dialogue attribution specification (Section 19), panel manifest standard (Section 20), artwork/lettering workflow (Section 21), completeness and fidelity checklist with script coverage map (Section 22); cross-references in Sections 13, 14, 16, 17, 18; open questions 9 to 11. |
+| 7.2 | - | Dialogue density and visual composition (Section 23); manifest fields 14 to 21; density steps in the workflow; cross-references in Sections 13, 14, 16, 18, 19, 20, 22; open question 12. |
