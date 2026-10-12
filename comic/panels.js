@@ -136,7 +136,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "En veel gewonnen hé want dat was nog in mijne jongen tijd." }] },
 { id: "10d", scene: 10, status: Pr, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { koning: { expr: "angry", talk: true, gest: "both-open" }, regina: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen" }] },
+  balloons: [{ who: "koning", text: "En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :" }] },
 { id: "10e", scene: 10, status: Pr, state: 6, cam: zb(["e1", "e2"], { dist: 1.5, h: 1.6, th: 1.05, f: 600 }),
   cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" } },
   balloons: [{ who: "koning", text: "de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand." }] },
