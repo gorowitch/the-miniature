@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.39
+Version 7.40
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -46,6 +46,7 @@ Version 7.36 moves the captured black pawn to White's side, beside the board nea
 Version 7.37 fills the last page (author decisions): 15e wide, 16a the final position seen nearly from above over two strips, 16b the King accepting the draw with a result box "1/2 - 1/2" like the move box (Section 13), and 16c, the last panel, the two kings shaking hands (author decision); open question 15 resolved.
 Version 7.38 refines the proposal panel 16c (author feedback): the sideways handshake back, the kings in the middle of e4 and e5, seen from the side so that the greasy spot on f3 and the cola stain on f6 are visible, the kings centred, the rise in the middle of the board in sight.
 Version 7.39 sets the board of the proposal panel 16c to the starting position (apart from the two kings in the middle) and makes the rise in the middle of the board read more clearly, with both kings leaning a little (author decision). It also moves the result box "1/2 - 1/2" to the bottom centre of 16c, the last panel. Panels 16b and 16c are then approved: full panel blocks in Section 18 (Scene 16) and manifests 78 and 79 in Section 20.3.
+Version 7.40 approves panels 14h and 15a to 15e (author decision): full panel blocks in Section 18 (Scenes 14 and 15) and manifests 71 to 76 in Section 20.3; Scene 15 is complete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1079,6 +1080,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.39 | Author decision on the proposal panel 16c: "The rise may indeed read more clearly. In fact it may tilt both kings (a little). Also, in this final picture add all other pieces at their starting position." The rise is drawn a little higher with stronger light and shadow in this panel only (SVG preview: a per-panel option "rise"); both kings lean slightly outward down the slope they stand on; all other pieces stand on their starting squares (State 0), the kings on e4 and e5 instead of e1 and e8 (SVG preview: staged pieces are now added to the board position, with an option "omit" for squares left empty); the camera is a little higher and looks down more, so both armies stand along the sides and the kings, the rise and both stains are in the centre. Proposal block 16c updated (board, rise). |
 | 7.39 | Author decision: "Let's move the 1/2 - 1/2 result from the pre-last panel to the last panel. Make sure it is centered at the bottom of the panel." The result box moves from the bottom-left corner of 16b to the bottom centre of 16c, the last panel; same style as the move box. Section 13 (Result box paragraph and table), P.3, Common Prompt Block, Sections 16 and 22.B, Scene Catalog, Coverage Map item 44, Appendix B item 15 and the proposal blocks 16b and 16c updated; old placement in Appendix A. SVG preview: option "moveboxCenter". |
 | 7.39 | Author decisions: panels 16b and 16c accepted ("78-panel-16b.svg accept", "79-panel-16c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 16 - Draw Accepted) and as manifests 78 and 79 in Section 20.3 (numbered as in the album; field 2 of 16b copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 43 and 44 marked as written. Panel 16a stays a proposal. |
+| 7.40 | Author decisions: panels 14h, 15a, 15b, 15c, 15d and 15e accepted ("accept" for each), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14; new heading Scene 15 - Mate in One) and as manifests 71 to 76 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 39 (partly), 40, 41 and 42 updated. Noted as accepted, not changed: in 15a the tail passes close to the King and Alfil's raised hand covers a pawn's face; in 15c the tail ends on Caballo's head near his eye. Scene 15 is fully approved. |
 
 ---
 
@@ -1761,7 +1763,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 
 ## Scene 14 - Regina Captured
-Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34); panels 14a to 14f and 14h are still proposals (Section 18, Proposed Panels).
+Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40; panels 14a to 14f are still proposals (Section 18, Proposed Panels).
 Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
 
 ### Panel 14g
@@ -1772,6 +1774,60 @@ Approved in 7.35 (as set by the author in 7.34).
 - Characters: the White King speaks, seen from behind, one arm raised towards the black side. Regina and the black rook on h8 look at each other past Caballo, and from their looks it is obvious that something is going on between them (author decision in 7.34, not overdone): Regina, shown facing the rook, with a pink blush and a coy, half-lidded smile; the rook, with a light blush and a pleased half-lidded smile. Caballo stands between them and unintentionally half hides the romance; the rook's face stays visible. The other pieces neutral, mouths closed.
 - Balloon placement: top right, above the King, clear of all faces and crowns; its curved tail ends just beside the King's head.
 - Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
+
+### Panel 14h
+Approved in 7.40 (as shown in the SVG preview).
+- Camera: from Black's side, at officer height, close-up of the White King (e1); the heads of the pawns on f2 (bottom left) and d2 (bottom right) cross the bottom edge; the d1 square beside him is empty (Regina has been captured).
+- Characters: the King smug, eyes half closed, mouth open, one hand raised in a dismissive wave to the side. The pawns look on, mouths closed.
+- Regina and the h8 rook: not in frame; the gag ends with this panel (7.34).
+- Balloon placement: top left; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
+
+## Scene 15 - Mate in One
+Status: panels 15a to 15e approved by the author in 7.40 (from the proposals of 7.7, 15e as a wide panel since 7.37, as shown in the SVG preview).
+Board position for all panels: State 12 (final position). Regina beside the board next to the black rook on h8, the captured black pawn beside the board on White's side near h2. From Scene 15 the cola stain on f6 is shown explicitly: wet, dark and glossy (Section 4).
+
+### Panel 15a
+Approved in 7.40.
+- Camera: from Black's side, off to the kingside, so the White King (e1) and Alfil (d3) are both in sight (the King at the left, Alfil at the right, in front of the white pieces of the queenside).
+- In frame: the White King (e1); Alfil on d3 (paprika stains on his mitre); the white pawns and officers of the queenside behind and around him; the pawns on f2, e3 and d2 in front. Every piece on a square that is in frame is shown.
+- Characters: Alfil apologetic, mouth open, looks at the King, one hand raised with the index finger up (an idea). The King looks back at Alfil, surprised, mouth closed. The others neutral, mouths closed.
+- Balloon placement: top left; its curved tail ends just beside Alfil's mouth. Accepted as shown (7.40): the tail passes close to the King, and Alfil's raised hand covers the face of a pawn behind him.
+- Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
+
+### Panel 15b
+Approved in 7.40.
+- Camera: the same as 15a.
+- In frame: the same as 15a.
+- Characters: the King proud, mouth open, one arm raised high, pointing up and away (the order to Caballo). Alfil looks at the King, mouth closed. The others neutral, mouths closed.
+- Balloon placement: top right, over the queenside pieces; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
+- No move box: the move to f6 is ordered, not played (Section 13, Move Box).
+
+### Panel 15c
+Approved in 7.40.
+- Camera: from beside the board on the kingside, low, close behind Caballo on h7, looking across the black kingside towards f6.
+- In frame: Caballo (h7) large in the right foreground; the black rook on h8 at the right edge; the black pawns and pieces of the kingside in the background; the cola stain on f6 explicit: wet, dark and glossy, in the middle of the frame.
+- Characters: Caballo furious, mouth open. The black pieces neutral, mouths closed.
+- Balloon placement: top right; its tail comes down to Caballo's mouth. Accepted as shown (7.40): the tail ends on Caballo's head near his eye.
+- Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
+
+### Panel 15d
+Approved in 7.40.
+- Camera: the same as 15c.
+- In frame: the same as 15c.
+- Characters: Caballo smug, mouth open (he proposes to take on f8 instead). The black pieces neutral, mouths closed.
+- Balloon placement: top right; its curved tail ends just beside Caballo's snout.
+- Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
+
+### Panel 15e
+Approved in 7.40 (wide since 7.37).
+- Format: wide landscape panel (full strip).
+- Camera: from White's side, low, looking across the board at the black army, with Caballo (h7), the h8 rook and, beside the board, Regina at the right.
+- In frame: the black army, faces visible, with the Black King (e8) in the middle; Caballo at the right, the h8 rook behind him, Regina beside the board; the cola stain on f6 in the foreground.
+- Characters: Caballo neutral, mouth open, reports the draw offer. The Black King calm, one hand open (the offer). The others neutral, mouths closed; Regina and the rook without any hint (the gag ended after 14h).
+- Balloon placement: top, right of centre; its curved tail ends just beside Caballo's mouth.
+- Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
 ## Scene 16 - Draw Accepted
 Status: panels 16b and 16c approved by the author in 7.39 (as set by the author in 7.37 to 7.39, as shown in the SVG preview); panel 16a is still a proposal (Section 18, Proposed Panels).
@@ -2142,42 +2198,42 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
 
-### Panel 14h (PROPOSAL)
+### Panel 14h (approved in 7.40: the approved panel block is in Section 18, Scene 14)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (smug, speaking, gesture wave-r).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
 
-### Panel 15a (PROPOSAL)
+### Panel 15a (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: Alfil (apologetic, speaking, looks at White King, gesture point-up-l); White King (surprised, looks at Alfil).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
-### Panel 15b (PROPOSAL)
+### Panel 15b (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (proud, speaking, gesture point-up-l); Alfil (looks at White King).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
 
-### Panel 15c (PROPOSAL)
+### Panel 15c (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (furious, speaking).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
 
-### Panel 15d (PROPOSAL)
+### Panel 15d (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (smug, speaking).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
-### Panel 15e (PROPOSAL)
+### Panel 15e (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip), author decision in 7.37 (so that the last page is filled: 15e, 16a, 16b).
 - Characters: Caballo (neutral, speaking); Black King (calm, gesture open-l).
@@ -4022,7 +4078,7 @@ PANEL 11f   (sequence number 54)
 ```
 
 ### Scene 14 - Regina Captured
-Added in 7.35 for the panel the author approved (14g). Panels 14a to 14f and 14h are still proposals and have no manifests yet.
+Added in 7.35 for the panel the author approved (14g). 14h added in 7.40. Panels 14a to 14f are still proposals and have no manifests yet.
 
 ```
 PANEL 14g   (sequence number 70)
@@ -4054,6 +4110,184 @@ PANEL 14g   (sequence number 70)
 19. Layout: wide high-angle view across the board (Section 23.D); one balloon.
 20. Overflow: not expected.
 21. Continuity requirements: State 12 into 14h; Regina stays beside the board next to the h8 rook.
+```
+
+```
+PANEL 14h   (sequence number 71)
+
+1.  Scene 14, panel h: the King mocks the black rook.
+2.  Script excerpt:
+      Koning:
+      Lap, daar hebt ge’t al. Regina geslagen. En terwijl ik hier weer zit te zwoegen om de partij te winnen gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8. Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
+3.  Dialogue:
+      Balloon 1: "Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1, close-up; the heads of the pawns f2 and d2 at the bottom; the d1 square empty.
+6.  Listening: the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King.
+8.  Koning: smug, eyes half closed, mouth open, a dismissive wave of one hand.
+9.  Balloon 1 top left; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 12. No move.
+12. Continuity: ends speech 39 (14e to 14h); the gag between Regina and the h8 rook ends here (7.34).
+13. Must not appear: Regina on d1; an open mouth on the pawns; hearts or other symbols.
+14. Dialogue length: 15 words, 76 characters.
+15. Segmentation: speech 39, the last two sentences (ends the speech).
+16. Visual priority: the King's smug dismissal.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 12%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: Alfil interrupts in 15a.
+```
+
+### Scene 15 - Mate in One
+Added in 7.40 for the panels the author approved (15a to 15e).
+
+```
+PANEL 15a   (sequence number 72)
+
+1.  Scene 15, panel a: Alfil sees the mate in one.
+2.  Script excerpt:
+      Alfil:
+      Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
+3.  Dialogue:
+      Balloon 1: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één."
+4.  Balloon 1 -> Alfil
+5.  Visible: Koning e1 at the left, Alfil on d3 at the right, the white queenside pieces around them; the pawns f2, e3, d2 in front.
+6.  Listening: Koning, surprised, mouth closed, looking at Alfil; the others neutral, mouths closed.
+7.  Camera on Black's side, off to the kingside, so the King and Alfil on d3 are both in sight.
+8.  Alfil: apologetic, mouth open, looks at the King, one hand raised, index finger up.
+    Koning: surprised; looks back at Alfil.
+9.  Balloon 1 top left; its curved tail ends just beside Alfil's mouth (accepted as shown: it passes close to the King). Round balloon.
+10. Stage directions: none.
+11. State 12. No move.
+12. Continuity: interrupts the King after 14h; Alfil on d3, Caballo on h7.
+13. Must not appear: an open mouth on the King; an arrow or mark showing the mate; Caballo moved.
+14. Dialogue length: 16 words, 80 characters.
+15. Segmentation: the whole of speech 40.
+16. Visual priority: Alfil's raised finger and the King's surprise.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the same camera in 15b.
+```
+
+```
+PANEL 15b   (sequence number 73)
+
+1.  Scene 15, panel b: the King orders Caballo to f6.
+2.  Script excerpt:
+      Koning:
+      Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed   van zijn. Ridder Caballo onmiddellijk naar f6 !.
+3.  Dialogue:
+      Balloon 1: "Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 15a.
+6.  Listening: Alfil, mouth closed, looking at the King; the others neutral, mouths closed.
+7.  Camera the same as 15a.
+8.  Koning: proud, mouth open, one arm raised high, pointing up and away.
+9.  Balloon 1 top right; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 12. No move: f6 is ordered, not played (no move box).
+12. Continuity: answers Alfil in 15a.
+13. Must not appear: a knight on f6; a move box; an open mouth on Alfil.
+14. Dialogue length: 22 words, 133 characters.
+15. Segmentation: the whole of speech 41 (the double space before "van zijn" collapsed).
+16. Visual priority: the King's commanding arm.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 25%.
+19. Layout: medium shot; one balloon.
+20. Overflow: split after "niet goed van zijn." into two balloons for Koning in reading order.
+21. Continuity requirements: Caballo refuses in 15c.
+```
+
+```
+PANEL 15c   (sequence number 74)
+
+1.  Scene 15, panel c: Caballo refuses f6: the cola.
+2.  Script excerpt:
+      Caballo:
+      Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan. Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog. Seg, "Dieje van den overkant" stelt trouwens remise voor.
+3.  Dialogue:
+      Balloon 1: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan."
+4.  Balloon 1 -> Caballo
+5.  Visible: Caballo (h7) large in the right foreground; the black rook h8 at the right edge; the black kingside pieces behind; the cola stain on f6, explicit.
+6.  Listening: the black pieces, mouths closed.
+7.  Camera beside the board on the kingside, low, behind Caballo, looking towards f6.
+8.  Caballo: furious, mouth open.
+9.  Balloon 1 top right; its tail comes down to Caballo's mouth (accepted as shown: it ends near his eye). Round balloon.
+10. Stage directions: none.
+11. State 12. No move.
+12. Continuity: the first panel with the cola stain on f6 explicit: wet, dark and glossy (Section 4).
+13. Must not appear: a knight on f6; a subtle or hidden cola stain; an open mouth on the black pieces.
+14. Dialogue length: 25 words, 125 characters.
+15. Segmentation: speech 42, the first two sentences; continues in 15d with "Eventueel ...".
+16. Visual priority: Caballo's refusal and the wet cola stain.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 25%.
+19. Layout: low close shot (Section 23.D); one balloon.
+20. Overflow: split after "Absoluut geen sprake van Sire !" into two balloons for Caballo in reading order.
+21. Continuity requirements: the same camera in 15d.
+```
+
+```
+PANEL 15d   (sequence number 75)
+
+1.  Scene 15, panel d: Caballo offers to take on f8.
+2.  Script excerpt:
+      Caballo:
+      Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan. Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog. Seg, "Dieje van den overkant" stelt trouwens remise voor.
+3.  Dialogue:
+      Balloon 1: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog."
+4.  Balloon 1 -> Caballo
+5.  Visible: the same as 15c.
+6.  Listening: the black pieces, mouths closed.
+7.  Camera the same as 15c.
+8.  Caballo: smug, mouth open.
+9.  Balloon 1 top right; its curved tail ends just beside Caballo's snout. Round balloon.
+10. Stage directions: none.
+11. State 12. No move: f8 is offered, not played (no move box).
+12. Continuity: continues speech 42 from 15c.
+13. Must not appear: a knight on f8; a move box.
+14. Dialogue length: 14 words, 73 characters.
+15. Segmentation: speech 42, the third sentence; continues in 15e with "Seg, ...".
+16. Visual priority: Caballo's smugness.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 15%.
+19. Layout: low close shot; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: Caballo reports the draw offer in 15e.
+```
+
+```
+PANEL 15e   (sequence number 76)
+
+1.  Scene 15, panel e: Caballo reports the draw offer.
+2.  Script excerpt:
+      Caballo:
+      Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan. Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog. Seg, "Dieje van den overkant" stelt trouwens remise voor.
+3.  Dialogue:
+      Balloon 1: "Seg, "Dieje van den overkant" stelt trouwens remise voor."
+4.  Balloon 1 -> Caballo
+5.  Visible: the black army with the Black King (e8) in the middle; Caballo (h7) at the right, the h8 rook behind him, Regina beside the board; the cola stain on f6 in the foreground.
+6.  Listening: the Black King, calm, one hand open (the offer), mouth closed; the others neutral, mouths closed.
+7.  Camera on White's side, low, looking across the board at the black army; wide panel (7.37).
+8.  Caballo: neutral, mouth open.
+9.  Balloon 1 top, right of centre; its curved tail ends just beside Caballo's mouth. Round balloon.
+10. Stage directions: none.
+11. State 12. No move.
+12. Continuity: ends speech 42; the Black King, who never speaks, offers the draw through Caballo (Section 19.F).
+13. Must not appear: a balloon for the Black King; hints between Regina and the rook.
+14. Dialogue length: 9 words, 57 characters.
+15. Segmentation: speech 42, the last sentence (ends the speech).
+16. Visual priority: Caballo's report and the calm Black King.
+17. Lettering space: top, right of centre.
+18. Balloon-area estimate: about 8% (wide panel).
+19. Layout: wide shot (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the overview follows in 16a.
 ```
 
 ### Scene 16 - Draw Accepted
@@ -4244,10 +4478,10 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | - | Scene catalog only. |
 | 38 | Move: 6. ... gxh5 | 14 | - | Scene catalog only. |
-| 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14g (14e, 14f, 14h proposals) | Partly written: panel script and manifest for 14g (approved in 7.35, Section 20.3); the rest of the speech in the proposals 14e, 14f and 14h. |
-| 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | - | Scene catalog only. |
-| 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | - | Scene catalog only. |
-| 42 | Caballo: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost..." | 15 | - | Scene catalog only. |
+| 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14g, 14h (14e, 14f proposals) | Partly written: panel scripts and manifests for 14g (approved in 7.35) and 14h (approved in 7.40), Section 20.3; the rest of the speech in the proposals 14e and 14f. |
+| 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | 15a | Panel script written (approved in 7.40); manifest written (Section 20.3). |
+| 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | 15b | Panel script written (approved in 7.40); manifest written (Section 20.3). |
+| 42 | Caballo: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost..." | 15 | 15c, 15d, 15e | Panel script written (approved in 7.40); manifests written (Section 20.3). |
 | 43 | Koning: (zucht) "Pakt dat dan maar aan." | 16 | 16b | Panel script written (approved in 7.39); manifest written (Section 20.3). |
 | 44 | Result: 1/2 - 1/2 | 16 | 16c | Result box centred at the bottom of the last panel, 16c (author decisions in 7.37 and 7.39); panel script written (approved in 7.39); manifest written (Section 20.3). |
 
@@ -4473,3 +4707,4 @@ Items that need a decision from the author.
 | 7.37 | - | Last page filled: 15e wide, 16a final position from above (two strips), 16b with the result box 1/2 - 1/2, 16c (last panel) the kings shake hands; open question 15 resolved. |
 | 7.38 | - | Proposal 16c: sideways handshake, kings on e4 and e5 seen from the side, greasy spot and cola stain in view, centred, the rise in sight. |
 | 7.39 | - | Proposal 16c: the other pieces back on their starting squares; the rise clearer, both kings leaning a little. Result box moved to the bottom centre of 16c. Panels 16b and 16c approved: panel blocks and manifests 78, 79. |
+| 7.40 | - | Panels 14h and 15a to 15e approved: panel blocks and manifests 71 to 76; Scene 15 complete. |
