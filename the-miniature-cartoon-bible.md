@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.29
+Version 7.30
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -37,6 +37,7 @@ Version 7.26 rotates the proposal panel 9b towards Black's side and zooms in, fo
 Version 7.27 approves panel 9c (author decision): full panel block in Section 18 (Scene 9) and manifest 35 in Section 20.3. It also reframes the proposal panel 9d (author feedback): the greasy spot on f3 in sight, the balloon tail ending beside Caballo's snout. Panel 9d is then approved: full panel block in Section 18 (Scene 9) and manifest 36 in Section 20.3.
 Version 7.28 moves the balloon of the proposal panel 9e to the lower left, clear of the white pieces and the greasy spot (author feedback). The camera of 9e now keeps the White King, whom Caballo addresses, fully in sight. Panel 9e is then approved: full panel block in Section 18 (Scene 9) and manifest 37 in Section 20.3.
 Version 7.29 reframes the proposal panel 9f (author feedback): a high camera that shows the empty squares g1 and f1 between the rook and the King, so it is immediately clear that White can castle; the balloon in the top third, clear of the rook and the King. Panel 9f is then approved: full panel block in Section 18 (Scene 9) and manifest 38 in Section 20.3.
+Version 7.30 reframes the proposal panel 9g (author feedback): a higher camera, more from the left, so the faces of the Black Queen and the d5 pawn are visible. Panel 9g is then approved, which completes Scene 9: full panel block in Section 18 and manifest 39 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1042,6 +1043,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.28 | Author decision: panel 9e approved ("approve 9e"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 37 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved. Script Coverage Map item 25 updated (9d and 9e written; the end of the speech in the proposal 9f). The King's angry look at Caballo (Claude's staging) is approved with the panel. Panels 9f and 9g stay proposals. |
 | 7.29 | Author feedback on the proposal panel 9f: "Shift the image a little down so there comes more space for the text balloon. Make sure that neither the rook nor the king are covered by the text balloon. It must be immediately visually clear for the reader that white is allowed to castle." The balloon covered the top of the rook on h1, and the empty squares g1 and f1 were hidden behind the pawns on g2 and f2. The camera was raised high on Black's side and looks steeply down at the white kingside, so the empty g1 and f1 squares between the rook and the King are clearly visible; the picture was shifted down so the pieces stand in the lower two thirds; the balloon was made wide (four lines) across the top third, clear of the rook and the King. The SVG preview got a per-balloon option ("snug") that ends a knight's tail tight against the front of the snout, because the g2 pawn stands right behind it; approved panels are unchanged. Then: "The image can be shifted somewhat to the left since there is empty space": the camera was moved towards the queenside, so the picture moves left; the empty table at the left edge is mostly gone, the b1 knight and the b2 pawn come into view at the right. Camera, character and balloon lines of the 9f proposal block updated and a castling line added; 9f stays a proposal. |
 | 7.29 | Author decision: panel 9f approved ("approve 9f"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 38 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved. Script Coverage Map item 25 (Caballo's speech) is now complete: 9d, 9e, 9f. Panel 9g stays a proposal. |
+| 7.30 | Author feedback on the proposal panel 9g: "It's a bit pity that we don't see the faces of the black queen and the black pawn. How about looking at the board slightly more from above and maybe somewhat from the left." From the low camera behind White's back rank, Alfil's mitre hid the d5 pawn, the bishop arriving on d7 stood in front of the Black Queen, and the crowns of the White King and Regina filled the foreground. The camera was raised and moved to the left (towards the queenside, seen from White) and zoomed in a little: the faces of the Black Queen and the d5 pawn are clearly visible, the whole black army is larger, and the white crowns are out of the foreground. Camera line of the 9g proposal block updated; 9g stays a proposal. |
+| 7.30 | Author decision: panel 9g approved ("approve 9g"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 39 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 26 (3. ... Ld7) updated. Scene 9 is now fully approved (panels 9a to 9g, manifests 33 to 39). |
 
 ---
 
@@ -1532,8 +1535,8 @@ Board position: State 3 (after 2. Ld3) in 8a and 8b; State 4 (after 2. ... e6) i
 - No balloons.
 
 ## Scene 9 - Caballo Refuses f3
-Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panel 9b approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26); panel 9c approved in 7.27 (as shown in the SVG preview); panel 9d approved in 7.27 (camera and balloon as set by the author in 7.27); panel 9e approved in 7.28 (camera and balloon as set by the author in 7.28); panel 9f approved in 7.29 (camera and balloon as set by the author in 7.29); panel 9g is still a proposal (Section 18, Proposed Panels).
-Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b to 9f. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
+Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panel 9b approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26); panel 9c approved in 7.27 (as shown in the SVG preview); panel 9d approved in 7.27 (camera and balloon as set by the author in 7.27); panel 9e approved in 7.28 (camera and balloon as set by the author in 7.28); panel 9f approved in 7.29 (camera and balloon as set by the author in 7.29); panel 9g approved in 7.30 (camera as set by the author in 7.30). Scene 9 is fully approved.
+Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b to 9f; State 6 (after 3. ... Ld7) in 9g. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
 
 ### Panel 9a
 - Camera: from Black's side, at officer height, framed on the King (e1) and Caballo (g1), zoomed out a little (author feedback in 7.19): from this side, left to right, the rook (h1), Caballo (g1), the empty f1 square, the King (e1), Regina (d1) and the c1 bishop at the right edge. In front the pawns on h2, g2 and f2; the head of the e3 pawn at the bottom centre; at the bottom right the d2 pawn and Alfil on d3 (his mitre with the paprika stains).
@@ -1581,6 +1584,15 @@ Approved in 7.29 (camera and balloon as set by the author in 7.29).
 - Characters: Caballo smug, mouth open, facing the centre files, towards the King. The White King angry, mouth closed, looks at Caballo. The others neutral, mouths closed.
 - Balloon placement: a wide balloon across the top left, in the top third; it covers neither the rook on h1 nor the King (crown and cross included), nor any other piece; its curved tail comes down and ends tight against the front of Caballo's snout, at his mouth.
 - Balloon (Caballo): Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !
+
+### Panel 9g
+Approved in 7.30 (camera as set by the author in 7.30).
+- Camera: from White's side, behind the queenside half of the board (seen from White: to the left), high above it, looking down across the board at the black army, so that no white piece hides a black face.
+- In frame (from this side the a-file is left): the complete black army in the upper half of the frame, facing the camera: the rooks a8 and h8, the knights b8 and g8, the Black Queen (d8), the Black King (e8), the bishop on f8, the pawns on a7, b7, c7, f7, g7 and h7, the pawn on e6 and the pawn on d5; the bishop arriving on d7; the c8 square empty. The faces of the Black Queen and of the d5 pawn are clearly visible. In the foreground Alfil on d3 (seen from behind, paprika stains on his mitre), the pawn on e3 and the greasy spot on f3; the heads of the white pieces behind them only cut off at the bottom edge. Every piece on a square that is in frame is shown.
+- Action: the black bishop moves from c8 to d7 (3. ... Ld7): a short motion streak behind it shows the step.
+- Characters: the Black King calm, mouth closed; the other black pieces neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 3. ... Ld7
+- No balloons.
 
 ---
 
@@ -1706,9 +1718,9 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Balloon placement (author feedback in 7.29): a wide balloon across the top left, in the top third; it covers neither the rook on h1 nor the King (crown and cross included), nor any other piece; its tail comes down and ends tight against the front of Caballo's snout, at his mouth.
 - Balloon (Caballo): Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !
 
-### Panel 9g (PROPOSAL)
+### Panel 9g (approved in 7.30: the approved panel block is in Section 18, Scene 9)
 - Board state: 6.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Camera (author feedback in 7.30): from White's side, behind the queenside half of the board (seen from White: to the left), high above it, looking down across the board at the black army, so that no white piece hides a black face: the faces of the Black Queen (d8) and of the black pawn on d5 are clearly visible. The complete black army fills the upper half of the frame (from this side the a-file is left); in the foreground Alfil on d3 (seen from behind, paprika stains on his mitre), the e3 pawn and the greasy spot on f3; the heads of the white pieces behind them only cut off at the bottom edge.
 - Characters: Black King (calm).
 - Move shown: c8-d7 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 3. ... Ld7
@@ -3122,7 +3134,7 @@ PANEL 8c   (sequence number 32)
 ```
 
 ### Scene 9 - Caballo Refuses f3
-Added in 7.19 for the panel the author approved (9a); 9b added in 7.26; 9c and 9d added in 7.27; 9e added in 7.28; 9f added in 7.29. Panel 9g is still a proposal and has no manifest yet.
+Added in 7.19 for the panel the author approved (9a); 9b added in 7.26; 9c and 9d added in 7.27; 9e added in 7.28; 9f added in 7.29; 9g added in 7.30. Scene 9 is complete.
 
 ```
 PANEL 9a   (sequence number 33)
@@ -3302,6 +3314,33 @@ PANEL 9f   (sequence number 38)
 21. Continuity requirements: State 5 into 9g, where Black plays 3. ... Ld7.
 ```
 
+```
+PANEL 9g   (sequence number 39)
+
+1.  Scene 9, panel g: Black calmly develops the bishop.
+2.  Script excerpt:
+      3. ... Ld7
+3.  Dialogue: none. Move box (bottom-left corner): "3. ... Ld7".
+4.  No speaker.
+5.  Visible: the complete black army (the bishop now on d7, c8 empty, the pawns on e6 and d5 in front); in the foreground Alfil on d3 from behind, the e3 pawn and the greasy spot on f3; white heads cut off at the bottom edge.
+6.  Listening: no reactions; the Black King calm, mouth closed; the other black pieces neutral.
+7.  Camera on White's side, behind the queenside half and high, looking down across the board at the black army; from this side the a-file is left. The faces of the Black Queen (d8) and the d5 pawn are clearly visible (author, 7.30).
+8.  The c8 bishop: calm, stepping to d7; the Black King calm.
+9.  No balloons. The move box sits in the bottom-left corner, over the empty board.
+10. Stage directions: none.
+11. State 6: the move 3. ... Ld7 (bishop c8-d7) happens in this panel; a short motion streak shows the step.
+12. Continuity: after Caballo's refusal in 9f; Caballo on h3; Alfil on d3; the greasy spot on f3 clearly visible (from Scene 9).
+13. Must not appear: a white piece hiding the face of the Black Queen or the d5 pawn; any other moved piece; a balloon; text other than the move box; a laughing Black King.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after speech 24.
+16. Visual priority: the bishop on d7 and the calm black army.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: high view across the board from White's queenside (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 6 into Scene 10.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -3417,7 +3456,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 23 | Move: 3. Ph3 | 9 | 9b | Panel script written (approved in 7.26); manifest written (Section 20.3). |
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | 9c | Panel script written (approved in 7.27); manifest written (Section 20.3). |
 | 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | 9d, 9e, 9f | Panel script written (9d approved in 7.27, 9e in 7.28, 9f in 7.29); manifests written (Section 20.3). |
-| 26 | Move: 3. ... Ld7 | 9 | - | Scene catalog only. |
+| 26 | Move: 3. ... Ld7 | 9 | 9g | Panel script written (approved in 7.30); manifest written (Section 20.3). |
 | 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | - | Scene catalog only. |
 | 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | - | Scene catalog only. |
 | 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | - | Scene catalog only. |
@@ -3647,3 +3686,4 @@ Items that need a decision from the author.
 | 7.27 | - | Panel 9c approved: panel block (Section 18, Scene 9) and manifest 35 (Section 20.3). Proposal 9d reframed: greasy spot on f3 in sight, tail to Caballo's snout. Panel 9d approved: panel block (Section 18, Scene 9) and manifest 36 (Section 20.3). |
 | 7.28 | - | Proposal 9e: balloon in the lower left, clear of the white pieces and the greasy spot; tail from the balloon's top edge to Caballo's mouth. King fully in sight, looking at Caballo. Panel 9e approved: panel block (Section 18, Scene 9) and manifest 37 (Section 20.3). |
 | 7.29 | - | Proposal 9f: high camera showing the empty g1 and f1 (castling is clearly possible); balloon clear of the rook and the King. Panel 9f approved: panel block (Section 18, Scene 9) and manifest 38 (Section 20.3). |
+| 7.30 | - | Proposal 9g: higher camera from the queenside; faces of the Black Queen and the d5 pawn visible. Panel 9g approved: panel block and manifest 39; Scene 9 complete. |

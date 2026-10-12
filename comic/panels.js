@@ -123,7 +123,7 @@ window.PANELS = [
 { id: "9f", scene: 9, status: A, state: 5, cam: { from: [5.4, 5.0, 8.6], at: [5.2, -0.2, 0.2], f: 880 },
   cast: { caballo: { expr: "smug", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
   balloons: [{ who: "caballo", w: 560, snug: true, text: "Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !" }] },
-{ id: "9g", scene: 9, status: Pr, movebox: "3. ... Ld7", state: 6, cam: { from: [3.4, -0.8, 2.6], at: [3.2, 6.8, 0.2], f: 600 }, fx: [{ move: ["c8", "d7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
+{ id: "9g", scene: 9, status: A, movebox: "3. ... Ld7", state: 6, cam: { from: [1.6, -0.6, 4.8], at: [3.7, 6.0, 0.4], f: 720 }, fx: [{ move: ["c8", "d7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 10 - A Thousand Games (PROPOSAL)
 { id: "10a", scene: 10, status: Pr, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "sigh", talk: true, sigh: true }, regina: { lookAt: "koning" } },
