@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.35
+Version 7.36
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -42,6 +42,7 @@ Version 7.31 forbids sigh symbols such as a breath cloud next to a face (author 
 Version 7.33 approves panels 10d to 10i and 11a to 11f (author decision): full panel blocks in Section 18 (Scenes 10 and 11) and manifests 43 to 54 in Section 20.3; Scene 10 is complete. It corrects the speech numbers in manifests 35 to 42. (Version 7.32, which removed the colon in 10d, was reverted by the author.)
 Version 7.34 adds the hints between Regina and the black rook on h8 (author decision): subtle looks and a blush from 11g, obvious in 14g where the captured Regina stands beside the board close to him, dropped after 14h (Section 7, proposal blocks).
 Version 7.35 approves panel 14g (author decision): full panel block in Section 18 (Scene 14) and manifest 70 in Section 20.3.
+Version 7.36 moves the captured black pawn to White's side, beside the board near the white h2 pawn (author decision): a captured piece stands on the side of the player who captured it.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1058,6 +1059,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.33 | Correction: the speech numbers in field 15 (and 10, 12) of manifests 35 to 42 were one too low. Like the earlier manifests, they follow the item numbers of the Script Coverage Map: the King's shout in 9c is speech 24 (was 23), Caballo's refusal in 9d to 9g is speech 25 (was 24), the King's sigh speech in 10a to 10c is speech 27 (was 26). |
 | 7.34 | Author decision: "there is something going on between the white queen and the black rook at h8. From panel 11g onward give subtle hints about this by for example the look on both pieces faces and perhaps a blush on the queens face", with "rook sees queen" for 11h, 12d and 13b; "on panel 14g the queen is captured and stands close to the rook next to the board (don't overdo this). On this panel from the looks of both pieces it should be obvious for the reader that there is something going on between them"; "after panel 14h drop the gag - the joke is made". Section 7 (Regina, Black Rook (h8)) and the proposal blocks 11g, 11h, 12c, 12d, 12e, 13a, 13b, 14d, 14g and 16b updated. Where the two are not in frame (12a, 12b, 14a to 14c, 14e, 14f, 14h) nothing changes. In the SVG preview: the rook looks at Regina in 11g, 11h, 12d, 12e, 13b and 14d; Regina gets a light pink blush (a new preview option, softer than the red flush of anger) and glances towards the rook in 12c, 13a and 13b; after the capture Regina stands beside the board next to the h8 rook (from 14d on, for continuity), the captured h7 pawn a little further down the h-file; 14g got a new camera from Black's kingside corner so that both faces are visible (the rook shown turned towards her) and both are large; in 16b Regina no longer looks at the rook. Then: "you can give the black rook a blush" for 11h, 12d, 12e, 13b and 14d: done (the same light blush). And for 14g: "let's view the board from white's perspective here": the camera moved to White's side, beyond the h-file, so the King (speaking) is in frame at the left and the rook is not hidden behind Caballo; Regina is shown facing the rook. Then: "i want this more from white's perspective", "maybe as seen by the white king ?": a point-of-view shot from the King's eyes was tried; the author chose to keep the King in the picture. Two views from behind White hid the rook behind Caballo (same file). The author: "view diagonally so Caballo stays somewhat in the middle. As such he unintentionally helps hiding the romance. Also view lower so we see the entire head of the white king. Shift the image to get rid of the empty space at the right of the board": a low camera on White's side looking diagonally from the queenside towards h8, the King in the right foreground (whole head in sight), Caballo between the rook and Regina; the balloon moved to the top right above the King. Then: "I don't know how many of the black piece's faces are hidden. The balance of the image isn't visually okay. Give me some suggestions to improve"; Claude suggested (1) zooming in on the kingside, (2) a slightly higher camera, (3) rebalancing the King, (4) a standard panel, (5) two panels; the author chose "try 1 and 2 with 3". A pure zoom hid the rook behind Caballo and cut off the King's head (a long lens cannot hold both), so the camera was raised and moved back behind the queenside corner: the black faces and the rook's face are now visible, the King's whole head is in sight at the right, the couple in the upper centre. All these panels stay proposals. |
 | 7.35 | Author decision: panel 14g approved ("approve"), as shown in the SVG preview after the rounds of 7.34. Written as a full panel block in Section 18 (new heading Scene 14 - Regina Captured) and as manifest 70 in Section 20.3 (sequence number as in the album; manifests 55 to 69 follow when those panels are approved; field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 39 marked as partly written. Panels 11g to 14f, 14h and the rest stay proposals, including the Regina and h8 rook hints of 7.34. |
+| 7.36 | Author decision: "there is something wrong with the captured pieces. The captured black pawn is next to the board close to the black pieces. Since the white player captured that pawn it must be next to the board close to the white pieces. I suggest the captured pawn goes next to the board somewhere near the white pawn at h2 (don't move the black pawn too close). The captured black pawn doesn't play any role in the story." Rule added to the conventions of the proposed panels (Section 18): a captured piece stands on the side of the player who captured it. The captured black h7 pawn now stands beside the board near the white h2 pawn, not right against it, in 13b to 16b (preview and the 16 proposal blocks). Consequence in the approved panel 14g: the pawn now appears at the right edge, half behind the white h1 rook; its panel block and manifest 70 (fields 5 and the Scene 14 board line) updated to match. In the other panels the pawn is out of frame. Regina, captured by Black, stays on Black's side next to the h8 rook (7.34). |
 
 ---
 
@@ -1739,13 +1741,13 @@ Approved in 7.33 (as shown in the SVG preview).
 
 ## Scene 14 - Regina Captured
 Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34); panels 14a to 14f and 14h are still proposals (Section 18, Proposed Panels).
-Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board further down the h-file. Caballo stands on h7, Alfil on d3.
+Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
 
 ### Panel 14g
 Approved in 7.35 (as set by the author in 7.34).
 - Format: wide landscape panel (full strip).
 - Camera: from White's side, behind the queenside corner, raised higher than the White King's crown, looking diagonally across the board towards h8, so that the faces of the black pieces are visible above the white pieces in front of them.
-- In frame: the black army fills the left half, all faces in sight (the Black Queen on d8, the Black King on e8, the bishops on d7 and f8, the knight on e7, the rooks and the pawns); in the upper centre, from left to right, the black rook on h8, Caballo on h7 and, beside the board, Regina; at the right the White King (e1) seen from behind, his whole head and crown in sight, with the white kingside pieces around him (pawns, the rook on h1). Every piece on a square that is in frame is shown; no empty table at the right.
+- In frame: the black army fills the left half, all faces in sight (the Black Queen on d8, the Black King on e8, the bishops on d7 and f8, the knight on e7, the rooks and the pawns); in the upper centre, from left to right, the black rook on h8, Caballo on h7 and, beside the board, Regina; at the right the White King (e1) seen from behind, his whole head and crown in sight, with the white kingside pieces around him (pawns, the rook on h1); at the right edge, half behind the h1 rook, the captured black pawn beside the board (7.36). Every piece on a square that is in frame is shown; no empty table at the right.
 - Characters: the White King speaks, seen from behind, one arm raised towards the black side. Regina and the black rook on h8 look at each other past Caballo, and from their looks it is obvious that something is going on between them (author decision in 7.34, not overdone): Regina, shown facing the rook, with a pink blush and a coy, half-lidded smile; the rook, with a light blush and a pleased half-lidded smile. Caballo stands between them and unintentionally half hides the romance; the rook's face stays visible. The other pieces neutral, mouths closed.
 - Balloon placement: top right, above the King, clear of all faces and crowns; its curved tail ends just beside the King's head.
 - Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
@@ -1756,7 +1758,7 @@ Approved in 7.35 (as set by the author in 7.34).
 Added in 7.7. The author asked for the full comic as an SVG preview and chose to have Scenes 6 to 16 proposed by Claude and approved or corrected afterwards. These blocks are **proposals, not approved script**: under the Strict Adaptation Protocol (P.2) they must not be sent to the image generator until the author approves them. After approval each block is rewritten as a full panel block in the style of Scenes 1 to 5, with a manifest in Section 20.3 (sequence numbers from 22).
 - Source: the dialogue is copied from Section 1 letter for letter (only runs of spaces collapsed) and checked by script; the panel splits follow sentence boundaries (Section 23). The moves follow Section 11 and the board states of Section 12.
 - Camera and character lines describe the SVG preview (`comic/panels.js`, rendered by `comic/index.html`); gesture names are the preview's (for example "point-down-l": arm pointing down, to the left as seen in the image).
-- Captured pieces stand beside the board, next to the h-file, from the capture onwards.
+- Captured pieces stand beside the board, next to the h-file, from the capture onwards. Each captured piece stands on the side of the player who captured it (author decision in 7.36): the black pawn captured by White (6. Pxh7) stands near White's pieces, beside the board close to the white h2 pawn but not right against it; Regina, captured by Black, stands on Black's side, next to the h8 rook (7.34). The captured pawn plays no role in the story.
 - Open points for these scenes are in Appendix B, items 14 and 15.
 
 ### Panel 6a (approved in 7.13: the approved panel block is in Section 18, Scene 6)
@@ -2041,28 +2043,28 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: Caballo (heroic).
 - Move shown: g5-h7 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 6. Pxh7
-- Beside the board: the captured black pawn (h7) stands beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - No balloons.
 
 ### Panel 14a (PROPOSAL)
 - Board state: 11.
 - Camera: from Black's side (the white pieces face the camera), framed on the King (e1) with room above him for the large shout balloon, which covers neither his face nor his crown (author feedback in 7.25).
 - Characters: White King (furious, speaking, gesture fist-up-r); Regina (worried).
-- Beside the board: the captured black pawn (h7) stands beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - Balloon (White King), shout balloon: Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
 
 ### Panel 14b (PROPOSAL)
 - Board state: 11.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (angry, speaking, looks at Alfil, gesture point-down-r); Alfil (surprised, looks at White King).
-- Beside the board: the captured black pawn (h7) stands beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - Balloon (White King): Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets.
 
 ### Panel 14c (PROPOSAL)
 - Board state: 11.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (worried, speaking, gesture point-up-l, sweat drops).
-- Beside the board: the captured black pawn (h7) stands beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - Balloon (White King): Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, "Dieje van den overkant" is al aan zet.
 
 ### Panel 14d (PROPOSAL)
@@ -2072,21 +2074,21 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: Regina (surprised, looks at the piece on h5).
 - Move shown: g6-h5 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 6. ... gxh5
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - No balloons.
 
 ### Panel 14e (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (despair, speaking).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Lap, daar hebt ge’t al. Regina geslagen.
 
 ### Panel 14f (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (angry, speaking, gesture both-open); Alfil (looks at White King).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): En terwijl ik hier weer zit te zwoegen om de partij te winnen
 
 ### Panel 14g (approved in 7.35: the approved panel block is in Section 18, Scene 14)
@@ -2094,56 +2096,56 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Regina and the h8 rook (author decision in 7.34): Regina, captured, stands beside the board close to the black rook on h8 (not overdone: a short distance between them). From their looks it is obvious to the reader that something is going on between them: Regina with a pink blush and a coy, half-lidded smile looks at the rook; the rook, with a light blush and a pleased half-lidded smile, looks back at her. Camera (author feedback in 7.34): from White's side, behind the queenside corner, raised (higher than the King's crown), looking diagonally across the board towards h8, so that the black pieces' faces are visible above the white pieces in front of them. The black army fills the left half (the Black Queen, the Black King, the bishops, the knight on e7 and the pawns, all faces in sight); in the upper centre, from left to right, the black rook on h8, Caballo on h7 and, beside the board, Regina (shown facing the rook, her face visible): Caballo stands between them, unintentionally half hiding the romance, while the rook's face stays visible and the two look at each other past him; at the right the White King (e1) seen from behind, his whole head and crown in sight, speaking, one arm raised, with the white kingside pieces around him; no empty table at the right. The balloon sits at the top right, above the King, its tail ending beside his head.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
 - Characters: White King (speaking, gesture point-up-r); Regina (smug, looks at black rook (h8)); black rook (h8) (proud, looks at Regina).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
 
 ### Panel 14h (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (smug, speaking, gesture wave-r).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
 
 ### Panel 15a (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: Alfil (apologetic, speaking, looks at White King, gesture point-up-l); White King (surprised, looks at Alfil).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
 ### Panel 15b (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (proud, speaking, gesture point-up-l); Alfil (looks at White King).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
 
 ### Panel 15c (PROPOSAL)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (furious, speaking).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
 
 ### Panel 15d (PROPOSAL)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (smug, speaking).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
 ### Panel 15e (PROPOSAL)
 - Board state: 12.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (neutral, speaking); Black King (calm, gesture open-l).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
 ### Panel 16a (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (sigh, speaking; the sigh shown by the face only, no breath cloud, 7.31).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Pakt dat dan maar aan.
 
 ### Panel 16b (PROPOSAL)
@@ -2151,7 +2153,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Regina and the h8 rook (author decision in 7.34): no hint any more: the joke is made in 14g and 14h; Regina no longer looks at the rook.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
 - Characters: White King (sigh); Black King (calm); Regina (looks at black rook (h8)).
-- Beside the board: the captured black pawn (h7) and Regina stand beside the board.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - No balloons.
 
 ---
@@ -3976,7 +3978,7 @@ PANEL 14g   (sequence number 70)
 3.  Dialogue:
       Balloon 1: "gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8."
 4.  Balloon 1 -> Koning
-5.  Visible: the black army in the left half, all faces in sight; the black rook h8, Caballo h7 and, beside the board, Regina in the upper centre; Koning e1 from behind at the right with the white kingside pieces around him.
+5.  Visible: the black army in the left half, all faces in sight; the black rook h8, Caballo h7 and, beside the board, Regina in the upper centre; Koning e1 from behind at the right with the white kingside pieces around him; the captured black pawn beside the board at the right edge, half behind the h1 rook (7.36).
 6.  Listening: Regina and the h8 rook, mouths closed, looking at each other (not at the King); the other pieces neutral, mouths closed.
 7.  Camera on White's side, behind the queenside corner, raised, looking diagonally towards h8 (author, 7.34); wide panel.
 8.  Koning: seen from behind, speaking gesture: one arm raised towards the black side.
@@ -4349,3 +4351,4 @@ Items that need a decision from the author.
 | 7.33 | - | Panels 10d to 10i and 11a to 11f approved: panel blocks (Section 18, Scenes 10 and 11) and manifests 43 to 54 (Section 20.3); Scene 10 complete; speech numbers in manifests 35 to 42 corrected. |
 | 7.34 | - | Regina and the h8 rook: subtle hints from 11g, obvious in 14g, dropped after 14h; new 14g camera; Regina beside the board next to h8. |
 | 7.35 | - | Panel 14g approved: panel block (Section 18, Scene 14) and manifest 70 (Section 20.3). |
+| 7.36 | - | Captured black pawn on White's side, near the white h2 pawn; panel block and manifest of the approved 14g updated to match. |
