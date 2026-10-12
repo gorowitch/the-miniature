@@ -231,7 +231,8 @@ function renderPanel(svg, P, opts) {
   const state = P.state || 0, scene = P.scene || 1;
   const [C, T, F] = camFor(P), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
   const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [W0 / 2 + F * dot(v, rt) / Math.max(d, .01), H / 2 - F * dot(v, up) / Math.max(d, .01), d]; };
-  const bump = (x, y) => { const r = Math.hypot((x - 4) / 1.15, (y - 4) / 1.15); return r >= 1 ? 0 : 0.14 * (0.5 + 0.5 * Math.cos(Math.PI * r)); };
+  const RISE = P.rise || 1;  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
+  const bump = (x, y) => { const r = Math.hypot((x - 4) / 1.15, (y - 4) / 1.15); return r >= 1 ? 0 : 0.14 * RISE * (0.5 + 0.5 * Math.cos(Math.PI * r)); };
   const pz = (x, y) => pr(x, y, bump(x, y));
   // room background (soft, no people, no text)
   const bg = mk("g", { filter: `url(#soft${P.id})` }, root);
@@ -249,7 +250,7 @@ function renderPanel(svg, P, opts) {
   for (let s = 0; s < 8; s++) for (const r of [[[s, -0.15], [s + 1, -0.15], [s + 1, 0], [s, 0]], [[8, s], [8.15, s], [8.15, s + 1], [8, s + 1]], [[-0.15, s], [0, s], [0, s + 1], [-0.15, s + 1]], [[s, 8], [s + 1, 8], [s + 1, 8.15], [s, 8.15]]]) poly(r, { fill: "#e6d6ae", stroke: INK, "stroke-width": .5 }, bd);
   for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; for (let k = 0; k < 4; k++) pts.push([i + k / 4, a]); for (let k = 0; k < 4; k++) pts.push([i + 1, a + k / 4]); for (let k = 0; k < 4; k++) pts.push([i + 1 - k / 4, a + 1]); for (let k = 0; k < 4; k++) pts.push([i, a + 1 - k / 4]); poly(pts, { fill: (i + n) % 2 ? "#33241b" : "#e6d6ae", stroke: "#20160f", "stroke-width": .6 }, bd); }
   { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
-    for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min(v > 0 ? .55 : .2, Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
+    for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
   const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
   poly([[5.12, 5.3], [5.4, 5.16], [5.78, 5.24], [5.9, 5.5], [5.82, 5.82], [5.45, 5.88], [5.14, 5.76], [5.06, 5.5]], { fill: colaExplicit ? "#3a1608" : "#6a3418", opacity: colaExplicit ? .92 : .16 }, bd);
   if (colaExplicit) poly([[5.3, 5.36], [5.55, 5.3], [5.62, 5.42], [5.36, 5.48]], { fill: "#e9c7a8", opacity: .55 }, bd);
@@ -257,9 +258,10 @@ function renderPanel(svg, P, opts) {
     if (f3Explicit) { const p2 = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; p2.push([5.42 + Math.cos(a) * .1, 2.46 + Math.sin(a) * .05]); } poly(p2, { fill: "#fffbe0", opacity: .7 }, bd); } }
   // pieces
   const items = [], cast = P.cast || {};
-  // P.stage: a staged close-up that shows only the listed pieces at free positions, not the board state (the kings' handshake, bible 7.38)
-  if (P.stage) for (const st of P.stage) items.push({ sq: st.id, ch: st.ch, x0: st.at[0], y0: st.at[1], role: st.role });   // standing on the board (and on the rise in the middle)
-  else FEN[state].split("/").forEach((row, ri) => { let i = 0; for (const ch of row) { if (/\d/.test(ch)) { i += +ch; continue; } const n = 8 - ri, sq = "abcdefgh"[i] + n; items.push({ sq, ch, x0: i + .5, y0: n - .5 }); i++; } });
+  // P.stage: pieces placed at free positions on the board, in addition to the board state; P.omit: squares of the board state not drawn
+  // (the kings' handshake in the middle of the board, the other pieces back on their starting squares: bible 7.38, 7.39)
+  FEN[state].split("/").forEach((row, ri) => { let i = 0; for (const ch of row) { if (/\d/.test(ch)) { i += +ch; continue; } const n = 8 - ri, sq = "abcdefgh"[i] + n; if (!(P.omit || []).includes(sq)) items.push({ sq, ch, x0: i + .5, y0: n - .5 }); i++; } });
+  for (const st of (P.stage || [])) items.push({ sq: st.id, ch: st.ch, x0: st.at[0], y0: st.at[1], role: st.role });
   for (const b of (P.beside || [])) items.push({ sq: b.id, ch: b.ch, x0: b.at[0], y0: b.at[1], beside: true, role: b.role });
   const placed = [];
   for (const it of items) {
@@ -378,7 +380,7 @@ function renderPanel(svg, P, opts) {
     mk("rect", { x: bx, y: by, width: bw, height: bh, fill: "#fff6c8", stroke: INK, "stroke-width": 2.5 }, svg);
     wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: by + 11 + cfs + j * lh - 4, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-style": "italic", "font-size": cfs, fill: INK }, svg); e.textContent = l; }); }
   // move box (bible Section 13, Move Box): the played move, verbatim, bold, in a small white rectangle bottom-left
-  if (P.movebox) { const fs = 32, bw = Math.round(P.movebox.length * fs * 0.5 + 34), bh = fs + 20, bx = 24, by = H - 24 - bh;
+  if (P.movebox) { const fs = 32, bw = Math.round(P.movebox.length * fs * 0.5 + 34), bh = fs + 20, bx = P.moveboxCenter ? Math.round((W0 - bw) / 2) : 24, by = H - 24 - bh;   // moveboxCenter: the result box centred at the bottom (bible 7.39)
     mk("rect", { x: bx, y: by, width: bw, height: bh, fill: "#ffffff", stroke: INK, "stroke-width": 2.5 }, svg);
     const e = mk("text", { x: bx + bw / 2, y: by + bh / 2 + fs * 0.36, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, svg); e.textContent = P.movebox; }
   // panel border

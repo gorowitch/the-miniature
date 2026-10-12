@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.38
+Version 7.39
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -45,6 +45,7 @@ Version 7.35 approves panel 14g (author decision): full panel block in Section 1
 Version 7.36 moves the captured black pawn to White's side, beside the board near the white h2 pawn (author decision): a captured piece stands on the side of the player who captured it.
 Version 7.37 fills the last page (author decisions): 15e wide, 16a the final position seen nearly from above over two strips, 16b the King accepting the draw with a result box "1/2 - 1/2" like the move box (Section 13), and 16c, the last panel, the two kings shaking hands (author decision); open question 15 resolved.
 Version 7.38 refines the proposal panel 16c (author feedback): the sideways handshake back, the kings in the middle of e4 and e5, seen from the side so that the greasy spot on f3 and the cola stain on f6 are visible, the kings centred, the rise in the middle of the board in sight.
+Version 7.39 sets the board of the proposal panel 16c to the starting position (apart from the two kings in the middle) and makes the rise in the middle of the board read more clearly, with both kings leaning a little (author decision). It also moves the result box "1/2 - 1/2" to the bottom centre of 16c, the last panel. Panels 16b and 16c are then approved: full panel blocks in Section 18 (Scene 16) and manifests 78 and 79 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -88,7 +89,7 @@ The production process must never:
 - Change the identity of a speaker (Section 19.F).
 - Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
 - Invent chess moves or change the board state (Sections 11 and 12).
-- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with exceptions decided by the author: the stage directions of panels 2b and 4a in a caption box (Section 18, panels 2b and 4a; 7.12, 7.14); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8), and the result "1/2 - 1/2" in a result box in panel 16b (Section 13, Move Box; author decision in 7.37); the title appears only on the cover (Section 13, Cover Direction).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with exceptions decided by the author: the stage directions of panels 2b and 4a in a caption box (Section 18, panels 2b and 4a; 7.12, 7.14); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8), and the result "1/2 - 1/2" in a result box in the last panel, 16c (Section 13, Move Box; author decision in 7.37); the title appears only on the cover (Section 13, Cover Direction).
 - Use previously generated images as authority for story content.
 - Fill gaps or resolve contradictions through creative guesswork.
 
@@ -876,13 +877,13 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 | 6. ... gxh5 | 14d | pawn g6xh5, Regina captured |
 
 Result box (author decision in 7.37):
-- Panel 16b (the King accepts the draw: "Pakt dat dan maar aan."), the last panel before the handshake of 16c, shows the result of the game in a box exactly like the move box: bottom-left corner, bold black text, small white rectangle with a thin black ink outline.
+- The last panel of the cartoon, 16c (the two kings shake hands), shows the result of the game in a box like the move box (bold black text, small white rectangle with a thin black ink outline), but centred at the bottom of the panel (author decision in 7.39; in 7.37 and 7.38 it was in the bottom-left corner of 16b).
 - The text is the result line of the play, verbatim: 1/2 - 1/2
 - It is the only result box in the cartoon. A draw is not a move: this is a deliberate exception to "only moves that are actually played get a move box", decided by the author ("add the result similar how we added the moves to a panel"). It answers open question 15 (Appendix B).
 
 | Result box | Panel | Meaning |
 |---|---|---|
-| 1/2 - 1/2 | 16b | the draw, offered by Black (reported by Caballo in 15e) and accepted by the King |
+| 1/2 - 1/2 | 16c (centred at the bottom) | the draw, offered by Black (reported by Caballo in 15e) and accepted by the King |
 
 ## Cover Direction
 - The entire cast dominates the cover.
@@ -1075,6 +1076,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.37 | Author decision: "I want an extra image on the last page. In the last image the white king and the black king shake hands. The white king looks somewhat frustrated and disappointed. The black king looks relieved he didn't lose the game. By doing so the king accepting the draw panel can return to its previous size as we now have two panels next to each other." New proposal panel 16c, the last panel of the cartoon (not in the play: an addition by the author as story authority, P.1). Asked where the kings shake hands (they stand on e1 and e8), the author chose a close-up without a readable board position. 16b returns to normal width and shares the last strip with 16c; page 11 = 15e, 16a (two strips), 16b and 16c. The result box stays on 16b. SVG preview: a staged close-up option (panels.js "stage": only the listed pieces at free positions), a handshake gesture and the expressions "disappointed" and "relieved" (comic/renderer.js). Earlier 7.37 wording that called 16b "the last panel" corrected to "panel 16b". |
 | 7.37 | Author feedback on the proposal panel 16c: "I like this idea of the kings shaking hands on the 'boebel'. Could you let's say half the distance between them so they come closer together. Ensure that the 'boebel' - which is an extra joke - stays clearly in sight." The place of the handshake changes from a close-up without a board position to the gentle rise in the middle of the board; the kings stand half as far apart, on its far half, so the near slope of the rise is in full view in front of them; the arms reach down and forward so the hands meet between them. The SVG preview now places staged pieces on the board surface (on the rise). Proposal block 16c updated (the rise described, not named). |
 | 7.38 | Author feedback on the proposal panel 16c: "the visual image of the handshake got lost - I liked the previous handshake better. Also, each king should be standing in the middle of a square. Also both kings hit the top of the frame, ensure the kings are more centered. Ensure the boebel remains clearly in sight." The sideways handshake of the first version is back (arms stretched out at chest height, hands meeting in the middle); the kings stand in the middle of d5 and e5, one square apart, on the far half of the rise; the camera looks down a little so the near half of the rise (d4, e4) is fully in sight and the kings are centred with room above their crowns. Then: "I like 16c the best for now so I want something like that. I want the white king on e4, I want the black king on e5, I want the sideward image to be taken so that both the greasy spot and the cola spill are visible. Earlier constraints that lead to 16c remain in place." The kings now stand on e4 and e5, facing each other across the middle of the board; the camera is beside the board beyond the h-file, so the greasy spot on f3 and the cola stain on f6 are in the foreground; the sideways handshake, centred kings and the rise in sight are kept. Proposal block 16c updated (place, camera, characters). |
+| 7.39 | Author decision on the proposal panel 16c: "The rise may indeed read more clearly. In fact it may tilt both kings (a little). Also, in this final picture add all other pieces at their starting position." The rise is drawn a little higher with stronger light and shadow in this panel only (SVG preview: a per-panel option "rise"); both kings lean slightly outward down the slope they stand on; all other pieces stand on their starting squares (State 0), the kings on e4 and e5 instead of e1 and e8 (SVG preview: staged pieces are now added to the board position, with an option "omit" for squares left empty); the camera is a little higher and looks down more, so both armies stand along the sides and the kings, the rise and both stains are in the centre. Proposal block 16c updated (board, rise). |
+| 7.39 | Author decision: "Let's move the 1/2 - 1/2 result from the pre-last panel to the last panel. Make sure it is centered at the bottom of the panel." The result box moves from the bottom-left corner of 16b to the bottom centre of 16c, the last panel; same style as the move box. Section 13 (Result box paragraph and table), P.3, Common Prompt Block, Sections 16 and 22.B, Scene Catalog, Coverage Map item 44, Appendix B item 15 and the proposal blocks 16b and 16c updated; old placement in Appendix A. SVG preview: option "moveboxCenter". |
+| 7.39 | Author decisions: panels 16b and 16c accepted ("78-panel-16b.svg accept", "79-panel-16c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 16 - Draw Accepted) and as manifests 78 and 79 in Section 20.3 (numbered as in the album; field 2 of 16b copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 43 and 44 marked as written. Panel 16a stays a proposal. |
 
 ---
 
@@ -1092,7 +1096,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
 - Balloon tails are curved and rounded, end just beside the speaker's mouth, and never cross a face, crown, mitre, hair or hat (Section 18, Common Prompt Block; author decision in 7.25).
 - No sigh symbols (no breath cloud or puff next to a face); a sigh is shown by the face and the pose only (author feedback on panel 10a, 7.31).
-- A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one, except the result box "1/2 - 1/2" in panel 16b (Section 13, Move Box; 7.37).
+- A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one, except the result box "1/2 - 1/2" centred at the bottom of the last panel, 16c (Section 13, Move Box; 7.37, 7.39).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
@@ -1265,7 +1269,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Characters: White King, Caballo, Black King.
 - Dialogue: Koning (zucht) "Pakt dat dan maar aan." / 1/2 - 1/2.
 - Purpose: Final punchline.
-- Panels (changed in 7.37, proposals): 15e wide (Caballo reports the draw offer); 16a the final position seen nearly from above, two strips high; 16b the King accepts the draw, with the result box "1/2 - 1/2"; 16c, the last panel, the two kings shake hands (author decision, not in the play).
+- Panels (changed in 7.37, proposals): 15e wide (Caballo reports the draw offer); 16a the final position seen nearly from above, two strips high; 16b the King accepts the draw; 16c, the last panel, the two kings shake hands (author decision, not in the play), with the result box "1/2 - 1/2" centred at the bottom (7.39).
 
 ---
 
@@ -1311,7 +1315,7 @@ Rules:
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - No sigh symbols: no breath cloud or puff next to a face. When the King sighs, show it with his face and pose only: eyes closed, eyebrows drooping, mouth open, shoulders sagging.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
-- Result box (only in panel 16b, when the panel description gives one): drawn exactly like the move box, with the result text given, letter for letter: 1/2 - 1/2
+- Result box (only in the last panel, 16c, when the panel description gives one): drawn like the move box, but centred at the bottom of the panel, with the result text given, letter for letter: 1/2 - 1/2
 - Caption box (only when the panel description gives one; so far panels 2b and 4a): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
 - Grumble balloons with symbols (only when the panel description gives them): small jagged balloons with a short tail to the grumbling piece, containing exactly the symbols given (chess annotation symbols such as ??, ?! and !?, and the hash sign #), nothing else; they never cover a face.
 
@@ -1769,6 +1773,28 @@ Approved in 7.35 (as set by the author in 7.34).
 - Balloon placement: top right, above the King, clear of all faces and crowns; its curved tail ends just beside the King's head.
 - Balloon (White King): gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8.
 
+## Scene 16 - Draw Accepted
+Status: panels 16b and 16c approved by the author in 7.39 (as set by the author in 7.37 to 7.39, as shown in the SVG preview); panel 16a is still a proposal (Section 18, Proposed Panels).
+Board position: State 12 (final position) in 16b. Panel 16c shows no position of the game (author exception to Section 12, 7.39): the other pieces on their starting squares, the two kings in the middle of the board.
+
+### Panel 16b
+Approved in 7.39.
+- Camera: from Black's side, at officer height, close-up of the White King (e1); the heads of the pawns on f2 (bottom left) and d2 (bottom right) cross the bottom edge; the d1 square beside him is empty (Regina has been captured).
+- Characters: the King sighs (stage direction "(zucht)"): eyes closed, eyebrows drooping, mouth open as he speaks; the sigh is shown by his face only, with no breath cloud or other symbol (7.31). The pawns look on, mouths closed.
+- Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Pakt dat dan maar aan.
+- No move box, no result box (the result is in 16c).
+
+### Panel 16c
+Approved in 7.39 (author decisions in 7.37 to 7.39). The last panel of the cartoon. The handshake is not in the play; it is the author's addition.
+- Format: normal width, beside 16b on the last strip of the album.
+- Board: all other pieces stand on their starting squares (State 0), as if set up for a new game; only the two kings stand in the middle of the board, the White King in the middle of e4, the Black King in the middle of e5. No captured pieces beside the board. (Author exception to Section 12, 7.39.)
+- The rise: the two kings stand on the gentle rise in the middle of the board, the very rise that started the whole trouble: an extra joke. In this panel it reads more clearly than elsewhere: a little higher, with brighter light on one slope and deeper shadow on the other, the squares bending over it. Both kings tilt a little, each leaning slightly outward, down the slope he stands on.
+- Camera: from the side of the board, beyond the h-file, high and looking down at a steep angle, the two kings centred in the frame with clear room above their crowns. From this side the white army stands along the left, the black army along the right; the White King is left of the Black King; in the foreground the greasy spot on f3 (lower left) and the cola stain on f6 (lower right), both clearly visible.
+- Characters: the White King and the Black King shake hands, each with one arm stretched out sideways towards the other at chest height, the hands meeting in the middle. The White King looks somewhat frustrated and disappointed: eyebrows drooping, heavy eyelids, mouth turned down; he looks at the Black King. The Black King looks relieved that he did not lose the game: eyebrows raised, eyes closed in relief, a soft smile. The other pieces neutral, mouths closed.
+- Result box (author decision in 7.39): centred at the bottom of the panel, bold black letters in a small white rectangle with a thin black outline, like the move box: 1/2 - 1/2
+- No balloons, no move box, no other text, no label or explanation of the rise.
+
 ---
 
 ## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
@@ -2167,23 +2193,24 @@ Changed in 7.37 (author decision): the final position seen from above; it replac
 - Regina and the h8 rook: no hint any more (the gag ends after 14h).
 - No balloons, no move box, no text, no coordinates, no arrows (not for the unplayed mate either).
 
-### Panel 16b (PROPOSAL)
-Changed in 7.37 (author decision): the King's last line comes after the overview, with the result; normal width, beside 16c on the last strip.
+### Panel 16b (approved in 7.39: the approved panel block is in Section 18, Scene 16)
+Changed in 7.37 (author decision): the King's last line comes after the overview; normal width, beside 16c on the last strip. The result box moved to 16c in 7.39.
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (sigh, speaking; the sigh shown by the face only, no breath cloud, 7.31).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Pakt dat dan maar aan.
-- Result box (author decision in 7.37; bottom-left corner, bold, white rectangle, like the move box): 1/2 - 1/2
 
-### Panel 16c (PROPOSAL)
+### Panel 16c (approved in 7.39: the approved panel block is in Section 18, Scene 16)
 Added in 7.37 (author decision): the last panel of the cartoon. The handshake is not in the play; it is the author's addition.
-- Board state: 12 (not shown: only the two kings stand on the board in this panel; the other pieces are out of frame).
+- Board (author decision in 7.39): all other pieces stand on their starting squares again (State 0, the starting position), as if set up for a new game; only the two kings stand in the middle of the board instead of on e1 and e8. No captured pieces beside the board. This is a deliberate exception, decided by the author, to "every panel must match exactly one of these states" (Section 12): the game is over, so this last panel shows no position of the game.
 - Format: normal width, beside 16b on the last strip of the album.
 - Place (author decisions in 7.37 and 7.38): the two kings shake hands standing on the gentle rise in the middle of the board, the very rise that started the whole trouble: an extra joke. Each king stands in the middle of a square: the White King on e4, the Black King on e5 (author decision in 7.38), facing each other across the middle of the board. The rise stays clearly in sight around and behind their feet: soft light on one side and soft shadow on the other, the squares bending over it.
-- Camera (author decision in 7.38: "the sideward image to be taken so that both the greasy spot and the cola spill are visible"): from the side of the board, beyond the h-file, somewhat elevated and looking down a little, the two kings centred in the frame with clear room above their crowns. From this side the White King is at the left and the Black King at the right; in the foreground the greasy spot on f3 (lower left) and the cola stain on f6 (lower right), both clearly visible; the club room soft and out of focus at the top.
+- The rise (author decision in 7.39): in this panel it reads more clearly than elsewhere: a little higher, with brighter light on one slope and deeper shadow on the other, and both kings tilt a little, each leaning slightly outward, down the slope he stands on (the White King to the left, the Black King to the right), still shaking hands.
+- Camera (author decision in 7.38: "the sideward image to be taken so that both the greasy spot and the cola spill are visible"): from the side of the board, beyond the h-file, high and looking down at a steep angle (7.39), the two kings centred in the frame with clear room above their crowns. From this side the White King is at the left and the Black King at the right; in the foreground the greasy spot on f3 (lower left) and the cola stain on f6 (lower right), both clearly visible; the club room soft and out of focus at the top.
 - Characters: the White King (left) and the Black King (right) shake hands, each with one arm stretched out sideways towards the other at chest height, the hands meeting in the middle between them (author decision in 7.38: "I liked the previous handshake better"). The White King looks somewhat frustrated and disappointed: eyebrows drooping, heavy eyelids, mouth turned down; he looks at the Black King. The Black King looks relieved that he did not lose the game: eyebrows raised, eyes closed in relief, a soft smile; he faces the White King.
-- No balloons, no move box or result box, no text, no label or explanation of the rise.
+- Result box (author decision in 7.39), centred at the bottom of the panel, bold black letters in a small white rectangle with a thin black outline, like the move box: 1/2 - 1/2
+- No balloons, no move box, no other text, no label or explanation of the rise.
 
 ---
 
@@ -4029,6 +4056,66 @@ PANEL 14g   (sequence number 70)
 21. Continuity requirements: State 12 into 14h; Regina stays beside the board next to the h8 rook.
 ```
 
+### Scene 16 - Draw Accepted
+Added in 7.39 for the panels the author approved (16b, 16c). Panel 16a is still a proposal and has no manifest yet.
+
+```
+PANEL 16b   (sequence number 78)
+
+1.  Scene 16, panel b: the King accepts the draw.
+2.  Script excerpt:
+      Koning: (zucht)
+      Pakt dat dan maar aan.
+3.  Dialogue:
+      Balloon 1: "Pakt dat dan maar aan."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1, close-up; the heads of the pawns f2 and d2 at the bottom; the d1 square empty.
+6.  Listening: the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King.
+8.  Koning: sighing, eyes closed, eyebrows drooping, mouth open as he speaks.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: (zucht), shown by the King's face only (7.31: no sigh symbol).
+11. State 12 (final position). No move.
+12. Continuity: answers Caballo's report of the draw offer in 15e; Regina captured (not on d1).
+13. Must not appear: a sigh symbol; Regina on d1; a move box or result box; any other text.
+14. Dialogue length: 5 words, 22 characters.
+15. Segmentation: the whole of speech 43.
+16. Visual priority: the King's resigned sigh.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 5%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the handshake follows in 16c, the last panel.
+```
+
+```
+PANEL 16c   (sequence number 79)
+
+1.  Scene 16, panel c: the two kings shake hands; the result. The last panel of the cartoon.
+2.  Script excerpt:
+      1/2 - 1/2
+3.  Dialogue: none. Result box (centred at the bottom): "1/2 - 1/2". The handshake is the author's addition (7.37), not in the play.
+4.  No speaker.
+5.  Visible: the White King (e4) and the Black King (e5) in the centre, on the rise in the middle of the board; the white army on its starting squares along the left, the black army along the right; the greasy spot on f3 and the cola stain on f6 in the foreground.
+6.  Watching: the other pieces neutral, mouths closed.
+7.  Camera beside the board beyond the h-file, high, looking down steeply; the kings centred with room above their crowns (author, 7.38, 7.39).
+8.  White King: disappointed, eyebrows drooping, heavy eyelids, mouth turned down, looks at the Black King, one arm stretched out sideways, leaning a little outward.
+    Black King: relieved, eyebrows raised, eyes closed, soft smile, one arm stretched out sideways, leaning a little outward.
+9.  No balloons. The result box sits centred at the bottom, between the two stains.
+10. Stage directions: none.
+11. No position of the game (author exception to Section 12, 7.39): State 0 without the kings on e1 and e8; the kings on e4 and e5.
+12. Continuity: after the King accepts the draw in 16b; the game is over.
+13. Must not appear: any other piece on the rise; captured pieces beside the board; a balloon; text other than the result box; a label or explanation of the rise.
+14. Dialogue length: none (result box only).
+15. Segmentation: the result line of the play (the last line).
+16. Visual priority: the handshake on the rise and the two kings' expressions.
+17. Lettering space: result box bottom centre.
+18. Balloon-area estimate: about 2% (result box).
+19. Layout: high side view of the middle of the board (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: end of the cartoon.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -4099,7 +4186,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 
 ## 22.B Dialogue Fidelity
 - Section 1 is the sole authority for dialogue.
-- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption boxes of panels 2b and 4a with their stage directions; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1, and once, in panel 16b, as the result box with the result line "1/2 - 1/2" (Section 13, Move Box; 7.37).
+- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption boxes of panels 2b and 4a with their stage directions; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1, and once, in the last panel 16c, as the result box with the result line "1/2 - 1/2" (Section 13, Move Box; 7.37).
 - Any uncertainty is flagged in Appendix B, never resolved by guessing.
 
 ## 22.C Speaker Attribution
@@ -4161,8 +4248,8 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | - | Scene catalog only. |
 | 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | - | Scene catalog only. |
 | 42 | Caballo: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost..." | 15 | - | Scene catalog only. |
-| 43 | Koning: (zucht) "Pakt dat dan maar aan." | 16 | 16b (proposal) | Proposal block (7.37); no manifest yet. |
-| 44 | Result: 1/2 - 1/2 | 16 | 16b (proposal) | Result box in panel 16b (author decision in 7.37); proposal block; no manifest yet. |
+| 43 | Koning: (zucht) "Pakt dat dan maar aan." | 16 | 16b | Panel script written (approved in 7.39); manifest written (Section 20.3). |
+| 44 | Result: 1/2 - 1/2 | 16 | 16c | Result box centred at the bottom of the last panel, 16c (author decisions in 7.37 and 7.39); panel script written (approved in 7.39); manifest written (Section 20.3). |
 
 Totals: 29 speeches, 2 stage directions, 12 moves, 1 result line, 1 title line.
 
@@ -4308,6 +4395,7 @@ Kept for history. Do not use for generation.
 - v7.0 to 7.11, panel 2b: "small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters)" and no caption (panel block, manifest, Scene Catalog, stage-direction table). -> Superseded in 7.12 by author decision: grumble balloons with chess annotation symbols and #, with short tails, and the stage direction verbatim in a caption box.
 - v7.0 to 7.13, panel 4a: Alfil "listening", the pawns e2, f2, g2 facing the camera, "no balloons, no text", camera "somewhat elevated" (panel block, manifest 4a, Scene Catalog). -> Superseded in 7.14 by author decision: Alfil talks to the pawns, f2 seen from behind, e2 and g2 half turned towards him, camera raised, caption (Alfil overlegt met de pionnen).
 - v7.7 to 7.36, proposal panels of Scene 16: "16a: the King, close-up from Black's side, sighing: Pakt dat dan maar aan." and "16b: special angle, wide panel (full strip); White King (sigh), Black King (calm), Regina (looks at black rook (h8)); no balloons". -> Superseded in 7.37 by author decision: 16a is the final position seen nearly from above, two strips high; 16b, the last panel, is the King's line with the result box "1/2 - 1/2".
+- 7.37 to 7.38: the result box "1/2 - 1/2" in the bottom-left corner of panel 16b (the King accepts the draw). -> Moved in 7.39 by author decision: centred at the bottom of the last panel, 16c (the kings shake hands).
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -4327,7 +4415,7 @@ Items that need a decision from the author.
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
 14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
-15. ~~**The draw result without a caption.**~~ Resolved in 7.37: the result "1/2 - 1/2" appears in a result box like the move box in panel 16b (Section 13, Move Box). Original question: Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
+15. ~~**The draw result without a caption.**~~ Resolved in 7.37: the result "1/2 - 1/2" appears in a result box like the move box (since 7.39 centred at the bottom of the last panel, 16c; Section 13, Move Box). Original question: Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
 18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box; in 7.14 the author added one to panel 4a as well, with the first part of its stage direction: (Alfil overlegt met de pionnen). Still open: do the other stage directions get one too, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
@@ -4384,3 +4472,4 @@ Items that need a decision from the author.
 | 7.36 | - | Captured black pawn on White's side, near the white h2 pawn; panel block and manifest of the approved 14g updated to match. |
 | 7.37 | - | Last page filled: 15e wide, 16a final position from above (two strips), 16b with the result box 1/2 - 1/2, 16c (last panel) the kings shake hands; open question 15 resolved. |
 | 7.38 | - | Proposal 16c: sideways handshake, kings on e4 and e5 seen from the side, greasy spot and cola stain in view, centred, the rise in sight. |
+| 7.39 | - | Proposal 16c: the other pieces back on their starting squares; the rise clearer, both kings leaning a little. Result box moved to the bottom centre of 16c. Panels 16b and 16c approved: panel blocks and manifests 78, 79. |

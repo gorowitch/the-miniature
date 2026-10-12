@@ -233,13 +233,13 @@ window.PANELS = [
 // 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
 { id: "16a", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },
   cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { back: false } }, balloons: [] },
-// 16b: the last panel: the King accepts the draw; the result in the move box (bible 7.37)
-{ id: "16b", scene: 16, status: Pr, movebox: "1/2 - 1/2", state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+// 16b: the King accepts the draw (bible 7.37)
+{ id: "16b", scene: 16, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "sigh", talk: true } },
   balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
-// 16c: the last panel: the two kings shake hands (author decision, bible 7.38); a close-up, no board position shown
-{ id: "16c", scene: 16, status: Pr, state: 12, stage: [{ id: "wk", ch: "K", role: "koning", at: [4.5, 3.5] }, { id: "bk", ch: "k", role: "bking", at: [4.5, 4.5] }],
-  cam: { from: [7.9, 4.0, 3.8], at: [4.5, 4.0, 0.45], f: 700 },
-  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false }, bking: { expr: "relieved", lookAt: "koning", gest: "shake-l", back: false } }, balloons: [] }
+// 16c: the last panel: the two kings shake hands on the rise (author decisions, bible 7.37-7.39); the result 1/2 - 1/2 centred at the bottom
+{ id: "16c", scene: 16, status: A, movebox: "1/2 - 1/2", moveboxCenter: true, state: 0, omit: ["e1", "e8"], rise: 2.2, stage: [{ id: "wk", ch: "K", role: "koning", at: [4.5, 3.5] }, { id: "bk", ch: "k", role: "bking", at: [4.5, 4.5] }],
+  cam: { from: [8.6, 4.0, 5.0], at: [4.3, 4.0, 0.75], f: 820 },
+  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false, lean: -5 }, bking: { expr: "relieved", lookAt: "koning", gest: "shake-l", back: false, lean: 5 } }, balloons: [] }
 ];
 })();
