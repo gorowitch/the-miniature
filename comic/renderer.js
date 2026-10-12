@@ -318,11 +318,14 @@ function renderPanel(svg, P, opts) {
     if (sp && !b.noTail) {
       const r = HEAD[sp.t][1] * sp.s, bottom = by + bh - (b.shout ? 10 : 6), tw = Math.max(14, Math.min(24, bw * 0.08));
       let best = null;
-      for (const side of [-1, 1]) {
-        const tip = [sp.mouth[0] + side * (r * (sp.t === "n" ? 2.4 : 1.3) + 8), sp.mouth[1] - r * 0.2];
+      // tip left or right of the face; when the balloon lies below the speaker, also just under the mouth
+      const tips = [-1, 1].map(side => [sp.mouth[0] + side * (r * (sp.t === "n" ? 2.4 : 1.3) + 8), sp.mouth[1] - r * 0.2]);
+      if (by > sp.mouth[1]) tips.push(sp.t === "n" ? [sp.mouth[0] + (sp.o.dir || 1) * (3.5 * sp.s + 4), sp.mouth[1] + 2 * sp.s] : [sp.mouth[0], sp.mouth[1] + r * 0.5 + 10]);  // a knight: tight against the front of the snout, just below the mouth
+      for (const tip of tips) {
         const bases = [];
         for (const f of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) bases.push({ p: [bx + 26 + (bw - 52) * f, bottom], o: "h" });
         if (tip[1] < by + bh + 30) for (const e of [bx + (b.shout ? 14 : 6), bx + bw - (b.shout ? 14 : 6)]) bases.push({ p: [e, by + bh / 2], o: "v" });
+        if (tip[1] < by) for (const f of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) bases.push({ p: [bx + 26 + (bw - 52) * f, by + (b.shout ? 10 : 6)], o: "t" });  // balloon below the speaker: tail from the top edge
         for (const B of bases) for (const bend of [0, 0.3, -0.3]) {
           const dx = tip[0] - B.p[0], dy = tip[1] - B.p[1];
           const c = [B.p[0] + dx * 0.5 - dy * bend, B.p[1] + dy * 0.5 + dx * bend];
@@ -334,7 +337,7 @@ function renderPanel(svg, P, opts) {
           if (!best || score < best.score) best = { score, B, c, tip, hits };
         }
       }
-      const { B, c, tip } = best, h = tw / 2, off = B.o === "h" ? [h, 0] : [0, h];
+      const { B, c, tip } = best, h = tw / 2, off = B.o === "v" ? [0, h] : [h, 0];
       const L = [B.p[0] - off[0], B.p[1] - off[1]], R = [B.p[0] + off[0], B.p[1] + off[1]];
       mk("path", { d: `M${L[0]} ${L[1]} Q${c[0] - off[0] * 0.5} ${c[1] - off[1] * 0.5} ${tip[0]} ${tip[1]} Q${c[0] + off[0] * 0.5} ${c[1] + off[1] * 0.5} ${R[0]} ${R[1]} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g);
       tail = { B, h };
@@ -342,7 +345,7 @@ function renderPanel(svg, P, opts) {
     }
     if (b.shout) { const cx = bx + bw / 2, cy = by + bh / 2, rx = bw / 2, ry = bh / 2, N = 30; let d = ""; for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, f = k % 2 ? .9 : 1; d += (k ? "L" : "M") + (cx + Math.cos(a) * rx * f).toFixed(1) + " " + (cy + Math.sin(a) * ry * f).toFixed(1); } mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 3.4, "stroke-linejoin": "miter" }, g); }
     else mk("rect", { x: bx, y: by, width: bw, height: bh, rx: Math.min(30, bh / 2), fill: "#fffdf5", stroke: INK, "stroke-width": 3 }, g);
-    if (tail) { const { B, h } = tail; const d = B.o === "h" ? `M${B.p[0] - h + 3} ${by + bh - (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + bh - (b.shout ? 10 : 2)}` : `M${B.p[0] < bx + bw / 2 ? bx + (b.shout ? 12 : 2) : bx + bw - (b.shout ? 12 : 2)} ${B.p[1] - h + 3} l0 ${2 * h - 6}`; mk("path", { d, stroke: "#fffdf5", "stroke-width": 8 }, g); }  // open the balloon outline where the tail joins
+    if (tail) { const { B, h } = tail; const d = B.o === "t" ? `M${B.p[0] - h + 3} ${by + (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + (b.shout ? 10 : 2)}` : B.o === "h" ? `M${B.p[0] - h + 3} ${by + bh - (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + bh - (b.shout ? 10 : 2)}` : `M${B.p[0] < bx + bw / 2 ? bx + (b.shout ? 12 : 2) : bx + bw - (b.shout ? 12 : 2)} ${B.p[1] - h + 3} l0 ${2 * h - 6}`; mk("path", { d, stroke: "#fffdf5", "stroke-width": 8 }, g); }  // open the balloon outline where the tail joins
     wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: (b.shout ? by + bh / 2 - th / 2 - 3 : by + 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
   });
   // grumble balloons: a wavy scribble, or grumble symbols (P.grumbleText, e.g. "#@!%&*!") in a wider balloon
