@@ -22,7 +22,7 @@ const PALETTES = { kingdoms: {
   W: { w: { f: "#e7d1a3", s: "#cdb283", n: "#d9a67a" }, b: { f: "#5a382a", s: "#42281d", n: "#8a5c44" } },
   COST: Object.assign({}, COST, {
     koning: { robe: "#7d1f2e", shade: "#5e1622", trim: GOLD }, regina: Object.assign({}, COST.regina, { trim: GOLD }),
-    alfil: Object.assign({ trim: GOLD }, WB), wbishop: Object.assign({ trim: GOLD }, WB), caballo: Object.assign({ trim: GOLD }, WB), wknight: Object.assign({ trim: GOLD }, WB),
+    alfil: Object.assign({ trim: GOLD }, WB), wbishop: Object.assign({ trim: GOLD }, WB), caballo: Object.assign({ trim: GOLD, sash: "#2f5d9b" }, WB), wknight: Object.assign({ trim: GOLD }, WB),
     wrook: { robe: "#2f5d9b", shade: "#24497a", trim: GOLD }, wpawn: { robe: "#5d7ea8", shade: "#4a6a94", trim: "#2f5d9b" },
     bking: Object.assign({ trim: BRONZE }, BP), bqueen: Object.assign({}, COST.bqueen, BP, { trim: BRONZE }), bbishop: Object.assign({ trim: BRONZE }, BP),
     bknight: Object.assign({ trim: BRONZE }, BP), brook: Object.assign({ trim: BRONZE }, BP), brookh8: { robe: "#2a3550", shade: "#1c2438", trim: BRONZE },
@@ -179,7 +179,8 @@ const SPR = {
     const h = mk("g", { transform: `scale(${o.dir || 1},1)` }, g);
     mk("path", { d: "M-12 -7 C-15 -24 -13 -40 -6 -52 C-2 -60 7 -62 13 -57 L24 -46 C27 -41 24 -37 18 -38 L9 -40 C7 -31 11 -19 13 -7Z", fill: F, stroke: INK, "stroke-width": 1.8 }, h);
     mk("path", { d: "M-12 -14 C-2 -12 6 -12 13 -14 L13 -7 L-12 -7 Z", fill: c.robe, stroke: INK, "stroke-width": 1.3 }, h);
-    if (o.role === "caballo") { mk("path", { d: "M-11 -34 L11 -18", stroke: "#b8202e", "stroke-width": 4 }, h); mk("circle", { cx: -2, cy: -24, r: 3, fill: "#e2b33a", stroke: INK, "stroke-width": 1 }, h); }
+    // Caballo's sash: deep blue in the colour style (bible 7.42), red in the old palette
+    if (o.role === "caballo") { mk("path", { d: "M-11 -34 L11 -18", stroke: c.sash || "#b8202e", "stroke-width": 4 }, h); mk("circle", { cx: -2, cy: -24, r: 3, fill: "#e2b33a", stroke: INK, "stroke-width": 1 }, h); }
     mk("path", { d: "M-1 -59 L2 -69 L6 -58Z", fill: F, stroke: INK, "stroke-width": 1.5 }, h);
     mk("path", { d: "M-8 -54 q-6 4 -5 10 M-11 -45 q-6 4 -5 10 M-13 -36 q-5 4 -4 10", stroke: col === "w" ? "#7a5530" : "#c9a27a", "stroke-width": 2, fill: "none" }, h);
     const E = o.expr || "neutral", eyeR = E === "surprised" ? 6 : 5.2;

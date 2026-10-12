@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.41
+Version 7.42
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -48,6 +48,7 @@ Version 7.38 refines the proposal panel 16c (author feedback): the sideways hand
 Version 7.39 sets the board of the proposal panel 16c to the starting position (apart from the two kings in the middle) and makes the rise in the middle of the board read more clearly, with both kings leaning a little (author decision). It also moves the result box "1/2 - 1/2" to the bottom centre of 16c, the last panel. Panels 16b and 16c are then approved: full panel blocks in Section 18 (Scene 16) and manifests 78 and 79 in Section 20.3.
 Version 7.40 approves panels 14h and 15a to 15e (author decision): full panel blocks in Section 18 (Scenes 14 and 15) and manifests 71 to 76 in Section 20.3; Scene 15 is complete.
 Version 7.41 fixes the colours of the two armies and the board (author decision): royal blue with gold for White, violet with bronze for Black, ivory and medium-dark walnut wood, exact board colours (Section 5, Colour Style).
+Version 7.42 gives Caballo a deep-blue sash with a gold medal instead of a red one, so he fits his army (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -483,7 +484,7 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 
 - White army in royal blue: all pawns, Alfil's advisor robes, the c1 bishop, Caballo's caparison, the b1 knight; the rooks with a deep-blue band.
 - Black army in violet: all pawns and all officers (the Black King, the Black Queen, the bishops, the knights, the a8 rook and the h8 rook).
-- Exceptions (canon): the White King keeps his burgundy robe with medals (7.3), his signature; Regina keeps her white-and-gold costume (7.3); Caballo keeps his red sash with medal (his military decorations). The handsome black rook on h8 wears violet like the rest of his army (author correction in 7.41).
+- Exceptions (canon): the White King keeps his burgundy robe with medals (7.3), his signature; Regina keeps her white-and-gold costume (7.3); Caballo wears a deep-blue sash (#2F5D9B) with a gold medal as his military decorations, so he fits his army (author decision in 7.42; red until 7.41). The handsome black rook on h8 wears violet like the rest of his army (author correction in 7.41).
 - Felt bottoms: traditional green, unchanged.
 - Board: dark squares walnut #3A2418, light squares parchment #DCCFA9, frame oak #866240 (see Section 4, Board).
 - Not used from the suggestion the author shared: a blue robe for the White King, burgundy as the black army's colour (it would read as the White King's colour), separate skin tones (the faces are the wood itself).
@@ -600,7 +601,7 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 ## Caballo
 - White knight ("Ridder Caballo").
 - Highly expressive horse-headed knight.
-- Costume: military decorations (author decision in 7.3).
+- Costume: military decorations (author decision in 7.3): a deep-blue sash with a gold medal (author decision in 7.42; the form, a sash with a medal, comes from the SVG preview, not from the play).
 - Brave and loyal.
 - Heroic and dramatic.
 - Brave but foolish; causes accidental chaos.
@@ -1101,6 +1102,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.40 | Author decisions: panels 14h, 15a, 15b, 15c, 15d and 15e accepted ("accept" for each), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14; new heading Scene 15 - Mate in One) and as manifests 71 to 76 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 39 (partly), 40, 41 and 42 updated. Noted as accepted, not changed: in 15a the tail passes close to the King and Alfil's raised hand covers a pawn's face; in 15c the tail ends on Caballo's head near his eye. Scene 15 is fully approved. |
 | 7.41 | Author decision on colours: the author shared a colour-scheme suggestion ("two clearly identifiable kingdoms") and asked Claude to cherry-pick what is useful. Claude proposed: one dominant costume colour per army, metals for rank, exact wood and board colours; the White King's burgundy, Regina's white and gold and Caballo's red sash kept as canon exceptions; not used: a blue King, burgundy for Black, skin tones. Tried on panel 16a; the author: "this seems to work for the white army but not for the black army ... both the colors of the black pieces and the costumes of the black pieces are too dark"; two lighter variants shown (A violet, B green); the author chose A and "update all panels according to this color style". New: Section 5, Colour Style; Sections 4 (Board), 5 (Pieces, Costumes), 7 (Black King), the Master Illustration Prompt and the Common Prompt Block updated; the black wood is now medium-dark walnut instead of very dark brown, the board frame oak instead of beige; Appendix B item 13 partly resolved; old wording in Appendix A. SVG preview: the colour style is applied to every panel (comic/renderer.js, palette "kingdoms-violet"); approved panels change colour only, not content. |
 | 7.41 | Author correction: "The color band of the rook at h8 doesn't seem to match the colors of his army - why is that?" Claude had given the h8 rook a lighter navy as an exception of its own (proposed as "keeps a recognisable look", never decided by the author) and carried it into the rollout and the Colour Style. The author: "use violet like the rest of the army". The exception is removed from the Colour Style, the Common Prompt Block and the preview; the h8 rook wears violet with bronze like the other black officers. |
+| 7.42 | Author decision on Caballo's decorations: asked what the story behind Caballo's medal is, Claude answered that there is none: the canon says only "military decorations" (v1.1, 7.3); the red sash with a gold medal was Claude's drawing choice in the SVG preview, and Claude had listed it as a canon exception in 7.41 without an author decision. The author: "shouldn't Caballo's red line be blue so that he fits his army". Caballo's sash is now deep blue (#2F5D9B) with the gold medal; the sash and medal are recorded as his military decorations. Sections 5 (Colour Style), 7 (Caballo) and the Common Prompt Block updated; SVG preview: a sash colour per palette. |
 
 ---
 
@@ -1311,9 +1313,9 @@ Recurring characters:
 - White King: ancient but pristine, simple medieval crown, medium white beard and moustache, burgundy robe with medals, proud and theatrical.
 - Regina (White Queen): elegant and regal, light hair (roughly blonde with a slight red tint, never dark), an elegant white-and-gold costume.
 - Alfil (White bishop that starts on f1): scholar and advisor in advisor robes, with a mitre that has small orange-red paprika stains.
-- Caballo (White knight that starts on g1): highly expressive horse-headed knight with military decorations.
+- Caballo (White knight that starts on g1): highly expressive horse-headed knight with military decorations: a deep-blue sash with a gold medal across his body.
 - Pawns: soldiers in simple soldier uniforms, with realistic faces (not blob-like); they show wear. In both armies the pawn that started on the b-file and the pawn that started on the g-file have a moustache (also after they move or capture); all other pawns have no moustache and no beard.
-- Colours of the two armies (author decision in 7.41): White = royal blue costumes (#5D7EA8) with deep-blue trims (#2F5D9B) and gold (#D6B44A) for crowns and rank: the pawns, Alfil, the c1 bishop, Caballo's caparison, the b1 knight; the King keeps his burgundy robe with medals, Regina her white and gold, Caballo his red sash. Black = violet costumes (#7B5AA6) with deep-violet trims (#5D4386) and bronze (#C08A4C): all black pawns and officers; the black pawns have light cream collars.
+- Colours of the two armies (author decision in 7.41): White = royal blue costumes (#5D7EA8) with deep-blue trims (#2F5D9B) and gold (#D6B44A) for crowns and rank: the pawns, Alfil, the c1 bishop, Caballo's caparison, the b1 knight; the King keeps his burgundy robe with medals, Regina her white and gold; Caballo wears a deep-blue sash (#2F5D9B) with a gold medal. Black = violet costumes (#7B5AA6) with deep-violet trims (#5D4386) and bronze (#C08A4C): all black pawns and officers; the black pawns have light cream collars.
 - Black officers: violet costumes (#7B5AA6) with bronze trims (#C08A4C); the Black King is calm, with a short beard. The black rook on h8 wears violet like the rest of his army.
 
 Board details:
@@ -4652,6 +4654,7 @@ Kept for history. Do not use for generation.
 - v7.7 to 7.36, proposal panels of Scene 16: "16a: the King, close-up from Black's side, sighing: Pakt dat dan maar aan." and "16b: special angle, wide panel (full strip); White King (sigh), Black King (calm), Regina (looks at black rook (h8)); no balloons". -> Superseded in 7.37 by author decision: 16a is the final position seen nearly from above, two strips high; 16b, the last panel, is the King's line with the result box "1/2 - 1/2".
 - 7.37 to 7.38: the result box "1/2 - 1/2" in the bottom-left corner of panel 16b (the King accepts the draw). -> Moved in 7.39 by author decision: centred at the bottom of the last panel, 16c (the kings shake hands).
 - v7.3 to 7.40: black pieces in "very dark brown stained wood", black officers in "darker colours", the board "very dark brown, almost black / beige with a beige border" without exact colours; in the SVG preview the black pawns wore green and the black officers a mix of navy and purple. -> Superseded in 7.41 by author decision: the Colour Style "two kingdoms" (Section 5): ivory and medium-dark walnut wood, royal blue for White and violet for Black, gold and bronze for rank, exact board colours with an oak frame.
+- v7.7 to 7.41: Caballo's military decorations drawn as a red sash with a gold medal (SVG preview; listed as a canon exception in 7.41). -> Changed in 7.42 by author decision: a deep-blue sash with the gold medal, so he fits his army.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -4731,3 +4734,4 @@ Items that need a decision from the author.
 | 7.39 | - | Proposal 16c: the other pieces back on their starting squares; the rise clearer, both kings leaning a little. Result box moved to the bottom centre of 16c. Panels 16b and 16c approved: panel blocks and manifests 78, 79. |
 | 7.40 | - | Panels 14h and 15a to 15e approved: panel blocks and manifests 71 to 76; Scene 15 complete. |
 | 7.41 | - | Colour Style "two kingdoms": royal blue and gold for White, violet and bronze for Black, ivory and walnut wood, exact board colours; applied to all panels of the preview. |
+| 7.42 | - | Caballo's sash deep blue with a gold medal (was red). |
