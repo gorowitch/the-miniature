@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.31
+Version 7.33
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -39,6 +39,7 @@ Version 7.28 moves the balloon of the proposal panel 9e to the lower left, clear
 Version 7.29 reframes the proposal panel 9f (author feedback): a high camera that shows the empty squares g1 and f1 between the rook and the King, so it is immediately clear that White can castle; the balloon in the top third, clear of the rook and the King. Panel 9f is then approved: full panel block in Section 18 (Scene 9) and manifest 38 in Section 20.3.
 Version 7.30 reframes the proposal panel 9g (author feedback): a higher camera, more from the left, so the faces of the Black Queen and the d5 pawn are visible. Panel 9g is then approved, which completes Scene 9: full panel block in Section 18 and manifest 39 in Section 20.3.
 Version 7.31 forbids sigh symbols such as a breath cloud next to a face (author feedback on panel 10a): a sigh is shown by the face and the pose only (Section 14, Section 16, Common Prompt Block). Panels 10a, 10b and 10c are approved: full panel blocks in Section 18 (Scene 10) and manifests 40 to 42 in Section 20.3.
+Version 7.33 approves panels 10d to 10i and 11a to 11f (author decision): full panel blocks in Section 18 (Scenes 10 and 11) and manifests 43 to 54 in Section 20.3; Scene 10 is complete. It corrects the speech numbers in manifests 35 to 42. (Version 7.32, which removed the colon in 10d, was reverted by the author.)
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1049,6 +1050,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.30 | Author decision: panel 9g approved ("approve 9g"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 39 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 26 (3. ... Ld7) updated. Scene 9 is now fully approved (panels 9a to 9g, manifests 33 to 39). |
 | 7.31 | Author feedback on the proposal panel 10a: "There is a white image next to the king's face - I don't know what it is but it doesn't seem to belong there." It was a "sigh puff", a small white breath cloud that the SVG preview drew for the stage direction "(zucht)"; it was never part of the play or the canon. Author decision (asked, "remove everywhere"): no sigh symbols anywhere in the cartoon; a sigh is shown by the face and the pose only. Rule added to Section 14, Section 16 and the Common Prompt Block; the puff removed from the preview panels 10a and 16a and the words "sigh puff" from their proposal blocks. Both panels stay proposals. |
 | 7.31 | Author decisions: panel 10a approved ("approve"), panels 10b and 10c accepted ("41-panel-10b.svg accept", "42-panel-10c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 10 - A Thousand Games) and as manifests 40 to 42 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 27 marked as partly written. Noted as accepted: in 10b the bottom of the balloon touches the top of Regina's crown. Panels 10d to 10i stay proposals. |
+| 7.33 | Author decisions: panels 10d, 10e, 10f, 10g, 10h, 10i, 11a, 11b, 11c, 11d, 11e and 11f accepted ("accept" for each), as shown in the SVG preview; 10d keeps the play's colon (the change of 7.32 was reverted, see Appendix C). Written as full panel blocks in Section 18 (Scene 10; new heading Scene 11 - Who Knows This Board Best) and as manifests 43 to 54 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 27 (now complete), 28 and 29 updated. Noted as accepted, not changed: the balloon touches or covers the top of Regina's crown in 10d, 11b, 11d (down to her eyebrows) and 11e. Scene 10 is fully approved; in Scene 11 the move panels 11g and 11h stay proposals. |
+| 7.33 | Correction: the speech numbers in field 15 (and 10, 12) of manifests 35 to 42 were one too low. Like the earlier manifests, they follow the item numbers of the Script Coverage Map: the King's shout in 9c is speech 24 (was 23), Caballo's refusal in 9d to 9g is speech 25 (was 24), the King's sigh speech in 10a to 10c is speech 27 (was 26). |
 
 ---
 
@@ -1601,7 +1604,7 @@ Approved in 7.30 (camera as set by the author in 7.30).
 - No balloons.
 
 ## Scene 10 - A Thousand Games
-Status: panels 10a, 10b and 10c approved by the author in 7.31 (from the proposals of 7.7, with the sigh symbol removed from 10a in 7.31, as shown in the SVG preview); panels 10d to 10i are still proposals (Section 18, Proposed Panels).
+Status: panels 10a, 10b and 10c approved by the author in 7.31, panels 10d to 10i in 7.33 (from the proposals of 7.7, with the sigh symbol removed from 10a in 7.31 and the camera of 10e adjusted in 7.25, as shown in the SVG preview). Scene 10 is fully approved.
 Board position for all panels: State 6 (after 3. ... Ld7). Alfil stands on d3, Caballo on h3; the f1, g1 and e2 squares are empty. The greasy spot on f3 is clearly visible where f3 is in frame (from Scene 9).
 
 ### Panel 10a
@@ -1627,6 +1630,106 @@ Approved in 7.31 (as shown in the SVG preview).
 - Characters: the King proud, eyes wide, mouth open, one arm raised high with an open hand (on the side of Regina, above her head, not covering her face), remembering his victories. Regina looks on, mouth closed. The pawns look on, mouths closed.
 - Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
 - Balloon (White King): En veel gewonnen hé want dat was nog in mijne jongen tijd.
+
+### Panel 10d
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10b: from Black's side, at officer height, on the White King (e1) and Regina (d1).
+- In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it) and c2 (bottom right edge).
+- Characters: the King angry, mouth open, both arms spread wide with open hands. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre, between the King's cross and the c1 bishop's mitre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
+- Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :
+
+### Panel 10e
+Approved in 7.33 (camera as set by the author in 7.25).
+- Camera: from Black's side, somewhat further back and higher than 10d, framed on the King (e1) and the e2 square in front of him, with room above the King for the balloon.
+- In frame (from this side the g-file is left): on the first rank the King (centre), Regina (d1) and the c1 bishop; in front the pawns on g2 (left edge, with his moustache) and f2, the empty e2 square, the head of the e3 pawn at the bottom centre, the pawns on d2 and c2 and Alfil on d3 (paprika stains on his mitre) at the right.
+- Characters: the King angry, mouth open, pointing down at the board with one arm (the board's defects he complains about). Regina, the c1 bishop, Alfil and the pawns look on, mouths closed.
+- Balloon placement: top left, clear of the King's face and crown; its curved tail ends just beside the King's mouth.
+- Balloon (White King): de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand.
+
+### Panel 10f
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10b.
+- In frame: the same as 10b.
+- Characters: the King worried, eyebrows raised, mouth open, one arm stretched out to the side away from Regina with an open hand. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn.
+
+### Panel 10g
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10c: from Black's side, at officer height, close-up of the White King (e1), with Regina (d1) at the right.
+- In frame (from this side the f-file is left): the King in the centre, large; Regina at the right; the heads of the pawns on f2 (bottom left) and d2 (bottom right).
+- Characters: the King angry, mouth open, one fist raised high (on Regina's side, above her head, not covering her face). Regina looks on, mouth closed. The pawns look on, mouths closed.
+- Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen.
+
+### Panel 10h
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10b.
+- In frame: the same as 10b.
+- Characters: the King stubborn, mouth open, looks at Regina, one hand raised on the side away from her. Regina looks back at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre, just above Regina's crown; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+
+### Panel 10i
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10b.
+- In frame: the same as 10b.
+- Characters: Regina speaks: mouth open, looks at the King, one open hand held out towards him (beside his beard, not covering his face). The King looks back at her, stubborn, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top right, above Regina and the c1 bishop, clear of their crown and mitre; its curved tail ends just beside Regina's mouth.
+- Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
+
+## Scene 11 - Who Knows This Board Best
+Status: panels 11a to 11f approved by the author in 7.33 (from the proposals of 7.7, 11c with the camera adjusted in 7.25, as shown in the SVG preview); panels 11g and 11h are still proposals (Section 18, Proposed Panels).
+Board position for 11a to 11f: State 6 (after 3. ... Ld7). Alfil stands on d3, Caballo on h3; the f1, g1 and e2 squares are empty.
+
+### Panel 11a
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 10b: from Black's side, at officer height, on the White King (e1) and Regina (d1).
+- In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it) and c2 (bottom right edge).
+- Characters: the King angry, mouth open, looks at Regina, one index finger raised high on the side away from her. Regina looks back at the King, surprised, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre, just above Regina's crown; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?
+
+### Panel 11b
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 11a.
+- In frame: the same as 11a.
+- Characters: the King smug, eyes half closed, mouth open, looks at Regina, a dismissive wave of one hand on the side away from her. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top right; its bottom edge covers the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
+- Balloon (White King): Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is.
+
+### Panel 11c
+Approved in 7.33 (camera as set by the author in 7.25).
+- Camera: from Black's side, on the King (e1) and Regina (d1), further back than 11a, with room above them for a wide balloon; a strip of the club room's window shows at the top left.
+- In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2, d2 (with the tip of Alfil's mitre in front of it) and c2 at the bottom.
+- Characters: the King proud, eyes wide, mouth open, one hand on his chest. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: a wide balloon across the top, clear of all crowns, faces and the mitre; its curved tail comes down and ends just beside the King's mouth.
+- Balloon (White King): Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé.
+
+### Panel 11d
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 11a.
+- In frame: the same as 11a.
+- Characters: the King proud, eyes wide, mouth open, one hand raised high on the side away from Regina. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
+- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
+
+### Panel 11e
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 11a.
+- In frame: the same as 11a.
+- Characters: the King smug, eyes half closed, mouth open, looks at Regina. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
+- Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
+
+### Panel 11f
+Approved in 7.33 (as shown in the SVG preview).
+- Camera: the same as 11a.
+- In frame: the same as 11a.
+- Characters: the King angry, mouth open, looks at Regina and points with one arm down and away from her, towards the kingside (h3, where Caballo stands, out of frame). Regina looks back at the King, worried, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top right, above Regina, clear of her crown; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 
 ---
 
@@ -1778,73 +1881,73 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: White King (proud, speaking, gesture raise-r).
 - Balloon (White King): En veel gewonnen hé want dat was nog in mijne jongen tijd.
 
-### Panel 10d (PROPOSAL)
+### Panel 10d (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (angry, speaking, gesture both-open); Regina (looks at White King).
 - Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :
 
-### Panel 10e (PROPOSAL)
+### Panel 10e (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, e2, with room above the King (author feedback in 7.25): the balloon sits at the top left and its tail points to the King's mouth; the balloon does not cover his face or crown.
 - Characters: White King (angry, speaking, gesture point-down-l).
 - Balloon (White King): de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand.
 
-### Panel 10f (PROPOSAL)
+### Panel 10f (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (worried, speaking, gesture open-l); Regina (looks at White King).
 - Balloon (White King): Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn.
 
-### Panel 10g (PROPOSAL)
+### Panel 10g (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (angry, speaking, gesture fist-up-r).
 - Balloon (White King): En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen.
 
-### Panel 10h (PROPOSAL)
+### Panel 10h (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (stubborn, speaking, looks at Regina, gesture raise-l); Regina (looks at White King).
 - Balloon (White King): Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
 
-### Panel 10i (PROPOSAL)
+### Panel 10i (approved in 7.33: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: Regina (speaking, looks at White King, gesture open-l); White King (stubborn, looks at Regina).
 - Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
 
-### Panel 11a (PROPOSAL)
+### Panel 11a (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (angry, speaking, looks at Regina, gesture point-up-l); Regina (surprised, looks at White King).
 - Balloon (White King): Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?
 
-### Panel 11b (PROPOSAL)
+### Panel 11b (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (smug, speaking, looks at Regina, gesture wave-l); Regina (offended, looks at White King).
 - Balloon (White King): Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is.
 
-### Panel 11c (PROPOSAL)
+### Panel 11c (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on the King (e1) and Regina (d1), with room above them (author feedback in 7.25): a wide balloon at the top, clear of all faces, its tail pointing down to the King's mouth.
 - Characters: White King (proud, speaking, gesture hand-chest).
 - Balloon (White King): Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé.
 
-### Panel 11d (PROPOSAL)
+### Panel 11d (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (proud, speaking, gesture raise-l); Regina (looks at White King).
 - Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
 
-### Panel 11e (PROPOSAL)
+### Panel 11e (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (smug, speaking, looks at Regina); Regina (offended, looks at White King).
 - Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
 
-### Panel 11f (PROPOSAL)
+### Panel 11f (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (angry, speaking, looks at Regina, gesture point-down-l); Regina (worried, looks at White King).
@@ -3249,7 +3352,7 @@ PANEL 9c   (sequence number 35)
 12. Continuity: right after Caballo's jump to h3 in 9b; Alfil on d3; the greasy spot on f3 clearly visible (from Scene 9).
 13. Must not appear: a round balloon for this line; an open mouth on Caballo, Regina or Alfil; the King's fist over Regina's face; anger symbols; a knight on f3; a move box.
 14. Dialogue length: 19 words, 86 characters.
-15. Segmentation: the whole of speech 23.
+15. Segmentation: the whole of speech 24.
 16. Visual priority: the King's fury and raised fist, Caballo on h3 next to the empty, greasy f3.
 17. Lettering space: top left, above the rook h1 and the kingside pawns.
 18. Balloon-area estimate: about 20%.
@@ -3279,7 +3382,7 @@ PANEL 9d   (sequence number 36)
 12. Continuity: answers the King's shout in 9c; Caballo on h3, the f3 square empty; the greasy spot on f3 clearly visible (from Scene 9).
 13. Must not appear: a tail pointing to the g2 pawn or ending in front of it; an open mouth on the King or the pawns; a knight on f3; a move box; a balloon over a face.
 14. Dialogue length: 17 words, 77 characters.
-15. Segmentation: the first two sentences of speech 24; continues in 9e with "Dat ge uw voetvolk ...".
+15. Segmentation: the first two sentences of speech 25; continues in 9e with "Dat ge uw voetvolk ...".
 16. Visual priority: Caballo's angry refusal and the greasy spot on f3 in front of him.
 17. Lettering space: top centre, above the g2 and f2 pawns.
 18. Balloon-area estimate: about 15%.
@@ -3309,7 +3412,7 @@ PANEL 9e   (sequence number 37)
 12. Continuity: continues Caballo's speech from 9d; Caballo on h3, f3 empty; the greasy spot on f3 clearly visible (from Scene 9); the King angry since 9c.
 13. Must not appear: a balloon over a white piece or over the greasy spot; a tail pointing to a pawn; an open mouth on the King or the pawns; the King cut off by the frame; a knight on f3; a move box.
 14. Dialogue length: 27 words, 145 characters.
-15. Segmentation: the third sentence of speech 24 (the double space after "Dat ge" collapsed); continues in 9f with "Zie dat het opdroogt ...".
+15. Segmentation: the third sentence of speech 25 (the double space after "Dat ge" collapsed); continues in 9f with "Zie dat het opdroogt ...".
 16. Visual priority: Caballo's offended refusal, the King's angry look, the greasy spot on f3.
 17. Lettering space: lower left, over the empty board in front of Caballo.
 18. Balloon-area estimate: about 25%.
@@ -3339,7 +3442,7 @@ PANEL 9f   (sequence number 38)
 12. Continuity: ends Caballo's speech from 9d and 9e; Caballo on h3; g1 and f1 empty since 2. Ld3 and 3. Ph3; the greasy spot on f3 clearly visible (from Scene 9).
 13. Must not appear: a piece on g1 or f1; the empty g1 and f1 hidden behind the pawns; the balloon over the rook or the King; a tail pointing to a pawn; an open mouth on the King; a move box; any arrow or mark showing castling.
 14. Dialogue length: 27 words, 133 characters.
-15. Segmentation: the last two sentences of speech 24 (ends the speech).
+15. Segmentation: the last two sentences of speech 25 (ends the speech).
 16. Visual priority: the empty g1 and f1 between the rook and the King (castling is possible), Caballo's smugness, the King's anger.
 17. Lettering space: the top third, across the top left.
 18. Balloon-area estimate: about 25%.
@@ -3366,7 +3469,7 @@ PANEL 9g   (sequence number 39)
 12. Continuity: after Caballo's refusal in 9f; Caballo on h3; Alfil on d3; the greasy spot on f3 clearly visible (from Scene 9).
 13. Must not appear: a white piece hiding the face of the Black Queen or the d5 pawn; any other moved piece; a balloon; text other than the move box; a laughing Black King.
 14. Dialogue length: none (move box only).
-15. Segmentation: the move line after speech 24.
+15. Segmentation: the move line after speech 25.
 16. Visual priority: the bishop on d7 and the calm black army.
 17. Lettering space: move box bottom left.
 18. Balloon-area estimate: about 2% (move box).
@@ -3376,7 +3479,7 @@ PANEL 9g   (sequence number 39)
 ```
 
 ### Scene 10 - A Thousand Games
-Added in 7.31 for the panels the author approved (10a, 10b, 10c). Panels 10d to 10i are still proposals and have no manifests yet.
+Added in 7.31 for the panels the author approved (10a, 10b, 10c); 10d to 10i added in 7.33. Scene 10 is complete.
 
 ```
 PANEL 10a   (sequence number 40)
@@ -3399,7 +3502,7 @@ PANEL 10a   (sequence number 40)
 12. Continuity: after 3. ... Ld7 in 9g; the King's frustration with Caballo turns into weariness; Alfil on d3, Caballo on h3.
 13. Must not appear: a breath cloud, puff or other sigh symbol; an open mouth on Regina or the pawns; a pawn on e2; any text other than the balloon.
 14. Dialogue length: 19 words, 94 characters.
-15. Segmentation: the first sentence of speech 26; continues in 10b with "In de eerste jaren ...".
+15. Segmentation: the first sentence of speech 27; continues in 10b with "In de eerste jaren ...".
 16. Visual priority: the King's weary, sighing face.
 17. Lettering space: top left.
 18. Balloon-area estimate: about 15%.
@@ -3424,12 +3527,12 @@ PANEL 10b   (sequence number 41)
 8.  Koning: calm, nostalgic, eyes half closed, mouth open, one hand on his chest.
     Regina: mouth closed; looks at the King.
 9.  Balloon 1 top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown (accepted by the author as shown, 7.31); its curved tail ends just beside Koning's mouth. Round balloon.
-10. Stage directions: none in this panel (the "(zucht)" of speech 26 is shown in 10a).
+10. Stage directions: none in this panel (the "(zucht)" of speech 27 is shown in 10a).
 11. State 6. No move.
-12. Continuity: continues speech 26 from 10a; the King's weariness turns into nostalgia.
+12. Continuity: continues speech 27 from 10a; the King's weariness turns into nostalgia.
 13. Must not appear: an open mouth on Regina, the bishop or the pawns; a wooden board or any other prop (the old boards exist only in the dialogue); a sigh symbol.
 14. Dialogue length: 24 words, 115 characters.
-15. Segmentation: speech 26, sentences 2 and 3 ("In de eerste jaren ..." to "... daar op gespeeld."); continues in 10c.
+15. Segmentation: speech 27, sentences 2 and 3 ("In de eerste jaren ..." to "... daar op gespeeld."); continues in 10c.
 16. Visual priority: the King's nostalgic face and hand on his chest.
 17. Lettering space: top centre.
 18. Balloon-area estimate: about 20%.
@@ -3456,16 +3559,379 @@ PANEL 10c   (sequence number 42)
 9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
 10. Stage directions: none.
 11. State 6. No move.
-12. Continuity: continues speech 26 from 10b.
+12. Continuity: continues speech 27 from 10b.
 13. Must not appear: an open mouth on Regina or the pawns; the raised hand over Regina's face; trophies or any other prop; a sigh symbol.
 14. Dialogue length: 12 words, 59 characters.
-15. Segmentation: speech 26, sentence 4; continues in 10d with "En ineens was een houten bord ...".
+15. Segmentation: speech 27, sentence 4; continues in 10d with "En ineens was een houten bord ...".
 16. Visual priority: the King's proud raised arm.
 17. Lettering space: top left.
 18. Balloon-area estimate: about 10%.
 19. Layout: close-up (Section 23.D); one balloon.
 20. Overflow: not expected.
 21. Continuity requirements: the King's speech continues in 10d.
+```
+
+```
+PANEL 10d   (sequence number 43)
+
+1.  Scene 10, panel d: the pieces started complaining.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :"
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, as in 10b; from this side left to right: e1, d1, c1.
+8.  Koning: angry, mouth open, both arms spread wide with open hands.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top centre, between the King's cross and the bishop's mitre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 27 from 10c.
+13. Must not appear: an open mouth on Regina, the bishop or the pawns; a wooden board or any other prop; a sigh symbol.
+14. Dialogue length: 17 words, 85 characters.
+15. Segmentation: speech 27, sentence 5 up to and including the colon; the list after the colon follows in 10e.
+16. Visual priority: the King's spread arms and angry face.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot of the King and Regina (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the list of complaints follows in 10e.
+```
+
+```
+PANEL 10e   (sequence number 44)
+
+1.  Scene 10, panel e: the complaints about the wooden board.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 in the centre, Regina d1, the c1 bishop; the pawns g2 (left edge) and f2, the empty e2 square, the head of the e3 pawn at the bottom centre, the pawns d2 and c2 and Alfil on d3 at the right.
+6.  Listening: Regina, the c1 bishop, Alfil and the pawns, mouths closed, looking on.
+7.  Camera on Black's side, further back and higher than 10d, framed on e1 and e2, with room above the King (author, 7.25); from this side the g-file is left.
+8.  Koning: angry, mouth open, pointing down at the board with one arm.
+    Listeners: mouths closed.
+9.  Balloon 1 top left, clear of the King's face and crown; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 27 after the colon in 10d.
+13. Must not appear: lacquer, splinters or other damage drawn on this plastic board (the complaints are about the old wooden boards, only in the dialogue); an open mouth on any listener.
+14. Dialogue length: 17 words, 86 characters.
+15. Segmentation: speech 27, the list after the colon of sentence 5; continues in 10f with "Enfin, ...".
+16. Visual priority: the King's angry pointing at the board.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium-wide shot of the white officers (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the King's speech continues in 10f.
+```
+
+```
+PANEL 10f   (sequence number 45)
+
+1.  Scene 10, panel f: the pieces wanted a modern plastic board.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 10d.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 10d.
+8.  Koning: worried, eyebrows raised, mouth open, one arm stretched out away from Regina with an open hand.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top centre, just above Regina's crown; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 27 from 10e.
+13. Must not appear: an open mouth on any listener; a wooden or second board; a sigh symbol.
+14. Dialogue length: 18 words, 95 characters.
+15. Segmentation: speech 27, sentence 6; continues in 10g with "En 't ergste van al ...".
+16. Visual priority: the King's worried face and open hand.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the King's speech continues in 10g.
+```
+
+```
+PANEL 10g   (sequence number 46)
+
+1.  Scene 10, panel g: the worst of all: the new board.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 large in the centre; Regina d1 at the right; the heads of the pawns f2 and d2 at the bottom.
+6.  Listening: Regina, mouth closed, looking on; the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King, as in 10c.
+8.  Koning: angry, mouth open, one fist raised high on Regina's side, above her head, not covering her face.
+    Regina: mouth closed.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 27 from 10f.
+13. Must not appear: the raised fist over Regina's face; anger symbols; an open mouth on any listener.
+14. Dialogue length: 26 words, 119 characters.
+15. Segmentation: speech 27, sentence 7; continues in 10h with "Die pasgepromoveerde officieren ...".
+16. Visual priority: the King's raised fist and angry face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 20%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: split after "er kwam een nief bord" into two balloons for Koning in reading order.
+21. Continuity requirements: the King's speech ends in 10h.
+```
+
+```
+PANEL 10h   (sequence number 47)
+
+1.  Scene 10, panel h: the King blames the newly promoted officers.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 10d.
+6.  Listening: Regina, mouth closed, looking back at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 10d.
+8.  Koning: stubborn, mouth open, looks at Regina, one hand raised on the side away from her.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top centre, just above Regina's crown; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: ends speech 27 (10a to 10h).
+13. Must not appear: an open mouth on any listener; a sigh symbol.
+14. Dialogue length: 14 words, 90 characters.
+15. Segmentation: speech 27, the last two sentences (ends the speech).
+16. Visual priority: the King's stubborn look at Regina.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: Regina answers in 10i.
+```
+
+```
+PANEL 10i   (sequence number 48)
+
+1.  Scene 10, panel i: Regina says the officers may have a point.
+2.  Script excerpt:
+      Regina:
+      Jamaar Sire, uw officieren hebben misschien wel een punt.
+3.  Dialogue:
+      Balloon 1: "Jamaar Sire, uw officieren hebben misschien wel een punt."
+4.  Balloon 1 -> Regina
+5.  Visible: the same as 10d.
+6.  Listening: Koning, stubborn, mouth closed, looking at Regina; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 10d.
+8.  Regina: mouth open, looks at the King, one open hand held out towards him (beside his beard, not covering his face).
+    Koning: mouth closed; looks back at Regina.
+9.  Balloon 1 top right, above Regina and the c1 bishop, clear of the crown and mitre; its curved tail ends just beside Regina's mouth, not near the King. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: answers speech 27.
+13. Must not appear: an open mouth on the King; Regina's hand over the King's face; a tail near the King; lip colour or make-up on Regina.
+14. Dialogue length: 9 words, 57 characters.
+15. Segmentation: the whole of speech 28.
+16. Visual priority: Regina's calm advice and the King's stubbornness.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the King answers in 11a.
+```
+
+### Scene 11 - Who Knows This Board Best
+Added in 7.33 for the panels the author approved (11a to 11f). Panels 11g and 11h are still proposals and have no manifests yet.
+
+```
+PANEL 11a   (sequence number 49)
+
+1.  Scene 11, panel a: the King challenges Regina.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?"
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
+6.  Listening: Regina, surprised, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, as in 10b; from this side left to right: e1, d1, c1.
+8.  Koning: angry, mouth open, looks at Regina, one index finger raised high on the side away from her.
+    Regina: mouth closed; looks back at the King.
+9.  Balloon 1 top centre, just above Regina's crown; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: answers Regina in 10i.
+13. Must not appear: an open mouth on any listener.
+14. Dialogue length: 12 words, 63 characters.
+15. Segmentation: speech 29, sentence 1; continues in 11b.
+16. Visual priority: the King's raised finger and Regina's surprise.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the same camera in 11b.
+```
+
+```
+PANEL 11b   (sequence number 50)
+
+1.  Scene 11, panel b: Regina's long moves.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 11a.
+6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 11a.
+8.  Koning: smug, eyes half closed, mouth open, looks at Regina, a dismissive wave on the side away from her.
+    Regina: mouth closed; looks back at the King.
+9.  Balloon 1 top right; its bottom edge covers the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 29 from 11a.
+13. Must not appear: an open mouth on any listener; the waving hand over Regina's face.
+14. Dialogue length: 22 words, 120 characters.
+15. Segmentation: speech 29, sentence 2; continues in 11c with "Daarentegen ...".
+16. Visual priority: the King's smugness and Regina's offence.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 20%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: split after "veel te gemakkelijk overheen" into two balloons for Koning in reading order.
+21. Continuity requirements: the King's speech continues in 11c.
+```
+
+```
+PANEL 11c   (sequence number 51)
+
+1.  Scene 11, panel c: the King's endgame technique.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 and the tip of Alfil's mitre at the bottom; a strip of the club room's window at the top left.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera on Black's side, further back than 11a, with room above for a wide balloon (author, 7.25).
+8.  Koning: proud, eyes wide, mouth open, one hand on his chest.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 wide across the top, clear of all crowns, faces and the mitre; its curved tail comes down and ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 29 from 11b.
+13. Must not appear: squares, triangles or other diagrams drawn on the board (the technique exists only in the dialogue); an open mouth on any listener.
+14. Dialogue length: 22 words, 157 characters.
+15. Segmentation: speech 29, sentences 3 and 4; continues in 11d with "Ooit heb ik zelfs ...".
+16. Visual priority: the King's pride.
+17. Lettering space: the top band.
+18. Balloon-area estimate: about 25%.
+19. Layout: medium shot of the white officers (Section 23.D); one wide balloon.
+20. Overflow: split after "oppositie gepakt." into two balloons for Koning in reading order.
+21. Continuity requirements: the King's speech continues in 11d.
+```
+
+```
+PANEL 11d   (sequence number 52)
+
+1.  Scene 11, panel d: the mate with two knights.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 11a.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 11a.
+8.  Koning: proud, eyes wide, mouth open, one hand raised high on the side away from Regina.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 29 from 11c. The quote mark spelling "Dieje van de overkant" (without n) is the play's own and is kept.
+13. Must not appear: the two knights moving or a remembered game drawn in the panel; an open mouth on any listener.
+14. Dialogue length: 25 words, 138 characters.
+15. Segmentation: speech 29, sentence 5; continues in 11e with "Héhé, ...".
+16. Visual priority: the King's pride and raised hand.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 25%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: split after "heel dat bord omgeploegd" into two balloons for Koning in reading order.
+21. Continuity requirements: the King's speech continues in 11e.
+```
+
+```
+PANEL 11e   (sequence number 53)
+
+1.  Scene 11, panel e: the King gloats.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?"
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 11a.
+6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 11a.
+8.  Koning: smug, eyes half closed, mouth open, looks at Regina.
+    Regina: mouth closed; looks back at the King.
+9.  Balloon 1 top centre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 29 from 11d.
+13. Must not appear: an open mouth on any listener.
+14. Dialogue length: 20 words, 89 characters.
+15. Segmentation: speech 29, sentences 6 and 7; continues in 11f with "Ga liever buiten ...".
+16. Visual priority: the King's smugness and Regina's offence.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 15%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the King's speech ends in 11f.
+```
+
+```
+PANEL 11f   (sequence number 54)
+
+1.  Scene 11, panel f: the King sends Regina out to watch Caballo.
+2.  Script excerpt:
+      Koning:
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+3.  Dialogue:
+      Balloon 1: "Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden."
+4.  Balloon 1 -> Koning
+5.  Visible: the same as 11a.
+6.  Listening: Regina, worried, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera the same as 11a.
+8.  Koning: angry, mouth open, looks at Regina and points with one arm down and away from her, towards the kingside (h3, out of frame).
+    Regina: mouth closed; looks back at the King.
+9.  Balloon 1 top right, above Regina, clear of her crown; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move in this panel; 4. Dh5 follows in 11g.
+12. Continuity: ends speech 29 (11a to 11f); Caballo on h3.
+13. Must not appear: an open mouth on any listener; Regina already off d1; a move box.
+14. Dialogue length: 14 words, 69 characters.
+15. Segmentation: speech 29, the last sentence (ends the speech).
+16. Visual priority: the King's order and Regina's worry.
+17. Lettering space: top right.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium shot of the King and Regina; one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: Regina goes to h5 in 11g (4. Dh5).
 ```
 
 ---
@@ -3584,9 +4050,9 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | 9c | Panel script written (approved in 7.27); manifest written (Section 20.3). |
 | 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | 9d, 9e, 9f | Panel script written (9d approved in 7.27, 9e in 7.28, 9f in 7.29); manifests written (Section 20.3). |
 | 26 | Move: 3. ... Ld7 | 9 | 9g | Panel script written (approved in 7.30); manifest written (Section 20.3). |
-| 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | 10a, 10b, 10c (10d to 10h proposals) | Partly written: panel scripts and manifests for 10a, 10b and 10c (approved in 7.31, Section 20.3); the rest of the speech in the proposals 10d to 10h. |
-| 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | - | Scene catalog only. |
-| 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | - | Scene catalog only. |
+| 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | 10a to 10h | Panel script written (10a to 10c approved in 7.31, 10d to 10h in 7.33); manifests written (Section 20.3). |
+| 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | 10i | Panel script written (approved in 7.33); manifest written (Section 20.3). |
+| 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | 11a to 11f | Panel script written (approved in 7.33); manifests written (Section 20.3). |
 | 30 | Move: 4. Dh5 | 11 | - | Scene catalog only. |
 | 31 | Move: 4. ... Pe7 | 11 | - | Scene catalog only. |
 | 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | - | Scene catalog only. |
@@ -3815,3 +4281,5 @@ Items that need a decision from the author.
 | 7.29 | - | Proposal 9f: high camera showing the empty g1 and f1 (castling is clearly possible); balloon clear of the rook and the King. Panel 9f approved: panel block (Section 18, Scene 9) and manifest 38 (Section 20.3). |
 | 7.30 | - | Proposal 9g: higher camera from the queenside; faces of the Black Queen and the d5 pawn visible. Panel 9g approved: panel block and manifest 39; Scene 9 complete. |
 | 7.31 | - | Sigh symbols (breath cloud) forbidden after author feedback on panel 10a; removed from the preview panels 10a and 16a. Panels 10a, 10b, 10c approved: panel blocks and manifests 40 to 42. |
+| 7.32 | 5bb6ce6, reverted in ec8038f | Colon removed from the balloon of the proposal panel 10d; reverted by the author, so 7.32 is not part of the canon. |
+| 7.33 | - | Panels 10d to 10i and 11a to 11f approved: panel blocks (Section 18, Scenes 10 and 11) and manifests 43 to 54 (Section 20.3); Scene 10 complete; speech numbers in manifests 35 to 42 corrected. |
