@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.33
+Version 7.34
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -40,6 +40,7 @@ Version 7.29 reframes the proposal panel 9f (author feedback): a high camera tha
 Version 7.30 reframes the proposal panel 9g (author feedback): a higher camera, more from the left, so the faces of the Black Queen and the d5 pawn are visible. Panel 9g is then approved, which completes Scene 9: full panel block in Section 18 and manifest 39 in Section 20.3.
 Version 7.31 forbids sigh symbols such as a breath cloud next to a face (author feedback on panel 10a): a sigh is shown by the face and the pose only (Section 14, Section 16, Common Prompt Block). Panels 10a, 10b and 10c are approved: full panel blocks in Section 18 (Scene 10) and manifests 40 to 42 in Section 20.3.
 Version 7.33 approves panels 10d to 10i and 11a to 11f (author decision): full panel blocks in Section 18 (Scenes 10 and 11) and manifests 43 to 54 in Section 20.3; Scene 10 is complete. It corrects the speech numbers in manifests 35 to 42. (Version 7.32, which removed the colon in 10d, was reverted by the author.)
+Version 7.34 adds the hints between Regina and the black rook on h8 (author decision): subtle looks and a blush from 11g, obvious in 14g where the captured Regina stands beside the board close to him, dropped after 14h (Section 7, proposal blocks).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -554,6 +555,7 @@ Felt:
 - Practical and intelligent.
 - Often correct.
 - Recurring interest in the Black Rook on h8.
+- Regina and the h8 rook (author decision in 7.34): subtle looks and a light blush from 11g to 14f, obvious in 14g, dropped from 15a (see Black Rook (h8) below).
 - Moves easily across the board with her long moves.
 - Captured on h5 (6...gxh5).
 - After capture: stands beside the board, looking at the Black Rook on h8.
@@ -611,6 +613,7 @@ Felt:
 - Confident.
 - Appears in reaction shots.
 - Object of Regina's recurring interest.
+- Regina and the h8 rook (author decision in 7.34): from panel 11g up to and including 14h there are hints that something is going on between them: in 11g to 14f only subtle hints, in the looks on both faces where they are in frame (the rook glancing at Regina, Regina glancing towards the rook) and a light pink blush on Regina's face; in 14g, where the captured Regina stands beside the board close to him, it is obvious from the looks of both. From 15a on the gag is dropped: the joke is made.
 - The White King's opinion: a "pipo" and a "sul" who cannot even move diagonally.
 
 ## Other Pieces
@@ -1052,6 +1055,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.31 | Author decisions: panel 10a approved ("approve"), panels 10b and 10c accepted ("41-panel-10b.svg accept", "42-panel-10c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 10 - A Thousand Games) and as manifests 40 to 42 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 27 marked as partly written. Noted as accepted: in 10b the bottom of the balloon touches the top of Regina's crown. Panels 10d to 10i stay proposals. |
 | 7.33 | Author decisions: panels 10d, 10e, 10f, 10g, 10h, 10i, 11a, 11b, 11c, 11d, 11e and 11f accepted ("accept" for each), as shown in the SVG preview; 10d keeps the play's colon (the change of 7.32 was reverted, see Appendix C). Written as full panel blocks in Section 18 (Scene 10; new heading Scene 11 - Who Knows This Board Best) and as manifests 43 to 54 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 27 (now complete), 28 and 29 updated. Noted as accepted, not changed: the balloon touches or covers the top of Regina's crown in 10d, 11b, 11d (down to her eyebrows) and 11e. Scene 10 is fully approved; in Scene 11 the move panels 11g and 11h stay proposals. |
 | 7.33 | Correction: the speech numbers in field 15 (and 10, 12) of manifests 35 to 42 were one too low. Like the earlier manifests, they follow the item numbers of the Script Coverage Map: the King's shout in 9c is speech 24 (was 23), Caballo's refusal in 9d to 9g is speech 25 (was 24), the King's sigh speech in 10a to 10c is speech 27 (was 26). |
+| 7.34 | Author decision: "there is something going on between the white queen and the black rook at h8. From panel 11g onward give subtle hints about this by for example the look on both pieces faces and perhaps a blush on the queens face", with "rook sees queen" for 11h, 12d and 13b; "on panel 14g the queen is captured and stands close to the rook next to the board (don't overdo this). On this panel from the looks of both pieces it should be obvious for the reader that there is something going on between them"; "after panel 14h drop the gag - the joke is made". Section 7 (Regina, Black Rook (h8)) and the proposal blocks 11g, 11h, 12c, 12d, 12e, 13a, 13b, 14d, 14g and 16b updated. Where the two are not in frame (12a, 12b, 14a to 14c, 14e, 14f, 14h) nothing changes. In the SVG preview: the rook looks at Regina in 11g, 11h, 12d, 12e, 13b and 14d; Regina gets a light pink blush (a new preview option, softer than the red flush of anger) and glances towards the rook in 12c, 13a and 13b; after the capture Regina stands beside the board next to the h8 rook (from 14d on, for continuity), the captured h7 pawn a little further down the h-file; 14g got a new camera from Black's kingside corner so that both faces are visible (the rook shown turned towards her) and both are large; in 16b Regina no longer looks at the rook. Then: "you can give the black rook a blush" for 11h, 12d, 12e, 13b and 14d: done (the same light blush). And for 14g: "let's view the board from white's perspective here": the camera moved to White's side, beyond the h-file, so the King (speaking) is in frame at the left and the rook is not hidden behind Caballo; Regina is shown facing the rook. Then: "i want this more from white's perspective", "maybe as seen by the white king ?": a point-of-view shot from the King's eyes was tried; the author chose to keep the King in the picture. Two views from behind White hid the rook behind Caballo (same file). The author: "view diagonally so Caballo stays somewhat in the middle. As such he unintentionally helps hiding the romance. Also view lower so we see the entire head of the white king. Shift the image to get rid of the empty space at the right of the board": a low camera on White's side looking diagonally from the queenside towards h8, the King in the right foreground (whole head in sight), Caballo between the rook and Regina; the balloon moved to the top right above the King. All these panels stay proposals. |
 
 ---
 
@@ -1955,6 +1959,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 11g (PROPOSAL)
 - Board state: 7.
+- Regina and the h8 rook (author decision in 7.34): the black rook on h8 glances at Regina as she moves to h5 (her face is not visible from this side).
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (calm).
 - Move shown: d1-h5 (move streak).
@@ -1963,6 +1968,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 11h (PROPOSAL)
 - Board state: 8.
+- Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina on h5 ("rook sees queen"), with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Black King (calm).
 - Move shown: g8-e7 (move streak).
@@ -1983,12 +1989,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 12c (PROPOSAL)
 - Board state: 8.
+- Regina and the h8 rook (author decision in 7.34): Regina (h5) has a light pink blush and glances towards the black rook on h8 (out of frame).
 - Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
 - Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (heroic).
 - Balloon (White King): Ridder Caballo, hop naar g5. Allez vooruit, ju !
 
 ### Panel 12d (PROPOSAL)
 - Board state: 9.
+- Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina on h5 ("rook sees queen"), with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: h3-g5 (move streak).
@@ -1997,6 +2005,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 12e (PROPOSAL)
 - Board state: 10.
+- Regina and the h8 rook (author decision in 7.34): the black rook on h8 glances at Regina on h5, with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (worried); the piece on g6 (calm).
 - Move shown: g7-g6 (move streak).
@@ -2005,12 +2014,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 13a (PROPOSAL)
 - Board state: 10.
+- Regina and the h8 rook (author decision in 7.34): Regina (h5) has a light pink blush and glances towards the black rook on h8.
 - Camera: special angle (see comic/panels.js), with room above Regina and Caballo for the shout balloon (adjusted in 7.25).
 - Characters: Caballo (heroic, speaking).
 - Balloon (Caballo), shout balloon: Voor de glorie en de overwinning ! Ten aanval !
 
 ### Panel 13b (PROPOSAL)
 - Board state: 11.
+- Regina and the h8 rook (author decision in 7.34): Regina (h5, at the bottom left) has a light pink blush and glances towards the black rook on h8; the rook looks at her, with a light blush ("rook sees queen").
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: g5-h7 (move streak).
@@ -2041,6 +2052,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 14d (PROPOSAL)
 - Board state: 12.
+- Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina as she is captured, with a light blush; after the capture she stands beside the board next to the h8 rook (not right against him).
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (surprised, looks at the piece on h5).
 - Move shown: g6-h5 (move streak).
@@ -2064,6 +2076,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 14g (PROPOSAL)
 - Board state: 12.
+- Regina and the h8 rook (author decision in 7.34): Regina, captured, stands beside the board close to the black rook on h8 (not overdone: a short distance between them). From their looks it is obvious to the reader that something is going on between them: Regina with a pink blush and a coy, half-lidded smile looks at the rook; the rook, with a light blush and a pleased half-lidded smile, looks back at her. Camera (author feedback in 7.34): from White's side, low, looking diagonally across the board from the queenside towards h8: the White King (e1) in the right foreground, seen from behind, his whole head and crown in sight, speaking, one arm raised; in the middle distance, from left to right, the black rook on h8, Caballo on h7 and, beside the board, Regina (shown facing the rook, her face visible). Caballo stands between them, unintentionally half hiding the romance; the rook and Regina look at each other past him. The black pieces of the kingside and the white pieces in between fill the rest of the frame; no empty table at the right. The balloon sits at the top right, above and just left of the King, its tail ending beside the left side of his head (clear of the pawn heads around him).
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
 - Characters: White King (speaking, gesture point-up-r); Regina (smug, looks at black rook (h8)); black rook (h8) (proud, looks at Regina).
 - Beside the board: the captured black pawn (h7) and Regina stand beside the board.
@@ -2120,6 +2133,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 16b (PROPOSAL)
 - Board state: 12.
+- Regina and the h8 rook (author decision in 7.34): no hint any more: the joke is made in 14g and 14h; Regina no longer looks at the rook.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
 - Characters: White King (sigh); Black King (calm); Regina (looks at black rook (h8)).
 - Beside the board: the captured black pawn (h7) and Regina stand beside the board.
@@ -4283,3 +4297,4 @@ Items that need a decision from the author.
 | 7.31 | - | Sigh symbols (breath cloud) forbidden after author feedback on panel 10a; removed from the preview panels 10a and 16a. Panels 10a, 10b, 10c approved: panel blocks and manifests 40 to 42. |
 | 7.32 | 5bb6ce6, reverted in ec8038f | Colon removed from the balloon of the proposal panel 10d; reverted by the author, so 7.32 is not part of the canon. |
 | 7.33 | - | Panels 10d to 10i and 11a to 11f approved: panel blocks (Section 18, Scenes 10 and 11) and manifests 43 to 54 (Section 20.3); Scene 10 complete; speech numbers in manifests 35 to 42 corrected. |
+| 7.34 | - | Regina and the h8 rook: subtle hints from 11g, obvious in 14g, dropped after 14h; new 14g camera; Regina beside the board next to h8. |

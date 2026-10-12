@@ -90,6 +90,7 @@ function face(g, x, y, r, col, o) {
     if (!o.must || E === "despair" || E === "worried" || E === "angry") mk("path", { d, stroke: INK, "stroke-width": r*.085, fill: "none", "stroke-linecap": "round" }, g);
   }
   if (o.flush || E === "furious") for (const s of [-1, 1]) mk("ellipse", { cx: x+s*r*.62, cy: y+r*.3, rx: r*.22, ry: r*.13, fill: "#d9543a", opacity: .55 }, g);
+  else if (o.blush) for (const s of [-1, 1]) mk("ellipse", { cx: x+s*r*.58, cy: y+r*.28, rx: r*.19, ry: r*.11, fill: "#f2849a", opacity: o.blush === "strong" ? .6 : .4 }, g);  // a soft pink blush (Regina and the h8 rook, bible 7.34), not the red flush of anger
 }
 function backHead(g, x, y, r, col) { mk("circle", { cx: x, cy: y, r, fill: W_[col].f, stroke: INK, "stroke-width": r*.07 }, g); mk("path", { d: `M${x+r*.3} ${y-r*.7} q${r*.6} ${r*.5} ${r*.4} ${r*1.2}`, stroke: W_[col].s, "stroke-width": r*.18, fill: "none" }, g); }
 function felt(g) { mk("ellipse", { cx: 0, cy: 2, rx: 20, ry: 6.5, fill: "#2e7a3a", stroke: INK, "stroke-width": 1.4 }, g); }

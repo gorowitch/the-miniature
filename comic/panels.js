@@ -7,7 +7,7 @@ const zw = (frame, o) => Object.assign({ frame, side: "w" }, o || {});          
 const A = "approved", Pr = "proposal";
 const KING_ALFIL = { from: [7.6, 4.7, 3.0], at: [4.0, 1.5, 0.8], f: 820 };   // from Black's side, off to the kingside, so Alfil on d3 does not hide the King
 const BESIDE11 = [{ id: "xh7", ch: "p", at: [8.95, 7.3] }];
-const BESIDE12 = [{ id: "xh7", ch: "p", at: [8.95, 7.3] }, { id: "xQ", ch: "Q", role: "regina", at: [9.05, 6.1] }];
+const BESIDE12 = [{ id: "xh7", ch: "p", at: [9.0, 6.2] }, { id: "xQ", ch: "Q", role: "regina", at: [8.85, 7.45] }];   // Regina stands beside the board next to the h8 rook (bible 7.34)
 window.PANELS = [
 // ---------------------------------------------------------------- Scene 1 - Opening Speech (approved)
 { id: "1a", scene: 1, status: A, state: 0, cam: zb(["d1", "e1", "f1", "g1"], { dist: 1.7, h: 1.25, th: 0.75, f: 600 }),
@@ -171,8 +171,8 @@ window.PANELS = [
 { id: "11f", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { koning: { expr: "angry", talk: true, lookAt: "regina", gest: "point-down-l" }, regina: { expr: "worried", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden." }] },
-{ id: "11g", scene: 11, status: Pr, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" } }, balloons: [] },
-{ id: "11h", scene: 11, status: Pr, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
+{ id: "11g", scene: 11, status: Pr, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" }, brookh8: { lookAt: "regina" } }, balloons: [] },
+{ id: "11h", scene: 11, status: Pr, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 12 - The King Suspects f6 (PROPOSAL)
 { id: "12a", scene: 12, status: Pr, state: 8, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.3, f: 560 }),
   cast: { koning: { expr: "puzzled", talk: true, gest: "point-up-l" } },
@@ -181,15 +181,15 @@ window.PANELS = [
   cast: { koning: { expr: "surprised", talk: true, gest: "point-up-r" } },
   balloons: [{ who: "koning", text: "Seg, maar wacht eens effe … ." }] },
 { id: "12c", scene: 12, status: Pr, state: 8, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
-  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "heroic" } },
+  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" } },
   balloons: [{ who: "koning", text: "Ridder Caballo, hop naar g5. Allez vooruit, ju !" }] },
-{ id: "12d", scene: 12, status: Pr, movebox: "5. Pg5", state: 9, cam: { from: [8.8, 1.4, 2.6], at: [6.4, 4.2, 0.3], f: 620 }, fx: [{ move: ["h3", "g5"] }], cast: { caballo: { expr: "heroic" } }, balloons: [] },
-{ id: "12e", scene: 12, status: Pr, movebox: "5. ... g6", state: 10, cam: { from: [8.8, 3.2, 2.2], at: [6.6, 5.6, 0.4], f: 640 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" } }, balloons: [] },
+{ id: "12d", scene: 12, status: Pr, movebox: "5. Pg5", state: 9, cam: { from: [8.8, 1.4, 2.6], at: [6.4, 4.2, 0.3], f: 620 }, fx: [{ move: ["h3", "g5"] }], cast: { caballo: { expr: "heroic" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+{ id: "12e", scene: 12, status: Pr, movebox: "5. ... g6", state: 10, cam: { from: [8.8, 3.2, 2.2], at: [6.6, 5.6, 0.4], f: 640 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 13 - Caballo's Charge (PROPOSAL)
 { id: "13a", scene: 13, status: Pr, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
-  cast: { caballo: { expr: "heroic", talk: true } },
+  cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },
   balloons: [{ who: "caballo", shout: true, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
-{ id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" } }, balloons: [] },
+{ id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.55, f: 500 }), fx: [{ burst: "koning" }],
   cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
@@ -200,16 +200,16 @@ window.PANELS = [
 { id: "14c", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "worried", talk: true, gest: "point-up-l", sweat: true } },
   balloons: [{ who: "koning", text: "Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, \"Dieje van den overkant\" is al aan zet." }] },
-{ id: "14d", scene: 14, status: Pr, movebox: "6. ... gxh5", state: 12, beside: BESIDE12, cam: { from: [8.6, 3.0, 2.4], at: [6.9, 5.2, 0.3], f: 640 }, fx: [{ move: ["g6", "h5"] }], cast: { regina: { expr: "surprised", lookAt: "h5" } }, balloons: [] },
+{ id: "14d", scene: 14, status: Pr, movebox: "6. ... gxh5", state: 12, beside: BESIDE12, cam: { from: [8.6, 3.0, 2.4], at: [6.9, 5.2, 0.3], f: 640 }, fx: [{ move: ["g6", "h5"] }], cast: { regina: { expr: "surprised", lookAt: "h5" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 { id: "14e", scene: 14, status: Pr, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "despair", talk: true } },
   balloons: [{ who: "koning", text: "Lap, daar hebt ge’t al. Regina geslagen." }] },
 { id: "14f", scene: 14, status: Pr, state: 12, beside: BESIDE12, cam: KING_ALFIL,
   cast: { koning: { expr: "angry", talk: true, gest: "both-open" }, alfil: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "En terwijl ik hier weer zit te zwoegen om de partij te winnen" }] },
-{ id: "14g", scene: 14, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [3.6, -0.6, 2.2], at: [8.0, 6.4, 0.8], f: 1000 },
-  cast: { koning: { talk: true, gest: "point-up-r" }, regina: { lookAt: "brookh8", expr: "smug" }, brookh8: { must: true, expr: "proud", lookAt: "regina" } },
-  balloons: [{ who: "koning", text: "gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8." }] },
+{ id: "14g", scene: 14, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [1.5, -2.0, 1.9], at: [6.6, 6.4, 0.9], f: 1500 },
+  cast: { koning: { talk: true, gest: "point-up-r" }, regina: { lookAt: "brookh8", expr: "smug", blush: "strong", back: false }, brookh8: { must: true, expr: "smug", lookAt: "regina", blush: true } },
+  balloons: [{ who: "koning", x: 1080, w: 440, text: "gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8." }] },
 { id: "14h", scene: 14, status: Pr, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "smug", talk: true, gest: "wave-r" } },
   balloons: [{ who: "koning", text: "Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft." }] },
@@ -234,6 +234,6 @@ window.PANELS = [
   cast: { koning: { expr: "sigh", talk: true } },
   balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
 { id: "16b", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [10.6, 4.0, 3.2], at: [4.0, 4.0, 0.3], f: 820 },
-  cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { lookAt: "brookh8" } }, balloons: [] }
+  cast: { koning: { expr: "sigh" }, bking: { expr: "calm" } }, balloons: [] }
 ];
 })();
