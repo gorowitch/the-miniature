@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.25
+Version 7.26
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -33,6 +33,7 @@ Version 7.22 makes the black pieces in panel 3a-1 look a little surprised (autho
 Version 7.23 makes the black army in panel 3b visibly amused (author decision); the Black King stays calm and does not laugh. New expression "amused" in the SVG preview.
 Version 7.24 zooms panels 4c-1 and 4c-2 out a little for more room for the balloon above Alfil (author feedback).
 Version 7.25 changes the balloon tails (author decision): curved, rounded cartoon tails that end beside the speaker's mouth and never cross a face or hat (Common Prompt Block, Section 16).
+Version 7.26 rotates the proposal panel 9b towards Black's side and zooms in, for a nearly frontal view of the white pieces (author feedback); the black army is hardly in frame. The King's disbelief pose with both hands at his head returns (author feedback), and panel 9b is approved: full panel block in Section 18 (Scene 9) and manifest 34 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1029,6 +1030,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.25 | Author feedback on the proposal panel 11c: "the text balloon should point to the king". The balloon covered Regina's face and its tail was only a notch. The picture was moved down and zoomed out, and the balloon made wider (five lines instead of seven), so it sits at the top clear of all faces with its tail pointing to the King's mouth. Camera line of the 11c proposal block updated; 11c stays a proposal. |
 | 7.25 | Author feedback on the proposal panel 12a: "zoom a little out so that the text balloon fits in the image". The balloon was pinned at a fixed position and ran off the right edge; the panel was zoomed out and moved down, and the balloon placed automatically above the King, completely inside the panel. Camera line of the 12a proposal block updated; 12a stays a proposal. |
 | 7.25 | Author feedback on the proposal panel 14a: "the text balloon is too small for the text". The cause was general: the jagged shout balloon is an ellipse, but it was sized like a rectangle, so the corners of the text stuck out past its points (5a, 9c, 13a, 14a). The SVG preview now sizes shout balloons so the whole text fits inside the inner points; the rule is added to the Common Prompt Block. The larger balloons covered crowns in 5a, 13a and 14a, so those panels got room above the characters (camera lines updated; 5a is approved, 13a and 14a stay proposals). |
+| 7.26 | Author feedback on the proposal panel 9b: "It's a bit strange to see the board from this angle. Rotate the board so that we have a more front view on the white pieces." The side view of 7.20 (camera level with the h-file) was rotated about 45 degrees towards Black's side, off the kingside corner, so the White King, Caballo and the white army face the camera. Two options were shown: A (the white pieces large, the black army partly cut off at the right) and B (pulled back so the whole black army fits, seen from behind, everything smaller). The author chose A, which drops the 7.20 wish that all black pieces are fully in sight. Then: "Can you zoom in more ? The black army and the empty board is less relevant. Can you rotate a little more ? I want a view closer to the front view on the white pieces.": the camera was rotated further towards Black's side and zoomed in on the white kingside; the black army is now only cut off at the right edge. Then: "I remember an earlier version of this where the white king had his hands near his head expressing disbelief can you try that ? Also the view can be shifted a little up. Maybe give the image even more a front view of the white pieces.": the King's pose is now both hands at the sides of his head (the pose of 7.20 before it was replaced by spread arms; his face stays free); the camera was rotated further towards the front and raised, so the pieces sit higher in the frame with less background ("shifted up" read as in 7.24: the picture moves up in the frame). From this frontal angle the black pawns on d5 and e6 stand between the camera and the white army and are visible from behind in the lower right; a still higher camera only gave a bird's-eye view and did not remove them. Camera and character lines of the 9b proposal block updated. |
+| 7.26 | Author decision: panel 9b approved ("approve 9b"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 34 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 23 (3. Ph3) updated. Panels 9c to 9g stay proposals. |
 
 ---
 
@@ -1519,14 +1522,23 @@ Board position: State 3 (after 2. Ld3) in 8a and 8b; State 4 (after 2. ... e6) i
 - No balloons.
 
 ## Scene 9 - Caballo Refuses f3
-Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panels 9b to 9g are still proposals (Section 18, Proposed Panels).
-Board position: State 4 (after 2. ... e6) in 9a. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
+Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panel 9b approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26); panels 9c to 9g are still proposals (Section 18, Proposed Panels).
+Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
 
 ### Panel 9a
 - Camera: from Black's side, at officer height, framed on the King (e1) and Caballo (g1), zoomed out a little (author feedback in 7.19): from this side, left to right, the rook (h1), Caballo (g1), the empty f1 square, the King (e1), Regina (d1) and the c1 bishop at the right edge. In front the pawns on h2, g2 and f2; the head of the e3 pawn at the bottom centre; at the bottom right the d2 pawn and Alfil on d3 (his mitre with the paprika stains).
 - Characters: the King gives the order proudly, mouth open, looking at Caballo, and points with one arm down and towards Caballo's side, to the square in front (f3). Caballo looks at the King, mouth closed, facing the centre files. Regina and the others look on, mouths closed.
 - Balloon placement: top left; the tail comes in diagonally to the King's mouth and does not run through his crown.
 - Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
+
+### Panel 9b
+Approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26).
+- Camera: from Black's side, a little off to the kingside and high, looking down at the white kingside so the white pieces are seen nearly from the front, zoomed in on them, with the pieces high in the frame (only a strip of background above them).
+- In frame (from this side the h-file is left): at the left the rook h1 and Caballo on h3, large, in the foreground; the pawns on h2, g2 and f2; the empty g1 and f1 squares; the empty f3 square with the greasy spot, clearly visible; in the middle the White King (e1), fully in sight, with Regina (d1) beside him; to the right Alfil on d3 (paprika stains on his mitre), the pawn on e3, the c1 bishop, the b1 knight, the a1 rook and the pawns on d2, c2, b2 and a2 as far as they are in frame; the gentle rise in the middle of the board, shown only by light and shadow. The black army is out of frame except the black pawns on e6 and d5, seen from behind in the lower right.
+- Action: Caballo jumps from g1 to h3 (3. Ph3) instead of f3: a short motion streak from g1 to h3 shows the jump. Every other piece stands on its square of State 5.
+- Characters: the White King is visibly surprised and shocked: eyes wide, mouth open (surprise, no balloon), both hands raised to the sides of his head in disbelief, beside his temples and not over his eyes or face, sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn, mouth closed, facing the centre files. The other pieces neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 3. Ph3
+- No balloons.
 
 ---
 
@@ -1616,10 +1628,10 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (looks at White King).
 - Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
 
-### Panel 9b (PROPOSAL)
+### Panel 9b (approved in 7.26: the approved panel block is in Section 18, Scene 9)
 - Board state: 5.
-- Camera (author feedback in 7.20): from beside the board, behind the h-file, between the two armies, so that the White King and the black pieces both face the camera. At the left the White King (e1) fully in sight, with the white army behind him; in the middle Caballo jumping from g1 to h3; at the right the complete black army. The rooks on h1 (bottom left) and h8 (right) are fully in sight; the rooks on a1 and a8 stand behind their armies. Little empty space at the right.
-- Characters (author feedback in 7.20): the White King is visibly surprised and shocked as Caballo jumps to h3 instead of f3: eyes wide, mouth open, both arms spread, sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn.
+- Camera (author feedback in 7.26, replacing the side view of 7.20): from Black's side, a little off to the kingside and high, looking down at the white kingside so the white pieces are seen nearly from the front, zoomed in on them, with the pieces high in the frame (little background above them). The white pieces fill the frame and face the camera: at the left the rook h1 and Caballo on h3 (large, in the foreground), the pawns h2, g2 and f2, the empty f3 square with the greasy spot; in the middle the White King (e1) fully in sight, with Regina (d1) beside him; to the right Alfil on d3, the e3 pawn, the c1 bishop, the b1 knight, the a1 rook and the queenside pawns. The black army is out of frame except the black pawns on e6 and d5, seen from behind in the lower right, between the camera and the white army (the author chose the white pieces over keeping the black army in sight, 7.20).
+- Characters (author feedback in 7.20, pose changed in 7.26): the White King is visibly surprised and shocked as Caballo jumps to h3 instead of f3: eyes wide, mouth open, both hands raised to the sides of his head in disbelief (the hands beside his temples, not over his eyes or face), sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn.
 - Move shown: g1-h3 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
@@ -3064,7 +3076,7 @@ PANEL 8c   (sequence number 32)
 ```
 
 ### Scene 9 - Caballo Refuses f3
-Added in 7.19 for the panel the author approved (9a). Panels 9b to 9g are still proposals and have no manifests yet.
+Added in 7.19 for the panel the author approved (9a); 9b added in 7.26. Panels 9c to 9g are still proposals and have no manifests yet.
 
 ```
 PANEL 9a   (sequence number 33)
@@ -3094,6 +3106,34 @@ PANEL 9a   (sequence number 33)
 19. Layout: medium shot of the white kingside officers; one balloon.
 20. Overflow: not expected.
 21. Continuity requirements: in 9b Caballo jumps to h3 instead (3. Ph3).
+```
+
+```
+PANEL 9b   (sequence number 34)
+
+1.  Scene 9, panel b: Caballo jumps to h3 instead of f3; the King is shocked.
+2.  Script excerpt:
+      3. Ph3
+3.  Dialogue: none. Move box (bottom-left corner): "3. Ph3".
+4.  No speaker.
+5.  Visible: the rook h1 and Caballo on h3 (large, left foreground); pawns h2, g2, f2; the empty f3 square with the greasy spot; Koning e1 fully in sight, Regina d1 beside him; Alfil on d3, the e3 pawn, the c1 bishop, the b1 knight, the a1 rook and the queenside pawns to the right; the black pawns on e6 and d5 from behind in the lower right; no other black pieces.
+6.  Watching: Koning, shocked: eyes wide, mouth open in surprise (Section 19.C exception: no balloon, no tail), both hands at the sides of his head, sweat drops, looking at Caballo. Regina and the others neutral, mouths closed.
+7.  Camera on Black's side, a little off to the kingside and high, nearly frontal on the white kingside, zoomed in; from this side left to right: h-file to a-file. Caballo and the King are the largest and most prominent (author, 7.20 and 7.26).
+8.  Koning: hands raised beside his temples (not over his eyes or face), face turned to Caballo.
+    Caballo: stubborn, mouth closed, facing the centre files.
+9.  No balloons. The move box sits in the bottom-left corner, clear of Caballo's felt.
+10. Stage directions: none.
+11. State 5: the move 3. Ph3 (knight g1-h3) happens in this panel; a short motion streak from g1 to h3 shows the jump.
+12. Continuity: after the order to f3 in 9a; Alfil on d3, the pawn on e3; the greasy spot on f3 clearly visible (from Scene 9).
+13. Must not appear: a knight on f3 or g1; a balloon; text other than the move box; the King's hands over his eyes or face; the King speaking (no balloon, no tail); any other moved piece.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after speech 22.
+16. Visual priority: Caballo on h3 and the King's shock; the greasy spot on the empty f3 square.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: high, nearly frontal medium-wide shot of the white kingside (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 5 into 9c, where the King shouts at Caballo.
 ```
 
 ---
@@ -3208,7 +3248,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 20 | Koning: "Boebel, boebel. Zo zullen we de partij wel winnen..." | 8 | 8a, 8b | Panel script written (approved in 7.17); manifest written (Section 20.3). |
 | 21 | Move: 2. ... e6 | 8 | 8c | Panel script written (approved in 7.17); manifest written (Section 20.3). |
 | 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | 9a | Panel script written (approved in 7.19); manifest written (Section 20.3). |
-| 23 | Move: 3. Ph3 | 9 | - | Scene catalog only. |
+| 23 | Move: 3. Ph3 | 9 | 9b | Panel script written (approved in 7.26); manifest written (Section 20.3). |
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | - | Scene catalog only. |
 | 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | - | Scene catalog only. |
 | 26 | Move: 3. ... Ld7 | 9 | - | Scene catalog only. |
@@ -3437,3 +3477,4 @@ Items that need a decision from the author.
 | 7.23 | - | Panel 3b: the black army visibly amused, the Black King calm; new preview expression "amused". |
 | 7.24 | - | Panels 4c-1 and 4c-2 zoomed out a little; room for the balloon above Alfil. |
 | 7.25 | - | Curved, rounded balloon tails that end beside the mouth and never cross a face or hat (Common Prompt Block, Section 16). |
+| 7.26 | - | Proposal 9b rotated towards Black's side and zoomed in: a nearly frontal view of the white pieces; the black army hardly in frame (author's choice). The King's hands at his head. Panel 9b approved: panel block (Section 18, Scene 9) and manifest 34 (Section 20.3). |
