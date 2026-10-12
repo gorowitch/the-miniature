@@ -129,7 +129,7 @@ function gestureArms(g, type, col, c, gest) {
     "crossed": [[-11, s + 4, 15, 14, "fist"], [11, s + 4, 165, 14, "fist"]],
     "hand-chest": [[11, s, 160, 11, "open"]],
     "wave-r": [[12, s, -35, 20, "open"]], "wave-l": [[-12, s, -145, 20, "open"]],
-    "shake-r": [[12, s, 40, 5, "fist"]], "shake-l": [[-12, s, 140, 5, "fist"]] };   // handshake: arm stretched out sideways (bible 7.38)
+    "shake-r": [[12, s, 10, 10, "fist"]], "shake-l": [[-12, s, 170, 10, "fist"]] };   // handshake: arm stretched out sideways (bible 7.38)
   for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
 }
 function crown(g, y, col, gem) { const F = W_[col].f;

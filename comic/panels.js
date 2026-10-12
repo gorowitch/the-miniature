@@ -238,8 +238,8 @@ window.PANELS = [
   cast: { koning: { expr: "sigh", talk: true } },
   balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
 // 16c: the last panel: the two kings shake hands (author decision, bible 7.38); a close-up, no board position shown
-{ id: "16c", scene: 16, status: Pr, state: 12, stage: [{ id: "wk", ch: "K", role: "koning", at: [3.64, 4.3] }, { id: "bk", ch: "k", role: "bking", at: [4.36, 4.3] }],
-  cam: { from: [4.0, 0.7, 2.3], at: [4.0, 4.0, 0.45], f: 720 },
+{ id: "16c", scene: 16, status: Pr, state: 12, stage: [{ id: "wk", ch: "K", role: "koning", at: [4.5, 3.5] }, { id: "bk", ch: "k", role: "bking", at: [4.5, 4.5] }],
+  cam: { from: [7.9, 4.0, 3.8], at: [4.5, 4.0, 0.45], f: 700 },
   cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false }, bking: { expr: "relieved", lookAt: "koning", gest: "shake-l", back: false } }, balloons: [] }
 ];
 })();
