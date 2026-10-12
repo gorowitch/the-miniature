@@ -319,7 +319,8 @@ function renderPanel(svg, P, opts) {
       const r = HEAD[sp.t][1] * sp.s, bottom = by + bh - (b.shout ? 10 : 6), tw = Math.max(14, Math.min(24, bw * 0.08));
       let best = null;
       // tip left or right of the face; when the balloon lies below the speaker, also just under the mouth
-      const tips = [-1, 1].map(side => [sp.mouth[0] + side * (r * (sp.t === "n" ? 2.4 : 1.3) + 8), sp.mouth[1] - r * 0.2]);
+      // b.snug: a knight's tip tight against the front of the snout (just outside its keep-clear zone), e.g. when a piece stands right behind the snout
+      const tips = [-1, 1].map(side => [sp.mouth[0] + side * (sp.t === "n" && b.snug ? 4.5 * sp.s + 6 : r * (sp.t === "n" ? 2.4 : 1.3) + 8), sp.mouth[1] - r * 0.2]);
       if (by > sp.mouth[1]) tips.push(sp.t === "n" ? [sp.mouth[0] + (sp.o.dir || 1) * (3.5 * sp.s + 4), sp.mouth[1] + 2 * sp.s] : [sp.mouth[0], sp.mouth[1] + r * 0.5 + 10]);  // a knight: tight against the front of the snout, just below the mouth
       for (const tip of tips) {
         const bases = [];

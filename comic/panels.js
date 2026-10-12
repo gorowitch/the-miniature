@@ -120,9 +120,9 @@ window.PANELS = [
 { id: "9e", scene: 9, status: A, state: 5, cam: zb(["h3", "f3", "e1"], { dist: 1.3, h: 1.3, th: 0.35, f: 680 }),
   cast: { caballo: { expr: "offended", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
   balloons: [{ who: "caballo", x: 16, y: 400, w: 560, text: "Dat ge uw voetvolk erdoor jaagt tot daar nog aan toe maar een officier laat ge niet met zijn voetstuk in zo'n vieze vuile plek staan verkommeren." }] },
-{ id: "9f", scene: 9, status: Pr, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
+{ id: "9f", scene: 9, status: A, state: 5, cam: { from: [5.4, 5.0, 8.6], at: [5.2, -0.2, 0.2], f: 880 },
   cast: { caballo: { expr: "smug", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
-  balloons: [{ who: "caballo", text: "Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !" }] },
+  balloons: [{ who: "caballo", w: 560, snug: true, text: "Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !" }] },
 { id: "9g", scene: 9, status: Pr, movebox: "3. ... Ld7", state: 6, cam: { from: [3.4, -0.8, 2.6], at: [3.2, 6.8, 0.2], f: 600 }, fx: [{ move: ["c8", "d7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 10 - A Thousand Games (PROPOSAL)
 { id: "10a", scene: 10, status: Pr, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
