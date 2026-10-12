@@ -16,7 +16,8 @@ while IFS= read -r t; do
 done < <(grep -oE 'text: "([^"\\]|\\.)*"' "$PANELS" | sed 's/^text: "//; s/"$//; s/\\"/"/g')
 echo "Checked $total balloon texts, $bad not found in the play"
 # Move boxes (bible Section 13, Move Box): each must be a whole move line of the play, verbatim.
-MOVES=$(mktemp); sed -n "${S},$((E-1))p" "$BIBLE" | grep -E '^[0-9]+\. ' > "$MOVES"
+# The result box of the last panel (bible 7.37) must be the play's result line, verbatim ("1/2 - 1/2").
+MOVES=$(mktemp); sed -n "${S},$((E-1))p" "$BIBLE" | grep -E '^[0-9]+\. |^1/2 - 1/2$' > "$MOVES"
 mt=0; mb=0
 while IFS= read -r t; do
   mt=$((mt+1))

@@ -27,13 +27,17 @@ const PW = 1700, PH = 2404, MX = 33, GX = 34, MY = 31, GY = 20, CW = 800, CH = 5
 const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
 
 // Lay panels out in rows of two cells; a wide panel takes a whole row; a lone panel before a wide one takes the whole strip.
+// A tall panel (bible 7.37) takes two strips; a page holds four strips.
 const rows = []; let cur = [];
 for (const P of window.PANELS) {
   if (P.wide) { if (cur.length) rows.push(cur); rows.push([P]); cur = []; continue; }
   cur.push(P); if (cur.length === 2) { rows.push(cur); cur = []; }
 }
 if (cur.length) rows.push(cur);
-const pages = []; for (let i = 0; i < rows.length; i += 4) pages.push(rows.slice(i, i + 4));
+const strips = row => row[0].tall ? 2 : 1;
+const pages = []; let pg = [], used = 0;
+for (const row of rows) { if (used + strips(row) > 4) { pages.push(pg); pg = []; used = 0; } pg.push(row); used += strips(row); }
+if (pg.length) pages.push(pg);
 
 function newPage(label, scenes) {
   const wrap = document.createElement("div"); wrap.className = "page";
@@ -75,9 +79,11 @@ function panelAt(page, P, x, y, w, h) {
 pages.forEach((rowsOnPage, pi) => {
   const sc = [...new Set(rowsOnPage.flat().map(p => p.scene))];
   const s = newPage("Page " + (pi + 1), sc.length > 1 ? sc[0] + "-" + sc[sc.length - 1] : sc[0]);
-  rowsOnPage.forEach((row, ri) => {
-    const y = MY + ri * (CH + GY);
-    if (row[0].wide) panelAt(s, row[0], MX, y, CW * 2 + GX, CH);
+  let si = 0;  // strip index on the page
+  rowsOnPage.forEach(row => {
+    const y = MY + si * (CH + GY); si += strips(row);
+    if (row[0].tall) panelAt(s, row[0], MX, y, CW * 2 + GX, CH * 2 + GY);
+    else if (row[0].wide) panelAt(s, row[0], MX, y, CW * 2 + GX, CH);
     else if (row.length === 1) panelAt(s, Object.assign({}, row[0], { wide: true }), MX, y, CW * 2 + GX, CH);  // a lone panel takes the whole strip
     else row.forEach((P, ci) => panelAt(s, P, MX + ci * (CW + GX), y, CW, CH));
   });

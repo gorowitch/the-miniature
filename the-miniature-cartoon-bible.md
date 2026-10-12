@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.36
+Version 7.37
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -43,6 +43,7 @@ Version 7.33 approves panels 10d to 10i and 11a to 11f (author decision): full p
 Version 7.34 adds the hints between Regina and the black rook on h8 (author decision): subtle looks and a blush from 11g, obvious in 14g where the captured Regina stands beside the board close to him, dropped after 14h (Section 7, proposal blocks).
 Version 7.35 approves panel 14g (author decision): full panel block in Section 18 (Scene 14) and manifest 70 in Section 20.3.
 Version 7.36 moves the captured black pawn to White's side, beside the board near the white h2 pawn (author decision): a captured piece stands on the side of the player who captured it.
+Version 7.37 fills the last page (author decisions): 15e wide, 16a the final position seen nearly from above over two strips, 16b the King accepting the draw with a result box "1/2 - 1/2" like the move box (Section 13), and 16c, the last panel, the two kings shaking hands (author decision); open question 15 resolved.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -86,7 +87,7 @@ The production process must never:
 - Change the identity of a speaker (Section 19.F).
 - Invent reactions, actions, stage directions or character intentions beyond those in the approved panel block and manifest.
 - Invent chess moves or change the board state (Sections 11 and 12).
-- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with exceptions decided by the author: the stage directions of panels 2b and 4a in a caption box (Section 18, panels 2b and 4a; 7.12, 7.14); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8); the title appears only on the cover (Section 13, Cover Direction).
+- Add captions, headings, labels, signs, sound effects or explanatory text not explicitly specified in the source. This cartoon has no captions and no narration, with exceptions decided by the author: the stage directions of panels 2b and 4a in a caption box (Section 18, panels 2b and 4a; 7.12, 7.14); chess notation appears only where it is part of the dialogue (for example "Ten aanval ! 1. e4") and in the move box of a panel in which a move is played (Section 13, Move Box; author decision in 7.8), and the result "1/2 - 1/2" in a result box in panel 16b (Section 13, Move Box; author decision in 7.37); the title appears only on the cover (Section 13, Cover Direction).
 - Use previously generated images as authority for story content.
 - Fill gaps or resolve contradictions through creative guesswork.
 
@@ -873,6 +874,15 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 | 6. Pxh7 | 13b | Caballo g5xh7 |
 | 6. ... gxh5 | 14d | pawn g6xh5, Regina captured |
 
+Result box (author decision in 7.37):
+- Panel 16b (the King accepts the draw: "Pakt dat dan maar aan."), the last panel before the handshake of 16c, shows the result of the game in a box exactly like the move box: bottom-left corner, bold black text, small white rectangle with a thin black ink outline.
+- The text is the result line of the play, verbatim: 1/2 - 1/2
+- It is the only result box in the cartoon. A draw is not a move: this is a deliberate exception to "only moves that are actually played get a move box", decided by the author ("add the result similar how we added the moves to a panel"). It answers open question 15 (Appendix B).
+
+| Result box | Panel | Meaning |
+|---|---|---|
+| 1/2 - 1/2 | 16b | the draw, offered by Black (reported by Caballo in 15e) and accepted by the King |
+
 ## Cover Direction
 - The entire cast dominates the cover.
 - The boebel is visible.
@@ -1060,6 +1070,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.34 | Author decision: "there is something going on between the white queen and the black rook at h8. From panel 11g onward give subtle hints about this by for example the look on both pieces faces and perhaps a blush on the queens face", with "rook sees queen" for 11h, 12d and 13b; "on panel 14g the queen is captured and stands close to the rook next to the board (don't overdo this). On this panel from the looks of both pieces it should be obvious for the reader that there is something going on between them"; "after panel 14h drop the gag - the joke is made". Section 7 (Regina, Black Rook (h8)) and the proposal blocks 11g, 11h, 12c, 12d, 12e, 13a, 13b, 14d, 14g and 16b updated. Where the two are not in frame (12a, 12b, 14a to 14c, 14e, 14f, 14h) nothing changes. In the SVG preview: the rook looks at Regina in 11g, 11h, 12d, 12e, 13b and 14d; Regina gets a light pink blush (a new preview option, softer than the red flush of anger) and glances towards the rook in 12c, 13a and 13b; after the capture Regina stands beside the board next to the h8 rook (from 14d on, for continuity), the captured h7 pawn a little further down the h-file; 14g got a new camera from Black's kingside corner so that both faces are visible (the rook shown turned towards her) and both are large; in 16b Regina no longer looks at the rook. Then: "you can give the black rook a blush" for 11h, 12d, 12e, 13b and 14d: done (the same light blush). And for 14g: "let's view the board from white's perspective here": the camera moved to White's side, beyond the h-file, so the King (speaking) is in frame at the left and the rook is not hidden behind Caballo; Regina is shown facing the rook. Then: "i want this more from white's perspective", "maybe as seen by the white king ?": a point-of-view shot from the King's eyes was tried; the author chose to keep the King in the picture. Two views from behind White hid the rook behind Caballo (same file). The author: "view diagonally so Caballo stays somewhat in the middle. As such he unintentionally helps hiding the romance. Also view lower so we see the entire head of the white king. Shift the image to get rid of the empty space at the right of the board": a low camera on White's side looking diagonally from the queenside towards h8, the King in the right foreground (whole head in sight), Caballo between the rook and Regina; the balloon moved to the top right above the King. Then: "I don't know how many of the black piece's faces are hidden. The balance of the image isn't visually okay. Give me some suggestions to improve"; Claude suggested (1) zooming in on the kingside, (2) a slightly higher camera, (3) rebalancing the King, (4) a standard panel, (5) two panels; the author chose "try 1 and 2 with 3". A pure zoom hid the rook behind Caballo and cut off the King's head (a long lens cannot hold both), so the camera was raised and moved back behind the queenside corner: the black faces and the rook's face are now visible, the King's whole head is in sight at the right, the couple in the upper centre. All these panels stay proposals. |
 | 7.35 | Author decision: panel 14g approved ("approve"), as shown in the SVG preview after the rounds of 7.34. Written as a full panel block in Section 18 (new heading Scene 14 - Regina Captured) and as manifest 70 in Section 20.3 (sequence number as in the album; manifests 55 to 69 follow when those panels are approved; field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 39 marked as partly written. Panels 11g to 14f, 14h and the rest stay proposals, including the Regina and h8 rook hints of 7.34. |
 | 7.36 | Author decision: "there is something wrong with the captured pieces. The captured black pawn is next to the board close to the black pieces. Since the white player captured that pawn it must be next to the board close to the white pieces. I suggest the captured pawn goes next to the board somewhere near the white pawn at h2 (don't move the black pawn too close). The captured black pawn doesn't play any role in the story." Rule added to the conventions of the proposed panels (Section 18): a captured piece stands on the side of the player who captured it. The captured black h7 pawn now stands beside the board near the white h2 pawn, not right against it, in 13b to 16b (preview and the 16 proposal blocks). Consequence in the approved panel 14g: the pawn now appears at the right edge, half behind the white h1 rook; its panel block and manifest 70 (fields 5 and the Scene 14 board line) updated to match. In the other panels the pawn is out of frame. Regina, captured by Black, stays on Black's side next to the h8 rook (7.34). |
+| 7.37 | Author decisions on the last page (it ended with a half page): after a brainstorm, the author proposed "show the chess position as seen from above; since a chess board is squared we could use the space of two strips to show the board", chose a steep bird's-eye view, saw a prototype (A: the top view replaces 16b; B: a new panel after 16b) and chose A with two changes: "switch the king accepting the draw panel and the board overview panel so that the king accepting the draw panel becomes the last panel" and "on the king accepting the draw panel add the result similar how we added the moves to a panel". In the real album 15d and 15e fell on page 10, so one strip stayed empty; the author chose "15e as a wide panel". Result: page 11 = 15e (wide), 16a (the final position seen nearly from above, two strips high), 16b (the King: "Pakt dat dan maar aan." with the result box "1/2 - 1/2"). New: the result box (Section 13, Move Box), a deliberate exception to "only played moves get a move box"; open question 15 resolved. Proposal blocks 15e, 16a and 16b, Scene Catalog (Scene 16), P.3, Common Prompt Block, Sections 16 and 22.B, Coverage Map items 43 and 44 updated; old wording in Appendix A. SVG preview: a tall (two-strip) panel format in the renderer and the album layout (comic/renderer.js, comic/index.html). All three panels stay proposals. |
+| 7.37 | Author decision: "I want an extra image on the last page. In the last image the white king and the black king shake hands. The white king looks somewhat frustrated and disappointed. The black king looks relieved he didn't lose the game. By doing so the king accepting the draw panel can return to its previous size as we now have two panels next to each other." New proposal panel 16c, the last panel of the cartoon (not in the play: an addition by the author as story authority, P.1). Asked where the kings shake hands (they stand on e1 and e8), the author chose a close-up without a readable board position. 16b returns to normal width and shares the last strip with 16c; page 11 = 15e, 16a (two strips), 16b and 16c. The result box stays on 16b. SVG preview: a staged close-up option (panels.js "stage": only the listed pieces at free positions), a handshake gesture and the expressions "disappointed" and "relieved" (comic/renderer.js). Earlier 7.37 wording that called 16b "the last panel" corrected to "panel 16b". |
+| 7.37 | Author feedback on the proposal panel 16c: "I like this idea of the kings shaking hands on the 'boebel'. Could you let's say half the distance between them so they come closer together. Ensure that the 'boebel' - which is an extra joke - stays clearly in sight." The place of the handshake changes from a close-up without a board position to the gentle rise in the middle of the board; the kings stand half as far apart, on its far half, so the near slope of the rise is in full view in front of them; the arms reach down and forward so the hands meet between them. The SVG preview now places staged pieces on the board surface (on the rise). Proposal block 16c updated (the rise described, not named). |
 
 ---
 
@@ -1077,7 +1090,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
 - Balloon tails are curved and rounded, end just beside the speaker's mouth, and never cross a face, crown, mitre, hair or hat (Section 18, Common Prompt Block; author decision in 7.25).
 - No sigh symbols (no breath cloud or puff next to a face); a sigh is shown by the face and the pose only (author feedback on panel 10a, 7.31).
-- A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
+- A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one, except the result box "1/2 - 1/2" in panel 16b (Section 13, Move Box; 7.37).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
 - Cola stain subtle before Scene 15; explicit only from Scene 15.
@@ -1250,6 +1263,7 @@ The Script Coverage Map (Section 22.E) tracks every line, stage direction and mo
 - Characters: White King, Caballo, Black King.
 - Dialogue: Koning (zucht) "Pakt dat dan maar aan." / 1/2 - 1/2.
 - Purpose: Final punchline.
+- Panels (changed in 7.37, proposals): 15e wide (Caballo reports the draw offer); 16a the final position seen nearly from above, two strips high; 16b the King accepts the draw, with the result box "1/2 - 1/2"; 16c, the last panel, the two kings shake hands (author decision, not in the play).
 
 ---
 
@@ -1295,6 +1309,7 @@ Rules:
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - No sigh symbols: no breath cloud or puff next to a face. When the King sighs, show it with his face and pose only: eyes closed, eyebrows drooping, mouth open, shoulders sagging.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
+- Result box (only in panel 16b, when the panel description gives one): drawn exactly like the move box, with the result text given, letter for letter: 1/2 - 1/2
 - Caption box (only when the panel description gives one; so far panels 2b and 4a): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
 - Grumble balloons with symbols (only when the panel description gives them): small jagged balloons with a short tail to the grumbling piece, containing exactly the symbols given (chess annotation symbols such as ??, ?! and !?, and the hash sign #), nothing else; they never cover a face.
 
@@ -2136,25 +2151,37 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 
 ### Panel 15e (PROPOSAL)
 - Board state: 12.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
+- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip), author decision in 7.37 (so that the last page is filled: 15e, 16a, 16b).
 - Characters: Caballo (neutral, speaking); Black King (calm, gesture open-l).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
 ### Panel 16a (PROPOSAL)
+Changed in 7.37 (author decision): the final position seen from above; it replaces the earlier 16b (wide view of both kings) and comes before the King's last line.
+- Board state: 12 (final position).
+- Format (author decision in 7.37): wide and two strips high (half an album page); the board nearly square in the middle.
+- Camera (author decision in 7.37, steep bird's-eye): high above the board, looking almost straight down, from beside the h-file, so that both armies face the reader: from this side the white army is at the left (rank 1 left, rank 8 right) and the black army at the right; the h-file at the bottom, the a-file at the top.
+- In frame: the whole board with every piece of State 12, all faces visible: the White King (e1) with closed eyes (sighing), the Black King (e8) calm, Alfil on d3, the e3 pawn, Caballo on h7, the black pawns on d5, e6 and h5; the gentle rise in the middle of the board, the greasy spot on f3 and the cola stain on f6 clearly visible. Beside the board: Regina next to the black rook on h8 (turned towards the reader), the captured black pawn on White's side near h2. The club room around the board, soft and out of focus.
+- Regina and the h8 rook: no hint any more (the gag ends after 14h).
+- No balloons, no move box, no text, no coordinates, no arrows (not for the unplayed mate either).
+
+### Panel 16b (PROPOSAL)
+Changed in 7.37 (author decision): the King's last line comes after the overview, with the result; normal width, beside 16c on the last strip.
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (sigh, speaking; the sigh shown by the face only, no breath cloud, 7.31).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Pakt dat dan maar aan.
+- Result box (author decision in 7.37; bottom-left corner, bold, white rectangle, like the move box): 1/2 - 1/2
 
-### Panel 16b (PROPOSAL)
-- Board state: 12.
-- Regina and the h8 rook (author decision in 7.34): no hint any more: the joke is made in 14g and 14h; Regina no longer looks at the rook.
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview. Wide panel (full strip).
-- Characters: White King (sigh); Black King (calm); Regina (looks at black rook (h8)).
-- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
-- No balloons.
+### Panel 16c (PROPOSAL)
+Added in 7.37 (author decision): the last panel of the cartoon. The handshake is not in the play; it is the author's addition.
+- Board state: 12 (not shown: only the two kings stand on the board in this panel; the other pieces are out of frame).
+- Format: normal width, beside 16b on the last strip of the album.
+- Place (author decision in 7.37): the two kings shake hands standing on the gentle rise in the middle of the board, the very rise that started the whole trouble: an extra joke. The rise must stay clearly in sight: the kings stand on its far half, and its near slope, soft light on one side and soft shadow on the other, with the squares bending over it, is in full view in front of their feet.
+- Camera: from the front, somewhat elevated, a medium shot: both kings fully in sight from crown to felt, the middle of the board around them, the club room soft and out of focus at the top.
+- Characters: the White King (left) and the Black King (right) stand close together, half as far apart as a square and a half, and shake hands, each with one arm reaching down and forward, the hands meeting between them. The White King looks somewhat frustrated and disappointed: eyebrows drooping, heavy eyelids, mouth turned down; he looks at the Black King. The Black King looks relieved that he did not lose the game: eyebrows raised, eyes closed in relief, a soft smile; he faces the White King.
+- No balloons, no move box or result box, no text, no label or explanation of the rise.
 
 ---
 
@@ -4070,7 +4097,7 @@ Added in 7.1. A final quality-control pass over the entire cartoon, not only ove
 
 ## 22.B Dialogue Fidelity
 - Section 1 is the sole authority for dialogue.
-- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption boxes of panels 2b and 4a with their stage directions; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1 (Section 13, Move Box).
+- No invented text in balloons, captions or narration (there are no captions or narration in this cartoon, except the caption boxes of panels 2b and 4a with their stage directions; Section 14). The move box is not a caption: it appears only in a panel in which a move is played, with the move verbatim from Section 1, and once, in panel 16b, as the result box with the result line "1/2 - 1/2" (Section 13, Move Box; 7.37).
 - Any uncertainty is flagged in Appendix B, never resolved by guessing.
 
 ## 22.C Speaker Attribution
@@ -4132,8 +4159,8 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | - | Scene catalog only. |
 | 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | - | Scene catalog only. |
 | 42 | Caballo: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost..." | 15 | - | Scene catalog only. |
-| 43 | Koning: (zucht) "Pakt dat dan maar aan." | 16 | - | Scene catalog only. |
-| 44 | Result: 1/2 - 1/2 | 16 | - | Scene catalog only. |
+| 43 | Koning: (zucht) "Pakt dat dan maar aan." | 16 | 16b (proposal) | Proposal block (7.37); no manifest yet. |
+| 44 | Result: 1/2 - 1/2 | 16 | 16b (proposal) | Result box in panel 16b (author decision in 7.37); proposal block; no manifest yet. |
 
 Totals: 29 speeches, 2 stage directions, 12 moves, 1 result line, 1 title line.
 
@@ -4278,6 +4305,7 @@ Kept for history. Do not use for generation.
 - v7.0 to 7.9, panel 4a: "one or two of them point past the camera towards the gentle rise in the middle of the board" (panel block and manifest 4a). -> Superseded in 7.10 by author decision: all white pawns keep their arms crossed in panels 2b to 5d-2; no pawn points.
 - v7.0 to 7.11, panel 2b: "small wordless grumble balloons (jagged outline, a wavy scribble inside, no letters)" and no caption (panel block, manifest, Scene Catalog, stage-direction table). -> Superseded in 7.12 by author decision: grumble balloons with chess annotation symbols and #, with short tails, and the stage direction verbatim in a caption box.
 - v7.0 to 7.13, panel 4a: Alfil "listening", the pawns e2, f2, g2 facing the camera, "no balloons, no text", camera "somewhat elevated" (panel block, manifest 4a, Scene Catalog). -> Superseded in 7.14 by author decision: Alfil talks to the pawns, f2 seen from behind, e2 and g2 half turned towards him, camera raised, caption (Alfil overlegt met de pionnen).
+- v7.7 to 7.36, proposal panels of Scene 16: "16a: the King, close-up from Black's side, sighing: Pakt dat dan maar aan." and "16b: special angle, wide panel (full strip); White King (sigh), Black King (calm), Regina (looks at black rook (h8)); no balloons". -> Superseded in 7.37 by author decision: 16a is the final position seen nearly from above, two strips high; 16b, the last panel, is the King's line with the result box "1/2 - 1/2".
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -4297,7 +4325,7 @@ Items that need a decision from the author.
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
 13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
 14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
-15. **The draw result without a caption.** Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
+15. ~~**The draw result without a caption.**~~ Resolved in 7.37: the result "1/2 - 1/2" appears in a result box like the move box in panel 16b (Section 13, Move Box). Original question: Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
 17. ~~**Pawn beards.**~~ Resolved in 7.9: the author confirmed that no pawn has a beard. Original question: No pawn has a beard, so that "no other pawn" holds for all facial hair (Section 18, Common Prompt Block). Confirm, or correct. (Added in 7.9; the first part of this item, the moustache following the pawn after a change of file, was confirmed by the author in 7.9.)
 18. **Caption box for other stage directions.** In 7.12 the stage direction of panel 2b got a caption box; in 7.14 the author added one to panel 4a as well, with the first part of its stage direction: (Alfil overlegt met de pionnen). Still open: do the other stage directions get one too, for example (zucht) in 10a and 16a and (Alfil overlegt met pionnen en komt terug) in 4a? And should the parentheses stay in the caption (current reading: yes, verbatim)? (Added in 7.12.)
@@ -4352,3 +4380,4 @@ Items that need a decision from the author.
 | 7.34 | - | Regina and the h8 rook: subtle hints from 11g, obvious in 14g, dropped after 14h; new 14g camera; Regina beside the board next to h8. |
 | 7.35 | - | Panel 14g approved: panel block (Section 18, Scene 14) and manifest 70 (Section 20.3). |
 | 7.36 | - | Captured black pawn on White's side, near the white h2 pawn; panel block and manifest of the approved 14g updated to match. |
+| 7.37 | - | Last page filled: 15e wide, 16a final position from above (two strips), 16b with the result box 1/2 - 1/2, 16c (last panel) the kings shake hands; open question 15 resolved. |

@@ -226,14 +226,20 @@ window.PANELS = [
 { id: "15d", scene: 15, status: Pr, state: 12, beside: BESIDE12, cam: { from: [8.9, 5.4, 2.6], at: [6.2, 6.2, 0.4], f: 760 },
   cast: { caballo: { expr: "smug", talk: true } },
   balloons: [{ who: "caballo", text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },
-{ id: "15e", scene: 15, status: Pr, state: 12, beside: BESIDE12, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
+{ id: "15e", scene: 15, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
   cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "calm", gest: "open-l" } },
   balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }] },
 // ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
-{ id: "16a", scene: 16, status: Pr, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+// 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
+{ id: "16a", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },
+  cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { back: false } }, balloons: [] },
+// 16b: the last panel: the King accepts the draw; the result in the move box (bible 7.37)
+{ id: "16b", scene: 16, status: Pr, movebox: "1/2 - 1/2", state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "sigh", talk: true } },
   balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
-{ id: "16b", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [10.6, 4.0, 3.2], at: [4.0, 4.0, 0.3], f: 820 },
-  cast: { koning: { expr: "sigh" }, bking: { expr: "calm" } }, balloons: [] }
+// 16c: the last panel: the two kings shake hands (author decision, bible 7.38); a close-up, no board position shown
+{ id: "16c", scene: 16, status: Pr, state: 12, stage: [{ id: "wk", ch: "K", role: "koning", at: [3.64, 4.3] }, { id: "bk", ch: "k", role: "bking", at: [4.36, 4.3] }],
+  cam: { from: [4.0, 0.7, 2.3], at: [4.0, 4.0, 0.45], f: 720 },
+  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false }, bking: { expr: "relieved", lookAt: "koning", gest: "shake-l", back: false } }, balloons: [] }
 ];
 })();
