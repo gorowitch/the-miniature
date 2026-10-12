@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.31
+Version 7.32
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -39,6 +39,7 @@ Version 7.28 moves the balloon of the proposal panel 9e to the lower left, clear
 Version 7.29 reframes the proposal panel 9f (author feedback): a high camera that shows the empty squares g1 and f1 between the rook and the King, so it is immediately clear that White can castle; the balloon in the top third, clear of the rook and the King. Panel 9f is then approved: full panel block in Section 18 (Scene 9) and manifest 38 in Section 20.3.
 Version 7.30 reframes the proposal panel 9g (author feedback): a higher camera, more from the left, so the faces of the Black Queen and the d5 pawn are visible. Panel 9g is then approved, which completes Scene 9: full panel block in Section 18 and manifest 39 in Section 20.3.
 Version 7.31 forbids sigh symbols such as a breath cloud next to a face (author feedback on panel 10a): a sigh is shown by the face and the pose only (Section 14, Section 16, Common Prompt Block). Panels 10a, 10b and 10c are approved: full panel blocks in Section 18 (Scene 10) and manifests 40 to 42 in Section 20.3.
+Version 7.32 removes the colon at the end of the balloon of the proposal panel 10d (author decision, a deliberate exception to the letter-for-letter rule; the play is unchanged).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1049,6 +1050,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.30 | Author decision: panel 9g approved ("approve 9g"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 39 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 26 (3. ... Ld7) updated. Scene 9 is now fully approved (panels 9a to 9g, manifests 33 to 39). |
 | 7.31 | Author feedback on the proposal panel 10a: "There is a white image next to the king's face - I don't know what it is but it doesn't seem to belong there." It was a "sigh puff", a small white breath cloud that the SVG preview drew for the stage direction "(zucht)"; it was never part of the play or the canon. Author decision (asked, "remove everywhere"): no sigh symbols anywhere in the cartoon; a sigh is shown by the face and the pose only. Rule added to Section 14, Section 16 and the Common Prompt Block; the puff removed from the preview panels 10a and 16a and the words "sigh puff" from their proposal blocks. Both panels stay proposals. |
 | 7.31 | Author decisions: panel 10a approved ("approve"), panels 10b and 10c accepted ("41-panel-10b.svg accept", "42-panel-10c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 10 - A Thousand Games) and as manifests 40 to 42 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 27 marked as partly written. Noted as accepted: in 10b the bottom of the balloon touches the top of Regina's crown. Panels 10d to 10i stay proposals. |
+| 7.32 | Author decision on the proposal panel 10d: "Remove the ':' in the text balloon". The King's speech 26 is split over 10d and 10e right after the colon in "de stukken begonnen te zagen : de lak is eraf, ...", so 10d ended with " :". Asked whether to re-split, remove or keep; the author chose to remove it. This is a deliberate exception to the letter-for-letter rule (Strict Adaptation Protocol, P.3), like the caption wording of 4a (7.14): the 10d balloon ends with "te zagen"; the play in Section 1 is unchanged. Recorded in the 10d proposal block only: it is an edge case for this panel, not a change to the rules (the author: "I believe it is an edge case and I want to keep the rules stable"). 10d stays a proposal. |
+| 7.32 | Author decision on panel 10d: "Fix only what I explicitly ask and note that decision in the bible" (after Claude asked whether to also fix two things it noticed in 10d: the balloon touching Regina's crown and the King's hand overlapping Regina's). Only the colon is changed; those two stay as they are, as does the balloon touching Regina's crown in the approved 10b. The author asked explicitly because the colon is an edge case and the rules must stay stable: no rule is changed in 7.32. |
 
 ---
 
@@ -1782,7 +1785,8 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (angry, speaking, gesture both-open); Regina (looks at White King).
-- Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :
+- Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen
+- Author exception (7.32): the balloon ends with "te zagen", without the play's colon (" :"), which in the play leads into the list of complaints in 10e. The play in Section 1 is unchanged.
 
 ### Panel 10e (PROPOSAL)
 - Board state: 6.
@@ -3815,3 +3819,4 @@ Items that need a decision from the author.
 | 7.29 | - | Proposal 9f: high camera showing the empty g1 and f1 (castling is clearly possible); balloon clear of the rook and the King. Panel 9f approved: panel block (Section 18, Scene 9) and manifest 38 (Section 20.3). |
 | 7.30 | - | Proposal 9g: higher camera from the queenside; faces of the Black Queen and the d5 pawn visible. Panel 9g approved: panel block and manifest 39; Scene 9 complete. |
 | 7.31 | - | Sigh symbols (breath cloud) forbidden after author feedback on panel 10a; removed from the preview panels 10a and 16a. Panels 10a, 10b, 10c approved: panel blocks and manifests 40 to 42. |
+| 7.32 | - | Proposal 10d: the balloon ends without the play's colon (author exception; play unchanged). |
