@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.26
+Version 7.27
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -34,6 +34,7 @@ Version 7.23 makes the black army in panel 3b visibly amused (author decision); 
 Version 7.24 zooms panels 4c-1 and 4c-2 out a little for more room for the balloon above Alfil (author feedback).
 Version 7.25 changes the balloon tails (author decision): curved, rounded cartoon tails that end beside the speaker's mouth and never cross a face or hat (Common Prompt Block, Section 16).
 Version 7.26 rotates the proposal panel 9b towards Black's side and zooms in, for a nearly frontal view of the white pieces (author feedback); the black army is hardly in frame. The King's disbelief pose with both hands at his head returns (author feedback), and panel 9b is approved: full panel block in Section 18 (Scene 9) and manifest 34 in Section 20.3.
+Version 7.27 approves panel 9c (author decision): full panel block in Section 18 (Scene 9) and manifest 35 in Section 20.3. It also reframes the proposal panel 9d (author feedback): the greasy spot on f3 in sight, the balloon tail ending beside Caballo's snout. Panel 9d is then approved: full panel block in Section 18 (Scene 9) and manifest 36 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1032,6 +1033,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.25 | Author feedback on the proposal panel 14a: "the text balloon is too small for the text". The cause was general: the jagged shout balloon is an ellipse, but it was sized like a rectangle, so the corners of the text stuck out past its points (5a, 9c, 13a, 14a). The SVG preview now sizes shout balloons so the whole text fits inside the inner points; the rule is added to the Common Prompt Block. The larger balloons covered crowns in 5a, 13a and 14a, so those panels got room above the characters (camera lines updated; 5a is approved, 13a and 14a stay proposals). |
 | 7.26 | Author feedback on the proposal panel 9b: "It's a bit strange to see the board from this angle. Rotate the board so that we have a more front view on the white pieces." The side view of 7.20 (camera level with the h-file) was rotated about 45 degrees towards Black's side, off the kingside corner, so the White King, Caballo and the white army face the camera. Two options were shown: A (the white pieces large, the black army partly cut off at the right) and B (pulled back so the whole black army fits, seen from behind, everything smaller). The author chose A, which drops the 7.20 wish that all black pieces are fully in sight. Then: "Can you zoom in more ? The black army and the empty board is less relevant. Can you rotate a little more ? I want a view closer to the front view on the white pieces.": the camera was rotated further towards Black's side and zoomed in on the white kingside; the black army is now only cut off at the right edge. Then: "I remember an earlier version of this where the white king had his hands near his head expressing disbelief can you try that ? Also the view can be shifted a little up. Maybe give the image even more a front view of the white pieces.": the King's pose is now both hands at the sides of his head (the pose of 7.20 before it was replaced by spread arms; his face stays free); the camera was rotated further towards the front and raised, so the pieces sit higher in the frame with less background ("shifted up" read as in 7.24: the picture moves up in the frame). From this frontal angle the black pawns on d5 and e6 stand between the camera and the white army and are visible from behind in the lower right; a still higher camera only gave a bird's-eye view and did not remove them. Camera and character lines of the 9b proposal block updated. |
 | 7.26 | Author decision: panel 9b approved ("approve 9b"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 34 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 23 (3. Ph3) updated. Panels 9c to 9g stay proposals. |
+| 7.27 | Author decision: panel 9c accepted ("35-panel-9c.svg - accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 35 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 24 updated. Panels 9d to 9g stay proposals. |
+| 7.27 | Author feedback on the proposal panel 9d: "What I like is that the camera is zoomed in on Caballo. However the image can be improved by bringing the greasy spot in sight. Also the tail of the text balloon seems to point away from Caballo rather than towards Caballo. A first step to improve the image seems to shift the image to the right." The view was shifted to the right (framed on h3 and f3) so the greasy spot on f3 is clearly in sight; the camera was lowered and kept close, so Caballo stays large. The balloon was moved to the top left above Caballo: its tail now comes down and ends just beside his snout, instead of ending in front of it where it seemed to point at the g2 pawn, and it no longer covers the faces of the g2 and f2 pawns. Staging added by Claude, open for correction: the White King, at the right edge, looks at Caballo with an angry face (the one addressed looks back at the speaker, Section 13). Then: "Maybe a more natural place for the text balloon is somewhere above the two pawns ?": the balloon was moved from the top left (where it covered the rook h1) to the empty background above the pawns on g2 and f2; Caballo's snout points that way, and the tail curves down to just beside his snout. Camera, character and balloon lines of the 9d proposal block updated; 9d stays a proposal. |
+| 7.27 | Author decision: panel 9d approved ("approve 9d"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 36 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved. Script Coverage Map item 25 marked as partly written: Caballo's speech continues in the proposals 9e and 9f. The King's angry look at Caballo (Claude's staging) is approved with the panel. Panels 9e to 9g stay proposals. |
 
 ---
 
@@ -1522,8 +1526,8 @@ Board position: State 3 (after 2. Ld3) in 8a and 8b; State 4 (after 2. ... e6) i
 - No balloons.
 
 ## Scene 9 - Caballo Refuses f3
-Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panel 9b approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26); panels 9c to 9g are still proposals (Section 18, Proposed Panels).
-Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
+Status: panel 9a approved by the author in 7.19 (from the proposal of 7.7, with the camera adjusted in 7.19, as shown in the SVG preview); panel 9b approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26); panel 9c approved in 7.27 (as shown in the SVG preview); panel 9d approved in 7.27 (camera and balloon as set by the author in 7.27); panels 9e to 9g are still proposals (Section 18, Proposed Panels).
+Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b, 9c and 9d. Alfil stands on d3; the f1 and e2 squares are empty. From Scene 9 the greasy spot on f3 is clearly visible (Section 4).
 
 ### Panel 9a
 - Camera: from Black's side, at officer height, framed on the King (e1) and Caballo (g1), zoomed out a little (author feedback in 7.19): from this side, left to right, the rook (h1), Caballo (g1), the empty f1 square, the King (e1), Regina (d1) and the c1 bishop at the right edge. In front the pawns on h2, g2 and f2; the head of the e3 pawn at the bottom centre; at the bottom right the d2 pawn and Alfil on d3 (his mitre with the paprika stains).
@@ -1539,6 +1543,21 @@ Approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26).
 - Characters: the White King is visibly surprised and shocked: eyes wide, mouth open (surprise, no balloon), both hands raised to the sides of his head in disbelief, beside his temples and not over his eyes or face, sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn, mouth closed, facing the centre files. The other pieces neutral, mouths closed.
 - Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
+
+### Panel 9c
+Approved in 7.27 (as shown in the SVG preview).
+- Camera: from Black's side, at about officer height and somewhat elevated, framed on the White King (e1) and Caballo (h3), with room above them at the top left for the shout balloon.
+- In frame (from this side the h-file is left): at the left Caballo on h3, in front of the rook on h1; the pawns on h2, g2 and f2; the empty f3 square with the greasy spot, clearly visible; the White King (e1) right of centre, Regina (d1) beside him, the c1 bishop and the head of the b1 knight cut off at the right edge; in front of them Alfil on d3 (paprika stains on his mitre), the pawn on e3 and the d2 pawn; in the foreground the empty board with the gentle rise in the middle of the board, shown only by light and shadow, and the head of a black centre pawn, seen from behind, cut off by the bottom edge.
+- Characters: the King is furious: red cheeks, mouth wide open in a shout, one fist raised high (on the side away from Regina, not covering her face); he looks towards Caballo. Caballo stubborn, mouth closed, facing the centre files. Regina, Alfil and the pawns look on, mouths closed.
+- Balloon (White King, jagged shout balloon, top left, its curved tail ending beside the King's mouth): Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !
+
+### Panel 9d
+Approved in 7.27 (camera and balloon as set by the author in 7.27).
+- Camera: from Black's side, low, at about the height of the pawns' heads, zoomed in on Caballo (h3) and shifted to the right so the greasy spot on f3 is in sight.
+- In frame (from this side the h-file is left): Caballo on h3, large, in the left foreground, in front of the rook on h1 and the h2 pawn; the pawns on g2 and f2; the White King (e1) at the right edge; in the foreground the empty f3 square with the greasy spot, clearly visible. Every piece on a square that is in frame is shown.
+- Characters: Caballo angry, mouth open, facing the centre files, towards the King. The White King angry, mouth closed, looks at Caballo. The pawns neutral, mouths closed.
+- Balloon placement: at the top, in the empty background above the pawns on g2 and f2; its curved tail leaves the balloon's lower left, passes the g2 pawn's head without touching it and ends just beside Caballo's snout. The balloon covers no face; the rook h1 behind Caballo stays free.
+- Balloon (Caballo): Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire !
 
 ---
 
@@ -1636,16 +1655,17 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
 
-### Panel 9c (PROPOSAL)
+### Panel 9c (approved in 7.27: the approved panel block is in Section 18, Scene 9)
 - Board state: 5.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
 - Characters: White King (furious, speaking, looks at Caballo, gesture fist-up-r); Caballo (stubborn).
 - Balloon (White King), shout balloon: Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !
 
-### Panel 9d (PROPOSAL)
+### Panel 9d (approved in 7.27: the approved panel block is in Section 18, Scene 9)
 - Board state: 5.
-- Camera: from Black's side (the white pieces face the camera), framed on h3.
-- Characters: Caballo (angry, speaking).
+- Camera (author feedback in 7.27): from Black's side, low, at about the height of the pawns' heads, zoomed in on Caballo (h3) and shifted to the right so the greasy spot on f3 is in sight: from this side left to right Caballo (large, in the left foreground, in front of the rook h1 and the h2 pawn), the pawns on g2 and f2, the White King (e1) at the right edge; in the foreground the empty f3 square with the greasy spot, clearly visible.
+- Characters: Caballo (angry, speaking, facing the centre files, towards the King); the White King (angry, mouth closed, looks at Caballo, added in 7.27: the one addressed looks back at the speaker); the pawns neutral, mouths closed.
+- Balloon placement (author feedback in 7.27): at the top, in the empty background above the pawns on g2 and f2; its tail curves down from the balloon's lower left, past the g2 pawn's head without touching it, and ends just beside Caballo's snout; the balloon covers no face, and the rook h1 behind Caballo stays free.
 - Balloon (Caballo): Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire !
 
 ### Panel 9e (PROPOSAL)
@@ -3076,7 +3096,7 @@ PANEL 8c   (sequence number 32)
 ```
 
 ### Scene 9 - Caballo Refuses f3
-Added in 7.19 for the panel the author approved (9a); 9b added in 7.26. Panels 9c to 9g are still proposals and have no manifests yet.
+Added in 7.19 for the panel the author approved (9a); 9b added in 7.26; 9c and 9d added in 7.27. Panels 9e to 9g are still proposals and have no manifests yet.
 
 ```
 PANEL 9a   (sequence number 33)
@@ -3134,6 +3154,66 @@ PANEL 9b   (sequence number 34)
 19. Layout: high, nearly frontal medium-wide shot of the white kingside (Section 23.D).
 20. Overflow: not applicable.
 21. Continuity requirements: State 5 into 9c, where the King shouts at Caballo.
+```
+
+```
+PANEL 9c   (sequence number 35)
+
+1.  Scene 9, panel c: the King shouts at Caballo.
+2.  Script excerpt:
+      Koning:
+      Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !
+3.  Dialogue:
+      Balloon 1: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !"
+4.  Balloon 1 -> Koning
+5.  Visible: Caballo on h3 and the rook h1 at the left; pawns h2, g2, f2; the empty f3 square with the greasy spot; Koning e1 right of centre, Regina d1 beside him; the c1 bishop and the head of the b1 knight cut off at the right edge; Alfil on d3, the e3 and d2 pawns; the head of a black centre pawn from behind at the bottom edge.
+6.  Listening: Caballo, stubborn, mouth closed; Regina, Alfil and the pawns, mouths closed, looking on.
+7.  Camera on Black's side, at about officer height, somewhat elevated, framed on Koning and Caballo; from this side the h-file is left. Koning and Caballo are the most prominent.
+8.  Koning: furious, red cheeks, mouth wide open in a shout, one fist raised high on the side away from Regina; looks towards Caballo.
+    Caballo: stubborn, mouth closed, facing the centre files.
+9.  Balloon 1 is a SHOUT balloon (jagged outline), top left, the whole text inside its inner points; its curved tail ends beside Koning's mouth and crosses no face, crown or mitre.
+10. Stage directions: none.
+11. State 5 (after 3. Ph3). No move in this panel.
+12. Continuity: right after Caballo's jump to h3 in 9b; Alfil on d3; the greasy spot on f3 clearly visible (from Scene 9).
+13. Must not appear: a round balloon for this line; an open mouth on Caballo, Regina or Alfil; the King's fist over Regina's face; anger symbols; a knight on f3; a move box.
+14. Dialogue length: 19 words, 86 characters.
+15. Segmentation: the whole of speech 23.
+16. Visual priority: the King's fury and raised fist, Caballo on h3 next to the empty, greasy f3.
+17. Lettering space: top left, above the rook h1 and the kingside pawns.
+18. Balloon-area estimate: about 20%.
+19. Layout: medium shot of the white kingside (Section 23.D); one shout balloon.
+20. Overflow: if the balloon covers a face or crown, split after "stommen ezel ?" into two shout balloons for Koning in reading order.
+21. Continuity requirements: State 5 into 9d, where Caballo answers.
+```
+
+```
+PANEL 9d   (sequence number 36)
+
+1.  Scene 9, panel d: Caballo refuses f3.
+2.  Script excerpt:
+      Caballo:
+      Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire ! Dat ge     uw voetvolk erdoor jaagt tot daar nog aan toe maar een officier laat ge niet met zijn voetstuk in zo'n vieze vuile plek staan verkommeren. Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !
+3.  Dialogue:
+      Balloon 1: "Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire !"
+4.  Balloon 1 -> Caballo
+5.  Visible: Caballo on h3, large, in the left foreground, in front of the rook h1 and the h2 pawn; the pawns g2 and f2; Koning e1 at the right edge; in the foreground the empty f3 square with the greasy spot.
+6.  Listening: Koning, angry, mouth closed, looking at Caballo; the pawns neutral, mouths closed.
+7.  Camera on Black's side, low (about the height of the pawns' heads), close on Caballo and shifted to the right so f3 is in frame; from this side left to right: Caballo (h3), g2, f2, Koning (e1). Caballo is the largest.
+8.  Caballo: angry, mouth open, facing the centre files, towards the King.
+    Koning: angry, mouth closed, looks at Caballo.
+9.  Balloon 1 at the top, in the empty background above the pawns on g2 and f2; its curved tail leaves the balloon's lower left, passes the g2 pawn's head without touching it and ends just beside Caballo's snout. Round balloon.
+10. Stage directions: none.
+11. State 5 (after 3. Ph3). No move.
+12. Continuity: answers the King's shout in 9c; Caballo on h3, the f3 square empty; the greasy spot on f3 clearly visible (from Scene 9).
+13. Must not appear: a tail pointing to the g2 pawn or ending in front of it; an open mouth on the King or the pawns; a knight on f3; a move box; a balloon over a face.
+14. Dialogue length: 17 words, 77 characters.
+15. Segmentation: the first two sentences of speech 24; continues in 9e with "Dat ge uw voetvolk ...".
+16. Visual priority: Caballo's angry refusal and the greasy spot on f3 in front of him.
+17. Lettering space: top centre, above the g2 and f2 pawns.
+18. Balloon-area estimate: about 15%.
+19. Layout: low close-up on Caballo with the greasy square in the foreground (Section 23.D); one balloon.
+20. Overflow: if needed, split after "gaan staan ?" into two balloons for Caballo in reading order.
+21. Continuity requirements: the same setting in 9e, where Caballo continues.
 ```
 
 ---
@@ -3249,8 +3329,8 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 21 | Move: 2. ... e6 | 8 | 8c | Panel script written (approved in 7.17); manifest written (Section 20.3). |
 | 22 | Koning: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." | 9 | 9a | Panel script written (approved in 7.19); manifest written (Section 20.3). |
 | 23 | Move: 3. Ph3 | 9 | 9b | Panel script written (approved in 7.26); manifest written (Section 20.3). |
-| 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | - | Scene catalog only. |
-| 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | - | Scene catalog only. |
+| 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | 9c | Panel script written (approved in 7.27); manifest written (Section 20.3). |
+| 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | 9d (9e, 9f proposals) | Partly written: panel script and manifest for 9d (approved in 7.27, Section 20.3); the rest of the speech in the proposals 9e and 9f. |
 | 26 | Move: 3. ... Ld7 | 9 | - | Scene catalog only. |
 | 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | - | Scene catalog only. |
 | 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | - | Scene catalog only. |
@@ -3478,3 +3558,4 @@ Items that need a decision from the author.
 | 7.24 | - | Panels 4c-1 and 4c-2 zoomed out a little; room for the balloon above Alfil. |
 | 7.25 | - | Curved, rounded balloon tails that end beside the mouth and never cross a face or hat (Common Prompt Block, Section 16). |
 | 7.26 | - | Proposal 9b rotated towards Black's side and zoomed in: a nearly frontal view of the white pieces; the black army hardly in frame (author's choice). The King's hands at his head. Panel 9b approved: panel block (Section 18, Scene 9) and manifest 34 (Section 20.3). |
+| 7.27 | - | Panel 9c approved: panel block (Section 18, Scene 9) and manifest 35 (Section 20.3). Proposal 9d reframed: greasy spot on f3 in sight, tail to Caballo's snout. Panel 9d approved: panel block (Section 18, Scene 9) and manifest 36 (Section 20.3). |
