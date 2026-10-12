@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.30
+Version 7.31
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -38,6 +38,7 @@ Version 7.27 approves panel 9c (author decision): full panel block in Section 18
 Version 7.28 moves the balloon of the proposal panel 9e to the lower left, clear of the white pieces and the greasy spot (author feedback). The camera of 9e now keeps the White King, whom Caballo addresses, fully in sight. Panel 9e is then approved: full panel block in Section 18 (Scene 9) and manifest 37 in Section 20.3.
 Version 7.29 reframes the proposal panel 9f (author feedback): a high camera that shows the empty squares g1 and f1 between the rook and the King, so it is immediately clear that White can castle; the balloon in the top third, clear of the rook and the King. Panel 9f is then approved: full panel block in Section 18 (Scene 9) and manifest 38 in Section 20.3.
 Version 7.30 reframes the proposal panel 9g (author feedback): a higher camera, more from the left, so the faces of the Black Queen and the d5 pawn are visible. Panel 9g is then approved, which completes Scene 9: full panel block in Section 18 and manifest 39 in Section 20.3.
+Version 7.31 forbids sigh symbols such as a breath cloud next to a face (author feedback on panel 10a): a sigh is shown by the face and the pose only (Section 14, Section 16, Common Prompt Block). Panels 10a, 10b and 10c are approved: full panel blocks in Section 18 (Scene 10) and manifests 40 to 42 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -882,6 +883,7 @@ NEVER:
 - Visual content that is not in the script or decided by the author.
 - Narrator boxes.
 - Anger symbols such as the red "popping vein" mark (four curved red strokes) on a head; anger is shown by the face, the gesture and a shout balloon only (author feedback on panel 5a, 7.11).
+- Sigh symbols such as a white breath cloud or puff next to a face; a sigh ("(zucht)" in the play) is shown by the face and the pose only (author feedback on panel 10a, 7.31).
 - Invented captions.
 - Coordinate labels.
 - Field labels.
@@ -1045,6 +1047,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.29 | Author decision: panel 9f approved ("approve 9f"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 38 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved. Script Coverage Map item 25 (Caballo's speech) is now complete: 9d, 9e, 9f. Panel 9g stays a proposal. |
 | 7.30 | Author feedback on the proposal panel 9g: "It's a bit pity that we don't see the faces of the black queen and the black pawn. How about looking at the board slightly more from above and maybe somewhat from the left." From the low camera behind White's back rank, Alfil's mitre hid the d5 pawn, the bishop arriving on d7 stood in front of the Black Queen, and the crowns of the White King and Regina filled the foreground. The camera was raised and moved to the left (towards the queenside, seen from White) and zoomed in a little: the faces of the Black Queen and the d5 pawn are clearly visible, the whole black army is larger, and the white crowns are out of the foreground. Camera line of the 9g proposal block updated; 9g stays a proposal. |
 | 7.30 | Author decision: panel 9g approved ("approve 9g"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 9) and as manifest 39 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 26 (3. ... Ld7) updated. Scene 9 is now fully approved (panels 9a to 9g, manifests 33 to 39). |
+| 7.31 | Author feedback on the proposal panel 10a: "There is a white image next to the king's face - I don't know what it is but it doesn't seem to belong there." It was a "sigh puff", a small white breath cloud that the SVG preview drew for the stage direction "(zucht)"; it was never part of the play or the canon. Author decision (asked, "remove everywhere"): no sigh symbols anywhere in the cartoon; a sigh is shown by the face and the pose only. Rule added to Section 14, Section 16 and the Common Prompt Block; the puff removed from the preview panels 10a and 16a and the words "sigh puff" from their proposal blocks. Both panels stay proposals. |
+| 7.31 | Author decisions: panel 10a approved ("approve"), panels 10b and 10c accepted ("41-panel-10b.svg accept", "42-panel-10c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 10 - A Thousand Games) and as manifests 40 to 42 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 27 marked as partly written. Noted as accepted: in 10b the bottom of the balloon touches the top of Regina's crown. Panels 10d to 10i stay proposals. |
 
 ---
 
@@ -1061,6 +1065,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
 - Balloon tails are curved and rounded, end just beside the speaker's mouth, and never cross a face, crown, mitre, hair or hat (Section 18, Common Prompt Block; author decision in 7.25).
+- No sigh symbols (no breath cloud or puff next to a face); a sigh is shown by the face and the pose only (author feedback on panel 10a, 7.31).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one (Section 13, Move Box).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
 - Cola stain on f6 when visible.
@@ -1277,6 +1282,7 @@ Rules:
 - No narrator boxes, no captions, no sound-effect words, no invented text, no props or objects that are not described.
 - The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, the move box and the caption box when the panel description gives them, and the symbols in grumble balloons when the panel description gives them. When the speech balloons are drawn empty and there is no move box or caption box, the image contains no text at all.
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
+- No sigh symbols: no breath cloud or puff next to a face. When the King sighs, show it with his face and pose only: eyes closed, eyebrows drooping, mouth open, shoulders sagging.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
 - Caption box (only when the panel description gives one; so far panels 2b and 4a): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
 - Grumble balloons with symbols (only when the panel description gives them): small jagged balloons with a short tail to the grumbling piece, containing exactly the symbols given (chess annotation symbols such as ??, ?! and !?, and the hash sign #), nothing else; they never cover a face.
@@ -1594,6 +1600,34 @@ Approved in 7.30 (camera as set by the author in 7.30).
 - Move box (bottom-left corner, bold, white rectangle): 3. ... Ld7
 - No balloons.
 
+## Scene 10 - A Thousand Games
+Status: panels 10a, 10b and 10c approved by the author in 7.31 (from the proposals of 7.7, with the sigh symbol removed from 10a in 7.31, as shown in the SVG preview); panels 10d to 10i are still proposals (Section 18, Proposed Panels).
+Board position for all panels: State 6 (after 3. ... Ld7). Alfil stands on d3, Caballo on h3; the f1, g1 and e2 squares are empty. The greasy spot on f3 is clearly visible where f3 is in frame (from Scene 9).
+
+### Panel 10a
+Approved in 7.31.
+- Camera: from Black's side, at officer height, close-up of the White King (e1) from the waist up, with Regina (d1) at his right; the heads of the pawns on f2 and d2 cross the bottom corners.
+- In frame (from this side the f-file is left): the King left of centre, large; Regina right of centre; the head of the f2 pawn at the bottom left, the head of the d2 pawn at the bottom right; the e2 square in front of the King is empty. Every piece on a square that is in frame is shown.
+- Characters: the King sighs (stage direction "(zucht)"): eyes closed, eyebrows drooping, mouth open as he speaks; the sigh is shown by his face only, with no breath cloud or other symbol (author decision in 7.31). Regina looks at the King, worried, mouth closed. The pawns look on, mouths closed.
+- Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt.
+
+### Panel 10b
+Approved in 7.31 (as shown in the SVG preview).
+- Camera: from Black's side, at officer height, on the White King (e1) and Regina (d1), a little further back than 10a.
+- In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it, paprika stains visible) and c2 (bottom right edge). Every piece on a square that is in frame is shown.
+- Characters: the King calm and nostalgic, eyes half closed, mouth open as he speaks, one hand on his chest. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- Balloon placement: top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown (accepted by the author as shown, 7.31); its curved tail ends just beside the King's mouth.
+- Balloon (White King): In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld.
+
+### Panel 10c
+Approved in 7.31 (as shown in the SVG preview).
+- Camera: from Black's side, at officer height, close-up of the White King (e1), with Regina (d1) at the right.
+- In frame (from this side the f-file is left): the King in the centre, large; Regina at the right; the heads of the pawns on f2 (bottom left) and d2 (bottom right). Every piece on a square that is in frame is shown.
+- Characters: the King proud, eyes wide, mouth open, one arm raised high with an open hand (on the side of Regina, above her head, not covering her face), remembering his victories. Regina looks on, mouth closed. The pawns look on, mouths closed.
+- Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): En veel gewonnen hé want dat was nog in mijne jongen tijd.
+
 ---
 
 ## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
@@ -1726,19 +1760,19 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 3. ... Ld7
 - No balloons.
 
-### Panel 10a (PROPOSAL)
+### Panel 10a (approved in 7.31: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
-- Characters: White King (sigh, speaking, sigh puff); Regina (looks at White King).
+- Characters: White King (sigh, speaking; the sigh shown by the face only: eyes closed, eyebrows drooping, mouth open; no breath cloud, 7.31); Regina (looks at White King).
 - Balloon (White King): Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt.
 
-### Panel 10b (PROPOSAL)
+### Panel 10b (approved in 7.31: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (calm, speaking, gesture hand-chest); Regina (looks at White King).
 - Balloon (White King): In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld.
 
-### Panel 10c (PROPOSAL)
+### Panel 10c (approved in 7.31: the approved panel block is in Section 18, Scene 10)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (proud, speaking, gesture raise-r).
@@ -1977,7 +2011,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 ### Panel 16a (PROPOSAL)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
-- Characters: White King (sigh, speaking, sigh puff).
+- Characters: White King (sigh, speaking; the sigh shown by the face only, no breath cloud, 7.31).
 - Beside the board: the captured black pawn (h7) and Regina stand beside the board.
 - Balloon (White King): Pakt dat dan maar aan.
 
@@ -3341,6 +3375,99 @@ PANEL 9g   (sequence number 39)
 21. Continuity requirements: State 6 into Scene 10.
 ```
 
+### Scene 10 - A Thousand Games
+Added in 7.31 for the panels the author approved (10a, 10b, 10c). Panels 10d to 10i are still proposals and have no manifests yet.
+
+```
+PANEL 10a   (sequence number 40)
+
+1.  Scene 10, panel a: the King sighs.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 from the waist up, large, left of centre; Regina d1 right of centre; the heads of the pawns f2 and d2 in the bottom corners; the e2 square empty.
+6.  Listening: Regina, worried, mouth closed, looking at the King; the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King; from this side f2 is left, d2 right.
+8.  Koning: sighing, eyes closed, eyebrows drooping, mouth open as he speaks.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: (zucht), shown by the King's face only (author decision in 7.31: no sigh symbol).
+11. State 6 (after 3. ... Ld7). No move.
+12. Continuity: after 3. ... Ld7 in 9g; the King's frustration with Caballo turns into weariness; Alfil on d3, Caballo on h3.
+13. Must not appear: a breath cloud, puff or other sigh symbol; an open mouth on Regina or the pawns; a pawn on e2; any text other than the balloon.
+14. Dialogue length: 19 words, 94 characters.
+15. Segmentation: the first sentence of speech 26; continues in 10b with "In de eerste jaren ...".
+16. Visual priority: the King's weary, sighing face.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 15%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: split after "nu al gespeeld" into two balloons for Koning in reading order.
+21. Continuity requirements: the same setting in 10b, where the King's speech continues.
+```
+
+```
+PANEL 10b   (sequence number 41)
+
+1.  Scene 10, panel b: the King remembers the wooden boards.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, on the King and Regina, a little further back than 10a; from this side left to right: e1, d1, c1.
+8.  Koning: calm, nostalgic, eyes half closed, mouth open, one hand on his chest.
+    Regina: mouth closed; looks at the King.
+9.  Balloon 1 top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown (accepted by the author as shown, 7.31); its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none in this panel (the "(zucht)" of speech 26 is shown in 10a).
+11. State 6. No move.
+12. Continuity: continues speech 26 from 10a; the King's weariness turns into nostalgia.
+13. Must not appear: an open mouth on Regina, the bishop or the pawns; a wooden board or any other prop (the old boards exist only in the dialogue); a sigh symbol.
+14. Dialogue length: 24 words, 115 characters.
+15. Segmentation: speech 26, sentences 2 and 3 ("In de eerste jaren ..." to "... daar op gespeeld."); continues in 10c.
+16. Visual priority: the King's nostalgic face and hand on his chest.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 20%.
+19. Layout: medium shot of the King and Regina (Section 23.D); one balloon.
+20. Overflow: split after "met houten borden." into two balloons for Koning in reading order.
+21. Continuity requirements: the King's speech continues in 10c.
+```
+
+```
+PANEL 10c   (sequence number 42)
+
+1.  Scene 10, panel c: the King remembers his victories.
+2.  Script excerpt:
+      Koning: (zucht)
+      Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt. In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld. En veel gewonnen hé want dat was nog in mijne jongen tijd. En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen : de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand. Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn. En 't ergste van al : er kwam  een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen. Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
+3.  Dialogue:
+      Balloon 1: "En veel gewonnen hé want dat was nog in mijne jongen tijd."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 large in the centre; Regina d1 at the right; the heads of the pawns f2 and d2 at the bottom.
+6.  Listening: Regina, mouth closed, looking on; the pawns, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King; from this side left to right: e1, d1.
+8.  Koning: proud, eyes wide, mouth open, one arm raised high with an open hand (on Regina's side, above her head, not covering her face).
+    Regina: mouth closed.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 6. No move.
+12. Continuity: continues speech 26 from 10b.
+13. Must not appear: an open mouth on Regina or the pawns; the raised hand over Regina's face; trophies or any other prop; a sigh symbol.
+14. Dialogue length: 12 words, 59 characters.
+15. Segmentation: speech 26, sentence 4; continues in 10d with "En ineens was een houten bord ...".
+16. Visual priority: the King's proud raised arm.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 10%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the King's speech continues in 10d.
+```
+
 ---
 
 # SECTION 21 - PRODUCTION WORKFLOW: ARTWORK AND LETTERING
@@ -3457,7 +3584,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 24 | Koning: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ?..." | 9 | 9c | Panel script written (approved in 7.27); manifest written (Section 20.3). |
 | 25 | Caballo: "Daar op dat vies veld in die vettige plek gaan staan ?..." | 9 | 9d, 9e, 9f | Panel script written (9d approved in 7.27, 9e in 7.28, 9f in 7.29); manifests written (Section 20.3). |
 | 26 | Move: 3. ... Ld7 | 9 | 9g | Panel script written (approved in 7.30); manifest written (Section 20.3). |
-| 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | - | Scene catalog only. |
+| 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | 10a, 10b, 10c (10d to 10h proposals) | Partly written: panel scripts and manifests for 10a, 10b and 10c (approved in 7.31, Section 20.3); the rest of the speech in the proposals 10d to 10h. |
 | 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | - | Scene catalog only. |
 | 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | - | Scene catalog only. |
 | 30 | Move: 4. Dh5 | 11 | - | Scene catalog only. |
@@ -3687,3 +3814,4 @@ Items that need a decision from the author.
 | 7.28 | - | Proposal 9e: balloon in the lower left, clear of the white pieces and the greasy spot; tail from the balloon's top edge to Caballo's mouth. King fully in sight, looking at Caballo. Panel 9e approved: panel block (Section 18, Scene 9) and manifest 37 (Section 20.3). |
 | 7.29 | - | Proposal 9f: high camera showing the empty g1 and f1 (castling is clearly possible); balloon clear of the rook and the King. Panel 9f approved: panel block (Section 18, Scene 9) and manifest 38 (Section 20.3). |
 | 7.30 | - | Proposal 9g: higher camera from the queenside; faces of the Black Queen and the d5 pawn visible. Panel 9g approved: panel block and manifest 39; Scene 9 complete. |
+| 7.31 | - | Sigh symbols (breath cloud) forbidden after author feedback on panel 10a; removed from the preview panels 10a and 16a. Panels 10a, 10b, 10c approved: panel blocks and manifests 40 to 42. |

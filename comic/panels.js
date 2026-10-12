@@ -125,13 +125,13 @@ window.PANELS = [
   balloons: [{ who: "caballo", w: 560, snug: true, text: "Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !" }] },
 { id: "9g", scene: 9, status: A, movebox: "3. ... Ld7", state: 6, cam: { from: [1.6, -0.6, 4.8], at: [3.7, 6.0, 0.4], f: 720 }, fx: [{ move: ["c8", "d7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 10 - A Thousand Games (PROPOSAL)
-{ id: "10a", scene: 10, status: Pr, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
-  cast: { koning: { expr: "sigh", talk: true, sigh: true }, regina: { lookAt: "koning" } },
+{ id: "10a", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "sigh", talk: true }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt." }] },
-{ id: "10b", scene: 10, status: Pr, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+{ id: "10b", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { koning: { expr: "calm", talk: true, gest: "hand-chest" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld." }] },
-{ id: "10c", scene: 10, status: Pr, state: 6, cam: zb(["e1"], { dist: 1.25, h: 1.4, th: 1.05, f: 800 }),
+{ id: "10c", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.25, h: 1.4, th: 1.05, f: 800 }),
   cast: { koning: { expr: "proud", talk: true, gest: "raise-r" } },
   balloons: [{ who: "koning", text: "En veel gewonnen hé want dat was nog in mijne jongen tijd." }] },
 { id: "10d", scene: 10, status: Pr, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
@@ -231,7 +231,7 @@ window.PANELS = [
   balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }] },
 // ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
 { id: "16a", scene: 16, status: Pr, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
-  cast: { koning: { expr: "sigh", talk: true, sigh: true } },
+  cast: { koning: { expr: "sigh", talk: true } },
   balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
 { id: "16b", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, cam: { from: [10.6, 4.0, 3.2], at: [4.0, 4.0, 0.3], f: 820 },
   cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { lookAt: "brookh8" } }, balloons: [] }
