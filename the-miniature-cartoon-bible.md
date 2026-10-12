@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.40
+Version 7.41
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -47,6 +47,7 @@ Version 7.37 fills the last page (author decisions): 15e wide, 16a the final pos
 Version 7.38 refines the proposal panel 16c (author feedback): the sideways handshake back, the kings in the middle of e4 and e5, seen from the side so that the greasy spot on f3 and the cola stain on f6 are visible, the kings centred, the rise in the middle of the board in sight.
 Version 7.39 sets the board of the proposal panel 16c to the starting position (apart from the two kings in the middle) and makes the rise in the middle of the board read more clearly, with both kings leaning a little (author decision). It also moves the result box "1/2 - 1/2" to the bottom centre of 16c, the last panel. Panels 16b and 16c are then approved: full panel blocks in Section 18 (Scene 16) and manifests 78 and 79 in Section 20.3.
 Version 7.40 approves panels 14h and 15a to 15e (author decision): full panel blocks in Section 18 (Scenes 14 and 15) and manifests 71 to 76 in Section 20.3; Scene 15 is complete.
+Version 7.41 fixes the colours of the two armies and the board (author decision): royal blue with gold for White, violet with bronze for Black, ivory and medium-dark walnut wood, exact board colours (Section 5, Colour Style).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -344,7 +345,7 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 
 ## Board
 - Plastic tournament board.
-- Dark brown (almost black)/beige tournament board: dark squares very dark brown with a near-black flavour, light squares beige. (Supersedes green/beige, see Appendix A.)
+- Dark brown (almost black)/beige tournament board: dark squares very dark brown with a near-black flavour, light squares beige. (Supersedes green/beige, see Appendix A.) Exact colours (author decision in 7.41): dark squares walnut #3A2418, light squares parchment #DCCFA9, frame oak #866240.
 - Plastic board less than three years old.
 - Worn but functional.
 - Earlier wooden boards existed.
@@ -439,11 +440,11 @@ Measured in square widths (one square = 1):
 
 ## Pieces
 White pieces:
-- Light natural wood.
+- Light natural wood: ivory #E7D1A3 (author decision in 7.41; Section 5, Colour Style).
 - Visible grain.
 
 Black pieces:
-- Very dark brown stained wood.
+- Dark brown stained wood: medium-dark walnut #7A5038 (author decision in 7.41, lighter than the earlier "very dark brown" so faces and contours read; Section 5, Colour Style).
 - Visible grain.
 
 ## Felt
@@ -466,9 +467,26 @@ Felt:
   - Regina: an elegant white-and-gold design.
   - Alfil: advisor robes; the paprika stains stay on his mitre.
   - Caballo: military decorations.
-- Black officers wear costumes in darker colours.
+- Black officers wear costumes in the black army's colour, violet (author decision in 7.41; see Colour Style below). Replaces "darker colours" (7.3).
 - The felt bottoms stay visible under every costume, and the character of each piece still comes from face, crown, mitre, hair and gestures.
-- Open (Appendix B, item 13): how a costume combines with the wooden body (cloth over the wood, or painted or carved on it), the exact colours of the black costumes, and the costumes of the white officers without a dossier.
+- Open (Appendix B, item 13): how a costume combines with the wooden body (cloth over the wood, or painted or carved on it), the costumes of the white officers without a dossier beyond their colour. The colours are fixed in 7.41 (Colour Style).
+
+## Colour Style: Two Kingdoms (author decision in 7.41)
+Each army reads at a glance as one kingdom: one dominant costume colour per army, a supporting colour only for trims and collars, and metal only for rank. Chosen by the author after an experiment on panel 16a ("approach A").
+
+| | White army | Black army |
+|---|---|---|
+| Wood (body, face, hands) | ivory #E7D1A3, visible grain | medium-dark walnut brown #7A5038, visible grain |
+| Main costume colour | royal blue #5D7EA8 | violet #7B5AA6 |
+| Supporting colour (trims, collars, shade) | deep blue #2F5D9B | deep violet #5D4386; light cream collars on the pawns |
+| Metal (crowns, trims, rank) | gold #D6B44A: most on the King, then Regina, Alfil and Caballo | bronze #C08A4C: most on the Black King |
+
+- White army in royal blue: all pawns, Alfil's advisor robes, the c1 bishop, Caballo's caparison, the b1 knight; the rooks with a deep-blue band.
+- Black army in violet: all pawns and all officers (the Black King, the Black Queen, the bishops, the knights, the a8 rook and the h8 rook).
+- Exceptions (canon): the White King keeps his burgundy robe with medals (7.3), his signature; Regina keeps her white-and-gold costume (7.3); Caballo keeps his red sash with medal (his military decorations). The handsome black rook on h8 wears violet like the rest of his army (author correction in 7.41).
+- Felt bottoms: traditional green, unchanged.
+- Board: dark squares walnut #3A2418, light squares parchment #DCCFA9, frame oak #866240 (see Section 4, Board).
+- Not used from the suggestion the author shared: a blue robe for the White King, burgundy as the black army's colour (it would read as the White King's colour), separate skin tones (the faces are the wood itself).
 
 ---
 
@@ -541,7 +559,7 @@ Felt:
 - Long-time rival.
 - Same age as White King.
 - Short beard.
-- Costume in darker colours, like all black officers (author decision in 7.3).
+- Costume in violet with bronze, like all black officers (author decision in 7.41; Section 5, Colour Style). Replaces "darker colours" (7.3).
 - Calm, patient, disciplined.
 - Professional.
 - Greatest strength: patience.
@@ -852,7 +870,7 @@ If a panel contains an incorrect position, the panel is wrong.
 - The listener reacts visibly to what is said: for example surprise at unexpected news, anger and worry when plans have to change (author feedback on panels 4b and 4c).
 
 ## Master Illustration Prompt
-Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in light natural wood, black pieces in very dark brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers darker colours); the pawns wear simple soldier uniforms; in both armies the b-pawn and the g-pawn have a moustache, the other pawns none. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
+Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in ivory light wood, black pieces in medium-dark walnut-brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers violet with bronze); the white pawns wear royal-blue soldier uniforms, the black pawns violet ones; the white army's other officers wear royal blue with gold; in both armies the b-pawn and the g-pawn have a moustache, the other pawns none. The board lies on a table in an empty chess club room, softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
 ## Move Box (author decision in 7.8)
 - Every panel in which a move is played on the board shows that move, with its move number, in bold black text in a small white rectangle with a thin black ink outline, in the bottom-left corner of the panel. It applies to the preview and to the final images.
@@ -1081,6 +1099,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.39 | Author decision: "Let's move the 1/2 - 1/2 result from the pre-last panel to the last panel. Make sure it is centered at the bottom of the panel." The result box moves from the bottom-left corner of 16b to the bottom centre of 16c, the last panel; same style as the move box. Section 13 (Result box paragraph and table), P.3, Common Prompt Block, Sections 16 and 22.B, Scene Catalog, Coverage Map item 44, Appendix B item 15 and the proposal blocks 16b and 16c updated; old placement in Appendix A. SVG preview: option "moveboxCenter". |
 | 7.39 | Author decisions: panels 16b and 16c accepted ("78-panel-16b.svg accept", "79-panel-16c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (new heading Scene 16 - Draw Accepted) and as manifests 78 and 79 in Section 20.3 (numbered as in the album; field 2 of 16b copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 43 and 44 marked as written. Panel 16a stays a proposal. |
 | 7.40 | Author decisions: panels 14h, 15a, 15b, 15c, 15d and 15e accepted ("accept" for each), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14; new heading Scene 15 - Mate in One) and as manifests 71 to 76 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map items 39 (partly), 40, 41 and 42 updated. Noted as accepted, not changed: in 15a the tail passes close to the King and Alfil's raised hand covers a pawn's face; in 15c the tail ends on Caballo's head near his eye. Scene 15 is fully approved. |
+| 7.41 | Author decision on colours: the author shared a colour-scheme suggestion ("two clearly identifiable kingdoms") and asked Claude to cherry-pick what is useful. Claude proposed: one dominant costume colour per army, metals for rank, exact wood and board colours; the White King's burgundy, Regina's white and gold and Caballo's red sash kept as canon exceptions; not used: a blue King, burgundy for Black, skin tones. Tried on panel 16a; the author: "this seems to work for the white army but not for the black army ... both the colors of the black pieces and the costumes of the black pieces are too dark"; two lighter variants shown (A violet, B green); the author chose A and "update all panels according to this color style". New: Section 5, Colour Style; Sections 4 (Board), 5 (Pieces, Costumes), 7 (Black King), the Master Illustration Prompt and the Common Prompt Block updated; the black wood is now medium-dark walnut instead of very dark brown, the board frame oak instead of beige; Appendix B item 13 partly resolved; old wording in Appendix A. SVG preview: the colour style is applied to every panel (comic/renderer.js, palette "kingdoms-violet"); approved panels change colour only, not content. |
+| 7.41 | Author correction: "The color band of the rook at h8 doesn't seem to match the colors of his army - why is that?" Claude had given the h8 rook a lighter navy as an exception of its own (proposed as "keeps a recognisable look", never decided by the author) and carried it into the rollout and the Colour Style. The author: "use violet like the rest of the army". The exception is removed from the Colour Style, the Common Prompt Block and the preview; the h8 rook wears violet with bronze like the other black officers. |
 
 ---
 
@@ -1283,9 +1303,9 @@ Orientation reminder: seen from Black's side, the files run from h (left) to a (
 ## Common Prompt Block
 Belgian comic panel in the style of Suske en Wiske: clean ink outlines, bright flat colours, family friendly, highly expressive eyes, a distinctive nose for every character.
 
-The characters are living wooden chess pieces with classic chess-piece bodies, faces, simple arms and hands, and no feet. White pieces are light natural wood with visible grain; black pieces are very dark brown stained wood with visible grain. Every piece has a traditional green felt bottom that is always visible.
+The characters are living wooden chess pieces with classic chess-piece bodies, faces, simple arms and hands, and no feet. White pieces are ivory light wood (#E7D1A3) with visible grain; black pieces are medium-dark walnut brown stained wood (#7A5038) with visible grain. Every piece has a traditional green felt bottom that is always visible.
 
-The board is a plastic tournament board: very dark brown, almost black, dark squares and beige light squares, with a beige border. No coordinate letters or numbers anywhere.
+The board is a plastic tournament board: very dark walnut-brown dark squares (#3A2418) and parchment-beige light squares (#DCCFA9), with an oak-brown frame (#866240). No coordinate letters or numbers anywhere.
 
 Recurring characters:
 - White King: ancient but pristine, simple medieval crown, medium white beard and moustache, burgundy robe with medals, proud and theatrical.
@@ -1293,7 +1313,8 @@ Recurring characters:
 - Alfil (White bishop that starts on f1): scholar and advisor in advisor robes, with a mitre that has small orange-red paprika stains.
 - Caballo (White knight that starts on g1): highly expressive horse-headed knight with military decorations.
 - Pawns: soldiers in simple soldier uniforms, with realistic faces (not blob-like); they show wear. In both armies the pawn that started on the b-file and the pawn that started on the g-file have a moustache (also after they move or capture); all other pawns have no moustache and no beard.
-- Black officers: costumes in darker colours; the Black King is calm, with a short beard.
+- Colours of the two armies (author decision in 7.41): White = royal blue costumes (#5D7EA8) with deep-blue trims (#2F5D9B) and gold (#D6B44A) for crowns and rank: the pawns, Alfil, the c1 bishop, Caballo's caparison, the b1 knight; the King keeps his burgundy robe with medals, Regina her white and gold, Caballo his red sash. Black = violet costumes (#7B5AA6) with deep-violet trims (#5D4386) and bronze (#C08A4C): all black pawns and officers; the black pawns have light cream collars.
+- Black officers: violet costumes (#7B5AA6) with bronze trims (#C08A4C); the Black King is calm, with a short beard. The black rook on h8 wears violet like the rest of his army.
 
 Board details:
 - The middle of the board: In the middle of the board, the plastic board surface itself bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, like a vinyl roll-up chessboard that has warped from heat. The hill is about as high as the base of a chess piece and slopes smoothly back down until the board is flat again at the outer edges of those four squares. The squares, their grid lines and their colours bend over it; it is seen only through soft light on one side and soft shadow on the other.
@@ -4630,6 +4651,7 @@ Kept for history. Do not use for generation.
 - v7.0 to 7.13, panel 4a: Alfil "listening", the pawns e2, f2, g2 facing the camera, "no balloons, no text", camera "somewhat elevated" (panel block, manifest 4a, Scene Catalog). -> Superseded in 7.14 by author decision: Alfil talks to the pawns, f2 seen from behind, e2 and g2 half turned towards him, camera raised, caption (Alfil overlegt met de pionnen).
 - v7.7 to 7.36, proposal panels of Scene 16: "16a: the King, close-up from Black's side, sighing: Pakt dat dan maar aan." and "16b: special angle, wide panel (full strip); White King (sigh), Black King (calm), Regina (looks at black rook (h8)); no balloons". -> Superseded in 7.37 by author decision: 16a is the final position seen nearly from above, two strips high; 16b, the last panel, is the King's line with the result box "1/2 - 1/2".
 - 7.37 to 7.38: the result box "1/2 - 1/2" in the bottom-left corner of panel 16b (the King accepts the draw). -> Moved in 7.39 by author decision: centred at the bottom of the last panel, 16c (the kings shake hands).
+- v7.3 to 7.40: black pieces in "very dark brown stained wood", black officers in "darker colours", the board "very dark brown, almost black / beige with a beige border" without exact colours; in the SVG preview the black pawns wore green and the black officers a mix of navy and purple. -> Superseded in 7.41 by author decision: the Colour Style "two kingdoms" (Section 5): ivory and medium-dark walnut wood, royal blue for White and violet for Black, gold and bronze for rank, exact board colours with an oak frame.
 ---
 
 # APPENDIX B - OPEN QUESTIONS
@@ -4647,7 +4669,7 @@ Items that need a decision from the author.
 10. **Lettering tool.** Which tool is used to correct a deviating balloon text, or to typeset the dialogue into empty balloons in the fallback (Section 21, Stage 3)? Since 7.6 the image generator writes the text itself, so the tool is only needed for corrections and the fallback.
 11. ~~**Title.**~~ Resolved in 7.3: title and subtitle on the album cover (Section 13, Cover Direction).
 12. **Output format and lettering size.** Partly resolved in 7.3: the format is a printed album page (Section 23.F). Still open: the exact font and the measured capacity of a lettered panel. Original question: For which size is the comic made (printed album page, A4, screen), with which font and minimum text size? This decides how much text fits in a balloon (Section 23.F) and replaces the rule of thumb with measured values.
-13. **Costume details.** How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
+13. **Costume details.** Partly resolved in 7.41: the colours of both armies are fixed (Section 5, Colour Style), including the black officers (violet with bronze) and the white officers without a dossier (royal blue with gold). Still open: how a costume combines with the wooden body (cloth over the wood, or painted or carved on it), and the costume shapes of the white officers without a dossier. Original question: How does a costume combine with the wooden body (cloth over the wood, or painted or carved on it)? Which darker colours do the black officers wear? What do the white officers without a dossier wear?
 14. **A piece on the slope of the raised centre.** From board state 2 the black pawn stands on d5, on the slope of the raised centre. Does it stand upright on the raised surface (as in the SVG preview), lean with the slope, or does it visibly struggle? (Added in 7.7.)
 15. ~~**The draw result without a caption.**~~ Resolved in 7.37: the result "1/2 - 1/2" appears in a result box like the move box (since 7.39 centred at the bottom of the last panel, 16c; Section 13, Move Box). Original question: Scene 16 ends in a draw (1/2 - 1/2), but the cartoon has no captions, and chess notation appears only inside dialogue and in the move box of a played move (a draw is not a move; Section 13, Move Box). How is the result shown: only through the pieces' reactions (as in the preview, panel 16b), or in another way the author approves? (Added in 7.7.)
 16. **Approval of the proposed panels for Scenes 6 to 16** (Section 18, Proposed Panels). Per panel: approve, correct, or reject. (Added in 7.7.)
@@ -4708,3 +4730,4 @@ Items that need a decision from the author.
 | 7.38 | - | Proposal 16c: sideways handshake, kings on e4 and e5 seen from the side, greasy spot and cola stain in view, centred, the rise in sight. |
 | 7.39 | - | Proposal 16c: the other pieces back on their starting squares; the rise clearer, both kings leaning a little. Result box moved to the bottom centre of 16c. Panels 16b and 16c approved: panel blocks and manifests 78, 79. |
 | 7.40 | - | Panels 14h and 15a to 15e approved: panel blocks and manifests 71 to 76; Scene 15 complete. |
+| 7.41 | - | Colour Style "two kingdoms": royal blue and gold for White, violet and bronze for Black, ivory and walnut wood, exact board colours; applied to all panels of the preview. |

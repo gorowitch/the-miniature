@@ -4,14 +4,39 @@
 "use strict";
 const NS = "http://www.w3.org/2000/svg", INK = "#17110d";
 const FEN = ["rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR","rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR","rnbqkbnr/ppp1pppp/8/3p4/8/4P3/PPPP1PPP/RNBQKBNR","rnbqkbnr/ppp1pppp/8/3p4/8/3BP3/PPPP1PPP/RNBQK1NR","rnbqkbnr/ppp2ppp/4p3/3p4/8/3BP3/PPPP1PPP/RNBQK1NR","rnbqkbnr/ppp2ppp/4p3/3p4/8/3BP2N/PPPP1PPP/RNBQK2R","rn1qkbnr/pppb1ppp/4p3/3p4/8/3BP2N/PPPP1PPP/RNBQK2R","rn1qkbnr/pppb1ppp/4p3/3p3Q/8/3BP2N/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnppp/4p3/3p3Q/8/3BP2N/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnppp/4p3/3p2NQ/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1p/4p1p1/3p2NQ/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1N/4p1p1/3p3Q/8/3BP3/PPPP1PPP/RNB1K2R","rn1qkb1r/pppbnp1N/4p3/3p3p/8/3BP3/PPPP1PPP/RNB1K2R"];
-const W_ = { w:{f:"#efd2a2",s:"#d6ae78",n:"#e0a77c"}, b:{f:"#6b4630",s:"#4a2f1f",n:"#9a6a4c"} };
-const COST = {
+let W_ = { w:{f:"#efd2a2",s:"#d6ae78",n:"#e0a77c"}, b:{f:"#6b4630",s:"#4a2f1f",n:"#9a6a4c"} };
+let COST = {
   koning:{robe:"#7d1f2e",shade:"#5e1622",trim:"#d4a72c"}, bking:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
   regina:{robe:"#f7f3ea",shade:"#ddd3bf",trim:"#d4a72c",hair:"#e8b77a",hairS:"#c99556"}, bqueen:{robe:"#4a2a44",shade:"#341d30",trim:"#a7afc0",hair:"#2b1b14",hairS:"#160d09"},
   alfil:{robe:"#46607f",shade:"#35496a",trim:"#d9c69a"}, wbishop:{robe:"#5d7a6a",shade:"#465e51",trim:"#d9c69a"}, bbishop:{robe:"#3b3346",shade:"#29233a",trim:"#9c98aa"},
   caballo:{robe:"#7d1f2e",shade:"#5e1622",trim:"#d4a72c"}, wknight:{robe:"#8a6a3a",shade:"#6b522c",trim:"#d9c69a"}, bknight:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
   wrook:{robe:"#8a6a3a",shade:"#6b522c",trim:"#d9c69a"}, brook:{robe:"#2a3550",shade:"#1c2438",trim:"#a7afc0"},
   wpawn:{robe:"#6d84a3",shade:"#56698a",trim:"#c9d3e0"}, bpawn:{robe:"#4d5a3a",shade:"#39432a",trim:"#9aa58a"} };
+let BOARD = { dark: "#33241b", light: "#e6d6ae", frame: "#e6d6ae", line: "#20160f" };
+// Palettes per panel (P.palette). Default: the current preview colours. "kingdoms": an experiment with one dominant
+// costume colour per army (royal blue for White, royal purple for Black), gold and bronze for rank, exact board colours;
+// the canon exceptions stay: the King's burgundy robe and medals, Regina in white and gold, Caballo's red sash (experiment, not canon).
+const DEFAULT = { W: W_, COST, BOARD };
+const GOLD = "#d6b44a", BRONZE = "#9e6e39", WB = { robe: "#5d7ea8", shade: "#2f5d9b" }, BP = { robe: "#40305e", shade: "#2e2244" };
+const PALETTES = { kingdoms: {
+  W: { w: { f: "#e7d1a3", s: "#cdb283", n: "#d9a67a" }, b: { f: "#5a382a", s: "#42281d", n: "#8a5c44" } },
+  COST: Object.assign({}, COST, {
+    koning: { robe: "#7d1f2e", shade: "#5e1622", trim: GOLD }, regina: Object.assign({}, COST.regina, { trim: GOLD }),
+    alfil: Object.assign({ trim: GOLD }, WB), wbishop: Object.assign({ trim: GOLD }, WB), caballo: Object.assign({ trim: GOLD }, WB), wknight: Object.assign({ trim: GOLD }, WB),
+    wrook: { robe: "#2f5d9b", shade: "#24497a", trim: GOLD }, wpawn: { robe: "#5d7ea8", shade: "#4a6a94", trim: "#2f5d9b" },
+    bking: Object.assign({ trim: BRONZE }, BP), bqueen: Object.assign({}, COST.bqueen, BP, { trim: BRONZE }), bbishop: Object.assign({ trim: BRONZE }, BP),
+    bknight: Object.assign({ trim: BRONZE }, BP), brook: Object.assign({ trim: BRONZE }, BP), brookh8: { robe: "#2a3550", shade: "#1c2438", trim: BRONZE },
+    bpawn: { robe: "#40305e", shade: "#2e2244", trim: "#2a3550" } }),
+  BOARD: { dark: "#3a2418", light: "#dccfa9", frame: "#866240", line: "#20160f" } } };
+// Lighter black-army variants of "kingdoms" (author feedback: the black wood and costumes too dark): violet or green costumes
+for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#7b5aa6", "#5d4386", "#7b5aa6", "#5d4386"], ["kingdoms-green", "#4f7d55", "#3b6142", "#4f7d55", "#3b6142"]]) {
+  const K = PALETTES.kingdoms, BR = "#c08a4c", B = { robe, shade, trim: BR };
+  PALETTES[name] = { W: { w: K.W.w, b: { f: "#7a5038", s: "#5e3c2a", n: "#a87858" } }, BOARD: K.BOARD,
+    COST: Object.assign({}, K.COST, { bking: B, bqueen: Object.assign({}, K.COST.bqueen, B), bbishop: B, bknight: B, brook: B, brookh8: B,
+      bpawn: { robe: pawn, shade: pawnS, trim: "#e2d3b8" } }) };
+}
+// The album colour style (bible 7.41): variant A, violet; a panel may still name another palette ("default" = the colours before 7.41).
+function usePalette(name) { const p = PALETTES[name || "kingdoms-violet"] || DEFAULT; W_ = p.W; COST = p.COST; BOARD = p.BOARD; }
 
 function mk(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
 const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], nrm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)}, cr=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
@@ -36,7 +61,7 @@ function roleOf(sq, ch, state) {
 }
 function costumeOf(type, col, role) {
   if (role === "koning") return COST.koning; if (role === "bking") return COST.bking; if (role === "regina") return COST.regina;
-  if (role === "alfil") return COST.alfil; if (role === "caballo") return COST.caballo; if (role === "brookh8") return COST.brook;
+  if (role === "alfil") return COST.alfil; if (role === "caballo") return COST.caballo; if (role === "brookh8") return COST.brookh8 || COST.brook;
   return ({k:col==="w"?COST.koning:COST.bking, q:col==="w"?COST.regina:COST.bqueen, b:col==="w"?COST.wbishop:COST.bbishop, n:col==="w"?COST.wknight:COST.bknight, r:col==="w"?COST.wrook:COST.brook, p:col==="w"?COST.wpawn:COST.bpawn})[type];
 }
 
@@ -219,7 +244,7 @@ function camFor(P) {
 }
 
 function renderPanel(svg, P, opts) {
-  opts = opts || {};
+  opts = opts || {}; usePalette(P.palette);
   const W0 = P.wide ? 1634 : 800, H = P.tall ? 1160 : 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);  // tall: two strips high (prototype, last page)
   while (svg.firstChild) svg.removeChild(svg.firstChild);
   const defs = mk("defs", {}, svg);
@@ -247,8 +272,8 @@ function renderPanel(svg, P, opts) {
   const poly = (pts, a, par) => { const q = pts.map(([x, y]) => pz(x, y)); if (q.some(p => p[2] < 0.25)) return; mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") }, a), par || root); };
   const bd = mk("g", {}, root);
   poly([[-0.4, -0.4], [8.4, -0.4], [8.4, 8.4], [-0.4, 8.4]], { fill: "#7a5a3c" }, bd);
-  for (let s = 0; s < 8; s++) for (const r of [[[s, -0.15], [s + 1, -0.15], [s + 1, 0], [s, 0]], [[8, s], [8.15, s], [8.15, s + 1], [8, s + 1]], [[-0.15, s], [0, s], [0, s + 1], [-0.15, s + 1]], [[s, 8], [s + 1, 8], [s + 1, 8.15], [s, 8.15]]]) poly(r, { fill: "#e6d6ae", stroke: INK, "stroke-width": .5 }, bd);
-  for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; for (let k = 0; k < 4; k++) pts.push([i + k / 4, a]); for (let k = 0; k < 4; k++) pts.push([i + 1, a + k / 4]); for (let k = 0; k < 4; k++) pts.push([i + 1 - k / 4, a + 1]); for (let k = 0; k < 4; k++) pts.push([i, a + 1 - k / 4]); poly(pts, { fill: (i + n) % 2 ? "#33241b" : "#e6d6ae", stroke: "#20160f", "stroke-width": .6 }, bd); }
+  for (let s = 0; s < 8; s++) for (const r of [[[s, -0.15], [s + 1, -0.15], [s + 1, 0], [s, 0]], [[8, s], [8.15, s], [8.15, s + 1], [8, s + 1]], [[-0.15, s], [0, s], [0, s + 1], [-0.15, s + 1]], [[s, 8], [s + 1, 8], [s + 1, 8.15], [s, 8.15]]]) poly(r, { fill: BOARD.frame, stroke: INK, "stroke-width": .5 }, bd);
+  for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; for (let k = 0; k < 4; k++) pts.push([i + k / 4, a]); for (let k = 0; k < 4; k++) pts.push([i + 1, a + k / 4]); for (let k = 0; k < 4; k++) pts.push([i + 1 - k / 4, a + 1]); for (let k = 0; k < 4; k++) pts.push([i, a + 1 - k / 4]); poly(pts, { fill: (i + n) % 2 ? BOARD.dark : BOARD.light, stroke: BOARD.line, "stroke-width": .6 }, bd); }
   { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
     for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
   const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
