@@ -5,7 +5,7 @@
 const zb = (frame, o) => Object.assign({ frame, side: "b" }, o || {});          // camera from Black's side (sees the white pieces' faces)
 const zw = (frame, o) => Object.assign({ frame, side: "w" }, o || {});          // camera from White's side (sees the black pieces' faces)
 const A = "approved", Pr = "proposal";
-const KING_ALFIL = { from: [7.6, 4.7, 3.0], at: [4.0, 1.5, 0.8], f: 820 };   // from Black's side, off to the kingside, so Alfil on d3 does not hide the King
+const KING_ALFIL = { from: [5.6, 5.2, 3.4], at: [3.6, 1.6, 1.0], f: 720 };   // from Black's side, off to the kingside, so Alfil on d3 does not hide the King
 const BESIDE11 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }];   // captured by White: beside the board near the white h2 pawn (bible 7.36)
 const BESIDE12 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.85, 7.45] }];   // Regina stands beside the board next to the h8 rook (bible 7.34)
 window.PANELS = [

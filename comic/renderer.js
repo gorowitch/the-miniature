@@ -303,7 +303,9 @@ function renderPanel(svg, P, opts) {
     const faceDir = col === "w" ? 1 : -1, back = ov.back !== undefined ? ov.back : (C[1] - it.y0) * faceDir < 0;
     const o = Object.assign({ role, back, must: !it.beside && pawnHasMoustache(it.sq, it.ch, state) }, ov);
     if (P.crossArms && it.ch === "P" && !it.beside) o.gest = "crossed";  // pawn solidarity during the mutiny (bible Section 7, author decision 7.10)
-    if (t === "n") o.dir = pr(4, it.y0, 0)[0] > x ? 1 : -1;
+    // knights face the centre files (bible Section 6, 7.46): seen from White's or Black's side (camera looking along the files) they turn towards
+    // the d- and e-files; seen from the side (camera looking along the ranks) towards the middle of the board, between the armies
+    if (t === "n") { const side = Math.abs(fw[0]) > Math.abs(fw[1]), onCentre = it.x0 > 3 && it.x0 < 5; o.dir = pr(4, side && !onCentre ? 4 : it.y0, 0)[0] > x ? 1 : -1; }
     if (o.lookAt) { const tg = items.find(q => q.sq === o.lookAt || roleOf(q.sq, q.ch, state) === o.lookAt || q.role === o.lookAt); if (tg) { const tx = pr(tg.x0, tg.y0, 0)[0]; o.look = tx < x - 4 ? -1 : tx > x + 4 ? 1 : 0; } }
     const s = F / d / 50;
     placed.push({ t, col, o, x, y, d, s, sq: it.sq, role, c: costumeOf(t, col, role) });

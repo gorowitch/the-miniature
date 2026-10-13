@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.45
+Version 7.46
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -52,6 +52,7 @@ Version 7.42 gives Caballo a deep-blue sash with a gold medal instead of a red o
 Version 7.43 adjusts the shout balloon of the proposal panel 13a (author feedback): two lines without a lone exclamation mark, and a rounded tail to Caballo's mouth. Panel 13a is then approved: full panel block in Section 18 (Scene 13) and manifest 62 in Section 20.3.
 Version 7.44 makes the tail rule general (author decision): for every speaker the tail is attached to the balloon's own outline and points at the mouth without touching it (Common Prompt Block, Section 16).
 Version 7.45 adds a running gag (author decision): the white rook on a1 yawns in 2b, sleeps (with an allowed "Z Z Z") until he is startled awake in 15a by "mat in één"; awake and alert afterwards.
+Version 7.46 clarifies the knight orientation per view (author feedback): from White's or Black's side towards the centre files, from the side towards the middle of the board.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -532,7 +533,7 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 ## Knight Orientation
 - All knights (white and black) look towards the centre files (d and e), in every image.
 - A knight on the kingside (f, g, h files) faces towards the queenside; a knight on the queenside (a, b, c files) faces towards the kingside.
-- Applies regardless of camera angle: the knight faces the centre of the board, not the camera.
+- Applies regardless of camera angle: the knight faces the centre of the board, not the camera. It depends on the view (author feedback in 7.46): seen from White's or Black's side, the knight turns inward, towards the d- and e-files; seen from the side (from the h-file towards the a-file, or the reverse, including the near-top views of 16a and 16c), the centre files run into the depth of the picture, so the knight faces the middle of the board, between the two armies, never away from it.
 
 ---
 
@@ -1115,6 +1116,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.44 | Author decision: "Try to generalize this for all actors as a general text balloon rule" (the two remarks on 13a in 7.43: the tail points at the speaker's mouth rather than touching it, and is properly attached to the balloon). Rule added to the Common Prompt Block and Section 16 for every speaker. SVG preview: the tail code rewritten for all balloons (start points on the real outline of round and jagged balloons, the outline opened at the join, the last stretch aimed at the mouth, the tip a little short of it, tips beside other faces avoided); the special options of 13a are no longer needed. Every panel was re-checked: the tail audit went from 5 to 2 tails crossing a face (1a: past Alfil's head; 15a: over the face of the d2 pawn; both reported to the author). To keep their tails clear after the change, the balloons of the approved panels 3a-1 and 3a-2 were moved a little to the right (layout only, text and staging unchanged). |
 | 7.45 | Author decision, a new running gag: "Since the white rook at a1 doesn't participate in the game it gets sleepy. Therefore the white rook at a1 falls asleep from panel 2b onward. It suddenly awakes in the background when Alfil announces mate in one at panel 15a." Claude measured where the a1 rook is in frame (2b, 3a-1, 3a-2, 6c, 7d, 9b, 14b, 14f, 15a, 15b, 16a, 16c) and proposed: yawning in 2b, asleep in the others until 14f, startled awake in 15a. Author answers: "Make an exception for the Zzz symbol"; "only the a1 rook should be asleep"; "after 15a the rook is awake and alert; also on the cover image and on the big diagram on the last page"; the approved panels may change in the background ("I'll review the changes anyway"). Recorded in Sections 7 (White rooks), 10 (Running Gags), 14 (exception to the symbol rule), the Common Prompt Block and the panel blocks of 2b, 3a-1, 3a-2, 6c, 7d, 9b, 14b, 14f, 15a and 15b. In 2b the yawn is drawn as a big stretch so the open mouth shows above the pawn in front of him. SVG preview: expressions "yawn" and "asleep", a "zzz" option. |
 | 7.45 | Author feedback on 2b: "Can you give the rook arms as if it were stretching while yawning?" The yawning a1 rook now stretches both arms up and out above his top. Panel block 2b updated; SVG preview: gesture "stretch". |
+| 7.46 | Author feedback: "In panel 16c we see two knights with their heads backwards; they should look in the direction of the center. Same remark for 16a, 14f and 14b." Cause in the SVG preview: a knight was turned towards the centre files at its own rank, which from the side or from above lies straight above or below it on screen, so it could end up looking away from the board. Now every knight not on the d- or e-file faces the middle of the board, from every camera (Section 6, Knight Orientation, clarified). This also turned the passive knights in 12d, 12e, 13b, 14d and 15a to 15e towards the middle. Side effect: in the shared camera of 14b, 14f, 15a and 15b the b1 knight's head then covered the face of the sleepy a1 rook (7.45), hiding his awakening in 15a; the shared camera was moved a little towards the queenside and zoomed out slightly so the rook's face is visible again (layout only; in 15a this also cleared Alfil's balloon tail from the d2 pawn's face). |
+| 7.46 | Author clarification: "When we look at the board from the side, that is from the h-file toward the a-file, it would be strange that the knights would be pointing away from the center. When we look at the board from either the white player's perspective or the black player's perspective it makes sense that the knights look inward, that is towards the central files." Claude had applied the side-view rule to every camera and so overdid 12d, 12e, 14d, 15e (b8 knight) and 14b, 14f, 15a, 15b (b1 knight); partial revert: the rule now depends on the camera (looking mostly along the files: towards the centre files; looking mostly along the ranks: towards the middle of the board). Knights turned compared with before 7.46: only in the side views 13b, 15c, 15d, 16a and 16c. The adjusted shared camera of 14b, 14f, 15a and 15b is kept (a clear view from Black's side, the a1 rook visible). Section 6, Knight Orientation, worded accordingly. |
 
 ---
 
@@ -4808,3 +4811,4 @@ Items that need a decision from the author.
 | 7.43 | - | Proposal 13a: balloon on two lines (no lone "!"), rounded tail to Caballo's mouth. Panel 13a approved: panel block and manifest 62. |
 | 7.44 | - | General balloon-tail rule: attached to the outline, pointing at the mouth without touching it; applied to all panels of the preview. |
 | 7.45 | - | Running gag: the sleepy a1 rook (yawn 2b, asleep with Zzz until 14f, startled awake in 15a). |
+| 7.46 | - | Knight orientation per view: towards the centre files from White's or Black's side, towards the middle of the board from the side; shared camera of 14b, 14f, 15a, 15b adjusted so the a1 rook stays visible. |
