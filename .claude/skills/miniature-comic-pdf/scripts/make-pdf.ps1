@@ -11,7 +11,19 @@ if (-not $Out) { $Out = Join-Path $comic "pdf\de-miniatuur.pdf" }
 $Out = [IO.Path]::GetFullPath($Out)
 New-Item -ItemType Directory -Force -Path (Split-Path $Out) | Out-Null
 
-if ($Export) { & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $comic "export-svg.ps1") -Port $Port | Out-Host }
+if ($Export) {
+  # The export reads the album from the preview server; start one for the duration of the export if none is running.
+  $up = $false; try { $up = (Invoke-WebRequest -UseBasicParsing -TimeoutSec 3 "http://localhost:$Port/index.html").StatusCode -eq 200 } catch {}
+  $server = $null
+  if (-not $up) {
+    $server = Start-Process -FilePath "powershell" -ArgumentList @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", (Join-Path $comic "serve.ps1"), "-Port", $Port) -PassThru -WindowStyle Hidden
+    for ($i = 0; $i -lt 20 -and -not $up; $i++) { Start-Sleep -Milliseconds 500; try { $up = (Invoke-WebRequest -UseBasicParsing -TimeoutSec 3 "http://localhost:$Port/index.html").StatusCode -eq 200 } catch {} }
+    if (-not $up) { throw "Could not start the preview server on port $Port." }
+    "Started the preview server on port $Port for the export."
+  }
+  try { & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $comic "export-svg.ps1") -Port $Port | Out-Host }
+  finally { if ($server) { Stop-Process -Id $server.Id -Force -ErrorAction SilentlyContinue; "Stopped the preview server again." } }
+}
 
 $pages = Get-ChildItem (Join-Path $comic "svg\pages") -Filter "page-*.svg" | Sort-Object Name   # page-00-cover, page-01, ... in reading order
 if (-not $pages) { throw "No page SVGs in comic/svg/pages - run comic/export-svg.ps1 first (or pass -Export)." }
