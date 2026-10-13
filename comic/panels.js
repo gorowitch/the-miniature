@@ -200,7 +200,9 @@ window.PANELS = [
 { id: "14c", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "worried", talk: true, gest: "point-up-l", sweat: true } },
   balloons: [{ who: "koning", text: "Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, \"Dieje van den overkant\" is al aan zet." }] },
-{ id: "14d", scene: 14, status: Pr, movebox: "6. ... gxh5", state: 12, beside: BESIDE12, cam: { from: [8.6, 3.0, 2.4], at: [6.9, 5.2, 0.3], f: 640 }, fx: [{ move: ["g6", "h5"] }], cast: { regina: { expr: "surprised", lookAt: "h5" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+// 14d: the capture staged close (bible 7.50): the h5 pawn pushes Regina off the board, she does not care, the h8 rook is delighted
+{ id: "14d", scene: 14, status: A, movebox: "6. ... gxh5", state: 12, beside: [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.95, 4.9] }], cam: { from: [10.4, 2.8, 5.8], at: [7.9, 5.6, 0.8], f: 940 }, fx: [{ move: ["g6", "h5"] }],
+  cast: { h5: { expr: "stubborn", gest: "pushed-r", lookAt: "regina" }, regina: { expr: "calm", lookAt: "h1", back: false, trail: [1, 0.35] }, brookh8: { expr: "amused", lookAt: "regina", blush: "strong" } }, balloons: [] },
 { id: "14e", scene: 14, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "despair", talk: true } },
   balloons: [{ who: "koning", text: "Lap, daar hebt ge’t al. Regina geslagen." }] },

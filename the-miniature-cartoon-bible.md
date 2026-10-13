@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.49
+Version 7.50
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -56,6 +56,7 @@ Version 7.46 clarifies the knight orientation per view (author feedback): from W
 Version 7.47 makes the a1 rook's awakening in 15a clearer (author feedback): both eyes wide open with the eyebrows shot up, small jolt lines (subtle).
 Version 7.48 approves panel 16a, the final position from above (author decision); Scene 16 is complete.
 Version 7.49 approves panels 14e and 14f (author decision): full panel blocks in Section 18 (Scene 14) and manifests 68 and 69 in Section 20.3.
+Version 7.50 restages the proposal panel 14d (author feedback): the h5 pawn pushes Regina entirely off the board with one arm, Regina does not care, the h8 rook is delighted; fewer pieces in frame. Panel 14d is then approved: panel block in Section 18 and manifest 67 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1128,6 +1129,11 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.47 | Author feedback on 15a: "do something similar like this but use both eyes open; try to work with the eyebrows to express surprise." The a1 rook now wakes with both eyes wide open and his eyebrows shot up high above them; the small jolt lines stay, no arm, no jump. SVG preview: expression "startled". |
 | 7.48 | Author decision: panel 16a accepted ("77-panel-16a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 16) and as manifest 77 in Section 20.3 (no line of the play: the overview between 15e and 16b); the proposal block is kept and marked as approved. Scene 16 is fully approved. |
 | 7.49 | Author decisions: panels 14f and 14e accepted ("69-panel-14f.svg accept", "68-panel-14e.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14) and as manifests 68 and 69 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 39 (the King's speech after the capture, 14e to 14h) is now complete. Panels 14a to 14d stay proposals. |
+| 7.50 | Author feedback on the proposal panel 14d: "Regina is captured. Maybe we can show the capturing pawn pushing Regina away? The black rook at h8 looks really happy since she will now be next to him. Regina doesn't really care. In the current image we see a lot of pieces in the background, this is not necessary." The capture is staged close: the black pawn on h5 pushes Regina off the board with both hands; Regina, caught just beside the board next to h5, looks calm and bored; the h8 rook grins with delight, eyes closed, strong blush; a new camera from White's kingside shows only the h-file corner (the h5 pawn, Regina, Caballo, the h8 rook). The move box 6. ... gxh5 stays. SVG preview: gestures "push-r" and "push-l", Regina's position beside the board set per panel. 14d stays a proposal. |
+| 7.50 | Author feedback on 14d: "let the pawn use one arm to push Regina entirely off the board." The pawn now pushes with one stretched arm, and Regina stands entirely off the board, on the table beside h5. SVG preview: gesture "push1-r". |
+| 7.50 | Author feedback on 14d: "show the pawn's hand halfway, make visually clear he has pushed, but in the image the pawn is no longer touching Regina." The pawn's arm is now half stretched out, his hand stops short of Regina, and three short speed lines between the hand and Regina show the push; Regina stands a little further away on the table; the camera was adjusted slightly so Regina and the h8 rook both fit. SVG preview: gesture "pushed-r", option "whoosh". |
+| 7.50 | Author feedback on 14d: "maybe show the black stripes in a different orientation to indicate that Regina is still moving after the push?" The three speed lines moved from the pawn's hand to just behind Regina, slanted along her direction of travel, as motion lines of a figure still sliding away. SVG preview: option "trail". |
+| 7.50 | Author decision: panel 14d accepted ("accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 14) and as manifest 67 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 38 (6. ... gxh5) updated. |
 
 ---
 
@@ -1832,8 +1838,17 @@ Approved in 7.43.
 - Balloon (Caballo, jagged shout balloon): Voor de glorie en de overwinning ! Ten aanval !
 
 ## Scene 14 - Regina Captured
-Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49; panels 14a to 14d are still proposals (Section 18, Proposed Panels).
+Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49, panel 14d in 7.50; panels 14a to 14c are still proposals (Section 18, Proposed Panels).
 Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
+
+### Panel 14d
+Approved in 7.50 (staged by the author in 7.50).
+- Camera: from White's kingside, beyond the h-file, high and close, so the frame shows only the capture: the h-file corner of the board and the table beside it; only the edges of a few black pieces at the top.
+- In frame: the black pawn on h5 (left of centre), Regina on the table beside the board, Caballo on h7 and the black rook on h8 behind them. Every piece on a square that is in frame is shown.
+- Action: the black pawn has just captured on g6xh5 (a short motion streak from g6) and has just pushed Regina entirely off the board: one arm half stretched out towards her, hand open, no longer touching her; stubborn, mouth closed. Regina is still sliding away: three short motion lines trail behind her, slanted along her direction of travel, away from the pawn and off the board.
+- Characters: Regina does not really care: calm, half-lidded eyes, a slightly bored look, not looking at the pawn or the rook. The black rook on h8 is really happy that she will now stand next to him: a broad delighted grin, eyes closed with joy, a strong pink blush. Caballo neutral, mouth closed.
+- Move box (bottom-left corner, bold, white rectangle): 6. ... gxh5
+- No balloons.
 
 ### Panel 14e
 Approved in 7.49 (as shown in the SVG preview).
@@ -2265,14 +2280,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - Balloon (White King): Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, "Dieje van den overkant" is al aan zet.
 
-### Panel 14d (PROPOSAL)
+### Panel 14d (approved in 7.50: the approved panel block is in Section 18, Scene 14)
 - Board state: 12.
-- Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina as she is captured, with a light blush; after the capture she stands beside the board next to the h8 rook (not right against him).
-- Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
-- Characters: Regina (surprised, looks at the piece on h5).
+- Regina and the h8 rook (author decisions in 7.34 and 7.50): the black rook on h8 looks at Regina and is really happy that she will now stand next to him: a broad delighted grin, eyes closed with joy, a strong pink blush. Regina does not really care: calm, half-lidded eyes, a slightly bored look, not looking at the pawn or the rook.
+- Camera (author feedback in 7.50: "a lot of pieces in the background is not necessary"): from White's kingside, beyond the h-file, high and close, so the frame shows only the capture: the black pawn on h5 at the left, Regina just off the board edge beside h5, Caballo on h7 and the black rook on h8 behind them; only the edges of a few black pieces at the top.
+- Characters (author decisions in 7.50): the black pawn that has just captured on h5 has just pushed Regina off the board: one arm half stretched out towards her, hand open, no longer touching her; stubborn, mouth closed. Regina has been pushed entirely off the board and is still sliding away: three short motion lines trail behind her, slanted along her direction of travel (away from the pawn, off the board); she stands on the table beside the board, a little away from h5 (in the following panels she stands beside the board next to the h8 rook, 7.34).
 - Move shown: g6-h5 (move streak).
 - Move box (bottom-left corner, bold, white rectangle): 6. ... gxh5
-- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
+- Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36), out of frame.
 - No balloons.
 
 ### Panel 14e (approved in 7.49: the approved panel block is in Section 18, Scene 14)
@@ -4210,7 +4225,36 @@ PANEL 13a   (sequence number 62)
 ```
 
 ### Scene 14 - Regina Captured
-Added in 7.35 for the panel the author approved (14g). 14h added in 7.40, 14e and 14f in 7.49. Panels 14a to 14d are still proposals and have no manifests yet.
+Added in 7.35 for the panel the author approved (14g). 14h added in 7.40, 14e and 14f in 7.49, 14d in 7.50. Panels 14a to 14c are still proposals and have no manifests yet.
+
+```
+PANEL 14d   (sequence number 67)
+
+1.  Scene 14, panel d: Black captures Regina.
+2.  Script excerpt:
+      6. ... gxh5
+3.  Dialogue: none. Move box (bottom-left corner): "6. ... gxh5".
+4.  No speaker.
+5.  Visible: the black pawn on h5, Regina on the table beside the board, Caballo on h7, the black rook on h8; edges of a few black pieces at the top.
+6.  Watching: the h8 rook, delighted; Regina indifferent; Caballo neutral, mouth closed.
+7.  Camera from White's kingside, beyond the h-file, high and close on the h-file corner (author, 7.50).
+8.  The h5 pawn: arm half stretched out towards Regina, hand open, not touching her, stubborn.
+    Regina: calm, half-lidded, bored; motion lines trailing behind her (still sliding).
+    The h8 rook: broad grin, eyes closed with joy, strong pink blush.
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 12: the move 6. ... gxh5 (pawn g6 takes the queen on h5) happens in this panel; a short motion streak from g6 to h5.
+12. Continuity: Regina was hanging after 6. Pxh7 (14c); from 14e on she stands beside the board next to the h8 rook; the a1 rook still asleep (out of frame).
+13. Must not appear: the pawn's hand touching Regina; Regina on the board; a worried or upset Regina; any other moved piece; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after speech 37.
+16. Visual priority: the push, Regina's indifference and the rook's delight.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: close high view of the h-file corner (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 12 into 14e.
+```
 
 ```
 PANEL 14e   (sequence number 68)
@@ -4694,7 +4738,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | - | Scene catalog only. |
-| 38 | Move: 6. ... gxh5 | 14 | - | Scene catalog only. |
+| 38 | Move: 6. ... gxh5 | 14 | 14d | Panel script written (approved in 7.50); manifest written (Section 20.3). |
 | 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14e, 14f, 14g, 14h | Panel script written (14g approved in 7.35, 14h in 7.40, 14e and 14f in 7.49); manifests written (Section 20.3). |
 | 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | 15a | Panel script written (approved in 7.40); manifest written (Section 20.3). |
 | 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | 15b | Panel script written (approved in 7.40); manifest written (Section 20.3). |
@@ -4936,3 +4980,4 @@ Items that need a decision from the author.
 | 7.47 | - | 15a: the a1 rook's awakening made explicit (both eyes wide open, eyebrows shot up, small jolt lines). |
 | 7.48 | - | Panel 16a approved: panel block and manifest 77; Scene 16 complete. |
 | 7.49 | - | Panels 14e and 14f approved: panel blocks and manifests 68, 69; coverage item 39 complete. |
+| 7.50 | - | Proposal 14d restaged: the h5 pawn pushes Regina off the board; the h8 rook delighted, Regina indifferent; close camera. Panel 14d approved: panel block and manifest 67. |

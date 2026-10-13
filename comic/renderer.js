@@ -163,7 +163,7 @@ function gestureArms(g, type, col, c, gest) {
     "hand-chest": [[11, s, 160, 11, "open"]],
     "wave-r": [[12, s, -35, 20, "open"]], "wave-l": [[-12, s, -145, 20, "open"]],
     "shake-r": [[12, s, 10, 10, "fist"]], "shake-l": [[-12, s, 170, 10, "fist"]] };   // handshake: arm stretched out sideways (bible 7.38)
-    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]] });   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
+    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]], "push-r": [[-12, s + 4, -8, 30, "open"], [12, s, 6, 20, "open"]], "push-l": [[12, s + 4, 188, 30, "open"], [-12, s, 174, 20, "open"]], "push1-r": [[12, s, -4, 34, "open"]], "push1-l": [[-12, s, 184, 34, "open"]], "pushed-r": [[12, s, -4, 15, "open"]], "pushed-l": [[-12, s, 184, 15, "open"]] });   // push1: one arm stretched out, pushing (14d, bible 7.50)   // push: both arms forward to one side, hands open (the h5 pawn pushing Regina off the board, bible 7.50)   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
   for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
 }
 function crown(g, y, col, gem) { const F = W_[col].f;
@@ -234,6 +234,10 @@ function drawPiece(parent, p, sw) {
   if (p.o.sweat) for (const [dx, dy] of [[hr*1.2, hy-hr*.5], [hr*1.45, hy+hr*.1]]) mk("path", { d: `M${dx} ${dy} q3 -6 4 0 q-1 4 -4 0Z`, fill: "#bfe3f5", stroke: INK, "stroke-width": .9 }, inner);
   if (p.o.sigh) mk("path", { d: `M${hr*.9} ${hy+hr*.6} q6 -3 8 2 q4 -3 7 2 q-3 5 -8 3 q-4 4 -7 -7Z`, fill: "#f4f6f8", stroke: INK, "stroke-width": .9 }, inner);
   if (p.o.shake) mk("path", { d: `M${-hr*1.8} ${hy-hr*1.6} l-6 -4 M${-hr*2} ${hy-hr*.8} l-7 0 M${hr*1.8} ${hy-hr*1.6} l6 -4`, stroke: INK, "stroke-width": 1.6, "stroke-linecap": "round" }, inner);
+  if (p.o.whoosh) { const sd = p.o.whoosh, s0 = SH[p.t], wg = mk("g", { stroke: INK, "stroke-width": 1.8, "stroke-linecap": "round", fill: "none" }, inner);   // just pushed: short speed lines ahead of the hand (the h5 pawn in 14d, bible 7.50)
+    for (const [dy, a, b] of [[-7, 36, 50], [0, 34, 54], [7, 36, 50]]) mk("path", { d: `M${sd * a} ${s0 + dy} L${sd * b} ${s0 + dy}` }, wg); }
+  if (p.o.trail) { const [tx, ty] = p.o.trail, tl = Math.hypot(tx, ty) || 1, ux = tx / tl, uy = ty / tl, tg = mk("g", { stroke: INK, "stroke-width": 1.8, "stroke-linecap": "round", fill: "none" }, g);   // still moving: motion lines trailing behind the piece, along its direction of travel (Regina in 14d, bible 7.50)
+    for (const [off, h, a, b] of [[-9, -44, 22, 40], [0, -30, 24, 46], [9, -16, 22, 40]]) { const px = -uy * off, py = ux * off; mk("path", { d: `M${px - ux * a} ${h + py - uy * a} L${px - ux * b} ${h + py - uy * b}` }, tg); } }
   if (p.o.jolt) { const jg = mk("g", { stroke: INK, "stroke-width": 2.2, "stroke-linecap": "round", fill: "none" }, inner);   // startled awake: big jolt lines around the top, a jump streak under the felt (the a1 rook, bible 7.47)
     for (const [a, r1, r2] of [[-150, 30, 44], [-120, 32, 48], [-90, 34, 50], [-60, 32, 48], [-30, 30, 44]]) { const c = Math.cos(a * Math.PI / 180), s = Math.sin(a * Math.PI / 180); mk("path", { d: `M${c * r1} ${-40 + s * r1} L${c * r2} ${-40 + s * r2}` }, jg); }
     for (const dx of [-8, 0, 8]) mk("path", { d: `M${dx} 10 l0 10`, "stroke-width": 1.6 }, jg); }
