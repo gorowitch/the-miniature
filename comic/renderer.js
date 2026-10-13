@@ -348,44 +348,55 @@ function renderPanel(svg, P, opts) {
     // no head or hat wins (the speaker's own included), then the shortest.
     let tail = null;
     if (sp && !b.noTail) {
-      const r = HEAD[sp.t][1] * sp.s, bottom = by + bh - (b.shout ? 10 : 6), tw = Math.max(14, Math.min(24, bw * 0.08));
+      // Balloon tails, general rule for every speaker (bible 7.25, 7.44):
+      // - the tail leaves the balloon from its real outline (the flat edge of a round balloon, the jagged ellipse of a shout balloon)
+      //   and the outline is opened where it joins, so the tail is attached;
+      // - its last stretch is aimed at the speaker's mouth and the tip stops a little short of it: it points at the mouth, it does not touch it;
+      // - it crosses no face, crown, mitre, hair or hat (the speaker's own included); among the routes that do not, the shortest wins.
+      const r = HEAD[sp.t][1] * sp.s, tw = Math.max(14, Math.min(24, bw * 0.08)), dir = sp.o.dir || 1;
+      const cx0 = bx + bw / 2, cy0 = by + bh / 2, rr = Math.min(30, bh / 2);
+      const onEllipse = (x, top) => { const ex = (x - cx0) / (bw / 2 * .9); return cy0 + (top ? -1 : 1) * (bh / 2 * .9 * Math.sqrt(Math.max(0, 1 - ex * ex)) - 4); };
       let best = null;
-      // tip left or right of the face; when the balloon lies below the speaker, also just under the mouth
-      // b.snug: a knight's tip tight against the front of the snout (just outside its keep-clear zone), e.g. when a piece stands right behind the snout
-      const tips = [-1, 1].map(side => [sp.mouth[0] + side * ((sp.t === "n" && b.snug ? 4.5 * sp.s + 6 : r * (sp.t === "n" ? 2.4 : 1.3) + 8) + (b.gap || 0)), sp.mouth[1] - r * 0.2]);   // b.gap: keep the tip this far from the mouth (pointing at it, not touching)
-      if (by > sp.mouth[1]) tips.push(sp.t === "n" ? [sp.mouth[0] + (sp.o.dir || 1) * (3.5 * sp.s + 4), sp.mouth[1] + 2 * sp.s] : [sp.mouth[0], sp.mouth[1] + r * 0.5 + 10]);  // a knight: tight against the front of the snout, just below the mouth
-      // b.front: only the tip in front of the speaker's face (a knight: in front of the snout); b.bend: force a curved tail (e.g. 0.3)
-      for (const tip of (b.front ? [tips[(sp.o.dir || 1) > 0 ? 1 : 0]] : tips)) {
-        const bases = [];
-        // a shout balloon with b.front: start points on the jagged ellipse itself, so the tail is attached to the outline (bible 7.43)
-        const shoutBase = b.shout && b.front;
-        for (const f of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) { const x = bx + 26 + (bw - 52) * f, ex = (x - bx - bw / 2) / (bw / 2 * .9); bases.push({ p: [x, shoutBase ? by + bh / 2 + bh / 2 * .9 * Math.sqrt(Math.max(0, 1 - ex * ex)) - 5 : bottom], o: "h" }); }
-        if (tip[1] < by + bh + 30) for (const e of [bx + (b.shout ? 14 : 6), bx + bw - (b.shout ? 14 : 6)]) bases.push({ p: [e, by + bh / 2], o: "v" });
-        if (tip[1] < by) for (const f of [0.15, 0.3, 0.45, 0.6, 0.75, 0.9]) bases.push({ p: [bx + 26 + (bw - 52) * f, by + (b.shout ? 10 : 6)], o: "t" });  // balloon below the speaker: tail from the top edge
-        for (const B of bases) for (const bend of (b.bend !== undefined ? [b.bend, -b.bend] : [0, 0.3, -0.3])) {
-          const dx = tip[0] - B.p[0], dy = tip[1] - B.p[1];
-          const c = [B.p[0] + dx * 0.5 - dy * bend, B.p[1] + dy * 0.5 + dx * bend];
+      // tips: left or right of the face, beside the mouth; for a knight also in front of the snout; under the mouth when the balloon is below
+      const side = sp.t === "n" ? (b.snug ? 4.5 * sp.s + 6 : r * 2.4 + 8) : r * 1.3 + 8;
+      const tips = [];
+      for (const sd of [-1, 1]) for (const dy of [-0.2, -0.7, 0.4]) tips.push([sp.mouth[0] + sd * (side + (b.gap || 0)), sp.mouth[1] + r * dy]);
+      for (const sd of [-1, 1]) tips.push([sp.mouth[0] + sd * (side * 0.75 + (b.gap || 0)), sp.mouth[1] + r * 0.9]);   // diagonally below the mouth
+      if (by > sp.mouth[1]) tips.push(sp.t === "n" ? [sp.mouth[0] + dir * (4.5 * sp.s + 8), sp.mouth[1] + 4 * sp.s] : [sp.mouth[0], sp.mouth[1] + r * 0.5 + 12]);
+      for (const tip of (b.front ? tips.filter(t => (t[0] - sp.mouth[0]) * dir > 0) : tips)) {
+        const bases = [], span = b.shout ? bw * .62 : bw - 2 * rr - tw;   // start points along the edge, kept off the rounded corners
+        for (const f of [0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.9]) { const x = cx0 - span / 2 + span * f; bases.push({ p: [x, b.shout ? onEllipse(x, false) : by + bh - 1.5], o: "h" }); }
+        if (tip[1] < by + bh + 30) for (const sd of [-1, 1]) bases.push({ p: [cx0 + sd * (b.shout ? bw / 2 * .9 - 4 : bw / 2 - 1.5), cy0], o: "v" });
+        if (tip[1] < by) for (const f of [0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.9]) { const x = cx0 - span / 2 + span * f; bases.push({ p: [x, b.shout ? onEllipse(x, true) : by + 1.5], o: "t" }); }
+        // the control point lies beyond the tip, on the line from the mouth through the tip, so the tail arrives aimed at the mouth
+        const mx = tip[0] - sp.mouth[0], my = tip[1] - sp.mouth[1], ml = Math.hypot(mx, my) || 1, ux = mx / ml, uy = my / ml;
+        for (const B of bases) for (const [a, rot] of (b.bend !== undefined ? [[null, 0]] : [[0.3, 0], [0.5, 0], [0.3, 0.35], [0.3, -0.35], [0.5, 0.6], [0.5, -0.6]])) {   // rot: the approach may turn up to about 35 degrees, still roughly aimed at the mouth
+          const dx = tip[0] - B.p[0], dy = tip[1] - B.p[1], len = Math.hypot(dx, dy);
+          const vx = ux * Math.cos(rot) - uy * Math.sin(rot), vy = ux * Math.sin(rot) + uy * Math.cos(rot);
+          const c = a === null ? [B.p[0] + dx * 0.5 - dy * b.bend, B.p[1] + dy * 0.5 + dx * b.bend] : [tip[0] + vx * len * a, tip[1] + vy * len * a];
           const pts = quad(B.p, c, tip, 28), hits = tailHits(pts, null);
-          const inside = pts.slice(6).some(([x, y]) => x > bx && x < bx + bw && y > by && y < by + bh);
+          const inside = pts.slice(4).some(([x, y]) => x > bx && x < bx + bw && y > by && y < by + bh);
           const gap = Math.hypot(Math.max(bx - tip[0], 0, tip[0] - bx - bw), Math.max(by - tip[1], 0, tip[1] - by - bh));  // how far the tip sticks out of the balloon
-          const len = Math.hypot(dx, dy), out = tip[0] < 8 || tip[0] > W0 - 8 || tip[1] > H - 8;
-          const score = hits.length * 5000 + (inside ? 3000 : 0) + (gap < 30 ? 4000 : 0) + (out ? 1e5 : 0) + len + Math.abs(bend) * 40 + (B.o === "v" ? 30 : 0);
+          const out = tip[0] < 8 || tip[0] > W0 - 8 || tip[1] > H - 8 || c[1] > H || c[1] < 0;
+          const nearOther = zones.some(z => z.p !== sp && z.boxes.some(q => tip[0] > q[0] - 14 && tip[0] < q[2] + 14 && tip[1] > q[1] - 14 && tip[1] < q[3] + 14));   // a tip right beside another face would seem to point at that one
+          const score = hits.length * 5000 + (nearOther ? 3000 : 0) + (inside ? 5e4 : 0) + (gap < 14 ? 4000 : 0) + (out ? 1e5 : 0) + len + (B.o === "v" ? 30 : 0) + (a === null ? 0 : a * 20 + Math.abs(rot) * 60);   // a tail through the balloon (detached-looking) is never acceptable
           if (!best || score < best.score) best = { score, B, c, tip, hits };
         }
       }
-      const { B, c, tip } = best, h = tw / 2, off = B.o === "v" ? [0, h] : [h, 0];
-      const L = [B.p[0] - off[0], B.p[1] - off[1]], R = [B.p[0] + off[0], B.p[1] + off[1]];
-      mk("path", { d: `M${L[0]} ${L[1]} Q${c[0] - off[0] * 0.5} ${c[1] - off[1] * 0.5} ${tip[0]} ${tip[1]} Q${c[0] + off[0] * 0.5} ${c[1] + off[1] * 0.5} ${R[0]} ${R[1]} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g);
-      tail = { B, h, c };
+      const { B, c, tip } = best, h = tw / 2;
+      // the base is perpendicular to the direction in which the tail leaves the balloon
+      const lx = c[0] - B.p[0], ly = c[1] - B.p[1], ll = Math.hypot(lx, ly) || 1, nx = -ly / ll * h, ny = lx / ll * h;
+      const L = [B.p[0] - nx, B.p[1] - ny], R = [B.p[0] + nx, B.p[1] + ny];
+      mk("path", { d: `M${L[0]} ${L[1]} Q${c[0] - nx * 0.5} ${c[1] - ny * 0.5} ${tip[0]} ${tip[1]} Q${c[0] + nx * 0.5} ${c[1] + ny * 0.5} ${R[0]} ${R[1]} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g);
+      tail = { B, h, c, nx, ny, lx: lx / ll, ly: ly / ll };
       audit.push({ panel: P.id, who: b.who, hits: best.hits });
     }
     if (b.shout) { const cx = bx + bw / 2, cy = by + bh / 2, rx = bw / 2, ry = bh / 2, N = 30; let d = ""; for (let k = 0; k < N; k++) { const a = k / N * Math.PI * 2, f = k % 2 ? .9 : 1; d += (k ? "L" : "M") + (cx + Math.cos(a) * rx * f).toFixed(1) + " " + (cy + Math.sin(a) * ry * f).toFixed(1); } mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 3.4, "stroke-linejoin": "miter" }, g); }
     else mk("rect", { x: bx, y: by, width: bw, height: bh, rx: Math.min(30, bh / 2), fill: "#fffdf5", stroke: INK, "stroke-width": 3 }, g);
-    if (tail && b.shout && b.front && tail.B.o === "h") {  // join on the ellipse: a cream patch from inside the balloon over the outline into the tail (no stroke)
-      const { B, h, c } = tail, ux = c[0] - B.p[0], uy = c[1] - B.p[1], ul = Math.hypot(ux, uy) || 1, k = 12;
-      const ax = ux / ul * k, ay = uy / ul * k, w = h - 2.5;
-      mk("path", { d: `M${B.p[0] - w - ax * .6} ${B.p[1] - ay * .6} L${B.p[0] + w - ax * .6} ${B.p[1] - ay * .6} L${B.p[0] + w * .8 + ax} ${B.p[1] + ay} L${B.p[0] - w * .8 + ax} ${B.p[1] + ay} Z`, fill: "#fffdf5" }, g);
-    } else if (tail) { const { B, h } = tail; const d = B.o === "t" ? `M${B.p[0] - h + 3} ${by + (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + (b.shout ? 10 : 2)}` : B.o === "h" ? `M${B.p[0] - h + 3} ${by + bh - (b.shout ? 10 : 2)} L${B.p[0] + h - 3} ${by + bh - (b.shout ? 10 : 2)}` : `M${B.p[0] < bx + bw / 2 ? bx + (b.shout ? 12 : 2) : bx + bw - (b.shout ? 12 : 2)} ${B.p[1] - h + 3} l0 ${2 * h - 6}`; mk("path", { d, stroke: "#fffdf5", "stroke-width": 8 }, g); }  // open the balloon outline where the tail joins
+    if (tail) {  // open the balloon outline where the tail joins: a cream patch from inside the balloon over the outline into the tail (no stroke)
+      const { B, nx, ny, lx, ly } = tail, k = b.shout ? 14 : 9, w = .78;
+      mk("path", { d: `M${B.p[0] - nx * w - lx * k} ${B.p[1] - ny * w - ly * k} L${B.p[0] + nx * w - lx * k} ${B.p[1] + ny * w - ly * k} L${B.p[0] + nx * w * .85 + lx * k * .7} ${B.p[1] + ny * w * .85 + ly * k * .7} L${B.p[0] - nx * w * .85 + lx * k * .7} ${B.p[1] - ny * w * .85 + ly * k * .7} Z`, fill: "#fffdf5" }, g);
+    }
     wr.lines.forEach((l, j) => { const e = mk("text", { x: bx + bw / 2, y: (b.shout ? by + bh / 2 - th / 2 - 3 : by + 13) + fs + j * lh, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: INK }, g); e.textContent = l; });
   });
   // grumble balloons: a wavy scribble, or grumble symbols (P.grumbleText, e.g. "#@!%&*!") in a wider balloon

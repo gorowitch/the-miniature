@@ -9,7 +9,7 @@ Check every panel against this list in the screenshot before showing it to the a
 - [ ] A panel in which a move is played has the move box bottom-left, with the move line of the play verbatim (e.g. "1. ... d5", "6. Pxh7"); a move that is only spoken or ordered has none (bible Section 13, Move Box).
 
 ## 2. Attribution (bible Section 19)
-- [ ] The tail is curved and rounded and ends just beside the speaker's mouth; it crosses no face, crown, mitre, hair or hat (bible 7.25). Run `scripts/tail-audit.ps1` to check all panels at once.
+- [ ] The tail is curved and rounded, grows out of the balloon's own outline (no gap), points at the speaker's mouth and stops a little short of it; it crosses no face, crown, mitre, hair or hat (bible 7.25, 7.44). Run `scripts/tail-audit.ps1` to check all panels at once.
 - [ ] The speaker's mouth is open; listeners have closed mouths.
 - [ ] Pieces that talk to each other look at each other; listeners look at the speaker.
 - [ ] Shouted lines use a jagged balloon; other lines a smooth one.

@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.43
+Version 7.44
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -50,6 +50,7 @@ Version 7.40 approves panels 14h and 15a to 15e (author decision): full panel bl
 Version 7.41 fixes the colours of the two armies and the board (author decision): royal blue with gold for White, violet with bronze for Black, ivory and medium-dark walnut wood, exact board colours (Section 5, Colour Style).
 Version 7.42 gives Caballo a deep-blue sash with a gold medal instead of a red one, so he fits his army (author decision).
 Version 7.43 adjusts the shout balloon of the proposal panel 13a (author feedback): two lines without a lone exclamation mark, and a rounded tail to Caballo's mouth. Panel 13a is then approved: full panel block in Section 18 (Scene 13) and manifest 62 in Section 20.3.
+Version 7.44 makes the tail rule general (author decision): for every speaker the tail is attached to the balloon's own outline and points at the mouth without touching it (Common Prompt Block, Section 16).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1107,6 +1108,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.43 | Author feedback on the proposal panel 13a: "It's a bit silly that the last exclamation mark of the text stands on a separate line; adjust the text balloon to fix this. Also could you try a round text balloon tail that points to Caballo's mouth?" The shout balloon is wider, so the text breaks after the first exclamation mark into two lines; the tail is now a rounded curve ending in front of Caballo's snout (it used to end at his forehead). A first curve crossed the face of the white rook on h1, so the curve was made stronger; it now passes over the g2 pawn's body, clear of all faces. The text is unchanged. SVG preview: balloon options "front" (tip in front of the face) and "bend" (forced curve). 13a stays a proposal. |
 | 7.43 | Author feedback on the proposal panel 13a: "make sure that the text balloon tail points to Caballo's mouth rather than touching it. Also make sure that the text balloon tail is properly attached to the text balloon." The tip now stops a little in front of Caballo's snout, pointing at his mouth; the tail now starts on the jagged outline of the balloon itself (before, it started on a straight line under the balloon, which at the balloon's curved end lay outside the outline, so the tail looked detached). SVG preview: balloon option "gap" (distance between tip and mouth) and start points on the ellipse for shout balloons with "front"; only 13a uses them. 13a stays a proposal. |
 | 7.43 | Author decision: panel 13a accepted ("62-panel-13a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 13 - Caballo's Charge) and as manifest 62 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 35 updated. Panel 13b stays a proposal. |
+| 7.44 | Author decision: "Try to generalize this for all actors as a general text balloon rule" (the two remarks on 13a in 7.43: the tail points at the speaker's mouth rather than touching it, and is properly attached to the balloon). Rule added to the Common Prompt Block and Section 16 for every speaker. SVG preview: the tail code rewritten for all balloons (start points on the real outline of round and jagged balloons, the outline opened at the join, the last stretch aimed at the mouth, the tip a little short of it, tips beside other faces avoided); the special options of 13a are no longer needed. Every panel was re-checked: the tail audit went from 5 to 2 tails crossing a face (1a: past Alfil's head; 15a: over the face of the d2 pawn; both reported to the author). To keep their tails clear after the change, the balloons of the approved panels 3a-1 and 3a-2 were moved a little to the right (layout only, text and staging unchanged). |
 
 ---
 
@@ -1123,6 +1125,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 - Boebel must not look like: a bubble, a dome with a hard edge, a separate object lying on the board, an outline, rings or contour lines, a crack, a hole, a stain or a sticker (Section 4).
 - No labels, arrows, captions or explanations anywhere in the image; text appears only inside the speech balloons, in grumble balloons with symbols where specified, in the move box of a panel in which a move is played (Section 13, Move Box), and in the caption boxes of panels 2b and 4a (Section 18, Common Prompt Block; 7.12, 7.14).
 - Balloon tails are curved and rounded, end just beside the speaker's mouth, and never cross a face, crown, mitre, hair or hat (Section 18, Common Prompt Block; author decision in 7.25).
+- Balloon tails, general rule for every speaker (author decision in 7.44): the tail grows out of the balloon's own outline (round or jagged), attached without a gap or a separate line, and its tip points at the speaker's mouth, stopping a little short of it: it points, it does not touch.
 - No sigh symbols (no breath cloud or puff next to a face); a sigh is shown by the face and the pose only (author feedback on panel 10a, 7.31).
 - A panel in which a move is played shows the move box in the bottom-left corner, with the move copied verbatim from Section 1 (for example "3. Ph3"); no other panel has one, except the result box "1/2 - 1/2" centred at the bottom of the last panel, 16c (Section 13, Move Box; 7.37, 7.39).
 - In both armies the b-pawn and the g-pawn have a moustache and no other pawn has one; a pawn keeps its moustache after a capture onto another file (Section 7, White Pawns; author decision in 7.9).
@@ -1336,6 +1339,7 @@ Rules:
 - Speech balloons contain exactly the text given, nothing else.
 - The speaker named in each panel block owns the balloon: its tail points to that character's mouth. All other characters listen with closed mouths unless the panel block says otherwise (Section 19).
 - Balloon tails (author decision in 7.25): draw each tail the way cartoons do: a short, curved, tapering wedge with rounded sides that leaves the balloon and stops just beside the speaker's mouth. A tail never runs through a face, a crown, a mitre, hair or a hat, neither the speaker's nor anyone else's; where needed it curves around them.
+- Balloon tails, for every speaker (author decision in 7.44): each tail grows out of the outline of its balloon itself, round or jagged, with no gap and no line between balloon and tail; its last stretch is aimed at the speaker's mouth and its tip stops a little short of the mouth, pointing at it without touching it.
 - Write the text of each speech balloon exactly as given in the panel description, letter for letter, including every space before "!" and "?", every quote mark and every chess notation. The words are Flemish dialect dialogue: do not translate, correct, complete, explain, label or illustrate them.
 - A balloon marked as a shout balloon has a jagged outline; all other balloons are round. The jagged shout balloon is large enough that the whole text fits inside its inner points; no letter touches or crosses the jagged edge (author feedback in 7.25).
 - Speech balloons sit in empty background space, take roughly a quarter of the panel in total, and never cover faces, hands, crowns, the mitre or important board details.
@@ -4785,3 +4789,4 @@ Items that need a decision from the author.
 | 7.41 | - | Colour Style "two kingdoms": royal blue and gold for White, violet and bronze for Black, ivory and walnut wood, exact board colours; applied to all panels of the preview. |
 | 7.42 | - | Caballo's sash deep blue with a gold medal (was red). |
 | 7.43 | - | Proposal 13a: balloon on two lines (no lone "!"), rounded tail to Caballo's mouth. Panel 13a approved: panel block and manifest 62. |
+| 7.44 | - | General balloon-tail rule: attached to the outline, pointing at the mouth without touching it; applied to all panels of the preview. |

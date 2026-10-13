@@ -35,10 +35,10 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 3 - Alfil Sent to the Pawns (approved)
 { id: "3a-1", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
   cast: { koning: { back: false, expr: "proud", talk: true, lookAt: "alfil" }, regina: {}, a7: { expr: "surprised" }, a8: { expr: "surprised" }, b7: { expr: "surprised" }, b8: { expr: "surprised" }, c7: { expr: "surprised" }, c8: { expr: "surprised" }, d7: { expr: "surprised" }, d8: { expr: "surprised" }, e7: { expr: "surprised" }, f7: { expr: "surprised" }, f8: { expr: "surprised" }, g7: { expr: "surprised" }, g8: { expr: "surprised" }, h7: { expr: "surprised" }, h8: { expr: "surprised" }, bking: { expr: "calm" } },  // black pieces a little surprised (bible 7.22); the Black King stays calm
-  balloons: [{ who: "koning", text: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek." }] },
+  balloons: [{ who: "koning", x: 120, text: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek." }] },
 { id: "3a-2", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
   cast: { koning: { back: false, expr: "proud", talk: true, lookAt: "alfil", gest: "point-r" } },
-  balloons: [{ who: "koning", text: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." }] },
+  balloons: [{ who: "koning", x: 120, text: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." }] },
 { id: "3b", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [4.25, -1.35, 2.25], at: [4.5, 7.5, 0.25], f: 560 },
   cast: { koning: { talk: true, gest: "point-up-r" }, a7: { expr: "amused" }, a8: { expr: "amused" }, b7: { expr: "amused" }, b8: { expr: "amused" }, c7: { expr: "amused" }, c8: { expr: "amused" }, d7: { expr: "amused" }, d8: { expr: "amused" }, e7: { expr: "amused" }, f7: { expr: "amused" }, f8: { expr: "amused" }, g7: { expr: "amused" }, g8: { expr: "amused" }, h7: { expr: "amused" }, h8: { expr: "amused" }, bking: { expr: "calm" } },  // black army visibly amused (bible 7.23); the Black King stays calm, not laughing
   balloons: [{ who: "koning", text: "En maak voort want “Dieje van den overkant\" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen." }] },
@@ -188,7 +188,7 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 13 - Caballo's Charge (PROPOSAL)
 { id: "13a", scene: 13, status: A, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
   cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },
-  balloons: [{ who: "caballo", shout: true, w: 500, snug: true, front: true, bend: 0.45, gap: 14, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
+  balloons: [{ who: "caballo", shout: true, w: 500, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
 { id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.55, f: 500 }), fx: [{ burst: "koning" }],
