@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.44
+Version 7.45
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -51,6 +51,7 @@ Version 7.41 fixes the colours of the two armies and the board (author decision)
 Version 7.42 gives Caballo a deep-blue sash with a gold medal instead of a red one, so he fits his army (author decision).
 Version 7.43 adjusts the shout balloon of the proposal panel 13a (author feedback): two lines without a lone exclamation mark, and a rounded tail to Caballo's mouth. Panel 13a is then approved: full panel block in Section 18 (Scene 13) and manifest 62 in Section 20.3.
 Version 7.44 makes the tail rule general (author decision): for every speaker the tail is attached to the balloon's own outline and points at the mouth without touching it (Common Prompt Block, Section 16).
+Version 7.45 adds a running gag (author decision): the white rook on a1 yawns in 2b, sleeps (with an allowed "Z Z Z") until he is startled awake in 15a by "mat in één"; awake and alert afterwards.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -650,6 +651,7 @@ White rooks (a1, h1), White knight (b1), White bishop (c1), Black Queen, Black b
 Drafted from the play and existing canon only. They become canon after the author approves them; until then, show these pieces only as described in their army's general canon.
 
 - **White rooks (a1, h1):** steady, silent towers at the corners of the army; they never move in the game. Officer costume. Mostly background figures that stand at attention.
+- The a1 rook (author decision in 7.45, approved for this rook only): sleepy because he never takes part in the game; yawns in 2b, asleep until 15a, startled awake by "mat in één" (Section 10, Running Gags).
 - **White knight (b1):** Caballo's counterpart on the other wing; never moves in the game. Calmer than Caballo, faces the centre like every knight. Officer costume.
 - **White bishop (c1):** Alfil's colleague on the queenside; never moves in the game. A quiet scholar like Alfil, but without paprika stains, which stay unique to Alfil. Officer costume.
 - **Black Queen (d8):** composed and elegant, a mirror of the Black King's calm. Never moves in the game. Officer costume in the darker black colours.
@@ -703,6 +705,7 @@ The board acts almost as a character. Its defects drive every plot turn:
 - Felt bottoms.
 - Old wooden boards.
 - Paprika on Alfil's mitre.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 never takes part in the game and gets sleepy. He yawns in 2b, is asleep from 3a-1 to 14f wherever he is in frame (with a small "Z Z Z", author exception), and is startled awake in the background in 15a when Alfil announces "mat in één"; from 15a on he is awake and alert (also in 15b, the overview 16a, the handshake 16c and on the cover). Only the a1 rook sleeps.
 - Regina and the Black Rook.
 - Caballo refusing dirty terrain.
 
@@ -924,6 +927,7 @@ NEVER:
 - Narrator boxes.
 - Anger symbols such as the red "popping vein" mark (four curved red strokes) on a head; anger is shown by the face, the gesture and a shout balloon only (author feedback on panel 5a, 7.11).
 - Sigh symbols such as a white breath cloud or puff next to a face; a sigh ("(zucht)" in the play) is shown by the face and the pose only (author feedback on panel 10a, 7.31).
+- Exception (author decision in 7.45): the small "Z Z Z" beside the sleeping white rook on a1 (panels 3a-1 to 14f) is allowed; it is the only sleep symbol in the cartoon.
 - Invented captions.
 - Coordinate labels.
 - Field labels.
@@ -1109,6 +1113,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.43 | Author feedback on the proposal panel 13a: "make sure that the text balloon tail points to Caballo's mouth rather than touching it. Also make sure that the text balloon tail is properly attached to the text balloon." The tip now stops a little in front of Caballo's snout, pointing at his mouth; the tail now starts on the jagged outline of the balloon itself (before, it started on a straight line under the balloon, which at the balloon's curved end lay outside the outline, so the tail looked detached). SVG preview: balloon option "gap" (distance between tip and mouth) and start points on the ellipse for shout balloons with "front"; only 13a uses them. 13a stays a proposal. |
 | 7.43 | Author decision: panel 13a accepted ("62-panel-13a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 13 - Caballo's Charge) and as manifest 62 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 35 updated. Panel 13b stays a proposal. |
 | 7.44 | Author decision: "Try to generalize this for all actors as a general text balloon rule" (the two remarks on 13a in 7.43: the tail points at the speaker's mouth rather than touching it, and is properly attached to the balloon). Rule added to the Common Prompt Block and Section 16 for every speaker. SVG preview: the tail code rewritten for all balloons (start points on the real outline of round and jagged balloons, the outline opened at the join, the last stretch aimed at the mouth, the tip a little short of it, tips beside other faces avoided); the special options of 13a are no longer needed. Every panel was re-checked: the tail audit went from 5 to 2 tails crossing a face (1a: past Alfil's head; 15a: over the face of the d2 pawn; both reported to the author). To keep their tails clear after the change, the balloons of the approved panels 3a-1 and 3a-2 were moved a little to the right (layout only, text and staging unchanged). |
+| 7.45 | Author decision, a new running gag: "Since the white rook at a1 doesn't participate in the game it gets sleepy. Therefore the white rook at a1 falls asleep from panel 2b onward. It suddenly awakes in the background when Alfil announces mate in one at panel 15a." Claude measured where the a1 rook is in frame (2b, 3a-1, 3a-2, 6c, 7d, 9b, 14b, 14f, 15a, 15b, 16a, 16c) and proposed: yawning in 2b, asleep in the others until 14f, startled awake in 15a. Author answers: "Make an exception for the Zzz symbol"; "only the a1 rook should be asleep"; "after 15a the rook is awake and alert; also on the cover image and on the big diagram on the last page"; the approved panels may change in the background ("I'll review the changes anyway"). Recorded in Sections 7 (White rooks), 10 (Running Gags), 14 (exception to the symbol rule), the Common Prompt Block and the panel blocks of 2b, 3a-1, 3a-2, 6c, 7d, 9b, 14b, 14f, 15a and 15b. In 2b the yawn is drawn as a big stretch so the open mouth shows above the pawn in front of him. SVG preview: expressions "yawn" and "asleep", a "zzz" option. |
+| 7.45 | Author feedback on 2b: "Can you give the rook arms as if it were stretching while yawning?" The yawning a1 rook now stretches both arms up and out above his top. Panel block 2b updated; SVG preview: gesture "stretch". |
 
 ---
 
@@ -1347,6 +1353,7 @@ Rules:
 - The image contains no written words, labels, arrows, captions or explanations anywhere. The only text is the dialogue inside the speech balloons, the move box and the caption box when the panel description gives them, and the symbols in grumble balloons when the panel description gives them. When the speech balloons are drawn empty and there is no move box or caption box, the image contains no text at all.
 - No anger symbols (such as red "popping vein" marks) on any head: show anger with the face, the gesture and, for a shouted line, the jagged balloon.
 - No sigh symbols: no breath cloud or puff next to a face. When the King sighs, show it with his face and pose only: eyes closed, eyebrows drooping, mouth open, shoulders sagging.
+- Sleep symbol (only when the panel description gives it): the white rook on a1 may have a small "Z Z Z" in white letters with a thin black outline rising beside his top while he sleeps; no other piece sleeps, and no other symbol is used.
 - Move box (only when the panel description gives one): in the bottom-left corner, draw a small white rectangle with a thin black outline and write in it, in bold black letters, exactly the move text given, letter for letter (for example: 3. Ph3). Nothing else is written in or near it.
 - Result box (only in the last panel, 16c, when the panel description gives one): drawn like the move box, but centred at the bottom of the panel, with the result text given, letter for letter: 1/2 - 1/2
 - Caption box (only when the panel description gives one; so far panels 2b and 4a): in the lower right corner, draw a pale-yellow rectangle with a thin black outline and write in it, in italic letters, exactly the text given, letter for letter, parentheses included.
@@ -1401,6 +1408,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Board: the third and fourth ranks in the foreground. The gentle rise in the middle of the board rises in the foreground on d4/e4 (its far half is outside the frame). The greasy spot on f3 is faintly visible. No black pieces (they are behind the camera).
 - Characters: the pawns frown, stubborn and grumbling; none of them moves. The officers look on.
 - Grumbling, for the stage direction (hoorbaar gemor vanop de tweede rij): five small grumble balloons (jagged outline) beside the heads of the pawns on h2, f2, d2, b2 and e2, each with a short tail to its own pawn. Each balloon contains only chess annotation symbols and the hash sign, exactly: ??#, ?!, #!?, ??, #?! (one string per balloon; no letters, no other symbols). The balloons never cover a pawn's face or crossed arms, nor an officer's face or crown: the pawns are the focus of this panel (author decision in 7.12).
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1, which never takes part in the game, yawns a big stretching yawn: tower stretched up and tilted back a little, both arms stretched up and out above his top (author feedback in 7.45), eyes squeezed shut, mouth a big round O. He does not grumble (no grumble balloon).
 - Caption (author decision in 7.12; the first caption in the cartoon, followed by panel 4a in 7.14): in the lower right corner a pale-yellow rectangle with a thin black outline containing the stage direction verbatim, in italic letters, parentheses included: (hoorbaar gemor vanop de tweede rij)
 - No dialogue balloons.
 
@@ -1422,6 +1430,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - In frame: Alfil (f1) in the right foreground, seen from behind and partly from the side; the White King (e1) left of centre, turned towards Alfil so his face is seen in three-quarter view; Regina (d1) at the left edge beside the King. In the middle ground the white pawns on d2, e2, f2 and g2, seen from behind. Further away, the empty board and the black army in its starting position, small and out of focus: every black piece on a square that is in frame is shown.
 - Characters: the King looks at Alfil, chin raised, nose in the air ("lage boerenvolk"), mouth open. Alfil listens, head slightly bowed towards the King, mouth closed. Regina looks at the King.
 - Black army (author decision in 7.22): the black pieces in the background look a little surprised (high arched eyebrows, wide round eyes, mouths closed), except the Black King, who stays calm and composed.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek.
 
 ### Panel 3a-2
@@ -1430,6 +1439,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Camera: the same as 3a-1.
 - In frame: the same as 3a-1.
 - Characters: the King keeps looking at Alfil, mouth open, and points sideways (towards the second rank, in front of the officers) at the pawns without looking at them. Alfil looks at the King, mouth closed. Regina looks at the King.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Balloon (White King): Vraag aan die luie pitten op de tweede rij wat er aan de hand is.
 
 ### Panel 3b
@@ -1543,6 +1553,7 @@ Board position: the standard starting position (State 0) in 6a and 6b; State 1 (
 - Camera: high, from White's side, behind the kingside corner of the board (behind h1/g1), looking diagonally across the whole board towards Black. The white army is seen from behind and from the side in the foreground and at the left; the complete black army stands in its starting formation in the distance, facing the camera.
 - In frame: in the foreground Caballo (g1) and the rook (h1), partly cut off by the bottom edge; the white officers and pawns along the left side; the pawn that has just moved from e2 to e3 in the middle ground; the gentle rise in the middle of the board, shown only by light and shadow; the greasy spot on f3 barely noticeable; the cola stain on f6 only a faint discolouration.
 - Action: the pawn moves from e2 to e3 (1. e3): a short motion streak behind it shows the step. Every other piece stands on its starting square.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Move box (bottom-left corner, bold, white rectangle): 1. e3
 - No balloons.
 
@@ -1580,6 +1591,7 @@ Board position: State 2 (after 1. e3 d5) in 7a to 7c; State 3 (after 2. Ld3) in 
 - In frame: all white pieces on their squares (from this side the h-file is left): the rooks, knights, Regina, the King, the c1 bishop, the pawns on a2, b2, c2, d2, f2, g2 and h2, the pawn on e3; Alfil on d3, in front of the white pawn row; the f1 square empty. The greasy spot on f3 barely noticeable.
 - Action: Alfil moves from f1 over e2 to d3 (2. Ld3): a short motion streak from f1 to d3 shows his path. The paprika stains are still on his mitre.
 - Characters: Alfil calm and dignified, mouth closed; the King looks at Alfil, mouth closed; the other pieces neutral.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Move box (bottom-left corner, bold, white rectangle): 2. Ld3
 - No balloons.
 
@@ -1621,6 +1633,7 @@ Approved in 7.26 (camera and pose as set by the author in 7.20 and 7.26).
 - In frame (from this side the h-file is left): at the left the rook h1 and Caballo on h3, large, in the foreground; the pawns on h2, g2 and f2; the empty g1 and f1 squares; the empty f3 square with the greasy spot, clearly visible; in the middle the White King (e1), fully in sight, with Regina (d1) beside him; to the right Alfil on d3 (paprika stains on his mitre), the pawn on e3, the c1 bishop, the b1 knight, the a1 rook and the pawns on d2, c2, b2 and a2 as far as they are in frame; the gentle rise in the middle of the board, shown only by light and shadow. The black army is out of frame except the black pawns on e6 and d5, seen from behind in the lower right.
 - Action: Caballo jumps from g1 to h3 (3. Ph3) instead of f3: a short motion streak from g1 to h3 shows the jump. Every other piece stands on its square of State 5.
 - Characters: the White King is visibly surprised and shocked: eyes wide, mouth open (surprise, no balloon), both hands raised to the sides of his head in disbelief, beside his temples and not over his eyes or face, sweat drops; his face is turned towards Caballo and he looks at him. Caballo stubborn, mouth closed, facing the centre files. The other pieces neutral, mouths closed.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Move box (bottom-left corner, bold, white rectangle): 3. Ph3
 - No balloons.
 
@@ -1835,6 +1848,7 @@ Approved in 7.40.
 - Camera: from Black's side, off to the kingside, so the White King (e1) and Alfil (d3) are both in sight (the King at the left, Alfil at the right, in front of the white pieces of the queenside).
 - In frame: the White King (e1); Alfil on d3 (paprika stains on his mitre); the white pawns and officers of the queenside behind and around him; the pawns on f2, e3 and d2 in front. Every piece on a square that is in frame is shown.
 - Characters: Alfil apologetic, mouth open, looks at the King, one hand raised with the index finger up (an idea). The King looks back at Alfil, surprised, mouth closed. The others neutral, mouths closed.
+- The sleepy a1 rook (author decision in 7.45): in the background the white rook on a1 is startled awake by the words "mat in één": upright again, eyes wide, mouth a small round O, a few short jolt lines beside him; no Zzz any more.
 - Balloon placement: top left; its curved tail ends just beside Alfil's mouth. Accepted as shown (7.40): the tail passes close to the King, and Alfil's raised hand covers the face of a pawn behind him.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
@@ -1843,6 +1857,7 @@ Approved in 7.40.
 - Camera: the same as 15a.
 - In frame: the same as 15a.
 - Characters: the King proud, mouth open, one arm raised high, pointing up and away (the order to Caballo). Alfil looks at the King, mouth closed. The others neutral, mouths closed.
+- The a1 rook (author decision in 7.45): awake and alert since 15a, eyes open, upright.
 - Balloon placement: top right, over the queenside pieces; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
 - No move box: the move to f6 is ordered, not played (Section 13, Move Box).
@@ -2201,6 +2216,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (angry, speaking, looks at Alfil, gesture point-down-r); Alfil (surprised, looks at White King).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Balloon (White King): Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets.
 
 ### Panel 14c (PROPOSAL)
@@ -2232,6 +2248,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (angry, speaking, gesture both-open); Alfil (looks at White King).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
+- The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
 - Balloon (White King): En terwijl ik hier weer zit te zwoegen om de partij te winnen
 
 ### Panel 14g (approved in 7.35: the approved panel block is in Section 18, Scene 14)
@@ -4790,3 +4807,4 @@ Items that need a decision from the author.
 | 7.42 | - | Caballo's sash deep blue with a gold medal (was red). |
 | 7.43 | - | Proposal 13a: balloon on two lines (no lone "!"), rounded tail to Caballo's mouth. Panel 13a approved: panel block and manifest 62. |
 | 7.44 | - | General balloon-tail rule: attached to the outline, pointing at the mouth without touching it; applied to all panels of the preview. |
+| 7.45 | - | Running gag: the sleepy a1 rook (yawn 2b, asleep with Zzz until 14f, startled awake in 15a). |
