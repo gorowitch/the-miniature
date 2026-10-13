@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.42
+Version 7.43
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -49,6 +49,7 @@ Version 7.39 sets the board of the proposal panel 16c to the starting position (
 Version 7.40 approves panels 14h and 15a to 15e (author decision): full panel blocks in Section 18 (Scenes 14 and 15) and manifests 71 to 76 in Section 20.3; Scene 15 is complete.
 Version 7.41 fixes the colours of the two armies and the board (author decision): royal blue with gold for White, violet with bronze for Black, ivory and medium-dark walnut wood, exact board colours (Section 5, Colour Style).
 Version 7.42 gives Caballo a deep-blue sash with a gold medal instead of a red one, so he fits his army (author decision).
+Version 7.43 adjusts the shout balloon of the proposal panel 13a (author feedback): two lines without a lone exclamation mark, and a rounded tail to Caballo's mouth. Panel 13a is then approved: full panel block in Section 18 (Scene 13) and manifest 62 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1103,6 +1104,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.41 | Author decision on colours: the author shared a colour-scheme suggestion ("two clearly identifiable kingdoms") and asked Claude to cherry-pick what is useful. Claude proposed: one dominant costume colour per army, metals for rank, exact wood and board colours; the White King's burgundy, Regina's white and gold and Caballo's red sash kept as canon exceptions; not used: a blue King, burgundy for Black, skin tones. Tried on panel 16a; the author: "this seems to work for the white army but not for the black army ... both the colors of the black pieces and the costumes of the black pieces are too dark"; two lighter variants shown (A violet, B green); the author chose A and "update all panels according to this color style". New: Section 5, Colour Style; Sections 4 (Board), 5 (Pieces, Costumes), 7 (Black King), the Master Illustration Prompt and the Common Prompt Block updated; the black wood is now medium-dark walnut instead of very dark brown, the board frame oak instead of beige; Appendix B item 13 partly resolved; old wording in Appendix A. SVG preview: the colour style is applied to every panel (comic/renderer.js, palette "kingdoms-violet"); approved panels change colour only, not content. |
 | 7.41 | Author correction: "The color band of the rook at h8 doesn't seem to match the colors of his army - why is that?" Claude had given the h8 rook a lighter navy as an exception of its own (proposed as "keeps a recognisable look", never decided by the author) and carried it into the rollout and the Colour Style. The author: "use violet like the rest of the army". The exception is removed from the Colour Style, the Common Prompt Block and the preview; the h8 rook wears violet with bronze like the other black officers. |
 | 7.42 | Author decision on Caballo's decorations: asked what the story behind Caballo's medal is, Claude answered that there is none: the canon says only "military decorations" (v1.1, 7.3); the red sash with a gold medal was Claude's drawing choice in the SVG preview, and Claude had listed it as a canon exception in 7.41 without an author decision. The author: "shouldn't Caballo's red line be blue so that he fits his army". Caballo's sash is now deep blue (#2F5D9B) with the gold medal; the sash and medal are recorded as his military decorations. Sections 5 (Colour Style), 7 (Caballo) and the Common Prompt Block updated; SVG preview: a sash colour per palette. |
+| 7.43 | Author feedback on the proposal panel 13a: "It's a bit silly that the last exclamation mark of the text stands on a separate line; adjust the text balloon to fix this. Also could you try a round text balloon tail that points to Caballo's mouth?" The shout balloon is wider, so the text breaks after the first exclamation mark into two lines; the tail is now a rounded curve ending in front of Caballo's snout (it used to end at his forehead). A first curve crossed the face of the white rook on h1, so the curve was made stronger; it now passes over the g2 pawn's body, clear of all faces. The text is unchanged. SVG preview: balloon options "front" (tip in front of the face) and "bend" (forced curve). 13a stays a proposal. |
+| 7.43 | Author feedback on the proposal panel 13a: "make sure that the text balloon tail points to Caballo's mouth rather than touching it. Also make sure that the text balloon tail is properly attached to the text balloon." The tip now stops a little in front of Caballo's snout, pointing at his mouth; the tail now starts on the jagged outline of the balloon itself (before, it started on a straight line under the balloon, which at the balloon's curved end lay outside the outline, so the tail looked detached). SVG preview: balloon option "gap" (distance between tip and mouth) and start points on the ellipse for shout balloons with "front"; only 13a uses them. 13a stays a proposal. |
+| 7.43 | Author decision: panel 13a accepted ("62-panel-13a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 13 - Caballo's Charge) and as manifest 62 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 35 updated. Panel 13b stays a proposal. |
 
 ---
 
@@ -1785,6 +1789,18 @@ Approved in 7.33 (as shown in the SVG preview).
 - Balloon placement: top right, above Regina, clear of her crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 
+## Scene 13 - Caballo's Charge
+Status: panel 13a approved by the author in 7.43 (balloon as set by the author in 7.43, as shown in the SVG preview); panel 13b is still a proposal (Section 18, Proposed Panels).
+Board position for 13a: State 10 (after 5. ... g6). Caballo stands on g5, Regina on h5, Alfil on d3.
+
+### Panel 13a
+Approved in 7.43.
+- Camera: from Black's side of the board, low and a little to the kingside, behind the black pawns, looking across at Caballo (g5) and Regina (h5), with room above them for the shout balloon; the white pawns and the h1 rook further back; black pawns seen from behind in the foreground.
+- In frame (from this side the h-file is left): Regina on h5 at the left, Caballo on g5 in the centre, the white kingside pawns and the rook on h1 behind them, the greasy spot on f3 clearly visible; black pawns from behind in the foreground. Every piece on a square that is in frame is shown.
+- Characters: Caballo heroic, mouth open, ready to charge; white speed lines burst out behind him. Regina (h5) has a light pink blush and glances towards the black rook on h8 (7.34). The other pieces neutral, mouths closed.
+- Balloon layout (author decisions in 7.43): a jagged shout balloon at the top, wide enough for two lines, broken after the first exclamation mark ("Voor de glorie en de overwinning !" / "Ten aanval !"), so no exclamation mark stands alone on a line; a rounded, curved tail that leaves the jagged outline of the balloon itself and points at Caballo's mouth, its tip stopping a little in front of his snout without touching it; clear of all faces.
+- Balloon (Caballo, jagged shout balloon): Voor de glorie en de overwinning ! Ten aanval !
+
 ## Scene 14 - Regina Captured
 Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40; panels 14a to 14f are still proposals (Section 18, Proposed Panels).
 Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
@@ -2151,11 +2167,12 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 5. ... g6
 - No balloons.
 
-### Panel 13a (PROPOSAL)
+### Panel 13a (approved in 7.43: the approved panel block is in Section 18, Scene 13)
 - Board state: 10.
 - Regina and the h8 rook (author decision in 7.34): Regina (h5) has a light pink blush and glances towards the black rook on h8.
 - Camera: special angle (see comic/panels.js), with room above Regina and Caballo for the shout balloon (adjusted in 7.25).
 - Characters: Caballo (heroic, speaking).
+- Balloon layout (author feedback in 7.43): wide enough for two lines, broken after the first exclamation mark ("Voor de glorie en de overwinning !" / "Ten aanval !"), so no exclamation mark stands alone on a line; a rounded, curved tail that leaves the jagged outline of the balloon itself (properly attached, no gap) and points at Caballo's mouth, its tip stopping a little in front of his snout without touching it (7.43); clear of the faces of the pieces behind him.
 - Balloon (Caballo), shout balloon: Voor de glorie en de overwinning ! Ten aanval !
 
 ### Panel 13b (PROPOSAL)
@@ -4100,6 +4117,38 @@ PANEL 11f   (sequence number 54)
 21. Continuity requirements: Regina goes to h5 in 11g (4. Dh5).
 ```
 
+### Scene 13 - Caballo's Charge
+Added in 7.43 for the panel the author approved (13a). Panel 13b is still a proposal and has no manifest yet.
+
+```
+PANEL 13a   (sequence number 62)
+
+1.  Scene 13, panel a: Caballo charges.
+2.  Script excerpt:
+      Caballo:
+      Voor de glorie en de overwinning ! Ten aanval !
+3.  Dialogue:
+      Balloon 1: "Voor de glorie en de overwinning ! Ten aanval !"
+4.  Balloon 1 -> Caballo
+5.  Visible: Regina h5 at the left, Caballo g5 in the centre, the white kingside pawns and the h1 rook behind them, the greasy spot on f3; black pawns from behind in the foreground.
+6.  Listening: the other pieces neutral, mouths closed; Regina glances towards the h8 rook (7.34).
+7.  Camera on Black's side, low, a little to the kingside, behind the black pawns, looking at Caballo and Regina.
+8.  Caballo: heroic, mouth open, speed lines behind him.
+9.  Balloon 1 is a SHOUT balloon (jagged outline), top, two lines broken after the first "!"; its rounded tail leaves the jagged outline and points at Caballo's mouth, stopping a little in front of his snout (author, 7.43).
+10. Stage directions: none.
+11. State 10 (after 5. ... g6). No move in this panel; 6. Pxh7 follows in 13b.
+12. Continuity: after 5. ... g6; Caballo on g5, Regina on h5.
+13. Must not appear: a round balloon for this line; a lone "!" on its own line; a tail touching Caballo or crossing a face; anger symbols; Caballo already on h7.
+14. Dialogue length: 9 words, 47 characters.
+15. Segmentation: the whole of speech 35.
+16. Visual priority: Caballo's heroic charge.
+17. Lettering space: the top band.
+18. Balloon-area estimate: about 15%.
+19. Layout: low medium shot (Section 23.D); one shout balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the capture 6. Pxh7 follows in 13b.
+```
+
 ### Scene 14 - Regina Captured
 Added in 7.35 for the panel the author approved (14g). 14h added in 7.40. Panels 14a to 14f are still proposals and have no manifests yet.
 
@@ -4497,7 +4546,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | - | Scene catalog only. |
 | 33 | Move: 5. Pg5 | 12 | - | Scene catalog only. |
 | 34 | Move: 5. ... g6 | 12 | - | Scene catalog only. |
-| 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | - | Scene catalog only. |
+| 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | - | Scene catalog only. |
 | 38 | Move: 6. ... gxh5 | 14 | - | Scene catalog only. |
@@ -4735,3 +4784,4 @@ Items that need a decision from the author.
 | 7.40 | - | Panels 14h and 15a to 15e approved: panel blocks and manifests 71 to 76; Scene 15 complete. |
 | 7.41 | - | Colour Style "two kingdoms": royal blue and gold for White, violet and bronze for Black, ivory and walnut wood, exact board colours; applied to all panels of the preview. |
 | 7.42 | - | Caballo's sash deep blue with a gold medal (was red). |
+| 7.43 | - | Proposal 13a: balloon on two lines (no lone "!"), rounded tail to Caballo's mouth. Panel 13a approved: panel block and manifest 62. |

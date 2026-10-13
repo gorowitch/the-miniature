@@ -186,9 +186,9 @@ window.PANELS = [
 { id: "12d", scene: 12, status: Pr, movebox: "5. Pg5", state: 9, cam: { from: [8.8, 1.4, 2.6], at: [6.4, 4.2, 0.3], f: 620 }, fx: [{ move: ["h3", "g5"] }], cast: { caballo: { expr: "heroic" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 { id: "12e", scene: 12, status: Pr, movebox: "5. ... g6", state: 10, cam: { from: [8.8, 3.2, 2.2], at: [6.6, 5.6, 0.4], f: 640 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 13 - Caballo's Charge (PROPOSAL)
-{ id: "13a", scene: 13, status: Pr, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
+{ id: "13a", scene: 13, status: A, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
   cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },
-  balloons: [{ who: "caballo", shout: true, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
+  balloons: [{ who: "caballo", shout: true, w: 500, snug: true, front: true, bend: 0.45, gap: 14, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
 { id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.55, f: 500 }), fx: [{ burst: "koning" }],
