@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.47
+Version 7.48
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -54,6 +54,7 @@ Version 7.44 makes the tail rule general (author decision): for every speaker th
 Version 7.45 adds a running gag (author decision): the white rook on a1 yawns in 2b, sleeps (with an allowed "Z Z Z") until he is startled awake in 15a by "mat in één"; awake and alert afterwards.
 Version 7.46 clarifies the knight orientation per view (author feedback): from White's or Black's side towards the centre files, from the side towards the middle of the board.
 Version 7.47 makes the a1 rook's awakening in 15a clearer (author feedback): both eyes wide open with the eyebrows shot up, small jolt lines (subtle).
+Version 7.48 approves panel 16a, the final position from above (author decision); Scene 16 is complete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1124,6 +1125,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.47 | Author feedback on 15a: "the arms are no good." Asked what instead (no arms, one hand to his top, or the plain jolt look), the author chose "one hand to his top": the startled a1 rook now raises one short arm with the hand against the side of his top ("huh, what?"); the jump, the jolt lines, wide eyes and small O mouth stay. SVG preview: gesture "hand-top". |
 | 7.47 | Author feedback on 15a: "No, don't like - let's make it slightly more subtle and try with the rook opening one eye. Get rid of the arm." The a1 rook now wakes up by opening one eye wide while the other stays shut, with a few small jolt lines; the arm and the jump are gone. SVG preview: expression "oneeye". |
 | 7.47 | Author feedback on 15a: "do something similar like this but use both eyes open; try to work with the eyebrows to express surprise." The a1 rook now wakes with both eyes wide open and his eyebrows shot up high above them; the small jolt lines stay, no arm, no jump. SVG preview: expression "startled". |
+| 7.48 | Author decision: panel 16a accepted ("77-panel-16a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 16) and as manifest 77 in Section 20.3 (no line of the play: the overview between 15e and 16b); the proposal block is kept and marked as approved. Scene 16 is fully approved. |
 
 ---
 
@@ -1897,8 +1899,17 @@ Approved in 7.40 (wide since 7.37).
 - Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
 ## Scene 16 - Draw Accepted
-Status: panels 16b and 16c approved by the author in 7.39 (as set by the author in 7.37 to 7.39, as shown in the SVG preview); panel 16a is still a proposal (Section 18, Proposed Panels).
+Status: panels 16b and 16c approved by the author in 7.39 (as set by the author in 7.37 to 7.39, as shown in the SVG preview); panel 16a in 7.48. Scene 16 is fully approved.
 Board position: State 12 (final position) in 16b. Panel 16c shows no position of the game (author exception to Section 12, 7.39): the other pieces on their starting squares, the two kings in the middle of the board.
+
+### Panel 16a
+Approved in 7.48 (as set by the author in 7.37; as shown in the SVG preview).
+- Format: wide and two strips high (half an album page); the board nearly square in the middle.
+- Camera: high above the board, looking almost straight down, from beside the h-file, so that both armies face the reader: the white army at the left, the black army at the right; the h-file at the bottom, the a-file at the top.
+- In frame: the whole board with every piece of State 12, all faces visible: the White King (e1), eyes closed, sighing; the Black King (e8) calm; Alfil on d3 (paprika stains), the e3 pawn, Caballo on h7, the black pawns on d5, e6 and h5. The gentle rise in the middle of the board, the greasy spot on f3 and the cola stain on f6 are all clearly visible. Beside the board: Regina next to the black rook on h8, facing the reader (no hint any more, the gag ended after 14h); the captured black pawn on White's side near h2. The club room around the board, soft and out of focus.
+- The a1 rook (7.45): awake and alert.
+- Knights (7.46): seen from the side, the knights face the middle of the board.
+- No balloons, no move box, no text, no coordinates, no arrows (not for the unplayed mate either).
 
 ### Panel 16b
 Approved in 7.39.
@@ -2310,7 +2321,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
-### Panel 16a (PROPOSAL)
+### Panel 16a (approved in 7.48: the approved panel block is in Section 18, Scene 16)
 Changed in 7.37 (author decision): the final position seen from above; it replaces the earlier 16b (wide view of both kings) and comes before the King's last line.
 - Board state: 12 (final position).
 - Format (author decision in 7.37): wide and two strips high (half an album page); the board nearly square in the middle.
@@ -4393,7 +4404,33 @@ PANEL 15e   (sequence number 76)
 ```
 
 ### Scene 16 - Draw Accepted
-Added in 7.39 for the panels the author approved (16b, 16c). Panel 16a is still a proposal and has no manifest yet.
+Added in 7.39 for the panels the author approved (16b, 16c); 16a added in 7.48. Scene 16 is complete.
+
+```
+PANEL 16a   (sequence number 77)
+
+1.  Scene 16, panel a: the final position seen from above.
+2.  Script excerpt: none (no line of the play; an overview of the final position after Caballo's report in 15e, author decision in 7.37).
+3.  Dialogue: none.
+4.  No speaker.
+5.  Visible: the whole board with all 30 pieces of State 12; Regina and the captured black pawn beside the board; the club room around it.
+6.  Listening: no reactions; the White King sighing with closed eyes, the Black King calm, the others neutral, mouths closed.
+7.  Camera high above the board from beside the h-file, almost straight down; white army left, black army right; wide, two strips high (author, 7.37).
+8.  All faces turned up to the reader; knights facing the middle of the board (7.46); the a1 rook awake (7.45).
+9.  No balloons.
+10. Stage directions: none.
+11. State 12 (final position). No move.
+12. Continuity: after the draw offer in 15e; the King accepts in 16b; Regina beside the board next to the h8 rook, the captured pawn near h2; the cola stain on f6 explicit.
+13. Must not appear: coordinates, arrows (also not for the unplayed mate Pf6#), any text; hints between Regina and the h8 rook; a moved piece.
+14. Dialogue length: none.
+15. Segmentation: none (an image without text between 15e and 16b).
+16. Visual priority: the whole final position with the board's three defects.
+17. Lettering space: none.
+18. Balloon-area estimate: 0%.
+19. Layout: overview from above, half a page (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 12 into 16b.
+```
 
 ```
 PANEL 16b   (sequence number 78)
@@ -4819,3 +4856,4 @@ Items that need a decision from the author.
 | 7.45 | - | Running gag: the sleepy a1 rook (yawn 2b, asleep with Zzz until 14f, startled awake in 15a). |
 | 7.46 | - | Knight orientation per view: towards the centre files from White's or Black's side, towards the middle of the board from the side; shared camera of 14b, 14f, 15a, 15b adjusted so the a1 rook stays visible. |
 | 7.47 | - | 15a: the a1 rook's awakening made explicit (both eyes wide open, eyebrows shot up, small jolt lines). |
+| 7.48 | - | Panel 16a approved: panel block and manifest 77; Scene 16 complete. |

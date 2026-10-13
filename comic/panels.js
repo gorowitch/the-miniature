@@ -231,7 +231,7 @@ window.PANELS = [
   balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }] },
 // ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
 // 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
-{ id: "16a", scene: 16, status: Pr, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },
+{ id: "16a", scene: 16, status: A, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },
   cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { back: false } }, balloons: [] },
 // 16b: the King accepts the draw (bible 7.37)
 { id: "16b", scene: 16, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
