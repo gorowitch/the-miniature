@@ -194,10 +194,10 @@ window.PANELS = [
 { id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.55, f: 500 }), fx: [{ burst: "koning" }],
   cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
   balloons: [{ who: "koning", shout: true, w: 368, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
-{ id: "14b", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: KING_ALFIL,
+{ id: "14b", scene: 14, status: A, state: 11, beside: BESIDE11, cam: KING_ALFIL,
   cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "surprised", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets." }] },
-{ id: "14c", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+{ id: "14c", scene: 14, status: A, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "worried", talk: true, gest: "point-up-l", sweat: true } },
   balloons: [{ who: "koning", text: "Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, \"Dieje van den overkant\" is al aan zet." }] },
 // 14d: the capture staged close (bible 7.50): the h5 pawn pushes Regina off the board, she does not care, the h8 rook is delighted
