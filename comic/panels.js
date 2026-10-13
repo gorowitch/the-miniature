@@ -215,7 +215,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft." }] },
 // ---------------------------------------------------------------- Scene 15 - Mate in One (PROPOSAL; the cola stain is explicit from here)
 { id: "15a", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL,
-  cast: { a1: { expr: "surprised", mouthOpen: true, shake: true }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
+  cast: { a1: { expr: "startled", shake: true }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
   balloons: [{ who: "alfil", text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
 { id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL,
   cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { lookAt: "koning" } },

@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.46
+Version 7.47
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -53,6 +53,7 @@ Version 7.43 adjusts the shout balloon of the proposal panel 13a (author feedbac
 Version 7.44 makes the tail rule general (author decision): for every speaker the tail is attached to the balloon's own outline and points at the mouth without touching it (Common Prompt Block, Section 16).
 Version 7.45 adds a running gag (author decision): the white rook on a1 yawns in 2b, sleeps (with an allowed "Z Z Z") until he is startled awake in 15a by "mat in één"; awake and alert afterwards.
 Version 7.46 clarifies the knight orientation per view (author feedback): from White's or Black's side towards the centre files, from the side towards the middle of the board.
+Version 7.47 makes the a1 rook's awakening in 15a clearer (author feedback): both eyes wide open with the eyebrows shot up, small jolt lines (subtle).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1118,6 +1119,11 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.45 | Author feedback on 2b: "Can you give the rook arms as if it were stretching while yawning?" The yawning a1 rook now stretches both arms up and out above his top. Panel block 2b updated; SVG preview: gesture "stretch". |
 | 7.46 | Author feedback: "In panel 16c we see two knights with their heads backwards; they should look in the direction of the center. Same remark for 16a, 14f and 14b." Cause in the SVG preview: a knight was turned towards the centre files at its own rank, which from the side or from above lies straight above or below it on screen, so it could end up looking away from the board. Now every knight not on the d- or e-file faces the middle of the board, from every camera (Section 6, Knight Orientation, clarified). This also turned the passive knights in 12d, 12e, 13b, 14d and 15a to 15e towards the middle. Side effect: in the shared camera of 14b, 14f, 15a and 15b the b1 knight's head then covered the face of the sleepy a1 rook (7.45), hiding his awakening in 15a; the shared camera was moved a little towards the queenside and zoomed out slightly so the rook's face is visible again (layout only; in 15a this also cleared Alfil's balloon tail from the d2 pawn's face). |
 | 7.46 | Author clarification: "When we look at the board from the side, that is from the h-file toward the a-file, it would be strange that the knights would be pointing away from the center. When we look at the board from either the white player's perspective or the black player's perspective it makes sense that the knights look inward, that is towards the central files." Claude had applied the side-view rule to every camera and so overdid 12d, 12e, 14d, 15e (b8 knight) and 14b, 14f, 15a, 15b (b1 knight); partial revert: the rule now depends on the camera (looking mostly along the files: towards the centre files; looking mostly along the ranks: towards the middle of the board). Knights turned compared with before 7.46: only in the side views 13b, 15c, 15d, 16a and 16c. The adjusted shared camera of 14b, 14f, 15a and 15b is kept (a clear view from Black's side, the a1 rook visible). Section 6, Knight Orientation, worded accordingly. |
+| 7.47 | Author feedback on 15a: "the rook at a1 awakens - this is not really clear from the image: make this more explicit." The startled a1 rook now jumps up a little off his square, throws both arms up in fright, and has big jolt lines in a fan above his top (instead of a few small ones); eyes wide, mouth a small O. Panel block 15a updated; SVG preview: options "jolt" and "jump". |
+| 7.47 | Author feedback on 15a: "the arms seem too much - make it subtle but expressive." The a1 rook's arms are now short and half raised to the sides with open hands, instead of flung straight up; the jump and the jolt lines stay. SVG preview: gesture "startle". |
+| 7.47 | Author feedback on 15a: "the arms are no good." Asked what instead (no arms, one hand to his top, or the plain jolt look), the author chose "one hand to his top": the startled a1 rook now raises one short arm with the hand against the side of his top ("huh, what?"); the jump, the jolt lines, wide eyes and small O mouth stay. SVG preview: gesture "hand-top". |
+| 7.47 | Author feedback on 15a: "No, don't like - let's make it slightly more subtle and try with the rook opening one eye. Get rid of the arm." The a1 rook now wakes up by opening one eye wide while the other stays shut, with a few small jolt lines; the arm and the jump are gone. SVG preview: expression "oneeye". |
+| 7.47 | Author feedback on 15a: "do something similar like this but use both eyes open; try to work with the eyebrows to express surprise." The a1 rook now wakes with both eyes wide open and his eyebrows shot up high above them; the small jolt lines stay, no arm, no jump. SVG preview: expression "startled". |
 
 ---
 
@@ -1851,7 +1857,7 @@ Approved in 7.40.
 - Camera: from Black's side, off to the kingside, so the White King (e1) and Alfil (d3) are both in sight (the King at the left, Alfil at the right, in front of the white pieces of the queenside).
 - In frame: the White King (e1); Alfil on d3 (paprika stains on his mitre); the white pawns and officers of the queenside behind and around him; the pawns on f2, e3 and d2 in front. Every piece on a square that is in frame is shown.
 - Characters: Alfil apologetic, mouth open, looks at the King, one hand raised with the index finger up (an idea). The King looks back at Alfil, surprised, mouth closed. The others neutral, mouths closed.
-- The sleepy a1 rook (author decision in 7.45): in the background the white rook on a1 is startled awake by the words "mat in één": upright again, eyes wide, mouth a small round O, a few short jolt lines beside him; no Zzz any more.
+- The sleepy a1 rook (author decisions in 7.45 and 7.47): in the background the white rook on a1 wakes up at the words "mat in één", subtly: both eyes wide open, the surprise shown mainly by his eyebrows, shot up high above the eyes; upright again, a few small jolt lines beside his top; no arms, no jump, no Zzz any more.
 - Balloon placement: top left; its curved tail ends just beside Alfil's mouth. Accepted as shown (7.40): the tail passes close to the King, and Alfil's raised hand covers the face of a pawn behind him.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
@@ -4812,3 +4818,4 @@ Items that need a decision from the author.
 | 7.44 | - | General balloon-tail rule: attached to the outline, pointing at the mouth without touching it; applied to all panels of the preview. |
 | 7.45 | - | Running gag: the sleepy a1 rook (yawn 2b, asleep with Zzz until 14f, startled awake in 15a). |
 | 7.46 | - | Knight orientation per view: towards the centre files from White's or Black's side, towards the middle of the board from the side; shared camera of 14b, 14f, 15a, 15b adjusted so the a1 rook stays visible. |
+| 7.47 | - | 15a: the a1 rook's awakening made explicit (both eyes wide open, eyebrows shot up, small jolt lines). |

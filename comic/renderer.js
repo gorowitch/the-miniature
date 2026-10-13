@@ -72,20 +72,24 @@ function face(g, x, y, r, col, o) {
   const sw = r * 0.13;
   const brow = (s, dy, slope) => mk("path", { d: `M${x+s*r*.64} ${y-r*.42+dy} l${-s*r*.46} ${slope}`, stroke: brC, "stroke-width": sw, "stroke-linecap": "round", fill: "none" }, g);
   const browArc = (s, h) => mk("path", { d: `M${x+s*r*.66} ${y-r*.48} q${-s*r*.22} ${-h} ${-s*r*.46} ${-r*.06}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
-  if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
+  if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
+  else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
   else if (E === "worried" || E === "despair" || E === "sigh" || E === "pleading" || E === "apologetic" || E === "disappointed") { brow(-1, r*.04, -r*.22); brow(1, r*.04, -r*.22); }
   else if (E === "offended" || E === "puzzled") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
   else if (E === "calm" || E === "smug") { brow(-1, 0, -r*.02); brow(1, 0, -r*.02); }
   else { brow(-1, 0, -r*.08); brow(1, 0, -r*.08); }
   const closed = E === "despair" || E === "sigh" || E === "asleep" || E === "yawn";   // asleep, yawn: the sleepy a1 rook (bible 7.45)
-  if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
+  if (E === "oneeye") {   // waking up: one eye snaps open, the other still shut (the a1 rook in 15a, bible 7.47)
+    mk("path", { d: `M${x-r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g);
+    mk("ellipse", { cx: x+r*.32, cy: y-r*.12, rx: r*.27, ry: r*.36, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g); mk("circle", { cx: x+r*.32, cy: y-r*.08, r: r*.1, fill: INK }, g);
+  } else if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
   else if (E === "amused" || E === "relieved") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.04} q${r*.2} ${-r*.26} ${r*.4} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g); }  // eyes squeezed with laughter
   else {
-    const ry = E === "surprised" ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug" || E === "disappointed") ? .17 : .29;
+    const ry = (E === "surprised" || E === "startled") ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug" || E === "disappointed") ? .17 : .29;
     for (const s of [-1, 1]) {
-      mk("ellipse", { cx: x+s*r*.32, cy: y-r*.12, rx: r*(E === "surprised" ? .27 : .24), ry: r*ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
-      mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08, r: r*(E === "surprised" ? .1 : .12), fill: INK }, g);
+      mk("ellipse", { cx: x+s*r*.32, cy: y-r*.12, rx: r*((E === "surprised" || E === "startled") ? .27 : .24), ry: r*ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
+      mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08, r: r*((E === "surprised" || E === "startled") ? .09 : .12), fill: INK }, g);
       mk("circle", { cx: x+s*r*.32+lx*r*.11-r*.04, cy: y-r*.12, r: r*.035, fill: "#fff" }, g);
       if (E === "calm" || E === "smug" || E === "disappointed") mk("path", { d: `M${x+s*r*.32-r*.26} ${y-r*.2} q${r*.26} ${-r*.1} ${r*.52} 0`, stroke: W_[col].f, "stroke-width": r*.16, fill: "none" }, g);
     }
@@ -159,7 +163,7 @@ function gestureArms(g, type, col, c, gest) {
     "hand-chest": [[11, s, 160, 11, "open"]],
     "wave-r": [[12, s, -35, 20, "open"]], "wave-l": [[-12, s, -145, 20, "open"]],
     "shake-r": [[12, s, 10, 10, "fist"]], "shake-l": [[-12, s, 170, 10, "fist"]] };   // handshake: arm stretched out sideways (bible 7.38)
-    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]] });   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
+    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]] });   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
   for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
 }
 function crown(g, y, col, gem) { const F = W_[col].f;
@@ -230,6 +234,9 @@ function drawPiece(parent, p, sw) {
   if (p.o.sweat) for (const [dx, dy] of [[hr*1.2, hy-hr*.5], [hr*1.45, hy+hr*.1]]) mk("path", { d: `M${dx} ${dy} q3 -6 4 0 q-1 4 -4 0Z`, fill: "#bfe3f5", stroke: INK, "stroke-width": .9 }, inner);
   if (p.o.sigh) mk("path", { d: `M${hr*.9} ${hy+hr*.6} q6 -3 8 2 q4 -3 7 2 q-3 5 -8 3 q-4 4 -7 -7Z`, fill: "#f4f6f8", stroke: INK, "stroke-width": .9 }, inner);
   if (p.o.shake) mk("path", { d: `M${-hr*1.8} ${hy-hr*1.6} l-6 -4 M${-hr*2} ${hy-hr*.8} l-7 0 M${hr*1.8} ${hy-hr*1.6} l6 -4`, stroke: INK, "stroke-width": 1.6, "stroke-linecap": "round" }, inner);
+  if (p.o.jolt) { const jg = mk("g", { stroke: INK, "stroke-width": 2.2, "stroke-linecap": "round", fill: "none" }, inner);   // startled awake: big jolt lines around the top, a jump streak under the felt (the a1 rook, bible 7.47)
+    for (const [a, r1, r2] of [[-150, 30, 44], [-120, 32, 48], [-90, 34, 50], [-60, 32, 48], [-30, 30, 44]]) { const c = Math.cos(a * Math.PI / 180), s = Math.sin(a * Math.PI / 180); mk("path", { d: `M${c * r1} ${-40 + s * r1} L${c * r2} ${-40 + s * r2}` }, jg); }
+    for (const dx of [-8, 0, 8]) mk("path", { d: `M${dx} 10 l0 10`, "stroke-width": 1.6 }, jg); }
   if (p.o.zzz) [[10, -62, 9], [17, -73, 11], [26, -87, 13]].forEach(([zx, zy, fz]) => { const t = mk("text", { x: zx, y: zy, "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fz, fill: "#f4f6f8", stroke: INK, "stroke-width": .8, "paint-order": "stroke" }, g); t.textContent = "Z"; });   // Zzz for the sleeping a1 rook: author exception (bible 7.45)
   return g;
 }
@@ -308,7 +315,7 @@ function renderPanel(svg, P, opts) {
     if (t === "n") { const side = Math.abs(fw[0]) > Math.abs(fw[1]), onCentre = it.x0 > 3 && it.x0 < 5; o.dir = pr(4, side && !onCentre ? 4 : it.y0, 0)[0] > x ? 1 : -1; }
     if (o.lookAt) { const tg = items.find(q => q.sq === o.lookAt || roleOf(q.sq, q.ch, state) === o.lookAt || q.role === o.lookAt); if (tg) { const tx = pr(tg.x0, tg.y0, 0)[0]; o.look = tx < x - 4 ? -1 : tx > x + 4 ? 1 : 0; } }
     const s = F / d / 50;
-    placed.push({ t, col, o, x, y, d, s, sq: it.sq, role, c: costumeOf(t, col, role) });
+    placed.push({ t, col, o, x, y: y - (o.jump || 0) * s, d, s, sq: it.sq, role, c: costumeOf(t, col, role) });   // o.jump: lifted off the square (startled, bible 7.47)
   }
   placed.sort((a, b) => b.d - a.d);
   // effects behind pieces
