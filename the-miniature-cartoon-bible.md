@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.48
+Version 7.49
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -55,6 +55,7 @@ Version 7.45 adds a running gag (author decision): the white rook on a1 yawns in
 Version 7.46 clarifies the knight orientation per view (author feedback): from White's or Black's side towards the centre files, from the side towards the middle of the board.
 Version 7.47 makes the a1 rook's awakening in 15a clearer (author feedback): both eyes wide open with the eyebrows shot up, small jolt lines (subtle).
 Version 7.48 approves panel 16a, the final position from above (author decision); Scene 16 is complete.
+Version 7.49 approves panels 14e and 14f (author decision): full panel blocks in Section 18 (Scene 14) and manifests 68 and 69 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1126,6 +1127,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.47 | Author feedback on 15a: "No, don't like - let's make it slightly more subtle and try with the rook opening one eye. Get rid of the arm." The a1 rook now wakes up by opening one eye wide while the other stays shut, with a few small jolt lines; the arm and the jump are gone. SVG preview: expression "oneeye". |
 | 7.47 | Author feedback on 15a: "do something similar like this but use both eyes open; try to work with the eyebrows to express surprise." The a1 rook now wakes with both eyes wide open and his eyebrows shot up high above them; the small jolt lines stay, no arm, no jump. SVG preview: expression "startled". |
 | 7.48 | Author decision: panel 16a accepted ("77-panel-16a.svg accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 16) and as manifest 77 in Section 20.3 (no line of the play: the overview between 15e and 16b); the proposal block is kept and marked as approved. Scene 16 is fully approved. |
+| 7.49 | Author decisions: panels 14f and 14e accepted ("69-panel-14f.svg accept", "68-panel-14e.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14) and as manifests 68 and 69 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 39 (the King's speech after the capture, 14e to 14h) is now complete. Panels 14a to 14d stay proposals. |
 
 ---
 
@@ -1830,8 +1832,25 @@ Approved in 7.43.
 - Balloon (Caballo, jagged shout balloon): Voor de glorie en de overwinning ! Ten aanval !
 
 ## Scene 14 - Regina Captured
-Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40; panels 14a to 14f are still proposals (Section 18, Proposed Panels).
+Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49; panels 14a to 14d are still proposals (Section 18, Proposed Panels).
 Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
+
+### Panel 14e
+Approved in 7.49 (as shown in the SVG preview).
+- Camera: from Black's side, at officer height, close-up of the White King (e1); the d1 square beside him is empty (Regina has been captured).
+- In frame: the King in the centre, large; the heads of the pawns on f2 (bottom left) and d2 (bottom right). Every piece on a square that is in frame is shown.
+- Characters: the King in despair: eyes squeezed shut, eyebrows drooping, mouth open as he speaks. The pawns look on, worried, mouths closed.
+- Balloon placement: top left, clear of the crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Lap, daar hebt ge’t al. Regina geslagen.
+
+### Panel 14f
+Approved in 7.49 (as shown in the SVG preview).
+- Camera: from Black's side, a little to the queenside of the King, at officer height: the same camera as 14b, 15a and 15b (7.46).
+- In frame: the White King (e1) at the left; Alfil on d3 in front, centre (paprika stains on his mitre); behind him the white queenside: the c1 bishop, the b1 knight, the a1 rook and the pawns on d2, c2, b2 and a2; the pawns on f2 and e3 in the foreground. Every piece on a square that is in frame is shown.
+- Characters: the King angry, mouth open, both arms spread wide with open hands. Alfil looks at the King, mouth closed. The b1 knight faces inward, towards the centre files (7.46). The others neutral, mouths closed.
+- The sleepy a1 rook (7.45): asleep, eyes closed, mouth slightly open, the tower leaning a little, with a small "Z Z Z" rising beside his top.
+- Balloon placement: top left; its curved tail ends just beside the King's mouth.
+- Balloon (White King): En terwijl ik hier weer zit te zwoegen om de partij te winnen
 
 ### Panel 14g
 Approved in 7.35 (as set by the author in 7.34).
@@ -2256,14 +2275,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - No balloons.
 
-### Panel 14e (PROPOSAL)
+### Panel 14e (approved in 7.49: the approved panel block is in Section 18, Scene 14)
 - Board state: 12.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (despair, speaking).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
 - Balloon (White King): Lap, daar hebt ge’t al. Regina geslagen.
 
-### Panel 14f (PROPOSAL)
+### Panel 14f (approved in 7.49: the approved panel block is in Section 18, Scene 14)
 - Board state: 12.
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (angry, speaking, gesture both-open); Alfil (looks at White King).
@@ -4191,7 +4210,66 @@ PANEL 13a   (sequence number 62)
 ```
 
 ### Scene 14 - Regina Captured
-Added in 7.35 for the panel the author approved (14g). 14h added in 7.40. Panels 14a to 14f are still proposals and have no manifests yet.
+Added in 7.35 for the panel the author approved (14g). 14h added in 7.40, 14e and 14f in 7.49. Panels 14a to 14d are still proposals and have no manifests yet.
+
+```
+PANEL 14e   (sequence number 68)
+
+1.  Scene 14, panel e: the King sees that Regina has been taken.
+2.  Script excerpt:
+      Koning:
+      Lap, daar hebt ge’t al. Regina geslagen. En terwijl ik hier weer zit te zwoegen om de partij te winnen gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8. Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
+3.  Dialogue:
+      Balloon 1: "Lap, daar hebt ge’t al. Regina geslagen."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1, close-up; the heads of the pawns f2 and d2 at the bottom; the d1 square empty.
+6.  Listening: the pawns, worried, mouths closed.
+7.  Camera on Black's side, at officer height, close-up of the King.
+8.  Koning: despair, eyes squeezed shut, eyebrows drooping, mouth open.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 12 (after 6. ... gxh5). No move.
+12. Continuity: right after Regina's capture in 14d; Regina beside the board next to the h8 rook (out of frame).
+13. Must not appear: Regina on d1; an open mouth on the pawns; anger or sigh symbols.
+14. Dialogue length: 7 words, 42 characters.
+15. Segmentation: speech 39, the first two sentences; continues in 14f with "En terwijl ik hier ...".
+16. Visual priority: the King's despair.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 8%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the speech continues in 14f.
+```
+
+```
+PANEL 14f   (sequence number 69)
+
+1.  Scene 14, panel f: the King complains that he does all the work.
+2.  Script excerpt:
+      Koning:
+      Lap, daar hebt ge’t al. Regina geslagen. En terwijl ik hier weer zit te zwoegen om de partij te winnen gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8. Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft.
+3.  Dialogue:
+      Balloon 1: "En terwijl ik hier weer zit te zwoegen om de partij te winnen"
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the left; Alfil on d3 in front, centre; the c1 bishop, the b1 knight, the a1 rook and the queenside pawns behind; the pawns f2 and e3 in the foreground.
+6.  Listening: Alfil, mouth closed, looking at the King; the others neutral, mouths closed; the a1 rook asleep (7.45).
+7.  Camera on Black's side, a little to the queenside of the King, at officer height (as 14b, 15a, 15b).
+8.  Koning: angry, mouth open, both arms spread wide.
+    Alfil: mouth closed; looks at the King.
+9.  Balloon 1 top left; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 12 (after 6. ... gxh5). No move.
+12. Continuity: after Regina's capture in 14d and the King's first lines in 14e; the a1 rook still asleep.
+13. Must not appear: an open mouth on Alfil; Regina on the board; the a1 rook awake.
+14. Dialogue length: 13 words, 61 characters.
+15. Segmentation: speech 39, the first half of its third sentence ("En terwijl ik hier ..." up to "... te winnen"); continues in 14g with "gaat ze daar ...".
+16. Visual priority: the King's spread arms and anger.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 12%.
+19. Layout: medium shot of the King and Alfil (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the sentence continues in 14g.
+```
 
 ```
 PANEL 14g   (sequence number 70)
@@ -4617,7 +4695,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | - | Scene catalog only. |
 | 38 | Move: 6. ... gxh5 | 14 | - | Scene catalog only. |
-| 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14g, 14h (14e, 14f proposals) | Partly written: panel scripts and manifests for 14g (approved in 7.35) and 14h (approved in 7.40), Section 20.3; the rest of the speech in the proposals 14e and 14f. |
+| 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14e, 14f, 14g, 14h | Panel script written (14g approved in 7.35, 14h in 7.40, 14e and 14f in 7.49); manifests written (Section 20.3). |
 | 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | 15a | Panel script written (approved in 7.40); manifest written (Section 20.3). |
 | 41 | Koning: "Bedankt voor dieje info raadsheer Alfil..." | 15 | 15b | Panel script written (approved in 7.40); manifest written (Section 20.3). |
 | 42 | Caballo: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost..." | 15 | 15c, 15d, 15e | Panel script written (approved in 7.40); manifests written (Section 20.3). |
@@ -4857,3 +4935,4 @@ Items that need a decision from the author.
 | 7.46 | - | Knight orientation per view: towards the centre files from White's or Black's side, towards the middle of the board from the side; shared camera of 14b, 14f, 15a, 15b adjusted so the a1 rook stays visible. |
 | 7.47 | - | 15a: the a1 rook's awakening made explicit (both eyes wide open, eyebrows shot up, small jolt lines). |
 | 7.48 | - | Panel 16a approved: panel block and manifest 77; Scene 16 complete. |
+| 7.49 | - | Panels 14e and 14f approved: panel blocks and manifests 68, 69; coverage item 39 complete. |
