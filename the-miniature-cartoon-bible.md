@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.79
+Version 7.80
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -86,6 +86,7 @@ Version 7.76 records that the paprika stains stay on Alfil's mitre for the whole
 Version 7.77 gives the cover navy-blue and cream colours (author decision; Section 13, Cover Direction).
 Version 7.78 reroutes the balloon tail in panel 3b round the end of the black army, so it crosses no piece (author decision).
 Version 7.79 frees the heads under Alfil's balloon in panel 5d-2 (author decision).
+Version 7.80 zooms panel 6d in a little on the black army (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1222,6 +1223,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.78 | Author: "Look for opportunities where a textballoon tail can avoid covering another piece its face. Suggest a visual improvement". Claude checked every tail with a stricter test (all pieces, the tail's width): 3b crosses a black pawn's face; 13a only grazes a pawn's head. Also noted (balloons themselves): 15c (since 7.71 the balloon covers small background faces of the black army), 15b (accepted) and 5d-2 (partly Caballo's head). For 3b the author asked "how about a broader balloon so that it doesn't hit the black pieces ?" (W1 to W3: balloon free, tail still through the black army), then "can we do even better with the balloon tail ? because now the tail drives right through the black army." Claude showed T1 and T2 (the tail sweeping round the end of the black row); author decision: "go with T2, apply to 3b". 3b panel block: a balloon-placement line. |
 | 7.78 | 15c (the balloon over the black army since 7.71): Claude showed R1 (balloon top right), R2 and R3 (camera aimed higher). Author decision: "We treat this image as an exception because the panel is about the cola spot which is clearly visible". 15c stays as approved in 7.71; a local exception, not a rule. |
 | 7.79 | 5d-2 (author: "lets now have a look at 5d-2"): Alfil's balloon covered the tip of Caballo's ear, the top of Alfil's mitre and the top of the h1 rook. Claude showed S1, S2 and S3 (a broad two-line balloon, the pieces lower); the author: "generate me something between S1 and S2 let me visually compare the three" (S12); author decision: "S2 is the winner". 5d-2 panel block: a balloon-placement line. With this the balloon review of 7.78 is closed. |
+| 7.80 | Author feedback on 6d: "Could we zoom more in on the black army here ? Suggest some alternatives". Claude showed Z1 to Z3, then, asked "I want something between wat is now and Z1", H1 to H3; author: "H1 is close, just zoom a little less and fix the text box for the move." Applied first: a zoom a little less than H1; then the author: "pick H1", so H1 is used. The move box was only cut off by the bottom edge of Claude's comparison screenshot; in the panel itself it is complete, bottom left. 6d panel block: a framing line. |
 
 ---
 
@@ -1673,6 +1675,7 @@ Approved in 7.16 (camera as set by the author in 7.15).
 - In frame: the complete black army on ranks 7 and 8 (from this side the a-file is left, the h-file right), with the d7 square empty; the black pawn that has just moved to d5 in front, in the centre; the gentle rise in the middle of the board, shown only by light and shadow, in front of it; the cola stain on f6 only a faint discolouration.
 - Action: the black pawn moves from d7 to d5 (1. ... d5), two squares forward: a short motion streak behind it shows the step. It now stands on the near slope of the gentle rise (Appendix B, item 14).
 - Characters: the d5 pawn calm and determined, mouth closed; the other black pieces neutral, mouths closed.
+- Framing (author decision in 7.80): the same camera, zoomed in a little (about 1.2 times) on the black army, so the whole army from rook to rook is larger and the faces read, with the d5 pawn, its move lines and the move box in frame.
 - Move box (bottom-left corner, bold, white rectangle): 1. ... d5
 - No balloons.
 
@@ -5547,3 +5550,4 @@ Items that need a decision from the author.
 | 7.77 | - | Cover: navy-blue page, cream title and text. |
 | 7.78 | - | 3b: the balloon tail sweeps round the end of the black army. |
 | 7.79 | - | 5d-2: broad balloon above all heads, the pieces a little lower. |
+| 7.80 | - | 6d: zoomed in a little on the black army. |

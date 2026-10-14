@@ -85,7 +85,7 @@ window.PANELS = [
   cast: { koning: { expr: "stubborn", talk: true, gest: "wave-l" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Allee goed dan, want \"Dieje van den overkant\" wordt precies al serieus ongeduldig." }] },
 { id: "6c", scene: 6, status: A, movebox: "1. e3", state: 1, cam: { from: [7.4, -1.0, 4.4], at: [4.4, 3.4, 0.0], f: 560 }, fx: [{ move: ["e2", "e3"] }], cast: {}, balloons: [] },
-{ id: "6d", scene: 6, status: A, movebox: "1. ... d5", state: 2, cam: { from: [4.0, 2.4, 3.6], at: [4.0, 6.95, 0.5], f: 355 }, fx: [{ move: ["d7", "d5"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, d5: { expr: "calm" } }, balloons: [] },
+{ id: "6d", scene: 6, status: A, movebox: "1. ... d5", state: 2, cam: { from: [4.0, 2.4, 3.6], at: [4.0, 6.85, 0.5], f: 420 }, fx: [{ move: ["d7", "d5"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, d5: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 7 - Black Takes the Centre (PROPOSAL)
 { id: "7a", scene: 7, status: A, state: 2, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
   cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
