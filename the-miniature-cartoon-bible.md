@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.64
+Version 7.65
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -71,6 +71,7 @@ Version 7.61 adds a background gag (author decision): during the King's monologu
 Version 7.62 gives the proposal panel 12e a new camera (author decision): the black pawn moving to g6 is now fully visible in the centre. Panel 12e is then approved (author decision): panel block in Section 18 and manifest 61 in Section 20.3.
 Version 7.63 approves panels 11g and 11h (author decision): full panel blocks in Section 18 (Scene 11) and manifests 55 and 56 in Section 20.3; Scene 11 is complete.
 Version 7.64 approves panels 12a, 12b and 12c (author decision): full panel blocks in Section 18 (Scene 12) and manifests 57 to 59 in Section 20.3.
+Version 7.65 gives the proposal panel 12d a bird's-eye camera so the mate threat Qxf7# can be read, a scared Black King and the h8 rook with eyes only for Regina (author decisions). Panel 12d is then approved (author decision): panel block in Section 18 and manifest 60 in Section 20.3; Scene 12 is complete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -909,7 +910,7 @@ Every panel in which a move is played shows how the piece moved, with three whit
 - The knight: the three dashed lines make a low hop, about half the knight's height, from the foot of the start square to the target square; the hop comes down onto the target square behind the knight, and small landing ticks at its felt show the landing. The jump clearly goes from square to square.
 - Depth: the hop passes behind the pieces that are nearer to the viewer and in front of the pieces that are farther away; the knight always stands in front of its own landing.
 - No take-off puff or other extra marks; the move box stays as before (Move Box, below).
-- Where the start square would be hidden, the camera is chosen so that the start square and the target square are both in sight (12d, 13b).
+- Where the start square would be hidden, the camera is chosen so that the start square and the target square are both in sight (13b). In 12d the start square h3 is just out of frame, because the panel shows the mate threat from above (author decision in 7.65); the hop comes in from the bottom edge.
 
 ## Move Box (author decision in 7.8)
 - Every panel in which a move is played on the board shows that move, with its move number, in bold black text in a small white rectangle with a thin black ink outline, in the bottom-left corner of the panel. It applies to the preview and to the final images.
@@ -1183,6 +1184,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.62 | Author decision: panel 12e accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 12) and as manifest 61 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 34 (5. ... g6) marked as written. |
 | 7.63 | Author decisions: panels 11g and 11h accepted ("55-panel-11g.svg accept", "56-panel-11h.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 11) and as manifests 55 and 56 in Section 20.3 (field 2 copied from Section 1); the proposal blocks are kept and marked as approved; Script Coverage Map items 30 (4. Dh5) and 31 (4. ... Pe7) marked as written. Scene 11 is complete. |
 | 7.64 | Author decisions: panels 12a, 12b and 12c accepted ("57-panel-12a.svg accept", "58-panel-12b.svg accept", "59-panel-12c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 12) and as manifests 57 to 59 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 32 (speech 32) marked as written. Panel 12d is still a proposal. |
+| 7.65 | Author feedback on 12d: "The point here is that white is threatening checkmate by Qxf7#. In order to recognize a checkmate threat the squares d8-h8-d5-h5 should be in sight. The image could improve from a more birdseye view here. Since checkmate is threatened the black king should look scared. The black rook at h8 that only has eyes for the white queen". Claude showed three high cameras (A from White's side, a wider A that kept h3 in frame, C from White's kingside corner) with a scared Black King (wide eyes, sweat drops); author decision: "go with A". 12d proposal block: a camera and mate-threat line; Section 13, Move Marks: 12d named as the case where the start square is just out of frame (old wording in Appendix A). 12d stays a proposal. |
+| 7.65 | Author decision: panel 12d accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 12) and as manifest 60 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 33 (5. Pg5) marked as written. Scene 12 is complete. |
 
 ---
 
@@ -1907,7 +1910,7 @@ Approved in 7.63 (as shown in the SVG preview).
 - No balloons.
 
 ## Scene 12 - The King Suspects f6
-Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview), panels 12a, 12b and 12c in 7.64; panel 12d is still a proposal (Section 18, Proposed Panels).
+Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview), panels 12a, 12b and 12c in 7.64, panel 12d in 7.65; Scene 12 is complete.
 Board position for 12e: State 10 (5. ... g6 is played in this panel). Caballo stands on g5, Regina on h5, Alfil on d3.
 
 ### Panel 12a
@@ -1933,6 +1936,16 @@ Approved in 7.64 (as shown in the SVG preview).
 - Characters: the King proud, mouth open, looks at Caballo and points down towards him. Caballo heroic, ready, mouth closed. The others neutral, mouths closed.
 - Balloon placement: top centre, above the King, clear of his crown and cross; its curved tail ends just beside his mouth.
 - Balloon (White King): Ridder Caballo, hop naar g5. Allez vooruit, ju !
+
+### Panel 12d
+Approved in 7.65 (as shown in the SVG preview).
+- Camera (author decision in 7.65): high, a bird's-eye view from White's side, the files running up the panel, so the squares from d8 to h8 and from d5 to h5 are all in sight.
+- In frame: the black army along the top (the rooks, the knights on b8 and e7, the bishops on d7 and f8, the Black Queen on d8, the Black King on e8, the pawns); the black pawn on d5; Caballo on g5 and Regina on h5 at the right; Alfil on d3 and the white pawns at the bottom; the greasy spot on f3. Every piece on a square that is in frame is shown.
+- The mate threat: White now threatens checkmate with Qxf7#: Regina on h5 and Caballo on g5 both attack f7, the pawn in front of the Black King.
+- Action: Caballo jumps from h3 to g5 (5. Pg5): a low dashed hop that comes in from the bottom edge (h3 is just out of frame) and comes down on g5 behind him (Section 13, Move Marks). Caballo heroic, mouth closed.
+- Characters: the Black King scared: eyes wide, sweat drops beside his head, looking at Regina. The black rook on h8 only has eyes for Regina: he looks at her, with a light blush (7.34). The others neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 5. Pg5
+- No balloons.
 
 ### Panel 12e
 Approved in 7.62 (as shown in the SVG preview).
@@ -2365,13 +2378,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: White King (proud, speaking, looks at Caballo, gesture point-down-l); Caballo (heroic).
 - Balloon (White King): Ridder Caballo, hop naar g5. Allez vooruit, ju !
 
-### Panel 12d (PROPOSAL)
+### Panel 12d (approved in 7.65: the approved panel block is in Section 18, Scene 12)
 - Board state: 9.
 - Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina on h5 ("rook sees queen"), with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: h3-g5 (move streak).
 - Camera and move marks (author decisions in 7.59): from beyond the h-file, towards White's side, looking across the jump, so h3 and g5 are both in sight; Caballo's jump from h3 to g5 is a low dashed hop that comes down on g5 behind him (Section 13, Move Marks).
+- Camera and the mate threat (author decisions in 7.65): a high, bird's-eye view from White's side, the files running up the panel, so the squares from d8 to h8 and from d5 to h5 are all in sight: White threatens checkmate with Qxf7# (Regina on h5 and Caballo on g5 both attack f7, in front of the Black King). Caballo's hop from h3 (just out of frame, at the bottom edge) comes down on g5 behind him. The Black King looks scared: eyes wide, sweat drops, looking at Regina. The black rook on h8 only has eyes for Regina (7.34). This camera replaces the camera of 7.59.
 - Move box (bottom-left corner, bold, white rectangle): 5. Pg5
 - No balloons.
 
@@ -4395,7 +4409,7 @@ PANEL 11h   (sequence number 56)
 ```
 
 ### Scene 12 - The King Suspects f6
-Added in 7.62 for the panel the author approved (12e); 12a, 12b and 12c added in 7.64. Panel 12d is still a proposal and has no manifest yet.
+Added in 7.62 for the panel the author approved (12e); 12a, 12b and 12c added in 7.64, 12d in 7.65.
 
 ```
 PANEL 12a   (sequence number 57)
@@ -4482,6 +4496,33 @@ PANEL 12c   (sequence number 59)
 19. Layout: medium-wide view of the King and Caballo (Section 23.D); one balloon.
 20. Overflow: not applicable.
 21. Continuity requirements: Caballo jumps to g5 in 12d.
+```
+
+```
+PANEL 12d   (sequence number 60)
+
+1.  Scene 12, panel d: Caballo jumps to g5; White threatens Qxf7#.
+2.  Script excerpt:
+      5. Pg5
+3.  Dialogue: none. Move box (bottom-left corner): "5. Pg5".
+4.  No speaker.
+5.  Visible: the black army along the top; the black d5 pawn; Caballo g5 and Regina h5 at the right; Alfil d3 and the white pawns at the bottom; the squares d8 to h8 and d5 to h5 all in sight.
+6.  Watching: the Black King, scared (eyes wide, sweat drops), looking at Regina; the h8 rook with eyes only for Regina, light blush (7.34); the others neutral, mouths closed.
+7.  Camera high, a bird's-eye view from White's side (author, 7.65).
+8.  Caballo: heroic, mouth closed; a low dashed hop from h3 (just out of frame) down onto g5 behind him (Section 13, Move Marks).
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 9: the move 5. Pg5 (knight h3 to g5) happens in this panel; White threatens Qxf7#.
+12. Continuity: the King ordered the jump in 12c; Black answers with 5. ... g6 in 12e.
+13. Must not appear: the threat spelled out in text or arrows; any other moved piece; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after speech 32.
+16. Visual priority: the mate threat on f7, the scared Black King.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: bird's-eye view of Black's kingside (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 9 into 12e.
 ```
 
 ```
@@ -5140,7 +5181,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 30 | Move: 4. Dh5 | 11 | 11g | Written: panel script and manifest 55 (approved in 7.63, Section 20.3). |
 | 31 | Move: 4. ... Pe7 | 11 | 11h | Written: panel script and manifest 56 (approved in 7.63, Section 20.3). |
 | 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | 12a, 12b, 12c | Written: panel scripts and manifests 57 to 59 (approved in 7.64, Section 20.3). |
-| 33 | Move: 5. Pg5 | 12 | - | Scene catalog only. |
+| 33 | Move: 5. Pg5 | 12 | 12d | Written: panel script and manifest 60 (approved in 7.65, Section 20.3). |
 | 34 | Move: 5. ... g6 | 12 | 12e | Written: panel script and manifest 61 (approved in 7.62, Section 20.3). |
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
@@ -5307,6 +5348,7 @@ Kept for history. Do not use for generation.
 - 7.54 to 7.55, Common Prompt Block: "The board lies on a light grey-blue table in an empty chess club room, softly out of focus, with no people." (the SVG preview drew the table as a horizontal band below a fixed wall line). -> Changed in 7.56 by author decisions: the board lies in the middle of a long rectangular table (13 x 20 squares), seen in the same perspective as the board, with the cloth visible all around it.
 - 7.5 to 7.56, Common Prompt Block: "... the squares bend over it." (no lean for pieces on the rise; only the two kings in 16c leaned, from 7.39). -> Extended in 7.57 by author decision: every piece on the four centre squares leans slightly with the slope.
 - 7.59, Section 13, Move Marks: "When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it." (two lines). -> Changed in 7.60 by author feedback: always three lines, spread a little wider.
+- 7.59 to 7.64, Section 13, Move Marks: "Where the start square would be hidden, the camera is chosen so that the start square and the target square are both in sight (12d, 13b)."; 12d camera from beyond the h-file with h3 and g5 in sight. -> Changed in 7.65 by author decision: 12d from above, so the mate threat can be read; h3 just out of frame.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5408,3 +5450,4 @@ Items that need a decision from the author.
 | 7.62 | - | Panel 12e: new camera, the g6 pawn in the centre; approved: panel block and manifest 61. |
 | 7.63 | - | Panels 11g and 11h approved: panel blocks and manifests 55, 56; Scene 11 complete. |
 | 7.64 | - | Panels 12a, 12b and 12c approved: panel blocks and manifests 57 to 59. |
+| 7.65 | - | Panel 12d: bird's-eye view of the mate threat Qxf7#, scared Black King; approved: panel block and manifest 60; Scene 12 complete. |
