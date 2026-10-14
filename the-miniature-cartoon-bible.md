@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.77
+Version 7.78
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -84,6 +84,7 @@ Version 7.74 marks the peak of the King's monologue in 11a with a burst behind h
 Version 7.75 gives panel 11b a closer framing with Regina in the centre and a wide balloon above all three heads (author decision).
 Version 7.76 records that the paprika stains stay on Alfil's mitre for the whole cartoon, as part of his identity (author decision; Section 4, Paprika).
 Version 7.77 gives the cover navy-blue and cream colours (author decision; Section 13, Cover Direction).
+Version 7.78 reroutes the balloon tail in panel 3b round the end of the black army, so it crosses no piece (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1217,6 +1218,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.76 | Quality check, the paprika question (Claude: the King orders Alfil to wipe off the paprika in Scene 7, yet the stains stay until the end; deadpan joke or oversight?). Author decision: "I kept the paprika because I feel it is part of alfils identity." Section 4, Paprika: a line that the stains stay for the whole cartoon. Also recorded: after prototypes of 11d (the bishop in the foreground) and 11e (a close-up of the King) the author was not convinced; the monologue page stays as it is (11a burst, 11b closer). |
 | 7.76 | Quality check, the balloon in 15b that hides the a1 rook and the b1 knight: author decision, "i consider this as handled - the rook was clearly awake in the previous image". 15b stays as approved. With this the quality check of the jokes is closed. |
 | 7.77 | Author feedback on the cover: "I don't like the yellow page and the red letters. suggest me alternate colors and show me a preview". Claude showed A (navy + cream), B (cream + violet), C (dark green + gold) and D (parchment + royal blue), all taken from the album's own colours; author decision: "select option A". Section 13, Cover Direction: a Cover colours line. |
+| 7.78 | Author: "Look for opportunities where a textballoon tail can avoid covering another piece its face. Suggest a visual improvement". Claude checked every tail with a stricter test (all pieces, the tail's width): 3b crosses a black pawn's face; 13a only grazes a pawn's head. Also noted (balloons themselves): 15c (since 7.71 the balloon covers small background faces of the black army), 15b (accepted) and 5d-2 (partly Caballo's head). For 3b the author asked "how about a broader balloon so that it doesn't hit the black pieces ?" (W1 to W3: balloon free, tail still through the black army), then "can we do even better with the balloon tail ? because now the tail drives right through the black army." Claude showed T1 and T2 (the tail sweeping round the end of the black row); author decision: "go with T2, apply to 3b". 3b panel block: a balloon-placement line. |
 
 ---
 
@@ -1552,6 +1554,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Middle ground: all eight white pawns seen from behind, then the empty board: the board bulging gently in the middle, the cola stain on f6 only a faint discolouration, the greasy spot on f3 faint.
 - Background: the complete black army in its starting formation, all 16 pieces, facing the camera. The Black King on e8 is clearly recognisable: calm, patient, short beard, waiting with composure. He is not laughing. The black knights face the centre.
 - Black army (author decision in 7.23): the black army realises that White has some kind of trouble and is visibly amused: the black pieces other than the Black King laugh with their mouths closed in a broad grin (teeth showing), eyes squeezed shut with laughter, eyebrows raised. The Black King alone stays calm and composed and does not laugh.
+- Balloon placement (author decision in 7.78): a broad balloon in four lines at the top right, above the whole black army; its tail does not go through the black army but sweeps down past the end of the black back row (beyond the h8 rook) and curves in to the King's mouth, touching no black piece and no face.
 - Balloon (White King): En maak voort want “Dieje van den overkant" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen.
 
 ## Scene 4 - Pawn Mutiny
@@ -5538,3 +5541,4 @@ Items that need a decision from the author.
 | 7.75 | - | 11b: closer framing, Regina centred, a wide balloon above all three heads. |
 | 7.76 | - | Paprika stays on Alfil's mitre to the end, part of his identity. |
 | 7.77 | - | Cover: navy-blue page, cream title and text. |
+| 7.78 | - | 3b: the balloon tail sweeps round the end of the black army. |
