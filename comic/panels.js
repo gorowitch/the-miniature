@@ -189,7 +189,7 @@ window.PANELS = [
 { id: "13a", scene: 13, status: A, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
   cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },
   balloons: [{ who: "caballo", shout: true, w: 500, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
-{ id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [12.2, 1.6, 3.6], at: [6.9, 5.7, 0.4], f: 760 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+{ id: "13b", scene: 13, status: A, movebox: "6. Pxh7", state: 11, beside: BESIDE11, hopH: 0.85, cam: { from: [12.0, 3.4, 4.2], at: [6.8, 6.0, 0.5], f: 900 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, bking: { expr: "amused", lookAt: "regina" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
 { id: "14a", scene: 14, status: A, state: 11, beside: BESIDE11, cam: zb([[4.72, 0.5, 0]], { dist: 1.35, h: 1.5, th: 1.58, f: 640 }), fx: [{ burst: "koning" }],
   cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },

@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.65
+Version 7.66
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -72,6 +72,7 @@ Version 7.62 gives the proposal panel 12e a new camera (author decision): the bl
 Version 7.63 approves panels 11g and 11h (author decision): full panel blocks in Section 18 (Scene 11) and manifests 55 and 56 in Section 20.3; Scene 11 is complete.
 Version 7.64 approves panels 12a, 12b and 12c (author decision): full panel blocks in Section 18 (Scene 12) and manifests 57 to 59 in Section 20.3.
 Version 7.65 gives the proposal panel 12d a bird's-eye camera so the mate threat Qxf7# can be read, a scared Black King and the h8 rook with eyes only for Regina (author decisions). Panel 12d is then approved (author decision): panel block in Section 18 and manifest 60 in Section 20.3; Scene 12 is complete.
+Version 7.66 gives the proposal panel 13b a closer camera from the h-file side (the e3 pawn out of sight, the g6 pawn clearly visible, a slightly higher hop for Caballo in this panel only) and a happy grin for the Black King: he sees that the White Queen is en prise (author decisions). Panel 13b is then approved: panel block in Section 18 and manifest 63 in Section 20.3; every panel of the cartoon is now approved.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1186,6 +1187,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.64 | Author decisions: panels 12a, 12b and 12c accepted ("57-panel-12a.svg accept", "58-panel-12b.svg accept", "59-panel-12c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 12) and as manifests 57 to 59 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 32 (speech 32) marked as written. Panel 12d is still a proposal. |
 | 7.65 | Author feedback on 12d: "The point here is that white is threatening checkmate by Qxf7#. In order to recognize a checkmate threat the squares d8-h8-d5-h5 should be in sight. The image could improve from a more birdseye view here. Since checkmate is threatened the black king should look scared. The black rook at h8 that only has eyes for the white queen". Claude showed three high cameras (A from White's side, a wider A that kept h3 in frame, C from White's kingside corner) with a scared Black King (wide eyes, sweat drops); author decision: "go with A". 12d proposal block: a camera and mate-threat line; Section 13, Move Marks: 12d named as the case where the start square is just out of frame (old wording in Appendix A). 12d stays a proposal. |
 | 7.65 | Author decision: panel 12d accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 12) and as manifest 60 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 33 (5. Pg5) marked as written. Scene 12 is complete. |
+| 7.66 | Author feedback on 13b: "In this panel the black king looks happy. He sees that the white queen is en prise I would also zoom in a little more so the pawn on e3 goes out of sight". Claude showed two closer framings with the Black King amused (broad grin) or smug; author decision: "go with zoom 1 and the amused king". Then: "Lets also zoom a little so that the pawn on g6 is clearly visible." From this angle the g6 pawn stood right behind Regina; Claude moved the camera along the h-file side (H, I) and showed H with a slightly higher hop, because the hop then crossed the pawn's face; author decision: "go with H and the higher hop". The higher hop is local to 13b; the general rule (Section 13, Move Marks) is unchanged. 13b proposal block: a framing and Black King line. 13b stays a proposal. |
+| 7.66 | Author decision: panel 13b accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 13) and as manifest 63 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 36 (6. Pxh7) marked as written. Scene 13 is complete; with it every panel of the cartoon is approved. |
 
 ---
 
@@ -1957,7 +1960,7 @@ Approved in 7.62 (as shown in the SVG preview).
 - No balloons.
 
 ## Scene 13 - Caballo's Charge
-Status: panel 13a approved by the author in 7.43 (balloon as set by the author in 7.43, as shown in the SVG preview); panel 13b is still a proposal (Section 18, Proposed Panels).
+Status: panel 13a approved by the author in 7.43 (balloon as set by the author in 7.43, as shown in the SVG preview), panel 13b in 7.66; Scene 13 is complete.
 Board position for 13a: State 10 (after 5. ... g6). Caballo stands on g5, Regina on h5, Alfil on d3.
 
 ### Panel 13a
@@ -1967,6 +1970,15 @@ Approved in 7.43.
 - Characters: Caballo heroic, mouth open, ready to charge; white speed lines burst out behind him. Regina (h5) has a light pink blush and glances towards the black rook on h8 (7.34). The other pieces neutral, mouths closed.
 - Balloon layout (author decisions in 7.43): a jagged shout balloon at the top, wide enough for two lines, broken after the first exclamation mark ("Voor de glorie en de overwinning !" / "Ten aanval !"), so no exclamation mark stands alone on a line; a rounded, curved tail that leaves the jagged outline of the balloon itself and points at Caballo's mouth, its tip stopping a little in front of his snout without touching it; clear of all faces.
 - Balloon (Caballo, jagged shout balloon): Voor de glorie en de overwinning ! Ten aanval !
+
+### Panel 13b
+Approved in 7.66 (as shown in the SVG preview).
+- Camera (author decisions in 7.59 and 7.66): from beyond the h-file, towards the fifth rank, close, so the white pawn on e3 is out of sight and the black pawn on g6 stands clearly visible beside Regina.
+- In frame: Regina on h5 in the foreground at the left (seen from behind); the black pawn on g6 beside her; Caballo on h7 in the centre; the black rook on h8 at the right; the black army behind them (the Black King on e8, the Black Queen, the bishops, the knights, the pawns). Every piece on a square that is in frame is shown.
+- Action: Caballo jumps from g5 to h7 and captures the pawn there (6. Pxh7): a dashed hop that passes behind Regina and comes down on h7 behind him (Section 13, Move Marks); in this panel only the hop is a little higher than usual, so it arcs over the g6 pawn's head instead of across his face (7.66). The captured pawn stands beside the board on White's side, near the white h2 pawn, out of frame (7.36). Caballo heroic, mouth closed.
+- Characters: the Black King happy: a broad grin, eyes squeezed with pleasure, looking at Regina, because he sees that the White Queen on h5 is en prise. Regina has a light pink blush and glances towards the black rook on h8; the rook looks at her, with a light blush (7.34). The others neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 6. Pxh7
+- No balloons.
 
 ## Scene 14 - Regina Captured
 Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49, panel 14d in 7.50, panels 14b and 14c in 7.51, panel 14a in 7.52; Scene 14 is complete.
@@ -2407,13 +2419,14 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Balloon layout (author feedback in 7.43): wide enough for two lines, broken after the first exclamation mark ("Voor de glorie en de overwinning !" / "Ten aanval !"), so no exclamation mark stands alone on a line; a rounded, curved tail that leaves the jagged outline of the balloon itself (properly attached, no gap) and points at Caballo's mouth, its tip stopping a little in front of his snout without touching it (7.43); clear of the faces of the pieces behind him.
 - Balloon (Caballo), shout balloon: Voor de glorie en de overwinning ! Ten aanval !
 
-### Panel 13b (PROPOSAL)
+### Panel 13b (approved in 7.66: the approved panel block is in Section 18, Scene 13)
 - Board state: 11.
 - Regina and the h8 rook (author decision in 7.34): Regina (h5, at the bottom left) has a light pink blush and glances towards the black rook on h8; the rook looks at her, with a light blush ("rook sees queen").
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: g5-h7 (move streak).
 - Camera and move marks (author decisions in 7.59): from beyond the h-file corner, looking across the jump, so g5 and h7 are both in sight; Caballo's jump from g5 to h7 is a low dashed hop that passes behind Regina (nearer to the viewer) and comes down on h7 behind him (Section 13, Move Marks).
+- Framing and the Black King (author decisions in 7.66): from beyond the h-file, a little more towards the fifth rank than the camera of 7.59 and a little closer, so the white pawn on e3 is out of sight and the black pawn on g6 stands clearly visible beside Regina (not behind her). In this panel only, Caballo's hop from g5 to h7 is a little higher than the usual low hop, so it arcs over the g6 pawn's head instead of across his face. The Black King looks happy: a broad grin, eyes squeezed with pleasure, looking at Regina, because he sees that the White Queen on h5 is en prise (hanging).
 - Move box (bottom-left corner, bold, white rectangle): 6. Pxh7
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - No balloons.
@@ -4553,7 +4566,7 @@ PANEL 12e   (sequence number 61)
 ```
 
 ### Scene 13 - Caballo's Charge
-Added in 7.43 for the panel the author approved (13a). Panel 13b is still a proposal and has no manifest yet.
+Added in 7.43 for the panel the author approved (13a); 13b added in 7.66.
 
 ```
 PANEL 13a   (sequence number 62)
@@ -4582,6 +4595,33 @@ PANEL 13a   (sequence number 62)
 19. Layout: low medium shot (Section 23.D); one shout balloon.
 20. Overflow: not expected.
 21. Continuity requirements: the capture 6. Pxh7 follows in 13b.
+```
+
+```
+PANEL 13b   (sequence number 63)
+
+1.  Scene 13, panel b: Caballo captures on h7.
+2.  Script excerpt:
+      6. Pxh7
+3.  Dialogue: none. Move box (bottom-left corner): "6. Pxh7".
+4.  No speaker.
+5.  Visible: Regina h5 in the foreground from behind; the black g6 pawn beside her; Caballo h7 in the centre; the black rook h8 at the right; the black army behind them.
+6.  Watching: the Black King, happy (broad grin), looking at Regina; Regina with a light blush glancing at the h8 rook, who looks back with a light blush (7.34); the others neutral, mouths closed.
+7.  Camera from beyond the h-file, towards the fifth rank, close (author, 7.66).
+8.  Caballo: heroic, mouth closed; a dashed hop from g5 behind Regina down onto h7, a little higher than usual in this panel only (7.66).
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 11: the move 6. Pxh7 (knight g5 takes the pawn on h7) happens in this panel; the White Queen on h5 is now en prise.
+12. Continuity: Caballo charged in 13a; the King's outburst follows in 14a; the captured pawn stands beside the board near h2 (7.36).
+13. Must not appear: the g6 pawn hidden behind Regina; the e3 pawn; an open mouth on the watchers; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after Caballo's charge.
+16. Visual priority: Caballo's capture, the Black King's grin.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: close view of the h-file corner (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 11 into Scene 14.
 ```
 
 ### Scene 14 - Regina Captured
@@ -5184,7 +5224,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 33 | Move: 5. Pg5 | 12 | 12d | Written: panel script and manifest 60 (approved in 7.65, Section 20.3). |
 | 34 | Move: 5. ... g6 | 12 | 12e | Written: panel script and manifest 61 (approved in 7.62, Section 20.3). |
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
-| 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
+| 36 | Move: 6. Pxh7 | 13 | 13b | Written: panel script and manifest 63 (approved in 7.66, Section 20.3). |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | 14a, 14b, 14c | Written: panel scripts and manifests for 14b and 14c (approved in 7.51) and 14a (approved in 7.52, Section 20.3). |
 | 38 | Move: 6. ... gxh5 | 14 | 14d | Panel script written (approved in 7.50); manifest written (Section 20.3). |
 | 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14e, 14f, 14g, 14h | Panel script written (14g approved in 7.35, 14h in 7.40, 14e and 14f in 7.49); manifests written (Section 20.3). |
@@ -5451,3 +5491,4 @@ Items that need a decision from the author.
 | 7.63 | - | Panels 11g and 11h approved: panel blocks and manifests 55, 56; Scene 11 complete. |
 | 7.64 | - | Panels 12a, 12b and 12c approved: panel blocks and manifests 57 to 59. |
 | 7.65 | - | Panel 12d: bird's-eye view of the mate threat Qxf7#, scared Black King; approved: panel block and manifest 60; Scene 12 complete. |
+| 7.66 | - | Proposal 13b: closer camera (e3 out of sight, g6 visible), a higher hop here only; the Black King grins, the White Queen is en prise.; approved: panel block and manifest 63; all panels approved. |
