@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.76
+Version 7.77
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -83,6 +83,7 @@ Version 7.73 gives the a1 rook bold jolt lines when he wakes up in 15a, so the p
 Version 7.74 marks the peak of the King's monologue in 11a with a burst behind him (author decision).
 Version 7.75 gives panel 11b a closer framing with Regina in the centre and a wide balloon above all three heads (author decision).
 Version 7.76 records that the paprika stains stay on Alfil's mitre for the whole cartoon, as part of his identity (author decision; Section 4, Paprika).
+Version 7.77 gives the cover navy-blue and cream colours (author decision; Section 13, Cover Direction).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -966,6 +967,7 @@ Result box (author decision in 7.37):
 - The White and Black Kings are both present.
 - The title and subtitle appear on the cover: De Miniatuur (Een hedendaagse klucht in één bedrijf). There is no title inside the panels (author decision in 7.3).
 - The author's name appears on the cover: S. Gorts, right aligned directly below the board image (author decision in 7.18). Apart from the title, the subtitle and this name, the cover carries no text.
+- Cover colours (author decision in 7.77): a deep navy-blue page (#1F3A5F); the title in cream (#F4E4C1) with a very dark navy outline (#0E1A2B); the subtitle and the author's name in cream. Until 7.76 the SVG preview used a bright yellow page with a red title, which the author did not like.
 
 ---
 
@@ -1214,6 +1216,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.75 | Quality check, the monologue (continued; author: "Lets try to prototype 2. Reaction shots: the listener in view, the speaker off-panel."). Claude showed 11b with the King off-panel (A, B, C); the author: "Lets try something like B but with both the king and the bishop completely in the image. The text balloon then goes above the heads of all three pieces." Then: "Can the knight be left out of the frame. If possible can the pawns heads be left out of the frame ?" The knight can; the pawn heads cannot without cutting off the three or removing pieces (tried from higher and from lower: Alfil and the pawns came into the foreground). Then: "Still a part of the knight is shown."; author decision: "go with B4g, apply to 11b". 11b panel block: a framing-and-balloon line; the balloon no longer touches Regina's crown (accepted in 7.33). |
 | 7.76 | Quality check, the paprika question (Claude: the King orders Alfil to wipe off the paprika in Scene 7, yet the stains stay until the end; deadpan joke or oversight?). Author decision: "I kept the paprika because I feel it is part of alfils identity." Section 4, Paprika: a line that the stains stay for the whole cartoon. Also recorded: after prototypes of 11d (the bishop in the foreground) and 11e (a close-up of the King) the author was not convinced; the monologue page stays as it is (11a burst, 11b closer). |
 | 7.76 | Quality check, the balloon in 15b that hides the a1 rook and the b1 knight: author decision, "i consider this as handled - the rook was clearly awake in the previous image". 15b stays as approved. With this the quality check of the jokes is closed. |
+| 7.77 | Author feedback on the cover: "I don't like the yellow page and the red letters. suggest me alternate colors and show me a preview". Claude showed A (navy + cream), B (cream + violet), C (dark green + gold) and D (parchment + royal blue), all taken from the album's own colours; author decision: "select option A". Section 13, Cover Direction: a Cover colours line. |
 
 ---
 
@@ -5534,3 +5537,4 @@ Items that need a decision from the author.
 | 7.74 | - | 11a: a burst behind the King at the peak of his monologue. |
 | 7.75 | - | 11b: closer framing, Regina centred, a wide balloon above all three heads. |
 | 7.76 | - | Paprika stays on Alfil's mitre to the end, part of his identity. |
+| 7.77 | - | Cover: navy-blue page, cream title and text. |
