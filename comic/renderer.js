@@ -39,7 +39,10 @@ for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#5c3d8c", "
 // The album colour style (bible 7.41): variant A, violet; a panel may still name another palette ("default" = the colours before 7.41).
 function usePalette(name) { const p = PALETTES[name || "kingdoms-violet"] || DEFAULT; W_ = p.W; COST = p.COST; BOARD = p.BOARD; }
 // The crowns of both Kings and both Queens, and the Kings' crosses, in the colour of their collar (the trim), in every panel (author decision, bible 7.53).
-let CROWN_TRIM = false, CROSS_SUNK = false;
+let CROWN_TRIM = false, CROSS_SUNK = false, CROWN_S = 1, CROWN_DY = 0, CROWN_SQ = 1, CROWN_DYQ = 0;
+// the crown (with the queen's pearls and the king's cross) scaled about the centre of its base and lowered onto the head by CROWN_DY:
+// the Kings' crowns at 88 %, the Queens' at 80 % (their heads are smaller), so the crowns fit like Alfil's mitre (author decision, bible 7.58)
+const crownG = (g, y, s = CROWN_S, dy = CROWN_DY) => s === 1 && !dy ? g : mk("g", { transform: `translate(0 ${y + dy}) scale(${s}) translate(0 ${-y})` }, g);
 
 function mk(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
 const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], nrm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)}, cr=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
@@ -214,7 +217,7 @@ const SPR = {
     mk("circle", { cx: 0, cy: -50, r: 10.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
     if (o.back) { mk("path", { d: "M-11 -54 C-12 -44 -6 -38 0 -37 C6 -38 12 -44 11 -54 C8 -62 -8 -62 -11 -54Z", fill: c.hair, stroke: INK, "stroke-width": 1.2 }, g); }
     else { mk("path", { d: "M-11 -53 C-8 -64 8 -64 11 -53 C6 -59 -6 -59 -11 -53Z", fill: c.hair, stroke: INK, "stroke-width": 1 }, g); face(g, 0, -49, 10.5, col, o); }
-    crown(g, -58, col, o.role === "regina", c); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1 }, g); },
+    { const cg = crownG(g, -58, CROWN_SQ, CROWN_DYQ); crown(cg, -58, col, o.role === "regina", c); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1 }, cg); } },
   k(g, col, c, o) { base(g, col); robe(g, 44, 7, c, o.back); mk("circle", { cx: 0, cy: -57, r: 11.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.7 }, g);
     if (o.role === "koning" && !o.back) for (const [x, cc] of [[-6, "#2e7a3a"], [5, "#1f4e8c"], [9, "#b8202e"]]) { mk("path", { d: `M${x-1.6} -38 L${x} -33 L${x+1.6} -38 Z`, fill: cc, stroke: INK, "stroke-width": .6 }, g); mk("circle", { cx: x, cy: -31.5, r: 2, fill: "#e2b33a", stroke: INK, "stroke-width": .6 }, g); }
     if (o.back) backHead(g, 0, -57, 11.5, col);
@@ -223,9 +226,9 @@ const SPR = {
       face(g, 0, -57, 11.5, col, Object.assign({ must: true, mustC: bc }, o)); }
     // the cross sunk into the crown, behind it, so the crown is in front of the cross; a longer lower leg keeps it clearly a cross (bible 7.53); P.crossSunk: false puts it back on top
     const crossD = (d, leg) => { const u = d - (leg || 0); return `M-2 ${-78 + d} V${-83 + u} H-6 V${-87 + u} H-2 V${-91 + u} H2 V${-87 + u} H6 V${-83 + u} H2 V${-78 + d} Z`; }, crossA = { fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1.3 };
-    if (CROSS_SUNK) mk("path", Object.assign({ d: crossD(5, 2.5) }, crossA), g);
-    crown(g, -66, col, o.role === "koning", c);
-    if (!CROSS_SUNK) mk("path", Object.assign({ d: crossD(0) }, crossA), g); }
+    if (CROSS_SUNK) mk("path", Object.assign({ d: crossD(5, 2.5) }, crossA), crownG(g, -66));
+    crown(crownG(g, -66), -66, col, o.role === "koning", c);
+    if (!CROSS_SUNK) mk("path", Object.assign({ d: crossD(0) }, crossA), crownG(g, -66)); }
 };
 function drawPiece(parent, p, sw) {
   const g = mk("g", { transform: `translate(${p.x.toFixed(1)},${p.y.toFixed(1)}) scale(${p.s.toFixed(3)})` }, parent);
@@ -268,7 +271,7 @@ function camFor(P) {
 }
 
 function renderPanel(svg, P, opts) {
-  opts = opts || {}; usePalette(P.palette); CROWN_TRIM = P.crownTrim !== false; CROSS_SUNK = P.crossSunk !== false;
+  opts = opts || {}; usePalette(P.palette); CROWN_TRIM = P.crownTrim !== false; CROSS_SUNK = P.crossSunk !== false; CROWN_S = P.crownScale || 0.88; CROWN_DY = P.crownDrop !== undefined ? P.crownDrop : 1.7; CROWN_SQ = P.queenCrownScale || 0.8; CROWN_DYQ = P.queenCrownDrop !== undefined ? P.queenCrownDrop : 2;
   const W0 = P.wide ? 1634 : 800, H = P.tall ? 1160 : 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);  // tall: two strips high (prototype, last page)
   while (svg.firstChild) svg.removeChild(svg.firstChild);
   const defs = mk("defs", {}, svg);
