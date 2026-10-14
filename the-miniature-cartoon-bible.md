@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.51
+Version 7.52
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -58,6 +58,7 @@ Version 7.48 approves panel 16a, the final position from above (author decision)
 Version 7.49 approves panels 14e and 14f (author decision): full panel blocks in Section 18 (Scene 14) and manifests 68 and 69 in Section 20.3.
 Version 7.50 restages the proposal panel 14d (author feedback): the h5 pawn pushes Regina entirely off the board with one arm, Regina does not care, the h8 rook is delighted; fewer pieces in frame. Panel 14d is then approved: panel block in Section 18 and manifest 67 in Section 20.3.
 Version 7.51 approves panels 14b and 14c (author decision): full panel blocks in Section 18 (Scene 14) and manifests 65 and 66 in Section 20.3.
+Version 7.52 zooms panel 14a in closer on the White King (author feedback): no pawn heads in frame, more space between the balloon and the King. Panel 14a is then approved (author decision): panel block in Section 18 and manifest 64 in Section 20.3; Scene 14 is complete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1136,6 +1137,9 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.50 | Author feedback on 14d: "maybe show the black stripes in a different orientation to indicate that Regina is still moving after the push?" The three speed lines moved from the pawn's hand to just behind Regina, slanted along her direction of travel, as motion lines of a figure still sliding away. SVG preview: option "trail". |
 | 7.50 | Author decision: panel 14d accepted ("accept"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 14) and as manifest 67 in Section 20.3; the proposal block is kept and marked as approved; Script Coverage Map item 38 (6. ... gxh5) updated. |
 | 7.51 | Author decisions: panels 14b and 14c accepted ("65-panel-14b.svg accept", "66-panel-14c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 14) and as manifests 65 and 66 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 37 marked as partly written (14a still a proposal). |
+| 7.52 | Author feedback on 14a: "Zoom even more in on the white king so we don't see any pawn heads." The proposal camera moved closer and higher on the King: crown, cross, face, raised fist and upper robe in frame, no pawn heads; the shout balloon stays top left, clear of the cross. Added as a framing line to the proposal block (Section 18). SVG preview: camera th 1.58, f 640. |
+| 7.52 | Author feedback on 14a: "a little more space between the baloon and the king is desirable". The King moved a little right of centre in the frame and the shout balloon to the far left (slightly wider, five lines), leaving clear space between the balloon and his crown and cross. Added as a balloon-spacing line to the proposal block (Section 18). SVG preview: camera aimed just kingside of e1, balloon x 16, w 420. |
+| 7.52 | Author decision: panel 14a accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 14) and as manifest 64 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 37 marked as written. Scene 14 is complete. |
 
 ---
 
@@ -1840,8 +1844,16 @@ Approved in 7.43.
 - Balloon (Caballo, jagged shout balloon): Voor de glorie en de overwinning ! Ten aanval !
 
 ## Scene 14 - Regina Captured
-Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49, panel 14d in 7.50, panels 14b and 14c in 7.51; panel 14a is still a proposal (Section 18, Proposed Panels).
+Status: panel 14g approved by the author in 7.35 (camera and the looks between Regina and the h8 rook as set by the author in 7.34), panel 14h in 7.40, panels 14e and 14f in 7.49, panel 14d in 7.50, panels 14b and 14c in 7.51, panel 14a in 7.52; Scene 14 is complete.
 Board position for 14g: State 12 (after 6. ... gxh5, final position). Regina has been captured and stands beside the board next to the black rook on h8; the captured black h7 pawn stands beside the board on White's side, near the white h2 pawn (7.36). Caballo stands on h7, Alfil on d3.
+
+### Panel 14a
+Approved in 7.52 (as shown in the SVG preview).
+- Camera: from Black's side (the white pieces face the camera), at officer height, a close-up of the White King (e1), standing a little right of centre; closer than first proposed so no pawn heads are in frame (author feedback in 7.52).
+- In frame: only the King: his crown and cross, face, raised fist and upper robe with the medals. Regina is not on d1 any more (she is on h5, out of frame). No other piece in frame.
+- Characters: the King furious, mouth wide open, angry eyebrows, one fist raised high and shaking (shake lines beside it); a burst of white speed lines behind him.
+- Balloon placement: a jagged shout balloon at the far left, top, clear of the crown and cross with clear space between the balloon and the King (author feedback in 7.52); its curved tail ends just beside the King's mouth.
+- Balloon (White King, shout balloon): Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
 
 ### Panel 14b
 Approved in 7.51 (as shown in the SVG preview).
@@ -2277,9 +2289,11 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - No balloons.
 
-### Panel 14a (PROPOSAL)
+### Panel 14a (approved in 7.52: the approved panel block is in Section 18, Scene 14)
 - Board state: 11.
 - Camera: from Black's side (the white pieces face the camera), framed on the King (e1) with room above him for the large shout balloon, which covers neither his face nor his crown (author feedback in 7.25).
+- Framing (author feedback in 7.52: "Zoom even more in on the white king so we don't see any pawn heads."): a closer shot on the King: his crown and cross, face, raised fist and upper robe in frame; no pawn heads in frame; the shout balloon top left, clear of the cross, its tail ending just beside his mouth.
+- Balloon spacing (author feedback in 7.52: "a little more space between the baloon and the king is desirable"): the King sits a little right of centre and the shout balloon is pushed to the far left, slightly wider and lower in lines, so there is clear space between the balloon and his crown and cross.
 - Characters: White King (furious, speaking, gesture fist-up-r); Regina (worried).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - Balloon (White King), shout balloon: Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij.
@@ -4244,7 +4258,36 @@ PANEL 13a   (sequence number 62)
 ```
 
 ### Scene 14 - Regina Captured
-Added in 7.35 for the panel the author approved (14g). 14h added in 7.40, 14e and 14f in 7.49, 14d in 7.50, 14b and 14c in 7.51. Panel 14a is still a proposal and has no manifest yet.
+Added in 7.35 for the panel the author approved (14g). 14h added in 7.40, 14e and 14f in 7.49, 14d in 7.50, 14b and 14c in 7.51, 14a in 7.52.
+
+```
+PANEL 14a   (sequence number 64)
+
+1.  Scene 14, panel a: the King's outburst at Caballo.
+2.  Script excerpt:
+      Koning:
+      Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij. Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets. Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, "Dieje van    den overkant"  is al aan zet.
+3.  Dialogue:
+      Balloon 1: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 only, close-up, a little right of centre; no pawn heads.
+6.  Listening: nobody in frame.
+7.  Camera on Black's side, at officer height, close-up of the King (7.52).
+8.  Koning: furious, mouth wide open, one fist raised high and shaking; speed-line burst behind him.
+9.  Balloon 1 top, far left, with clear space to the crown and cross; its curved tail ends just beside Koning's mouth. Jagged shout balloon.
+10. Stage directions: none.
+11. State 11 (after 6. Pxh7). No move.
+12. Continuity: reacts to Caballo's capture on h7 (13a, 6. Pxh7); Regina on h5 is hanging.
+13. Must not appear: pawn heads; Caballo; Regina on d1; anger at anyone but Caballo.
+14. Dialogue length: 21 words, 121 characters.
+15. Segmentation: speech 37, the first two sentences; continues in 14b with "Alfil, staat daar ...".
+16. Visual priority: the King's fury.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 20%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the speech continues in 14b.
+```
 
 ```
 PANEL 14b   (sequence number 65)
@@ -4815,7 +4858,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 34 | Move: 5. ... g6 | 12 | - | Scene catalog only. |
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
-| 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | 14b, 14c (14a proposal) | Partly written: panel scripts and manifests for 14b and 14c (approved in 7.51, Section 20.3); the start of the speech in the proposal 14a. |
+| 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | 14a, 14b, 14c | Written: panel scripts and manifests for 14b and 14c (approved in 7.51) and 14a (approved in 7.52, Section 20.3). |
 | 38 | Move: 6. ... gxh5 | 14 | 14d | Panel script written (approved in 7.50); manifest written (Section 20.3). |
 | 39 | Koning: "Lap, daar hebt ge’t al. Regina geslagen..." | 14 | 14e, 14f, 14g, 14h | Panel script written (14g approved in 7.35, 14h in 7.40, 14e and 14f in 7.49); manifests written (Section 20.3). |
 | 40 | Alfil: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." | 15 | 15a | Panel script written (approved in 7.40); manifest written (Section 20.3). |
@@ -5060,3 +5103,4 @@ Items that need a decision from the author.
 | 7.49 | - | Panels 14e and 14f approved: panel blocks and manifests 68, 69; coverage item 39 complete. |
 | 7.50 | - | Proposal 14d restaged: the h5 pawn pushes Regina off the board; the h8 rook delighted, Regina indifferent; close camera. Panel 14d approved: panel block and manifest 67. |
 | 7.51 | - | Panels 14b and 14c approved: panel blocks and manifests 65, 66. |
+| 7.52 | - | Panel 14a: closer on the White King, no pawn heads, more space to the balloon; approved: panel block and manifest 64; Scene 14 complete. |

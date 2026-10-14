@@ -191,9 +191,9 @@ window.PANELS = [
   balloons: [{ who: "caballo", shout: true, w: 500, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
 { id: "13b", scene: 13, status: Pr, movebox: "6. Pxh7", state: 11, beside: BESIDE11, cam: { from: [8.7, 5.0, 2.6], at: [6.8, 6.6, 0.3], f: 640 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
-{ id: "14a", scene: 14, status: Pr, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.55, f: 500 }), fx: [{ burst: "koning" }],
+{ id: "14a", scene: 14, status: A, state: 11, beside: BESIDE11, cam: zb([[4.72, 0.5, 0]], { dist: 1.35, h: 1.5, th: 1.58, f: 640 }), fx: [{ burst: "koning" }],
   cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
-  balloons: [{ who: "koning", shout: true, w: 368, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
+  balloons: [{ who: "koning", shout: true, w: 420, x: 16, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
 { id: "14b", scene: 14, status: A, state: 11, beside: BESIDE11, cam: KING_ALFIL,
   cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "surprised", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets." }] },
