@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.59
+Version 7.60
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -66,6 +66,7 @@ Version 7.56 makes the table a real rectangle under the board, 13 by 20 squares,
 Version 7.57 adds a running gag (author decision): every piece standing on the boebel (d4, e4, d5, e5) leans slightly with the slope, like the kings in 16c; in the game this is the black pawn on d5 (Section 4, Boebel; Common Prompt Block).
 Version 7.58 makes the crowns of the Kings and Queens fit their heads (author decision): Kings 88 %, Queens 80 % of the earlier size (Section 5, Crowns and crosses).
 Version 7.59 adds the move marks (author decisions): sliding pieces leave three dashed lines flat on the board, the knight makes a low dashed hop from square to square, drawn in depth; new cameras for the proposals 12d and 13b (Section 13, Move Marks).
+Version 7.60 gives slides straight towards or away from the viewer three move lines too, like every other move (author feedback; Section 13, Move Marks).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -899,7 +900,7 @@ Create a Belgian-comic-style illustration based on De Miniatuur, in the traditio
 
 ## Move Marks (author decisions in 7.59)
 Every panel in which a move is played shows how the piece moved, with three white dashed lines (thin black outline), in a way that follows the chess rules: the knight jumps, all other pieces slide.
-- Sliding pieces (queen, bishop, rook, king, pawn): the three dashed lines run flat along the board, from the start square to the piece. When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it.
+- Sliding pieces (queen, bishop, rook, king, pawn): the three dashed lines run flat along the board, from the start square to the piece. When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it. Always three lines, also then (author feedback in 7.60): the three lines are spread a little wider, so the outer two run beside the piece and the middle one behind it.
 - The knight: the three dashed lines make a low hop, about half the knight's height, from the foot of the start square to the target square; the hop comes down onto the target square behind the knight, and small landing ticks at its felt show the landing. The jump clearly goes from square to square.
 - Depth: the hop passes behind the pieces that are nearer to the viewer and in front of the pieces that are farther away; the knight always stands in front of its own landing.
 - No take-off puff or other extra marks; the move box stays as before (Move Box, below).
@@ -1171,6 +1172,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.57 | Author decision: "For 79-panel-16c.svg we agreed to shown the kings tilted because they stand on the 'boebel'. However elsewhere in the game a pawn stands on d5. Since that pawn also stands on the boebel display that pawn with the same tilt. In fact this is a new joke/rule any piece standing on a square that is part of the 'boebel' is displayed tilted." Section 4 (Boebel): a line on pieces leaning on the boebel; the Common Prompt Block describes the lean (old wording in Appendix A). In the game only the black pawn on d5 (state 2 onwards: 1. ... d5) and the kings of 16c stand on those squares; no other piece does. SVG preview: the lean (5 degrees, as in 16c) is computed from the slope under the piece and the camera, so it leans the right way in every view; the approved leans of the kings in 16c are kept. |
 | 7.58 | Author feedback: "If we look at both the kings crown and the queens crown they both seem a bit oversized. In contrast the mittre of alfil seems to fit perfectly. Show me some visual alternatives for a better fit. The crown does not need to fit perfectly." Claude showed 85 %, 75 % and 65 %. Then: "Generate me some alternatives similar to A: 85% However keep in mind that the kings head is larger than the queens head. In A: 85% the kings crown seems a bit to small whereas the queens crown seems a bit to big." Claude showed separate sizes (90/78, 92/75, 95/80). Then: "how about king crown 85% / queen crown 80% show me together with some alternatives" (85/80, 85/77, 88/80, 88/77). Author decision: King 88 %, Queen 80 % ("King a little larger"). Section 5, Crowns and crosses: a Size sentence. Applied to both Kings and both Queens in every panel, the cover and the overview of the SVG preview; checked: no crown touches a balloon where it did not before (the smaller crowns touch balloons less often). |
 | 7.59 | Author feedback: "Regarding the movements of the pieces. In chess the knights jump whereas the other pieces slide. My feeling is that the current movement indicators can be improved." Claude showed alternatives (speed lines, ghost and track, arrows); the author: "How about keeping the dashed arcs. - representing jumping for the knight - representing sliding for the queen". Refinements: "the movement of the knight is not clear at all. Maybe the jump must clearly end at the square. Since the knight jumps from square to square. Keep in mind that both knight movements and other movements need to have a consistent feel."; Claude showed an arc in the scene, a hop on the page foot to foot (D2) and a dashed start square; the author chose D2 ("I don't like the image 13b"); then "the knight jumps way to high"; then "it becomes important to realise when a knight jumps either behind or in front of another piece. When it jumps behind we don't want to see the white stripes in front of the piece. When it jumpt in front of the piece we do want to see the white stripes in front of the piece."; then "drop the take-off puff"; decision: "yes, apply to all panels and adjust both cameras". New subsection Section 13, Move Marks; 12d and 13b: camera and move-marks lines in the proposal blocks. Claude's own addition (stated here): a slide straight towards or away from the viewer shows its lines on both sides of the piece, like skid marks, because behind the piece they would be hidden or stick out above its head (6d, 8c, 12e, 14d). |
+| 7.60 | Author feedback: "In some images I only see two movements lines for the pawns. Is there a reason for that ? I would expect three lines exactly like the movement of the other pieces." The reason was Claude's own addition in 7.59 (two skid marks for slides straight towards or away from the viewer). Now three lines there too, spread a little wider (6d, 8c, 12e, 14d). Section 13, Move Marks updated. |
 
 ---
 
@@ -5054,6 +5056,7 @@ Kept for history. Do not use for generation.
 - 7.41 to 7.54: black pieces in medium-dark walnut-brown wood (#7A5038), violet costumes (#7B5AA6) with deep-violet trims (#5D4386) and bronze (#C08A4C); in the Common Prompt Block "black pieces in medium-dark walnut-brown stained wood", "the black officers violet with bronze", "the black pawns violet ones". -> Changed in 7.55 by author decision: light walnut wood (#9A6A4C), deep violet costumes (#5C3D8C) with darker violet trims (#45306C), bronze #C8925A, so the faces are the lightest part of each black piece.
 - 7.54 to 7.55, Common Prompt Block: "The board lies on a light grey-blue table in an empty chess club room, softly out of focus, with no people." (the SVG preview drew the table as a horizontal band below a fixed wall line). -> Changed in 7.56 by author decisions: the board lies in the middle of a long rectangular table (13 x 20 squares), seen in the same perspective as the board, with the cloth visible all around it.
 - 7.5 to 7.56, Common Prompt Block: "... the squares bend over it." (no lean for pieces on the rise; only the two kings in 16c leaned, from 7.39). -> Extended in 7.57 by author decision: every piece on the four centre squares leans slightly with the slope.
+- 7.59, Section 13, Move Marks: "When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it." (two lines). -> Changed in 7.60 by author feedback: always three lines, spread a little wider.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5150,3 +5153,4 @@ Items that need a decision from the author.
 | 7.57 | - | Running gag: pieces on the boebel lean with the slope (the d5 pawn, the kings in 16c). |
 | 7.58 | - | Crowns fit the heads: Kings 88 %, Queens 80 %. |
 | 7.59 | - | Move marks: dashed lines flat on the board for sliding pieces, a low dashed hop in depth for the knight; new cameras for 12d and 13b. |
+| 7.60 | - | Move marks: always three lines, also for slides towards or away from the viewer. |

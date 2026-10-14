@@ -410,7 +410,7 @@ function renderPanel(svg, P, opts) {
           if (phase === "front") ticks(); }
         // a slide straight towards or away from the camera: the track would hide behind the piece and stick out above its head,
         // so its lines run on both sides of the piece instead, like skid marks
-        else if (phase === "behind") { const along = Math.abs(ux) < 0.45, t1 = along ? 1 : 1 - 0.3 / L; for (const k of (along ? [-0.36, 0.36] : [-0.16, 0, 0.16])) dash(Array.from({ length: 14 }, (_, i) => on(...P0D(0.05 + (t1 - 0.05) * i / 13, k))), g); }
+        else if (phase === "behind") { const along = Math.abs(ux) < 0.45, t1 = along ? 1 : 1 - 0.3 / L; for (const k of (along ? [-0.32, 0, 0.32] : [-0.16, 0, 0.16])) dash(Array.from({ length: 14 }, (_, i) => on(...P0D(0.05 + (t1 - 0.05) * i / 13, k))), g); }
         return; }
       if (knight && style === "D2") { const Hb = Math.max(80, Math.min(170, dl * 0.6)), c1 = [q0[0], q0[1] - Hb], c2 = [q1[0], q1[1] - Hb];
         for (const off of [-10, 0, 10]) dash(split(Array.from({ length: 31 }, (_, i) => { const t = i / 30, m = 1 - t; return [m * m * m * q0[0] + 3 * m * m * t * c1[0] + 3 * m * t * t * c2[0] + t * t * t * q1[0] + off, m * m * m * q0[1] + 3 * m * m * t * c1[1] + 3 * m * t * t * c2[1] + t * t * t * q1[1]]; }))[phase === "front" ? 0 : 1], g); if (phase === "front") { ticks(); return; } }
