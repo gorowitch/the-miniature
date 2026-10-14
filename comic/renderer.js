@@ -37,6 +37,8 @@ for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#7b5aa6", "
 }
 // The album colour style (bible 7.41): variant A, violet; a panel may still name another palette ("default" = the colours before 7.41).
 function usePalette(name) { const p = PALETTES[name || "kingdoms-violet"] || DEFAULT; W_ = p.W; COST = p.COST; BOARD = p.BOARD; }
+// The crowns of both Kings and both Queens, and the Kings' crosses, in the colour of their collar (the trim), in every panel (author decision, bible 7.53).
+let CROWN_TRIM = false;
 
 function mk(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
 const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], nrm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)}, cr=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
@@ -166,9 +168,9 @@ function gestureArms(g, type, col, c, gest) {
     Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]], "push-r": [[-12, s + 4, -8, 30, "open"], [12, s, 6, 20, "open"]], "push-l": [[12, s + 4, 188, 30, "open"], [-12, s, 174, 20, "open"]], "push1-r": [[12, s, -4, 34, "open"]], "push1-l": [[-12, s, 184, 34, "open"]], "pushed-r": [[12, s, -4, 15, "open"]], "pushed-l": [[-12, s, 184, 15, "open"]] });   // push1: one arm stretched out, pushing (14d, bible 7.50)   // push: both arms forward to one side, hands open (the h5 pawn pushing Regina off the board, bible 7.50)   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
   for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
 }
-function crown(g, y, col, gem) { const F = W_[col].f;
+function crown(g, y, col, gem, c) { const T = CROWN_TRIM && c ? c.trim : null, F = T || W_[col].f;
   mk("path", { d: `M-12 ${y} L-12 ${y-10} L-6 ${y-5} L0 ${y-12} L6 ${y-5} L12 ${y-10} L12 ${y} Z`, fill: F, stroke: INK, "stroke-width": 1.5 }, g);
-  mk("path", { d: `M-12 ${y} H12 V${y-3} H-12 Z`, fill: W_[col].s, stroke: INK, "stroke-width": 1 }, g);
+  mk("path", { d: `M-12 ${y} H12 V${y-3} H-12 Z`, fill: T ? "rgba(0,0,0,.18)" : W_[col].s, stroke: INK, "stroke-width": 1 }, g);
   if (gem) mk("circle", { cx: 0, cy: y - 1.5, r: 1.6, fill: "#b8202e", stroke: INK, "stroke-width": .6 }, g); }
 const SPR = {
   p(g, col, c, o) { base(g, col); robe(g, 24, 6, c, o.back); mk("circle", { cx: 0, cy: -35, r: 11, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
@@ -211,15 +213,15 @@ const SPR = {
     mk("circle", { cx: 0, cy: -50, r: 10.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
     if (o.back) { mk("path", { d: "M-11 -54 C-12 -44 -6 -38 0 -37 C6 -38 12 -44 11 -54 C8 -62 -8 -62 -11 -54Z", fill: c.hair, stroke: INK, "stroke-width": 1.2 }, g); }
     else { mk("path", { d: "M-11 -53 C-8 -64 8 -64 11 -53 C6 -59 -6 -59 -11 -53Z", fill: c.hair, stroke: INK, "stroke-width": 1 }, g); face(g, 0, -49, 10.5, col, o); }
-    crown(g, -58, col, o.role === "regina"); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: W_[col].f, stroke: INK, "stroke-width": 1 }, g); },
+    crown(g, -58, col, o.role === "regina", c); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1 }, g); },
   k(g, col, c, o) { base(g, col); robe(g, 44, 7, c, o.back); mk("circle", { cx: 0, cy: -57, r: 11.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.7 }, g);
     if (o.role === "koning" && !o.back) for (const [x, cc] of [[-6, "#2e7a3a"], [5, "#1f4e8c"], [9, "#b8202e"]]) { mk("path", { d: `M${x-1.6} -38 L${x} -33 L${x+1.6} -38 Z`, fill: cc, stroke: INK, "stroke-width": .6 }, g); mk("circle", { cx: x, cy: -31.5, r: 2, fill: "#e2b33a", stroke: INK, "stroke-width": .6 }, g); }
     if (o.back) backHead(g, 0, -57, 11.5, col);
     else { const bc = col === "w" ? "#f4f0e6" : "#2a1d16"; const long = col === "w";
       mk("path", { d: `M-10 -53 C-11 ${long ? -40 : -46} 11 ${long ? -40 : -46} 10 -53 C5 -49 -5 -49 -10 -53Z`, fill: bc, stroke: INK, "stroke-width": 1.1 }, g);
       face(g, 0, -57, 11.5, col, Object.assign({ must: true, mustC: bc }, o)); }
-    crown(g, -66, col, o.role === "koning");
-    mk("path", { d: "M-2 -78 V-83 H-6 V-87 H-2 V-91 H2 V-87 H6 V-83 H2 V-78 Z", fill: W_[col].f, stroke: INK, "stroke-width": 1.3 }, g); }
+    crown(g, -66, col, o.role === "koning", c);
+    mk("path", { d: "M-2 -78 V-83 H-6 V-87 H-2 V-91 H2 V-87 H6 V-83 H2 V-78 Z", fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1.3 }, g); }
 };
 function drawPiece(parent, p, sw) {
   const g = mk("g", { transform: `translate(${p.x.toFixed(1)},${p.y.toFixed(1)}) scale(${p.s.toFixed(3)})` }, parent);
@@ -262,7 +264,7 @@ function camFor(P) {
 }
 
 function renderPanel(svg, P, opts) {
-  opts = opts || {}; usePalette(P.palette);
+  opts = opts || {}; usePalette(P.palette); CROWN_TRIM = P.crownTrim !== false;
   const W0 = P.wide ? 1634 : 800, H = P.tall ? 1160 : 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);  // tall: two strips high (prototype, last page)
   while (svg.firstChild) svg.removeChild(svg.firstChild);
   const defs = mk("defs", {}, svg);
