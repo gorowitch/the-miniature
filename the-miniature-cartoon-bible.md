@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.72
+Version 7.73
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -79,6 +79,7 @@ Version 7.69 corrects a stale status note in Section 20.3 (Scene 6): manifest 25
 Version 7.70 makes the boebel clearer with smooth light and shadow (author decision; Section 4, Boebel Appearance).
 Version 7.71 makes Caballo's clean felt part of the joke in 15c (he lifts himself off the square) and gives 15d a new viewing angle: the wet f6 in front, the dry f8 behind (author decisions).
 Version 7.72 gives the greasy spot on f3 an irregular, smeared shape with a few drops (author decision; Section 4, Greasy Spot).
+Version 7.73 gives the a1 rook bold jolt lines when he wakes up in 15a, so the payoff of the gag reads at page size (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1204,6 +1205,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.70 | Quality check of the jokes (author: "Lets do a qualtity check. How are we doing on jokes - visually ? Are there area's where we can improve ?"). Claude's review: the a1 rook, the c1 bishop, Regina and the h8 rook, the mutiny and the outbursts read well; to improve: the boebel (under-shown; its square-cell shading read as a pale smear or glare), Caballo's felt in 15c and 15d, the greasy spot (reads as a coin), the a1 rook waking in 15b (small), the monotony of the monologue page, and the paprika that is never wiped off (a story question). Author: "Yes, prototype a clearer boebel". Claude showed A (smooth light and shadow), B (A + a higher rise with bending squares) and C (B + a shadow at the foot, which read as a ring); author decision: "go with A, apply to all panels". Section 4, Boebel Appearance: a Smooth shading line. Applied in every panel of the SVG preview (the cover stays clean). |
 | 7.71 | Quality check, Caballo's felt (author: "Let's work on Caballo's felt in 15c and 15d"): his base was cut off by the frame, so the clean felt of his punchline was not visible. Claude showed A (camera higher and wider), B (A + Caballo lifted off the square, leaning back, with a soft shadow under him) and C (lifted higher); the author: "I like B but only for the first image. For the second image I would like a different viewing angle". Claude showed three angles for 15d (D1 from White's side, D2 from Black's side, D3 high); author decision: "apply B to 15c and D1 to 15d". Panel blocks 15c and 15d (Section 18): a felt line and a viewing-angle line; in 15d the camera line "the same as 15c" no longer holds. SVG preview: a lifted piece casts a soft shadow on its square (also the a1 rook's startle jump in 15a). |
 | 7.72 | Quality check, the greasy spot (author: "let's improve on the the greasy spot on f3"): it read as a coin or an egg yolk (a neat yellow oval with a white highlight). Claude showed A (an irregular smear), B (A + smeared streaks and a few drops) and C (B + an oily rainbow sheen); author decision: "go with B, apply to all panels". Section 4, Greasy Spot: a Shape line. Applied in every panel of the SVG preview (faint before Scene 9, clearly visible from Scene 9; the cover stays clean). |
+| 7.73 | Quality check, the a1 rook waking (author: "any suggestions for the the a1 rook waking in 15b; ?"): the wake-up is in 15a (Claude's review had said 15b); at page size the rook was hard to find among the pawn heads, and in 15b the balloon hides him. Claude suggested four options; the author: "prototype 2" (a stronger startle in 15a). Claude showed A (bold jolt lines), B (A + a small hop) and C (A + a bigger hop) and recommended B; the author asked "I was thinking about A, why should I choose B ?"; author decision: "Let's go for A". 15a panel block: a jolt-lines line. The balloon in 15b is unchanged. |
 
 ---
 
@@ -2077,6 +2079,7 @@ Approved in 7.40.
 - In frame: the White King (e1); Alfil on d3 (paprika stains on his mitre); the white pawns and officers of the queenside behind and around him; the pawns on f2, e3 and d2 in front. Every piece on a square that is in frame is shown.
 - Characters: Alfil apologetic, mouth open, looks at the King, one hand raised with the index finger up (an idea). The King looks back at Alfil, surprised, mouth closed. The others neutral, mouths closed.
 - The sleepy a1 rook (author decisions in 7.45 and 7.47): in the background the white rook on a1 wakes up at the words "mat in één", subtly: both eyes wide open, the surprise shown mainly by his eyebrows, shot up high above the eyes; upright again, a few small jolt lines beside his top; no arms, no jump, no Zzz any more.
+- Jolt lines (author decision in 7.73): instead of a few small jolt lines, a crown of bold jolt lines around his top, so the wake-up reads at page size; his face, pose and place are unchanged (no hop).
 - Balloon placement: top left; its curved tail ends just beside Alfil's mouth. Accepted as shown (7.40): the tail passes close to the King, and Alfil's raised hand covers the face of a pawn behind him.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
@@ -5517,3 +5520,4 @@ Items that need a decision from the author.
 | 7.70 | - | Boebel: smooth light and shadow instead of square-cell shading. |
 | 7.71 | - | 15c: Caballo lifts himself off the square, his clean felt in view; 15d: new angle, wet f6 in front, dry f8 behind. |
 | 7.72 | - | Greasy spot on f3: an irregular smear with streaks and drops instead of an oval. |
+| 7.73 | - | 15a: bold jolt lines around the waking a1 rook. |
