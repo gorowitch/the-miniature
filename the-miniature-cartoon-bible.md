@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.58
+Version 7.59
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -65,6 +65,7 @@ Version 7.55 changes the colours of the black army (author decision): lighter wa
 Version 7.56 makes the table a real rectangle under the board, 13 by 20 squares, seen in the same perspective as the board, with the floor beyond it (author decisions; Section 4, Setting). The room around the table (floor, walls, windows) is seen with the same camera too, so it turns with the board (author feedback).
 Version 7.57 adds a running gag (author decision): every piece standing on the boebel (d4, e4, d5, e5) leans slightly with the slope, like the kings in 16c; in the game this is the black pawn on d5 (Section 4, Boebel; Common Prompt Block).
 Version 7.58 makes the crowns of the Kings and Queens fit their heads (author decision): Kings 88 %, Queens 80 % of the earlier size (Section 5, Crowns and crosses).
+Version 7.59 adds the move marks (author decisions): sliding pieces leave three dashed lines flat on the board, the knight makes a low dashed hop from square to square, drawn in depth; new cameras for the proposals 12d and 13b (Section 13, Move Marks).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -896,6 +897,14 @@ If a panel contains an incorrect position, the panel is wrong.
 ## Master Illustration Prompt
 Create a Belgian-comic-style illustration based on De Miniatuur, in the tradition of Suske en Wiske. Use the exact chess position from the board-state tables. Show living wooden chess pieces on a dark brown (near black)/beige plastic tournament board: white pieces in ivory light wood, black pieces in light walnut-brown stained wood, both with visible grain and visible green felt bottoms. The White King is an ancient yet pristine monarch with a simple crown, medium beard and moustache. The Black King is a calm, disciplined rival with a short beard. Regina is elegant and regal with visible hair. Alfil is a scholar-bishop with paprika stains on his mitre. Caballo is a highly expressive, heroic knight who refuses dirty terrain. In the middle of the board, the plastic surface bulges gently upward into one smooth, low, rounded hill where the four centre squares meet, about as high as the base of a chess piece; the squares bend over it; a piece standing on one of those four centre squares leans slightly with the slope, away from the top of the rise. The cola stain nearly covers f6. A faint yellowish greasy smear lies on f3. No invented text. The officers of both armies wear full costumes (the White King a burgundy robe with medals, Regina white and gold, Alfil advisor robes, Caballo military decorations, the black officers deep violet with bronze); the white pawns wear royal-blue soldier uniforms, the black pawns deep violet ones; the white army's other officers wear royal blue with gold; in both armies the b-pawn and the g-pawn have a moustache, the other pawns none. The board lies in the middle of a long rectangular light grey-blue table, about one and a half times as long as it is deep, seen in the same perspective as the board, with the table cloth visible all around the board; the empty chess club room around it is softly out of focus, with no people. No coordinate labels. No extra pieces. No board inaccuracies.
 
+## Move Marks (author decisions in 7.59)
+Every panel in which a move is played shows how the piece moved, with three white dashed lines (thin black outline), in a way that follows the chess rules: the knight jumps, all other pieces slide.
+- Sliding pieces (queen, bishop, rook, king, pawn): the three dashed lines run flat along the board, from the start square to the piece. When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it.
+- The knight: the three dashed lines make a low hop, about half the knight's height, from the foot of the start square to the target square; the hop comes down onto the target square behind the knight, and small landing ticks at its felt show the landing. The jump clearly goes from square to square.
+- Depth: the hop passes behind the pieces that are nearer to the viewer and in front of the pieces that are farther away; the knight always stands in front of its own landing.
+- No take-off puff or other extra marks; the move box stays as before (Move Box, below).
+- Where the start square would be hidden, the camera is chosen so that the start square and the target square are both in sight (12d, 13b).
+
 ## Move Box (author decision in 7.8)
 - Every panel in which a move is played on the board shows that move, with its move number, in bold black text in a small white rectangle with a thin black ink outline, in the bottom-left corner of the panel. It applies to the preview and to the final images.
 - The text is copied verbatim from the move lines of Section 1, letter for letter, including the dots and spaces of Black's moves and the "x" of a capture: for example "3. Ph3", "1. ... d5", "6. Pxh7".
@@ -1161,6 +1170,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.56 | Author feedback: "Board and table orientation are fine now. However the floor and the windows act funny when the board is rotated. Can you find out yourselves what images to adust ?" Claude rendered all panels: in turned views (for example 2b, 3a-1, 3a-2, 9b, 9g, 14g, 15e) the table's back edge ran diagonally while the floor line stayed horizontal (a wedge of floor), and the windows stood at the same place in every panel. Cause: the floor, wall, windows and furniture were flat shapes at fixed screen positions. Fix, for all panels at once: the room is now modelled around the table and drawn with the board's camera (floor 13 squares below the table top, four walls with windows and a skirting band, a ceiling), so it turns with the board. The chair silhouettes and shelves of the old background are gone. Section 4 (Setting): a Room line. |
 | 7.57 | Author decision: "For 79-panel-16c.svg we agreed to shown the kings tilted because they stand on the 'boebel'. However elsewhere in the game a pawn stands on d5. Since that pawn also stands on the boebel display that pawn with the same tilt. In fact this is a new joke/rule any piece standing on a square that is part of the 'boebel' is displayed tilted." Section 4 (Boebel): a line on pieces leaning on the boebel; the Common Prompt Block describes the lean (old wording in Appendix A). In the game only the black pawn on d5 (state 2 onwards: 1. ... d5) and the kings of 16c stand on those squares; no other piece does. SVG preview: the lean (5 degrees, as in 16c) is computed from the slope under the piece and the camera, so it leans the right way in every view; the approved leans of the kings in 16c are kept. |
 | 7.58 | Author feedback: "If we look at both the kings crown and the queens crown they both seem a bit oversized. In contrast the mittre of alfil seems to fit perfectly. Show me some visual alternatives for a better fit. The crown does not need to fit perfectly." Claude showed 85 %, 75 % and 65 %. Then: "Generate me some alternatives similar to A: 85% However keep in mind that the kings head is larger than the queens head. In A: 85% the kings crown seems a bit to small whereas the queens crown seems a bit to big." Claude showed separate sizes (90/78, 92/75, 95/80). Then: "how about king crown 85% / queen crown 80% show me together with some alternatives" (85/80, 85/77, 88/80, 88/77). Author decision: King 88 %, Queen 80 % ("King a little larger"). Section 5, Crowns and crosses: a Size sentence. Applied to both Kings and both Queens in every panel, the cover and the overview of the SVG preview; checked: no crown touches a balloon where it did not before (the smaller crowns touch balloons less often). |
+| 7.59 | Author feedback: "Regarding the movements of the pieces. In chess the knights jump whereas the other pieces slide. My feeling is that the current movement indicators can be improved." Claude showed alternatives (speed lines, ghost and track, arrows); the author: "How about keeping the dashed arcs. - representing jumping for the knight - representing sliding for the queen". Refinements: "the movement of the knight is not clear at all. Maybe the jump must clearly end at the square. Since the knight jumps from square to square. Keep in mind that both knight movements and other movements need to have a consistent feel."; Claude showed an arc in the scene, a hop on the page foot to foot (D2) and a dashed start square; the author chose D2 ("I don't like the image 13b"); then "the knight jumps way to high"; then "it becomes important to realise when a knight jumps either behind or in front of another piece. When it jumps behind we don't want to see the white stripes in front of the piece. When it jumpt in front of the piece we do want to see the white stripes in front of the piece."; then "drop the take-off puff"; decision: "yes, apply to all panels and adjust both cameras". New subsection Section 13, Move Marks; 12d and 13b: camera and move-marks lines in the proposal blocks. Claude's own addition (stated here): a slide straight towards or away from the viewer shows its lines on both sides of the piece, like skid marks, because behind the piece they would be hidden or stick out above its head (6d, 8c, 12e, 14d). |
 
 ---
 
@@ -2281,6 +2291,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: h3-g5 (move streak).
+- Camera and move marks (author decisions in 7.59): from beyond the h-file, towards White's side, looking across the jump, so h3 and g5 are both in sight; Caballo's jump from h3 to g5 is a low dashed hop that comes down on g5 behind him (Section 13, Move Marks).
 - Move box (bottom-left corner, bold, white rectangle): 5. Pg5
 - No balloons.
 
@@ -2307,6 +2318,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Caballo (heroic).
 - Move shown: g5-h7 (move streak).
+- Camera and move marks (author decisions in 7.59): from beyond the h-file corner, looking across the jump, so g5 and h7 are both in sight; Caballo's jump from g5 to h7 is a low dashed hop that passes behind Regina (nearer to the viewer) and comes down on h7 behind him (Section 13, Move Marks).
 - Move box (bottom-left corner, bold, white rectangle): 6. Pxh7
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36).
 - No balloons.
@@ -5137,3 +5149,4 @@ Items that need a decision from the author.
 | 7.56 | - | Table: a 13 x 20 squares rectangle under the board, in perspective, floor beyond it. The room (floor, walls, windows) in the same perspective. |
 | 7.57 | - | Running gag: pieces on the boebel lean with the slope (the d5 pawn, the kings in 16c). |
 | 7.58 | - | Crowns fit the heads: Kings 88 %, Queens 80 %. |
+| 7.59 | - | Move marks: dashed lines flat on the board for sliding pieces, a low dashed hop in depth for the knight; new cameras for 12d and 13b. |

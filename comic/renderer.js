@@ -364,12 +364,99 @@ function renderPanel(svg, P, opts) {
     placed.push({ t, col, o, x, y: y - (o.jump || 0) * s, d, s, sq: it.sq, role, c: costumeOf(t, col, role) });   // o.jump: lifted off the square (startled, bible 7.47)
   }
   placed.sort((a, b) => b.d - a.d);
+  // move indicators (fx.move = [from, to]); P.moveStyle picks the style (prototype after bible 7.58): "now" (the dashed arcs), or
+  // "A" speed lines on the board for sliding pieces / a dotted jump arc for knights, "B" a ghost on the start square with a track,
+  // "C" an arrow on the board for sliding pieces / an arched arrow over the board for knights
+  // depth-sorted move marks: a mark queued with a slot is drawn just before the piece with that index (pieces are drawn far to near),
+  // so a knight's jump passes behind the pieces nearer to the camera and in front of the pieces farther away
+  const slotQ = [], slotFx = i => { for (const q of slotQ) if (q.slot === i) q.draw(); }, slotOf = dd => placed.filter(p => p.d > dd).length;
+  const moveFx = (fx, phase) => { const [a, b] = fx.move, style = P.moveStyle || "D4", A0 = sqXY(a), B0 = sqXY(b);
+    const sp = placed.find(p => p.sq === b) || placed.find(p => p.role && items.some(q => q.sq === b && (q.role || roleOf(q.sq, q.ch, state)) === p.role));
+    const knight = sp ? sp.t === "n" : false, L = Math.hypot(B0[0] - A0[0], B0[1] - A0[1]), u = [(B0[0] - A0[0]) / L, (B0[1] - A0[1]) / L], n = [-u[1], u[0]];
+    const on = (x, y, h) => pr(x, y, bump(x, y) + (h || 0.03)), line = (pts, a2, par) => mk("polyline", Object.assign({ points: pts.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "none", "stroke-linecap": "round", "stroke-linejoin": "round" }, a2), par);
+    const arc = (z0, apex, z1, t0, t1, k) => Array.from({ length: k + 1 }, (_, i) => { const t = t0 + (t1 - t0) * i / k; return pr(A0[0] + (B0[0] - A0[0]) * t, A0[1] + (B0[1] - A0[1]) * t, z0 + (z1 - z0) * t + apex * 4 * t * (1 - t)); });
+    const g = mk("g", {}, root);
+    // flat comic marks, drawn on the page (not in 3D), so they read from every camera angle
+    const q0 = pr(A0[0], A0[1], bump(...A0)), q1 = sp ? [sp.x, sp.y] : pr(B0[0], B0[1], bump(...B0)), sc = sp ? sp.s : 1;
+    const dx = q1[0] - q0[0], dy = q1[1] - q0[1], dl = Math.hypot(dx, dy) || 1, ux = dx / dl, uy = dy / dl;
+    const hop = (H, tEnd) => { const side = Math.abs(dx) > 30 ? 0 : (q1[0] > W0 / 2 ? -1 : 1) * H * 0.6, c1 = [q0[0] + side, q0[1] - H * 1.3], c2 = [q1[0] + side, q1[1] - 70 * sc - H];
+      return Array.from({ length: 31 }, (_, i) => { const t = tEnd * i / 30, m = 1 - t; return [m * m * m * q0[0] + 3 * m * m * t * c1[0] + 3 * m * t * t * c2[0] + t * t * t * q1[0], m * m * m * q0[1] + 3 * m * m * t * c1[1] + 3 * m * t * t * c2[1] + t * t * t * (q1[1] - 70 * sc)]; }); };
+    const H = Math.max(70, Math.min(160, dl * 0.5));
+    const P0D = (t, k) => [A0[0] + u[0] * t * L + n[0] * k, A0[1] + u[1] * t * L + n[1] * k];
+    // style D (author idea after 7.58): the dashed arcs kept, but a knight's are a hop arc on the page and a sliding piece's run flat
+    // along the board; "D+" adds landing ticks under the knight and a little scuff at the end of a slide, "Dg" a faint ghost on the start square
+    if (style[0] === "D") { const dash = (pts, par) => { for (const [c, w] of [[INK, 7], ["#fffaf0", 4]]) line(pts, { stroke: c, "stroke-width": w, "stroke-dasharray": "20 12" }, par); };
+      // refinements of D for the knight (author feedback): the jump ends on the target square. D1: the arc lies in the scene, from the
+      // centre of the start square to the centre of the target square; D2: a hop on the page from the start square's foot to the target
+      // square's foot; D3: as D1, and for every move the start square is outlined with a dashed line (sliding pieces too)
+      const ticks = () => { for (const k of [-1, 1]) for (const j of [0, 1]) line([[q1[0] + k * (24 + j * 6) * sc, q1[1] - (2 + j * 9) * sc], [q1[0] + k * (40 + j * 10) * sc, q1[1] - (4 + j * 16) * sc]], { stroke: INK, "stroke-width": 3 }, g); };
+      const arc3 = (k, h) => Array.from({ length: 29 }, (_, i) => { const t = 0.04 + 0.96 * i / 28, x = A0[0] + (B0[0] - A0[0]) * t + n[0] * k, y = A0[1] + (B0[1] - A0[1]) * t + n[1] * k; return pr(x, y, bump(x, y) + 0.03 + h * 4 * t * (1 - t)); });
+      // the part of the jump that comes down behind the knight is drawn behind it, so the knight stands in front of its own landing
+      const split = pts => { const i = sp ? pts.findIndex((p, j) => j > pts.length / 2 && Math.abs(p[0] - sp.x) < 30 * sp.s && p[1] > sp.y - 100 * sp.s) : -1; return i < 0 ? [pts, []] : [pts.slice(0, i + 1), pts.slice(i)]; };
+      if (knight && (style === "D1" || style === "D3")) { for (const k of [-0.16, 0, 0.16]) dash(split(arc3(k, 1.4))[phase === "front" ? 0 : 1], g); if (phase === "front") { ticks(); return; } }
+      // D4 (refined D2, author feedback on 13b): a higher, rounder hop on the page, raised until it crosses no face or hat, its three lines
+      // offset across the path, coming down steeply onto the target square behind the knight; a take-off puff on the start square (slides too)
+      const puff = (pt, s1) => { for (const [dx2, dy2, r] of [[-14, 0, 6], [0, -5, 7.5], [14, 0, 6]]) mk("circle", { cx: pt[0] + dx2 * s1, cy: pt[1] + dy2 * s1, r: r * s1, fill: "#fffaf0", stroke: INK, "stroke-width": 2 }, g); };
+      if (style === "D4") {
+        // (no take-off puff: author feedback)
+        if (knight) { const xa = Math.min(q0[0], q1[0]), xb = Math.max(q0[0], q1[0]), others = placed.filter(p => p !== sp && p.s > 0.3 && p.head && p.head[0] > xa && p.head[0] < xb && p.d < Math.max(sp.d, 1) * 1.15), crosses = pts => pts.some(([x, y]) => others.some(p => Math.abs(x - p.head[0]) < 18 * p.s && y > p.top - 4 && y < p.mouth[1] + 6 * p.s));
+          const curve = Hb => { const c1 = [q0[0], q0[1] - Hb * 1.25], c2 = [q1[0], q1[1] - Hb * 1.1]; return Array.from({ length: 41 }, (_, i) => { const t = i / 40, m = 1 - t; return [m * m * m * q0[0] + 3 * m * m * t * c1[0] + 3 * m * t * t * c2[0] + t * t * t * q1[0], m * m * m * q0[1] + 3 * m * m * t * c1[1] + 3 * m * t * t * c2[1] + t * t * t * q1[1]]; }); };
+          const Hmax = Math.max(60, (Math.min(q0[1], q1[1]) - 40) / 1.0); const hf = P.hopH || 0.5; let Hb = Math.min(Hmax, Math.max(100 * sc * hf, dl * 0.3 * hf)), pts = curve(Hb);
+          const offs = off => pts.map((p, i) => { const a2 = pts[Math.max(0, i - 1)], b2 = pts[Math.min(pts.length - 1, i + 1)], tl = Math.hypot(b2[0] - a2[0], b2[1] - a2[1]) || 1; return [p[0] - (b2[1] - a2[1]) / tl * off, p[1] + (b2[0] - a2[0]) / tl * off]; });
+          if (phase === "behind") { const n3 = pts.length - 1, dep = pts.map((_, i) => { const t = i / n3, x = A0[0] + (B0[0] - A0[0]) * t, y = A0[1] + (B0[1] - A0[1]) * t, dd = pr(x, y, bump(x, y))[2]; return t > 0.7 ? Math.max(dd, sp.d + 1e-3) : dd; });
+            for (const off of [-11, 0, 11]) { const lp = offs(off), cum = [0]; for (let i = 1; i <= n3; i++) cum.push(cum[i - 1] + Math.hypot(lp[i][0] - lp[i - 1][0], lp[i][1] - lp[i - 1][1]));
+              let i0 = 0; for (let i = 1; i <= n3; i++) { const s0 = slotOf((dep[i0] + dep[i0 + 1]) / 2), s1 = i < n3 ? slotOf((dep[i] + dep[i + 1]) / 2) : -1; if (s1 !== s0) { const seg = lp.slice(i0, i + 1), off0 = cum[i0];
+                slotQ.push({ slot: s0, draw: () => { for (const [c, w] of [[INK, 7], ["#fffaf0", 4]]) line(seg, { stroke: c, "stroke-width": w, "stroke-dasharray": "20 12", "stroke-dashoffset": -off0 }, root); } }); i0 = i; } } } }
+          if (phase === "front") ticks(); }
+        // a slide straight towards or away from the camera: the track would hide behind the piece and stick out above its head,
+        // so its lines run on both sides of the piece instead, like skid marks
+        else if (phase === "behind") { const along = Math.abs(ux) < 0.45, t1 = along ? 1 : 1 - 0.3 / L; for (const k of (along ? [-0.36, 0.36] : [-0.16, 0, 0.16])) dash(Array.from({ length: 14 }, (_, i) => on(...P0D(0.05 + (t1 - 0.05) * i / 13, k))), g); }
+        return; }
+      if (knight && style === "D2") { const Hb = Math.max(80, Math.min(170, dl * 0.6)), c1 = [q0[0], q0[1] - Hb], c2 = [q1[0], q1[1] - Hb];
+        for (const off of [-10, 0, 10]) dash(split(Array.from({ length: 31 }, (_, i) => { const t = i / 30, m = 1 - t; return [m * m * m * q0[0] + 3 * m * m * t * c1[0] + 3 * m * t * t * c2[0] + t * t * t * q1[0] + off, m * m * m * q0[1] + 3 * m * m * t * c1[1] + 3 * m * t * t * c2[1] + t * t * t * q1[1]]; }))[phase === "front" ? 0 : 1], g); if (phase === "front") { ticks(); return; } }
+      if (phase === "behind" && style === "D3") { const sq = [[-0.44, -0.44], [0.44, -0.44], [0.44, 0.44], [-0.44, 0.44]], pts = []; for (let i = 0; i < 4; i++) for (let j = 0; j < 8; j++) { const a2 = sq[i], b2 = sq[(i + 1) % 4]; pts.push(on(A0[0] + a2[0] + (b2[0] - a2[0]) * j / 8, A0[1] + a2[1] + (b2[1] - a2[1]) * j / 8)); }
+        pts.push(pts[0]); line(pts, { stroke: INK, "stroke-width": 6, "stroke-dasharray": "14 9" }, g); line(pts, { stroke: "#fffaf0", "stroke-width": 3, "stroke-dasharray": "14 9" }, g); }
+      if (phase === "behind") {
+        if (style === "Dg" && sp) { const [gx, gy, gd] = pr(A0[0], A0[1], bump(...A0)); const gs = F / gd / 50, gh = mk("g", { opacity: .3 }, g);
+          drawPiece(gh, Object.assign({}, sp, { x: gx, y: gy, d: gd, s: gs, o: Object.assign({}, sp.o, { talk: false, gest: undefined, shake: false }) }), (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(gs)))).toFixed(2)); }
+        if (!knight) { const t1 = 1 - 0.3 / L; for (const k of [-0.16, 0, 0.16]) dash(Array.from({ length: 14 }, (_, i) => on(...P0D(0.05 + (t1 - 0.05) * i / 13, k))), g);
+          if (style === "D+") { const e = on(...P0D(1 - 0.42 / L, 0)); for (const j of [-1, 1]) line([[e[0] + j * 30 * sc, e[1] + 4 * sc], [e[0] + j * 42 * sc, e[1] - 6 * sc]], { stroke: INK, "stroke-width": 3 }, g); } }
+        return; }
+      if (knight) { for (const off of [-12, 0, 12]) dash(hop(H, 0.92).map(p => [p[0], p[1] + off]), g);
+        if (style === "D+") for (const k of [-1, 1]) for (const j of [0, 1]) line([[q1[0] + k * (24 + j * 6) * sc, q1[1] - (2 + j * 9) * sc], [q1[0] + k * (40 + j * 10) * sc, q1[1] - (4 + j * 16) * sc]], { stroke: INK, "stroke-width": 3 }, g); }
+      return; }
+    if (style[0] !== "D" && (style === "now") !== (phase === "behind") && !(style === "B" && phase === "behind")) return;
+    if (style === "B" && phase === "behind") { if (!sp) return; } else if (style === "now") { const p0 = pr(...A0, 0.4), p1 = pr(...B0, 0.4); const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .95 }, g); for (const off of [-12, 0, 12]) { const dd = `M${p0[0]} ${p0[1] + off} Q${(p0[0] + p1[0]) / 2} ${Math.min(p0[1], p1[1]) - 60 + off} ${p1[0]} ${p1[1] + off}`; mk("path", { d: dd, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12" }, gg); mk("path", { d: dd, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12" }, gg); } return; }
+    if (style === "B" && phase === "behind") {   // the piece as a faint ghost on its start square
+      const [gx, gy, gd] = pr(A0[0], A0[1], bump(...A0)); const gs = F / gd / 50, gh = mk("g", { opacity: .32 }, g);
+      drawPiece(gh, Object.assign({}, sp, { x: gx, y: gy, d: gd, s: gs, o: Object.assign({}, sp.o, { talk: false, gest: undefined, shake: false }) }), (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(gs)))).toFixed(2)); }
+    if (phase === "behind") return;
+    if (knight) {
+      if (style === "A") { const pts = hop(H, 0.93).filter((p, i) => i % 2 === 0); pts.forEach(p => { mk("circle", { cx: p[0], cy: p[1], r: 5.5, fill: "#fffaf0" }, g); mk("circle", { cx: p[0], cy: p[1], r: 3.2, fill: INK }, g); });
+        for (const k of [-1, 1]) for (const j of [0, 1]) line([[q1[0] + k * (24 + j * 6) * sc, q1[1] - (2 + j * 9) * sc], [q1[0] + k * (40 + j * 10) * sc, q1[1] - (4 + j * 16) * sc]], { stroke: INK, "stroke-width": 3 }, g); }
+      if (style === "B") { const pts = hop(H, 0.93); line(pts, { stroke: "#fffaf0", "stroke-width": 6, "stroke-dasharray": "2 12" }, g); line(pts, { stroke: INK, "stroke-width": 3, "stroke-dasharray": "2 12" }, g); }
+      if (style === "C") { const pts = hop(H, 0.9), e = pts[pts.length - 1], q = pts[pts.length - 3], ang = Math.atan2(e[1] - q[1], e[0] - q[0]);
+        line(pts, { stroke: INK, "stroke-width": 13 }, g); line(pts, { stroke: "#fffaf0", "stroke-width": 8 }, g);
+        const hd = (r, w) => [[e[0] + Math.cos(ang) * r, e[1] + Math.sin(ang) * r], [e[0] + Math.cos(ang + 2.4) * w, e[1] + Math.sin(ang + 2.4) * w], [e[0] + Math.cos(ang - 2.4) * w, e[1] + Math.sin(ang - 2.4) * w]];
+        mk("polygon", { points: hd(26, 22).map(p => p.join(",")).join(" "), fill: "#fffaf0", stroke: INK, "stroke-width": 3, "stroke-linejoin": "round" }, g); }
+      return; }
+    // sliding pieces
+    const P0 = (t, k) => [A0[0] + u[0] * t * L + n[0] * k, A0[1] + u[1] * t * L + n[1] * k];
+    if (style === "A") for (const k of [-1, 0, 1]) { const by = q1[1] - (18 + 14 * (k + 1)) * sc, bx = q1[0] - ux * 26 * sc, len = Math.min(dl, 120) * (k ? 0.75 : 1);
+      for (const [s0, s1, w] of [[0.55, 1, 1.4], [0.25, 0.55, 2.6], [0, 0.25, 3.8]]) { const pts = [[bx - ux * len * s0, by - uy * len * s0], [bx - ux * len * s1, by - uy * len * s1]];
+        line(pts, { stroke: "#fffaf0", "stroke-width": w + 3 }, g); line(pts, { stroke: INK, "stroke-width": w }, g); } }
+    if (style === "B") { const pts = Array.from({ length: 12 }, (_, i) => on(...P0(-0.2 / L + (1 - 0.3 / L + 0.2 / L) * i / 11, 0))); line(pts, { stroke: "#fffaf0", "stroke-width": 6, "stroke-dasharray": "14 10" }, g); line(pts, { stroke: INK, "stroke-width": 3, "stroke-dasharray": "14 10" }, g); }
+    if (style === "C") { const t1 = 1 - 0.42 / L, sh = 0.1, hw = 0.26, hl = 0.36 / L, poly3 = [P0(-0.15 / L, -sh), P0(t1 - hl, -sh), P0(t1 - hl, -hw), P0(t1, 0), P0(t1 - hl, hw), P0(t1 - hl, sh), P0(-0.15 / L, sh)];
+      const dense = []; for (let i = 0; i < poly3.length; i++) { const p = poly3[i], q = poly3[(i + 1) % poly3.length]; for (let j = 0; j < 6; j++) dense.push(on(p[0] + (q[0] - p[0]) * j / 6, p[1] + (q[1] - p[1]) * j / 6)); }
+      mk("polygon", { points: dense.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "#fffaf0", "fill-opacity": .85, stroke: INK, "stroke-width": 2.5, "stroke-linejoin": "round" }, g); } };
   // effects behind pieces
   for (const fx of (P.fx || [])) {
     if (fx.burst) { const sp = placed.find(p => p.role === fx.burst || p.sq === fx.burst); if (sp) { const [hy] = HEAD[sp.t]; const cx = sp.x, cy = sp.y + hy * sp.s; const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .9 }, root); mk("circle", { cx, cy, r: 260, fill: "#fff6d6", opacity: .35, stroke: "none" }, gg); for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2 + .2; mk("path", { d: `M${cx + Math.cos(a) * 70} ${cy + Math.sin(a) * 70} L${cx + Math.cos(a) * 900} ${cy + Math.sin(a) * 900}`, "stroke-width": 5 + (k % 3) * 2 }, gg); } } }
-    if (fx.move) { const [a, b] = fx.move; const p0 = pr(...sqXY(a), 0.4), p1 = pr(...sqXY(b), 0.4); const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .95 }, root); for (const off of [-12, 0, 12]) { const dd = `M${p0[0]} ${p0[1] + off} Q${(p0[0] + p1[0]) / 2} ${Math.min(p0[1], p1[1]) - 60 + off} ${p1[0]} ${p1[1] + off}`; mk("path", { d: dd, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12" }, gg); mk("path", { d: dd, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12" }, gg); } }
+    if (fx.move) moveFx(fx, "behind");
   }
-  for (const p of placed) { const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
+  for (const [pi, p] of placed.entries()) { slotFx(pi); const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
+  slotFx(placed.length);
+  for (const fx of (P.fx || [])) if (fx.move) moveFx(fx, "front");   // move marks in front of the pieces, like comic speed lines
   // keep-clear zones for balloon tails: every head with its hat (crown, mitre, cross), from the top of the piece to the chin
   const HATW = { k: 13, q: 14, b: 11, p: 11, r: 17, n: 20 };  // half-width of the hat (crown, mitre, battlements) in sprite units
   const zones = placed.filter(p => p.s > 0.3 && !p.beside).map(p => { const r = HEAD[p.t][1] * p.s, hx = p.head[0], hy = p.head[1];
