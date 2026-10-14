@@ -38,7 +38,7 @@ for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#7b5aa6", "
 // The album colour style (bible 7.41): variant A, violet; a panel may still name another palette ("default" = the colours before 7.41).
 function usePalette(name) { const p = PALETTES[name || "kingdoms-violet"] || DEFAULT; W_ = p.W; COST = p.COST; BOARD = p.BOARD; }
 // The crowns of both Kings and both Queens, and the Kings' crosses, in the colour of their collar (the trim), in every panel (author decision, bible 7.53).
-let CROWN_TRIM = false;
+let CROWN_TRIM = false, CROSS_SUNK = false;
 
 function mk(tag, a, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
 const sub=(a,b)=>[a[0]-b[0],a[1]-b[1],a[2]-b[2]], dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], nrm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)}, cr=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
@@ -220,8 +220,11 @@ const SPR = {
     else { const bc = col === "w" ? "#f4f0e6" : "#2a1d16"; const long = col === "w";
       mk("path", { d: `M-10 -53 C-11 ${long ? -40 : -46} 11 ${long ? -40 : -46} 10 -53 C5 -49 -5 -49 -10 -53Z`, fill: bc, stroke: INK, "stroke-width": 1.1 }, g);
       face(g, 0, -57, 11.5, col, Object.assign({ must: true, mustC: bc }, o)); }
+    // the cross sunk into the crown, behind it, so the crown is in front of the cross; a longer lower leg keeps it clearly a cross (bible 7.53); P.crossSunk: false puts it back on top
+    const crossD = (d, leg) => { const u = d - (leg || 0); return `M-2 ${-78 + d} V${-83 + u} H-6 V${-87 + u} H-2 V${-91 + u} H2 V${-87 + u} H6 V${-83 + u} H2 V${-78 + d} Z`; }, crossA = { fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1.3 };
+    if (CROSS_SUNK) mk("path", Object.assign({ d: crossD(5, 2.5) }, crossA), g);
     crown(g, -66, col, o.role === "koning", c);
-    mk("path", { d: "M-2 -78 V-83 H-6 V-87 H-2 V-91 H2 V-87 H6 V-83 H2 V-78 Z", fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1.3 }, g); }
+    if (!CROSS_SUNK) mk("path", Object.assign({ d: crossD(0) }, crossA), g); }
 };
 function drawPiece(parent, p, sw) {
   const g = mk("g", { transform: `translate(${p.x.toFixed(1)},${p.y.toFixed(1)}) scale(${p.s.toFixed(3)})` }, parent);
@@ -264,7 +267,7 @@ function camFor(P) {
 }
 
 function renderPanel(svg, P, opts) {
-  opts = opts || {}; usePalette(P.palette); CROWN_TRIM = P.crownTrim !== false;
+  opts = opts || {}; usePalette(P.palette); CROWN_TRIM = P.crownTrim !== false; CROSS_SUNK = P.crossSunk !== false;
   const W0 = P.wide ? 1634 : 800, H = P.tall ? 1160 : 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);  // tall: two strips high (prototype, last page)
   while (svg.firstChild) svg.removeChild(svg.firstChild);
   const defs = mk("defs", {}, svg);
