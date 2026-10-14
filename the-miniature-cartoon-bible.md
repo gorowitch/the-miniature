@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.71
+Version 7.72
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -78,6 +78,7 @@ Version 7.68 gives the cola stain one subtle look in every other panel (author d
 Version 7.69 corrects a stale status note in Section 20.3 (Scene 6): manifest 25 for panel 6d exists since 7.16.
 Version 7.70 makes the boebel clearer with smooth light and shadow (author decision; Section 4, Boebel Appearance).
 Version 7.71 makes Caballo's clean felt part of the joke in 15c (he lifts himself off the square) and gives 15d a new viewing angle: the wet f6 in front, the dry f8 behind (author decisions).
+Version 7.72 gives the greasy spot on f3 an irregular, smeared shape with a few drops (author decision; Section 4, Greasy Spot).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -457,6 +458,7 @@ Measured in square widths (one square = 1):
 - Sticky as it dries.
 - Reason Caballo plays 3. Ph3 instead of 3. Pf3.
 - Visual: a faint, translucent, yellowish greasy smear with a slight shine.
+- Shape (author decision in 7.72): an irregular smear, not a neat oval: two translucent yellowish tones, smeared out to the sides in a few streaks, with a few small greasy drops beside it and a small shine; it stays on f3. It must not read as a coin or an egg yolk.
 - Smaller and subtler than the cola stain on f6; clearly visible from Scene 9 (see Greasy Spot Visibility).
 
 ### Greasy Spot Visibility (decided in 7.3)
@@ -1201,6 +1203,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.69 | Correction (author: "yes, fix it and commit"): the introduction to the Scene 6 manifests (Section 20.3) still said "Panel 6d is still a proposal and has no manifest yet", while 6d was approved in 7.16 and its manifest 25 exists. Now: "Added in 7.13 for the panels the author approved (6a, 6b, 6c); 6d added in 7.16." A check after the last approvals: all 79 panels approved, every panel has a manifest, no proposal block left open. |
 | 7.70 | Quality check of the jokes (author: "Lets do a qualtity check. How are we doing on jokes - visually ? Are there area's where we can improve ?"). Claude's review: the a1 rook, the c1 bishop, Regina and the h8 rook, the mutiny and the outbursts read well; to improve: the boebel (under-shown; its square-cell shading read as a pale smear or glare), Caballo's felt in 15c and 15d, the greasy spot (reads as a coin), the a1 rook waking in 15b (small), the monotony of the monologue page, and the paprika that is never wiped off (a story question). Author: "Yes, prototype a clearer boebel". Claude showed A (smooth light and shadow), B (A + a higher rise with bending squares) and C (B + a shadow at the foot, which read as a ring); author decision: "go with A, apply to all panels". Section 4, Boebel Appearance: a Smooth shading line. Applied in every panel of the SVG preview (the cover stays clean). |
 | 7.71 | Quality check, Caballo's felt (author: "Let's work on Caballo's felt in 15c and 15d"): his base was cut off by the frame, so the clean felt of his punchline was not visible. Claude showed A (camera higher and wider), B (A + Caballo lifted off the square, leaning back, with a soft shadow under him) and C (lifted higher); the author: "I like B but only for the first image. For the second image I would like a different viewing angle". Claude showed three angles for 15d (D1 from White's side, D2 from Black's side, D3 high); author decision: "apply B to 15c and D1 to 15d". Panel blocks 15c and 15d (Section 18): a felt line and a viewing-angle line; in 15d the camera line "the same as 15c" no longer holds. SVG preview: a lifted piece casts a soft shadow on its square (also the a1 rook's startle jump in 15a). |
+| 7.72 | Quality check, the greasy spot (author: "let's improve on the the greasy spot on f3"): it read as a coin or an egg yolk (a neat yellow oval with a white highlight). Claude showed A (an irregular smear), B (A + smeared streaks and a few drops) and C (B + an oily rainbow sheen); author decision: "go with B, apply to all panels". Section 4, Greasy Spot: a Shape line. Applied in every panel of the SVG preview (faint before Scene 9, clearly visible from Scene 9; the cover stays clean). |
 
 ---
 
@@ -5513,3 +5516,4 @@ Items that need a decision from the author.
 | 7.69 | - | Stale status note for 6d in Section 20.3 corrected. |
 | 7.70 | - | Boebel: smooth light and shadow instead of square-cell shading. |
 | 7.71 | - | 15c: Caballo lifts himself off the square, his clean felt in view; 15d: new angle, wet f6 in front, dry f8 behind. |
+| 7.72 | - | Greasy spot on f3: an irregular smear with streaks and drops instead of an oval. |

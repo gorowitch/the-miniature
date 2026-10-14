@@ -379,8 +379,16 @@ function renderPanel(svg, P, opts) {
     let sd = 7; const rnd = () => (sd = (sd * 9301 + 49297) % 233280) / 233280;
     for (let i = 0; i < 46; i++) { const a = rnd() * Math.PI * 2, rr = 0.42 * Math.sqrt(0.15 + 0.85 * rnd()), bx = cx0 + Math.cos(a) * rr, by = cy0 + Math.sin(a) * rr * 0.92, br = 0.007 + rnd() * 0.009;
       poly(Array.from({ length: 6 }, (_, j) => { const b = j / 6 * Math.PI * 2; return [bx + Math.cos(b) * br, by + Math.sin(b) * br]; }), { fill: "#f2dfbd", opacity: .9 }, bd); } }
-  if (!P.clean) { const pts = []; for (let k = 0; k < 20; k++) { const a = k / 20 * Math.PI * 2; pts.push([5.5 + Math.cos(a) * .34, 2.5 + Math.sin(a) * .2]); } poly(pts, { fill: "#c9a83a", opacity: f3Explicit ? .45 : .14 }, bd);
-    if (f3Explicit) { const p2 = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; p2.push([5.42 + Math.cos(a) * .1, 2.46 + Math.sin(a) * .05]); } poly(p2, { fill: "#fffbe0", opacity: .7 }, bd); } }
+  // the greasy spot on f3 (author decision, bible 7.72): an irregular translucent yellowish smear, smeared out to the sides with a few
+  // greasy drops, a slight shine; faint before Scene 9 (P.greaseStyle "A" or "C" kept for comparison)
+  if (!P.clean) { const gs = P.greaseStyle || "B", cx0 = 5.5, cy0 = 2.5, a0 = f3Explicit ? 1 : 0.35;
+    const blob = (r, ry, k, n) => Array.from({ length: n || 22 }, (_, i) => { const a = i / (n || 22) * Math.PI * 2, w = 1 + 0.18 * Math.sin(a * 3 + k) + 0.1 * Math.cos(a * 5 + 2 * k); return [cx0 + Math.cos(a) * r * w, cy0 + Math.sin(a) * ry * w]; });
+    poly(blob(0.36, 0.26, 0.7), { fill: "#b89a3a", opacity: (0.38 * a0).toFixed(2) }, bd);
+    poly(blob(0.24, 0.17, 2.1), { fill: "#a88a2c", opacity: (0.35 * a0).toFixed(2) }, bd);
+    if (gs !== "A") { for (const [dx, dy, l, w] of [[0.3, -0.12, 0.28, 0.05], [0.26, 0.1, 0.2, 0.04], [-0.32, 0.06, 0.18, 0.04]]) poly([[cx0 + dx, cy0 + dy - w], [cx0 + dx + l, cy0 + dy - w * 0.4], [cx0 + dx + l, cy0 + dy + w * 0.4], [cx0 + dx, cy0 + dy + w]], { fill: "#b89a3a", opacity: (0.32 * a0).toFixed(2) }, bd);
+      for (const [dx, dy, r] of [[0.66, -0.06, 0.035], [0.6, 0.16, 0.025], [-0.5, -0.14, 0.03]]) poly(Array.from({ length: 8 }, (_, j) => { const b = j / 8 * Math.PI * 2; return [cx0 + dx + Math.cos(b) * r, cy0 + dy + Math.sin(b) * r * 0.7]; }), { fill: "#a88a2c", opacity: (0.45 * a0).toFixed(2) }, bd); }
+    if (gs === "C" && f3Explicit) for (const [c, dx, dy] of [["#e88a9c", -0.06, -0.03], ["#8ad0e8", 0.03, 0.01], ["#c8e88a", 0.1, 0.05]]) poly([[cx0 + dx - 0.16, cy0 + dy - 0.03], [cx0 + dx + 0.12, cy0 + dy - 0.07], [cx0 + dx + 0.16, cy0 + dy - 0.03], [cx0 + dx - 0.12, cy0 + dy + 0.01]], { fill: c, opacity: .35 }, bd);
+    if (f3Explicit) { poly(blob(0.07, 0.035, 1, 10).map(([x, y]) => [x - 0.1, y - 0.06]), { fill: "#fffbe0", opacity: .75 }, bd); poly(blob(0.035, 0.018, 2, 8).map(([x, y]) => [x + 0.08, y + 0.04]), { fill: "#fffbe0", opacity: .6 }, bd); } }
   // pieces
   const items = [], cast = P.cast || {};
   // P.stage: pieces placed at free positions on the board, in addition to the board state; P.omit: squares of the board state not drawn
