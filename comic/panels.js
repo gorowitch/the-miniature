@@ -171,8 +171,8 @@ window.PANELS = [
 { id: "11f", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { koning: { expr: "angry", talk: true, lookAt: "regina", gest: "point-down-l" }, regina: { expr: "worried", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden." }] },
-{ id: "11g", scene: 11, status: Pr, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" }, brookh8: { lookAt: "regina" } }, balloons: [] },
-{ id: "11h", scene: 11, status: Pr, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+{ id: "11g", scene: 11, status: A, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" }, brookh8: { lookAt: "regina" } }, balloons: [] },
+{ id: "11h", scene: 11, status: A, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 12 - The King Suspects f6 (PROPOSAL)
 { id: "12a", scene: 12, status: Pr, state: 8, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.3, f: 560 }),
   cast: { koning: { expr: "puzzled", talk: true, gest: "point-up-l" } },

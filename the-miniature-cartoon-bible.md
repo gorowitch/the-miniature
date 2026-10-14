@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.62
+Version 7.63
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -69,6 +69,7 @@ Version 7.59 adds the move marks (author decisions): sliding pieces leave three 
 Version 7.60 gives slides straight towards or away from the viewer three move lines too, like every other move (author feedback; Section 13, Move Marks).
 Version 7.61 adds a background gag (author decision): during the King's monologue (10a to 11e) the c1 bishop grows more and more bored and ends with a well-mannered yawn in 11d (Section 6 gags; panel blocks and manifests 41 to 53).
 Version 7.62 gives the proposal panel 12e a new camera (author decision): the black pawn moving to g6 is now fully visible in the centre. Panel 12e is then approved (author decision): panel block in Section 18 and manifest 61 in Section 20.3.
+Version 7.63 approves panels 11g and 11h (author decision): full panel blocks in Section 18 (Scene 11) and manifests 55 and 56 in Section 20.3; Scene 11 is complete.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1179,6 +1180,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.61 | Author decision: "From panel '40-panel-10a.svg' onward the king starts a monologue which ends at panel '53-panel-11e.svg' While the king is ranting the bishop at c3 becomes increasingly bored." (per panel: 10b "at least somewhat intrested", 10d "somewhat bored", 10e to 11c "even more bored", 11d "clearly yawning - this ends the joke"); "The idea is that the bisshops increasing boredom can be expressed with eyes, eybrows and mouth The boredom of the bishop starts slowly and increases as the king continues to speak." Clarified: the c1 bishop ("yes, c1 bishop"; no piece stands on c3), and "when the joke ends the bishop goes back to neutral" (11e). After the prototype: "I don't like 10h step 4 - eyes rolled up, suggest an alternative" (now staring down at the board) and "When yawning 11d step 9 - the bishop puts his hand before his mouth (he is well mannered)"; then "yes, apply to all panels". Section 6 (gags): a line for the bored c1 bishop; a line in the panel blocks 10b, 10d, 10e, 10f, 10h, 10i, 11a to 11e; field 6 of manifests 41, 43 to 45, 47 to 53. SVG preview: expression level bored 0 to 9 for c1, gesture hand-mouth in 11d. |
 | 7.62 | Author feedback on 12e: "Here the black pawn moving to g6 is the central action. However we barely see that pawn in this panel. Visually suggest some alternatives". The pawn stood right behind Caballo (g5) and Regina (h5). Claude showed four cameras (A over Caballo's head, B from the queenside past Caballo, C a close-up from beyond the h-file, D high from White's kingside corner) and refinements of B (zoomed out, higher, further left); author decision: "Lets stick with B". Camera line added to the 12e proposal block (Section 18); 12e stays a proposal. Noted: from this side Regina is seen from behind. |
 | 7.62 | Author decision: panel 12e accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 12) and as manifest 61 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 34 (5. ... g6) marked as written. |
+| 7.63 | Author decisions: panels 11g and 11h accepted ("55-panel-11g.svg accept", "56-panel-11h.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 11) and as manifests 55 and 56 in Section 20.3 (field 2 copied from Section 1); the proposal blocks are kept and marked as approved; Script Coverage Map items 30 (4. Dh5) and 31 (4. ... Pe7) marked as written. Scene 11 is complete. |
 
 ---
 
@@ -1826,7 +1828,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
 
 ## Scene 11 - Who Knows This Board Best
-Status: panels 11a to 11f approved by the author in 7.33 (from the proposals of 7.7, 11c with the camera adjusted in 7.25, as shown in the SVG preview); panels 11g and 11h are still proposals (Section 18, Proposed Panels).
+Status: panels 11a to 11f approved by the author in 7.33 (from the proposals of 7.7, 11c with the camera adjusted in 7.25, as shown in the SVG preview); panels 11g and 11h in 7.63; Scene 11 is complete.
 Board position for 11a to 11f: State 6 (after 3. ... Ld7). Alfil stands on d3, Caballo on h3; the f1, g1 and e2 squares are empty.
 
 ### Panel 11a
@@ -1881,6 +1883,26 @@ Approved in 7.33 (as shown in the SVG preview).
 - Characters: the King angry, mouth open, looks at Regina and points with one arm down and away from her, towards the kingside (h3, where Caballo stands, out of frame). Regina looks back at the King, worried, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - Balloon placement: top right, above Regina, clear of her crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+
+### Panel 11g
+Approved in 7.63 (as shown in the SVG preview).
+- Camera: from White's side, behind the kingside, raised, looking across the board towards Black's kingside.
+- In frame: the White King (e1) in the foreground, seen from behind; the white pawns, Alfil on d3, Caballo on h3 and the rook on h1 in the foreground; Regina on h5 in the upper right, seen from behind; the black army in the background. Every piece on a square that is in frame is shown.
+- Action: Regina moves from d1 to h5 (4. Dh5), sliding diagonally across the board: three dashed move lines flat on the board from d1, behind the King, to her (Section 13, Move Marks). She is calm.
+- Regina and the h8 rook (7.34): the black rook on h8 glances at Regina as she arrives on h5 (her face is not visible from this side).
+- Characters: the others neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 4. Dh5
+- No balloons.
+
+### Panel 11h
+Approved in 7.63 (as shown in the SVG preview).
+- Camera: from White's side, low, looking at Black's kingside.
+- In frame: the black army across the back of the frame; the black knight that has just jumped from g8 to e7 in the centre, behind the black pawns; Regina on h5 at the right; the head of a white pawn at the bottom and the edge of Caballo (h3) at the right edge. Every piece on a square that is in frame is shown.
+- Action: the black knight jumps from g8 to e7 (4. ... Pe7): a low dashed hop from g8 that comes down on e7 behind him, drawn in depth (Section 13, Move Marks).
+- Regina and the h8 rook (7.34): the black rook on h8 looks at Regina on h5 ("rook sees queen"), with a light blush.
+- Characters: the Black King calm; the others neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 4. ... Pe7
+- No balloons.
 
 ## Scene 12 - The King Suspects f6
 Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview); panels 12a to 12d are still proposals (Section 18, Proposed Panels).
@@ -2280,7 +2302,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Characters: White King (angry, speaking, looks at Regina, gesture point-down-l); Regina (worried, looks at White King).
 - Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 
-### Panel 11g (PROPOSAL)
+### Panel 11g (approved in 7.63: the approved panel block is in Section 18, Scene 11)
 - Board state: 7.
 - Regina and the h8 rook (author decision in 7.34): the black rook on h8 glances at Regina as she moves to h5 (her face is not visible from this side).
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
@@ -2289,7 +2311,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 4. Dh5
 - No balloons.
 
-### Panel 11h (PROPOSAL)
+### Panel 11h (approved in 7.63: the approved panel block is in Section 18, Scene 11)
 - Board state: 8.
 - Regina and the h8 rook (author decision in 7.34): the black rook on h8 looks at Regina on h5 ("rook sees queen"), with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
@@ -4110,7 +4132,7 @@ PANEL 10i   (sequence number 48)
 ```
 
 ### Scene 11 - Who Knows This Board Best
-Added in 7.33 for the panels the author approved (11a to 11f). Panels 11g and 11h are still proposals and have no manifests yet.
+Added in 7.33 for the panels the author approved (11a to 11f); 11g and 11h added in 7.63.
 
 ```
 PANEL 11a   (sequence number 49)
@@ -4290,6 +4312,60 @@ PANEL 11f   (sequence number 54)
 19. Layout: medium shot of the King and Regina; one balloon.
 20. Overflow: not expected.
 21. Continuity requirements: Regina goes to h5 in 11g (4. Dh5).
+```
+
+```
+PANEL 11g   (sequence number 55)
+
+1.  Scene 11, panel g: White plays 4. Dh5.
+2.  Script excerpt:
+      4. Dh5
+3.  Dialogue: none. Move box (bottom-left corner): "4. Dh5".
+4.  No speaker.
+5.  Visible: the White King e1 in the foreground from behind; the white pawns, Alfil d3, Caballo h3, the rook h1; Regina on h5 upper right, from behind; the black army in the background.
+6.  Watching: the h8 rook glancing at Regina (7.34); the others neutral, mouths closed.
+7.  Camera from White's side, behind the kingside, raised.
+8.  Regina: calm; three dashed move lines flat on the board from d1 to h5 (Section 13, Move Marks).
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 7: the move 4. Dh5 (queen d1 to h5) happens in this panel.
+12. Continuity: after the King's speech of Scene 11 (11a to 11f); Regina stands on h5 from now on.
+13. Must not appear: Regina still on d1; any other moved piece; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after the King's speech of Scene 11.
+16. Visual priority: Regina's diagonal slide to h5.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: wide view across the board (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 7 into 11h.
+```
+
+```
+PANEL 11h   (sequence number 56)
+
+1.  Scene 11, panel h: Black answers with 4. ... Pe7.
+2.  Script excerpt:
+      4. ... Pe7
+3.  Dialogue: none. Move box (bottom-left corner): "4. ... Pe7".
+4.  No speaker.
+5.  Visible: the black army; the black knight on e7 in the centre behind the black pawns; Regina h5 at the right; a white pawn's head at the bottom, the edge of Caballo (h3) at the right edge.
+6.  Watching: the h8 rook looking at Regina, light blush (7.34); the Black King calm; the others neutral, mouths closed.
+7.  Camera from White's side, low, looking at Black's kingside.
+8.  The black knight: a low dashed hop from g8 that comes down on e7 behind him, drawn in depth (Section 13, Move Marks).
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 8: the move 4. ... Pe7 (knight g8 to e7) happens in this panel.
+12. Continuity: after 4. Dh5 (11g); Regina on h5.
+13. Must not appear: the knight still on g8; a jump arc in front of pieces nearer to the viewer; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after 4. Dh5.
+16. Visual priority: the knight's jump to e7, and the rook's look at Regina.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: low view of Black's kingside (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 8 into Scene 12.
 ```
 
 ### Scene 12 - The King Suspects f6
@@ -4948,8 +5024,8 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 27 | Koning: (zucht) "Al meer als duizend partijen heb ik nu al gespeeld..." | 10 | 10a to 10h | Panel script written (10a to 10c approved in 7.31, 10d to 10h in 7.33); manifests written (Section 20.3). |
 | 28 | Regina: "Jamaar Sire, uw officieren hebben misschien wel een punt." | 10 | 10i | Panel script written (approved in 7.33); manifest written (Section 20.3). |
 | 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | 11a to 11f | Panel script written (approved in 7.33); manifests written (Section 20.3). |
-| 30 | Move: 4. Dh5 | 11 | - | Scene catalog only. |
-| 31 | Move: 4. ... Pe7 | 11 | - | Scene catalog only. |
+| 30 | Move: 4. Dh5 | 11 | 11g | Written: panel script and manifest 55 (approved in 7.63, Section 20.3). |
+| 31 | Move: 4. ... Pe7 | 11 | 11h | Written: panel script and manifest 56 (approved in 7.63, Section 20.3). |
 | 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | - | Scene catalog only. |
 | 33 | Move: 5. Pg5 | 12 | - | Scene catalog only. |
 | 34 | Move: 5. ... g6 | 12 | 12e | Written: panel script and manifest 61 (approved in 7.62, Section 20.3). |
@@ -5217,3 +5293,4 @@ Items that need a decision from the author.
 | 7.60 | - | Move marks: always three lines, also for slides towards or away from the viewer. |
 | 7.61 | - | Background gag: the c1 bishop grows bored during the King's monologue (10b to 11d), ends with a polite yawn. |
 | 7.62 | - | Panel 12e: new camera, the g6 pawn in the centre; approved: panel block and manifest 61. |
+| 7.63 | - | Panels 11g and 11h approved: panel blocks and manifests 55, 56; Scene 11 complete. |
