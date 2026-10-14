@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.68
+Version 7.69
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -75,6 +75,7 @@ Version 7.65 gives the proposal panel 12d a bird's-eye camera so the mate threat
 Version 7.66 gives the proposal panel 13b a closer camera from the h-file side (the e3 pawn out of sight, the g6 pawn clearly visible, a slightly higher hop for Caballo in this panel only) and a happy grin for the Black King: he sees that the White Queen is en prise (author decisions). Panel 13b is then approved: panel block in Section 18 and manifest 63 in Section 20.3; every panel of the cartoon is now approved.
 Version 7.67 shows the cola stain on f6 in colour in panels 15c and 15d (author decision): a puddle of cola with a dark red-brown edge, a near-black middle, a shine and tiny fizz dots.
 Version 7.68 gives the cola stain one subtle look in every other panel (author decision): the same puddle shape in two flat dark tones, without shine or fizz (Section 4, Cola Stain Visibility).
+Version 7.69 corrects a stale status note in Section 20.3 (Scene 6): manifest 25 for panel 6d exists since 7.16.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1194,6 +1195,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.66 | Author decision: panel 13b accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 13) and as manifest 63 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 36 (6. Pxh7) marked as written. Scene 13 is complete; with it every panel of the cartoon is approved. |
 | 7.67 | Author feedback: "About the cola stain. Can you make it more explicit in these panels - use color 74-panel-15c.svg 75-panel-15d.svg". On the dark square f6 the dark-brown stain hardly read. Claude showed amber variants; the author: "the color of course should resemble cola - like the story describes." Claude showed cola colours (classic, warmer, deep, caramel) with fizz bubbles; the author: "for the bubbles make many small bubbles, actually just dots. as for the color we haven't reached the sweet spot yet", then "generate something between what we have now and option 3"; author decision: "Lets go for 3c: closer to now." A cola line in the panel blocks 15c and 15d (Section 18). SVG preview: colaStyle edge #4A2214, middle #311409, core #1D0A05, tiny fizz dots. Other panels with the explicit stain (15e, 16a, 16c) are unchanged. |
 | 7.68 | Author decision: "for the other images I want a more subtle cola stain (as I stated earlier) suggest a subtler cola stain, a simplified version of the stain we just created for the other images. this subtler cola stain does not contain bubbles or light reflection and is maybe a little darker so it stays a bit in the background". Claude showed S1 (two dark tones), S2 (darker) and S3 (faintest) on 6d, 9g, 15e, 16a and 16c, and suggested S3 before Scene 15 and S2 after; author decision: "Actually I like S1 the best as compromise to use a single version". Section 4, Cola Stain Visibility: a Look line. SVG preview: edge #3E1A0E, middle #2A0F07, opacity 0.9, in every panel except 15c and 15d (and the clean cover). |
+| 7.69 | Correction (author: "yes, fix it and commit"): the introduction to the Scene 6 manifests (Section 20.3) still said "Panel 6d is still a proposal and has no manifest yet", while 6d was approved in 7.16 and its manifest 25 exists. Now: "Added in 7.13 for the panels the author approved (6a, 6b, 6c); 6d added in 7.16." A check after the last approvals: all 79 panels approved, every panel has a manifest, no proposal block left open. |
 
 ---
 
@@ -3384,7 +3386,7 @@ PANEL 5e   (sequence number 21)
 
 
 ### Scene 6 - Regina's Advice
-Added in 7.13 for the panels the author approved (6a, 6b, 6c). Panel 6d is still a proposal and has no manifest yet.
+Added in 7.13 for the panels the author approved (6a, 6b, 6c); 6d added in 7.16.
 
 ```
 PANEL 6a   (sequence number 22)
@@ -5501,3 +5503,4 @@ Items that need a decision from the author.
 | 7.66 | - | Proposal 13b: closer camera (e3 out of sight, g6 visible), a higher hop here only; the Black King grins, the White Queen is en prise.; approved: panel block and manifest 63; all panels approved. |
 | 7.67 | - | Panels 15c and 15d: the cola stain on f6 in cola colours with tiny fizz dots. |
 | 7.68 | - | The cola stain in every other panel: one subtle version, the same shape in two flat dark tones. |
+| 7.69 | - | Stale status note for 6d in Section 20.3 corrected. |
