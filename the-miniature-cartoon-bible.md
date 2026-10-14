@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.73
+Version 7.74
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -80,6 +80,7 @@ Version 7.70 makes the boebel clearer with smooth light and shadow (author decis
 Version 7.71 makes Caballo's clean felt part of the joke in 15c (he lifts himself off the square) and gives 15d a new viewing angle: the wet f6 in front, the dry f8 behind (author decisions).
 Version 7.72 gives the greasy spot on f3 an irregular, smeared shape with a few drops (author decision; Section 4, Greasy Spot).
 Version 7.73 gives the a1 rook bold jolt lines when he wakes up in 15a, so the payoff of the gag reads at page size (author decision).
+Version 7.74 marks the peak of the King's monologue in 11a with a burst behind him (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1206,6 +1207,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.71 | Quality check, Caballo's felt (author: "Let's work on Caballo's felt in 15c and 15d"): his base was cut off by the frame, so the clean felt of his punchline was not visible. Claude showed A (camera higher and wider), B (A + Caballo lifted off the square, leaning back, with a soft shadow under him) and C (lifted higher); the author: "I like B but only for the first image. For the second image I would like a different viewing angle". Claude showed three angles for 15d (D1 from White's side, D2 from Black's side, D3 high); author decision: "apply B to 15c and D1 to 15d". Panel blocks 15c and 15d (Section 18): a felt line and a viewing-angle line; in 15d the camera line "the same as 15c" no longer holds. SVG preview: a lifted piece casts a soft shadow on its square (also the a1 rook's startle jump in 15a). |
 | 7.72 | Quality check, the greasy spot (author: "let's improve on the the greasy spot on f3"): it read as a coin or an egg yolk (a neat yellow oval with a white highlight). Claude showed A (an irregular smear), B (A + smeared streaks and a few drops) and C (B + an oily rainbow sheen); author decision: "go with B, apply to all panels". Section 4, Greasy Spot: a Shape line. Applied in every panel of the SVG preview (faint before Scene 9, clearly visible from Scene 9; the cover stays clean). |
 | 7.73 | Quality check, the a1 rook waking (author: "any suggestions for the the a1 rook waking in 15b; ?"): the wake-up is in 15a (Claude's review had said 15b); at page size the rook was hard to find among the pawn heads, and in 15b the balloon hides him. Claude suggested four options; the author: "prototype 2" (a stronger startle in 15a). Claude showed A (bold jolt lines), B (A + a small hop) and C (A + a bigger hop) and recommended B; the author asked "I was thinking about A, why should I choose B ?"; author decision: "Let's go for A". 15a panel block: a jolt-lines line. The balloon in 15b is unchanged. |
+| 7.74 | Quality check, the monologue (author: "Now the monologue what are your suggestions ?"): page 7 (10h to 11f) shows eight panels in nearly the same medium shot. Claude suggested varying the shot sizes and prototyped four new cameras (10i, 11a, 11c, 11d); the author: "i am not convinced, suggest some other alternatives". Claude suggested other comic techniques (panel sizes, reaction shots, the bishop in the foreground, an emotional background for the peak, silhouette panels); the author: "prototype 4. An emotional background for the peak." Claude showed A (a burst behind the King), B (warm red background + burst) and C (yellow-orange + burst) and recommended B; author decision: "go with A". 11a panel block: a peak line. A local decision for 11a, not a general rule. |
 
 ---
 
@@ -1862,6 +1864,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it) and c2 (bottom right edge).
 - Characters: the King angry, mouth open, looks at Regina, one index finger raised high on the side away from her. Regina looks back at the King, surprised, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): more bored: eyes two-thirds closed, eyebrows drooping, the pout.
+- The peak of the monologue (author decision in 7.74): a burst of white rays behind the King, as in his outbursts (5a, 14a), so this line stands out on the page of the long monologue; the camera, the poses and the room are unchanged.
 - Balloon placement: top centre, just above Regina's crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?
 
@@ -5521,3 +5524,4 @@ Items that need a decision from the author.
 | 7.71 | - | 15c: Caballo lifts himself off the square, his clean felt in view; 15d: new angle, wet f6 in front, dry f8 behind. |
 | 7.72 | - | Greasy spot on f3: an irregular smear with streaks and drops instead of an oval. |
 | 7.73 | - | 15a: bold jolt lines around the waking a1 rook. |
+| 7.74 | - | 11a: a burst behind the King at the peak of his monologue. |

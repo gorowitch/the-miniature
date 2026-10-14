@@ -153,7 +153,7 @@ window.PANELS = [
   cast: { c1: { bored: 5, lookAt: "koning" }, regina: { talk: true, lookAt: "koning", gest: "open-l" }, koning: { expr: "stubborn", lookAt: "regina" } },
   balloons: [{ who: "regina", text: "Jamaar Sire, uw officieren hebben misschien wel een punt." }] },
 // ---------------------------------------------------------------- Scene 11 - Who Knows This Board Best (PROPOSAL)
-{ id: "11a", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+{ id: "11a", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }), fx: [{ burst: "koning" }],
   cast: { c1: { bored: 6, lookAt: "koning" }, koning: { expr: "angry", talk: true, lookAt: "regina", gest: "point-up-l" }, regina: { expr: "surprised", lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?" }] },
 { id: "11b", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
