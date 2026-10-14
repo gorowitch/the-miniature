@@ -305,13 +305,16 @@ function renderPanel(svg, P, opts) {
   const defs = mk("defs", {}, svg);
   defs.innerHTML = `<style>@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;display=swap');</style>
   <filter id="soft${P.id}" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="bb${P.id}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
   <pattern id="ht${P.id}" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="4.5" cy="4.5" r="1.5" fill="#000" opacity=".09"/></pattern>
   <clipPath id="clip${P.id}"><rect x="0" y="0" width="${W0}" height="${H}"/></clipPath>`;
   const root = mk("g", { "clip-path": `url(#clip${P.id})` }, svg);
   const state = P.state || 0, scene = P.scene || 1;
   const [C, T, F] = camFor(P), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
   const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [W0 / 2 + F * dot(v, rt) / Math.max(d, .01), H / 2 - F * dot(v, up) / Math.max(d, .01), d]; };
-  const RISE = P.clean ? 0 : (P.rise || 1);  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
+  // the boebel is shaded smoothly (a blurred light and shadow layer, a stronger shadow side, a soft warm highlight; author decision, bible 7.70);
+  // P.boebelStyle "now" draws the earlier square-cell shading
+  const BS = P.boebelStyle || "A", RISE = P.clean ? 0 : (P.rise || 1);  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
   // P.clean: a board without the three defects (no rise, no cola stain, no greasy spot), so the cover gives no joke away (bible 7.53)
   const bump = (x, y) => { const r = Math.hypot((x - 4) / 1.15, (y - 4) / 1.15); return r >= 1 ? 0 : 0.14 * RISE * (0.5 + 0.5 * Math.cos(Math.PI * r)); };
   const pz = (x, y) => pr(x, y, bump(x, y));
@@ -354,9 +357,10 @@ function renderPanel(svg, P, opts) {
   const bd = mk("g", {}, root);
   poly([[-0.4, -0.4], [8.4, -0.4], [8.4, 8.4], [-0.4, 8.4]], { fill: "#7a5a3c" }, bd);
   for (let s = 0; s < 8; s++) for (const r of [[[s, -0.15], [s + 1, -0.15], [s + 1, 0], [s, 0]], [[8, s], [8.15, s], [8.15, s + 1], [8, s + 1]], [[-0.15, s], [0, s], [0, s + 1], [-0.15, s + 1]], [[s, 8], [s + 1, 8], [s + 1, 8.15], [s, 8.15]]]) poly(r, { fill: BOARD.frame, stroke: INK, "stroke-width": .5 }, bd);
-  for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; for (let k = 0; k < 4; k++) pts.push([i + k / 4, a]); for (let k = 0; k < 4; k++) pts.push([i + 1, a + k / 4]); for (let k = 0; k < 4; k++) pts.push([i + 1 - k / 4, a + 1]); for (let k = 0; k < 4; k++) pts.push([i, a + 1 - k / 4]); poly(pts, { fill: (i + n) % 2 ? BOARD.dark : BOARD.light, stroke: BOARD.line, "stroke-width": .6 }, bd); }
-  { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
-    for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
+  for (let i = 0; i < 8; i++) for (let n = 1; n <= 8; n++) { const a = n - 1, pts = []; const K = BS !== "now" && i >= 2 && i <= 5 && a >= 2 && a <= 5 ? 10 : 4; for (let k = 0; k < K; k++) pts.push([i + k / K, a]); for (let k = 0; k < K; k++) pts.push([i + 1, a + k / K]); for (let k = 0; k < K; k++) pts.push([i + 1 - k / K, a + 1]); for (let k = 0; k < K; k++) pts.push([i, a + 1 - k / K]); poly(pts, { fill: (i + n) % 2 ? BOARD.dark : BOARD.light, stroke: BOARD.line, "stroke-width": .6 }, bd); }
+  { const shG = mk("g", { filter: `url(#bb${P.id})` }, bd); const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
+    for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], BS === "now" ? { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) } : { fill: v > 0 ? "#fff3d6" : "#1a0e06", opacity: Math.min(v > 0 ? .32 : .5, Math.abs(v) * (v > 0 ? 3 : 4)).toFixed(3) }, BS === "now" ? bd : shG); }
+  }
   const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
   // explicit cola in colour (author decision, bible 7.67; 15c and 15d): P.colaStyle = [edge, middle, core]: dark red-brown edge,
   // near-black middle, a glossy shine and many tiny fizz dots
