@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.63
+Version 7.64
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -70,6 +70,7 @@ Version 7.60 gives slides straight towards or away from the viewer three move li
 Version 7.61 adds a background gag (author decision): during the King's monologue (10a to 11e) the c1 bishop grows more and more bored and ends with a well-mannered yawn in 11d (Section 6 gags; panel blocks and manifests 41 to 53).
 Version 7.62 gives the proposal panel 12e a new camera (author decision): the black pawn moving to g6 is now fully visible in the centre. Panel 12e is then approved (author decision): panel block in Section 18 and manifest 61 in Section 20.3.
 Version 7.63 approves panels 11g and 11h (author decision): full panel blocks in Section 18 (Scene 11) and manifests 55 and 56 in Section 20.3; Scene 11 is complete.
+Version 7.64 approves panels 12a, 12b and 12c (author decision): full panel blocks in Section 18 (Scene 12) and manifests 57 to 59 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1181,6 +1182,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.62 | Author feedback on 12e: "Here the black pawn moving to g6 is the central action. However we barely see that pawn in this panel. Visually suggest some alternatives". The pawn stood right behind Caballo (g5) and Regina (h5). Claude showed four cameras (A over Caballo's head, B from the queenside past Caballo, C a close-up from beyond the h-file, D high from White's kingside corner) and refinements of B (zoomed out, higher, further left); author decision: "Lets stick with B". Camera line added to the 12e proposal block (Section 18); 12e stays a proposal. Noted: from this side Regina is seen from behind. |
 | 7.62 | Author decision: panel 12e accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 12) and as manifest 61 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 34 (5. ... g6) marked as written. |
 | 7.63 | Author decisions: panels 11g and 11h accepted ("55-panel-11g.svg accept", "56-panel-11h.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 11) and as manifests 55 and 56 in Section 20.3 (field 2 copied from Section 1); the proposal blocks are kept and marked as approved; Script Coverage Map items 30 (4. Dh5) and 31 (4. ... Pe7) marked as written. Scene 11 is complete. |
+| 7.64 | Author decisions: panels 12a, 12b and 12c accepted ("57-panel-12a.svg accept", "58-panel-12b.svg accept", "59-panel-12c.svg accept"), as shown in the SVG preview. Written as full panel blocks in Section 18 (Scene 12) and as manifests 57 to 59 in Section 20.3 (field 2 copied from Section 1 by script); the proposal blocks are kept and marked as approved; Script Coverage Map item 32 (speech 32) marked as written. Panel 12d is still a proposal. |
 
 ---
 
@@ -1905,8 +1907,32 @@ Approved in 7.63 (as shown in the SVG preview).
 - No balloons.
 
 ## Scene 12 - The King Suspects f6
-Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview); panels 12a to 12d are still proposals (Section 18, Proposed Panels).
+Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview), panels 12a, 12b and 12c in 7.64; panel 12d is still a proposal (Section 18, Proposed Panels).
 Board position for 12e: State 10 (5. ... g6 is played in this panel). Caballo stands on g5, Regina on h5, Alfil on d3.
+
+### Panel 12a
+Approved in 7.64 (as shown in the SVG preview).
+- Camera: from Black's side (the white pieces face the camera), framed on the White King (e1), zoomed out a little (7.25) so the balloon fits completely inside the panel, above him.
+- In frame: the King in the centre; the heads of the white pawns at the bottom; the edge of Alfil's mitre at the right edge. Every piece on a square that is in frame is shown.
+- Characters: the King puzzled, mouth open, one arm pointing up and away (towards f6, out of frame). The pawns look on, mouths closed.
+- Balloon placement: top centre, above the King, clear of his crown and cross; its curved tail ends just beside his mouth.
+- Balloon (White King): Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee.
+
+### Panel 12b
+Approved in 7.64 (as shown in the SVG preview).
+- Camera: from Black's side, close-up of the White King (e1).
+- In frame: the King large, right of centre; the heads of the white pawns at the bottom corners. Every piece on a square that is in frame is shown.
+- Characters: the King surprised, eyes wide, mouth open, one arm raised with the index finger up (an idea strikes him). The pawns look on, mouths closed.
+- Balloon placement: top left, clear of the crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon (White King): Seg, maar wacht eens effe … .
+
+### Panel 12c
+Approved in 7.64 (as shown in the SVG preview).
+- Camera: from Black's side, raised, framed on the King (e1) and Caballo (h3), looking over White's kingside.
+- In frame: the King at the back, centre; Caballo on h3 at the left, the rook on h1 behind him; the white pawns, Alfil on d3 and the c1 bishop; Regina on h5 at the bottom left (light pink blush, glancing towards the black rook on h8, out of frame, 7.34); the greasy spot on f3; the head of the black d5 pawn from behind at the bottom. Every piece on a square that is in frame is shown.
+- Characters: the King proud, mouth open, looks at Caballo and points down towards him. Caballo heroic, ready, mouth closed. The others neutral, mouths closed.
+- Balloon placement: top centre, above the King, clear of his crown and cross; its curved tail ends just beside his mouth.
+- Balloon (White King): Ridder Caballo, hop naar g5. Allez vooruit, ju !
 
 ### Panel 12e
 Approved in 7.62 (as shown in the SVG preview).
@@ -2320,19 +2346,19 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 4. ... Pe7
 - No balloons.
 
-### Panel 12a (PROPOSAL)
+### Panel 12a (approved in 7.64: the approved panel block is in Section 18, Scene 12)
 - Board state: 8.
 - Camera: from Black's side (the white pieces face the camera), framed on the King (e1), zoomed out a little (author feedback in 7.25) so the balloon fits completely inside the panel, above the King, with its tail pointing to his mouth.
 - Characters: White King (puzzled, speaking, gesture point-up-l).
 - Balloon (White King): Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee.
 
-### Panel 12b (PROPOSAL)
+### Panel 12b (approved in 7.64: the approved panel block is in Section 18, Scene 12)
 - Board state: 8.
 - Camera: from Black's side (the white pieces face the camera), framed on e1.
 - Characters: White King (surprised, speaking, gesture point-up-r).
 - Balloon (White King): Seg, maar wacht eens effe … .
 
-### Panel 12c (PROPOSAL)
+### Panel 12c (approved in 7.64: the approved panel block is in Section 18, Scene 12)
 - Board state: 8.
 - Regina and the h8 rook (author decision in 7.34): Regina (h5) has a light pink blush and glances towards the black rook on h8 (out of frame).
 - Camera: from Black's side (the white pieces face the camera), framed on e1, h3.
@@ -4369,7 +4395,94 @@ PANEL 11h   (sequence number 56)
 ```
 
 ### Scene 12 - The King Suspects f6
-Added in 7.62 for the panel the author approved (12e). Panels 12a to 12d are still proposals and have no manifest yet.
+Added in 7.62 for the panel the author approved (12e); 12a, 12b and 12c added in 7.64. Panel 12d is still a proposal and has no manifest yet.
+
+```
+PANEL 12a   (sequence number 57)
+
+1.  Scene 12, panel a: the King suspects f6.
+2.  Script excerpt:
+      Koning:
+      Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee. Seg, maar wacht eens effe … . Ridder Caballo, hop naar g5. Allez vooruit, ju !
+3.  Dialogue:
+      Balloon 1: "Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 in the centre; the heads of the white pawns at the bottom; the edge of Alfil's mitre at the right edge.
+6.  Listening: the pawns, mouths closed.
+7.  Camera on Black's side, framed on the King, zoomed out a little (7.25).
+8.  Koning: puzzled, mouth open, one arm pointing up and away (towards f6).
+9.  Balloon 1 top centre, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 8 (after 4. ... Pe7). No move.
+12. Continuity: after 4. ... Pe7 (11h); the black knight on e7 "does not want to go along" either.
+13. Must not appear: the cola stain named or pointed out in text; an open mouth on the pawns.
+14. Dialogue length: 23 words, 117 characters.
+15. Segmentation: speech 32, the first two sentences; continues in 12b with "Seg, maar wacht eens effe … .".
+16. Visual priority: the King's suspicion.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 18%.
+19. Layout: medium shot of the King (Section 23.D); one balloon.
+20. Overflow: not expected.
+21. Continuity requirements: the speech continues in 12b.
+```
+
+```
+PANEL 12b   (sequence number 58)
+
+1.  Scene 12, panel b: an idea strikes the King.
+2.  Script excerpt:
+      Koning:
+      Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee. Seg, maar wacht eens effe … . Ridder Caballo, hop naar g5. Allez vooruit, ju !
+3.  Dialogue:
+      Balloon 1: "Seg, maar wacht eens effe … ."
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1, close-up, right of centre; the heads of the white pawns at the bottom corners.
+6.  Listening: the pawns, mouths closed.
+7.  Camera on Black's side, close-up of the King.
+8.  Koning: surprised, eyes wide, mouth open, index finger raised.
+9.  Balloon 1 top left, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 8 (after 4. ... Pe7). No move.
+12. Continuity: continues speech 32 after 12a.
+13. Must not appear: an open mouth on the pawns.
+14. Dialogue length: 6 words, 29 characters.
+15. Segmentation: speech 32, the third sentence; continues in 12c with "Ridder Caballo, ...".
+16. Visual priority: the King's sudden idea.
+17. Lettering space: top left.
+18. Balloon-area estimate: about 8%.
+19. Layout: close-up (Section 23.D); one balloon.
+20. Overflow: not applicable.
+21. Continuity requirements: the speech continues in 12c.
+```
+
+```
+PANEL 12c   (sequence number 59)
+
+1.  Scene 12, panel c: the King sends Caballo to g5.
+2.  Script excerpt:
+      Koning:
+      Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee. Seg, maar wacht eens effe … . Ridder Caballo, hop naar g5. Allez vooruit, ju !
+3.  Dialogue:
+      Balloon 1: "Ridder Caballo, hop naar g5. Allez vooruit, ju !"
+4.  Balloon 1 -> Koning
+5.  Visible: Koning e1 at the back, centre; Caballo h3 at the left with the rook h1 behind him; the white pawns, Alfil d3, the c1 bishop; Regina h5 at the bottom left; the greasy spot on f3; the head of the black d5 pawn from behind at the bottom.
+6.  Listening: Caballo, heroic, ready, mouth closed; Regina, light pink blush, glancing towards the h8 rook (out of frame, 7.34); the others neutral, mouths closed.
+7.  Camera on Black's side, raised, framed on the King and Caballo.
+8.  Koning: proud, mouth open, looks at Caballo and points down towards him.
+9.  Balloon 1 top centre, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+10. Stage directions: none.
+11. State 8 (after 4. ... Pe7). No move; 5. Pg5 follows in 12d.
+12. Continuity: ends speech 32; Caballo jumps to g5 in 12d.
+13. Must not appear: Caballo already on g5; an open mouth on Caballo.
+14. Dialogue length: 9 words, 48 characters.
+15. Segmentation: speech 32, the last two sentences (ends the speech).
+16. Visual priority: the King's order to Caballo.
+17. Lettering space: top centre.
+18. Balloon-area estimate: about 10%.
+19. Layout: medium-wide view of the King and Caballo (Section 23.D); one balloon.
+20. Overflow: not applicable.
+21. Continuity requirements: Caballo jumps to g5 in 12d.
+```
 
 ```
 PANEL 12e   (sequence number 61)
@@ -5026,7 +5139,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 29 | Koning: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?..." | 11 | 11a to 11f | Panel script written (approved in 7.33); manifests written (Section 20.3). |
 | 30 | Move: 4. Dh5 | 11 | 11g | Written: panel script and manifest 55 (approved in 7.63, Section 20.3). |
 | 31 | Move: 4. ... Pe7 | 11 | 11h | Written: panel script and manifest 56 (approved in 7.63, Section 20.3). |
-| 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | - | Scene catalog only. |
+| 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | 12a, 12b, 12c | Written: panel scripts and manifests 57 to 59 (approved in 7.64, Section 20.3). |
 | 33 | Move: 5. Pg5 | 12 | - | Scene catalog only. |
 | 34 | Move: 5. ... g6 | 12 | 12e | Written: panel script and manifest 61 (approved in 7.62, Section 20.3). |
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
@@ -5294,3 +5407,4 @@ Items that need a decision from the author.
 | 7.61 | - | Background gag: the c1 bishop grows bored during the King's monologue (10b to 11d), ends with a polite yawn. |
 | 7.62 | - | Panel 12e: new camera, the g6 pawn in the centre; approved: panel block and manifest 61. |
 | 7.63 | - | Panels 11g and 11h approved: panel blocks and manifests 55, 56; Scene 11 complete. |
+| 7.64 | - | Panels 12a, 12b and 12c approved: panel blocks and manifests 57 to 59. |
