@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.74
+Version 7.75
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -81,6 +81,7 @@ Version 7.71 makes Caballo's clean felt part of the joke in 15c (he lifts himsel
 Version 7.72 gives the greasy spot on f3 an irregular, smeared shape with a few drops (author decision; Section 4, Greasy Spot).
 Version 7.73 gives the a1 rook bold jolt lines when he wakes up in 15a, so the payoff of the gag reads at page size (author decision).
 Version 7.74 marks the peak of the King's monologue in 11a with a burst behind him (author decision).
+Version 7.75 gives panel 11b a closer framing with Regina in the centre and a wide balloon above all three heads (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1208,6 +1209,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.72 | Quality check, the greasy spot (author: "let's improve on the the greasy spot on f3"): it read as a coin or an egg yolk (a neat yellow oval with a white highlight). Claude showed A (an irregular smear), B (A + smeared streaks and a few drops) and C (B + an oily rainbow sheen); author decision: "go with B, apply to all panels". Section 4, Greasy Spot: a Shape line. Applied in every panel of the SVG preview (faint before Scene 9, clearly visible from Scene 9; the cover stays clean). |
 | 7.73 | Quality check, the a1 rook waking (author: "any suggestions for the the a1 rook waking in 15b; ?"): the wake-up is in 15a (Claude's review had said 15b); at page size the rook was hard to find among the pawn heads, and in 15b the balloon hides him. Claude suggested four options; the author: "prototype 2" (a stronger startle in 15a). Claude showed A (bold jolt lines), B (A + a small hop) and C (A + a bigger hop) and recommended B; the author asked "I was thinking about A, why should I choose B ?"; author decision: "Let's go for A". 15a panel block: a jolt-lines line. The balloon in 15b is unchanged. |
 | 7.74 | Quality check, the monologue (author: "Now the monologue what are your suggestions ?"): page 7 (10h to 11f) shows eight panels in nearly the same medium shot. Claude suggested varying the shot sizes and prototyped four new cameras (10i, 11a, 11c, 11d); the author: "i am not convinced, suggest some other alternatives". Claude suggested other comic techniques (panel sizes, reaction shots, the bishop in the foreground, an emotional background for the peak, silhouette panels); the author: "prototype 4. An emotional background for the peak." Claude showed A (a burst behind the King), B (warm red background + burst) and C (yellow-orange + burst) and recommended B; author decision: "go with A". 11a panel block: a peak line. A local decision for 11a, not a general rule. |
+| 7.75 | Quality check, the monologue (continued; author: "Lets try to prototype 2. Reaction shots: the listener in view, the speaker off-panel."). Claude showed 11b with the King off-panel (A, B, C); the author: "Lets try something like B but with both the king and the bishop completely in the image. The text balloon then goes above the heads of all three pieces." Then: "Can the knight be left out of the frame. If possible can the pawns heads be left out of the frame ?" The knight can; the pawn heads cannot without cutting off the three or removing pieces (tried from higher and from lower: Alfil and the pawns came into the foreground). Then: "Still a part of the knight is shown."; author decision: "go with B4g, apply to 11b". 11b panel block: a framing-and-balloon line; the balloon no longer touches Regina's crown (accepted in 7.33). |
 
 ---
 
@@ -1874,6 +1876,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - In frame: the same as 11a.
 - Characters: the King smug, eyes half closed, mouth open, looks at Regina, a dismissive wave of one hand on the side away from her. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): more bored: heavy eyelids, eyes almost closed, eyebrows drooping, mouth hanging slightly open.
+- Framing and balloon (author decisions in 7.75): a closer shot than the rest of the monologue page, Regina in the centre, the King (left) and the bored c1 bishop (right) completely in frame, the b1 knight out of frame; a wide balloon in three lines across the top, above the heads of all three, clear of Regina's crown, its tail ending beside the King's mouth. The heads of the pawns in front of them remain at the bottom edge (they stand right in front of the three; leaving them out would cut off the three or remove pieces).
 - Balloon placement: top right; its bottom edge covers the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon (White King): Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is.
 
@@ -5525,3 +5528,4 @@ Items that need a decision from the author.
 | 7.72 | - | Greasy spot on f3: an irregular smear with streaks and drops instead of an oval. |
 | 7.73 | - | 15a: bold jolt lines around the waking a1 rook. |
 | 7.74 | - | 11a: a burst behind the King at the peak of his monologue. |
+| 7.75 | - | 11b: closer framing, Regina centred, a wide balloon above all three heads. |
