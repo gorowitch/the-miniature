@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.75
+Version 7.76
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -82,6 +82,7 @@ Version 7.72 gives the greasy spot on f3 an irregular, smeared shape with a few 
 Version 7.73 gives the a1 rook bold jolt lines when he wakes up in 15a, so the payoff of the gag reads at page size (author decision).
 Version 7.74 marks the peak of the King's monologue in 11a with a burst behind him (author decision).
 Version 7.75 gives panel 11b a closer framing with Regina in the centre and a wide balloon above all three heads (author decision).
+Version 7.76 records that the paprika stains stay on Alfil's mitre for the whole cartoon, as part of his identity (author decision; Section 4, Paprika).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -473,6 +474,7 @@ Measured in square widths (one square = 1):
 - Paprika stains only on Alfil's mitre.
 - No crumbs on the board.
 - No paprika chips on the board.
+- The stains stay for the whole cartoon (author decision in 7.76): although the King tells Alfil to wipe them off (Scene 7), the paprika stains remain on his mitre in every panel, to the end. They are part of Alfil's identity, not an oversight.
 
 ---
 
@@ -1210,6 +1212,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.73 | Quality check, the a1 rook waking (author: "any suggestions for the the a1 rook waking in 15b; ?"): the wake-up is in 15a (Claude's review had said 15b); at page size the rook was hard to find among the pawn heads, and in 15b the balloon hides him. Claude suggested four options; the author: "prototype 2" (a stronger startle in 15a). Claude showed A (bold jolt lines), B (A + a small hop) and C (A + a bigger hop) and recommended B; the author asked "I was thinking about A, why should I choose B ?"; author decision: "Let's go for A". 15a panel block: a jolt-lines line. The balloon in 15b is unchanged. |
 | 7.74 | Quality check, the monologue (author: "Now the monologue what are your suggestions ?"): page 7 (10h to 11f) shows eight panels in nearly the same medium shot. Claude suggested varying the shot sizes and prototyped four new cameras (10i, 11a, 11c, 11d); the author: "i am not convinced, suggest some other alternatives". Claude suggested other comic techniques (panel sizes, reaction shots, the bishop in the foreground, an emotional background for the peak, silhouette panels); the author: "prototype 4. An emotional background for the peak." Claude showed A (a burst behind the King), B (warm red background + burst) and C (yellow-orange + burst) and recommended B; author decision: "go with A". 11a panel block: a peak line. A local decision for 11a, not a general rule. |
 | 7.75 | Quality check, the monologue (continued; author: "Lets try to prototype 2. Reaction shots: the listener in view, the speaker off-panel."). Claude showed 11b with the King off-panel (A, B, C); the author: "Lets try something like B but with both the king and the bishop completely in the image. The text balloon then goes above the heads of all three pieces." Then: "Can the knight be left out of the frame. If possible can the pawns heads be left out of the frame ?" The knight can; the pawn heads cannot without cutting off the three or removing pieces (tried from higher and from lower: Alfil and the pawns came into the foreground). Then: "Still a part of the knight is shown."; author decision: "go with B4g, apply to 11b". 11b panel block: a framing-and-balloon line; the balloon no longer touches Regina's crown (accepted in 7.33). |
+| 7.76 | Quality check, the paprika question (Claude: the King orders Alfil to wipe off the paprika in Scene 7, yet the stains stay until the end; deadpan joke or oversight?). Author decision: "I kept the paprika because I feel it is part of alfils identity." Section 4, Paprika: a line that the stains stay for the whole cartoon. Also recorded: after prototypes of 11d (the bishop in the foreground) and 11e (a close-up of the King) the author was not convinced; the monologue page stays as it is (11a burst, 11b closer). |
 
 ---
 
@@ -5529,3 +5532,4 @@ Items that need a decision from the author.
 | 7.73 | - | 15a: bold jolt lines around the waking a1 rook. |
 | 7.74 | - | 11a: a burst behind the King at the peak of his monologue. |
 | 7.75 | - | 11b: closer framing, Regina centred, a wide balloon above all three heads. |
+| 7.76 | - | Paprika stays on Alfil's mitre to the end, part of his identity. |
