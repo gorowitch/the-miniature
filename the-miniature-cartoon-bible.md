@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.66
+Version 7.68
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -73,6 +73,8 @@ Version 7.63 approves panels 11g and 11h (author decision): full panel blocks in
 Version 7.64 approves panels 12a, 12b and 12c (author decision): full panel blocks in Section 18 (Scene 12) and manifests 57 to 59 in Section 20.3.
 Version 7.65 gives the proposal panel 12d a bird's-eye camera so the mate threat Qxf7# can be read, a scared Black King and the h8 rook with eyes only for Regina (author decisions). Panel 12d is then approved (author decision): panel block in Section 18 and manifest 60 in Section 20.3; Scene 12 is complete.
 Version 7.66 gives the proposal panel 13b a closer camera from the h-file side (the e3 pawn out of sight, the g6 pawn clearly visible, a slightly higher hop for Caballo in this panel only) and a happy grin for the Black King: he sees that the White Queen is en prise (author decisions). Panel 13b is then approved: panel block in Section 18 and manifest 63 in Section 20.3; every panel of the cartoon is now approved.
+Version 7.67 shows the cola stain on f6 in colour in panels 15c and 15d (author decision): a puddle of cola with a dark red-brown edge, a near-black middle, a shine and tiny fizz dots.
+Version 7.68 gives the cola stain one subtle look in every other panel (author decision): the same puddle shape in two flat dark tones, without shine or fizz (Section 4, Cola Stain Visibility).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -443,6 +445,7 @@ Measured in square widths (one square = 1):
 - Scenes 1 to 14: the stain may be visible, but subtly: a faint discolouration of f6, easy to overlook.
 - Scene 15 (Caballo refuses f6): the stain is shown explicitly, wet, dark and glossy.
 - The explicit stain is the reveal of Caballo's complaint; it must not be given away earlier.
+- Look of the stain (author decisions in 7.67 and 7.68): in 15c and 15d, where Caballo complains about it, the stain is a puddle of cola in colour: a dark red-brown edge, a near-black middle, a glossy shine and many tiny light fizz dots. In every other panel where f6 is in sight (before and after 15c and 15d) one subtle version is used: the same puddle shape, two flat dark tones (a dark brown edge and a darker middle), no shine and no fizz dots, so it stays in the background. It covers most of f6. The cover shows no stain (7.53).
 
 ## Greasy Spot (f3)
 - Square f3.
@@ -1189,6 +1192,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.65 | Author decision: panel 12d accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 12) and as manifest 60 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 33 (5. Pg5) marked as written. Scene 12 is complete. |
 | 7.66 | Author feedback on 13b: "In this panel the black king looks happy. He sees that the white queen is en prise I would also zoom in a little more so the pawn on e3 goes out of sight". Claude showed two closer framings with the Black King amused (broad grin) or smug; author decision: "go with zoom 1 and the amused king". Then: "Lets also zoom a little so that the pawn on g6 is clearly visible." From this angle the g6 pawn stood right behind Regina; Claude moved the camera along the h-file side (H, I) and showed H with a slightly higher hop, because the hop then crossed the pawn's face; author decision: "go with H and the higher hop". The higher hop is local to 13b; the general rule (Section 13, Move Marks) is unchanged. 13b proposal block: a framing and Black King line. 13b stays a proposal. |
 | 7.66 | Author decision: panel 13b accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 13) and as manifest 63 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 36 (6. Pxh7) marked as written. Scene 13 is complete; with it every panel of the cartoon is approved. |
+| 7.67 | Author feedback: "About the cola stain. Can you make it more explicit in these panels - use color 74-panel-15c.svg 75-panel-15d.svg". On the dark square f6 the dark-brown stain hardly read. Claude showed amber variants; the author: "the color of course should resemble cola - like the story describes." Claude showed cola colours (classic, warmer, deep, caramel) with fizz bubbles; the author: "for the bubbles make many small bubbles, actually just dots. as for the color we haven't reached the sweet spot yet", then "generate something between what we have now and option 3"; author decision: "Lets go for 3c: closer to now." A cola line in the panel blocks 15c and 15d (Section 18). SVG preview: colaStyle edge #4A2214, middle #311409, core #1D0A05, tiny fizz dots. Other panels with the explicit stain (15e, 16a, 16c) are unchanged. |
+| 7.68 | Author decision: "for the other images I want a more subtle cola stain (as I stated earlier) suggest a subtler cola stain, a simplified version of the stain we just created for the other images. this subtler cola stain does not contain bubbles or light reflection and is maybe a little darker so it stays a bit in the background". Claude showed S1 (two dark tones), S2 (darker) and S3 (faintest) on 6d, 9g, 15e, 16a and 16c, and suggested S3 before Scene 15 and S2 after; author decision: "Actually I like S1 the best as compromise to use a single version". Section 4, Cola Stain Visibility: a Look line. SVG preview: edge #3E1A0E, middle #2A0F07, opacity 0.9, in every panel except 15c and 15d (and the clean cover). |
 
 ---
 
@@ -2080,6 +2085,7 @@ Approved in 7.40.
 - Camera: from beside the board on the kingside, low, close behind Caballo on h7, looking across the black kingside towards f6.
 - In frame: Caballo (h7) large in the right foreground; the black rook on h8 at the right edge; the black pawns and pieces of the kingside in the background; the cola stain on f6 explicit: wet, dark and glossy, in the middle of the frame.
 - Characters: Caballo furious, mouth open. The black pieces neutral, mouths closed.
+- The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
 - Balloon placement: top right; its tail comes down to Caballo's mouth. Accepted as shown (7.40): the tail ends on Caballo's head near his eye.
 - Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
 
@@ -2088,6 +2094,7 @@ Approved in 7.40.
 - Camera: the same as 15c.
 - In frame: the same as 15c.
 - Characters: Caballo smug, mouth open (he proposes to take on f8 instead). The black pieces neutral, mouths closed.
+- The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
 - Balloon placement: top right; its curved tail ends just beside Caballo's snout.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
@@ -5492,3 +5499,5 @@ Items that need a decision from the author.
 | 7.64 | - | Panels 12a, 12b and 12c approved: panel blocks and manifests 57 to 59. |
 | 7.65 | - | Panel 12d: bird's-eye view of the mate threat Qxf7#, scared Black King; approved: panel block and manifest 60; Scene 12 complete. |
 | 7.66 | - | Proposal 13b: closer camera (e3 out of sight, g6 visible), a higher hop here only; the Black King grins, the White Queen is en prise.; approved: panel block and manifest 63; all panels approved. |
+| 7.67 | - | Panels 15c and 15d: the cola stain on f6 in cola colours with tiny fizz dots. |
+| 7.68 | - | The cola stain in every other panel: one subtle version, the same shape in two flat dark tones. |

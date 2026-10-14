@@ -358,8 +358,23 @@ function renderPanel(svg, P, opts) {
   { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
     for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
   const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
-  if (!P.clean) poly([[5.12, 5.3], [5.4, 5.16], [5.78, 5.24], [5.9, 5.5], [5.82, 5.82], [5.45, 5.88], [5.14, 5.76], [5.06, 5.5]], { fill: colaExplicit ? "#3a1608" : "#6a3418", opacity: colaExplicit ? .92 : .16 }, bd);
-  if (colaExplicit && !P.clean) poly([[5.3, 5.36], [5.55, 5.3], [5.62, 5.42], [5.36, 5.48]], { fill: "#e9c7a8", opacity: .55 }, bd);
+  // explicit cola in colour (author decision, bible 7.67; 15c and 15d): P.colaStyle = [edge, middle, core]: dark red-brown edge,
+  // near-black middle, a glossy shine and many tiny fizz dots
+  // the cola stain on f6 in every panel except 15c and 15d (author decision, bible 7.68): the shape of the explicit stain, two flat dark tones,
+  // no shine, no fizz dots, darker, so it stays in the background
+  if (!P.clean && !P.colaStyle) { const [sE, sC, sO] = P.colaSubtle || ["#3e1a0e", "#2a0f07", 0.9], cx0 = 5.48, cy0 = 5.52;
+    const blob = (r, k) => Array.from({ length: 18 }, (_, i) => { const a = i / 18 * Math.PI * 2, w = 1 + 0.12 * Math.sin(a * 3 + k) + 0.07 * Math.cos(a * 5 + k); return [cx0 + Math.cos(a) * r * w, cy0 + Math.sin(a) * r * 0.92 * w]; });
+    poly(blob(0.45, 1), { fill: sE, opacity: sO }, bd); poly(blob(0.32, 2), { fill: sC, opacity: sO }, bd); }
+  if (colaExplicit && !P.clean && P.colaStyle) { const [cE, cM, cC] = P.colaStyle, cx0 = 5.48, cy0 = 5.52;
+    const blob = (r, k) => Array.from({ length: 18 }, (_, i) => { const a = i / 18 * Math.PI * 2, w = 1 + 0.12 * Math.sin(a * 3 + k) + 0.07 * Math.cos(a * 5 + k); return [cx0 + Math.cos(a) * r * w, cy0 + Math.sin(a) * r * 0.92 * w]; });
+    poly(blob(0.45, 1), { fill: cE, stroke: "#2a0c04", "stroke-width": 1.2 }, bd);
+    poly(blob(0.36, 2), { fill: cM }, bd); poly(blob(0.26, 3), { fill: cC }, bd);
+    poly([[5.26, 5.62], [5.42, 5.7], [5.5, 5.66], [5.34, 5.58]], { fill: "#fff6e0", opacity: .75 }, bd);
+    poly([[5.58, 5.36], [5.66, 5.34], [5.7, 5.38], [5.6, 5.4]], { fill: "#fff6e0", opacity: .7 }, bd);
+    // fizz: many tiny light dots, denser towards the edge of the puddle
+    let sd = 7; const rnd = () => (sd = (sd * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 46; i++) { const a = rnd() * Math.PI * 2, rr = 0.42 * Math.sqrt(0.15 + 0.85 * rnd()), bx = cx0 + Math.cos(a) * rr, by = cy0 + Math.sin(a) * rr * 0.92, br = 0.007 + rnd() * 0.009;
+      poly(Array.from({ length: 6 }, (_, j) => { const b = j / 6 * Math.PI * 2; return [bx + Math.cos(b) * br, by + Math.sin(b) * br]; }), { fill: "#f2dfbd", opacity: .9 }, bd); } }
   if (!P.clean) { const pts = []; for (let k = 0; k < 20; k++) { const a = k / 20 * Math.PI * 2; pts.push([5.5 + Math.cos(a) * .34, 2.5 + Math.sin(a) * .2]); } poly(pts, { fill: "#c9a83a", opacity: f3Explicit ? .45 : .14 }, bd);
     if (f3Explicit) { const p2 = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; p2.push([5.42 + Math.cos(a) * .1, 2.46 + Math.sin(a) * .05]); } poly(p2, { fill: "#fffbe0", opacity: .7 }, bd); } }
   // pieces
