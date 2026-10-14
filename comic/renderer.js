@@ -501,7 +501,10 @@ function renderPanel(svg, P, opts) {
     if (fx.burst) { const sp = placed.find(p => p.role === fx.burst || p.sq === fx.burst); if (sp) { const [hy] = HEAD[sp.t]; const cx = sp.x, cy = sp.y + hy * sp.s; const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .9 }, root); mk("circle", { cx, cy, r: 260, fill: "#fff6d6", opacity: .35, stroke: "none" }, gg); for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2 + .2; mk("path", { d: `M${cx + Math.cos(a) * 70} ${cy + Math.sin(a) * 70} L${cx + Math.cos(a) * 900} ${cy + Math.sin(a) * 900}`, "stroke-width": 5 + (k % 3) * 2 }, gg); } } }
     if (fx.move) moveFx(fx, "behind");
   }
-  for (const [pi, p] of placed.entries()) { slotFx(pi); const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
+  for (const [pi, p] of placed.entries()) { slotFx(pi);
+    // a lifted piece (o.jump) casts a soft shadow on its square, so the lift reads (Caballo keeping his felt clean, 15c/15d)
+    if (p.o.jump && !p.beside) mk("ellipse", { cx: p.x.toFixed(1), cy: (p.y + p.o.jump * p.s).toFixed(1), rx: (19 * p.s).toFixed(1), ry: (6 * p.s).toFixed(1), fill: "#000", opacity: .28 }, root);
+    const sw = Math.max(1.1, Math.min(4.6, 1.3 / Math.max(p.s, .3) * p.s * 1.0)); drawPiece(root, p, (Math.max(0.8, Math.min(2.2, 1.9 / Math.sqrt(p.s)))).toFixed(2)); p.head = [p.x, p.y + HEAD[p.t][0] * p.s]; p.mouth = [p.x + (p.t === "n" ? (p.o.dir || 1) * 17 * p.s : 0), p.y + (HEAD[p.t][0] + (p.t === "n" ? 12 : HEAD[p.t][1] * .8)) * p.s]; p.top = p.y + (p.t === "k" ? -90 : p.t === "b" ? -74 : p.t === "q" ? -72 : p.t === "n" ? -68 : p.t === "r" ? -55 : -47) * p.s; }
   slotFx(placed.length);
   for (const fx of (P.fx || [])) if (fx.move) moveFx(fx, "front");   // move marks in front of the pieces, like comic speed lines
   // keep-clear zones for balloon tails: every head with its hat (crown, mitre, cross), from the top of the piece to the chin

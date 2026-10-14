@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.70
+Version 7.71
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -77,6 +77,7 @@ Version 7.67 shows the cola stain on f6 in colour in panels 15c and 15d (author 
 Version 7.68 gives the cola stain one subtle look in every other panel (author decision): the same puddle shape in two flat dark tones, without shine or fizz (Section 4, Cola Stain Visibility).
 Version 7.69 corrects a stale status note in Section 20.3 (Scene 6): manifest 25 for panel 6d exists since 7.16.
 Version 7.70 makes the boebel clearer with smooth light and shadow (author decision; Section 4, Boebel Appearance).
+Version 7.71 makes Caballo's clean felt part of the joke in 15c (he lifts himself off the square) and gives 15d a new viewing angle: the wet f6 in front, the dry f8 behind (author decisions).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1199,6 +1200,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.68 | Author decision: "for the other images I want a more subtle cola stain (as I stated earlier) suggest a subtler cola stain, a simplified version of the stain we just created for the other images. this subtler cola stain does not contain bubbles or light reflection and is maybe a little darker so it stays a bit in the background". Claude showed S1 (two dark tones), S2 (darker) and S3 (faintest) on 6d, 9g, 15e, 16a and 16c, and suggested S3 before Scene 15 and S2 after; author decision: "Actually I like S1 the best as compromise to use a single version". Section 4, Cola Stain Visibility: a Look line. SVG preview: edge #3E1A0E, middle #2A0F07, opacity 0.9, in every panel except 15c and 15d (and the clean cover). |
 | 7.69 | Correction (author: "yes, fix it and commit"): the introduction to the Scene 6 manifests (Section 20.3) still said "Panel 6d is still a proposal and has no manifest yet", while 6d was approved in 7.16 and its manifest 25 exists. Now: "Added in 7.13 for the panels the author approved (6a, 6b, 6c); 6d added in 7.16." A check after the last approvals: all 79 panels approved, every panel has a manifest, no proposal block left open. |
 | 7.70 | Quality check of the jokes (author: "Lets do a qualtity check. How are we doing on jokes - visually ? Are there area's where we can improve ?"). Claude's review: the a1 rook, the c1 bishop, Regina and the h8 rook, the mutiny and the outbursts read well; to improve: the boebel (under-shown; its square-cell shading read as a pale smear or glare), Caballo's felt in 15c and 15d, the greasy spot (reads as a coin), the a1 rook waking in 15b (small), the monotony of the monologue page, and the paprika that is never wiped off (a story question). Author: "Yes, prototype a clearer boebel". Claude showed A (smooth light and shadow), B (A + a higher rise with bending squares) and C (B + a shadow at the foot, which read as a ring); author decision: "go with A, apply to all panels". Section 4, Boebel Appearance: a Smooth shading line. Applied in every panel of the SVG preview (the cover stays clean). |
+| 7.71 | Quality check, Caballo's felt (author: "Let's work on Caballo's felt in 15c and 15d"): his base was cut off by the frame, so the clean felt of his punchline was not visible. Claude showed A (camera higher and wider), B (A + Caballo lifted off the square, leaning back, with a soft shadow under him) and C (lifted higher); the author: "I like B but only for the first image. For the second image I would like a different viewing angle". Claude showed three angles for 15d (D1 from White's side, D2 from Black's side, D3 high); author decision: "apply B to 15c and D1 to 15d". Panel blocks 15c and 15d (Section 18): a felt line and a viewing-angle line; in 15d the camera line "the same as 15c" no longer holds. SVG preview: a lifted piece casts a soft shadow on its square (also the a1 rook's startle jump in 15a). |
 
 ---
 
@@ -2091,6 +2093,7 @@ Approved in 7.40.
 - In frame: Caballo (h7) large in the right foreground; the black rook on h8 at the right edge; the black pawns and pieces of the kingside in the background; the cola stain on f6 explicit: wet, dark and glossy, in the middle of the frame.
 - Characters: Caballo furious, mouth open. The black pieces neutral, mouths closed.
 - The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
+- Caballo's clean felt (author decision in 7.71): the camera a little higher and wider than before, so Caballo's whole base and his green felt are in frame next to the cola on f6; Caballo lifts himself a little off h7 (a soft shadow on the square under him) and leans back, away from f6: he will not let his clean felt touch the board near that wet mess. The balloon moves to the top left, so its tail reaches his snout from the side instead of crossing his head.
 - Balloon placement: top right; its tail comes down to Caballo's mouth. Accepted as shown (7.40): the tail ends on Caballo's head near his eye.
 - Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
 
@@ -2100,6 +2103,7 @@ Approved in 7.40.
 - In frame: the same as 15c.
 - Characters: Caballo smug, mouth open (he proposes to take on f8 instead). The black pieces neutral, mouths closed.
 - The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
+- Viewing angle (author decision in 7.71): no longer the same camera as 15c, but from White's side, low, behind the kingside: Caballo at the right, standing normally, his whole base and felt in view; the cola on f6 large in the foreground, the dry square f8 with the black bishop behind it, so the punchline ("daar is het precies wel droog") shows wet here, dry there.
 - Balloon placement: top right; its curved tail ends just beside Caballo's snout.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
@@ -5508,3 +5512,4 @@ Items that need a decision from the author.
 | 7.68 | - | The cola stain in every other panel: one subtle version, the same shape in two flat dark tones. |
 | 7.69 | - | Stale status note for 6d in Section 20.3 corrected. |
 | 7.70 | - | Boebel: smooth light and shadow instead of square-cell shading. |
+| 7.71 | - | 15c: Caballo lifts himself off the square, his clean felt in view; 15d: new angle, wet f6 in front, dry f8 behind. |
