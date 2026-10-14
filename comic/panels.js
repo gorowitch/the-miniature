@@ -184,7 +184,7 @@ window.PANELS = [
   cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" } },
   balloons: [{ who: "koning", text: "Ridder Caballo, hop naar g5. Allez vooruit, ju !" }] },
 { id: "12d", scene: 12, status: Pr, movebox: "5. Pg5", state: 9, cam: { from: [11.6, 1.2, 3.4], at: [6.9, 3.6, 0.4], f: 700 }, fx: [{ move: ["h3", "g5"] }], cast: { caballo: { expr: "heroic" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
-{ id: "12e", scene: 12, status: Pr, movebox: "5. ... g6", state: 10, cam: { from: [8.8, 3.2, 2.2], at: [6.6, 5.6, 0.4], f: 640 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+{ id: "12e", scene: 12, status: A, movebox: "5. ... g6", state: 10, cam: { from: [3.4, 3.0, 2.4], at: [6.7, 5.7, 0.7], f: 900 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 13 - Caballo's Charge (PROPOSAL)
 { id: "13a", scene: 13, status: A, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
   cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },

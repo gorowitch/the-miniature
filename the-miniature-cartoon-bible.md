@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.61
+Version 7.62
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -68,6 +68,7 @@ Version 7.58 makes the crowns of the Kings and Queens fit their heads (author de
 Version 7.59 adds the move marks (author decisions): sliding pieces leave three dashed lines flat on the board, the knight makes a low dashed hop from square to square, drawn in depth; new cameras for the proposals 12d and 13b (Section 13, Move Marks).
 Version 7.60 gives slides straight towards or away from the viewer three move lines too, like every other move (author feedback; Section 13, Move Marks).
 Version 7.61 adds a background gag (author decision): during the King's monologue (10a to 11e) the c1 bishop grows more and more bored and ends with a well-mannered yawn in 11d (Section 6 gags; panel blocks and manifests 41 to 53).
+Version 7.62 gives the proposal panel 12e a new camera (author decision): the black pawn moving to g6 is now fully visible in the centre. Panel 12e is then approved (author decision): panel block in Section 18 and manifest 61 in Section 20.3.
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1176,6 +1177,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.59 | Author feedback: "Regarding the movements of the pieces. In chess the knights jump whereas the other pieces slide. My feeling is that the current movement indicators can be improved." Claude showed alternatives (speed lines, ghost and track, arrows); the author: "How about keeping the dashed arcs. - representing jumping for the knight - representing sliding for the queen". Refinements: "the movement of the knight is not clear at all. Maybe the jump must clearly end at the square. Since the knight jumps from square to square. Keep in mind that both knight movements and other movements need to have a consistent feel."; Claude showed an arc in the scene, a hop on the page foot to foot (D2) and a dashed start square; the author chose D2 ("I don't like the image 13b"); then "the knight jumps way to high"; then "it becomes important to realise when a knight jumps either behind or in front of another piece. When it jumps behind we don't want to see the white stripes in front of the piece. When it jumpt in front of the piece we do want to see the white stripes in front of the piece."; then "drop the take-off puff"; decision: "yes, apply to all panels and adjust both cameras". New subsection Section 13, Move Marks; 12d and 13b: camera and move-marks lines in the proposal blocks. Claude's own addition (stated here): a slide straight towards or away from the viewer shows its lines on both sides of the piece, like skid marks, because behind the piece they would be hidden or stick out above its head (6d, 8c, 12e, 14d). |
 | 7.60 | Author feedback: "In some images I only see two movements lines for the pawns. Is there a reason for that ? I would expect three lines exactly like the movement of the other pieces." The reason was Claude's own addition in 7.59 (two skid marks for slides straight towards or away from the viewer). Now three lines there too, spread a little wider (6d, 8c, 12e, 14d). Section 13, Move Marks updated. |
 | 7.61 | Author decision: "From panel '40-panel-10a.svg' onward the king starts a monologue which ends at panel '53-panel-11e.svg' While the king is ranting the bishop at c3 becomes increasingly bored." (per panel: 10b "at least somewhat intrested", 10d "somewhat bored", 10e to 11c "even more bored", 11d "clearly yawning - this ends the joke"); "The idea is that the bisshops increasing boredom can be expressed with eyes, eybrows and mouth The boredom of the bishop starts slowly and increases as the king continues to speak." Clarified: the c1 bishop ("yes, c1 bishop"; no piece stands on c3), and "when the joke ends the bishop goes back to neutral" (11e). After the prototype: "I don't like 10h step 4 - eyes rolled up, suggest an alternative" (now staring down at the board) and "When yawning 11d step 9 - the bishop puts his hand before his mouth (he is well mannered)"; then "yes, apply to all panels". Section 6 (gags): a line for the bored c1 bishop; a line in the panel blocks 10b, 10d, 10e, 10f, 10h, 10i, 11a to 11e; field 6 of manifests 41, 43 to 45, 47 to 53. SVG preview: expression level bored 0 to 9 for c1, gesture hand-mouth in 11d. |
+| 7.62 | Author feedback on 12e: "Here the black pawn moving to g6 is the central action. However we barely see that pawn in this panel. Visually suggest some alternatives". The pawn stood right behind Caballo (g5) and Regina (h5). Claude showed four cameras (A over Caballo's head, B from the queenside past Caballo, C a close-up from beyond the h-file, D high from White's kingside corner) and refinements of B (zoomed out, higher, further left); author decision: "Lets stick with B". Camera line added to the 12e proposal block (Section 18); 12e stays a proposal. Noted: from this side Regina is seen from behind. |
+| 7.62 | Author decision: panel 12e accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (new heading Scene 12) and as manifest 61 in Section 20.3 (field 2 copied from Section 1); the proposal block is kept and marked as approved; Script Coverage Map item 34 (5. ... g6) marked as written. |
 
 ---
 
@@ -1879,6 +1882,19 @@ Approved in 7.33 (as shown in the SVG preview).
 - Balloon placement: top right, above Regina, clear of her crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 
+## Scene 12 - The King Suspects f6
+Status: panel 12e approved by the author in 7.62 (camera as set by the author in 7.62, as shown in the SVG preview); panels 12a to 12d are still proposals (Section 18, Proposed Panels).
+Board position for 12e: State 10 (5. ... g6 is played in this panel). Caballo stands on g5, Regina on h5, Alfil on d3.
+
+### Panel 12e
+Approved in 7.62 (as shown in the SVG preview).
+- Camera (author decision in 7.62): from White's side towards the queenside, low, looking past Caballo's left, so the black pawn that moves from g7 to g6 stands fully visible in the centre of the panel.
+- In frame: the black g-pawn on g6 in the centre (with his moustache); Caballo on g5 at the right; Regina on h5 behind him, seen from behind; the black rook on h8 in the background; black pawns and a black bishop at the left. Every piece on a square that is in frame is shown.
+- Action: the black pawn moves from g7 to g6 (5. ... g6), away from Caballo on g5: three dashed move lines flat on the board beside him (Section 13, Move Marks). He is calm, mouth closed.
+- Characters: Caballo heroic, mouth closed. Regina worried (seen from behind, her face not in sight). The black rook on h8 glances at Regina, with a light blush (7.34). The others neutral, mouths closed.
+- Move box (bottom-left corner, bold, white rectangle): 5. ... g6
+- No balloons.
+
 ## Scene 13 - Caballo's Charge
 Status: panel 13a approved by the author in 7.43 (balloon as set by the author in 7.43, as shown in the SVG preview); panel 13b is still a proposal (Section 18, Proposed Panels).
 Board position for 13a: State 10 (after 5. ... g6). Caballo stands on g5, Regina on h5, Alfil on d3.
@@ -2311,12 +2327,13 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Move box (bottom-left corner, bold, white rectangle): 5. Pg5
 - No balloons.
 
-### Panel 12e (PROPOSAL)
+### Panel 12e (approved in 7.62: the approved panel block is in Section 18, Scene 12)
 - Board state: 10.
 - Regina and the h8 rook (author decision in 7.34): the black rook on h8 glances at Regina on h5, with a light blush.
 - Camera: special angle; see comic/panels.js for the camera position used in the SVG preview.
 - Characters: Regina (worried); the piece on g6 (calm).
 - Move shown: g7-g6 (move streak).
+- Camera (author decision in 7.62): from White's side towards the queenside, low, looking past Caballo's left, so the black pawn moving from g7 to g6, the central action, stands fully visible in the centre of the panel, with the move lines beside him (Section 13, Move Marks); Caballo on g5 at the right, Regina on h5 behind him, seen from behind, and the h8 rook in the background, looking at her.
 - Move box (bottom-left corner, bold, white rectangle): 5. ... g6
 - No balloons.
 
@@ -4275,6 +4292,36 @@ PANEL 11f   (sequence number 54)
 21. Continuity requirements: Regina goes to h5 in 11g (4. Dh5).
 ```
 
+### Scene 12 - The King Suspects f6
+Added in 7.62 for the panel the author approved (12e). Panels 12a to 12d are still proposals and have no manifest yet.
+
+```
+PANEL 12e   (sequence number 61)
+
+1.  Scene 12, panel e: Black answers with 5. ... g6.
+2.  Script excerpt:
+      5. ... g6
+3.  Dialogue: none. Move box (bottom-left corner): "5. ... g6".
+4.  No speaker.
+5.  Visible: the black g-pawn on g6 in the centre; Caballo g5 at the right; Regina h5 behind him, from behind; the black rook h8 in the background.
+6.  Watching: Caballo, heroic, mouth closed; Regina, worried (from behind); the h8 rook glancing at Regina, light blush (7.34).
+7.  Camera from White's side towards the queenside, low, past Caballo's left (author, 7.62).
+8.  The g6 pawn: calm, mouth closed, three dashed move lines beside him (Section 13, Move Marks).
+9.  No balloons. The move box sits in the bottom-left corner.
+10. Stage directions: none.
+11. State 10: the move 5. ... g6 (pawn g7 to g6) happens in this panel.
+12. Continuity: after 5. Pg5 (12d), Caballo on g5 next to Regina on h5; Caballo charges in 13a.
+13. Must not appear: the g6 pawn hidden behind Caballo or Regina; an open mouth; any other moved piece; text other than the move box.
+14. Dialogue length: none (move box only).
+15. Segmentation: the move line after 5. Pg5.
+16. Visual priority: the g6 pawn and his move.
+17. Lettering space: move box bottom left.
+18. Balloon-area estimate: about 2% (move box).
+19. Layout: medium shot of the g6 pawn among Caballo, Regina and the h8 rook (Section 23.D).
+20. Overflow: not applicable.
+21. Continuity requirements: State 10 into 13a.
+```
+
 ### Scene 13 - Caballo's Charge
 Added in 7.43 for the panel the author approved (13a). Panel 13b is still a proposal and has no manifest yet.
 
@@ -4905,7 +4952,7 @@ Every item of Section 1, in order. "Panel script" means the panel blocks in Sect
 | 31 | Move: 4. ... Pe7 | 11 | - | Scene catalog only. |
 | 32 | Koning: "Zou er op f6 misschien ook een plek zitten ?..." | 12 | - | Scene catalog only. |
 | 33 | Move: 5. Pg5 | 12 | - | Scene catalog only. |
-| 34 | Move: 5. ... g6 | 12 | - | Scene catalog only. |
+| 34 | Move: 5. ... g6 | 12 | 12e | Written: panel script and manifest 61 (approved in 7.62, Section 20.3). |
 | 35 | Caballo: "Voor de glorie en de overwinning ! Ten aanval !" | 13 | 13a | Panel script written (approved in 7.43); manifest written (Section 20.3). |
 | 36 | Move: 6. Pxh7 | 13 | - | Scene catalog only. |
 | 37 | Koning: "Godverdoemme Caballo, gij se stommen ezel !..." | 14 | 14a, 14b, 14c | Written: panel scripts and manifests for 14b and 14c (approved in 7.51) and 14a (approved in 7.52, Section 20.3). |
@@ -5169,3 +5216,4 @@ Items that need a decision from the author.
 | 7.59 | - | Move marks: dashed lines flat on the board for sliding pieces, a low dashed hop in depth for the knight; new cameras for 12d and 13b. |
 | 7.60 | - | Move marks: always three lines, also for slides towards or away from the viewer. |
 | 7.61 | - | Background gag: the c1 bishop grows bored during the King's monologue (10b to 11d), ends with a polite yawn. |
+| 7.62 | - | Panel 12e: new camera, the g6 pawn in the centre; approved: panel block and manifest 61. |
