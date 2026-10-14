@@ -29,9 +29,10 @@ const PALETTES = { kingdoms: {
     bpawn: { robe: "#40305e", shade: "#2e2244", trim: "#2a3550" } }),
   BOARD: { dark: "#3a2418", light: "#dccfa9", frame: "#866240", line: "#20160f" } } };
 // Lighter black-army variants of "kingdoms" (author feedback: the black wood and costumes too dark): violet or green costumes
-for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#7b5aa6", "#5d4386", "#7b5aa6", "#5d4386"], ["kingdoms-green", "#4f7d55", "#3b6142", "#4f7d55", "#3b6142"]]) {
-  const K = PALETTES.kingdoms, BR = "#c08a4c", B = { robe, shade, trim: BR };
-  PALETTES[name] = { W: { w: K.W.w, b: { f: "#7a5038", s: "#5e3c2a", n: "#a87858" } }, BOARD: K.BOARD,
+for (const [name, robe, shade, pawn, pawnS] of [["kingdoms-violet", "#5c3d8c", "#45306c", "#5c3d8c", "#45306c"], ["kingdoms-green", "#4f7d55", "#3b6142", "#4f7d55", "#3b6142"]]) {
+  // black army (bible 7.55): lighter walnut wood so the faces are the lightest part, a deeper violet costume, bronze to match
+  const K = PALETTES.kingdoms, BR = "#c8925a", B = { robe, shade, trim: BR };
+  PALETTES[name] = { W: { w: K.W.w, b: { f: "#9a6a4c", s: "#7c5440", n: "#c69474" } }, BOARD: K.BOARD,
     COST: Object.assign({}, K.COST, { bking: B, bqueen: Object.assign({}, K.COST.bqueen, B), bbishop: B, bknight: B, brook: B, brookh8: B,
       bpawn: { robe: pawn, shade: pawnS, trim: "#e2d3b8" } }) };
 }
