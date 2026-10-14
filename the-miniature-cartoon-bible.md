@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.78
+Version 7.79
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -85,6 +85,7 @@ Version 7.75 gives panel 11b a closer framing with Regina in the centre and a wi
 Version 7.76 records that the paprika stains stay on Alfil's mitre for the whole cartoon, as part of his identity (author decision; Section 4, Paprika).
 Version 7.77 gives the cover navy-blue and cream colours (author decision; Section 13, Cover Direction).
 Version 7.78 reroutes the balloon tail in panel 3b round the end of the black army, so it crosses no piece (author decision).
+Version 7.79 frees the heads under Alfil's balloon in panel 5d-2 (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1220,6 +1221,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.77 | Author feedback on the cover: "I don't like the yellow page and the red letters. suggest me alternate colors and show me a preview". Claude showed A (navy + cream), B (cream + violet), C (dark green + gold) and D (parchment + royal blue), all taken from the album's own colours; author decision: "select option A". Section 13, Cover Direction: a Cover colours line. |
 | 7.78 | Author: "Look for opportunities where a textballoon tail can avoid covering another piece its face. Suggest a visual improvement". Claude checked every tail with a stricter test (all pieces, the tail's width): 3b crosses a black pawn's face; 13a only grazes a pawn's head. Also noted (balloons themselves): 15c (since 7.71 the balloon covers small background faces of the black army), 15b (accepted) and 5d-2 (partly Caballo's head). For 3b the author asked "how about a broader balloon so that it doesn't hit the black pieces ?" (W1 to W3: balloon free, tail still through the black army), then "can we do even better with the balloon tail ? because now the tail drives right through the black army." Claude showed T1 and T2 (the tail sweeping round the end of the black row); author decision: "go with T2, apply to 3b". 3b panel block: a balloon-placement line. |
 | 7.78 | 15c (the balloon over the black army since 7.71): Claude showed R1 (balloon top right), R2 and R3 (camera aimed higher). Author decision: "We treat this image as an exception because the panel is about the cola spot which is clearly visible". 15c stays as approved in 7.71; a local exception, not a rule. |
+| 7.79 | 5d-2 (author: "lets now have a look at 5d-2"): Alfil's balloon covered the tip of Caballo's ear, the top of Alfil's mitre and the top of the h1 rook. Claude showed S1, S2 and S3 (a broad two-line balloon, the pieces lower); the author: "generate me something between S1 and S2 let me visually compare the three" (S12); author decision: "S2 is the winner". 5d-2 panel block: a balloon-placement line. With this the balloon review of 7.78 is closed. |
 
 ---
 
@@ -1634,6 +1636,7 @@ Split from panel 5d in 7.3 (author decision, Section 23.B).
 - Camera: high, from Black's side, above and in front of the white pawns, looking down on the f1 square, so that both of Alfil's diagonals are clear: f1-e2 and f1-g2. Alfil, the pawns and the King face the camera.
 - In frame: Alfil (f1) in the centre, behind the pawns on e2, f2 and g2; from this side the King (e1) and Regina (d1) are at the right, Caballo (g1) and the rook (h1) at the left; the pawns on d2 and h2 at the edges.
 - Characters: Alfil looks up at the King, apologetic, mouth open, and points with both hands to the pawns on e2 and g2 that block his diagonals. The pawns on e2 and g2 stand firm, arms crossed, stubborn, mouths closed. The King looks at Alfil, mouth closed.
+- Balloon placement (author decision in 7.79): a broad balloon in two lines at the top left; the pieces stand a little lower in the frame (the camera aims a little higher), so the balloon covers no head: Caballo's ear, Alfil's mitre with the paprika, the King's cross and Regina's crown are all free; its tail goes down past the mitre to Alfil's mouth.
 - Balloon (Alfil): Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet.
 
 ### Panel 5e
@@ -5543,3 +5546,4 @@ Items that need a decision from the author.
 | 7.76 | - | Paprika stays on Alfil's mitre to the end, part of his identity. |
 | 7.77 | - | Cover: navy-blue page, cream title and text. |
 | 7.78 | - | 3b: the balloon tail sweeps round the end of the black army. |
+| 7.79 | - | 5d-2: broad balloon above all heads, the pieces a little lower. |
