@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.52
+Version 7.53
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -59,6 +59,7 @@ Version 7.49 approves panels 14e and 14f (author decision): full panel blocks in
 Version 7.50 restages the proposal panel 14d (author feedback): the h5 pawn pushes Regina entirely off the board with one arm, Regina does not care, the h8 rook is delighted; fewer pieces in frame. Panel 14d is then approved: panel block in Section 18 and manifest 67 in Section 20.3.
 Version 7.51 approves panels 14b and 14c (author decision): full panel blocks in Section 18 (Scene 14) and manifests 65 and 66 in Section 20.3.
 Version 7.52 zooms panel 14a in closer on the White King (author feedback): no pawn heads in frame, more space between the balloon and the King. Panel 14a is then approved (author decision): panel block in Section 18 and manifest 64 in Section 20.3; Scene 14 is complete.
+Version 7.53 cleans the board on the cover (author decision): no boebel, no cola stain on f6, no greasy spot on f3, so the cover gives no joke away (Section 13, Cover Direction).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -919,7 +920,7 @@ Result box (author decision in 7.37):
 
 ## Cover Direction
 - The entire cast dominates the cover.
-- The boebel is visible.
+- The board is clean (author decision in 7.53): no boebel (the rise in the middle of the board), no cola stain on f6 and no greasy spot on f3. Each of those is part of a joke, and the cover does not give the jokes away.
 - The board is visible.
 - The White and Black Kings are both present.
 - The title and subtitle appear on the cover: De Miniatuur (Een hedendaagse klucht in één bedrijf). There is no title inside the panels (author decision in 7.3).
@@ -1140,6 +1141,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.52 | Author feedback on 14a: "Zoom even more in on the white king so we don't see any pawn heads." The proposal camera moved closer and higher on the King: crown, cross, face, raised fist and upper robe in frame, no pawn heads; the shout balloon stays top left, clear of the cross. Added as a framing line to the proposal block (Section 18). SVG preview: camera th 1.58, f 640. |
 | 7.52 | Author feedback on 14a: "a little more space between the baloon and the king is desirable". The King moved a little right of centre in the frame and the shout balloon to the far left (slightly wider, five lines), leaving clear space between the balloon and his crown and cross. Added as a balloon-spacing line to the proposal block (Section 18). SVG preview: camera aimed just kingside of e1, balloon x 16, w 420. |
 | 7.52 | Author decision: panel 14a accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 14) and as manifest 64 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 37 marked as written. Scene 14 is complete. |
+| 7.53 | Author decision on the cover (page-00-cover.svg): "remove the 'boebel' (bubble) from the board image - remove the cola stain on f6 - remove the greasy spot at f3. Each of those are part of a joke and we don't want to give those jokes away on the cover page." Section 13, Cover Direction: "The boebel is visible." replaced by a clean board; old wording in Appendix A. SVG preview: cover option "clean". |
 
 ---
 
@@ -5015,6 +5017,7 @@ Kept for history. Do not use for generation.
 - v7.3 to 7.40: black pieces in "very dark brown stained wood", black officers in "darker colours", the board "very dark brown, almost black / beige with a beige border" without exact colours; in the SVG preview the black pawns wore green and the black officers a mix of navy and purple. -> Superseded in 7.41 by author decision: the Colour Style "two kingdoms" (Section 5): ivory and medium-dark walnut wood, royal blue for White and violet for Black, gold and bronze for rank, exact board colours with an oak frame.
 - v7.7 to 7.41: Caballo's military decorations drawn as a red sash with a gold medal (SVG preview; listed as a canon exception in 7.41). -> Changed in 7.42 by author decision: a deep-blue sash with the gold medal, so he fits his army.
 ---
+- v1.0 to 7.52, Cover Direction: "The boebel is visible." (in the SVG preview the cover board also showed the cola stain on f6 and the greasy spot on f3). -> Changed in 7.53 by author decision: the cover board is clean, without the boebel, the cola stain and the greasy spot, so the cover gives no joke away.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5104,3 +5107,4 @@ Items that need a decision from the author.
 | 7.50 | - | Proposal 14d restaged: the h5 pawn pushes Regina off the board; the h8 rook delighted, Regina indifferent; close camera. Panel 14d approved: panel block and manifest 67. |
 | 7.51 | - | Panels 14b and 14c approved: panel blocks and manifests 65, 66. |
 | 7.52 | - | Panel 14a: closer on the White King, no pawn heads, more space to the balloon; approved: panel block and manifest 64; Scene 14 complete. |
+| 7.53 | - | Cover: clean board, no boebel, cola stain or greasy spot. |

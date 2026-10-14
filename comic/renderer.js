@@ -274,7 +274,8 @@ function renderPanel(svg, P, opts) {
   const state = P.state || 0, scene = P.scene || 1;
   const [C, T, F] = camFor(P), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
   const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [W0 / 2 + F * dot(v, rt) / Math.max(d, .01), H / 2 - F * dot(v, up) / Math.max(d, .01), d]; };
-  const RISE = P.rise || 1;  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
+  const RISE = P.clean ? 0 : (P.rise || 1);  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
+  // P.clean: a board without the three defects (no rise, no cola stain, no greasy spot), so the cover gives no joke away (bible 7.53)
   const bump = (x, y) => { const r = Math.hypot((x - 4) / 1.15, (y - 4) / 1.15); return r >= 1 ? 0 : 0.14 * RISE * (0.5 + 0.5 * Math.cos(Math.PI * r)); };
   const pz = (x, y) => pr(x, y, bump(x, y));
   // room background (soft, no people, no text)
@@ -295,9 +296,9 @@ function renderPanel(svg, P, opts) {
   { const hx = C[0] - 4, hy = C[1] - 4, hl = Math.hypot(hx, hy) || 1, L = nrm([hx / hl * .55 - .25 * hy / hl, hy / hl * .55 + .25 * hx / hl, 1]), G = 0.08, flat = L[2];
     for (let x = 2.8; x < 5.2; x += G) for (let y = 2.8; y < 5.2; y += G) { const cx = x + G / 2, cy = y + G / 2; if (bump(cx, cy) <= .001) continue; const e = .01, dzx = (bump(cx + e, cy) - bump(cx - e, cy)) / (2 * e), dzy = (bump(cx, cy + e) - bump(cx, cy - e)) / (2 * e), v = dot(nrm([-dzx, -dzy, 1]), L) - flat; if (Math.abs(v) < .004) continue; poly([[x, y], [x + G, y], [x + G, y + G], [x, y + G]], { fill: v > 0 ? "#fff" : "#000", opacity: Math.min((v > 0 ? .55 : .2) * Math.sqrt(RISE), Math.abs(v) * (v > 0 ? 5 : 2)).toFixed(3) }, bd); } }
   const colaExplicit = scene >= 15, f3Explicit = scene >= 9;
-  poly([[5.12, 5.3], [5.4, 5.16], [5.78, 5.24], [5.9, 5.5], [5.82, 5.82], [5.45, 5.88], [5.14, 5.76], [5.06, 5.5]], { fill: colaExplicit ? "#3a1608" : "#6a3418", opacity: colaExplicit ? .92 : .16 }, bd);
-  if (colaExplicit) poly([[5.3, 5.36], [5.55, 5.3], [5.62, 5.42], [5.36, 5.48]], { fill: "#e9c7a8", opacity: .55 }, bd);
-  { const pts = []; for (let k = 0; k < 20; k++) { const a = k / 20 * Math.PI * 2; pts.push([5.5 + Math.cos(a) * .34, 2.5 + Math.sin(a) * .2]); } poly(pts, { fill: "#c9a83a", opacity: f3Explicit ? .45 : .14 }, bd);
+  if (!P.clean) poly([[5.12, 5.3], [5.4, 5.16], [5.78, 5.24], [5.9, 5.5], [5.82, 5.82], [5.45, 5.88], [5.14, 5.76], [5.06, 5.5]], { fill: colaExplicit ? "#3a1608" : "#6a3418", opacity: colaExplicit ? .92 : .16 }, bd);
+  if (colaExplicit && !P.clean) poly([[5.3, 5.36], [5.55, 5.3], [5.62, 5.42], [5.36, 5.48]], { fill: "#e9c7a8", opacity: .55 }, bd);
+  if (!P.clean) { const pts = []; for (let k = 0; k < 20; k++) { const a = k / 20 * Math.PI * 2; pts.push([5.5 + Math.cos(a) * .34, 2.5 + Math.sin(a) * .2]); } poly(pts, { fill: "#c9a83a", opacity: f3Explicit ? .45 : .14 }, bd);
     if (f3Explicit) { const p2 = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2; p2.push([5.42 + Math.cos(a) * .1, 2.46 + Math.sin(a) * .05]); } poly(p2, { fill: "#fffbe0", opacity: .7 }, bd); } }
   // pieces
   const items = [], cast = P.cast || {};
