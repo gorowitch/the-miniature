@@ -286,13 +286,25 @@ function renderPanel(svg, P, opts) {
   const pz = (x, y) => pr(x, y, bump(x, y));
   // room background (soft, no people, no text)
   const bg = mk("g", { filter: `url(#soft${P.id})` }, root);
-  const hz = pr(4, C[1] > 4 ? -6 : 14, 0)[1];
+  // the wall line: where the floor (15 squares below the table top) meets the wall, 40 squares beyond the board, in the direction the camera looks (bible 7.56)
+  const gl = Math.hypot(fw[0], fw[1]) || 1, wb = pr(4 + fw[0] / gl * 40, 4 + fw[1] / gl * 40, -15), hz = (wb[2] > 0 ? wb[1] : -1e9) + 40;
   mk("rect", { width: W0, height: H, fill: "#cfd8c6" }, bg);
   const wallY = Math.max(-40, Math.min(H * .8, hz - 40));
   for (let i = 0; i < W0; i += 330) { mk("rect", { x: i + 40, y: wallY - 230, width: 120, height: 200, fill: "#e9eedc" }, bg); mk("path", { d: `M${i + 100} ${wallY - 230} V${wallY - 30} M${i + 40} ${wallY - 130} H${i + 160}`, stroke: "#b9c2ad", "stroke-width": 6 }, bg); }
-  // the table: light grey-blue, lighter than the black pieces and darker than the white pieces and the wall, so both armies stand out (bible 7.54; brown #8d6b4a until 7.53)
-  mk("rect", { x: 0, y: wallY, width: W0, height: H, fill: "#8f9ea8" }, bg);
+  // the floor of the room, a darker warm grey, beyond and below the table (bible 7.56)
+  mk("rect", { x: 0, y: wallY, width: W0, height: H + 80, fill: "#7d7468" }, bg);
   for (let i = 0; i < W0; i += 300) { mk("rect", { x: i + 20, y: wallY - 22, width: 200, height: 18, fill: "#5d4330" }, bg); mk("path", { d: `M${i + 240} ${wallY + 4} V${wallY - 70} Q${i + 268} ${wallY - 84} ${i + 296} ${wallY - 70} V${wallY + 4}`, fill: "#6b4c33" }, bg); }
+  // the table (bible 7.56): a real rectangle under the board, 13 squares deep (White to Black) and 20 squares long (rook to rook),
+  // the board in the middle, with a thin edge; drawn with the board's camera, so it is seen from the same angle; clipped at the camera
+  { const near = 0.15, cut = poly3 => { const out = [];
+      for (let i = 0; i < poly3.length; i++) { const a = poly3[i], b = poly3[(i + 1) % poly3.length], da = dot(sub(a, C), fw) - near, db = dot(sub(b, C), fw) - near;
+        if (da >= 0) out.push(a); if ((da >= 0) !== (db >= 0)) { const t = da / (da - db); out.push([a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]); } }
+      return out.map(p => pr(p[0], p[1], p[2])); };
+    const draw = (poly3, a) => { const q = cut(poly3); if (q.length > 2) mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") }, a), bg); };   // soft, like the rest of the room
+    const X0 = -6, X1 = 14, Y0 = -2.5, Y1 = 10.5, TH = 0.45, top = [[X0, Y0, 0], [X1, Y0, 0], [X1, Y1, 0], [X0, Y1, 0]];
+    for (let i = 0; i < 4; i++) { const a = top[i], b = top[(i + 1) % 4]; draw([a, b, [b[0], b[1], -TH], [a[0], a[1], -TH]], { fill: "#6c7a85", stroke: "#4b555d", "stroke-width": 1.5 }); }
+    // light grey-blue: lighter than the black pieces, darker than the white pieces and the wall (bible 7.54; brown #8d6b4a until 7.53)
+    draw(top, { fill: "#8f9ea8", stroke: "#5d6870", "stroke-width": 1.5 }); }
   mk("rect", { width: W0, height: H, fill: `url(#ht${P.id})` }, root);
   // board
   const poly = (pts, a, par) => { const q = pts.map(([x, y]) => pz(x, y)); if (q.some(p => p[2] < 0.25)) return; mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") }, a), par || root); };
