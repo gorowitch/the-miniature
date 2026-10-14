@@ -289,7 +289,8 @@ function renderPanel(svg, P, opts) {
   mk("rect", { width: W0, height: H, fill: "#cfd8c6" }, bg);
   const wallY = Math.max(-40, Math.min(H * .8, hz - 40));
   for (let i = 0; i < W0; i += 330) { mk("rect", { x: i + 40, y: wallY - 230, width: 120, height: 200, fill: "#e9eedc" }, bg); mk("path", { d: `M${i + 100} ${wallY - 230} V${wallY - 30} M${i + 40} ${wallY - 130} H${i + 160}`, stroke: "#b9c2ad", "stroke-width": 6 }, bg); }
-  mk("rect", { x: 0, y: wallY, width: W0, height: H, fill: "#8d6b4a" }, bg);
+  // the table: light grey-blue, lighter than the black pieces and darker than the white pieces and the wall, so both armies stand out (bible 7.54; brown #8d6b4a until 7.53)
+  mk("rect", { x: 0, y: wallY, width: W0, height: H, fill: "#8f9ea8" }, bg);
   for (let i = 0; i < W0; i += 300) { mk("rect", { x: i + 20, y: wallY - 22, width: 200, height: 18, fill: "#5d4330" }, bg); mk("path", { d: `M${i + 240} ${wallY + 4} V${wallY - 70} Q${i + 268} ${wallY - 84} ${i + 296} ${wallY - 70} V${wallY + 4}`, fill: "#6b4c33" }, bg); }
   mk("rect", { width: W0, height: H, fill: `url(#ht${P.id})` }, root);
   // board
