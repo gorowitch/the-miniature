@@ -345,6 +345,13 @@ function renderPanel(svg, P, opts) {
     const ov = Object.assign({}, cast[it.sq] || {}, role ? cast[role] || {} : {});
     const faceDir = col === "w" ? 1 : -1, back = ov.back !== undefined ? ov.back : (C[1] - it.y0) * faceDir < 0;
     const o = Object.assign({ role, back, must: !it.beside && pawnHasMoustache(it.sq, it.ch, state) }, ov);
+    // a piece standing on the boebel (d4, e4, d5 or e5) leans with the slope, away from the top of the rise, by 5 degrees as the kings
+    // in 16c (author decision, bible 7.57); seen straight along the slope the lean is towards or away from the camera, so it does not show
+    if (!it.beside && !P.clean && o.lean === undefined && it.x0 > 3 && it.x0 < 5 && it.y0 > 3 && it.y0 < 5) {
+      const e = .01, nz = nrm([-(bump(it.x0 + e, it.y0) - bump(it.x0 - e, it.y0)) / (2 * e), -(bump(it.x0, it.y0 + e) - bump(it.x0, it.y0 - e)) / (2 * e), 1]);
+      const z0 = bump(it.x0, it.y0), tip = pr(it.x0 + nz[0], it.y0 + nz[1], z0 + nz[2]), upr = pr(it.x0, it.y0, z0 + 1);
+      const ang = (Math.atan2(tip[0] - x, y - tip[1]) - Math.atan2(upr[0] - x, y - upr[1])) * 180 / Math.PI;
+      if (Math.abs(ang) > 0.5) o.lean = 5 * Math.sign(ang); }
     if (P.crossArms && it.ch === "P" && !it.beside) o.gest = "crossed";  // pawn solidarity during the mutiny (bible Section 7, author decision 7.10)
     // knights face the centre files (bible Section 6, 7.46): seen from White's or Black's side (camera looking along the files) they turn towards
     // the d- and e-files; seen from the side (camera looking along the ranks) towards the middle of the board, between the armies
