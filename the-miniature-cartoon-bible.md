@@ -59,7 +59,7 @@ Version 7.49 approves panels 14e and 14f (author decision): full panel blocks in
 Version 7.50 restages the proposal panel 14d (author feedback): the h5 pawn pushes Regina entirely off the board with one arm, Regina does not care, the h8 rook is delighted; fewer pieces in frame. Panel 14d is then approved: panel block in Section 18 and manifest 67 in Section 20.3.
 Version 7.51 approves panels 14b and 14c (author decision): full panel blocks in Section 18 (Scene 14) and manifests 65 and 66 in Section 20.3.
 Version 7.52 zooms panel 14a in closer on the White King (author feedback): no pawn heads in frame, more space between the balloon and the King. Panel 14a is then approved (author decision): panel block in Section 18 and manifest 64 in Section 20.3; Scene 14 is complete.
-Version 7.53 cleans the board on the cover (author decision): no boebel, no cola stain on f6, no greasy spot on f3, so the cover gives no joke away (Section 13, Cover Direction).
+Version 7.53 cleans the board on the cover (author decision): no boebel, no cola stain on f6, no greasy spot on f3, so the cover gives no joke away (Section 13, Cover Direction). It also widens the balloon of panel 1a so it stays above the pieces (author feedback).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1142,6 +1142,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.52 | Author feedback on 14a: "a little more space between the baloon and the king is desirable". The King moved a little right of centre in the frame and the shout balloon to the far left (slightly wider, five lines), leaving clear space between the balloon and his crown and cross. Added as a balloon-spacing line to the proposal block (Section 18). SVG preview: camera aimed just kingside of e1, balloon x 16, w 420. |
 | 7.52 | Author decision: panel 14a accepted ("accept and commit"), as shown in the SVG preview. Written as a full panel block in Section 18 (Scene 14) and as manifest 64 in Section 20.3 (field 2 copied from Section 1 by script); the proposal block is kept and marked as approved; Script Coverage Map item 37 marked as written. Scene 14 is complete. |
 | 7.53 | Author decision on the cover (page-00-cover.svg): "remove the 'boebel' (bubble) from the board image - remove the cola stain on f6 - remove the greasy spot at f3. Each of those are part of a joke and we don't want to give those jokes away on the cover page." Section 13, Cover Direction: "The boebel is visible." replaced by a clean board; old wording in Appendix A. SVG preview: cover option "clean". |
+| 7.53 | Author feedback on 1a: "The text balloon covers some pieces. How about using a broader text balloon that stays above the pieces ?" The balloon is now broad (four lines) across the top, entirely above the pieces; the camera aims a little higher so the pieces stand lower in the frame, leaving space above the King's cross. Added as a balloon-placement line to the panel block (Section 18). This also clears the last tail crossing of the tail audit (the tail no longer crosses Alfil). SVG preview: balloon x 30, w 740; camera th 1.02. |
 
 ---
 
@@ -1395,6 +1396,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - In frame, front row: the white pawns on h2, g2, f2, e2, d2 and c2, standing lower in front of the officers. The officers' heads rise above the pawns.
 - Board: the empty third and fourth ranks in the foreground; the greasy spot on f3 faintly visible. No black pieces (they are behind the camera).
 - Characters: the King proud, mouth open mid-speech, one arm sweeping out towards his troops. Caballo faces right (towards the centre). Alfil, Regina and the pawns stand at attention.
+- Balloon placement (author feedback in 7.53: "The text balloon covers some pieces. How about using a broader text balloon that stays above the pieces ?"): a broad balloon across the top of the panel, four lines, entirely above the pieces with a little space above the King's cross; the pieces stand a little lower in the frame to make room. Its tail ends just beside the King's mouth.
 - Balloon (White King): Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd.
 
 ### Panel 1b-1
@@ -5107,4 +5109,4 @@ Items that need a decision from the author.
 | 7.50 | - | Proposal 14d restaged: the h5 pawn pushes Regina off the board; the h8 rook delighted, Regina indifferent; close camera. Panel 14d approved: panel block and manifest 67. |
 | 7.51 | - | Panels 14b and 14c approved: panel blocks and manifests 65, 66. |
 | 7.52 | - | Panel 14a: closer on the White King, no pawn heads, more space to the balloon; approved: panel block and manifest 64; Scene 14 complete. |
-| 7.53 | - | Cover: clean board, no boebel, cola stain or greasy spot. |
+| 7.53 | - | Cover: clean board, no boebel, cola stain or greasy spot. Panel 1a: broad balloon above the pieces. |

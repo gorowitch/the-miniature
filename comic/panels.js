@@ -10,9 +10,9 @@ const BESIDE11 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }];   // captured by Whi
 const BESIDE12 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.85, 7.45] }];   // Regina stands beside the board next to the h8 rook (bible 7.34)
 window.PANELS = [
 // ---------------------------------------------------------------- Scene 1 - Opening Speech (approved)
-{ id: "1a", scene: 1, status: A, state: 0, cam: zb(["d1", "e1", "f1", "g1"], { dist: 1.7, h: 1.25, th: 0.75, f: 600 }),
+{ id: "1a", scene: 1, status: A, state: 0, cam: zb(["d1", "e1", "f1", "g1"], { dist: 1.7, h: 1.25, th: 1.02, f: 600 }),
   cast: { koning: { expr: "proud", talk: true, gest: "raise-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd." }] },
+  balloons: [{ who: "koning", w: 740, x: 30, text: "Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd." }] },
 { id: "1b-1", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
   cast: { koning: { expr: "smug", talk: true, gest: "wave-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Dat \"Dieje van den overkant\" al maar zeker is dat hij nu al begint te bibberen." }] },
