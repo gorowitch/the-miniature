@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.60
+Version 7.61
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -67,6 +67,7 @@ Version 7.57 adds a running gag (author decision): every piece standing on the b
 Version 7.58 makes the crowns of the Kings and Queens fit their heads (author decision): Kings 88 %, Queens 80 % of the earlier size (Section 5, Crowns and crosses).
 Version 7.59 adds the move marks (author decisions): sliding pieces leave three dashed lines flat on the board, the knight makes a low dashed hop from square to square, drawn in depth; new cameras for the proposals 12d and 13b (Section 13, Move Marks).
 Version 7.60 gives slides straight towards or away from the viewer three move lines too, like every other move (author feedback; Section 13, Move Marks).
+Version 7.61 adds a background gag (author decision): during the King's monologue (10a to 11e) the c1 bishop grows more and more bored and ends with a well-mannered yawn in 11d (Section 6 gags; panel blocks and manifests 41 to 53).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -726,6 +727,7 @@ The board acts almost as a character. Its defects drive every plot turn:
 - Old wooden boards.
 - Paprika on Alfil's mitre.
 - The sleepy a1 rook (author decision in 7.45): the white rook on a1 never takes part in the game and gets sleepy. He yawns in 2b, is asleep from 3a-1 to 14f wherever he is in frame (with a small "Z Z Z", author exception), and is startled awake in the background in 15a when Alfil announces "mat in één"; from 15a on he is awake and alert (also in 15b, the overview 16a, the handshake 16c and on the cover). Only the a1 rook sleeps.
+- The bored c1 bishop (author decision in 7.61): during the King's long monologue (10a to 11e) the white bishop on c1 grows more and more bored, shown only by his eyes, eyebrows and mouth; it starts slowly and grows while the King keeps talking: interested in 10b; looking past the King in 10d; heavier and heavier eyelids in 10e, 10f, 10h (staring down at the board), 10i (looking away, a pout), 11a and 11b (mouth hanging slightly open); nodding off, tipping over a little, in 11c; in 11d the joke ends with a big yawn, eyes squeezed shut, his hand politely in front of his mouth (he is well mannered); in 11e he is back to neutral. In 10a, 10c and 10g he is out of frame. No sleep symbol, no stretching arms: unlike the a1 rook he never falls asleep. His yawn is an exception to the rule that listeners keep their mouths closed.
 - Regina and the Black Rook.
 - Caballo refusing dirty terrain.
 
@@ -1173,6 +1175,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.58 | Author feedback: "If we look at both the kings crown and the queens crown they both seem a bit oversized. In contrast the mittre of alfil seems to fit perfectly. Show me some visual alternatives for a better fit. The crown does not need to fit perfectly." Claude showed 85 %, 75 % and 65 %. Then: "Generate me some alternatives similar to A: 85% However keep in mind that the kings head is larger than the queens head. In A: 85% the kings crown seems a bit to small whereas the queens crown seems a bit to big." Claude showed separate sizes (90/78, 92/75, 95/80). Then: "how about king crown 85% / queen crown 80% show me together with some alternatives" (85/80, 85/77, 88/80, 88/77). Author decision: King 88 %, Queen 80 % ("King a little larger"). Section 5, Crowns and crosses: a Size sentence. Applied to both Kings and both Queens in every panel, the cover and the overview of the SVG preview; checked: no crown touches a balloon where it did not before (the smaller crowns touch balloons less often). |
 | 7.59 | Author feedback: "Regarding the movements of the pieces. In chess the knights jump whereas the other pieces slide. My feeling is that the current movement indicators can be improved." Claude showed alternatives (speed lines, ghost and track, arrows); the author: "How about keeping the dashed arcs. - representing jumping for the knight - representing sliding for the queen". Refinements: "the movement of the knight is not clear at all. Maybe the jump must clearly end at the square. Since the knight jumps from square to square. Keep in mind that both knight movements and other movements need to have a consistent feel."; Claude showed an arc in the scene, a hop on the page foot to foot (D2) and a dashed start square; the author chose D2 ("I don't like the image 13b"); then "the knight jumps way to high"; then "it becomes important to realise when a knight jumps either behind or in front of another piece. When it jumps behind we don't want to see the white stripes in front of the piece. When it jumpt in front of the piece we do want to see the white stripes in front of the piece."; then "drop the take-off puff"; decision: "yes, apply to all panels and adjust both cameras". New subsection Section 13, Move Marks; 12d and 13b: camera and move-marks lines in the proposal blocks. Claude's own addition (stated here): a slide straight towards or away from the viewer shows its lines on both sides of the piece, like skid marks, because behind the piece they would be hidden or stick out above its head (6d, 8c, 12e, 14d). |
 | 7.60 | Author feedback: "In some images I only see two movements lines for the pawns. Is there a reason for that ? I would expect three lines exactly like the movement of the other pieces." The reason was Claude's own addition in 7.59 (two skid marks for slides straight towards or away from the viewer). Now three lines there too, spread a little wider (6d, 8c, 12e, 14d). Section 13, Move Marks updated. |
+| 7.61 | Author decision: "From panel '40-panel-10a.svg' onward the king starts a monologue which ends at panel '53-panel-11e.svg' While the king is ranting the bishop at c3 becomes increasingly bored." (per panel: 10b "at least somewhat intrested", 10d "somewhat bored", 10e to 11c "even more bored", 11d "clearly yawning - this ends the joke"); "The idea is that the bisshops increasing boredom can be expressed with eyes, eybrows and mouth The boredom of the bishop starts slowly and increases as the king continues to speak." Clarified: the c1 bishop ("yes, c1 bishop"; no piece stands on c3), and "when the joke ends the bishop goes back to neutral" (11e). After the prototype: "I don't like 10h step 4 - eyes rolled up, suggest an alternative" (now staring down at the board) and "When yawning 11d step 9 - the bishop puts his hand before his mouth (he is well mannered)"; then "yes, apply to all panels". Section 6 (gags): a line for the bored c1 bishop; a line in the panel blocks 10b, 10d, 10e, 10f, 10h, 10i, 11a to 11e; field 6 of manifests 41, 43 to 45, 47 to 53. SVG preview: expression level bored 0 to 9 for c1, gesture hand-mouth in 11d. |
 
 ---
 
@@ -1754,6 +1757,7 @@ Approved in 7.31 (as shown in the SVG preview).
 - Camera: from Black's side, at officer height, on the White King (e1) and Regina (d1), a little further back than 10a.
 - In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it, paprika stains visible) and c2 (bottom right edge). Every piece on a square that is in frame is shown.
 - Characters: the King calm and nostalgic, eyes half closed, mouth open as he speaks, one hand on his chest. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): interested: eyebrows raised, eyes open and looking at the King, a small closed smile.
 - Balloon placement: top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown (accepted by the author as shown, 7.31); its curved tail ends just beside the King's mouth.
 - Balloon (White King): In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld.
 
@@ -1770,6 +1774,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 10b: from Black's side, at officer height, on the White King (e1) and Regina (d1).
 - In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it) and c2 (bottom right edge).
 - Characters: the King angry, mouth open, both arms spread wide with open hands. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): somewhat bored: eyes open but looking past the King, eyebrows level, mouth straight.
 - Balloon placement: top centre, between the King's cross and the c1 bishop's mitre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon (White King): En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :
 
@@ -1778,6 +1783,7 @@ Approved in 7.33 (camera as set by the author in 7.25).
 - Camera: from Black's side, somewhat further back and higher than 10d, framed on the King (e1) and the e2 square in front of him, with room above the King for the balloon.
 - In frame (from this side the g-file is left): on the first rank the King (centre), Regina (d1) and the c1 bishop; in front the pawns on g2 (left edge, with his moustache) and f2, the empty e2 square, the head of the e3 pawn at the bottom centre, the pawns on d2 and c2 and Alfil on d3 (paprika stains on his mitre) at the right.
 - Characters: the King angry, mouth open, pointing down at the board with one arm (the board's defects he complains about). Regina, the c1 bishop, Alfil and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): a little more bored: upper eyelids a quarter down, eyebrows level and slightly lower, mouth straight.
 - Balloon placement: top left, clear of the King's face and crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand.
 
@@ -1786,6 +1792,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 10b.
 - In frame: the same as 10b.
 - Characters: the King worried, eyebrows raised, mouth open, one arm stretched out to the side away from Regina with an open hand. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): more bored: eyes half-closed, eyebrows flat, mouth corners slightly down.
 - Balloon placement: top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn.
 
@@ -1802,6 +1809,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 10b.
 - In frame: the same as 10b.
 - Characters: the King stubborn, mouth open, looks at Regina, one hand raised on the side away from her. Regina looks back at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): more bored: eyes half-closed, staring down at the board, eyebrows level and lower, mouth corners down.
 - Balloon placement: top centre, just above Regina's crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u.
 
@@ -1810,6 +1818,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 10b.
 - In frame: the same as 10b.
 - Characters: Regina speaks: mouth open, looks at the King, one open hand held out towards him (beside his beard, not covering his face). The King looks back at her, stubborn, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): more bored: eyes half-closed, looking away out of the panel, weary eyebrows, mouth pushed to one side (a pout).
 - Balloon placement: top right, above Regina and the c1 bishop, clear of their crown and mitre; its curved tail ends just beside Regina's mouth.
 - Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
 
@@ -1822,6 +1831,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 10b: from Black's side, at officer height, on the White King (e1) and Regina (d1).
 - In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2 (bottom left), d2 (bottom centre, with the tip of Alfil's mitre on d3 in front of it) and c2 (bottom right edge).
 - Characters: the King angry, mouth open, looks at Regina, one index finger raised high on the side away from her. Regina looks back at the King, surprised, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): more bored: eyes two-thirds closed, eyebrows drooping, the pout.
 - Balloon placement: top centre, just above Regina's crown; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?
 
@@ -1830,6 +1840,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 11a.
 - In frame: the same as 11a.
 - Characters: the King smug, eyes half closed, mouth open, looks at Regina, a dismissive wave of one hand on the side away from her. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): more bored: heavy eyelids, eyes almost closed, eyebrows drooping, mouth hanging slightly open.
 - Balloon placement: top right; its bottom edge covers the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon (White King): Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is.
 
@@ -1838,6 +1849,7 @@ Approved in 7.33 (camera as set by the author in 7.25).
 - Camera: from Black's side, on the King (e1) and Regina (d1), further back than 11a, with room above them for a wide balloon; a strip of the club room's window shows at the top left.
 - In frame (from this side the f-file is left): the King at the left, Regina in the centre, the c1 bishop at the right; the heads of the pawns on f2, d2 (with the tip of Alfil's mitre in front of it) and c2 at the bottom.
 - Characters: the King proud, eyes wide, mouth open, one hand on his chest. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): nodding off: eyes nearly closed, mouth slack, the bishop tipping over a little to one side.
 - Balloon placement: a wide balloon across the top, clear of all crowns, faces and the mitre; its curved tail comes down and ends just beside the King's mouth.
 - Balloon (White King): Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé.
 
@@ -1846,6 +1858,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 11a.
 - In frame: the same as 11a.
 - Characters: the King proud, eyes wide, mouth open, one hand raised high on the side away from Regina. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): the punchline: a big yawn, eyes squeezed shut, eyebrows raised at the inner ends; well-mannered, he holds one hand in front of his mouth, only the top of the yawning mouth peeks out.
 - Balloon placement: top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
 
@@ -1854,6 +1867,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Camera: the same as 11a.
 - In frame: the same as 11a.
 - Characters: the King smug, eyes half closed, mouth open, looks at Regina. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
+- The bored c1 bishop (author decision in 7.61): the joke is over: back to neutral, eyes open, mouth closed.
 - Balloon placement: top centre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
 
@@ -3849,7 +3863,7 @@ PANEL 10b   (sequence number 41)
       Balloon 1: "In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld."
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
-6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): interested.
 7.  Camera on Black's side, at officer height, on the King and Regina, a little further back than 10a; from this side left to right: e1, d1, c1.
 8.  Koning: calm, nostalgic, eyes half closed, mouth open, one hand on his chest.
     Regina: mouth closed; looks at the King.
@@ -3909,7 +3923,7 @@ PANEL 10d   (sequence number 43)
       Balloon 1: "En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :"
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
-6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): somewhat bored, looking past the King.
 7.  Camera on Black's side, at officer height, as in 10b; from this side left to right: e1, d1, c1.
 8.  Koning: angry, mouth open, both arms spread wide with open hands.
     Regina: mouth closed; looks at the King.
@@ -3939,7 +3953,7 @@ PANEL 10e   (sequence number 44)
       Balloon 1: "de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand."
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 in the centre, Regina d1, the c1 bishop; the pawns g2 (left edge) and f2, the empty e2 square, the head of the e3 pawn at the bottom centre, the pawns d2 and c2 and Alfil on d3 at the right.
-6.  Listening: Regina, the c1 bishop, Alfil and the pawns, mouths closed, looking on.
+6.  Listening: Regina, the c1 bishop, Alfil and the pawns, mouths closed, looking on. The bored c1 bishop (7.61): a little more bored, eyelids a quarter down.
 7.  Camera on Black's side, further back and higher than 10d, framed on e1 and e2, with room above the King (author, 7.25); from this side the g-file is left.
 8.  Koning: angry, mouth open, pointing down at the board with one arm.
     Listeners: mouths closed.
@@ -3969,7 +3983,7 @@ PANEL 10f   (sequence number 45)
       Balloon 1: "Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 10d.
-6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): eyes half-closed, mouth corners down.
 7.  Camera the same as 10d.
 8.  Koning: worried, eyebrows raised, mouth open, one arm stretched out away from Regina with an open hand.
     Regina: mouth closed; looks at the King.
@@ -4029,7 +4043,7 @@ PANEL 10h   (sequence number 47)
       Balloon 1: "Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 10d.
-6.  Listening: Regina, mouth closed, looking back at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking back at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): eyes half-closed, staring down at the board.
 7.  Camera the same as 10d.
 8.  Koning: stubborn, mouth open, looks at Regina, one hand raised on the side away from her.
     Regina: mouth closed; looks at the King.
@@ -4059,7 +4073,7 @@ PANEL 10i   (sequence number 48)
       Balloon 1: "Jamaar Sire, uw officieren hebben misschien wel een punt."
 4.  Balloon 1 -> Regina
 5.  Visible: the same as 10d.
-6.  Listening: Koning, stubborn, mouth closed, looking at Regina; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Koning, stubborn, mouth closed, looking at Regina; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): eyes half-closed, looking away, a pout.
 7.  Camera the same as 10d.
 8.  Regina: mouth open, looks at the King, one open hand held out towards him (beside his beard, not covering his face).
     Koning: mouth closed; looks back at Regina.
@@ -4092,7 +4106,7 @@ PANEL 11a   (sequence number 49)
       Balloon 1: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?"
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 at the bottom, the tip of Alfil's mitre (d3) in front of d2.
-6.  Listening: Regina, surprised, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, surprised, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): eyes two-thirds closed.
 7.  Camera on Black's side, at officer height, as in 10b; from this side left to right: e1, d1, c1.
 8.  Koning: angry, mouth open, looks at Regina, one index finger raised high on the side away from her.
     Regina: mouth closed; looks back at the King.
@@ -4122,7 +4136,7 @@ PANEL 11b   (sequence number 50)
       Balloon 1: "Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 11a.
-6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): heavy eyelids, mouth slightly open.
 7.  Camera the same as 11a.
 8.  Koning: smug, eyes half closed, mouth open, looks at Regina, a dismissive wave on the side away from her.
     Regina: mouth closed; looks back at the King.
@@ -4152,7 +4166,7 @@ PANEL 11c   (sequence number 51)
       Balloon 1: "Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé."
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 at the left, Regina d1 in the centre, the c1 bishop at the right; the heads of the pawns f2, d2 and c2 and the tip of Alfil's mitre at the bottom; a strip of the club room's window at the top left.
-6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): nodding off, tipping over a little.
 7.  Camera on Black's side, further back than 11a, with room above for a wide balloon (author, 7.25).
 8.  Koning: proud, eyes wide, mouth open, one hand on his chest.
     Regina: mouth closed; looks at the King.
@@ -4182,7 +4196,7 @@ PANEL 11d   (sequence number 52)
       Balloon 1: "Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 11a.
-6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): a big yawn behind his hand (mouth open: the exception).
 7.  Camera the same as 11a.
 8.  Koning: proud, eyes wide, mouth open, one hand raised high on the side away from Regina.
     Regina: mouth closed; looks at the King.
@@ -4212,7 +4226,7 @@ PANEL 11e   (sequence number 53)
       Balloon 1: "Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?"
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 11a.
-6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed.
+6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): back to neutral.
 7.  Camera the same as 11a.
 8.  Koning: smug, eyes half closed, mouth open, looks at Regina.
     Regina: mouth closed; looks back at the King.
@@ -5154,3 +5168,4 @@ Items that need a decision from the author.
 | 7.58 | - | Crowns fit the heads: Kings 88 %, Queens 80 %. |
 | 7.59 | - | Move marks: dashed lines flat on the board for sliding pieces, a low dashed hop in depth for the knight; new cameras for 12d and 13b. |
 | 7.60 | - | Move marks: always three lines, also for slides towards or away from the viewer. |
+| 7.61 | - | Background gag: the c1 bishop grows bored during the King's monologue (10b to 11d), ends with a polite yawn. |

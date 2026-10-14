@@ -73,11 +73,39 @@ function costumeOf(type, col, role) {
 
 // ---------------------------------------------------------------- piece sprites (unit: 50 = one square)
 let TURN_N = 0;  // ids for the clip paths of half-turned faces
+let BORED_ID = 0;
 function face(g, x, y, r, col, o) {
   const W = W_[col], lx = (o.look || 0), E = o.expr || "neutral", talk = !!o.talk, brC = col === "w" ? "#5a3a1e" : "#efe2cf";
   const sw = r * 0.13;
   const brow = (s, dy, slope) => mk("path", { d: `M${x+s*r*.64} ${y-r*.42+dy} l${-s*r*.46} ${slope}`, stroke: brC, "stroke-width": sw, "stroke-linecap": "round", fill: "none" }, g);
   const browArc = (s, h) => mk("path", { d: `M${x+s*r*.66} ${y-r*.48} q${-s*r*.22} ${-h} ${-s*r*.46} ${-r*.06}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
+  // o.bored 0..9: the c1 bishop growing bored during the King's monologue (10b to 11d), by eyes, eyebrows and mouth only;
+  // 0 interested, 1 looking past the King, 2-8 heavier and heavier eyelids (4 staring down at the board), 9 a big yawn behind his hand (author decision, bible 7.61)
+  if (o.bored !== undefined) { const b = o.bored, W2 = W_[col];
+    if (b === 0) { browArc(-1, r*.22); browArc(1, r*.22); }
+    else if (b <= 4) { brow(-1, r*.03*b, -r*.02); brow(1, r*.03*b, -r*.02); }
+    else if (b === 5) { brow(-1, r*.08, -r*.2); brow(1, r*.08, -r*.2); }
+    else if (b <= 8) { brow(-1, r*.12, -r*.15); brow(1, r*.12, -r*.15); }
+    else { brow(-1, -r*.04, -r*.28); brow(1, -r*.04, -r*.28); }
+    if (b === 9) for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.22} ${y-r*.1} q${r*.22} ${-r*.12} ${r*.44} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g);
+    else { const lid = [0, 0, .25, .42, .5, .5, .64, .76, .86][b], px = b === 0 ? lx : b === 5 ? 1 : 0, py = b === 4 ? .1 : b >= 6 ? .06 : 0;   // 4: staring down at the board (author: not rolled up)
+      for (const s of [-1, 1]) { const cx = x+s*r*.32, cy = y-r*.12, rx = r*.24, ry = r*.29, id = "bl" + (++BORED_ID);
+        mk("ellipse", { cx, cy, rx, ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
+        mk("circle", { cx: cx+px*r*.11, cy: cy+r*.04+py*r, r: r*.12, fill: INK }, g);
+        if (lid > 0) { const cp = mk("clipPath", { id }, g); mk("ellipse", { cx, cy, rx, ry }, cp); const ly = cy - ry + 2*ry*lid;
+          mk("rect", { x: cx-rx-1, y: cy-ry-1, width: 2*rx+2, height: ly-(cy-ry)+1, fill: W2.f, "clip-path": `url(#${id})` }, g);
+          const hw = rx * Math.sqrt(Math.max(0, 1 - Math.pow((ly-cy)/ry, 2)));
+          mk("path", { d: `M${cx-hw} ${ly} L${cx+hw} ${ly}`, stroke: INK, "stroke-width": r*.07, "stroke-linecap": "round" }, g); }
+        mk("ellipse", { cx, cy, rx, ry, fill: "none", stroke: INK, "stroke-width": r*.05 }, g); } }
+    mk("path", { d: `M${x} ${y+r*.02} C${x-r*.26} ${y+r*.1} ${x-r*.22} ${y+r*.48} ${x} ${y+r*.48} C${x+r*.22} ${y+r*.48} ${x+r*.26} ${y+r*.1} ${x} ${y+r*.02} Z`, fill: W2.n, stroke: INK, "stroke-width": r*.05 }, g);
+    const my = y + r*.7, ink = { stroke: INK, "stroke-width": r*.085, fill: "none", "stroke-linecap": "round" };
+    if (b === 0) mk("path", Object.assign({ d: `M${x-r*.2} ${my} q${r*.2} ${r*.14} ${r*.4} 0` }, ink), g);
+    else if (b <= 2) mk("path", Object.assign({ d: `M${x-r*.2} ${my} l${r*.4} 0` }, ink), g);
+    else if (b <= 4) mk("path", Object.assign({ d: `M${x-r*.22} ${my+r*.06} q${r*.22} ${-r*(b === 3 ? .1 : .16)} ${r*.44} 0` }, ink), g);
+    else if (b <= 6) mk("path", Object.assign({ d: `M${x-r*.04} ${my+r*.02} q${r*.14} ${-r*.08} ${r*.3} ${r*.04}` }, ink), g);
+    else if (b <= 8) mk("ellipse", { cx: x+r*.04, cy: my+r*.04, rx: r*.12, ry: r*(b === 7 ? .06 : .09), fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
+    else mk("ellipse", { cx: x, cy: my+r*.12, rx: r*.27, ry: r*.36, fill: "#4a130d", stroke: INK, "stroke-width": r*.05 }, g);
+    return; }
   if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
   else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
@@ -169,7 +197,7 @@ function gestureArms(g, type, col, c, gest) {
     "hand-chest": [[11, s, 160, 11, "open"]],
     "wave-r": [[12, s, -35, 20, "open"]], "wave-l": [[-12, s, -145, 20, "open"]],
     "shake-r": [[12, s, 10, 10, "fist"]], "shake-l": [[-12, s, 170, 10, "fist"]] };   // handshake: arm stretched out sideways (bible 7.38)
-    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]], "push-r": [[-12, s + 4, -8, 30, "open"], [12, s, 6, 20, "open"]], "push-l": [[12, s + 4, 188, 30, "open"], [-12, s, 174, 20, "open"]], "push1-r": [[12, s, -4, 34, "open"]], "push1-l": [[-12, s, 184, 34, "open"]], "pushed-r": [[12, s, -4, 15, "open"]], "pushed-l": [[-12, s, 184, 15, "open"]] });   // push1: one arm stretched out, pushing (14d, bible 7.50)   // push: both arms forward to one side, hands open (the h5 pawn pushing Regina off the board, bible 7.50)   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
+    Object.assign(map, { "stretch": [[-12, s, -118, 26, "fist"], [12, s, -62, 26, "fist"]], "startle": [[-13, s, -150, 13, "open"], [13, s, -30, 13, "open"]], "hand-top": [[13, s, -96, 20, "open"]], "hand-mouth": [[12, s, 178, 8, "open"]], "push-r": [[-12, s + 4, -8, 30, "open"], [12, s, 6, 20, "open"]], "push-l": [[12, s + 4, 188, 30, "open"], [-12, s, 174, 20, "open"]], "push1-r": [[12, s, -4, 34, "open"]], "push1-l": [[-12, s, 184, 34, "open"]], "pushed-r": [[12, s, -4, 15, "open"]], "pushed-l": [[-12, s, 184, 15, "open"]] });   // push1: one arm stretched out, pushing (14d, bible 7.50)   // push: both arms forward to one side, hands open (the h5 pawn pushing Regina off the board, bible 7.50)   // hand-top: one hand up against the top of the piece ("huh, what?", the a1 rook in 15a, bible 7.47)   // both arms stretched up and out, with a yawn (the a1 rook, bible 7.45)
   for (const gname of [].concat(gest || [])) for (const a of (map[gname] || [])) arm(g, a[0], a[1], a[2], a[3], c, a[4], col);
 }
 function crown(g, y, col, gem, c) { const T = CROWN_TRIM && c ? c.trim : null, F = T || W_[col].f;
