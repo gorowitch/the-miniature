@@ -286,21 +286,33 @@ function renderPanel(svg, P, opts) {
   const pz = (x, y) => pr(x, y, bump(x, y));
   // room background (soft, no people, no text)
   const bg = mk("g", { filter: `url(#soft${P.id})` }, root);
-  // the wall line: where the floor (15 squares below the table top) meets the wall, 40 squares beyond the board, in the direction the camera looks (bible 7.56)
-  const gl = Math.hypot(fw[0], fw[1]) || 1, wb = pr(4 + fw[0] / gl * 40, 4 + fw[1] / gl * 40, -15), hz = (wb[2] > 0 ? wb[1] : -1e9) + 40;
-  mk("rect", { width: W0, height: H, fill: "#cfd8c6" }, bg);
-  const wallY = Math.max(-40, Math.min(H * .8, hz - 40));
-  for (let i = 0; i < W0; i += 330) { mk("rect", { x: i + 40, y: wallY - 230, width: 120, height: 200, fill: "#e9eedc" }, bg); mk("path", { d: `M${i + 100} ${wallY - 230} V${wallY - 30} M${i + 40} ${wallY - 130} H${i + 160}`, stroke: "#b9c2ad", "stroke-width": 6 }, bg); }
-  // the floor of the room, a darker warm grey, beyond and below the table (bible 7.56)
-  mk("rect", { x: 0, y: wallY, width: W0, height: H + 80, fill: "#7d7468" }, bg);
-  for (let i = 0; i < W0; i += 300) { mk("rect", { x: i + 20, y: wallY - 22, width: 200, height: 18, fill: "#5d4330" }, bg); mk("path", { d: `M${i + 240} ${wallY + 4} V${wallY - 70} Q${i + 268} ${wallY - 84} ${i + 296} ${wallY - 70} V${wallY + 4}`, fill: "#6b4c33" }, bg); }
-  // the table (bible 7.56): a real rectangle under the board, 13 squares deep (White to Black) and 20 squares long (rook to rook),
-  // the board in the middle, with a thin edge; drawn with the board's camera, so it is seen from the same angle; clipped at the camera
+  // The room, the table and the board are one scene seen by one camera (bible 7.56): every surface is a polygon in board
+  // coordinates (1 = one square, z = 0 the table top), clipped where it passes behind the camera, then projected.
   { const near = 0.15, cut = poly3 => { const out = [];
       for (let i = 0; i < poly3.length; i++) { const a = poly3[i], b = poly3[(i + 1) % poly3.length], da = dot(sub(a, C), fw) - near, db = dot(sub(b, C), fw) - near;
         if (da >= 0) out.push(a); if ((da >= 0) !== (db >= 0)) { const t = da / (da - db); out.push([a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]); } }
       return out.map(p => pr(p[0], p[1], p[2])); };
     const draw = (poly3, a) => { const q = cut(poly3); if (q.length > 2) mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ") }, a), bg); };   // soft, like the rest of the room
+    // the chess club room: about 3.5 x 3 m, 2.5 m high; the floor 13 squares (75 cm) below the table top
+    const RX0 = -26, RX1 = 34, RY0 = -22, RY1 = 30, FZ = -13, CZ = 30, at = (p, d, s, z) => [p[0] + d[0] * s, p[1] + d[1] * s, z];
+    mk("rect", { width: W0, height: H, fill: "#dfe4d6" }, bg);
+    draw([[RX0, RY0, CZ], [RX1, RY0, CZ], [RX1, RY1, CZ], [RX0, RY1, CZ]], { fill: "#dfe4d6" });   // ceiling
+    const corners = [[RX0, RY0], [RX1, RY0], [RX1, RY1], [RX0, RY1]];
+    corners.forEach((a, i) => { const b = corners[(i + 1) % 4], len = Math.hypot(b[0] - a[0], b[1] - a[1]), d = [(b[0] - a[0]) / len, (b[1] - a[1]) / len];
+      const inw = [-d[1] * 0.05, d[0] * 0.05], w = (s, z) => [a[0] + d[0] * s + inw[0], a[1] + d[1] * s + inw[1], z];
+      // the wall: pale green-grey, the side walls a shade darker so the corners read
+      draw([[a[0], a[1], FZ], [b[0], b[1], FZ], [b[0], b[1], CZ], [a[0], a[1], CZ]], { fill: i % 2 ? "#c7d0bd" : "#cfd8c6" });
+      // windows every 14 squares, 7 wide, from 70 cm to 170 cm above the floor, with a cross of glazing bars
+      for (let s = 6; s + 7 <= len - 4; s += 14) {
+        draw([w(s, -1), w(s + 7, -1), w(s + 7, 16), w(s, 16)], { fill: "#e9eedc", stroke: "#b9c2ad", "stroke-width": 4 });
+        draw([w(s + 3.3, -1), w(s + 3.7, -1), w(s + 3.7, 16), w(s + 3.3, 16)], { fill: "#b9c2ad" });
+        draw([w(s, 7.3), w(s + 7, 7.3), w(s + 7, 7.7), w(s, 7.7)], { fill: "#b9c2ad" }); }
+      // a dark wooden skirting band along the bottom of the wall
+      draw([w(0, FZ), w(len, FZ), w(len, FZ + 2.5), w(0, FZ + 2.5)], { fill: "#5d4330" }); });
+    // the floor of the room, a darker warm grey (bible 7.56)
+    draw([[RX0, RY0, FZ], [RX1, RY0, FZ], [RX1, RY1, FZ], [RX0, RY1, FZ]], { fill: "#7d7468" });
+    // the table (bible 7.56): a real rectangle under the board, 13 squares deep (White to Black) and 20 squares long (rook to rook),
+    // the board in the middle, with a thin edge; drawn with the board's camera, so it is seen from the same angle
     const X0 = -6, X1 = 14, Y0 = -2.5, Y1 = 10.5, TH = 0.45, top = [[X0, Y0, 0], [X1, Y0, 0], [X1, Y1, 0], [X0, Y1, 0]];
     for (let i = 0; i < 4; i++) { const a = top[i], b = top[(i + 1) % 4]; draw([a, b, [b[0], b[1], -TH], [a[0], a[1], -TH]], { fill: "#6c7a85", stroke: "#4b555d", "stroke-width": 1.5 }); }
     // light grey-blue: lighter than the black pieces, darker than the white pieces and the wall (bible 7.54; brown #8d6b4a until 7.53)
