@@ -229,8 +229,8 @@ window.PANELS = [
   cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" } },
   balloons: [{ who: "caballo", text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },
 { id: "15e", scene: 15, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
-  cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "calm", gest: "open-l" }, d5: { expr: "grin", gest: "wave-high", look: 0 } },
-  balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }] },
+  cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "pleading", gest: "open-l", lookAt: "caballo" }, d5: { expr: "grin", gest: "wave-high", look: 0 } },
+  balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }, { who: "bking", x: 660, text: "(=) ?" }] },
 // ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
 // 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
 { id: "16a", scene: 16, status: A, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },

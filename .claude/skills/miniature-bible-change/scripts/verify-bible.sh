@@ -24,6 +24,7 @@ miss=0; n=0
 while IFS= read -r b; do
   [ -z "$b" ] && continue
   case "$b" in *"<text>"*) continue;; esac
+  case "$b" in *"not in the play)"*) echo "Author's wording (approved, not in the play): $b"; continue;; esac   # e.g. "(=) ?" in 15e (bible 7.84)
   n=$((n+1))
   norm=$(printf '%s' "$b" | tr -s ' ')
   case "$playtext" in *"$norm"*) ;; *) echo "MISS: $b"; miss=$((miss+1));; esac

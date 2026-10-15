@@ -9,9 +9,11 @@ S=$(grep -n '^# SECTION 1 - FULL PLAY' "$BIBLE" | cut -d: -f1)
 E=$(grep -n '^# SECTION 2 - ' "$BIBLE" | cut -d: -f1)
 sed -n "${S},$((E-1))p" "$BIBLE" | tr '\n' ' ' | tr -s ' ' > "$PLAY"
 total=0; bad=0
+AUTHOR_BALLOONS=("(=) ?")   # panel 15e: the Black King offers a draw in chess notation, author decision (bible 7.84)
 while IFS= read -r t; do
   total=$((total+1))
   t2=$(printf '%s' "$t" | tr -s ' ')
+  if printf '%s\n' "${AUTHOR_BALLOONS[@]}" | grep -qxF -- "$t2"; then echo "Balloon with author's wording (not in the play, approved): $t2"; continue; fi
   if ! grep -qF -- "$t2" "$PLAY"; then bad=$((bad+1)); echo "NOT IN PLAY: $t2"; fi
 done < <(grep -oE 'text: "([^"\\]|\\.)*"' "$PANELS" | sed 's/^text: "//; s/"$//; s/\\"/"/g')
 echo "Checked $total balloon texts, $bad not found in the play"
