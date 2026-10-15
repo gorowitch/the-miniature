@@ -401,11 +401,12 @@ function renderPanel(svg, P, opts) {
     for (const k of [-0.18, 0, 0.18]) { const pts = Array.from({ length: 12 }, (_, i) => { const t = 0.05 + 0.82 * i / 11; return pr(a[0] + u[0] * L * t + n[0] * k, a[1] + u[1] * L * t + n[1] * k, 0.02 + hop * 4 * t * (1 - t)); });
       if (pts.some(p => p[2] < 0.2)) continue; const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
       mk("path", { d, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12", "stroke-linecap": "round" }, root); mk("path", { d, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12", "stroke-linecap": "round" }, root); } }
-  // a DGT 2010-style digital chess clock beside the board (prototype after bible 7.87): P.clock = { at: [x, y] } on the table.
+  // a DGT 2010-style digital chess clock beside the board (the author's addition to the setting, bible 7.89): on the table on White's right, beside the h-file, display towards the board.
   // Every part is a closed convex solid (8 corners) whose faces are culled against the camera, so you never look inside:
   // a low bordeaux wedge (vertical back towards the board, a long sloping front facing away), a grey face plate on the slope with
   // one wide display (no digits) and five small buttons below it, and one black rocker bar across the top, tilted (one side pressed).
-  if (P.clock) { const [cx0, cy0] = P.clock.at || [9.6, 4], sd = cx0 < 4 ? -1 : 1, k = P.clock.faceBoard === false ? -sd : sd, cg = mk("g", {}, root);   // faceBoard (default): the display faces the board
+  const CLK = P.clock === false ? null : (P.clock || {});   // the clock stands in every panel (bible 7.89); P.clock = false leaves it out (the cover)
+  const drawClock = () => { const [cx0, cy0] = CLK.at || [9.6, 4], sd = cx0 < 4 ? -1 : 1, k = CLK.faceBoard === false ? -sd : sd, cg = mk("g", {}, root);   // faceBoard (default): the display faces the board
     const V = (x, y, z) => [cx0 + k * x, cy0 + y, z];   // local x: the front (x < 0) faces the board when faceBoard
     const poly3 = (pts, a) => { const q = pts.map(p => pr(...p)); if (q.some(p => p[2] < 0.2)) return; mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), stroke: INK, "stroke-width": 1.3, "stroke-linejoin": "round" }, a), cg); };
     // a convex solid from 4 bottom and 4 top corners (same order); fills: { top, bottom, sides: [4] }
@@ -428,7 +429,7 @@ function renderPanel(svg, P, opts) {
     // the rocker bar: one closed bar across the top, tilted about the middle (the left end pressed down)
     const b0 = xf + 0.12, b1 = D - 0.1, bw = L2 * 0.88, z0 = H, tilt = 0.07, th = 0.1;
     solid([V(b0, -bw, z0), V(b1, -bw, z0), V(b1, bw, z0), V(b0, bw, z0)], [V(b0, -bw, z0 + th - tilt), V(b1, -bw, z0 + th - tilt), V(b1, bw, z0 + th + tilt), V(b0, bw, z0 + th + tilt)],
-      { top: "#2a2a2a", bottom: null, sides: ["#141414", "#141414", "#141414", "#1c1c1c"] }); }
+      { top: "#2a2a2a", bottom: null, sides: ["#141414", "#141414", "#141414", "#1c1c1c"] }); };
   // pieces
   const items = [], cast = P.cast || {};
   // P.stage: pieces placed at free positions on the board, in addition to the board state; P.omit: squares of the board state not drawn
@@ -546,6 +547,8 @@ function renderPanel(svg, P, opts) {
     if (style === "C") { const t1 = 1 - 0.42 / L, sh = 0.1, hw = 0.26, hl = 0.36 / L, poly3 = [P0(-0.15 / L, -sh), P0(t1 - hl, -sh), P0(t1 - hl, -hw), P0(t1, 0), P0(t1 - hl, hw), P0(t1 - hl, sh), P0(-0.15 / L, sh)];
       const dense = []; for (let i = 0; i < poly3.length; i++) { const p = poly3[i], q = poly3[(i + 1) % poly3.length]; for (let j = 0; j < 6; j++) dense.push(on(p[0] + (q[0] - p[0]) * j / 6, p[1] + (q[1] - p[1]) * j / 6)); }
       mk("polygon", { points: dense.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), fill: "#fffaf0", "fill-opacity": .85, stroke: INK, "stroke-width": 2.5, "stroke-linejoin": "round" }, g); } };
+  // the clock is drawn in depth order among the pieces, so pieces in front of it cover it and pieces behind it are covered
+  if (CLK) { const [qx, qy] = CLK.at || [9.6, 4]; slotQ.push({ slot: slotOf(pr(qx, qy, 0.3)[2]), draw: drawClock }); }
   // effects behind pieces
   for (const fx of (P.fx || [])) {
     if (fx.burst) { const sp = placed.find(p => p.role === fx.burst || p.sq === fx.burst); if (sp) { const [hy] = HEAD[sp.t]; const cx = sp.x, cy = sp.y + hy * sp.s; const gg = mk("g", { stroke: "#fffaf0", "stroke-linecap": "round", opacity: .9 }, root); mk("circle", { cx, cy, r: 260, fill: "#fff6d6", opacity: .35, stroke: "none" }, gg); for (let k = 0; k < 14; k++) { const a = k / 14 * Math.PI * 2 + .2; mk("path", { d: `M${cx + Math.cos(a) * 70} ${cy + Math.sin(a) * 70} L${cx + Math.cos(a) * 900} ${cy + Math.sin(a) * 900}`, "stroke-width": 5 + (k % 3) * 2 }, gg); } } }

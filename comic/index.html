@@ -67,7 +67,7 @@ function panelAt(page, P, x, y, w, h) {
   el("rect", { x: 0, y: 0, width: PW, height: PH, fill: CV.bg }, s);
   const t = el("text", { x: PW / 2, y: 560, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 230, fill: CV.tf, stroke: CV.ts, "stroke-width": 9, "paint-order": "stroke" }, s); t.textContent = "De Miniatuur";
   const st = el("text", { x: PW / 2, y: 700, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 76, fill: CV.ink }, s); st.textContent = "Een hedendaagse klucht in één bedrijf";
-  const C = { id: "cover", scene: 1, state: 0, clean: true, cam: { from: [11.6, -2.6, 5.4], at: [4.0, 4.1, 0.2], f: 700 },
+  const C = { id: "cover", scene: 1, state: 0, clean: true, clock: false, cam: { from: [11.6, -2.6, 5.4], at: [4.0, 4.1, 0.2], f: 700 },
     cast: { koning: { expr: "proud", gest: "raise-r" }, bking: { expr: "calm" }, regina: { lookAt: "koning" }, alfil: { lookAt: "koning" }, caballo: { expr: "heroic" }, brookh8: { expr: "proud" } } };
   const box = el("svg", { x: 60, y: 880, width: PW - 120, height: 1126 }, s);
   el("rect", { x: 56, y: 876, width: PW - 112, height: 1134, fill: "none", stroke: "#141414", "stroke-width": 8 }, s);
