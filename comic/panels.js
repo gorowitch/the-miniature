@@ -223,13 +223,13 @@ window.PANELS = [
   cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { lookAt: "koning" } },
   balloons: [{ who: "koning", x: 420, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !." }] },
 { id: "15c", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [9.6, 4.2, 3.4], at: [6.3, 6.3, 0.75], f: 700 },
-  cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 } },
+  cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 }, e7: { expr: "smug", lookAt: "f6", lookDown: true } },
   balloons: [{ who: "caballo", x: 30, w: 740, text: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan." }] },
 { id: "15d", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [6.6, 2.4, 2.6], at: [6.6, 6.8, 0.6], f: 760 },
-  cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" } },
+  cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 } },
   balloons: [{ who: "caballo", text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },
 { id: "15e", scene: 15, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
-  cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "pleading", gest: "open-l", lookAt: "caballo" }, d5: { expr: "grin", gest: "wave-high", look: 0 } },
+  cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "pleading", gest: "open-l", lookAt: "caballo" }, d5: { expr: "grin", gest: "wave-high", look: 0 }, e6: { lookAt: "f6", lookDown: true }, f7: { lookAt: "f6", lookDown: true } },
   balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }, { who: "bking", x: 660, text: "(=) ?" }] },
 // ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
 // 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
