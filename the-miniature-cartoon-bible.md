@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.82
+Version 7.83
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -89,6 +89,7 @@ Version 7.79 frees the heads under Alfil's balloon in panel 5d-2 (author decisio
 Version 7.80 zooms panel 6d in a little on the black army (author decision).
 Version 7.81 gives every mutinying white pawn with crossed arms the grumpy face of panel 2b (author decision; Section 7, White Pawns).
 Version 7.82 makes the Black King and the f8 bishop extremely scared in panel 15d (author decision).
+Version 7.83 adds an extra joke to panel 15e: the childish d5 pawn waves at the camera (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1229,6 +1230,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.80 | Author feedback on 6d: "Could we zoom more in on the black army here ? Suggest some alternatives". Claude showed Z1 to Z3, then, asked "I want something between wat is now and Z1", H1 to H3; author: "H1 is close, just zoom a little less and fix the text box for the move." Applied first: a zoom a little less than H1; then the author: "pick H1", so H1 is used. The move box was only cut off by the bottom edge of Claude's comparison screenshot; in the panel itself it is complete, bottom left. 6d panel block: a framing line. |
 | 7.81 | Author feedback: "I noticed that the look of the pawns participating in the muteny is not consistent. When the pawns participating in the muteny have crossed arms their faces must be consistently grumpy like in the first panel of the pawn muteny. Agreed ?" Claude confirmed: only in 2b were all pawns grumpy; in 4a and 5d-2 some, in the other eleven mutiny panels none. Author: "yes, apply and show me a preview". Section 7, White Pawns: a Grumpy faces line. SVG preview: every pawn with crossed arms gets the stubborn face unless a panel sets another expression. |
 | 7.82 | Author decision on 15d: "Both the king and the bishop at f8 look extremely scared because Caballo threatens both checkmate and to capture the bishop." 15d panel block and field 6 of manifest 75 updated. |
+| 7.83 | Author decision on 15e: "I have an extra joke for this panel. The childish pawn ad d5 waves at the camera." 15e panel block and field 6 of manifest 76 updated. Refined: "refine by making sure that the pawn has his eyes open. ensure that his arm is a little higher visually indicate arm movement" (eyes open with a broad grin, the arm raised higher, curved motion lines beside the hand). A local joke for 15e (author's own, so not an invented joke). |
 
 ---
 
@@ -2148,6 +2150,7 @@ Approved in 7.40 (wide since 7.37).
 - Camera: from White's side, low, looking across the board at the black army, with Caballo (h7), the h8 rook and, beside the board, Regina at the right.
 - In frame: the black army, faces visible, with the Black King (e8) in the middle; Caballo at the right, the h8 rook behind him, Regina beside the board; the cola stain on f6 in the foreground.
 - Characters: Caballo neutral, mouth open, reports the draw offer. The Black King calm, one hand open (the offer). The others neutral, mouths closed; Regina and the rook without any hint (the gag ended after 14h).
+- Extra joke (author decisions in 7.83): the childish black pawn on d5, in the foreground at the bottom left, waves at the camera (at the reader): one arm raised high, the hand open, with short curved motion lines beside the hand to show the waving; a broad grin with the eyes open, looking at the reader, while the others follow the draw offer.
 - Balloon placement: top, right of centre; its curved tail ends just beside Caballo's mouth.
 - Balloon (Caballo): Seg, "Dieje van den overkant" stelt trouwens remise voor.
 
@@ -5046,7 +5049,7 @@ PANEL 15e   (sequence number 76)
       Balloon 1: "Seg, "Dieje van den overkant" stelt trouwens remise voor."
 4.  Balloon 1 -> Caballo
 5.  Visible: the black army with the Black King (e8) in the middle; Caballo (h7) at the right, the h8 rook behind him, Regina beside the board; the cola stain on f6 in the foreground.
-6.  Listening: the Black King, calm, one hand open (the offer), mouth closed; the others neutral, mouths closed.
+6.  Listening: the Black King, calm, one hand open (the offer), mouth closed; the others neutral, mouths closed. The black pawn on d5 waves at the camera, grinning (7.83).
 7.  Camera on White's side, low, looking across the board at the black army; wide panel (7.37).
 8.  Caballo: neutral, mouth open.
 9.  Balloon 1 top, right of centre; its curved tail ends just beside Caballo's mouth. Round balloon.
@@ -5559,3 +5562,4 @@ Items that need a decision from the author.
 | 7.80 | - | 6d: zoomed in a little on the black army. |
 | 7.81 | - | Mutiny: every pawn with crossed arms has the grumpy face of 2b. |
 | 7.82 | - | 15d: the Black King and the f8 bishop extremely scared. |
+| 7.83 | - | 15e: the d5 pawn waves at the camera. |
