@@ -110,7 +110,7 @@ function face(g, x, y, r, col, o) {
   else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "grin" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
   else if (E === "worried" || E === "despair" || E === "sigh" || E === "pleading" || E === "apologetic" || E === "disappointed") { brow(-1, r*.04, -r*.22); brow(1, r*.04, -r*.22); }
-  else if (E === "offended" || E === "puzzled" || E === "disgusted") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
+  else if (E === "offended" || E === "puzzled" || E === "disgusted" || E === "sly") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
   else if (E === "calm" || E === "smug") { brow(-1, 0, -r*.02); brow(1, 0, -r*.02); }
   else { brow(-1, 0, -r*.08); brow(1, 0, -r*.08); }
   const closed = E === "despair" || E === "sigh" || E === "asleep" || E === "yawn";   // asleep, yawn: the sleepy a1 rook (bible 7.45)
@@ -120,12 +120,12 @@ function face(g, x, y, r, col, o) {
   } else if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
   else if (E === "amused" || E === "relieved") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.04} q${r*.2} ${-r*.26} ${r*.4} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g); }  // eyes squeezed with laughter
   else {
-    const ry = (E === "surprised" || E === "startled") ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted") ? .17 : .29;
+    const ry = (E === "surprised" || E === "startled") ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted" || E === "sly") ? .17 : .29;
     for (const s of [-1, 1]) {
       mk("ellipse", { cx: x+s*r*.32, cy: y-r*.12, rx: r*((E === "surprised" || E === "startled") ? .27 : .24), ry: r*ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
       mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08+(o.lookDown ? r*.09 : 0), r: r*((E === "surprised" || E === "startled") ? .09 : .12), fill: INK }, g);
       mk("circle", { cx: x+s*r*.32+lx*r*.11-r*.04, cy: y-r*.12+(o.lookDown ? r*.09 : 0), r: r*.035, fill: "#fff" }, g);
-      if (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted") mk("path", { d: `M${x+s*r*.32-r*.26} ${y-r*.2} q${r*.26} ${-r*.1} ${r*.52} 0`, stroke: W_[col].f, "stroke-width": r*.16, fill: "none" }, g);
+      if (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted" || E === "sly") mk("path", { d: `M${x+s*r*.32-r*.26} ${y-r*.2} q${r*.26} ${-r*.1} ${r*.52} 0`, stroke: W_[col].f, "stroke-width": r*.16, fill: "none" }, g);
     }
   }
   mk("path", { d: `M${x+lx*r*.08} ${y+r*.02} C${x+lx*r*.08-r*.26} ${y+r*.1} ${x+lx*r*.08-r*.22} ${y+r*.48} ${x+lx*r*.08} ${y+r*.48} C${x+lx*r*.08+r*.22} ${y+r*.48} ${x+lx*r*.08+r*.26} ${y+r*.1} ${x+lx*r*.08} ${y+r*.02} Z`, fill: W_[col].n, stroke: INK, "stroke-width": r*.05 }, g);
@@ -138,7 +138,7 @@ function face(g, x, y, r, col, o) {
   } else if (talk) {
     mk("ellipse", { cx: x, cy: my + r*.03, rx: r*.19, ry: r*.15, fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
     mk("path", { d: `M${x-r*.1} ${my+r*.1} q${r*.1} ${-r*.06} ${r*.2} 0`, fill: "#c4584a", stroke: "none" }, g);
-  } else if (E === "amused" || E === "grin") {  // grin: the same broad grin with the eyes open (the waving d5 pawn in 15e, bible 7.83); amused: broad grin with teeth (bible 7.23)
+  } else if (E === "amused" || E === "grin" || E === "sly") {  // sly: half-lidded eyes, one brow up and this grin, "I got away with it" (the Black King in 16c, bible 7.87); grin: the same broad grin with the eyes open (the waving d5 pawn in 15e, bible 7.83); amused: broad grin with teeth (bible 7.23)
     mk("path", { d: `M${x-r*.34} ${my-r*.06} q${r*.34} ${r*.5} ${r*.68} 0 Z`, fill: "#4a130d", stroke: INK, "stroke-width": r*.05, "stroke-linejoin": "round" }, g);
     mk("path", { d: `M${x-r*.3} ${my-r*.04} l${r*.6} 0 l${-r*.04} ${r*.08} l${-r*.52} 0 Z`, fill: "#fffaf0" }, g);
   } else if (E === "yawn") {   // a big round yawn
@@ -396,6 +396,39 @@ function renderPanel(svg, P, opts) {
       for (const [dx, dy, r] of [[0.66, -0.06, 0.035], [0.6, 0.16, 0.025], [-0.5, -0.14, 0.03]]) poly(Array.from({ length: 8 }, (_, j) => { const b = j / 8 * Math.PI * 2; return [cx0 + dx + Math.cos(b) * r, cy0 + dy + Math.sin(b) * r * 0.7]; }), { fill: "#a88a2c", opacity: (0.45 * a0).toFixed(2) }, bd); }
     if (gs === "C" && f3Explicit) for (const [c, dx, dy] of [["#e88a9c", -0.06, -0.03], ["#8ad0e8", 0.03, 0.01], ["#c8e88a", 0.1, 0.05]]) poly([[cx0 + dx - 0.16, cy0 + dy - 0.03], [cx0 + dx + 0.12, cy0 + dy - 0.07], [cx0 + dx + 0.16, cy0 + dy - 0.03], [cx0 + dx - 0.12, cy0 + dy + 0.01]], { fill: c, opacity: .35 }, bd);
     if (f3Explicit) { poly(blob(0.07, 0.035, 1, 10).map(([x, y]) => [x - 0.1, y - 0.06]), { fill: "#fffbe0", opacity: .75 }, bd); poly(blob(0.035, 0.018, 2, 8).map(([x, y]) => [x + 0.08, y + 0.04]), { fill: "#fffbe0", opacity: .6 }, bd); } }
+  // P.slide = { from, to, hop }: a captured piece taken off the board, three dashed white lines from its square to where it now stands, like the move marks (Regina in 14d, bible 7.88)
+  if (P.slide) { const hop = P.slide.hop || 0, [a, b] = [P.slide.from, P.slide.to], L = Math.hypot(b[0] - a[0], b[1] - a[1]), u = [(b[0] - a[0]) / L, (b[1] - a[1]) / L], n = [-u[1], u[0]];
+    for (const k of [-0.18, 0, 0.18]) { const pts = Array.from({ length: 12 }, (_, i) => { const t = 0.05 + 0.82 * i / 11; return pr(a[0] + u[0] * L * t + n[0] * k, a[1] + u[1] * L * t + n[1] * k, 0.02 + hop * 4 * t * (1 - t)); });
+      if (pts.some(p => p[2] < 0.2)) continue; const d = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+      mk("path", { d, stroke: INK, "stroke-width": 7, fill: "none", "stroke-dasharray": "20 12", "stroke-linecap": "round" }, root); mk("path", { d, stroke: "#fffaf0", "stroke-width": 4, fill: "none", "stroke-dasharray": "20 12", "stroke-linecap": "round" }, root); } }
+  // a DGT 2010-style digital chess clock beside the board (prototype after bible 7.87): P.clock = { at: [x, y] } on the table.
+  // Every part is a closed convex solid (8 corners) whose faces are culled against the camera, so you never look inside:
+  // a low bordeaux wedge (vertical back towards the board, a long sloping front facing away), a grey face plate on the slope with
+  // one wide display (no digits) and five small buttons below it, and one black rocker bar across the top, tilted (one side pressed).
+  if (P.clock) { const [cx0, cy0] = P.clock.at || [9.6, 4], sd = cx0 < 4 ? -1 : 1, k = P.clock.faceBoard === false ? -sd : sd, cg = mk("g", {}, root);   // faceBoard (default): the display faces the board
+    const V = (x, y, z) => [cx0 + k * x, cy0 + y, z];   // local x: the front (x < 0) faces the board when faceBoard
+    const poly3 = (pts, a) => { const q = pts.map(p => pr(...p)); if (q.some(p => p[2] < 0.2)) return; mk("polygon", Object.assign({ points: q.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" "), stroke: INK, "stroke-width": 1.3, "stroke-linejoin": "round" }, a), cg); };
+    // a convex solid from 4 bottom and 4 top corners (same order); fills: { top, bottom, sides: [4] }
+    const solid = (bot, top, fills) => { const all = bot.concat(top), c = all.reduce((s, p) => [s[0] + p[0] / 8, s[1] + p[1] / 8, s[2] + p[2] / 8], [0, 0, 0]);
+      const faces = [[bot.slice().reverse(), fills.bottom], [top, fills.top]].concat([0, 1, 2, 3].map(i => [[bot[i], bot[(i + 1) % 4], top[(i + 1) % 4], top[i]], fills.sides[i]]));
+      for (const [f, fill] of faces) { if (!fill) continue; const n = cr(sub(f[1], f[0]), sub(f[2], f[0])), fc = f.reduce((s, p) => [s[0] + p[0] / f.length, s[1] + p[1] / f.length, s[2] + p[2] / f.length], [0, 0, 0]);
+        const out = dot(n, sub(fc, c)) > 0 ? n : n.map(v => -v); if (dot(out, sub(C, fc)) > 0) poly3(f, { fill }); } };
+    const L2 = 1.3, D = 0.55, H = 0.5, xf = -0.15, BOR = "#6e1a2b", BOR_D = "#4e1220", BOR_T = "#86283a";
+    // the body: bottom from x -D (front) to D (back), top from xf to D
+    solid([V(-D, -L2, 0), V(D, -L2, 0), V(D, L2, 0), V(-D, L2, 0)], [V(xf, -L2, H), V(D, -L2, H), V(D, L2, H), V(xf, L2, H)],
+      { top: BOR_T, bottom: null, sides: [BOR_D, "#5a1524", BOR_D, BOR] });
+    // the face plate and display on the sloping front, raised a hair so they sit on top of it
+    const sl = [xf + D, H], sn = Math.hypot(...sl), nx = -sl[1] / sn * 0.006, nz = sl[0] / sn * 0.006;
+    const S3 = (t, y) => V(-D + sl[0] * t + nx, y, sl[1] * t + nz);
+    const front = dot([k * (-sl[1]), 0, sl[0]], sub(C, V(-D + sl[0] / 2, 0, H / 2))) > 0;
+    if (front) { poly3([S3(0.1, -L2 * 0.9), S3(0.1, L2 * 0.9), S3(0.92, L2 * 0.9), S3(0.92, -L2 * 0.9)], { fill: "#3a3a3d", "stroke-width": 1 });   // dark grey face plate
+      poly3([S3(0.45, -L2 * 0.7), S3(0.45, L2 * 0.7), S3(0.86, L2 * 0.7), S3(0.86, -L2 * 0.7)], { fill: "#a7b5a0", "stroke-width": 1 });   // the display, no digits
+      poly3([S3(0.76, -L2 * 0.62), S3(0.76, -L2 * 0.1), S3(0.82, -L2 * 0.13), S3(0.82, -L2 * 0.62)], { fill: "#c9d4c4", stroke: "none" });   // a faint glare
+      for (let k = -2; k <= 2; k++) { const y = k * L2 * 0.2, r = 0.06; poly3([S3(0.18, y - r), S3(0.18, y + r), S3(0.32, y + r), S3(0.32, y - r)], { fill: k ? "#151515" : "#2f6fb0", "stroke-width": 0.8 }); } }   // five buttons
+    // the rocker bar: one closed bar across the top, tilted about the middle (the left end pressed down)
+    const b0 = xf + 0.12, b1 = D - 0.1, bw = L2 * 0.88, z0 = H, tilt = 0.07, th = 0.1;
+    solid([V(b0, -bw, z0), V(b1, -bw, z0), V(b1, bw, z0), V(b0, bw, z0)], [V(b0, -bw, z0 + th - tilt), V(b1, -bw, z0 + th - tilt), V(b1, bw, z0 + th + tilt), V(b0, bw, z0 + th + tilt)],
+      { top: "#2a2a2a", bottom: null, sides: ["#141414", "#141414", "#141414", "#1c1c1c"] }); }
   // pieces
   const items = [], cast = P.cast || {};
   // P.stage: pieces placed at free positions on the board, in addition to the board state; P.omit: squares of the board state not drawn

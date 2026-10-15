@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.86
+Version 7.88
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -93,6 +93,8 @@ Version 7.83 adds an extra joke to panel 15e: the childish d5 pawn waves at the 
 Version 7.84 adds a second joke to panel 15e: the Black King offers the draw himself with a small balloon "(=) ?", looking a little begging (author decision).
 Version 7.85 gives panel 15c a camera from which the d5 and h5 pawns show their faces, and a wide balloon above the black army (author decision).
 Version 7.86 adds the cola stare (author decision): in 15c to 15e the black pieces next to f6 stare at the cola; the pawns disgusted, the e7 knight pleased that he avoided it.
+Version 7.87 makes the Black King's smile in 16c clear: a sly grin, "I got away with it" (author decision).
+Version 7.88 restages panel 14d without the push: Regina already beside the board next to the h8 rook, the capture shown by dashed white lines from h5, a proud pawn and a burst (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1237,6 +1239,8 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.84 | Author decision on 15e: "Another joke for this panel. The black king offers a draw. Write this in a text balloon as '(=) ?' ommitting the quotes. The king looks a little begging but not desperate". 15e panel block; manifest 76 fields 3, 4, 6 and 9. The text checker (check-panel-texts.sh) lists "(=) ?" as an approved balloon with the author's wording. |
 | 7.85 | Author question on 15c: "I notice that two pawns have no face here what is the reason for that ?" Claude: the black pawns on d5 and h5 stood just on the camera's side of it (the camera was level with the fifth rank), so they were seen from behind. Options: leave, turn them, or move the camera; the author: "prototype option 3" (C1 to C3), then "suggest me similar options with a wider text balloon" (W1 to W3); author decision: "go with W2, apply to 15c". 15c panel block: a camera-and-balloon line (replaces the balloon placement of 7.71 and the exception of 7.78). |
 | 7.86 | Author's joke: "Once Caballo mentions the cola spot the pieces next to the square stare at the cola spot on f6 the pieces staring are: the knight on e7, the pawn on e6, the pawn on f7. 74-panel-15c.svg - the pawns stare - a little disgusted, the knight stares like 'but I avoided it' 75-panel-15d.svg - the pawns stare - a little disgusted, 76-panel-15e.svg - the pawns just stare". Claude refined it (the pawns lean slightly away from the smell; the knight with a satisfied eyelid and raised brow, a reference to 4. ... Pe7) and prototyped it; the author: "add a small smile to the knight, then apply". Panel blocks 15c, 15d, 15e and field 6 of manifests 74 to 76. SVG preview: a piece can look at a square and look down; new expression "disgusted"; a smug eyelid and smile for knights. |
+| 7.87 | Author feedback on 16c: "in the last panel the black kings smile is not clear enough. he thinks like : 'I got away with it'". Cause: his mouth was drawn under his dark beard. Claude showed A (amused), D (sly: half-closed eyes glancing sideways, one brow raised, a broad grin with teeth) and C (grin); author decision: "D". 16c panel block and manifest 79 field 8. SVG preview: new expression "sly". |
+| 7.88 | Author on 14d, prompted by a prototype of a chess clock beside the h-file (not yet decided): Regina, pushed off beside h5, collided with the clock. The author first asked to push her towards the h8 rook, then "I feel the image can still better express that Regina is being pushed away", then (white push lines, skid marks, dust, a starburst at contact) "We are on the wrong path. Let's resolve 14d again starting from the original image ... Forget about the pawn pushing, that didn't work out. Suppose we put Regina next to the rook immediately what means do we have to suggest capturing ?" Claude listed means (her route as move-style dashed lines, a trace on h5, the capturer's and the captured's body language, the reactions, an impact mark) and prototyped a combination (K1 to K3); the author: "I want a variant of K3, with the dashed lines like K2 and a normal crown for the queen" (K4), then "yes". 14d panel block (In frame, Action) and manifest 67 (fields 5, 8, 13) updated; old wording in Appendix A. The clock itself is not part of this change. SVG preview: P.slide (dashed lines from a square to a spot beside the board). |
 
 ---
 
@@ -2065,8 +2069,8 @@ Approved in 7.51 (as shown in the SVG preview).
 ### Panel 14d
 Approved in 7.50 (staged by the author in 7.50).
 - Camera: from White's kingside, beyond the h-file, high and close, so the frame shows only the capture: the h-file corner of the board and the table beside it; only the edges of a few black pieces at the top.
-- In frame: the black pawn on h5 (left of centre), Regina on the table beside the board, Caballo on h7 and the black rook on h8 behind them. Every piece on a square that is in frame is shown.
-- Action: the black pawn has just captured on g6xh5 (a short motion streak from g6) and has just pushed Regina entirely off the board: one arm half stretched out towards her, hand open, no longer touching her; stubborn, mouth closed. Regina is still sliding away: three short motion lines trail behind her, slanted along her direction of travel, away from the pawn and off the board.
+- In frame: the black pawn on h5 (left of centre), Regina on the table beside the board next to the black rook on h8, Caballo on h7 and the black rook on h8 behind them. Every piece on a square that is in frame is shown.
+- Action (author decisions in 7.88; replaces the push of 7.50): the black pawn has just captured on g6xh5 (a short motion streak from g6) and stands on h5, proud, one fist raised, with a burst of white rays behind him: the capture happened here. Regina has already been taken off the board and stands beside it, next to the black rook on h8 (where she stays in the following panels); three flat dashed white lines, in the style of the move marks (Section 13), run from h5 to her new spot. Her crown is upright.
 - Characters: Regina does not really care: calm, half-lidded eyes, a slightly bored look, not looking at the pawn or the rook. The black rook on h8 is really happy that she will now stand next to him: a broad delighted grin, eyes closed with joy, a strong pink blush. Caballo neutral, mouth closed.
 - Move box (bottom-left corner, bold, white rectangle): 6. ... gxh5
 - No balloons.
@@ -2193,6 +2197,7 @@ Approved in 7.39 (author decisions in 7.37 to 7.39). The last panel of the carto
 - The rise: the two kings stand on the gentle rise in the middle of the board, the very rise that started the whole trouble: an extra joke. In this panel it reads more clearly than elsewhere: a little higher, with brighter light on one slope and deeper shadow on the other, the squares bending over it. Both kings tilt a little, each leaning slightly outward, down the slope he stands on.
 - Camera: from the side of the board, beyond the h-file, high and looking down at a steep angle, the two kings centred in the frame with clear room above their crowns. From this side the white army stands along the left, the black army along the right; the White King is left of the Black King; in the foreground the greasy spot on f3 (lower left) and the cola stain on f6 (lower right), both clearly visible.
 - Characters: the White King and the Black King shake hands, each with one arm stretched out sideways towards the other at chest height, the hands meeting in the middle. The White King looks somewhat frustrated and disappointed: eyebrows drooping, heavy eyelids, mouth turned down; he looks at the Black King. The Black King looks relieved that he did not lose the game: eyebrows raised, eyes closed in relief, a soft smile. The other pieces neutral, mouths closed.
+- The Black King's smile (author decision in 7.87): clearly visible, as in "I got away with it": half-closed eyes glancing sideways, one eyebrow raised, a broad grin with teeth above his beard (his mouth was hidden by the beard before).
 - Result box (author decision in 7.39): centred at the bottom of the panel, bold black letters in a small white rectangle with a thin black outline, like the move box: 1/2 - 1/2
 - No balloons, no move box, no other text, no label or explanation of the rise.
 
@@ -4788,17 +4793,17 @@ PANEL 14d   (sequence number 67)
       6. ... gxh5
 3.  Dialogue: none. Move box (bottom-left corner): "6. ... gxh5".
 4.  No speaker.
-5.  Visible: the black pawn on h5, Regina on the table beside the board, Caballo on h7, the black rook on h8; edges of a few black pieces at the top.
+5.  Visible: the black pawn on h5, Regina on the table beside the board next to the h8 rook, Caballo on h7, the black rook on h8; edges of a few black pieces at the top.
 6.  Watching: the h8 rook, delighted; Regina indifferent; Caballo neutral, mouth closed.
 7.  Camera from White's kingside, beyond the h-file, high and close on the h-file corner (author, 7.50).
-8.  The h5 pawn: arm half stretched out towards Regina, hand open, not touching her, stubborn.
-    Regina: calm, half-lidded, bored; motion lines trailing behind her (still sliding).
+8.  The h5 pawn: proud, one fist raised, a burst of white rays behind him (7.88).
+    Regina: calm, half-lidded, bored; beside the board next to the h8 rook; three flat dashed white lines from h5 to her (7.88).
     The h8 rook: broad grin, eyes closed with joy, strong pink blush.
 9.  No balloons. The move box sits in the bottom-left corner.
 10. Stage directions: none.
 11. State 12: the move 6. ... gxh5 (pawn g6 takes the queen on h5) happens in this panel; a short motion streak from g6 to h5.
 12. Continuity: Regina was hanging after 6. Pxh7 (14c); from 14e on she stands beside the board next to the h8 rook; the a1 rook still asleep (out of frame).
-13. Must not appear: the pawn's hand touching Regina; Regina on the board; a worried or upset Regina; any other moved piece; text other than the move box.
+13. Must not appear: Regina on the board; a worried or upset Regina; any other moved piece; text other than the move box.
 14. Dialogue length: none (move box only).
 15. Segmentation: the move line after speech 37.
 16. Visual priority: the push, Regina's indifference and the rook's delight.
@@ -5148,7 +5153,7 @@ PANEL 16c   (sequence number 79)
 5.  Visible: the White King (e4) and the Black King (e5) in the centre, on the rise in the middle of the board; the white army on its starting squares along the left, the black army along the right; the greasy spot on f3 and the cola stain on f6 in the foreground.
 6.  Watching: the other pieces neutral, mouths closed.
 7.  Camera beside the board beyond the h-file, high, looking down steeply; the kings centred with room above their crowns (author, 7.38, 7.39).
-8.  White King: disappointed, eyebrows drooping, heavy eyelids, mouth turned down, looks at the Black King, one arm stretched out sideways, leaning a little outward.
+8.  White King: disappointed, eyebrows drooping, heavy eyelids, mouth turned down, looks at the Black King, one arm stretched out sideways, leaning a little outward. The Black King: a sly grin with teeth, "I got away with it" (7.87).
     Black King: relieved, eyebrows raised, eyes closed, soft smile, one arm stretched out sideways, leaning a little outward.
 9.  No balloons. The result box sits centred at the bottom, between the two stains.
 10. Stage directions: none.
@@ -5455,6 +5460,7 @@ Kept for history. Do not use for generation.
 - 7.5 to 7.56, Common Prompt Block: "... the squares bend over it." (no lean for pieces on the rise; only the two kings in 16c leaned, from 7.39). -> Extended in 7.57 by author decision: every piece on the four centre squares leans slightly with the slope.
 - 7.59, Section 13, Move Marks: "When the piece moves straight towards or away from the viewer, the lines run on both sides of the piece, like skid marks, instead of behind it." (two lines). -> Changed in 7.60 by author feedback: always three lines, spread a little wider.
 - 7.59 to 7.64, Section 13, Move Marks: "Where the start square would be hidden, the camera is chosen so that the start square and the target square are both in sight (12d, 13b)."; 12d camera from beyond the h-file with h3 and g5 in sight. -> Changed in 7.65 by author decision: 12d from above, so the mate threat can be read; h3 just out of frame.
+- 7.50 to 7.87, panel 14d: "Action: the black pawn has just captured on g6xh5 (a short motion streak from g6) and has just pushed Regina entirely off the board: one arm half stretched out towards her, hand open, no longer touching her; stubborn, mouth closed. Regina is still sliding away: three short motion lines trail behind her, slanted along her direction of travel, away from the pawn and off the board." -> Changed in 7.88 by author decision: no push; the pawn proud with a burst behind him, Regina already beside the board next to the h8 rook, flat dashed white lines from h5 to her.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5578,3 +5584,5 @@ Items that need a decision from the author.
 | 7.84 | - | 15e: the Black King offers the draw with a small balloon "(=) ?". |
 | 7.85 | - | 15c: the d5 and h5 pawns show their faces; a wide balloon above the black army. |
 | 7.86 | - | 15c to 15e: the pieces next to f6 stare at the cola. |
+| 7.87 | - | 16c: the Black King's sly grin, "I got away with it". |
+| 7.88 | - | 14d restaged: no push; Regina beside the h8 rook, dashed lines from h5, a proud pawn with a burst. |

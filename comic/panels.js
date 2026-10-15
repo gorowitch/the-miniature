@@ -201,8 +201,8 @@ window.PANELS = [
   cast: { koning: { expr: "worried", talk: true, gest: "point-up-l", sweat: true } },
   balloons: [{ who: "koning", text: "Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, \"Dieje van den overkant\" is al aan zet." }] },
 // 14d: the capture staged close (bible 7.50): the h5 pawn pushes Regina off the board, she does not care, the h8 rook is delighted
-{ id: "14d", scene: 14, status: A, movebox: "6. ... gxh5", state: 12, beside: [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.95, 4.9] }], cam: { from: [10.4, 2.8, 5.8], at: [7.9, 5.6, 0.8], f: 940 }, fx: [{ move: ["g6", "h5"] }],
-  cast: { h5: { expr: "stubborn", gest: "pushed-r", lookAt: "regina" }, regina: { expr: "calm", lookAt: "h1", back: false, trail: [1, 0.35] }, brookh8: { expr: "amused", lookAt: "regina", blush: "strong" } }, balloons: [] },
+{ id: "14d", scene: 14, status: A, movebox: "6. ... gxh5", state: 12, beside: BESIDE12, cam: { from: [10.4, 2.8, 5.8], at: [7.9, 5.6, 0.8], f: 940 }, fx: [{ move: ["g6", "h5"] }, { burst: "h5" }], slide: { from: [7.5, 4.5], to: [8.85, 7.45], hop: 0.5 },
+  cast: { h5: { expr: "proud", gest: "fist-up-r" }, regina: { expr: "calm", lookAt: "h1", back: false }, brookh8: { expr: "amused", lookAt: "regina", blush: "strong" } }, balloons: [] },
 { id: "14e", scene: 14, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "despair", talk: true } },
   balloons: [{ who: "koning", text: "Lap, daar hebt ge’t al. Regina geslagen." }] },
@@ -242,6 +242,6 @@ window.PANELS = [
 // 16c: the last panel: the two kings shake hands on the rise (author decisions, bible 7.37-7.39); the result 1/2 - 1/2 centred at the bottom
 { id: "16c", scene: 16, status: A, movebox: "1/2 - 1/2", moveboxCenter: true, state: 0, omit: ["e1", "e8"], rise: 2.2, stage: [{ id: "wk", ch: "K", role: "koning", at: [4.5, 3.5] }, { id: "bk", ch: "k", role: "bking", at: [4.5, 4.5] }],
   cam: { from: [8.6, 4.0, 5.0], at: [4.3, 4.0, 0.75], f: 820 },
-  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false, lean: -5 }, bking: { expr: "relieved", lookAt: "koning", gest: "shake-l", back: false, lean: 5 } }, balloons: [] }
+  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false, lean: -5 }, bking: { expr: "sly", lookAt: "koning", gest: "shake-l", back: false, lean: 5 } }, balloons: [] }
 ];
 })();
