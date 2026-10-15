@@ -411,7 +411,8 @@ function renderPanel(svg, P, opts) {
       const z0 = bump(it.x0, it.y0), tip = pr(it.x0 + nz[0], it.y0 + nz[1], z0 + nz[2]), upr = pr(it.x0, it.y0, z0 + 1);
       const ang = (Math.atan2(tip[0] - x, y - tip[1]) - Math.atan2(upr[0] - x, y - upr[1])) * 180 / Math.PI;
       if (Math.abs(ang) > 0.5) o.lean = 5 * Math.sign(ang); }
-    if (P.crossArms && it.ch === "P" && !it.beside) o.gest = "crossed";  // pawn solidarity during the mutiny (bible Section 7, author decision 7.10)
+    // pawn solidarity during the mutiny (bible Section 7, author decisions 7.10 and 7.81): crossed arms and the grumpy face of 2b
+    if (P.crossArms && it.ch === "P" && !it.beside) { o.gest = "crossed"; if (!ov.expr) o.expr = "stubborn"; }
     // knights face the centre files (bible Section 6, 7.46): seen from White's or Black's side (camera looking along the files) they turn towards
     // the d- and e-files; seen from the side (camera looking along the ranks) towards the middle of the board, between the armies
     if (t === "n") { const side = Math.abs(fw[0]) > Math.abs(fw[1]), onCentre = it.x0 > 3 && it.x0 < 5; o.dir = pr(4, side && !onCentre ? 4 : it.y0, 0)[0] > x ? 1 : -1; }

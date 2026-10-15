@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.80
+Version 7.81
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -87,6 +87,7 @@ Version 7.77 gives the cover navy-blue and cream colours (author decision; Secti
 Version 7.78 reroutes the balloon tail in panel 3b round the end of the black army, so it crosses no piece (author decision).
 Version 7.79 frees the heads under Alfil's balloon in panel 5d-2 (author decision).
 Version 7.80 zooms panel 6d in a little on the black army (author decision).
+Version 7.81 gives every mutinying white pawn with crossed arms the grumpy face of panel 2b (author decision; Section 7, White Pawns).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -665,6 +666,7 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 - The working class ("boerenvolk", "boeren").
 - Mix of young and veteran soldiers.
 - Solidarity in the mutiny (author decision in 7.10): from panel 2b up to and including panel 5d-2, every white pawn in frame stands with its arms crossed, all of them, as a sign of solidarity; no pawn points or gestures in those panels. Where only the pawns' heads are in frame (the close-ups 2c, 4b, 4c-1, 4c-2, 5a, 5b-1, 5b-2, 5c and 5d-1), the framing stays as approved: the camera is not changed to bring the crossed arms into view (author decision in 7.10).
+- Grumpy faces in the mutiny (author decision in 7.81): every white pawn that stands with its arms crossed (2b to 5d-2) has the same grumpy, stubborn face as in 2b, the first panel of the mutiny: frowning eyebrows, mouth pressed shut; consistently in every panel where its face is in sight. Pawns seen from behind (4a) show no face.
 - Moustache rule (author decision in 7.9): the b-pawn and the g-pawn of each army have a moustache, in every image; no other pawn has one. No pawn has a beard (author decision in 7.9). The moustache belongs to the pawn, not to the square: a b-pawn or g-pawn keeps it when it captures onto another file (the black g-pawn on h5 after 6. ... gxh5). Replaces "some veterans may have moustaches or short beards".
 - Distinct noses allowed.
 - More realistic faces; no blob-like cartoon faces.
@@ -1224,6 +1226,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.78 | 15c (the balloon over the black army since 7.71): Claude showed R1 (balloon top right), R2 and R3 (camera aimed higher). Author decision: "We treat this image as an exception because the panel is about the cola spot which is clearly visible". 15c stays as approved in 7.71; a local exception, not a rule. |
 | 7.79 | 5d-2 (author: "lets now have a look at 5d-2"): Alfil's balloon covered the tip of Caballo's ear, the top of Alfil's mitre and the top of the h1 rook. Claude showed S1, S2 and S3 (a broad two-line balloon, the pieces lower); the author: "generate me something between S1 and S2 let me visually compare the three" (S12); author decision: "S2 is the winner". 5d-2 panel block: a balloon-placement line. With this the balloon review of 7.78 is closed. |
 | 7.80 | Author feedback on 6d: "Could we zoom more in on the black army here ? Suggest some alternatives". Claude showed Z1 to Z3, then, asked "I want something between wat is now and Z1", H1 to H3; author: "H1 is close, just zoom a little less and fix the text box for the move." Applied first: a zoom a little less than H1; then the author: "pick H1", so H1 is used. The move box was only cut off by the bottom edge of Claude's comparison screenshot; in the panel itself it is complete, bottom left. 6d panel block: a framing line. |
+| 7.81 | Author feedback: "I noticed that the look of the pawns participating in the muteny is not consistent. When the pawns participating in the muteny have crossed arms their faces must be consistently grumpy like in the first panel of the pawn muteny. Agreed ?" Claude confirmed: only in 2b were all pawns grumpy; in 4a and 5d-2 some, in the other eleven mutiny panels none. Author: "yes, apply and show me a preview". Section 7, White Pawns: a Grumpy faces line. SVG preview: every pawn with crossed arms gets the stubborn face unless a panel sets another expression. |
 
 ---
 
@@ -5551,3 +5554,4 @@ Items that need a decision from the author.
 | 7.78 | - | 3b: the balloon tail sweeps round the end of the black army. |
 | 7.79 | - | 5d-2: broad balloon above all heads, the pieces a little lower. |
 | 7.80 | - | 6d: zoomed in a little on the black army. |
+| 7.81 | - | Mutiny: every pawn with crossed arms has the grumpy face of 2b. |
