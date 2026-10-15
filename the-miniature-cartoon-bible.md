@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.84
+Version 7.85
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -91,6 +91,7 @@ Version 7.81 gives every mutinying white pawn with crossed arms the grumpy face 
 Version 7.82 makes the Black King and the f8 bishop extremely scared in panel 15d (author decision).
 Version 7.83 adds an extra joke to panel 15e: the childish d5 pawn waves at the camera (author decision).
 Version 7.84 adds a second joke to panel 15e: the Black King offers the draw himself with a small balloon "(=) ?", looking a little begging (author decision).
+Version 7.85 gives panel 15c a camera from which the d5 and h5 pawns show their faces, and a wide balloon above the black army (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1233,6 +1234,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.82 | Author decision on 15d: "Both the king and the bishop at f8 look extremely scared because Caballo threatens both checkmate and to capture the bishop." 15d panel block and field 6 of manifest 75 updated. |
 | 7.83 | Author decision on 15e: "I have an extra joke for this panel. The childish pawn ad d5 waves at the camera." 15e panel block and field 6 of manifest 76 updated. Refined: "refine by making sure that the pawn has his eyes open. ensure that his arm is a little higher visually indicate arm movement" (eyes open with a broad grin, the arm raised higher, curved motion lines beside the hand). A local joke for 15e (author's own, so not an invented joke). |
 | 7.84 | Author decision on 15e: "Another joke for this panel. The black king offers a draw. Write this in a text balloon as '(=) ?' ommitting the quotes. The king looks a little begging but not desperate". 15e panel block; manifest 76 fields 3, 4, 6 and 9. The text checker (check-panel-texts.sh) lists "(=) ?" as an approved balloon with the author's wording. |
+| 7.85 | Author question on 15c: "I notice that two pawns have no face here what is the reason for that ?" Claude: the black pawns on d5 and h5 stood just on the camera's side of it (the camera was level with the fifth rank), so they were seen from behind. Options: leave, turn them, or move the camera; the author: "prototype option 3" (C1 to C3), then "suggest me similar options with a wider text balloon" (W1 to W3); author decision: "go with W2, apply to 15c". 15c panel block: a camera-and-balloon line (replaces the balloon placement of 7.71 and the exception of 7.78). |
 
 ---
 
@@ -2132,6 +2134,7 @@ Approved in 7.40.
 - Characters: Caballo furious, mouth open. The black pieces neutral, mouths closed.
 - The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
 - Caballo's clean felt (author decision in 7.71): the camera a little higher and wider than before, so Caballo's whole base and his green felt are in frame next to the cola on f6; Caballo lifts himself a little off h7 (a soft shadow on the square under him) and leans back, away from f6: he will not let his clean felt touch the board near that wet mess. The balloon moves to the top left, so its tail reaches his snout from the side instead of crossing his head.
+- Camera and balloon (author decisions in 7.85): the camera a little further towards White's side (below the fifth rank), so the black pawns on d5 and h5 face it and show their faces (from the earlier camera, level with the fifth rank, they were seen from behind); the pieces a little lower in the frame; a wide balloon in three lines across the top, above the black army, its tail down beside Caballo to his snout. Caballo's lift, his felt and the explicit cola stay as before. This replaces the balloon placement of 7.71 and the exception of 7.78.
 - Balloon placement: top right; its tail comes down to Caballo's mouth. Accepted as shown (7.40): the tail ends on Caballo's head near his eye.
 - Balloon (Caballo): Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan.
 
@@ -5568,3 +5571,4 @@ Items that need a decision from the author.
 | 7.82 | - | 15d: the Black King and the f8 bishop extremely scared. |
 | 7.83 | - | 15e: the d5 pawn waves at the camera. |
 | 7.84 | - | 15e: the Black King offers the draw with a small balloon "(=) ?". |
+| 7.85 | - | 15c: the d5 and h5 pawns show their faces; a wide balloon above the black army. |
