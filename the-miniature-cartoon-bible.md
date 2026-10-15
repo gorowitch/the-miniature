@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.81
+Version 7.82
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -88,6 +88,7 @@ Version 7.78 reroutes the balloon tail in panel 3b round the end of the black ar
 Version 7.79 frees the heads under Alfil's balloon in panel 5d-2 (author decision).
 Version 7.80 zooms panel 6d in a little on the black army (author decision).
 Version 7.81 gives every mutinying white pawn with crossed arms the grumpy face of panel 2b (author decision; Section 7, White Pawns).
+Version 7.82 makes the Black King and the f8 bishop extremely scared in panel 15d (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1227,6 +1228,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.79 | 5d-2 (author: "lets now have a look at 5d-2"): Alfil's balloon covered the tip of Caballo's ear, the top of Alfil's mitre and the top of the h1 rook. Claude showed S1, S2 and S3 (a broad two-line balloon, the pieces lower); the author: "generate me something between S1 and S2 let me visually compare the three" (S12); author decision: "S2 is the winner". 5d-2 panel block: a balloon-placement line. With this the balloon review of 7.78 is closed. |
 | 7.80 | Author feedback on 6d: "Could we zoom more in on the black army here ? Suggest some alternatives". Claude showed Z1 to Z3, then, asked "I want something between wat is now and Z1", H1 to H3; author: "H1 is close, just zoom a little less and fix the text box for the move." Applied first: a zoom a little less than H1; then the author: "pick H1", so H1 is used. The move box was only cut off by the bottom edge of Claude's comparison screenshot; in the panel itself it is complete, bottom left. 6d panel block: a framing line. |
 | 7.81 | Author feedback: "I noticed that the look of the pawns participating in the muteny is not consistent. When the pawns participating in the muteny have crossed arms their faces must be consistently grumpy like in the first panel of the pawn muteny. Agreed ?" Claude confirmed: only in 2b were all pawns grumpy; in 4a and 5d-2 some, in the other eleven mutiny panels none. Author: "yes, apply and show me a preview". Section 7, White Pawns: a Grumpy faces line. SVG preview: every pawn with crossed arms gets the stubborn face unless a panel sets another expression. |
+| 7.82 | Author decision on 15d: "Both the king and the bishop at f8 look extremely scared because Caballo threatens both checkmate and to capture the bishop." 15d panel block and field 6 of manifest 75 updated. |
 
 ---
 
@@ -2136,6 +2138,7 @@ Approved in 7.40.
 - Characters: Caballo smug, mouth open (he proposes to take on f8 instead). The black pieces neutral, mouths closed.
 - The cola stain in colour (author decision in 7.67): the stain on f6 is shown as a puddle of cola: a dark red-brown edge where the liquid is thin, a very dark, near-black middle, a glossy shine, and many tiny light fizz dots, denser towards the edge; it covers most of f6 and does not spread beyond it.
 - Viewing angle (author decision in 7.71): no longer the same camera as 15c, but from White's side, low, behind the kingside: Caballo at the right, standing normally, his whole base and felt in view; the cola on f6 large in the foreground, the dry square f8 with the black bishop behind it, so the punchline ("daar is het precies wel droog") shows wet here, dry there.
+- The Black King and the f8 bishop (author decision in 7.82): both look extremely scared, because Caballo threatens both checkmate and to capture the bishop: eyebrows shot up, eyes wide, sweat drops, small shake lines; both look at Caballo.
 - Balloon placement: top right; its curved tail ends just beside Caballo's snout.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
@@ -5014,7 +5017,7 @@ PANEL 15d   (sequence number 75)
       Balloon 1: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog."
 4.  Balloon 1 -> Caballo
 5.  Visible: the same as 15c.
-6.  Listening: the black pieces, mouths closed.
+6.  Listening: the black pieces, mouths closed. The Black King and the f8 bishop extremely scared (7.82): eyebrows shot up, eyes wide, sweat drops, shake lines, looking at Caballo.
 7.  Camera the same as 15c.
 8.  Caballo: smug, mouth open.
 9.  Balloon 1 top right; its curved tail ends just beside Caballo's snout. Round balloon.
@@ -5555,3 +5558,4 @@ Items that need a decision from the author.
 | 7.79 | - | 5d-2: broad balloon above all heads, the pieces a little lower. |
 | 7.80 | - | 6d: zoomed in a little on the black army. |
 | 7.81 | - | Mutiny: every pawn with crossed arms has the grumpy face of 2b. |
+| 7.82 | - | 15d: the Black King and the f8 bishop extremely scared. |

@@ -226,7 +226,7 @@ window.PANELS = [
   cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 } },
   balloons: [{ who: "caballo", x: 150, text: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan." }] },
 { id: "15d", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [6.6, 2.4, 2.6], at: [6.6, 6.8, 0.6], f: 760 },
-  cast: { caballo: { expr: "smug", talk: true } },
+  cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" } },
   balloons: [{ who: "caballo", text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },
 { id: "15e", scene: 15, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
   cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "calm", gest: "open-l" } },
