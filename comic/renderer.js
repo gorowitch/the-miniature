@@ -290,9 +290,17 @@ function drawPiece(parent, p, sw) {
 }
 
 // ---------------------------------------------------------------- panel
-function wrap(text, fs, maxW) { const cv = wrap.cv || (wrap.cv = document.createElement("canvas").getContext("2d")); cv.font = `700 ${fs}px 'Comic Neue','Comic Sans MS',cursive`;
-  const words = text.split(" "), lines = []; let cur = ""; for (const w of words) { const t = cur ? cur + " " + w : w; if (cv.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur);
-  return { lines, w: Math.max(...lines.map(l => cv.measureText(l).width)) }; }
+// Line breaks are measured in Comic Sans MS, as all approved balloons were (the export measured before the web font loaded),
+// so every balloon keeps its approved lines; the balloon width is then measured in the embedded Comic Neue (bible 7.92).
+// n (b.lines): break into at most n lines, measured in Comic Neue, as narrow as possible (15a)
+function wrap(text, fs, maxW, n) { const cv = wrap.cv || (wrap.cv = document.createElement("canvas").getContext("2d"));
+  const brk = mw => { const words = text.split(" "), lines = []; let cur = ""; for (const w of words) { const t = cur ? cur + " " + w : w; if (cv.measureText(t).width > mw && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur); return lines; };
+  const wid = lines => Math.max(...lines.map(l => cv.measureText(l).width)), NEUE = `700 ${fs}px 'Comic Neue','Comic Sans MS',cursive`;
+  if (n) { cv.font = NEUE; let lines = brk(1e4); for (let mw = 60; mw < 2000; mw += 4) { const l = brk(mw); if (l.length <= n) { lines = l; break; } } const w = wid(lines); return { lines, w0: w, w }; }
+  cv.font = `700 ${fs}px 'Comic Sans MS',cursive`;
+  const lines = brk(maxW), w0 = wid(lines);   // w0: the width as approved (Comic Sans MS)
+  cv.font = NEUE;
+  return { lines, w0, w: wid(lines) }; }
 
 function camFor(P) {
   if (P.cam && P.cam.from) return [P.cam.from, P.cam.at, P.cam.f || 700];
@@ -310,15 +318,17 @@ function renderPanel(svg, P, opts) {
   const W0 = P.wide ? 1634 : 800, H = P.tall ? 1160 : 570; svg.setAttribute("viewBox", `0 0 ${W0} ${H}`);  // tall: two strips high (prototype, last page)
   while (svg.firstChild) svg.removeChild(svg.firstChild);
   const defs = mk("defs", {}, svg);
-  defs.innerHTML = `<style>@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;display=swap');</style>
+  // the font: embedded from font.js when loaded (bible 7.92), else the Google Fonts link; opts.noFont when the page holding the panel embeds it once
+  defs.innerHTML = `${opts.noFont ? "" : "<style>" + (window.MINIATUUR_FONT_CSS || "@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;display=swap');") + "</style>"}
   <filter id="soft${P.id}" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="3"/></filter>
   <filter id="bb${P.id}" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
   <pattern id="ht${P.id}" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="4.5" cy="4.5" r="1.5" fill="#000" opacity=".09"/></pattern>
   <clipPath id="clip${P.id}"><rect x="0" y="0" width="${W0}" height="${H}"/></clipPath>`;
   const root = mk("g", { "clip-path": `url(#clip${P.id})` }, svg);
   const state = P.state || 0, scene = P.scene || 1;
-  const [C, T, F] = camFor(P), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
-  const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [W0 / 2 + F * dot(v, rt) / Math.max(d, .01), H / 2 - F * dot(v, up) / Math.max(d, .01), d]; };
+  // P.cam.zoom: zoom in by this factor while the screen point P.cam.pin ([x, y], default the centre) stays fixed (15b: the bottom-left corner, bible 7.92)
+  const [C, T, F0] = camFor(P), ZM = (P.cam && P.cam.zoom) || 1, PIN = (P.cam && P.cam.pin) || [W0 / 2, H / 2], F = F0 * ZM, OX = PIN[0] + ZM * (W0 / 2 - PIN[0]), OY = PIN[1] + ZM * (H / 2 - PIN[1]), fw = nrm(sub(T, C)), rt = nrm(cr(fw, [0, 0, 1])), up = cr(rt, fw);
+  const pr = (x, y, z) => { const v = sub([x, y, z || 0], C), d = dot(v, fw); return [OX + F * dot(v, rt) / Math.max(d, .01), OY - F * dot(v, up) / Math.max(d, .01), d]; };
   // the boebel is shaded smoothly (a blurred light and shadow layer, a stronger shadow side, a soft warm highlight; author decision, bible 7.70);
   // P.boebelStyle "now" draws the earlier square-cell shading
   const BS = P.boebelStyle || "A", RISE = P.clean ? 0 : (P.rise || 1);  // P.rise: a taller, clearer rise in one panel (16c, bible 7.39)
@@ -574,24 +584,27 @@ function renderPanel(svg, P, opts) {
   let nextX = 16;
   bal.forEach((b, i) => {
     const sp = placed.find(p => p.role === b.who || p.sq === b.who);
-    const maxW = b.w ? Math.min(W0 * 0.7, b.w) : Math.min(W0 * 0.46, 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36));
+    const maxW = b.w ? Math.min(W0 * 0.7, b.w) : Math.min(W0 * 0.46, 380), wr = wrap(b.text, fs, maxW - (b.shout ? 60 : 36), b.lines);
     // a shout balloon is a jagged ellipse: size it so the whole text block fits inside its inner points (bible 7.25)
     const lh = fs * 1.18, th = wr.lines.length * lh, bw = b.shout ? 2 * (wr.w / 2 * 1.2 / 0.9 + 8) : wr.w + 44, bh = b.shout ? 2 * (th / 2 * 1.3 / 0.9 + 8) : th + 26;
     const by = b.y !== undefined ? b.y : 14;
+    // placement uses the balloon width as approved (bw0, Comic Sans MS); the snug Comic Neue balloon then shrinks on the side away from the speaker (bible 7.92)
+    const bw0 = b.shout ? 2 * (wr.w0 / 2 * 1.2 / 0.9 + 8) : wr.w0 + 44;
     let bx;
     if (b.x !== undefined) bx = b.x;
     else {
       // choose the x that covers the fewest heads (faces, crowns, mitres), preferring a spot near the speaker
       const boxes = placed.filter(p => p.s > 0.6).map(p => { const hw = (p.t === "k" ? 17 : p.t === "n" ? 20 : 15) * p.s; return [p.head[0] - hw, p.top - 4, p.head[0] + hw, p.mouth[1] + 6 * p.s]; });
       let best = null;
-      for (let cx = Math.max(nextX, 16); cx <= W0 - bw - 16; cx += 10) {
-        let ov = 0; for (const [x1, y1, x2, y2] of boxes) { const ox = Math.max(0, Math.min(cx + bw, x2) - Math.max(cx, x1)), oy = Math.max(0, Math.min(by + bh, y2) - Math.max(by, y1)); ov += ox * oy; }
-        const near = sp ? Math.abs(cx + bw / 2 - sp.mouth[0]) : 0, score = ov * 4 + near;
+      for (let cx = Math.max(nextX, 16); cx <= W0 - bw0 - 16; cx += 10) {
+        let ov = 0; for (const [x1, y1, x2, y2] of boxes) { const ox = Math.max(0, Math.min(cx + bw0, x2) - Math.max(cx, x1)), oy = Math.max(0, Math.min(by + bh, y2) - Math.max(by, y1)); ov += ox * oy; }
+        const near = sp ? Math.abs(cx + bw0 / 2 - sp.mouth[0]) : 0, score = ov * 4 + near;
         if (!best || score < best[0]) best = [score, cx];
       }
       bx = best ? best[1] : nextX;
     }
-    nextX = bx + bw + 14;
+    // keep the edge that faces the speaker, so the tail leaves where it was approved; b.anchor "centre" (15c) or "left"/"right" overrides
+    nextX = bx + bw0 + 14; { const an = b.anchor || (sp && sp.mouth[0] > bx + bw0 / 2 ? "right" : "left"); bx += an === "right" ? bw0 - bw : an === "centre" ? (bw0 - bw) / 2 : 0; }
     const g = mk("g", {}, root);
     // Cartoon tail (bible 7.25): a curved, tapering wedge that leaves the balloon and stops just beside the speaker's mouth,
     // never inside a face or hat. Candidates: tip left or right of the face; start points along the balloon's lower edge

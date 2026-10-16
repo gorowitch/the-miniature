@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>De Miniatuur - SVG album</title>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<script src="font.js"></script>
 <style>
   body { margin: 0; background: #5b5047; font-family: system-ui, sans-serif; color: #eee; }
   header { padding: 14px 20px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
@@ -22,6 +22,8 @@
 <script src="renderer.js"></script>
 <script src="panels.js"></script>
 <script>
+// render only once the embedded font has loaded, so balloon text is measured in Comic Neue (bible 7.92)
+window.MINIATUUR_FONT_READY.then(() => {
 const NS = "http://www.w3.org/2000/svg", R = window.MiniatuurRenderer;
 const PW = 1700, PH = 2404, MX = 33, GX = 34, MY = 31, GY = 20, CW = 800, CH = 570;
 const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
@@ -46,6 +48,7 @@ function newPage(label, scenes) {
   const btn = document.createElement("button"); btn.textContent = "Download SVG"; bar.appendChild(btn);
   wrap.appendChild(bar);
   const svg = el("svg", { xmlns: NS, viewBox: `0 0 ${PW} ${PH}`, width: "210mm", height: "297mm" }); wrap.appendChild(svg);
+  el("style", {}, el("defs", {}, svg)).textContent = window.MINIATUUR_FONT_CSS || "";   // the font once per page; the panels on it leave it out (noFont)
   el("rect", { x: 0, y: 0, width: PW, height: PH, fill: "#fff" }, svg);
   btn.onclick = () => {
     const blob = new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
@@ -57,7 +60,7 @@ function newPage(label, scenes) {
 }
 function panelAt(page, P, x, y, w, h) {
   const s = el("svg", { x, y, width: w, height: h, preserveAspectRatio: "xMidYMid slice", overflow: "hidden" }, page);
-  R.renderPanel(s, P, { mark: true });
+  R.renderPanel(s, P, { mark: true, noFont: true });
   return s;
 }
 
@@ -72,7 +75,7 @@ function panelAt(page, P, x, y, w, h) {
     cast: { koning: { expr: "proud", gest: "raise-r" }, bking: { expr: "calm" }, regina: { lookAt: "koning" }, alfil: { lookAt: "koning" }, caballo: { expr: "heroic" }, brookh8: { expr: "proud" } } };
   const box = el("svg", { x: 60, y: 880, width: PW - 120, height: 1126 }, s);
   el("rect", { x: 56, y: 876, width: PW - 112, height: 1134, fill: "none", stroke: "#141414", "stroke-width": 8 }, s);
-  R.renderPanel(box, C, {});
+  R.renderPanel(box, C, { noFont: true });
   // author, right aligned below the board image (bible Section 13, Cover Direction; 7.18)
   const au = el("text", { x: PW - 60, y: 2130, "text-anchor": "end", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 84, fill: CV.ink }, s); au.textContent = "S. Gorts";
 })();
@@ -104,4 +107,5 @@ if (new URLSearchParams(location.search).has("export")) {
   const pre = document.createElement("pre"); pre.id = "export"; pre.textContent = JSON.stringify(files);
   document.body.innerHTML = ""; document.body.appendChild(pre);
 }
+});
 </script></body></html>

@@ -222,13 +222,13 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 15 - Mate in One (PROPOSAL; the cola stain is explicit from here)
 { id: "15a", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T2,
   cast: { a1: { expr: "startled", jolt: "bold" }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
-  balloons: [{ who: "alfil", text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
-{ id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T3,
+  balloons: [{ who: "alfil", lines: 2, x: 16, text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
+{ id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: Object.assign({}, KING_ALFIL_T3, { zoom: 1.2, pin: [0, 570] }),   // zoomed in, bottom-left corner fixed (bible 7.92)
   cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { lookAt: "koning" } },
-  balloons: [{ who: "koning", x: 420, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !." }] },
+  balloons: [{ who: "koning", x: 360, w: 485, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !." }] },
 { id: "15c", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [9.6, 4.2, 3.4], at: [6.3, 6.3, 0.75], f: 700 },
   cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 }, e7: { expr: "smug", lookAt: "f6", lookDown: true } },
-  balloons: [{ who: "caballo", x: 30, w: 740, text: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan." }] },
+  balloons: [{ who: "caballo", x: 30, w: 740, anchor: "centre", text: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan." }] },
 { id: "15d", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [6.6, 2.4, 2.6], at: [6.6, 6.8, 0.6], f: 760 },
   cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 } },
   balloons: [{ who: "caballo", text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },

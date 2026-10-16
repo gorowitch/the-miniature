@@ -1,10 +1,11 @@
 <!doctype html><html><head><meta charset="utf-8"><title>Renderer test</title>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<script src="font.js"></script>
 <style>body{margin:0;padding:6px;background:#fff;width:820px}svg{display:block;width:800px;margin-bottom:6px}svg.wide{width:800px}</style></head><body>
 <pre id="err"></pre>
 <script>window.onerror=(m,s,l)=>{document.getElementById("err").textContent+=m+" @"+l+"\n";};</script>
 <script src="renderer.js"></script>
 <script>
+window.MINIATUUR_FONT_READY.then(() => {   // wait for the embedded font (bible 7.92)
 const R=window.MiniatuurRenderer;
 const T=[
  {id:"5a",scene:5,state:0,cam:{frame:["e1"],dist:1.2,h:1.45,th:1.05,f:900},cast:{koning:{expr:"furious",talk:true,lookAt:"alfil",gest:"fist-up-r",anger:true},alfil:{expr:"surprised",lookAt:"koning",sweat:true},regina:{expr:"worried",lookAt:"koning"}},fx:[{burst:"koning"}],balloons:[{who:"koning",shout:true,text:"Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.",w:340}]},
@@ -13,4 +14,5 @@ const T=[
  {id:"6d",scene:6,state:2,cam:{from:[3.6,-1.4,2.6],at:[3.6,4.6,0.2],f:620},fx:[{move:["d7","d5"]}]}
 ];
 for(const P of T){const s=document.createElementNS("http://www.w3.org/2000/svg","svg");if(P.wide)s.setAttribute("class","wide");document.body.appendChild(s);R.renderPanel(s,P,{mark:true});}
+});
 </script></body></html>
