@@ -117,7 +117,7 @@ pages.forEach((rowsOnPage, pi) => {
   { const bw = 150, bh = 62, bx = 800 - 24 - bw, by = 570 - 24 - bh; el("rect", { x: bx, y: by, width: bw, height: bh, fill: "#fff", stroke: INK, "stroke-width": 3 }, box);
     const e = el("text", { x: bx + bw / 2, y: by + bh / 2 + 15, "text-anchor": "middle", "font-family": F, "font-weight": 700, "font-size": 42, fill: INK }, box); e.textContent = "Einde"; }
   // the colophon: left-aligned lines, the block centred on the page
-  const C = ["Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)", "Tekeningen: gegenereerd met Claude (Anthropic)", "Lettertype: Comic Neue", "Eerste uitgave, oktober 2026", "© 2026 Sven Gorts. Alle rechten voorbehouden."];
+  const C = ["Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)", "Tekeningen: Claude (Anthropic)", "Lettertype: Comic Neue", "Eerste uitgave, oktober 2026", "© 2026 Sven Gorts. Alle rechten voorbehouden."];
   cv.font = "700 34px 'Comic Neue'"; const cx0 = (PW - Math.max(...C.map(t => cv.measureText(t).width))) / 2;
   C.forEach((t, i) => txt(t, cx0, 1880 + i * 58, 34, "start"));
 })();
