@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.95
+Version 7.96
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -102,6 +102,7 @@ Version 7.92 zooms panel 15b in with its left and bottom edges fixed, with a nar
 Version 7.93 sets the chess clock's lever by who is to move: the raised end is the side whose time runs (author decision).
 Version 7.94 gives panel 7a a broader balloon in three lines and rearranges the grumble balloons of panel 2b (author decisions).
 Version 7.95 lets the officers in panel 2b react to the pawns' mutiny, each in character, with the c1 bishop secretly on the pawns' side (author decision).
+Version 7.96 zooms panel 12a in on the King and gives him a wondering look (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1260,6 +1261,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.94 | Author on 7a: "experiment with a broader text balloon that has less lines. Show me a preview". Claude prototyped B1 (three lines, placed automatically), B2 (three lines, top left) and B3 (two lines, which splits "Dieje / van den overkant"); the author: "Pick B1". A balloon-shape line in the 7a panel block. |
 | 7.94 | Author on 2b: "shows some text balloons without tails between the pawns. I like this idea. I want the current text balloon of the h1 pawn removed I want the current text balloon of the b2 pawn removed I like to keep the text balloons between: the g2-e2 pawn, the e2-d2 pawn, the d2-c2 pawn I want an extra text balloon between the c2-b2 pawn - with the text '??'". Claude pointed out that from Black's side the pawns read h2 to a2 from left to right, so the removed balloons are those of h2 (??#) and a2 (??, with the long pointer), the kept ones lie between g2-f2, f2-e2 and e2-d2, and the new ?? landed between d2 and c2; the author: "You are right, I need one more balloon between b2 and c2. For this balloon reuse the text '??#' of the balloon we removed earlier". Asked whether five balloons are too many, Claude described the comic convention (a few tail-less, varied balloons; the caption already carries the stage direction) and offered variety in heights and sizes; the author chose it, then after the preview: "keep it as in the previous preview". Panel block 2b (Grumbling) and manifest fields 3 and 9 updated; old wording in Appendix A. SVG preview: P.grumbleAt (a fixed spot for one grumble balloon, used for the c2-b2 one). |
 | 7.95 | Author on 2b: "Let the officers in the back rank, except for the rook at a1 look surprised at the pawns at f2, e2, d3" (d3 read as d2: d3 is empty). After a preview: "maybe surprised is not the right expression - what would you suggest. i think is surprised somewhat shocked"; Claude showed S1 (shocked), S2 (startled), S3 (shocked and recoiling), then on "Suggest some more expressions that would fit the story" proposed single reactions (indignant, worried, dumbfounded, dismayed), a mixed reaction by character, and a comic twist (one officer quietly sympathising with the pawns). The author: "Agreed go for the mixed reaction by character - and put the comic twist on top", then "apply". Panel block 2b (Characters) and manifest field 6; old wording in Appendix A. |
+| 7.96 | Author on 12a: "Let's zoom more in on the king here. The faces on the lower part of the image add no value". Claude prototyped zooms of 1.25, 1.4 and 1.55 with the top of the picture fixed (Z1 still showed the tops of the pawn heads); the author: "Pick Z2 and make the king's face look 'wondering'". Claude added a wondering face (brows raised unevenly, hidden under the crown, so the gaze carries it) and showed W1 (looking up), W2 (looking up towards his hand), W3 (looking up the other way); the author: "Agreed with W2". Panel block 12a (In frame, Characters, Balloon placement) and manifest fields 5, 6, 8, 9 and 13; old wording in Appendix A. SVG preview: new expression "wondering" (eyes looking up). |
 
 ---
 
@@ -1996,9 +1998,9 @@ Board position for 12e: State 10 (5. ... g6 is played in this panel). Caballo st
 ### Panel 12a
 Approved in 7.64 (as shown in the SVG preview).
 - Camera: from Black's side (the white pieces face the camera), framed on the White King (e1), zoomed out a little (7.25) so the balloon fits completely inside the panel, above him.
-- In frame: the King in the centre; the heads of the white pawns at the bottom; the edge of Alfil's mitre at the right edge. Every piece on a square that is in frame is shown.
-- Characters: the King puzzled, mouth open, one arm pointing up and away (towards f6, out of frame). The pawns look on, mouths closed.
-- Balloon placement: top centre, above the King, clear of his crown and cross; its curved tail ends just beside his mouth.
+- In frame (author decision in 7.96): zoomed in on the King, from his crown to the medals on his chest; no pawns and no other pieces in frame (the pawn faces at the bottom added nothing). Every piece on a square that is in frame is shown.
+- Characters (author decision in 7.96): the King wondering, mouth open, one arm pointing up and away (towards f6, out of frame), his eyes looking up towards his raised hand (his brows are under the crown).
+- Balloon placement (7.96): top left, clear of his crown and cross; its long curved tail ends just beside his mouth.
 - Balloon (White King): Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee.
 
 ### Panel 12b
@@ -4529,15 +4531,15 @@ PANEL 12a   (sequence number 57)
 3.  Dialogue:
       Balloon 1: "Zou er op f6 misschien ook een plek zitten ? Want "Dieje van den overkant" zijnen ezel wilt precies ook niet goed mee."
 4.  Balloon 1 -> Koning
-5.  Visible: Koning e1 in the centre; the heads of the white pawns at the bottom; the edge of Alfil's mitre at the right edge.
-6.  Listening: the pawns, mouths closed.
+5.  Visible: Koning e1, zoomed in from crown to chest (7.96); no other pieces.
+6.  Listening: none in frame (7.96).
 7.  Camera on Black's side, framed on the King, zoomed out a little (7.25).
-8.  Koning: puzzled, mouth open, one arm pointing up and away (towards f6).
-9.  Balloon 1 top centre, clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
+8.  Koning: wondering, mouth open, one arm pointing up and away (towards f6), eyes looking up towards his raised hand (7.96).
+9.  Balloon 1 top left (7.96), clear of the crown and cross; its curved tail ends just beside Koning's mouth. Round balloon.
 10. Stage directions: none.
 11. State 8 (after 4. ... Pe7). No move.
 12. Continuity: after 4. ... Pe7 (11h); the black knight on e7 "does not want to go along" either.
-13. Must not appear: the cola stain named or pointed out in text; an open mouth on the pawns.
+13. Must not appear: the cola stain named or pointed out in text.
 14. Dialogue length: 23 words, 117 characters.
 15. Segmentation: speech 32, the first two sentences; continues in 12b with "Seg, maar wacht eens effe … .".
 16. Visual priority: the King's suspicion.
@@ -5489,6 +5491,7 @@ Kept for history. Do not use for generation.
 - 7.56 to 7.88, Common Prompt Block: no chess clock beside the board. -> Changed in 7.89 by author decision: a bordeaux digital chess clock beside the h-file (the author's addition to the setting).
 - 7.12 to 7.93, panel 2b (panel block and manifest fields 3 and 9): five grumble balloons beside the heads of the pawns on h2, f2, d2, b2 and e2, each with a short tail to its own pawn, containing ??#, ?!, #!?, ??, #?! -> Changed in 7.94 by author decision: five tail-less grumble balloons in the gaps g2-f2, f2-e2, e2-d2, d2-c2, c2-b2, containing from left to right ?!, #?!, #!?, ??, ??# (none for h2 and a2).
 - Up to 7.94, panel 2b (panel block Characters; manifest field 6): "The officers look on." / "the officers look on, mouths closed." -> Changed in 7.95 by author decision: the officers react to the mutiny, each in character (indignant, shocked, worried), and the c1 bishop secretly sides with the pawns (sly).
+- 7.64 to 7.95, panel 12a (panel block In frame, Characters, Balloon placement; manifest fields 5, 6, 8, 9, 13): the King in the centre with the heads of the white pawns at the bottom and the edge of Alfil's mitre at the right edge; the King puzzled; the pawns look on, mouths closed; balloon top centre; must not appear: an open mouth on the pawns -> Changed in 7.96 by author decision: zoomed in on the King from crown to chest, no other pieces; the King wondering, his eyes looking up towards his raised hand; balloon top left.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5621,3 +5624,4 @@ Items that need a decision from the author.
 | 7.93 | - | The chess clock's lever follows who is to move (raised end: the side whose time runs). |
 | 7.94 | - | 7a: a broader balloon in three lines. 2b: tail-less grumbles in the gaps g2-f2 to c2-b2 (?!, #?!, #!?, ??, ??#). |
 | 7.95 | - | 2b: the officers react to the mutiny in character; the c1 bishop is sly. |
+| 7.96 | - | 12a: zoomed in on the King, no pawn faces; the King wondering, looking up towards his raised hand. |

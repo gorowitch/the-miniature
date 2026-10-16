@@ -108,6 +108,7 @@ function face(g, x, y, r, col, o) {
     return; }
   if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
   else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "grin" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
+  else if (E === "wondering") { browArc(-1, r*.3); browArc(1, r*.14); }   // wondering: brows raised unevenly, the eyes looking up (the King in 12a, bible 7.96)
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
   else if (E === "worried" || E === "despair" || E === "sigh" || E === "pleading" || E === "apologetic" || E === "disappointed") { brow(-1, r*.04, -r*.22); brow(1, r*.04, -r*.22); }
   else if (E === "offended" || E === "puzzled" || E === "disgusted" || E === "sly") { brow(-1, -r*.12, -r*.02); brow(1, r*.02, r*.14); }
@@ -123,8 +124,8 @@ function face(g, x, y, r, col, o) {
     const ry = (E === "surprised" || E === "startled") ? .36 : (E === "furious" || E === "angry") ? .21 : (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted" || E === "sly") ? .17 : .29;
     for (const s of [-1, 1]) {
       mk("ellipse", { cx: x+s*r*.32, cy: y-r*.12, rx: r*((E === "surprised" || E === "startled") ? .27 : .24), ry: r*ry, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g);
-      mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08+(o.lookDown ? r*.09 : 0), r: r*((E === "surprised" || E === "startled") ? .09 : .12), fill: INK }, g);
-      mk("circle", { cx: x+s*r*.32+lx*r*.11-r*.04, cy: y-r*.12+(o.lookDown ? r*.09 : 0), r: r*.035, fill: "#fff" }, g);
+      mk("circle", { cx: x+s*r*.32+lx*r*.11, cy: y-r*.08+(o.lookDown ? r*.09 : 0)+(E === "wondering" ? -r*.1 : 0), r: r*((E === "surprised" || E === "startled") ? .09 : .12), fill: INK }, g);
+      mk("circle", { cx: x+s*r*.32+lx*r*.11-r*.04, cy: y-r*.12+(o.lookDown ? r*.09 : 0)+(E === "wondering" ? -r*.1 : 0), r: r*.035, fill: "#fff" }, g);
       if (E === "calm" || E === "smug" || E === "disappointed" || E === "disgusted" || E === "sly") mk("path", { d: `M${x+s*r*.32-r*.26} ${y-r*.2} q${r*.26} ${-r*.1} ${r*.52} 0`, stroke: W_[col].f, "stroke-width": r*.16, fill: "none" }, g);
     }
   }

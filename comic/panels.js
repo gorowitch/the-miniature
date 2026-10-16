@@ -181,8 +181,8 @@ window.PANELS = [
 { id: "11g", scene: 11, status: A, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" }, brookh8: { lookAt: "regina" } }, balloons: [] },
 { id: "11h", scene: 11, status: A, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 12 - The King Suspects f6 (PROPOSAL)
-{ id: "12a", scene: 12, status: A, state: 8, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.3, f: 560 }),
-  cast: { koning: { expr: "puzzled", talk: true, gest: "point-up-l" } },
+{ id: "12a", scene: 12, status: A, state: 8, cam: Object.assign(zb(["e1"], { dist: 1.3, h: 1.45, th: 1.3, f: 560 }), { zoom: 1.4, pin: [400, 150] }),   // zoomed in on the King, no pawn faces at the bottom (bible 7.96)
+  cast: { koning: { expr: "wondering", look: -1, talk: true, gest: "point-up-l" } },
   balloons: [{ who: "koning", w: 470, text: "Zou er op f6 misschien ook een plek zitten ? Want \"Dieje van den overkant\" zijnen ezel wilt precies ook niet goed mee." }] },
 { id: "12b", scene: 12, status: A, state: 8, cam: zb(["e1"], { dist: 1.15, h: 1.45, th: 1.1, f: 840 }),
   cast: { koning: { expr: "surprised", talk: true, gest: "point-up-r" } },
