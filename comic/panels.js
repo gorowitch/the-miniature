@@ -6,6 +6,10 @@ const zb = (frame, o) => Object.assign({ frame, side: "b" }, o || {});          
 const zw = (frame, o) => Object.assign({ frame, side: "w" }, o || {});          // camera from White's side (sees the black pieces' faces)
 const A = "approved", Pr = "proposal";
 const KING_ALFIL = { from: [5.6, 5.2, 3.4], at: [3.6, 1.6, 1.0], f: 720 };   // from Black's side, off to the kingside, so Alfil on d3 does not hide the King
+// 14f, 15a, 15b: as KING_ALFIL, turned round the King a little further in each panel, aimed lower: the d5 and g2 pawns out of frame, the e3 pawn fully in (bible 7.91)
+const KING_ALFIL_T1 = { from: [4.84, 5.53, 3.4], at: [3.3, 1.6, 0.85], f: 730 };
+const KING_ALFIL_T2 = { from: [4.65, 5.58, 3.4], at: [3.3, 1.6, 0.85], f: 730 };
+const KING_ALFIL_T3 = { from: [4.45, 5.63, 3.2], at: [3.3, 1.6, 0.85], f: 730 };
 const BESIDE11 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }];   // captured by White: beside the board near the white h2 pawn (bible 7.36)
 const BESIDE12 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.85, 7.45] }];   // Regina stands beside the board next to the h8 rook (bible 7.34)
 window.PANELS = [
@@ -206,9 +210,9 @@ window.PANELS = [
 { id: "14e", scene: 14, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "despair", talk: true } },
   balloons: [{ who: "koning", text: "Lap, daar hebt ge’t al. Regina geslagen." }] },
-{ id: "14f", scene: 14, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL,
+{ id: "14f", scene: 14, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T1,
   cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { expr: "angry", talk: true, gest: "both-open" }, alfil: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "En terwijl ik hier weer zit te zwoegen om de partij te winnen" }] },
+  balloons: [{ who: "koning", x: 250, text: "En terwijl ik hier weer zit te zwoegen om de partij te winnen" }] },
 { id: "14g", scene: 14, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [0.5, -3.5, 3.6], at: [6.9, 5.4, 0.2], f: 1500 },
   cast: { koning: { talk: true, gest: "point-up-r" }, regina: { lookAt: "brookh8", expr: "smug", blush: "strong", back: false }, brookh8: { must: true, expr: "smug", lookAt: "regina", blush: true } },
   balloons: [{ who: "koning", x: 1180, w: 440, text: "gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8." }] },
@@ -216,10 +220,10 @@ window.PANELS = [
   cast: { koning: { expr: "smug", talk: true, gest: "wave-r" } },
   balloons: [{ who: "koning", text: "Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft." }] },
 // ---------------------------------------------------------------- Scene 15 - Mate in One (PROPOSAL; the cola stain is explicit from here)
-{ id: "15a", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL,
+{ id: "15a", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T2,
   cast: { a1: { expr: "startled", jolt: "bold" }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
   balloons: [{ who: "alfil", text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
-{ id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL,
+{ id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T3,
   cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { lookAt: "koning" } },
   balloons: [{ who: "koning", x: 420, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !." }] },
 { id: "15c", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [9.6, 4.2, 3.4], at: [6.3, 6.3, 0.75], f: 700 },

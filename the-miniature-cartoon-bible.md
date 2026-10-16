@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.90
+Version 7.91
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -97,6 +97,7 @@ Version 7.87 makes the Black King's smile in 16c clear: a sly grin, "I got away 
 Version 7.88 restages panel 14d without the push: Regina already beside the board next to the h8 rook, the capture shown by dashed white lines from h5, a proud pawn and a burst (author decision).
 Version 7.89 adds a bordeaux digital chess clock beside the board as the author's addition to the setting (Section 4, Setting; Common Prompt Block).
 Version 7.90 reframes the board picture on the cover (author decision; Section 13, Cover Direction).
+Version 7.91 turns the camera of 14f, 15a and 15b a little round the King (a little further in each panel), so the d5 and g2 pawns are out of frame and the e3 pawn fully in (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1247,6 +1248,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.88 | Author on 14d, prompted by a prototype of a chess clock beside the h-file (not yet decided): Regina, pushed off beside h5, collided with the clock. The author first asked to push her towards the h8 rook, then "I feel the image can still better express that Regina is being pushed away", then (white push lines, skid marks, dust, a starburst at contact) "We are on the wrong path. Let's resolve 14d again starting from the original image ... Forget about the pawn pushing, that didn't work out. Suppose we put Regina next to the rook immediately what means do we have to suggest capturing ?" Claude listed means (her route as move-style dashed lines, a trace on h5, the capturer's and the captured's body language, the reactions, an impact mark) and prototyped a combination (K1 to K3); the author: "I want a variant of K3, with the dashed lines like K2 and a normal crown for the queen" (K4), then "yes". 14d panel block (In frame, Action) and manifest 67 (fields 5, 8, 13) updated; old wording in Appendix A. The clock itself is not part of this change. SVG preview: P.slide (dashed lines from a square to a spot beside the board). |
 | 7.89 | Author decision on the chess clock: "Lets say that next to the board I want a digital chess clock. The clock doesn't need to much detail, we don't need time indication. ... The color of the clock is bordeay -> use DGT colors"; then "I want the clock to look like a DGT chess clock", "the clock now looks like I can look inside - fix that. the handle looks like I can look in side - fix that as well. I want the clokc to look like a DGT 2010 digital chess clock", "I want the clock to be placed on the right side of the board as seen from white's perspective. I want the clock with the display oriented to the board." (the resulting conflict with Regina in 14d was resolved in 7.88), and finally "Add the clock as my addition to the setting. The clock must be displayed in all panels where the clock comes into view". Section 4 (Setting): a Chess clock line; Common Prompt Block: one sentence (old wording in Appendix A). SVG preview: the clock is a fixed prop, drawn as closed solids in depth order among the pieces; it is in view in 1c, 3b, 7d, 9b, 9c, 9e, 11g, 12c, 12d, 12e, 13a, 13b, 14d, 14g and 16a; the cover has none. |
 | 7.90 | Author on the cover: "evaluate the front image regarding to style. Is there anything that can be improved. Consider simple ajustments". Claude's review: the cast small, much empty wall, a flat title, a heavy black frame; prototypes (closer camera, title shadow, cream frame, gold subtitle): "Visually none of the alternatives look better. How about shifting the board ?". Claude shifted the board (B1 to B6, composition practice: less dead space, rule of thirds); the author: "Generate more alteratives but as an extra constraint don't show the grey floor" (F1 to F4), then "I want all corners of the board in the picture ... also the upper corner of the table" (U1 to U4, found by a search over camera positions), then "Let make a mix between U1 and the now version" (M1 to M3); author decision: "pick M3". Section 13, Cover Direction: a board-picture line. Title, colours and frame unchanged. |
+| 7.91 | Author: "In some panels we see just a fragment of the pawn at d5. Can you adjust these image so that we dont see the pawns head fragment in the image ? 69-panel-14f.svg 72-panel-15a.svg 73-panel-15b.svg". The three panels share the camera of 14b (7.46); they now get the same camera aimed a little higher, so the d5 pawn's head drops below the frame; 14b is unchanged. Author, next: "Could these images be rotated (just a little) so that the white pawn on e3 comes entirely into the picture." and "An extra constraint though. Can the image be reworked so that the fragment of the white pawn at g2 is out of the picture ?" Claude first misread the second request (it brought g2 fully into view), then prototyped H1 to H3 (the camera turned about 6 to 12 degrees round the King, aimed lower and a little further left); the author: "Since all three work how about applying H1 for the first frame H2 for the second frame and H3 for the third frame ?" So 14f, 15a and 15b each get their own camera, turned a little further in each panel. A framing line in the panel blocks 14f, 15a and 15b. In 14f the King's balloon is set a little to the left (SVG preview: x 250), so its tail stays short and the sleeping a1 rook's "zzz" stays visible. (An earlier request to add the clock to the cover was undone by the author, "bad idea undo", and is not recorded.) |
 
 ---
 
@@ -2095,6 +2097,7 @@ Approved in 7.49 (as shown in the SVG preview).
 - In frame: the White King (e1) at the left; Alfil on d3 in front, centre (paprika stains on his mitre); behind him the white queenside: the c1 bishop, the b1 knight, the a1 rook and the pawns on d2, c2, b2 and a2; the pawns on f2 and e3 in the foreground. Every piece on a square that is in frame is shown.
 - Characters: the King angry, mouth open, both arms spread wide with open hands. Alfil looks at the King, mouth closed. The b1 knight faces inward, towards the centre files (7.46). The others neutral, mouths closed.
 - The sleepy a1 rook (7.45): asleep, eyes closed, mouth slightly open, the tower leaning a little, with a small "Z Z Z" rising beside his top.
+- Framing (author decision in 7.91): the camera of 7.46 turned a little round the King (14f the least, 15a more, 15b the most) and aimed lower, so the black d5 pawn and the white g2 pawn are out of frame and the white e3 pawn is fully in.
 - Balloon placement: top left; its curved tail ends just beside the King's mouth.
 - Balloon (White King): En terwijl ik hier weer zit te zwoegen om de partij te winnen
 
@@ -2126,6 +2129,7 @@ Approved in 7.40.
 - Characters: Alfil apologetic, mouth open, looks at the King, one hand raised with the index finger up (an idea). The King looks back at Alfil, surprised, mouth closed. The others neutral, mouths closed.
 - The sleepy a1 rook (author decisions in 7.45 and 7.47): in the background the white rook on a1 wakes up at the words "mat in één", subtly: both eyes wide open, the surprise shown mainly by his eyebrows, shot up high above the eyes; upright again, a few small jolt lines beside his top; no arms, no jump, no Zzz any more.
 - Jolt lines (author decision in 7.73): instead of a few small jolt lines, a crown of bold jolt lines around his top, so the wake-up reads at page size; his face, pose and place are unchanged (no hop).
+- Framing (author decision in 7.91): the camera of 7.46 turned a little round the King (14f the least, 15a more, 15b the most) and aimed lower, so the black d5 pawn and the white g2 pawn are out of frame and the white e3 pawn is fully in.
 - Balloon placement: top left; its curved tail ends just beside Alfil's mouth. Accepted as shown (7.40): the tail passes close to the King, and Alfil's raised hand covers the face of a pawn behind him.
 - Balloon (Alfil): Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
@@ -2135,6 +2139,7 @@ Approved in 7.40.
 - In frame: the same as 15a.
 - Characters: the King proud, mouth open, one arm raised high, pointing up and away (the order to Caballo). Alfil looks at the King, mouth closed. The others neutral, mouths closed.
 - The a1 rook (author decision in 7.45): awake and alert since 15a, eyes open, upright.
+- Framing (author decision in 7.91): the camera of 7.46 turned a little round the King (14f the least, 15a more, 15b the most) and aimed lower, so the black d5 pawn and the white g2 pawn are out of frame and the white e3 pawn is fully in.
 - Balloon placement: top right, over the queenside pieces; its curved tail ends just beside the King's mouth.
 - Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
 - No move box: the move to f6 is ordered, not played (Section 13, Move Box).
@@ -5595,3 +5600,4 @@ Items that need a decision from the author.
 | 7.88 | - | 14d restaged: no push; Regina beside the h8 rook, dashed lines from h5, a proud pawn with a burst. |
 | 7.89 | - | A bordeaux DGT-style chess clock beside the h-file, in every panel where it is in view (the author's addition to the setting). |
 | 7.90 | - | Cover: the board picture reframed, all four board corners in view. |
+| 7.91 | - | 14f, 15a, 15b: camera turned round the King, a little further in each panel: d5 and g2 out of frame, e3 fully in. |
