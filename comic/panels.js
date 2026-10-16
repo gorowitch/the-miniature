@@ -152,7 +152,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn." }] },
 { id: "10g", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
   cast: { koning: { expr: "angry", talk: true, gest: "fist-up-r" } },
-  balloons: [{ who: "koning", text: "En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen." }] },
+  balloons: [{ who: "koning", lines: 6, x: 16, text: "En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen." }] },
 { id: "10h", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { c1: { bored: 4, lookAt: "koning" }, koning: { expr: "stubborn", talk: true, lookAt: "regina", gest: "raise-l" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", text: "Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u." }] },

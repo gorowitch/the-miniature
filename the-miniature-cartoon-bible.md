@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.01
+Version 8.02
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -108,6 +108,7 @@ Version 7.98 gives the 1b-2 balloon four lines, with the exclamation mark on the
 Version 7.99 gives the 3a-1 balloon three lines, clear of the sleeping rook (author decision).
 Version 8.00 gives the 1b-1 balloon three lines, clear of Alfil's mitre (author decision).
 Version 8.01 gives the 4b balloon four lines (author decision).
+Version 8.02 gives the 10g balloon a narrower shape against the left border, clear of the King (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1272,6 +1273,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.99 | Author on 3a-1 (left as it was in 7.97): "Could you try a preview with 3 lines here ?" Claude showed three placements; the author: "Keep three lines but move the text balloon further right so it doesn't interfere with the rook sleeping" (R1 to R4), then "R1 is fine accept and commit". A balloon-shape line in the 3a-1 block. |
 | 8.00 | Author on 1b-1 (left as it was in 7.97): "I believe there is enough room voor a three lines balloons Show me a preview", then "accept". A balloon-shape line in the 1b-1 block. |
 | 8.01 | Author on 4b (left as it was in 7.97): "try a 3 line balloon and show me a preview" (three lines always covered the King's cross), then "I was mistaken try a 4 line balloon instead"; Claude showed F1 (placed automatically), F2 (against the left border), F3; the author: "Go for F1 and accept". A balloon-shape line in the 4b block. |
+| 8.02 | Author on 10g (left as it was in 7.97): "Here a less wide balloon with possibly even a line more could work. Also the balloon can be moved to the left so it uncovers the king's face". Claude showed N1 (six lines, narrower), N2 (seven lines), N3 (eight lines), all against the left border; the author: "N1 is perfect - apply". A balloon-shape line in the 10g block. |
 
 ---
 
@@ -1913,6 +1915,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - In frame (from this side the f-file is left): the King in the centre, large; Regina at the right; the heads of the pawns on f2 (bottom left) and d2 (bottom right).
 - Characters: the King angry, mouth open, one fist raised high (on Regina's side, above her head, not covering her face). Regina looks on, mouth closed. The pawns look on, mouths closed.
 - Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon shape (author decision in 8.02): six balanced lines in a narrower balloon against the left border (the last line "vanhaar te zagen."), so the King's face, crown and cross are free; its tail comes in from the side to his mouth.
 - Balloon (White King): En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen.
 
 ### Panel 10h
@@ -5654,3 +5657,4 @@ Items that need a decision from the author.
 | 7.99 | - | 3a-1: three balloon lines, clear of the sleeping rook. |
 | 8.00 | - | 1b-1: three balloon lines, clear of Alfil's mitre. |
 | 8.01 | - | 4b: four balloon lines. |
+| 8.02 | - | 10g: a narrower balloon against the left border, clear of the King. |
