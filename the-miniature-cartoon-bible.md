@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.89
+Version 7.90
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -96,6 +96,7 @@ Version 7.86 adds the cola stare (author decision): in 15c to 15e the black piec
 Version 7.87 makes the Black King's smile in 16c clear: a sly grin, "I got away with it" (author decision).
 Version 7.88 restages panel 14d without the push: Regina already beside the board next to the h8 rook, the capture shown by dashed white lines from h5, a proud pawn and a burst (author decision).
 Version 7.89 adds a bordeaux digital chess clock beside the board as the author's addition to the setting (Section 4, Setting; Common Prompt Block).
+Version 7.90 reframes the board picture on the cover (author decision; Section 13, Cover Direction).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -982,6 +983,7 @@ Result box (author decision in 7.37):
 - The title and subtitle appear on the cover: De Miniatuur (Een hedendaagse klucht in één bedrijf). There is no title inside the panels (author decision in 7.3).
 - The author's name appears on the cover: S. Gorts, right aligned directly below the board image (author decision in 7.18). Apart from the title, the subtitle and this name, the cover carries no text.
 - Cover colours (author decision in 7.77): a deep navy-blue page (#1F3A5F); the title in cream (#F4E4C1) with a very dark navy outline (#0E1A2B); the subtitle and the author's name in cream. Until 7.76 the SVG preview used a bright yellow page with a red title, which the author did not like.
+- The board picture on the cover (author decision in 7.90): seen from White's kingside corner, a little higher and closer than before, so all four corners of the board are in the picture with the whole cast, and less empty wall shows; no room floor in view.
 
 ---
 
@@ -1244,6 +1246,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.87 | Author feedback on 16c: "in the last panel the black kings smile is not clear enough. he thinks like : 'I got away with it'". Cause: his mouth was drawn under his dark beard. Claude showed A (amused), D (sly: half-closed eyes glancing sideways, one brow raised, a broad grin with teeth) and C (grin); author decision: "D". 16c panel block and manifest 79 field 8. SVG preview: new expression "sly". |
 | 7.88 | Author on 14d, prompted by a prototype of a chess clock beside the h-file (not yet decided): Regina, pushed off beside h5, collided with the clock. The author first asked to push her towards the h8 rook, then "I feel the image can still better express that Regina is being pushed away", then (white push lines, skid marks, dust, a starburst at contact) "We are on the wrong path. Let's resolve 14d again starting from the original image ... Forget about the pawn pushing, that didn't work out. Suppose we put Regina next to the rook immediately what means do we have to suggest capturing ?" Claude listed means (her route as move-style dashed lines, a trace on h5, the capturer's and the captured's body language, the reactions, an impact mark) and prototyped a combination (K1 to K3); the author: "I want a variant of K3, with the dashed lines like K2 and a normal crown for the queen" (K4), then "yes". 14d panel block (In frame, Action) and manifest 67 (fields 5, 8, 13) updated; old wording in Appendix A. The clock itself is not part of this change. SVG preview: P.slide (dashed lines from a square to a spot beside the board). |
 | 7.89 | Author decision on the chess clock: "Lets say that next to the board I want a digital chess clock. The clock doesn't need to much detail, we don't need time indication. ... The color of the clock is bordeay -> use DGT colors"; then "I want the clock to look like a DGT chess clock", "the clock now looks like I can look inside - fix that. the handle looks like I can look in side - fix that as well. I want the clokc to look like a DGT 2010 digital chess clock", "I want the clock to be placed on the right side of the board as seen from white's perspective. I want the clock with the display oriented to the board." (the resulting conflict with Regina in 14d was resolved in 7.88), and finally "Add the clock as my addition to the setting. The clock must be displayed in all panels where the clock comes into view". Section 4 (Setting): a Chess clock line; Common Prompt Block: one sentence (old wording in Appendix A). SVG preview: the clock is a fixed prop, drawn as closed solids in depth order among the pieces; it is in view in 1c, 3b, 7d, 9b, 9c, 9e, 11g, 12c, 12d, 12e, 13a, 13b, 14d, 14g and 16a; the cover has none. |
+| 7.90 | Author on the cover: "evaluate the front image regarding to style. Is there anything that can be improved. Consider simple ajustments". Claude's review: the cast small, much empty wall, a flat title, a heavy black frame; prototypes (closer camera, title shadow, cream frame, gold subtitle): "Visually none of the alternatives look better. How about shifting the board ?". Claude shifted the board (B1 to B6, composition practice: less dead space, rule of thirds); the author: "Generate more alteratives but as an extra constraint don't show the grey floor" (F1 to F4), then "I want all corners of the board in the picture ... also the upper corner of the table" (U1 to U4, found by a search over camera positions), then "Let make a mix between U1 and the now version" (M1 to M3); author decision: "pick M3". Section 13, Cover Direction: a board-picture line. Title, colours and frame unchanged. |
 
 ---
 
@@ -5591,3 +5594,4 @@ Items that need a decision from the author.
 | 7.87 | - | 16c: the Black King's sly grin, "I got away with it". |
 | 7.88 | - | 14d restaged: no push; Regina beside the h8 rook, dashed lines from h5, a proud pawn with a burst. |
 | 7.89 | - | A bordeaux DGT-style chess clock beside the h-file, in every panel where it is in view (the author's addition to the setting). |
+| 7.90 | - | Cover: the board picture reframed, all four board corners in view. |
