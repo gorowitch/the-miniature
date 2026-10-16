@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.11
+Version 8.12
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -118,6 +118,7 @@ Version 8.08 shortens the drawings line of the colophon (author decision).
 Version 8.09 puts the game on the closing page on a mini club scoresheet and lays the page out in one column (author decisions).
 Version 8.10 simplifies the closing page: the epilogue line at the top, the scoresheet in the centre, the colophon at the foot; no picture (author decisions).
 Version 8.11 adds the back cover: a blurb in cream on navy, "De Miniatuur" small at the foot (author decisions).
+Version 8.12 corrects stale statements: the proposal blocks of Scenes 6 to 16 are all approved, the closing page introduction, and the published edition (the PDF of the SVG album) recorded in P.1; the dossiers of the other pieces (Section 7) are approved (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -138,6 +139,7 @@ The production process illustrates the existing story. It does not write, rewrit
 1. **Story authority.** The approved source (P.2) determines everything that happens and everything that is said. Only the author changes it, through this bible (Maintenance Rules; Section 15).
 2. **Illustration.** The image generator (Copilot or ChatGPT) produces the artwork: characters, expressions, environment, composition and the speech balloons, placed and tailed as specified. By author decision (7.6) it also writes the balloon text, but only by copying the exact text given in the panel block or manifest, letter for letter; it never composes, completes or changes text (Section 21, Stage 2). It receives the Common Prompt Block and one panel block or manifest (Section 18, Section 20.3), nothing else.
 3. **Text verification, correction and assembly.** A separate step compares every balloon letter for letter with the manifest, corrects or rejects any deviation, assembles the page and validates it (Section 21, Stages 3 and 4). Fallback: when the generator keeps getting the text wrong, the balloons are generated empty and the exact text is inserted in this step. This step copies text; it never writes text.
+- The published edition (author decisions in 8.11, recorded in 8.12): the comic is published as a PDF (`comic/pdf/de-miniatuur.pdf`), not printed; it is the SVG album drawn by Claude (colophon: "Tekeningen: Claude (Anthropic)", Closing Page). The illustration process above, with Copilot or ChatGPT as the image generator, remains the process for a possible illustrated edition.
 
 ## P.2 Script Authority: the Approved Source
 The approved source is immutable during production. It consists of:
@@ -148,7 +150,7 @@ Approved staging is part of the approved source: the poses, gestures, gaze, list
 
 Not part of the approved source:
 - Previously generated images, sketches and layout previews. They are never an authority for story content, dialogue, panel structure or chess positions. The reference images in `references/` only illustrate canon that is written in this bible.
-- Proposals that are not yet approved (for example the Proposed Dossiers in Section 7, or panel scripts marked "proposal").
+- Proposals that are not yet approved (none at present, 8.12: the dossiers of Section 7 and all panels are approved; any future proposal is marked "proposal").
 - Conversations, chat messages and tool output, until the author's decision is recorded in this bible.
 
 ## P.3 Prohibited Changes
@@ -724,10 +726,10 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 - The White King's opinion: a "pipo" and a "sul" who cannot even move diagonally.
 
 ## Other Pieces
-White rooks (a1, h1), White knight (b1), White bishop (c1), Black Queen, Black bishops, Black knights and Black rook (a8) have no dossier yet. See Appendix B, item 5.
+White rooks (a1, h1), White knight (b1), White bishop (c1), Black Queen, Black bishops, Black knights and Black rook (a8) have their dossiers below (proposed in 7.3, approved by the author in 8.12).
 
-### Proposed Dossiers (7.3, awaiting author approval)
-Drafted from the play and existing canon only. They become canon after the author approves them; until then, show these pieces only as described in their army's general canon.
+### Dossiers of the Other Pieces (proposed in 7.3, approved by the author in 8.12)
+Drafted from the play and existing canon only (7.3); canon since the author approved them in 8.12.
 
 - **White rooks (a1, h1):** steady, silent towers at the corners of the army; they never move in the game. Officer costume. Mostly background figures that stand at attention.
 - The a1 rook (author decision in 7.45, approved for this rook only): sleepy because he never takes part in the game; yawns in 2b, asleep until 15a, startled awake by "mat in één" (Section 10, Running Gags).
@@ -972,7 +974,7 @@ Every panel in which a move is played shows how the piece moved, with three whit
 - Only moves that are actually played on the board get a move box, and only in the panel where the move happens. A move that is only spoken or ordered gets none: "1. e4" in panel 2a (the pawns refuse to move), the King's order to f3 in panel 9a (Caballo jumps to h3 instead), the order to g5 in panel 12c (the box appears in 12d, where the move is played), the order to f6 in panel 15b (refused).
 - One move box per panel. It sits in the corner, clear of faces, hands and important board details; balloons stay at the top of the panel.
 - Apart from the title on the cover, the move box is the only text in the image outside the speech balloons.
-- The moves and their panels (proposals until the panels are approved; Section 18, Proposed Panels):
+- The moves and their panels (all approved; Section 18):
 
 | Move box | Panel | Move on the board |
 |---|---|---|
@@ -1009,7 +1011,7 @@ Result box (author decision in 7.37):
 - The board picture on the cover (author decision in 7.90): seen from White's kingside corner, a little higher and closer than before, so all four corners of the board are in the picture with the whole cast, and less empty wall shows; no room floor in view.
 
 ## Closing Page
-Added in 8.07 (author decisions; first version). The last page of the album, after the story; with it the inside of the album is 12 pages (the cover serves as the title page). From top to bottom, with white space between the parts:
+Added in 8.07 (author decisions; first version). The last page of the album, after the story; with it the inside of the album is 12 pages (the cover serves as the title page). The parts (their order and spacing on the page: see Layout below):
 - The game on a mini club scoresheet (author decision in 8.09; replaces the plain move list of 8.07): a sheet of slightly off-white paper with a soft shadow, turned a little askew; printed in black and grey: "NOTATIEFORMULIER", the fields "Partij", "Wit", "Zwart", a table "Nr / Wit / Zwart" with eight rows and "Uitslag"; filled in by hand in blue ballpoint (in Comic Neue): Partij "De Miniatuur" (the name of the game), Wit "De Koning", Zwart "Dieje van den overkant", the moves e3 d5, Ld3 e6, Ph3 Ld7, Dh5 Pe7, Pg5 g6, Pxh7 gxh5 in rows 1 to 6 (rows 7 and 8 left empty: a miniature), and the result "½ – ½", circled.
 - The epilogue line, centred, in three lines (the author's own wording, not in the article): "Enkele weken later / kocht de schaakclub / nieuwe borden."
 - No picture and no "Einde" (author decisions in 8.10; replace Alfil's picture with "Einde" of 8.07): the page is an end page, not a comic page.
@@ -1313,6 +1315,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.09 | Author: "We have our colophon page. What can we do to make it really cool ?" Claude proposed a club scoresheet, a callback in Alfil's picture (the new board, or paprika chips), a cola ring on the paper; the author: "I like this idea, make a mini club scoresheet ... show me a prototype". Alfil delighted and with a thumbs up was tried and dropped ("Lets 't step back to just the wink"). Then "Let's review the layout of the page What can be improved ?": Claude proposed grouping the epilogue line with the picture, one column width, balanced margins, a smaller grey colophon; the author: "Yes make a preview with these improvements", then "apply". Section 13, Closing Page (the game line replaced; a layout line); old wording in Appendix A. |
 | 8.10 | Author: "Is the colophon page consistent in style with the rest of the comic. What could we do to improve ?" Claude: the loose epilogue line, the floating picture and the thin-lined scoresheet follow book rules, not comic rules; proposed the picture as a full-width last panel with the line in a caption box and "Einde" in a white box, and comic outlines on the sheet. The author ("the ½ notation is fine"): "This doesnt work. What if ? We move the text ... to the top of the page, Followed by the score sheet, Drop the last image with Alfil, End with the rest of the colofon"; "Einde - just drop it altogether". Then spacing: "I feel the visual spacing can still be improved" (S1 even rhythm, S2 grouped), "Show the score sheet more centered" (S3), "And move the text 'Enkele weken later ...' more upward", "apply". Section 13, Closing Page (the picture line and the layout line replaced); old wording in Appendix A. The wink expression stays in the renderer, unused. |
 | 8.11 | Author on page numbers: "Do I really need numbers ?"; Claude: not for a 12-page album read in one go (decision: none). Author: "What is your suggestion for the back cover ?"; Claude proposed navy and cream with a blurb and a vignette; the author: "Suggest me a somewhat more abstract blurb", "Don't give away that the game lasts only 6 moves", "Lets say I want more text - but don't use literal text from the story." (versions 1 and 2), "Generate a back cover based on Version 1", then "Personally I would leave out the vignette. For the text I would reformulate: 'Op de schaakclub' 'dat al heel wat partijen heeft overleefd.' 'Vandaag wil de witte koning schitteren' 'Alleen hebben zijn onderdanen daar zo hun eigen gedachten over.'", and "apply". New: Section 13, Back Cover. SVG preview: the back cover as the last album page (page-13-back.svg). |
+| 8.12 | Author: "make any corrections needed to the bible now", after "The idea is that this will be published as .pdf not with the intent of printing" (so the margin, bleed and colour points for printers do not apply). Corrections: the heading of the proposal blocks for Scenes 6 to 16 ("awaiting author approval") and the Move Box note "proposals until the panels are approved" (all 79 panels are approved); the Closing Page introduction ("from top to bottom" no longer matched the order of the list since 8.10); P.1 records the published edition (the PDF of the SVG album, drawn by Claude, as the colophon says). Also noted: the wink expression, said in the 8.10 row to stay in the SVG preview unused, was removed from the renderer after 8.11 (housekeeping, no change to any page). Old wording in Appendix A. Then the author, on the Proposed Dossiers of Section 7 (still marked "awaiting author approval"): "mark all as approved"; Section 7 (Other Pieces, the dossiers heading and introduction), the protocol line on proposals, Appendix B item 5 resolved. Still open, not changed: Appendix B item 14 (a piece on the slope of the raised centre, for an illustrated edition). |
 
 ---
 
@@ -2296,7 +2299,8 @@ Approved in 7.39 (author decisions in 7.37 to 7.39). The last panel of the carto
 
 ---
 
-## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)
+## Proposed Panels for Scenes 6 to 16 (all approved; kept as the record of the proposals)
+Status (8.12): every panel of Scenes 6 to 16 is approved (see the status lines per scene in Section 18 and the headings below). The blocks below are kept as the record of the proposals of 7.7; the approved panel blocks are those of Section 18, Scenes 6 to 16.
 Added in 7.7. The author asked for the full comic as an SVG preview and chose to have Scenes 6 to 16 proposed by Claude and approved or corrected afterwards. These blocks are **proposals, not approved script**: under the Strict Adaptation Protocol (P.2) they must not be sent to the image generator until the author approves them. After approval each block is rewritten as a full panel block in the style of Scenes 1 to 5, with a manifest in Section 20.3 (sequence numbers from 22).
 - Source: the dialogue is copied from Section 1 letter for letter (only runs of spaces collapsed) and checked by script; the panel splits follow sentence boundaries (Section 23). The moves follow Section 11 and the board states of Section 12.
 - Camera and character lines describe the SVG preview (`comic/panels.js`, rendered by `comic/index.html`); gesture names are the preview's (for example "point-down-l": arm pointing down, to the left as seen in the image).
@@ -5565,6 +5569,13 @@ Kept for history. Do not use for generation.
 - 8.07, Closing Page, colophon: "Tekeningen: gegenereerd met Claude (Anthropic)" -> Changed in 8.08 by author decision: "Tekeningen: Claude (Anthropic)".
 - 8.07, Closing Page: "The game, under its name: "De Miniatuur" in italics with a thin line under it, left-aligned with the moves (the name of the game, not a page title). The moves in three columns, so 1 and 4, 2 and 5, 3 and 6 line up: "1. e3 d5 / 2. Ld3 e6 / 3. Ph3 Ld7" and "4. Dh5 Pe7 / 5. Pg5 g6 / 6. Pxh7 gxh5"; centred below, "1/2 - 1/2"." -> Changed in 8.09 by author decision: the game on a mini club scoresheet; layout in one column.
 - 8.07 to 8.09, Closing Page: "A picture: Alfil alone, standing beside the board on the table, winking at the reader (one eye shut in a happy arc, a small smile); a corner of the empty board at the left; in the lower right of the picture "Einde" in a white caption box with a black outline." and "Layout (author decision in 8.09): one column 900 wide for the sheet, the picture and the colophon, with one left edge; the epilogue line close above the picture (line and picture one closing moment), more room above it; equal margins at the top and the bottom; the colophon smaller (30) and dark grey, left-aligned on the column." -> Changed in 8.10 by author decision: no picture and no Einde; the epilogue line at the top, the scoresheet in the vertical centre, the colophon at the foot.
+- 7.7 to 8.11, Section 18: heading "## Proposed Panels for Scenes 6 to 16 (PROPOSAL, awaiting author approval)" -> Changed in 8.12 (correction): all panels approved; the blocks kept as the record of the proposals.
+- Up to 8.11, Section 13, Move Box: "The moves and their panels (proposals until the panels are approved; Section 18, Proposed Panels):" -> Changed in 8.12 (correction): "The moves and their panels (all approved; Section 18):".
+- 8.07 to 8.11, Closing Page, introduction: "From top to bottom, with white space between the parts:" -> Changed in 8.12 (correction): "The parts (their order and spacing on the page: see Layout below):" (since 8.10 the parts are not listed in page order).
+- Up to 8.11, Section 7, Other Pieces: "White rooks (a1, h1), White knight (b1), White bishop (c1), Black Queen, Black bishops, Black knights and Black rook (a8) have no dossier yet. See Appendix B, item 5." -> Changed in 8.12 by author decision: the dossiers proposed in 7.3 are approved.
+- 7.3 to 8.11, Section 7: heading "### Proposed Dossiers (7.3, awaiting author approval)" and "Drafted from the play and existing canon only. They become canon after the author approves them; until then, show these pieces only as described in their army's general canon." -> Changed in 8.12 by author decision: "Dossiers of the Other Pieces (proposed in 7.3, approved by the author in 8.12)"; canon.
+- Up to 8.11, Strict Adaptation Protocol: "Proposals that are not yet approved (for example the Proposed Dossiers in Section 7, or panel scripts marked "proposal")." -> Changed in 8.12 (correction after the approval): no proposals at present.
+- 7.3 to 8.11, Appendix B item 5: "5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8. Status 7.3: proposals in Section 7 (Proposed Dossiers), awaiting author approval." -> Resolved in 8.12 by author decision.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5573,7 +5584,7 @@ Items that need a decision from the author.
 2. ~~**Quote marks.**~~ Resolved in 7.0: the mixed quote marks are in the original and are kept as is.
 3. ~~**f3 greasy spot.**~~ Resolved in 7.0: approved by the author as a faint yellowish greasy smear (see Section 4).
 4. ~~**Board condition.**~~ Resolved in 7.0: the original confirms the plastic board is less than three years old and the pieces already complain about it.
-5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8. Status 7.3: proposals in Section 7 (Proposed Dossiers), awaiting author approval.
+5. ~~**Missing dossiers.**~~ Resolved in 8.12: the dossiers proposed in 7.3 (Section 7, Dossiers of the Other Pieces) are approved by the author.
 6. ~~**Clothing.**~~ Resolved in 7.3: full costumes for the officers of both armies, soldier uniforms for the pawns (Section 5, Costumes). Remaining details in item 13.
 7. ~~**Language of speech balloons.**~~ Resolved in 7.3: original Flemish only; no translations.
 8. ~~**Surroundings of the board.**~~ Resolved in 7.3: an empty chess club room, without people (Section 3, Surroundings).
@@ -5713,3 +5724,4 @@ Items that need a decision from the author.
 | 8.09 | - | Closing page: the game on a mini club scoresheet; one column, the epilogue with the picture, a smaller grey colophon. |
 | 8.10 | - | Closing page: the epilogue line at the top, the scoresheet centred, the colophon at the foot; no picture, no Einde. |
 | 8.11 | - | Back cover: the blurb on navy, "De Miniatuur" at the foot; no page numbers. |
+| 8.12 | - | Corrections: all panels approved (Section 18 proposal heading, Move Box note); Closing Page introduction; the published edition is the PDF of the SVG album (P.1). The dossiers of the other pieces approved (Section 7; Appendix B item 5). |
