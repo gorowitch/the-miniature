@@ -57,7 +57,7 @@ window.PANELS = [
   cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "raise-l" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "alfil" } },
   balloons: [{ who: "alfil", lines: 4, text: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit." }] },
 { id: "4c-1", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
-  cast: { alfil: { talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "worried", lookAt: "alfil" } },
+  cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "worried", lookAt: "alfil" } },
   balloons: [{ who: "alfil", w: 470, text: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen." }] },
 { id: "4c-2", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
   cast: { alfil: { talk: true, lookAt: "koning", gest: "both-open" }, koning: { expr: "angry", flush: true, lookAt: "alfil" } },
@@ -86,7 +86,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Wel nondedju ! Heel mijn voorbereiding om zeep." }] },
 // ---------------------------------------------------------------- Scene 6 - Regina's Advice (PROPOSAL)
 { id: "6a", scene: 6, status: A, state: 0, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
-  cast: { regina: { talk: true, lookAt: "koning", gest: "open-l" }, koning: { expr: "puzzled", lookAt: "regina" } },
+  cast: { regina: { expr: "proud", talk: true, lookAt: "koning", gest: "open-l" }, koning: { expr: "puzzled", lookAt: "regina" } },
   balloons: [{ who: "regina", text: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." }] },
 { id: "6b", scene: 6, status: A, state: 0, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
   cast: { koning: { expr: "stubborn", talk: true, gest: "wave-l" }, regina: { lookAt: "koning" } },
