@@ -42,7 +42,7 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 3 - Alfil Sent to the Pawns (approved)
 { id: "3a-1", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
   cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { back: false, expr: "proud", talk: true, lookAt: "alfil" }, regina: {}, a7: { expr: "surprised" }, a8: { expr: "surprised" }, b7: { expr: "surprised" }, b8: { expr: "surprised" }, c7: { expr: "surprised" }, c8: { expr: "surprised" }, d7: { expr: "surprised" }, d8: { expr: "surprised" }, e7: { expr: "surprised" }, f7: { expr: "surprised" }, f8: { expr: "surprised" }, g7: { expr: "surprised" }, g8: { expr: "surprised" }, h7: { expr: "surprised" }, h8: { expr: "surprised" }, bking: { expr: "calm" } },  // black pieces a little surprised (bible 7.22); the Black King stays calm
-  balloons: [{ who: "koning", x: 120, text: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek." }] },
+  balloons: [{ who: "koning", lines: 3, x: 200, text: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek." }] },
 { id: "3a-2", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
   cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { back: false, expr: "proud", talk: true, lookAt: "alfil", gest: "point-r" } },
   balloons: [{ who: "koning", x: 120, text: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." }] },

@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.98
+Version 7.99
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -105,6 +105,7 @@ Version 7.95 lets the officers in panel 2b react to the pawns' mutiny, each in c
 Version 7.96 zooms panel 12a in on the King and gives him a wondering look (author decision).
 Version 7.97 fine-tunes ten dialogue balloons after a balloon check: fewer lines where a balloon covered a hat, and balanced lines where one word stood alone (author decision).
 Version 7.98 gives the 1b-2 balloon four lines, with the exclamation mark on the second line (author decision).
+Version 7.99 gives the 3a-1 balloon three lines, clear of the sleeping rook (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1266,6 +1267,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.96 | Author on 12a: "Let's zoom more in on the king here. The faces on the lower part of the image add no value". Claude prototyped zooms of 1.25, 1.4 and 1.55 with the top of the picture fixed (Z1 still showed the tops of the pawn heads); the author: "Pick Z2 and make the king's face look 'wondering'". Claude added a wondering face (brows raised unevenly, hidden under the crown, so the gaze carries it) and showed W1 (looking up), W2 (looking up towards his hand), W3 (looking up the other way); the author: "Agreed with W2". Panel block 12a (In frame, Characters, Balloon placement) and manifest fields 5, 6, 8, 9 and 13; old wording in Appendix A. SVG preview: new expression "wondering" (eyes looking up). |
 | 7.97 | Author: "We are getting close to production quality Run an extra check to see if there are text balloons that can use some fine tuning." Claude measured all 64 dialogue balloons (a single word on the last line, five or more lines, touching the border, covering a face or hat, long tails, overlaps), reviewed the flagged panels and proposed fixes in two groups (balloons covering a hat; a lone last word); previews showed each panel now and with a different number of lines. The author chose: 5c, 11d, 10b (four lines), 1b-2 (five lines), 2c (one line), and balanced lines in 10a, 10i, 15d, 7b, 6b; not taken: 1b-1, 3a-1, 4b, 10g. A balloon-shape line in each of the ten panel blocks. SVG preview: balloon lines. |
 | 7.98 | Author on 1b-2: "Here I believe the exclamation mark can fit in the 2nd line. Can you try a preview ?" (in 7.97 four lines were rejected because a line would start with "!"). Claude kept a lone punctuation mark on the line of the word before it and showed four lines; the author: "apply and commit". A balloon-shape line in the 1b-2 block (replaces the five lines of 7.97). SVG preview: with balloon lines, a lone "!", "?" or ":" stays with the word before it (no other balloon changes). |
+| 7.99 | Author on 3a-1 (left as it was in 7.97): "Could you try a preview with 3 lines here ?" Claude showed three placements; the author: "Keep three lines but move the text balloon further right so it doesn't interfere with the rook sleeping" (R1 to R4), then "R1 is fine accept and commit". A balloon-shape line in the 3a-1 block. |
 
 ---
 
@@ -1586,6 +1588,7 @@ Split from panel 3a in 7.3 (author decision, Section 23.B).
 - Characters: the King looks at Alfil, chin raised, nose in the air ("lage boerenvolk"), mouth open. Alfil listens, head slightly bowed towards the King, mouth closed. Regina looks at the King.
 - Black army (author decision in 7.22): the black pieces in the background look a little surprised (high arched eyebrows, wide round eyes, mouths closed), except the Black King, who stays calm and composed.
 - The sleepy a1 rook (author decision in 7.45): the white rook on a1 is asleep: eyes closed, mouth slightly open, the tower leaning a little to the side, with a small "Z Z Z" rising beside his top (white letters, author exception to the no-text rule). Seen from behind, only the lean and the Zzz show.
+- Balloon shape (author decision in 7.99): three lines ("Alfil m’n raadsheer, ge weet / dat ik als koning niet met / dat lage boerenvolk spreek."), the balloon a little further right so it stays clear of the sleeping rook's "zzz"; its tail short and straight down to the King's mouth.
 - Balloon (White King): Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek.
 
 ### Panel 3a-2
@@ -5642,3 +5645,4 @@ Items that need a decision from the author.
 | 7.96 | - | 12a: zoomed in on the King, no pawn faces; the King wondering, looking up towards his raised hand. |
 | 7.97 | - | Balloon check: ten balloons fine-tuned (5c, 11d, 10b, 1b-2, 2c, 10a, 10i, 15d, 7b, 6b). |
 | 7.98 | - | 1b-2: four balloon lines, the "!" on the second line. |
+| 7.99 | - | 3a-1: three balloon lines, clear of the sleeping rook. |
