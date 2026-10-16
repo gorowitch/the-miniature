@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.96
+Version 7.97
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -103,6 +103,7 @@ Version 7.93 sets the chess clock's lever by who is to move: the raised end is t
 Version 7.94 gives panel 7a a broader balloon in three lines and rearranges the grumble balloons of panel 2b (author decisions).
 Version 7.95 lets the officers in panel 2b react to the pawns' mutiny, each in character, with the c1 bishop secretly on the pawns' side (author decision).
 Version 7.96 zooms panel 12a in on the King and gives him a wondering look (author decision).
+Version 7.97 fine-tunes ten dialogue balloons after a balloon check: fewer lines where a balloon covered a hat, and balanced lines where one word stood alone (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1262,6 +1263,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.94 | Author on 2b: "shows some text balloons without tails between the pawns. I like this idea. I want the current text balloon of the h1 pawn removed I want the current text balloon of the b2 pawn removed I like to keep the text balloons between: the g2-e2 pawn, the e2-d2 pawn, the d2-c2 pawn I want an extra text balloon between the c2-b2 pawn - with the text '??'". Claude pointed out that from Black's side the pawns read h2 to a2 from left to right, so the removed balloons are those of h2 (??#) and a2 (??, with the long pointer), the kept ones lie between g2-f2, f2-e2 and e2-d2, and the new ?? landed between d2 and c2; the author: "You are right, I need one more balloon between b2 and c2. For this balloon reuse the text '??#' of the balloon we removed earlier". Asked whether five balloons are too many, Claude described the comic convention (a few tail-less, varied balloons; the caption already carries the stage direction) and offered variety in heights and sizes; the author chose it, then after the preview: "keep it as in the previous preview". Panel block 2b (Grumbling) and manifest fields 3 and 9 updated; old wording in Appendix A. SVG preview: P.grumbleAt (a fixed spot for one grumble balloon, used for the c2-b2 one). |
 | 7.95 | Author on 2b: "Let the officers in the back rank, except for the rook at a1 look surprised at the pawns at f2, e2, d3" (d3 read as d2: d3 is empty). After a preview: "maybe surprised is not the right expression - what would you suggest. i think is surprised somewhat shocked"; Claude showed S1 (shocked), S2 (startled), S3 (shocked and recoiling), then on "Suggest some more expressions that would fit the story" proposed single reactions (indignant, worried, dumbfounded, dismayed), a mixed reaction by character, and a comic twist (one officer quietly sympathising with the pawns). The author: "Agreed go for the mixed reaction by character - and put the comic twist on top", then "apply". Panel block 2b (Characters) and manifest field 6; old wording in Appendix A. |
 | 7.96 | Author on 12a: "Let's zoom more in on the king here. The faces on the lower part of the image add no value". Claude prototyped zooms of 1.25, 1.4 and 1.55 with the top of the picture fixed (Z1 still showed the tops of the pawn heads); the author: "Pick Z2 and make the king's face look 'wondering'". Claude added a wondering face (brows raised unevenly, hidden under the crown, so the gaze carries it) and showed W1 (looking up), W2 (looking up towards his hand), W3 (looking up the other way); the author: "Agreed with W2". Panel block 12a (In frame, Characters, Balloon placement) and manifest fields 5, 6, 8, 9 and 13; old wording in Appendix A. SVG preview: new expression "wondering" (eyes looking up). |
+| 7.97 | Author: "We are getting close to production quality Run an extra check to see if there are text balloons that can use some fine tuning." Claude measured all 64 dialogue balloons (a single word on the last line, five or more lines, touching the border, covering a face or hat, long tails, overlaps), reviewed the flagged panels and proposed fixes in two groups (balloons covering a hat; a lone last word); previews showed each panel now and with a different number of lines. The author chose: 5c, 11d, 10b (four lines), 1b-2 (five lines), 2c (one line), and balanced lines in 10a, 10i, 15d, 7b, 6b; not taken: 1b-1, 3a-1, 4b, 10g. A balloon-shape line in each of the ten panel blocks. SVG preview: balloon lines. |
 
 ---
 
@@ -1530,6 +1532,7 @@ Split from panel 1b in 7.3 (author decision, Section 23.B).
 - Camera: the same as 1b-1 (continuity: same positions, same framing).
 - In frame: the same as 1b-1.
 - Characters: the King turns towards Alfil and gestures to him with an open hand, mouth open; Alfil looks back at the King, attentive, mouth closed. Regina looks at the King. Caballo faces right (towards the centre).
+- Balloon shape (author decision in 7.97, balloon check): five lines, so Alfil's mitre is uncovered.
 - Balloon (White King): Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
 
 ### Panel 1c
@@ -1565,6 +1568,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - Camera: from Black's side, zoomed in on Regina on d1 (she is talking).
 - In frame: Regina large in the centre; the White King (e1) partly in frame at the left; the bishop on c1 partly at the right; the heads of the pawns on e2, d2 and c2 cross the bottom of the frame.
 - Characters: Regina turns her head towards the King and looks at him, puzzled (one eyebrow raised), mouth open. The King looks back at her. No lip colour or make-up.
+- Balloon shape (author decision in 7.97, balloon check): one line.
 - Balloon (Regina): Awel ? Waarom gebeurt er niks ?
 
 ## Scene 3 - Alfil Sent to the Pawns
@@ -1661,6 +1665,7 @@ Split from panel 5b in 7.3 (author decision, Section 23.B).
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, same two-shot as 5b.
 - Characters: the King looks at Alfil and points with his whole arm forward, over the pawns, towards the centre of the board (the gentle rise in the middle of the board): an order. Alfil looks back at the King, hesitant.
+- Balloon shape (author decision in 7.97, balloon check): four lines, so it only just touches the tip of Alfil's mitre.
 - Balloon (White King): Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen.
 
 ### Panel 5d-1
@@ -1697,6 +1702,7 @@ Board position: the standard starting position (State 0) in 6a and 6b; State 1 (
 - Camera: the same as 6a.
 - In frame: the same as 6a.
 - Characters: the King gives in, stubborn and impatient: mouth open, frowning, one hand raised in a dismissive wave on the side away from Regina (the hand does not cover her face). Regina looks at the King, mouth closed. Alfil and the c1 bishop look on, mouths closed.
+- Balloon shape (author decision in 7.97, balloon check): four lines, rebalanced so no single word stands alone on the last line.
 - Balloon (White King): Allee goed dan, want "Dieje van den overkant" wordt precies al serieus ongeduldig.
 
 ### Panel 6c
@@ -1730,6 +1736,7 @@ Board position: State 2 (after 1. e3 d5) in 7a to 7c; State 3 (after 2. Ld3) in 
 ### Panel 7b
 - Camera: from Black's side, at officer height, zoomed in on Alfil (f1) and the White King (e1): from this side Alfil is left, the King right. Caballo (g1) partly at the left edge, Regina (d1) partly at the right edge; the head of the f2 pawn crosses the bottom of the frame.
 - Characters: Alfil looks at the King, apologetic, mouth open, one hand held open towards him. The King looks back at Alfil, angry (frowning, eyebrows pulled together), mouth closed. Regina looks at them, mouth closed.
+- Balloon shape (author decision in 7.97, balloon check): two lines, rebalanced ("Jamaar Sire, / met dieje boebel.").
 - Balloon (Alfil): Jamaar Sire, met dieje boebel.
 
 ### Panel 7c
@@ -1840,6 +1847,7 @@ Approved in 7.31.
 - In frame (from this side the f-file is left): the King left of centre, large; Regina right of centre; the head of the f2 pawn at the bottom left, the head of the d2 pawn at the bottom right; the e2 square in front of the King is empty. Every piece on a square that is in frame is shown.
 - Characters: the King sighs (stage direction "(zucht)"): eyes closed, eyebrows drooping, mouth open as he speaks; the sigh is shown by his face only, with no breath cloud or other symbol (author decision in 7.31). Regina looks at the King, worried, mouth closed. The pawns look on, mouths closed.
 - Balloon placement: top left, clear of the King's crown and cross; its curved tail ends just beside the King's mouth.
+- Balloon shape (author decision in 7.97, balloon check): five lines, rebalanced so no single word stands alone on the last line.
 - Balloon (White King): Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt.
 
 ### Panel 10b
@@ -1849,6 +1857,7 @@ Approved in 7.31 (as shown in the SVG preview).
 - Characters: the King calm and nostalgic, eyes half closed, mouth open as he speaks, one hand on his chest. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): interested: eyebrows raised, eyes open and looking at the King, a small closed smile.
 - Balloon placement: top centre, between the King's cross and the c1 bishop's mitre, just above Regina's crown (accepted by the author as shown, 7.31); its curved tail ends just beside the King's mouth.
+- Balloon shape (author decision in 7.97, balloon check): four lines, so it clears Regina's crown.
 - Balloon (White King): In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld.
 
 ### Panel 10c
@@ -1910,6 +1919,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Characters: Regina speaks: mouth open, looks at the King, one open hand held out towards him (beside his beard, not covering his face). The King looks back at her, stubborn, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): more bored: eyes half-closed, looking away out of the panel, weary eyebrows, mouth pushed to one side (a pout).
 - Balloon placement: top right, above Regina and the c1 bishop, clear of their crown and mitre; its curved tail ends just beside Regina's mouth.
+- Balloon shape (author decision in 7.97, balloon check): three lines, rebalanced so no single word stands alone on the last line.
 - Balloon (Regina): Jamaar Sire, uw officieren hebben misschien wel een punt.
 
 ## Scene 11 - Who Knows This Board Best
@@ -1952,6 +1962,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Characters: the King proud, eyes wide, mouth open, one hand raised high on the side away from Regina. Regina looks at the King, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): the punchline: a big yawn, eyes squeezed shut, eyebrows raised at the inner ends; well-mannered, he holds one hand in front of his mouth, only the top of the yawning mouth peeks out.
 - Balloon placement: top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
+- Balloon shape (author decision in 7.97, balloon check): four lines, so Regina's crown is free.
 - Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
 
 ### Panel 11e
@@ -2182,6 +2193,7 @@ Approved in 7.40.
 - The Black King and the f8 bishop (author decision in 7.82): both look extremely scared, because Caballo threatens both checkmate and to capture the bishop: eyebrows shot up, eyes wide, sweat drops, small shake lines; both look at Caballo.
 - The cola stare (author decision in 7.86): the black pawns on e6 and f7 still stare at the puddle on f6, a little disgusted, leaning slightly away (from this angle the f7 pawn is hidden behind the f8 bishop).
 - Balloon placement: top right; its curved tail ends just beside Caballo's snout.
+- Balloon shape (author decision in 7.97, balloon check): four lines, rebalanced so no single word stands alone on the last line.
 - Balloon (Caballo): Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog.
 
 ### Panel 15e
@@ -5625,3 +5637,4 @@ Items that need a decision from the author.
 | 7.94 | - | 7a: a broader balloon in three lines. 2b: tail-less grumbles in the gaps g2-f2 to c2-b2 (?!, #?!, #!?, ??, ??#). |
 | 7.95 | - | 2b: the officers react to the mutiny in character; the c1 bishop is sly. |
 | 7.96 | - | 12a: zoomed in on the King, no pawn faces; the King wondering, looking up towards his raised hand. |
+| 7.97 | - | Balloon check: ten balloons fine-tuned (5c, 11d, 10b, 1b-2, 2c, 10a, 10i, 15d, 7b, 6b). |
