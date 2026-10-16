@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.03
+Version 8.04
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -110,6 +110,7 @@ Version 8.00 gives the 1b-1 balloon three lines, clear of Alfil's mitre (author 
 Version 8.01 gives the 4b balloon four lines (author decision).
 Version 8.02 gives the 10g balloon a narrower shape against the left border, clear of the King (author decision).
 Version 8.03 gives Alfil a worried face in panel 4c-1 and Regina a friendly face in panel 6a (author decisions).
+Version 8.04 gives listeners a reaction where the text invites one: Caballo doubtful in 9a, Alfil and Regina uneasy in 7a, Alfil beaming in 15b (author decisions).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1276,6 +1277,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.01 | Author on 4b (left as it was in 7.97): "try a 3 line balloon and show me a preview" (three lines always covered the King's cross), then "I was mistaken try a 4 line balloon instead"; Claude showed F1 (placed automatically), F2 (against the left border), F3; the author: "Go for F1 and accept". A balloon-shape line in the 4b block. |
 | 8.02 | Author on 10g (left as it was in 7.97): "Here a less wide balloon with possibly even a line more could work. Also the balloon can be moved to the left so it uncovers the king's face". Claude showed N1 (six lines, narrower), N2 (seven lines), N3 (eight lines), all against the left border; the author: "N1 is perfect - apply". A balloon-shape line in the 10g block. |
 | 8.03 | Author: "Does the story allow for extra opportunities to use more expressive faces based on the story text ?" Claude compared each line with the faces drawn and listed speakers and listeners with a neutral face where the text gives them something to feel. Author: "Show me a preview for the Speakers whose face doesn't match their line yet" (4c-1 Alfil worried, 4c-2 Alfil pleading, 6a Regina smug, 10i Regina sly, 15e Caballo smug); the author: "4c-1 agreed", then "6a give me a preview with a friendlier face" (G1 friendly, brows raised; G2 cheerful, smiling eyes; G3 calm) and "G1 accept". Panel blocks 4c-1 and 6a (Characters) and manifest field 8 of both; old wording in Appendix A. |
+| 8.04 | Author: "Give me now a preview for '2. Listeners whose reaction the text invites'". Claude showed 9a (Caballo doubtful), 7a (Alfil and Regina uneasy), 15b (Alfil pleased, eyes closed), 1b-2 (Regina unimpressed), 10c and 10h (Regina sceptical), 11d (Regina unconvinced); the author: "9a, 7a accept" and, for 15b, "suggest an alternative where alfil has his eyes open" (A1 proud, A2 beaming, A3 pleased with himself), then "15b pick A2 beaming - accept". Panel blocks 9a, 7a and 15b (Characters) and manifest field 6 of each; old wording in Appendix A. |
 
 ---
 
@@ -1745,7 +1747,7 @@ Board position: State 2 (after 1. e3 d5) in 7a to 7c; State 3 (after 2. Ld3) in 
 
 ### Panel 7a
 - Camera: from Black's side, at officer height, somewhat further back than in Scene 6, on the White King (e1) with Alfil (f1) at his left and Regina (d1) at his right (from this side the h-file is left); Caballo (g1) at the left, the rook (h1) cut off at the left edge. The pawns on g2, f2 and d2 stand in front; the e2 square is empty and the head of the e3 pawn crosses the bottom edge.
-- Characters: the King is angry, mouth open, frowning, and points with one arm down towards the centre of the board, where Black has just played d5. Alfil and Regina look at the King, mouths closed. The pawns and Caballo neutral, mouths closed.
+- Characters: the King is angry, mouth open, frowning, and points with one arm down towards the centre of the board, where Black has just played d5. Alfil and Regina look at the King, mouths closed, uneasy (worried frowns; author decision in 8.04). The pawns and Caballo neutral, mouths closed.
 - Balloon shape (author decision in 7.94): a broad balloon in three lines ("Lap, ziet ge ’t nu ? Wat had ik jullie / gezegd ? "Dieje van den overkant" / pakt al direct het centrum in."), top left over Caballo and Alfil, clear of Alfil's mitre; its curved tail down to the King's mouth.
 - Balloon (White King): Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in.
 
@@ -1798,7 +1800,7 @@ Board position: State 4 (after 2. ... e6) in 9a; State 5 (after 3. Ph3) in 9b to
 
 ### Panel 9a
 - Camera: from Black's side, at officer height, framed on the King (e1) and Caballo (g1), zoomed out a little (author feedback in 7.19): from this side, left to right, the rook (h1), Caballo (g1), the empty f1 square, the King (e1), Regina (d1) and the c1 bishop at the right edge. In front the pawns on h2, g2 and f2; the head of the e3 pawn at the bottom centre; at the bottom right the d2 pawn and Alfil on d3 (his mitre with the paprika stains).
-- Characters: the King gives the order proudly, mouth open, looking at Caballo, and points with one arm down and towards Caballo's side, to the square in front (f3). Caballo looks at the King, mouth closed, facing the centre files. Regina and the others look on, mouths closed.
+- Characters: the King gives the order proudly, mouth open, looking at Caballo, and points with one arm down and towards Caballo's side, to the square in front (f3). Caballo looks at the King, mouth closed, facing the centre files, already doubtful (brow lowered; author decision in 8.04): a hint of his refusal to come. Regina and the others look on, mouths closed.
 - Balloon placement: top left; the tail comes in diagonally to the King's mouth and does not run through his crown.
 - Balloon (White King): Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren.
 
@@ -2180,7 +2182,7 @@ Approved in 7.40.
 Approved in 7.40.
 - Camera: the same as 15a.
 - In frame: the same as 15a.
-- Characters: the King proud, mouth open, one arm raised high, pointing up and away (the order to Caballo). Alfil looks at the King, mouth closed. The others neutral, mouths closed.
+- Characters: the King proud, mouth open, one arm raised high, pointing up and away (the order to Caballo). Alfil looks at the King, beaming, eyes open, a broad grin (author decision in 8.04): pleased with the King's thanks. The others neutral, mouths closed.
 - The a1 rook (author decision in 7.45): awake and alert since 15a, eyes open, upright.
 - Framing (author decision in 7.91): the camera of 7.46 turned a little round the King (14f the least, 15a more, 15b the most) and aimed lower, so the black d5 pawn and the white g2 pawn are out of frame and the white e3 pawn is fully in.
 - Balloon placement: top right, over the queenside pieces; its curved tail ends just beside the King's mouth.
@@ -3633,7 +3635,7 @@ PANEL 7a   (sequence number 26)
       Balloon 1: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? "Dieje van den overkant" pakt al direct het centrum in."
 4.  Balloon 1 -> Koning
 5.  Visible: Koning e1 in the centre; Alfil f1 at his left, Regina d1 at his right; Caballo g1 at the left, the rook h1 cut off at the left edge; pawns g2, f2, d2 in front; the e2 square empty; the head of the e3 pawn at the bottom.
-6.  Listening: Alfil and Regina, mouths closed, looking at the King.
+6.  Listening: Alfil and Regina, mouths closed, looking at the King, uneasy (8.04).
 7.  Camera on Black's side, at officer height, somewhat further back than in Scene 6; from this side left to right: h1, g1, f1, e1, d1.
 8.  Koning: angry, frowning, mouth open, one arm pointing down towards the centre of the board.
     Listeners: mouths closed; eyes on the King.
@@ -3843,7 +3845,7 @@ PANEL 9a   (sequence number 33)
       Balloon 1: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren."
 4.  Balloon 1 -> Koning
 5.  Visible: the rook h1, Caballo g1, the empty f1 square, Koning e1, Regina d1, the c1 bishop at the right edge; pawns h2, g2, f2 in front; the head of the e3 pawn at the bottom centre; the d2 pawn and Alfil on d3 at the bottom right.
-6.  Listening: Caballo, mouth closed, looking at the King; Regina and the others, mouths closed.
+6.  Listening: Caballo, mouth closed, looking at the King, doubtful (8.04); Regina and the others, mouths closed.
 7.  Camera on Black's side, at officer height, zoomed out a little (author, 7.19); from this side left to right: h1, g1, f1 (empty), e1, d1, c1.
 8.  Koning: proud, commanding, mouth open, looking at Caballo, one arm pointing down towards the f3 square.
     Listeners: mouths closed; Caballo looks back at the King and faces the centre files.
@@ -5034,7 +5036,7 @@ PANEL 15b   (sequence number 73)
       Balloon 1: "Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 15a.
-6.  Listening: Alfil, mouth closed, looking at the King; the others neutral, mouths closed.
+6.  Listening: Alfil, beaming with a broad grin (8.04), looking at the King; the others neutral, mouths closed.
 7.  Camera the same as 15a.
 8.  Koning: proud, mouth open, one arm raised high, pointing up and away.
 9.  Balloon 1 top right; its curved tail ends just beside Koning's mouth. Round balloon.
@@ -5523,6 +5525,7 @@ Kept for history. Do not use for generation.
 - 7.64 to 7.95, panel 12a (panel block In frame, Characters, Balloon placement; manifest fields 5, 6, 8, 9, 13): the King in the centre with the heads of the white pawns at the bottom and the edge of Alfil's mitre at the right edge; the King puzzled; the pawns look on, mouths closed; balloon top centre; must not appear: an open mouth on the pawns -> Changed in 7.96 by author decision: zoomed in on the King from crown to chest, no other pieces; the King wondering, his eyes looking up towards his raised hand; balloon top left.
 - Up to 8.02, panel 4c-1 (panel block Characters; manifest field 8): Alfil "earnest" -> Changed in 8.03 by author decision: Alfil earnest and worried (brows tilted up).
 - Up to 8.02, panel 6a (panel block Characters; manifest field 8): Regina "giving advice" (no expression named) -> Changed in 8.03 by author decision: Regina giving advice with a friendly face (brows raised, open eyes).
+- Up to 8.03, panels 9a, 7a and 15b (panel block Characters; manifest field 6): Caballo (9a), Alfil and Regina (7a), Alfil (15b, mouth closed) listen without a named expression -> Changed in 8.04 by author decision: Caballo doubtful in 9a; Alfil and Regina uneasy in 7a; Alfil beaming with a broad grin in 15b.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5663,3 +5666,4 @@ Items that need a decision from the author.
 | 8.01 | - | 4b: four balloon lines. |
 | 8.02 | - | 10g: a narrower balloon against the left border, clear of the King. |
 | 8.03 | - | 4c-1: Alfil worried. 6a: Regina friendly. |
+| 8.04 | - | 9a: Caballo doubtful. 7a: Alfil and Regina uneasy. 15b: Alfil beaming. |

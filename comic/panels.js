@@ -95,7 +95,7 @@ window.PANELS = [
 { id: "6d", scene: 6, status: A, movebox: "1. ... d5", state: 2, cam: { from: [4.0, 2.4, 3.6], at: [4.0, 6.85, 0.5], f: 420 }, fx: [{ move: ["d7", "d5"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, d5: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 7 - Black Takes the Centre (PROPOSAL)
 { id: "7a", scene: 7, status: A, state: 2, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
-  cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" }, alfil: { expr: "worried", lookAt: "koning" }, regina: { expr: "worried", lookAt: "koning" } },
   balloons: [{ who: "koning", lines: 3, text: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? \"Dieje van den overkant\" pakt al direct het centrum in." }] },
 { id: "7b", scene: 7, status: A, state: 2, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
   cast: { alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "angry", lookAt: "alfil" } },
@@ -115,7 +115,7 @@ window.PANELS = [
 { id: "8c", scene: 8, status: A, movebox: "2. ... e6", state: 4, cam: { from: [4.5, -1.0, 2.6], at: [4.5, 6.2, 0.2], f: 600 }, fx: [{ move: ["e7", "e6"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
 // ---------------------------------------------------------------- Scene 9 - Caballo Refuses f3 (PROPOSAL)
 { id: "9a", scene: 9, status: A, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 580 }),
-  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { lookAt: "koning" } },
+  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "stubborn", lookAt: "koning" } },
   balloons: [{ who: "koning", x: 40, text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
 { id: "9b", scene: 9, status: A, movebox: "3. Ph3", state: 5, cam: { from: [8.6, 9.2, 6.4], at: [5.3, 1.6, 0.85], f: 1000 }, fx: [{ move: ["g1", "h3"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "caballo", gest: "hands-head", sweat: true } }, balloons: [] },
 { id: "9c", scene: 9, status: A, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
@@ -227,7 +227,7 @@ window.PANELS = [
   cast: { a1: { expr: "startled", jolt: "bold" }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
   balloons: [{ who: "alfil", lines: 2, x: 16, text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
 { id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: Object.assign({}, KING_ALFIL_T3, { zoom: 1.2, pin: [0, 570] }),   // zoomed in, bottom-left corner fixed (bible 7.92)
-  cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { lookAt: "koning" } },
+  cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { expr: "grin", lookAt: "koning" } },
   balloons: [{ who: "koning", x: 360, w: 485, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !." }] },
 { id: "15c", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [9.6, 4.2, 3.4], at: [6.3, 6.3, 0.75], f: 700 },
   cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 }, e7: { expr: "smug", lookAt: "f6", lookDown: true } },
