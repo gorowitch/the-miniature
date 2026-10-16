@@ -32,7 +32,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4" }] },
 { id: "2b", scene: 2, status: A, crossArms: true, state: 0, wide: true, cam: { from: [5.4, 5.6, 2.3], at: [4.2, 1.2, 0.35], f: 820 },
   cast: { a1: { expr: "yawn", lean: -6, bow: 1.42, gest: "stretch" }, a2: { expr: "stubborn" }, b2: { expr: "stubborn" }, c2: { expr: "stubborn" }, d2: { expr: "stubborn" }, e2: { expr: "stubborn" }, f2: { expr: "stubborn" }, g2: { expr: "stubborn" }, h2: { expr: "stubborn" } },
-  grumble: ["h2", "f2", "d2", "b2", "e2"], grumbleText: ["??#", "?!", "#!?", "??", "#?!"], caption: "(hoorbaar gemor vanop de tweede rij)", balloons: [] },  // bible 7.12: chess-symbol grumbles, stage direction caption
+  grumble: ["f2", "d2", "e2", "c2", "b2"], grumbleText: ["?!", "#!?", "#?!", "??", "??#"], grumbleAt: { b2: [1150, 200] }, caption: "(hoorbaar gemor vanop de tweede rij)", balloons: [] },  // bible 7.12: chess-symbol grumbles, stage direction caption
 { id: "2c", scene: 2, status: A, crossArms: true, state: 0, cam: zb(["d1"], { dist: 1.25, h: 1.35, th: 1.0, f: 760 }),
   cast: { regina: { expr: "puzzled", talk: true, lookAt: "koning" }, koning: { lookAt: "regina" } },
   balloons: [{ who: "regina", text: "Awel ? Waarom gebeurt er niks ?" }] },
@@ -93,7 +93,7 @@ window.PANELS = [
 // ---------------------------------------------------------------- Scene 7 - Black Takes the Centre (PROPOSAL)
 { id: "7a", scene: 7, status: A, state: 2, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
   cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? \"Dieje van den overkant\" pakt al direct het centrum in." }] },
+  balloons: [{ who: "koning", lines: 3, text: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? \"Dieje van den overkant\" pakt al direct het centrum in." }] },
 { id: "7b", scene: 7, status: A, state: 2, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
   cast: { alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "angry", lookAt: "alfil" } },
   balloons: [{ who: "alfil", text: "Jamaar Sire, met dieje boebel." }] },

@@ -678,6 +678,8 @@ function renderPanel(svg, P, opts) {
       let score = tailHit + keepClear.reduce((s, k) => s + k.w * overlap(bx, k.box), 0) + grumbleBoxes.reduce((s, b) => s + 3 * overlap(bx, b), 0) + Math.abs(deg + 90) * 0.5 + (ring - 1) * 60;
       if (bx[0] < 12 || bx[2] > W0 - 12 || bx[1] < 12) score += 1e6;
       if (!best || score < best.score) best = { score, x, y, bx }; }
+    // P.grumbleAt { square: [x, y] }: a fixed spot for that grumble balloon (2b, bible 7.94)
+    const ga = P.grumbleAt && P.grumbleAt[gq]; if (ga) best = { x: ga[0], y: ga[1], bx: [ga[0] - hw, ga[1] - hh, ga[0] + hw, ga[1] + hh] };
     grumbleBoxes.push(best.bx); const cx = best.x, cy = best.y; let d = "";
     { const ang = Math.atan2(sp.head[1] - cy, sp.head[0] - cx), tipD = Math.hypot(sp.head[0] - cx, sp.head[1] - cy) - hr * 1.1, tx = cx + Math.cos(ang) * tipD, ty = cy + Math.sin(ang) * tipD, nx = -Math.sin(ang) * r * .35, ny = Math.cos(ang) * r * .35;  // short tail to the grumbling pawn
       mk("path", { d: `M${cx + nx} ${cy + ny} L${tx} ${ty} L${cx - nx} ${cy - ny} Z`, fill: "#fffdf5", stroke: INK, "stroke-width": 1.6, "stroke-linejoin": "round" }, root); } for (let k = 0; k <= 24; k++) { const a = k / 24 * Math.PI * 2, rr = r * (k % 2 ? 1 : 1.2); d += (k ? "L" : "M") + (cx + Math.cos(a) * rr * sx).toFixed(1) + " " + (cy + Math.sin(a) * rr).toFixed(1); } const g = mk("g", {}, root); mk("path", { d: d + "Z", fill: "#fffdf5", stroke: INK, "stroke-width": 1.6 }, g);
