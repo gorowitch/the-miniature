@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.08
+Version 8.09
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -115,6 +115,7 @@ Version 8.05 gives both queens thinner eyebrows in every expression, gently arch
 Version 8.06 makes three proofreading corrections to the dialogue and the play text, 11d, 11e and 15b (author decision).
 Version 8.07 adds a closing page after the story: the game with its name, an epilogue line, Alfil winking with "Einde", and the colophon (author decisions; first version).
 Version 8.08 shortens the drawings line of the colophon (author decision).
+Version 8.09 puts the game on the closing page on a mini club scoresheet and lays the page out in one column (author decisions).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1007,10 +1008,11 @@ Result box (author decision in 7.37):
 
 ## Closing Page
 Added in 8.07 (author decisions; first version). The last page of the album, after the story; with it the inside of the album is 12 pages (the cover serves as the title page). From top to bottom, with white space between the parts:
-- The game, under its name: "De Miniatuur" in italics with a thin line under it, left-aligned with the moves (the name of the game, not a page title). The moves in three columns, so 1 and 4, 2 and 5, 3 and 6 line up: "1. e3 d5 / 2. Ld3 e6 / 3. Ph3 Ld7" and "4. Dh5 Pe7 / 5. Pg5 g6 / 6. Pxh7 gxh5"; centred below, "1/2 - 1/2".
+- The game on a mini club scoresheet (author decision in 8.09; replaces the plain move list of 8.07): a sheet of slightly off-white paper with a soft shadow, turned a little askew; printed in black and grey: "NOTATIEFORMULIER", the fields "Partij", "Wit", "Zwart", a table "Nr / Wit / Zwart" with eight rows and "Uitslag"; filled in by hand in blue ballpoint (in Comic Neue): Partij "De Miniatuur" (the name of the game), Wit "De Koning", Zwart "Dieje van den overkant", the moves e3 d5, Ld3 e6, Ph3 Ld7, Dh5 Pe7, Pg5 g6, Pxh7 gxh5 in rows 1 to 6 (rows 7 and 8 left empty: a miniature), and the result "½ – ½", circled.
 - The epilogue line, centred, in three lines (the author's own wording, not in the article): "Enkele weken later / kocht de schaakclub / nieuwe borden."
 - A picture: Alfil alone, standing beside the board on the table, winking at the reader (one eye shut in a happy arc, a small smile); a corner of the empty board at the left; in the lower right of the picture "Einde" in a white caption box with a black outline.
 - The colophon, small, left-aligned lines, the block centred on the page: "Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)" / "Tekeningen: Claude (Anthropic)" (8.08) / "Lettertype: Comic Neue" / "Eerste uitgave, oktober 2026" / "© 2026 Sven Gorts. Alle rechten voorbehouden."
+- Layout (author decision in 8.09): one column 900 wide for the sheet, the picture and the colophon, with one left edge; the epilogue line close above the picture (line and picture one closing moment), more room above it; equal margins at the top and the bottom; the colophon smaller (30) and dark grey, left-aligned on the column.
 - Names: "S. Gorts" on the cover, "Sven Gorts" everywhere else (author decision in 8.07).
 - The source (author, 8.07): the text was first published in 2012 as an article, written in the form of a play; this bible calls it "the play".
 
@@ -1296,6 +1298,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.06 | Author, after Claude listed what a real comic still needs (back cover, title page and colophon, page numbers, page count, print-ready file, proofreading): on the proofreading, "11e has a stray quote mark: daar was “m toen -> make that daar was em toen; 15b ends with !. -> replace that with !; 11d has Dieje van de overkant, while every other balloon has van den -> fix that to Dieje van den overkant. Also make these changes to the original text." Changed everywhere: the play text in Section 1, the panel blocks and manifests of 11d, 11e and 15b, the script excerpts; the protocol line and the spelling-variants line now record the exception; old wording in Appendix A. SVG preview: the three balloon texts. |
 | 8.07 | Author on the album's front and back matter. Title page and colophon proposed in Dutch; author: "The original text was written in 2012", "Actually the text comes from an article rather than a play. However the text from the article was intentinally written as a play", the drawings credited as generated ("gegenereerd met Claude (Anthropic)"), "Name use 'Sven Gorts' except for the cover", "Since the cover already acts as the title page I don't see much value in adding a title page", then a closing page instead of a colophon on the cover inside: "For the colophon I want the text 'Enkele weken later kocht de schaakclub nieuwe borden.'" and the layout: the game and the result, the line, "An image showing Alfil who blinks with one eye", the colophon. Refined in previews: Alfil alone beside the board on the table; the line in three lines; moves 1 and 4, 2 and 5, 3 and 6 aligned; "De Miniatuur" above the game as its name; "Einde" in the picture, "Obviously I want it in a white caption box"; only the colophon left-aligned; "Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)"; then "apply and commit this as a first version of the colophon". New: Section 13, Closing Page. Not yet decided: the back cover (a blurb was proposed). SVG preview: album page 12 (the closing page); new expression "wink". |
 | 8.08 | Author on the closing page: "For the text make that: Tekeningen: Claude (Anthropic)". Section 13, Closing Page (colophon line); old wording in Appendix A. |
+| 8.09 | Author: "We have our colophon page. What can we do to make it really cool ?" Claude proposed a club scoresheet, a callback in Alfil's picture (the new board, or paprika chips), a cola ring on the paper; the author: "I like this idea, make a mini club scoresheet ... show me a prototype". Alfil delighted and with a thumbs up was tried and dropped ("Lets 't step back to just the wink"). Then "Let's review the layout of the page What can be improved ?": Claude proposed grouping the epilogue line with the picture, one column width, balanced margins, a smaller grey colophon; the author: "Yes make a preview with these improvements", then "apply". Section 13, Closing Page (the game line replaced; a layout line); old wording in Appendix A. |
 
 ---
 
@@ -5546,6 +5549,7 @@ Kept for history. Do not use for generation.
 - Up to 8.03, panels 9a, 7a and 15b (panel block Characters; manifest field 6): Caballo (9a), Alfil and Regina (7a), Alfil (15b, mouth closed) listen without a named expression -> Changed in 8.04 by author decision: Caballo doubtful in 9a; Alfil and Regina uneasy in 7a; Alfil beaming with a broad grin in 15b.
 - Up to 8.05, the play text (Section 1) and the dialogue of 11d, 11e and 15b (panel blocks, manifests, Script Coverage): "Dieje van de overkant" (speech 29, 11d); "daar was “m toen" (11e); "Ridder Caballo onmiddellijk naar f6 !." (15b); and the rules that kept them (Strict Adaptation Protocol, Section 4 spelling variants, manifest 52 field 12) -> Changed in 8.06 by author decision: "Dieje van den overkant", "daar was em toen", "naar f6 !", in the play text as well.
 - 8.07, Closing Page, colophon: "Tekeningen: gegenereerd met Claude (Anthropic)" -> Changed in 8.08 by author decision: "Tekeningen: Claude (Anthropic)".
+- 8.07, Closing Page: "The game, under its name: "De Miniatuur" in italics with a thin line under it, left-aligned with the moves (the name of the game, not a page title). The moves in three columns, so 1 and 4, 2 and 5, 3 and 6 line up: "1. e3 d5 / 2. Ld3 e6 / 3. Ph3 Ld7" and "4. Dh5 Pe7 / 5. Pg5 g6 / 6. Pxh7 gxh5"; centred below, "1/2 - 1/2"." -> Changed in 8.09 by author decision: the game on a mini club scoresheet; layout in one column.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5691,3 +5695,4 @@ Items that need a decision from the author.
 | 8.06 | - | Proofreading: 11d "van den overkant", 11e "daar was em toen", 15b "naar f6 !", in the play text as well. |
 | 8.07 | - | Closing page after the story: the game, the epilogue line, Alfil winking with "Einde", the colophon (first version). |
 | 8.08 | - | Colophon: "Tekeningen: Claude (Anthropic)". |
+| 8.09 | - | Closing page: the game on a mini club scoresheet; one column, the epilogue with the picture, a smaller grey colophon. |

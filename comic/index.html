@@ -93,33 +93,46 @@ pages.forEach((rowsOnPage, pi) => {
   });
 });
 
-// Closing page (author decision, bible 8.07): the game with its name, the epilogue line, Alfil winking beside the board with "Einde",
-// and the colophon. It makes the inside of the album 12 pages (the cover already serves as the title page).
+// Closing page (author decisions, bible 8.07, 8.09): the game on a club scoresheet, the epilogue line, Alfil winking beside the board
+// with "Einde", and the colophon. It makes the inside of the album 12 pages (the cover already serves as the title page).
+// Layout (8.09): one column 900 wide; the epilogue line close above the picture; equal margins at top and bottom; the colophon small and grey.
 (function closing() {
-  const s = newPage("Colofon"), F = "'Comic Neue','Comic Sans MS',cursive", INK = "#17110d";
-  const txt = (t, x, y, fs, anchor) => { const e = el("text", { x, y, "text-anchor": anchor || "middle", "font-family": F, "font-weight": 700, "font-size": fs, fill: INK }, s); e.textContent = t; return e; };
-  // the game in three columns, so moves 1 and 4, 2 and 5, 3 and 6 line up; the block centred on the page, its name above it
-  const ROWS = [["1. e3 d5", "2. Ld3 e6", "3. Ph3 Ld7"], ["4. Dh5 Pe7", "5. Pg5 g6", "6. Pxh7 gxh5"]], FS = 58, GAP = 90;
-  const cv = document.createElement("canvas").getContext("2d"); cv.font = `700 ${FS}px 'Comic Neue'`;
-  const colW = [0, 1, 2].map(c => Math.max(...ROWS.map(r => cv.measureText(r[c]).width)));
-  const total = colW.reduce((a, b) => a + b, 0) + GAP * 2; let x = (PW - total) / 2;
-  txt("De Miniatuur", x, 238, 58, "start").setAttribute("font-style", "italic");   // the name of the game, not a page title
-  el("line", { x1: x, y1: 254, x2: x + total, y2: 254, stroke: INK, "stroke-width": 2.5 }, s);
-  colW.forEach((w, c) => { ROWS.forEach((r, ri) => txt(r[c], x, 330 + ri * 82, FS, "start")); x += w + GAP; });
-  txt("1/2 - 1/2", PW / 2, 520, 66);
-  // the epilogue line (the author's own wording, not in the article)
-  ["Enkele weken later", "kocht de schaakclub", "nieuwe borden."].forEach((t, i) => txt(t, PW / 2, 680 + i * 82, 64));
+  const s = newPage("Colofon"), F = "'Comic Neue','Comic Sans MS',cursive", INK = "#17110d", PEN = "#1f3f8f", GREY = "#4a4038", COL = 900, X0 = (PW - COL) / 2;
+  const txt = (t, x, y, fs, o, p) => { const e = el("text", Object.assign({ x, y, "text-anchor": "middle", "font-family": F, "font-weight": 700, "font-size": fs, fill: INK }, o || {}), p || s); e.textContent = t; return e; };
+  // the scoresheet: printed labels and lines in black and grey, the players' entries in blue ballpoint, the sheet turned a little
+  const SH = 770, sy = 140, g = el("g", { transform: `rotate(-2 ${PW / 2} ${sy + SH / 2})` }, s);
+  el("rect", { x: X0 + 8, y: sy + 10, width: COL, height: SH, fill: "#000", opacity: .12 }, g);   // a soft shadow under the sheet
+  el("rect", { x: X0, y: sy, width: COL, height: SH, fill: "#fbf8ef", stroke: INK, "stroke-width": 2.5 }, g);
+  const L = X0 + 40, Rr = X0 + COL - 40, lab = { "text-anchor": "start", fill: GREY }, pen = { "text-anchor": "start", fill: PEN };
+  txt("NOTATIEFORMULIER", PW / 2, sy + 52, 30, { "letter-spacing": 4 }, g);
+  const field = (label, value, y) => { txt(label, L, y, 26, lab, g); el("line", { x1: L + 110, y1: y + 8, x2: Rr, y2: y + 8, stroke: "#8a8178", "stroke-width": 1.5 }, g); txt(value, L + 122, y, 40, pen, g); };
+  field("Partij", "De Miniatuur", sy + 118);   // the name of the game
+  field("Wit", "De Koning", sy + 178);
+  field("Zwart", "Dieje van den overkant", sy + 238);
+  // the move table: number, Wit, Zwart; six moves played, two rows left empty (a miniature)
+  const MOVES = [["e3", "d5"], ["Ld3", "e6"], ["Ph3", "Ld7"], ["Dh5", "Pe7"], ["Pg5", "g6"], ["Pxh7", "gxh5"], ["", ""], ["", ""]];
+  const ty = sy + 278, rh = 40, c1 = L + 70, c2 = L + 70 + (Rr - L - 70) / 2, tb = ty + rh * (MOVES.length + 1);
+  el("rect", { x: L, y: ty, width: Rr - L, height: rh * (MOVES.length + 1), fill: "none", stroke: INK, "stroke-width": 2 }, g);
+  for (let i = 1; i <= MOVES.length; i++) el("line", { x1: L, y1: ty + i * rh, x2: Rr, y2: ty + i * rh, stroke: "#8a8178", "stroke-width": i === 1 ? 2 : 1.2 }, g);
+  for (const x of [c1, c2]) el("line", { x1: x, y1: ty, x2: x, y2: tb, stroke: INK, "stroke-width": 1.6 }, g);
+  [["Nr", (L + c1) / 2], ["Wit", (c1 + c2) / 2], ["Zwart", (c2 + Rr) / 2]].forEach(([t, x]) => txt(t, x, ty + 28, 24, { fill: GREY }, g));
+  MOVES.forEach(([w, b], i) => { const y = ty + (i + 1) * rh + 29; txt(String(i + 1), (L + c1) / 2, y, 24, { fill: GREY }, g); if (w) txt(w, (c1 + c2) / 2, y + 2, 34, { fill: PEN }, g); if (b) txt(b, (c2 + Rr) / 2, y + 2, 34, { fill: PEN }, g); });
+  // the result, written in and circled
+  const ry = tb + 50;
+  txt("Uitslag", L, ry, 26, lab, g); txt("½ – ½", L + 210, ry + 2, 44, { fill: PEN }, g);
+  el("ellipse", { cx: L + 210, cy: ry - 12, rx: 82, ry: 30, fill: "none", stroke: PEN, "stroke-width": 2.5, transform: `rotate(-4 ${L + 210} ${ry - 12})` }, g);
+  // the epilogue line (the author's own wording, not in the article), close above the picture
+  ["Enkele weken later", "kocht de schaakclub", "nieuwe borden."].forEach((t, i) => txt(t, PW / 2, 1080 + i * 82, 64));
   // Alfil alone beside the board, on the table, winking at the reader; "Einde" in a white caption box
   const P = { id: "closing", scene: 16, state: 0, clean: true, clock: false, omit: "abcdefgh".split("").flatMap(f => [1, 2, 7, 8].map(n => f + n)),
     stage: [{ id: "al", ch: "B", role: "alfil", at: [-1.3, 2.5] }], cam: { from: [-1.3, 6.2, 1.7], at: [-1.3, 2.5, 0.62], f: 1150 },
     cast: { alfil: { expr: "wink", back: false } }, balloons: [] };
-  const box = el("svg", { x: 450, y: 1010, width: 800, height: 570 }, s); R.renderPanel(box, P, { noFont: true });
+  const box = el("svg", { x: X0, y: 1310, width: COL, height: COL * 570 / 800 }, s); R.renderPanel(box, P, { noFont: true });
   { const bw = 150, bh = 62, bx = 800 - 24 - bw, by = 570 - 24 - bh; el("rect", { x: bx, y: by, width: bw, height: bh, fill: "#fff", stroke: INK, "stroke-width": 3 }, box);
-    const e = el("text", { x: bx + bw / 2, y: by + bh / 2 + 15, "text-anchor": "middle", "font-family": F, "font-weight": 700, "font-size": 42, fill: INK }, box); e.textContent = "Einde"; }
-  // the colophon: left-aligned lines, the block centred on the page
-  const C = ["Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)", "Tekeningen: Claude (Anthropic)", "Lettertype: Comic Neue", "Eerste uitgave, oktober 2026", "© 2026 Sven Gorts. Alle rechten voorbehouden."];
-  cv.font = "700 34px 'Comic Neue'"; const cx0 = (PW - Math.max(...C.map(t => cv.measureText(t).width))) / 2;
-  C.forEach((t, i) => txt(t, cx0, 1880 + i * 58, 34, "start"));
+    txt("Einde", bx + bw / 2, by + bh / 2 + 15, 42, {}, box); }
+  // the colophon: small print, grey, left-aligned on the column
+  ["Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)", "Tekeningen: Claude (Anthropic)", "Lettertype: Comic Neue", "Eerste uitgave, oktober 2026", "© 2026 Sven Gorts. Alle rechten voorbehouden."]
+    .forEach((t, i) => txt(t, X0, 2070 + i * 50, 30, { "text-anchor": "start", fill: GREY }));
 })();
 
 // Export mode (index.html?export=1): every page and every panel as SVG source in one JSON block,
