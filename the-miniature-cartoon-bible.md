@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.00
+Version 8.01
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -107,6 +107,7 @@ Version 7.97 fine-tunes ten dialogue balloons after a balloon check: fewer lines
 Version 7.98 gives the 1b-2 balloon four lines, with the exclamation mark on the second line (author decision).
 Version 7.99 gives the 3a-1 balloon three lines, clear of the sleeping rook (author decision).
 Version 8.00 gives the 1b-1 balloon three lines, clear of Alfil's mitre (author decision).
+Version 8.01 gives the 4b balloon four lines (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1270,6 +1271,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.98 | Author on 1b-2: "Here I believe the exclamation mark can fit in the 2nd line. Can you try a preview ?" (in 7.97 four lines were rejected because a line would start with "!"). Claude kept a lone punctuation mark on the line of the word before it and showed four lines; the author: "apply and commit". A balloon-shape line in the 1b-2 block (replaces the five lines of 7.97). SVG preview: with balloon lines, a lone "!", "?" or ":" stays with the word before it (no other balloon changes). |
 | 7.99 | Author on 3a-1 (left as it was in 7.97): "Could you try a preview with 3 lines here ?" Claude showed three placements; the author: "Keep three lines but move the text balloon further right so it doesn't interfere with the rook sleeping" (R1 to R4), then "R1 is fine accept and commit". A balloon-shape line in the 3a-1 block. |
 | 8.00 | Author on 1b-1 (left as it was in 7.97): "I believe there is enough room voor a three lines balloons Show me a preview", then "accept". A balloon-shape line in the 1b-1 block. |
+| 8.01 | Author on 4b (left as it was in 7.97): "try a 3 line balloon and show me a preview" (three lines always covered the King's cross), then "I was mistaken try a 4 line balloon instead"; Claude showed F1 (placed automatically), F2 (against the left border), F3; the author: "Go for F1 and accept". A balloon-shape line in the 4b block. |
 
 ---
 
@@ -1630,6 +1632,7 @@ Board position for all panels: the standard starting position (State 0). Nothing
 - White pawns (author decision in 7.10): every white pawn in frame stands with its arms crossed, in solidarity with the mutiny (Section 7, White Pawns).
 - Camera: from Black's side, at officer height, zoomed in on Alfil (f1) and the White King (e1) (author feedback): their heads and upper bodies fill the frame. From this side Alfil is left, the King right. Caballo (g1) and Regina (d1) only partly at the frame edges; the heads of the pawns on f2 and e2 cross the bottom of the frame.
 - Characters: Alfil has turned back to the King and looks straight at him, upright again, alarmed, one hand raised. The King looks back at Alfil, surprised by the news: eyebrows shot up, eyes wide, mouth open (author feedback).
+- Balloon shape (author decision in 8.01): four lines ("Muiterij Sire! De pionnen willen / niet opspelen naar een / centrumveld omdat er daar naar 't / schijnt nen boebel in het bord zit."), placed automatically; the King's cross stays free.
 - Balloon (Alfil): Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit.
 
 ### Panel 4c-1
@@ -5650,3 +5653,4 @@ Items that need a decision from the author.
 | 7.98 | - | 1b-2: four balloon lines, the "!" on the second line. |
 | 7.99 | - | 3a-1: three balloon lines, clear of the sleeping rook. |
 | 8.00 | - | 1b-1: three balloon lines, clear of Alfil's mitre. |
+| 8.01 | - | 4b: four balloon lines. |

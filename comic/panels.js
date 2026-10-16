@@ -55,7 +55,7 @@ window.PANELS = [
   balloons: [] },
 { id: "4b", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.25, h: 1.4, th: 1.0, f: 760 }),
   cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "raise-l" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "alfil" } },
-  balloons: [{ who: "alfil", text: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit." }] },
+  balloons: [{ who: "alfil", lines: 4, text: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit." }] },
 { id: "4c-1", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
   cast: { alfil: { talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "worried", lookAt: "alfil" } },
   balloons: [{ who: "alfil", w: 470, text: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen." }] },
