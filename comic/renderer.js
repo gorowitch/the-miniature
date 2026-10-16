@@ -436,8 +436,8 @@ function renderPanel(svg, P, opts) {
       poly3([S3(0.45, -L2 * 0.7), S3(0.45, L2 * 0.7), S3(0.86, L2 * 0.7), S3(0.86, -L2 * 0.7)], { fill: "#a7b5a0", "stroke-width": 1 });   // the display, no digits
       poly3([S3(0.76, -L2 * 0.62), S3(0.76, -L2 * 0.1), S3(0.82, -L2 * 0.13), S3(0.82, -L2 * 0.62)], { fill: "#c9d4c4", stroke: "none" });   // a faint glare
       for (let k = -2; k <= 2; k++) { const y = k * L2 * 0.2, r = 0.06; poly3([S3(0.18, y - r), S3(0.18, y + r), S3(0.32, y + r), S3(0.32, y - r)], { fill: k ? "#151515" : "#2f6fb0", "stroke-width": 0.8 }); } }   // five buttons
-    // the rocker bar: one closed bar across the top, tilted about the middle (the left end pressed down)
-    const b0 = xf + 0.12, b1 = D - 0.1, bw = L2 * 0.88, z0 = H, tilt = 0.07, th = 0.1;
+    // the rocker bar: one closed bar across the top, tilted about the middle; P.clockUp "w" raises the white end (towards rank 1), else the black end (bible 7.93)
+    const b0 = xf + 0.12, b1 = D - 0.1, bw = L2 * 0.88, z0 = H, tilt = (P.clockUp === "w" ? -1 : 1) * 0.07, th = 0.1;
     solid([V(b0, -bw, z0), V(b1, -bw, z0), V(b1, bw, z0), V(b0, bw, z0)], [V(b0, -bw, z0 + th - tilt), V(b1, -bw, z0 + th - tilt), V(b1, bw, z0 + th + tilt), V(b0, bw, z0 + th + tilt)],
       { top: "#2a2a2a", bottom: null, sides: ["#141414", "#141414", "#141414", "#1c1c1c"] }); };
   // pieces

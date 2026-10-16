@@ -248,4 +248,10 @@ window.PANELS = [
   cam: { from: [8.6, 4.0, 5.0], at: [4.3, 4.0, 0.75], f: 820 },
   cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false, lean: -5 }, bking: { expr: "sly", lookAt: "koning", gest: "shake-l", back: false, lean: 5 } }, balloons: [] }
 ];
+// The chess clock's lever (bible 7.93): the raised end is the side whose time runs. In a panel with a move box the move is being
+// made and the mover has not pressed yet, so the mover's end is up; from the next panel on the opponent's end is up.
+// Spoken or ordered moves (1. e4) change nothing. clockUp: "w" the white end (nearest rank 1) up, "b" the black end.
+{ let toMove = "w";
+  for (const P of window.PANELS) { const m = /^\d+\.\s*(\.\.\.)?/.exec(P.movebox || "");
+    if (m) { P.clockUp = m[1] ? "b" : "w"; toMove = m[1] ? "w" : "b"; } else P.clockUp = toMove; } }
 })();
