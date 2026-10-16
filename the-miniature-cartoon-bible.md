@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.97
+Version 7.98
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -104,6 +104,7 @@ Version 7.94 gives panel 7a a broader balloon in three lines and rearranges the 
 Version 7.95 lets the officers in panel 2b react to the pawns' mutiny, each in character, with the c1 bishop secretly on the pawns' side (author decision).
 Version 7.96 zooms panel 12a in on the King and gives him a wondering look (author decision).
 Version 7.97 fine-tunes ten dialogue balloons after a balloon check: fewer lines where a balloon covered a hat, and balanced lines where one word stood alone (author decision).
+Version 7.98 gives the 1b-2 balloon four lines, with the exclamation mark on the second line (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1264,6 +1265,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.95 | Author on 2b: "Let the officers in the back rank, except for the rook at a1 look surprised at the pawns at f2, e2, d3" (d3 read as d2: d3 is empty). After a preview: "maybe surprised is not the right expression - what would you suggest. i think is surprised somewhat shocked"; Claude showed S1 (shocked), S2 (startled), S3 (shocked and recoiling), then on "Suggest some more expressions that would fit the story" proposed single reactions (indignant, worried, dumbfounded, dismayed), a mixed reaction by character, and a comic twist (one officer quietly sympathising with the pawns). The author: "Agreed go for the mixed reaction by character - and put the comic twist on top", then "apply". Panel block 2b (Characters) and manifest field 6; old wording in Appendix A. |
 | 7.96 | Author on 12a: "Let's zoom more in on the king here. The faces on the lower part of the image add no value". Claude prototyped zooms of 1.25, 1.4 and 1.55 with the top of the picture fixed (Z1 still showed the tops of the pawn heads); the author: "Pick Z2 and make the king's face look 'wondering'". Claude added a wondering face (brows raised unevenly, hidden under the crown, so the gaze carries it) and showed W1 (looking up), W2 (looking up towards his hand), W3 (looking up the other way); the author: "Agreed with W2". Panel block 12a (In frame, Characters, Balloon placement) and manifest fields 5, 6, 8, 9 and 13; old wording in Appendix A. SVG preview: new expression "wondering" (eyes looking up). |
 | 7.97 | Author: "We are getting close to production quality Run an extra check to see if there are text balloons that can use some fine tuning." Claude measured all 64 dialogue balloons (a single word on the last line, five or more lines, touching the border, covering a face or hat, long tails, overlaps), reviewed the flagged panels and proposed fixes in two groups (balloons covering a hat; a lone last word); previews showed each panel now and with a different number of lines. The author chose: 5c, 11d, 10b (four lines), 1b-2 (five lines), 2c (one line), and balanced lines in 10a, 10i, 15d, 7b, 6b; not taken: 1b-1, 3a-1, 4b, 10g. A balloon-shape line in each of the ten panel blocks. SVG preview: balloon lines. |
+| 7.98 | Author on 1b-2: "Here I believe the exclamation mark can fit in the 2nd line. Can you try a preview ?" (in 7.97 four lines were rejected because a line would start with "!"). Claude kept a lone punctuation mark on the line of the word before it and showed four lines; the author: "apply and commit". A balloon-shape line in the 1b-2 block (replaces the five lines of 7.97). SVG preview: with balloon lines, a lone "!", "?" or ":" stays with the word before it (no other balloon changes). |
 
 ---
 
@@ -1533,6 +1535,7 @@ Split from panel 1b in 7.3 (author decision, Section 23.B).
 - In frame: the same as 1b-1.
 - Characters: the King turns towards Alfil and gestures to him with an open hand, mouth open; Alfil looks back at the King, attentive, mouth closed. Regina looks at the King. Caballo faces right (towards the centre).
 - Balloon shape (author decision in 7.97, balloon check): five lines, so Alfil's mitre is uncovered.
+- Balloon shape (author decision in 7.98; replaces the five lines of 7.97): four lines, the exclamation mark kept at the end of the second line, so the second sentence starts on its own line ("Want, ik voel het aan mijn viltje, deze / roemrijke partij win ik vandaag ! / Alfil, zijn ook onze pionnen klaar / voor deze heldhaftige strijd ?").
 - Balloon (White King): Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?
 
 ### Panel 1c
@@ -5638,3 +5641,4 @@ Items that need a decision from the author.
 | 7.95 | - | 2b: the officers react to the mutiny in character; the c1 bishop is sly. |
 | 7.96 | - | 12a: zoomed in on the King, no pawn faces; the King wondering, looking up towards his raised hand. |
 | 7.97 | - | Balloon check: ten balloons fine-tuned (5c, 11d, 10b, 1b-2, 2c, 10a, 10i, 15d, 7b, 6b). |
+| 7.98 | - | 1b-2: four balloon lines, the "!" on the second line. |

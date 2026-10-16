@@ -295,7 +295,8 @@ function drawPiece(parent, p, sw) {
 // so every balloon keeps its approved lines; the balloon width is then measured in the embedded Comic Neue (bible 7.92).
 // n (b.lines): break into at most n lines, measured in Comic Neue, as narrow as possible (15a)
 function wrap(text, fs, maxW, n) { const cv = wrap.cv || (wrap.cv = document.createElement("canvas").getContext("2d"));
-  const brk = mw => { const words = text.split(" "), lines = []; let cur = ""; for (const w of words) { const t = cur ? cur + " " + w : w; if (cv.measureText(t).width > mw && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur); return lines; };
+  // with n: a lone punctuation mark ("!", "?", ":") stays on the line of the word before it (1b-2, bible 7.98)
+  const brk = mw => { const words = n ? text.split(" ").reduce((a, w) => (/^[!?:;.]+$/.test(w) && a.length ? a[a.length - 1] += " " + w : a.push(w), a), []) : text.split(" "), lines = []; let cur = ""; for (const w of words) { const t = cur ? cur + " " + w : w; if (cv.measureText(t).width > mw && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur); return lines; };
   const wid = lines => Math.max(...lines.map(l => cv.measureText(l).width)), NEUE = `700 ${fs}px 'Comic Neue','Comic Sans MS',cursive`;
   if (n) { cv.font = NEUE; let lines = brk(1e4); for (let mw = 60; mw < 2000; mw += 4) { const l = brk(mw); if (l.length <= n) { lines = l; break; } } const w = wid(lines); return { lines, w0: w, w }; }
   cv.font = `700 ${fs}px 'Comic Sans MS',cursive`;

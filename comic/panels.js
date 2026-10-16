@@ -22,7 +22,7 @@ window.PANELS = [
   balloons: [{ who: "koning", text: "Dat \"Dieje van den overkant\" al maar zeker is dat hij nu al begint te bibberen." }] },
 { id: "1b-2", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
   cast: { koning: { expr: "proud", talk: true, lookAt: "alfil", gest: "open-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
-  balloons: [{ who: "koning", lines: 5, text: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" }] },
+  balloons: [{ who: "koning", lines: 4, text: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" }] },
 { id: "1c", scene: 1, status: A, state: 0, cam: { from: [4.85, -1.55, 2.15], at: [4.1, 8, 0.05], f: 560 },
   cast: { alfil: { talk: true, gest: "raise-r" }, koning: {}, a7: { expr: "worried" }, a8: { expr: "worried" }, b7: { expr: "worried" }, b8: { expr: "worried" }, c7: { expr: "worried" }, c8: { expr: "worried" }, d7: { expr: "worried" }, d8: { expr: "worried" }, e7: { expr: "worried" }, f7: { expr: "worried" }, f8: { expr: "worried" }, g7: { expr: "worried" }, g8: { expr: "worried" }, h7: { expr: "worried" }, h8: { expr: "worried" }, bking: { expr: "calm" } },  // black pieces a little scared (bible 7.21); the Black King stays calm
   balloons: [{ who: "alfil", text: "Jawel Sire, zij wachten op uw bevel !" }] },
