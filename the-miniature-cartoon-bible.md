@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.10
+Version 8.11
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -117,6 +117,7 @@ Version 8.07 adds a closing page after the story: the game with its name, an epi
 Version 8.08 shortens the drawings line of the colophon (author decision).
 Version 8.09 puts the game on the closing page on a mini club scoresheet and lays the page out in one column (author decisions).
 Version 8.10 simplifies the closing page: the epilogue line at the top, the scoresheet in the centre, the colophon at the foot; no picture (author decisions).
+Version 8.11 adds the back cover: a blurb in cream on navy, "De Miniatuur" small at the foot (author decisions).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1017,6 +1018,16 @@ Added in 8.07 (author decisions; first version). The last page of the album, aft
 - Names: "S. Gorts" on the cover, "Sven Gorts" everywhere else (author decision in 8.07).
 - The source (author, 8.07): the text was first published in 2012 as an article, written in the form of a play; this bible calls it "the play".
 
+## Back Cover
+Added in 8.11 (author decisions). The outside of the back cover, after the closing page; it belongs to the front cover.
+- Colours as the front cover: the navy-blue page (#1F3A5F) with cream lettering (#F4E4C1) in Comic Neue.
+- The blurb, centred on the page, the lines left-aligned and balanced (no paragraph ends on a lone word); four paragraphs, the last one in italics as the tagline. It quotes no text from the story and gives away neither the board's defects, nor the length of the game, nor the ending:
+  "Op de schaakclub staat een bord dat al heel wat partijen heeft overleefd. De stukken kennen het als hun broekzak: elk veld, elk hoekje, elke plek waar je liever niet staat."
+  "Vandaag wil de witte koning schitteren. Hij heeft een plan, een opening en een rotsvast vertrouwen in zichzelf. Alleen hebben zijn onderdanen daar zo hun eigen gedachten over."
+  "Want wat doe je als je bevelen moet opvolgen op een bord dat je liever niet betreedt?"
+  "Een hedendaagse klucht over trots, koppigheid en goede raad die niemand wil horen, gespeeld door de stukken zelf."
+- At the foot, small: "De Miniatuur". No picture, no author name (the name is on the front), no barcode or ISBN.
+
 ---
 
 # SECTION 14 - FORBIDDEN ELEMENTS
@@ -1301,6 +1312,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.08 | Author on the closing page: "For the text make that: Tekeningen: Claude (Anthropic)". Section 13, Closing Page (colophon line); old wording in Appendix A. |
 | 8.09 | Author: "We have our colophon page. What can we do to make it really cool ?" Claude proposed a club scoresheet, a callback in Alfil's picture (the new board, or paprika chips), a cola ring on the paper; the author: "I like this idea, make a mini club scoresheet ... show me a prototype". Alfil delighted and with a thumbs up was tried and dropped ("Lets 't step back to just the wink"). Then "Let's review the layout of the page What can be improved ?": Claude proposed grouping the epilogue line with the picture, one column width, balanced margins, a smaller grey colophon; the author: "Yes make a preview with these improvements", then "apply". Section 13, Closing Page (the game line replaced; a layout line); old wording in Appendix A. |
 | 8.10 | Author: "Is the colophon page consistent in style with the rest of the comic. What could we do to improve ?" Claude: the loose epilogue line, the floating picture and the thin-lined scoresheet follow book rules, not comic rules; proposed the picture as a full-width last panel with the line in a caption box and "Einde" in a white box, and comic outlines on the sheet. The author ("the ½ notation is fine"): "This doesnt work. What if ? We move the text ... to the top of the page, Followed by the score sheet, Drop the last image with Alfil, End with the rest of the colofon"; "Einde - just drop it altogether". Then spacing: "I feel the visual spacing can still be improved" (S1 even rhythm, S2 grouped), "Show the score sheet more centered" (S3), "And move the text 'Enkele weken later ...' more upward", "apply". Section 13, Closing Page (the picture line and the layout line replaced); old wording in Appendix A. The wink expression stays in the renderer, unused. |
+| 8.11 | Author on page numbers: "Do I really need numbers ?"; Claude: not for a 12-page album read in one go (decision: none). Author: "What is your suggestion for the back cover ?"; Claude proposed navy and cream with a blurb and a vignette; the author: "Suggest me a somewhat more abstract blurb", "Don't give away that the game lasts only 6 moves", "Lets say I want more text - but don't use literal text from the story." (versions 1 and 2), "Generate a back cover based on Version 1", then "Personally I would leave out the vignette. For the text I would reformulate: 'Op de schaakclub' 'dat al heel wat partijen heeft overleefd.' 'Vandaag wil de witte koning schitteren' 'Alleen hebben zijn onderdanen daar zo hun eigen gedachten over.'", and "apply". New: Section 13, Back Cover. SVG preview: the back cover as the last album page (page-13-back.svg). |
 
 ---
 
@@ -5700,3 +5712,4 @@ Items that need a decision from the author.
 | 8.08 | - | Colophon: "Tekeningen: Claude (Anthropic)". |
 | 8.09 | - | Closing page: the game on a mini club scoresheet; one column, the epilogue with the picture, a smaller grey colophon. |
 | 8.10 | - | Closing page: the epilogue line at the top, the scoresheet centred, the colophon at the foot; no picture, no Einde. |
+| 8.11 | - | Back cover: the blurb on navy, "De Miniatuur" at the foot; no page numbers. |

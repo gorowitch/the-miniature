@@ -128,12 +128,35 @@ pages.forEach((rowsOnPage, pi) => {
     .forEach((t, i) => txt(t, (PW - COL * K) / 2 + 20, 1997 + i * 50, 30, { "text-anchor": "start", fill: GREY }));
 })();
 
+// Back cover (author decisions, bible 8.11): the blurb in cream on the navy of the front cover, centred on the page; "De Miniatuur" small
+// at the foot; no picture and no author name (the name is on the front).
+(function backCover() {
+  const s = newPage("Achterkant"), CQ = new URLSearchParams(location.search), CV = { bg: CQ.get("bg") || "#1f3a5f", tf: CQ.get("tf") || "#f4e4c1", ink: CQ.get("ink") || "#f4e4c1" };
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: CV.bg }, s);
+  const txt = (t, x, y, fs, o) => { const e = el("text", Object.assign({ x, y, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: CV.ink }, o || {}), s); e.textContent = t; return e; };
+  const FS = 50, LH = 72, GAP = 40, MAXW = 1240;
+  const P = ["Op de schaakclub staat een bord dat al heel wat partijen heeft overleefd. De stukken kennen het als hun broekzak: elk veld, elk hoekje, elke plek waar je liever niet staat.",
+    "Vandaag wil de witte koning schitteren. Hij heeft een plan, een opening en een rotsvast vertrouwen in zichzelf. Alleen hebben zijn onderdanen daar zo hun eigen gedachten over.",
+    "Want wat doe je als je bevelen moet opvolgen op een bord dat je liever niet betreedt?",
+    "Een hedendaagse klucht over trots, koppigheid en goede raad die niemand wil horen, gespeeld door de stukken zelf."];
+  const cv = document.createElement("canvas").getContext("2d"); cv.font = `700 ${FS}px 'Comic Neue'`;
+  const brk = (p, mw) => { const out = []; let line = ""; for (const w of p.split(" ")) { const t = line ? line + " " + w : w; if (cv.measureText(t).width > mw && line) { out.push(line); line = w; } else line = t; } if (line) out.push(line); return out; };
+  // balanced lines: the narrowest width that keeps the same number of lines, so no paragraph ends on a lone word
+  const bal = p => { const n = brk(p, MAXW).length; let mw = MAXW; while (mw > 400 && brk(p, mw - 10).length === n) mw -= 10; return brk(p, mw); };
+  const LINES = P.map(bal), hBlock = LINES.flat().length * LH + (P.length - 1) * GAP;
+  const xb = (PW - Math.max(...LINES.flat().map(l => cv.measureText(l).width))) / 2;   // the block centred on the page, the lines left-aligned
+  let y = (PH - hBlock) / 2 + 40;
+  LINES.forEach((ls, pi) => { ls.forEach(l => { txt(l, xb, y, FS, { "text-anchor": "start", "font-style": pi === P.length - 1 ? "italic" : "normal" }); y += LH; }); y += GAP; });   // the last paragraph, the tagline, in italics
+  txt("De Miniatuur", PW / 2, 2220, 64, { fill: CV.tf });
+})();
+
 // Export mode (index.html?export=1): every page and every panel as SVG source in one JSON block,
 // read by headless Edge (--dump-dom) and written to comic/svg/ by export-svg.ps1.
 if (new URLSearchParams(location.search).has("export")) {
   const XML = '<?xml version="1.0" encoding="UTF-8"?>\n', ser = s => XML + new XMLSerializer().serializeToString(s);
   const files = {};
-  document.querySelectorAll(".page > svg").forEach((s, i) => { files["pages/page-" + String(i).padStart(2, "0") + (i ? "" : "-cover") + ".svg"] = ser(s); });
+  const all = document.querySelectorAll(".page > svg");   // the first page is the front cover, the last the back cover (bible 8.11)
+  all.forEach((s, i) => { files["pages/page-" + String(i).padStart(2, "0") + (i ? (i === all.length - 1 ? "-back" : "") : "-cover") + ".svg"] = ser(s); });
   window.PANELS.forEach((P, i) => {
     const s = document.createElementNS(NS, "svg"); R.renderPanel(s, P, { mark: true });
     const [, , w, h] = s.getAttribute("viewBox").split(" "); s.setAttribute("width", w); s.setAttribute("height", h);
