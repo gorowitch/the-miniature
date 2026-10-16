@@ -93,6 +93,35 @@ pages.forEach((rowsOnPage, pi) => {
   });
 });
 
+// Closing page (author decision, bible 8.07): the game with its name, the epilogue line, Alfil winking beside the board with "Einde",
+// and the colophon. It makes the inside of the album 12 pages (the cover already serves as the title page).
+(function closing() {
+  const s = newPage("Colofon"), F = "'Comic Neue','Comic Sans MS',cursive", INK = "#17110d";
+  const txt = (t, x, y, fs, anchor) => { const e = el("text", { x, y, "text-anchor": anchor || "middle", "font-family": F, "font-weight": 700, "font-size": fs, fill: INK }, s); e.textContent = t; return e; };
+  // the game in three columns, so moves 1 and 4, 2 and 5, 3 and 6 line up; the block centred on the page, its name above it
+  const ROWS = [["1. e3 d5", "2. Ld3 e6", "3. Ph3 Ld7"], ["4. Dh5 Pe7", "5. Pg5 g6", "6. Pxh7 gxh5"]], FS = 58, GAP = 90;
+  const cv = document.createElement("canvas").getContext("2d"); cv.font = `700 ${FS}px 'Comic Neue'`;
+  const colW = [0, 1, 2].map(c => Math.max(...ROWS.map(r => cv.measureText(r[c]).width)));
+  const total = colW.reduce((a, b) => a + b, 0) + GAP * 2; let x = (PW - total) / 2;
+  txt("De Miniatuur", x, 238, 58, "start").setAttribute("font-style", "italic");   // the name of the game, not a page title
+  el("line", { x1: x, y1: 254, x2: x + total, y2: 254, stroke: INK, "stroke-width": 2.5 }, s);
+  colW.forEach((w, c) => { ROWS.forEach((r, ri) => txt(r[c], x, 330 + ri * 82, FS, "start")); x += w + GAP; });
+  txt("1/2 - 1/2", PW / 2, 520, 66);
+  // the epilogue line (the author's own wording, not in the article)
+  ["Enkele weken later", "kocht de schaakclub", "nieuwe borden."].forEach((t, i) => txt(t, PW / 2, 680 + i * 82, 64));
+  // Alfil alone beside the board, on the table, winking at the reader; "Einde" in a white caption box
+  const P = { id: "closing", scene: 16, state: 0, clean: true, clock: false, omit: "abcdefgh".split("").flatMap(f => [1, 2, 7, 8].map(n => f + n)),
+    stage: [{ id: "al", ch: "B", role: "alfil", at: [-1.3, 2.5] }], cam: { from: [-1.3, 6.2, 1.7], at: [-1.3, 2.5, 0.62], f: 1150 },
+    cast: { alfil: { expr: "wink", back: false } }, balloons: [] };
+  const box = el("svg", { x: 450, y: 1010, width: 800, height: 570 }, s); R.renderPanel(box, P, { noFont: true });
+  { const bw = 150, bh = 62, bx = 800 - 24 - bw, by = 570 - 24 - bh; el("rect", { x: bx, y: by, width: bw, height: bh, fill: "#fff", stroke: INK, "stroke-width": 3 }, box);
+    const e = el("text", { x: bx + bw / 2, y: by + bh / 2 + 15, "text-anchor": "middle", "font-family": F, "font-weight": 700, "font-size": 42, fill: INK }, box); e.textContent = "Einde"; }
+  // the colophon: left-aligned lines, the block centred on the page
+  const C = ["Tekst: Sven Gorts, naar het artikel De Miniatuur (2012)", "Tekeningen: gegenereerd met Claude (Anthropic)", "Lettertype: Comic Neue", "Eerste uitgave, oktober 2026", "© 2026 Sven Gorts. Alle rechten voorbehouden."];
+  cv.font = "700 34px 'Comic Neue'"; const cx0 = (PW - Math.max(...C.map(t => cv.measureText(t).width))) / 2;
+  C.forEach((t, i) => txt(t, cx0, 1880 + i * 58, 34, "start"));
+})();
+
 // Export mode (index.html?export=1): every page and every panel as SVG source in one JSON block,
 // read by headless Edge (--dump-dom) and written to comic/svg/ by export-svg.ps1.
 if (new URLSearchParams(location.search).has("export")) {

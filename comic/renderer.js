@@ -107,6 +107,7 @@ function face(g, x, y, r, col, o) {
     else mk("ellipse", { cx: x, cy: my+r*.12, rx: r*.27, ry: r*.36, fill: "#4a130d", stroke: INK, "stroke-width": r*.05 }, g);
     return; }
   if (o.queenBrows && E === "neutral") for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.66} ${y-r*.5} q${-s*r*.22} ${-r*.13} ${-s*r*.46} ${-r*.03}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);   // the queens, neutral: gently arched brows, so a listening queen does not seem to frown (bible 8.05)
+  else if (E === "wink") { brow(-1, r*.08, 0); browArc(1, r*.24); }   // wink: one eye shut in a happy arc, the other open, a small smile (Alfil on the closing page, bible 8.07)
   else if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
   else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "grin" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "wondering") { browArc(-1, r*.3); browArc(1, r*.14); }   // wondering: brows raised unevenly, the eyes looking up (the King in 12a, bible 7.96)
@@ -119,6 +120,8 @@ function face(g, x, y, r, col, o) {
   if (E === "oneeye") {   // waking up: one eye snaps open, the other still shut (the a1 rook in 15a, bible 7.47)
     mk("path", { d: `M${x-r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g);
     mk("ellipse", { cx: x+r*.32, cy: y-r*.12, rx: r*.27, ry: r*.36, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g); mk("circle", { cx: x+r*.32, cy: y-r*.08, r: r*.1, fill: INK }, g);
+  } else if (E === "wink") { mk("path", { d: `M${x-r*.32-r*.2} ${y-r*.08} q${r*.2} ${-r*.22} ${r*.4} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g);
+    mk("ellipse", { cx: x+r*.32, cy: y-r*.12, rx: r*.24, ry: r*.29, fill: "#fff", stroke: INK, "stroke-width": r*.05 }, g); mk("circle", { cx: x+r*.32, cy: y-r*.08, r: r*.12, fill: INK }, g); mk("circle", { cx: x+r*.28, cy: y-r*.12, r: r*.035, fill: "#fff" }, g);
   } else if (closed) { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.08} q${r*.2} ${r*.14} ${r*.4} 0`, stroke: INK, "stroke-width": r*.09, fill: "none", "stroke-linecap": "round" }, g); }
   else if (E === "amused" || E === "relieved") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.32-r*.2} ${y-r*.04} q${r*.2} ${-r*.26} ${r*.4} 0`, stroke: INK, "stroke-width": r*.1, fill: "none", "stroke-linecap": "round" }, g); }  // eyes squeezed with laughter
   else {
@@ -154,7 +157,7 @@ function face(g, x, y, r, col, o) {
       : (E === "despair" || E === "angry" || E === "furious" || E === "disappointed") ? `M${x-r*.24} ${my+r*.08} q${r*.24} ${-r*.18} ${r*.48} 0`
       : (E === "disgusted") ? `M${x-r*.24} ${my+r*.04} q${r*.08} ${-r*.1} ${r*.16} 0 q${r*.08} ${r*.1} ${r*.16} 0 q${r*.08} ${-r*.1} ${r*.16} 0`   // disgusted: a wavy grimace (the pawns staring at the cola, bible 7.86)
       : (E === "offended" || E === "stubborn") ? `M${x-r*.2} ${my} l${r*.4} ${-r*.03}`
-      : (E === "smug") ? `M${x-r*.2} ${my} q${r*.26} ${r*.12} ${r*.36} ${-r*.08}`
+      : (E === "smug" || E === "wink") ? `M${x-r*.2} ${my} q${r*.26} ${r*.12} ${r*.36} ${-r*.08}`
       : (E === "sigh") ? `M${x-r*.1} ${my} q${r*.1} ${r*.1} ${r*.2} 0`
       : `M${x-r*.2} ${my} q${r*.2} ${r*.11} ${r*.4} 0`;
     if (!o.must || E === "despair" || E === "worried" || E === "angry" || E === "disappointed") mk("path", { d, stroke: INK, "stroke-width": r*.085, fill: "none", "stroke-linecap": "round" }, g);
