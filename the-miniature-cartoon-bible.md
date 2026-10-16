@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 7.99
+Version 8.00
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -106,6 +106,7 @@ Version 7.96 zooms panel 12a in on the King and gives him a wondering look (auth
 Version 7.97 fine-tunes ten dialogue balloons after a balloon check: fewer lines where a balloon covered a hat, and balanced lines where one word stood alone (author decision).
 Version 7.98 gives the 1b-2 balloon four lines, with the exclamation mark on the second line (author decision).
 Version 7.99 gives the 3a-1 balloon three lines, clear of the sleeping rook (author decision).
+Version 8.00 gives the 1b-1 balloon three lines, clear of Alfil's mitre (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -1268,6 +1269,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 7.97 | Author: "We are getting close to production quality Run an extra check to see if there are text balloons that can use some fine tuning." Claude measured all 64 dialogue balloons (a single word on the last line, five or more lines, touching the border, covering a face or hat, long tails, overlaps), reviewed the flagged panels and proposed fixes in two groups (balloons covering a hat; a lone last word); previews showed each panel now and with a different number of lines. The author chose: 5c, 11d, 10b (four lines), 1b-2 (five lines), 2c (one line), and balanced lines in 10a, 10i, 15d, 7b, 6b; not taken: 1b-1, 3a-1, 4b, 10g. A balloon-shape line in each of the ten panel blocks. SVG preview: balloon lines. |
 | 7.98 | Author on 1b-2: "Here I believe the exclamation mark can fit in the 2nd line. Can you try a preview ?" (in 7.97 four lines were rejected because a line would start with "!"). Claude kept a lone punctuation mark on the line of the word before it and showed four lines; the author: "apply and commit". A balloon-shape line in the 1b-2 block (replaces the five lines of 7.97). SVG preview: with balloon lines, a lone "!", "?" or ":" stays with the word before it (no other balloon changes). |
 | 7.99 | Author on 3a-1 (left as it was in 7.97): "Could you try a preview with 3 lines here ?" Claude showed three placements; the author: "Keep three lines but move the text balloon further right so it doesn't interfere with the rook sleeping" (R1 to R4), then "R1 is fine accept and commit". A balloon-shape line in the 3a-1 block. |
+| 8.00 | Author on 1b-1 (left as it was in 7.97): "I believe there is enough room voor a three lines balloons Show me a preview", then "accept". A balloon-shape line in the 1b-1 block. |
 
 ---
 
@@ -1529,6 +1531,7 @@ Split from panel 1b in 7.3 (author decision, Section 23.B).
 - Camera: from Black's side, closer than 1a, centred between Alfil (f1) and the White King (e1).
 - In frame: Alfil (left of centre) and the King (right of centre); Caballo (g1) fully in frame at the left, Regina (d1) fully in frame at the right; the bishop on c1 and the rook on h1 partly at the frame edges. The pawns on g2, f2, e2 and d2 cross the bottom of the frame in front of them.
 - Characters: the King, proud and mocking, mouth open mid-speech, looks straight ahead past the camera, towards the black army ("Dieje van den overkant"), with a dismissive wave of one hand. Alfil, Regina and Caballo look at the King, mouths closed. Caballo faces right (towards the centre).
+- Balloon shape (author decision in 8.00): three lines ("Dat "Dieje van den overkant" / al maar zeker is dat hij nu / al begint te bibberen."), clear of the tip of Alfil's mitre; its tail short, between the mitre and the crown, to the King's mouth.
 - Balloon (White King): Dat "Dieje van den overkant" al maar zeker is dat hij nu al begint te bibberen.
 
 ### Panel 1b-2
@@ -5646,3 +5649,4 @@ Items that need a decision from the author.
 | 7.97 | - | Balloon check: ten balloons fine-tuned (5c, 11d, 10b, 1b-2, 2c, 10a, 10i, 15d, 7b, 6b). |
 | 7.98 | - | 1b-2: four balloon lines, the "!" on the second line. |
 | 7.99 | - | 3a-1: three balloon lines, clear of the sleeping rook. |
+| 8.00 | - | 1b-1: three balloon lines, clear of Alfil's mitre. |

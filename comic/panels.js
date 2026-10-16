@@ -19,7 +19,7 @@ window.PANELS = [
   balloons: [{ who: "koning", w: 740, x: 30, text: "Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd." }] },
 { id: "1b-1", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
   cast: { koning: { expr: "smug", talk: true, gest: "wave-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
-  balloons: [{ who: "koning", text: "Dat \"Dieje van den overkant\" al maar zeker is dat hij nu al begint te bibberen." }] },
+  balloons: [{ who: "koning", lines: 3, text: "Dat \"Dieje van den overkant\" al maar zeker is dat hij nu al begint te bibberen." }] },
 { id: "1b-2", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
   cast: { koning: { expr: "proud", talk: true, lookAt: "alfil", gest: "open-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
   balloons: [{ who: "koning", lines: 4, text: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" }] },
