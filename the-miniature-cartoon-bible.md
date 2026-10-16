@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.04
+Version 8.05
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -111,6 +111,7 @@ Version 8.01 gives the 4b balloon four lines (author decision).
 Version 8.02 gives the 10g balloon a narrower shape against the left border, clear of the King (author decision).
 Version 8.03 gives Alfil a worried face in panel 4c-1 and Regina a friendly face in panel 6a (author decisions).
 Version 8.04 gives listeners a reaction where the text invites one: Caballo doubtful in 9a, Alfil and Regina uneasy in 7a, Alfil beaming in 15b (author decisions).
+Version 8.05 gives both queens thinner eyebrows in every expression, gently arched on a neutral face, so Regina no longer seems to frown while she listens (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -653,6 +654,7 @@ Each army reads at a glance as one kingdom: one dominant costume colour per army
 - Practical and intelligent.
 - Often correct.
 - Recurring interest in the Black Rook on h8.
+- Eyebrows (author decision in 8.05): thinner than the other pieces' eyebrows, in every expression; on her neutral (listening) face gently arched, so she does not seem to frown. The same rule applies to the Black Queen. In keeping with "elegant and regal" and "voice of reason".
 - Regina and the h8 rook (author decision in 7.34): subtle looks and a light blush from 11g to 14f, obvious in 14g, dropped from 15a (see Black Rook (h8) below).
 - Moves easily across the board with her long moves.
 - Captured on h5 (6...gxh5).
@@ -725,7 +727,7 @@ Drafted from the play and existing canon only. They become canon after the autho
 - The a1 rook (author decision in 7.45, approved for this rook only): sleepy because he never takes part in the game; yawns in 2b, asleep until 15a, startled awake by "mat in één" (Section 10, Running Gags).
 - **White knight (b1):** Caballo's counterpart on the other wing; never moves in the game. Calmer than Caballo, faces the centre like every knight. Officer costume.
 - **White bishop (c1):** Alfil's colleague on the queenside; never moves in the game. A quiet scholar like Alfil, but without paprika stains, which stay unique to Alfil. Officer costume.
-- **Black Queen (d8):** composed and elegant, a mirror of the Black King's calm. Never moves in the game. Officer costume in the darker black colours.
+- **Black Queen (d8):** composed and elegant, a mirror of the Black King's calm. Never moves in the game. Officer costume in the darker black colours. Eyebrows as Regina's (author decision in 8.05): thinner in every expression, gently arched on her neutral face.
 - **Black bishops (c8, f8):** disciplined like their king. The c8 bishop makes the only black bishop move of the game (3...Ld7); the f8 bishop never moves (Caballo's offer to capture on f8 is never played).
 - **Black knights (b8, g8):** the g8 knight is "Dieje van den overkant zijnen ezel" in the King's words: he goes to e7 (4...Pe7) and avoids f6, which makes the King suspect a stain there. Faces the centre like every knight. The b8 knight never moves.
 - **Black rook (a8):** a plain, dependable rook, in contrast to the handsome h8 rook who is the object of Regina's interest. Never moves in the game.
@@ -1278,6 +1280,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.02 | Author on 10g (left as it was in 7.97): "Here a less wide balloon with possibly even a line more could work. Also the balloon can be moved to the left so it uncovers the king's face". Claude showed N1 (six lines, narrower), N2 (seven lines), N3 (eight lines), all against the left border; the author: "N1 is perfect - apply". A balloon-shape line in the 10g block. |
 | 8.03 | Author: "Does the story allow for extra opportunities to use more expressive faces based on the story text ?" Claude compared each line with the faces drawn and listed speakers and listeners with a neutral face where the text gives them something to feel. Author: "Show me a preview for the Speakers whose face doesn't match their line yet" (4c-1 Alfil worried, 4c-2 Alfil pleading, 6a Regina smug, 10i Regina sly, 15e Caballo smug); the author: "4c-1 agreed", then "6a give me a preview with a friendlier face" (G1 friendly, brows raised; G2 cheerful, smiling eyes; G3 calm) and "G1 accept". Panel blocks 4c-1 and 6a (Characters) and manifest field 8 of both; old wording in Appendix A. |
 | 8.04 | Author: "Give me now a preview for '2. Listeners whose reaction the text invites'". Claude showed 9a (Caballo doubtful), 7a (Alfil and Regina uneasy), 15b (Alfil pleased, eyes closed), 1b-2 (Regina unimpressed), 10c and 10h (Regina sceptical), 11d (Regina unconvinced); the author: "9a, 7a accept" and, for 15b, "suggest an alternative where alfil has his eyes open" (A1 proud, A2 beaming, A3 pleased with himself), then "15b pick A2 beaming - accept". Panel blocks 9a, 7a and 15b (Characters) and manifest field 6 of each; old wording in Appendix A. |
+| 8.05 | Author: "For the scenes with the queen generate some suggestions where the queen doesn't look mean". Claude found the cause: her neutral face (about 35 panels) used the short, thick eyebrows of the other pieces, which sit just under the crown band and slant down, so she seemed to frown; prototypes R1 (soft arched brows), R2 (thin arched brows), R3 (R2 with lashes). Author: "Is R2 consitent with the rest of the story ?" Claude: yes with the character (elegant, regal, voice of reason), but thin brows only on the neutral face would flicker between panels; proposed thin brows in every expression and the arch on the neutral face, and asked about the Black Queen. Author: "Let's pick R2, apply the eyebrows consistenly and include the same rules to the black queen." Lines under Regina (Section 4) and in the Black Queen entry. SVG preview: the queens' eyebrows thinner in every expression, arched on a neutral face. |
 
 ---
 
@@ -5667,3 +5670,4 @@ Items that need a decision from the author.
 | 8.02 | - | 10g: a narrower balloon against the left border, clear of the King. |
 | 8.03 | - | 4c-1: Alfil worried. 6a: Regina friendly. |
 | 8.04 | - | 9a: Caballo doubtful. 7a: Alfil and Regina uneasy. 15b: Alfil beaming. |
+| 8.05 | - | Both queens: thinner eyebrows, arched on a neutral face. |

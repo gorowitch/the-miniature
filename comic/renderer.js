@@ -76,7 +76,7 @@ let TURN_N = 0;  // ids for the clip paths of half-turned faces
 let BORED_ID = 0;
 function face(g, x, y, r, col, o) {
   const W = W_[col], lx = (o.look || 0), E = o.expr || "neutral", talk = !!o.talk, brC = col === "w" ? "#5a3a1e" : "#efe2cf";
-  const sw = r * 0.13;
+  const sw = r * 0.13 * (o.queenBrows ? 0.6 : 1);   // the queens: thinner eyebrows in every expression (bible 8.05)
   const brow = (s, dy, slope) => mk("path", { d: `M${x+s*r*.64} ${y-r*.42+dy} l${-s*r*.46} ${slope}`, stroke: brC, "stroke-width": sw, "stroke-linecap": "round", fill: "none" }, g);
   const browArc = (s, h) => mk("path", { d: `M${x+s*r*.66} ${y-r*.48} q${-s*r*.22} ${-h} ${-s*r*.46} ${-r*.06}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
   // o.bored 0..9: the c1 bishop growing bored during the King's monologue (10b to 11d), by eyes, eyebrows and mouth only;
@@ -106,7 +106,8 @@ function face(g, x, y, r, col, o) {
     else if (b <= 8) mk("ellipse", { cx: x+r*.04, cy: my+r*.04, rx: r*.12, ry: r*(b === 7 ? .06 : .09), fill: "#4a130d", stroke: INK, "stroke-width": r*.04 }, g);
     else mk("ellipse", { cx: x, cy: my+r*.12, rx: r*.27, ry: r*.36, fill: "#4a130d", stroke: INK, "stroke-width": r*.05 }, g);
     return; }
-  if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
+  if (o.queenBrows && E === "neutral") for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.66} ${y-r*.5} q${-s*r*.22} ${-r*.13} ${-s*r*.46} ${-r*.03}`, stroke: brC, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);   // the queens, neutral: gently arched brows, so a listening queen does not seem to frown (bible 8.05)
+  else if (E === "startled") { for (const s of [-1, 1]) mk("path", { d: `M${x+s*r*.7} ${y-r*.6} q${-s*r*.24} ${-r*.34} ${-s*r*.5} ${-r*.08}`, stroke: brC, "stroke-width": sw * 1.15, fill: "none", "stroke-linecap": "round" }, g); }   // startled: eyebrows shot up high (the a1 rook in 15a, bible 7.47)
   else if (E === "surprised" || E === "proud" || E === "pleading-up" || E === "amused" || E === "grin" || E === "relieved" || E === "yawn") { browArc(-1, r*.22); browArc(1, r*.22); }
   else if (E === "wondering") { browArc(-1, r*.3); browArc(1, r*.14); }   // wondering: brows raised unevenly, the eyes looking up (the King in 12a, bible 7.96)
   else if (E === "angry" || E === "furious" || E === "heroic" || E === "stubborn") { const k = E === "furious" ? .3 : E === "stubborn" ? .08 : .22; brow(-1, 0, r*k); brow(1, 0, r*k); }
@@ -249,7 +250,7 @@ const SPR = {
     for (const [sw, cl] of [[7.4, INK], [5.6, c.hair]]) mk("path", { d: "M-11 -52 C-17 -42 -16 -32 -11 -27 M11 -52 C17 -42 16 -32 11 -27", stroke: cl, "stroke-width": sw, fill: "none", "stroke-linecap": "round" }, g);
     mk("circle", { cx: 0, cy: -50, r: 10.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.6 }, g);
     if (o.back) { mk("path", { d: "M-11 -54 C-12 -44 -6 -38 0 -37 C6 -38 12 -44 11 -54 C8 -62 -8 -62 -11 -54Z", fill: c.hair, stroke: INK, "stroke-width": 1.2 }, g); }
-    else { mk("path", { d: "M-11 -53 C-8 -64 8 -64 11 -53 C6 -59 -6 -59 -11 -53Z", fill: c.hair, stroke: INK, "stroke-width": 1 }, g); face(g, 0, -49, 10.5, col, o); }
+    else { mk("path", { d: "M-11 -53 C-8 -64 8 -64 11 -53 C6 -59 -6 -59 -11 -53Z", fill: c.hair, stroke: INK, "stroke-width": 1 }, g); face(g, 0, -49, 10.5, col, Object.assign({}, o, { queenBrows: true })); }
     { const cg = crownG(g, -58, CROWN_SQ, CROWN_DYQ); crown(cg, -58, col, o.role === "regina", c); for (const x of [-12, 0, 12]) mk("circle", { cx: x, cy: x ? -69 : -71, r: 1.8, fill: CROWN_TRIM ? c.trim : W_[col].f, stroke: INK, "stroke-width": 1 }, cg); } },
   k(g, col, c, o) { base(g, col); robe(g, 44, 7, c, o.back); mk("circle", { cx: 0, cy: -57, r: 11.5, fill: W_[col].f, stroke: INK, "stroke-width": 1.7 }, g);
     if (o.role === "koning" && !o.back) for (const [x, cc] of [[-6, "#2e7a3a"], [5, "#1f4e8c"], [9, "#b8202e"]]) { mk("path", { d: `M${x-1.6} -38 L${x} -33 L${x+1.6} -38 Z`, fill: cc, stroke: INK, "stroke-width": .6 }, g); mk("circle", { cx: x, cy: -31.5, r: 2, fill: "#e2b33a", stroke: INK, "stroke-width": .6 }, g); }
