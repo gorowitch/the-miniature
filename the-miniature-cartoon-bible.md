@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.05
+Version 8.06
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -112,6 +112,7 @@ Version 8.02 gives the 10g balloon a narrower shape against the left border, cle
 Version 8.03 gives Alfil a worried face in panel 4c-1 and Regina a friendly face in panel 6a (author decisions).
 Version 8.04 gives listeners a reaction where the text invites one: Caballo doubtful in 9a, Alfil and Regina uneasy in 7a, Alfil beaming in 15b (author decisions).
 Version 8.05 gives both queens thinner eyebrows in every expression, gently arched on a neutral face, so Regina no longer seems to frown while she listens (author decision).
+Version 8.06 makes three proofreading corrections to the dialogue and the play text, 11d, 11e and 15b (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -149,7 +150,7 @@ Not part of the approved source:
 The production process must never:
 - Invent dialogue or narration.
 - Paraphrase, translate, shorten, expand or modernise dialogue.
-- Correct or alter spelling, punctuation, capitalisation or grammar in approved dialogue (including the play's own spacing variants, quote marks and "Dieje van de overkant").
+- Correct or alter spelling, punctuation, capitalisation or grammar in approved dialogue (including the play's own spacing variants and quote marks). Exception: the three text corrections the author made in 8.06 (11d, 11e, 15b), which apply to the play text in Section 1 as well.
 - Invent, remove, reorder, combine or duplicate panels.
 - Move dialogue between panels.
 - Change the identity of a speaker (Section 19.F).
@@ -256,7 +257,7 @@ Jamaar Sire, uw officieren hebben misschien wel een punt.
 
 
 Koning:
-Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 4. Dh5
 4. ... Pe7
 
@@ -280,7 +281,7 @@ Alfil:
 Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één.
 
 Koning:
-Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed   van zijn. Ridder Caballo onmiddellijk naar f6 !.
+Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed   van zijn. Ridder Caballo onmiddellijk naar f6 !
 
 Caballo:
 Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan. Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog. Seg, "Dieje van den overkant" stelt trouwens remise voor.
@@ -292,7 +293,7 @@ Pakt dat dan maar aan.
 ## Source Notes
 - The text above is the original play as supplied by the author (version 7.0), copied character for character, including spacing and punctuation.
 - It replaces the copy from version 5.0 (commit 9a7ed4e), which had shortened four speeches with "...".
-- Spelling variants are original and must be kept: straight and curly quotes around "Dieje van den overkant", and "Dieje van de overkant" (without n) once.
+- Spelling variants are original and must be kept: straight and curly quotes around "Dieje van den overkant". (Author decision in 8.06: the one spelling without n, van de overkant, in speech 29 (11d) is corrected to van den overkant.)
 
 ---
 
@@ -335,7 +336,7 @@ Facts that follow directly from the play text.
 - The King suspects a stain on f6 because the Black King's knight ("zijnen ezel") also avoids it (4...Pe7 instead of ...Pf6).
 - The King feels things "aan mijn viltje" (in his felt).
 - The King knows the board square by square and has studied it: squares ("vierkanten"), triangulation ("driehoekskes gedraaid"), opposition and distant opposition. This is endgame technique.
-- He once mated "Dieje van de overkant" with two knights against his last extra pawn, ploughing across the whole board to do it.
+- He once mated "Dieje van den overkant" with two knights against his last extra pawn, ploughing across the whole board to do it.
 - After 6. Pxh7 he insists that he is the one giving orders during the game, and tells Alfil to stop gaping and do something.
 
 ## Board History
@@ -1281,6 +1282,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.03 | Author: "Does the story allow for extra opportunities to use more expressive faces based on the story text ?" Claude compared each line with the faces drawn and listed speakers and listeners with a neutral face where the text gives them something to feel. Author: "Show me a preview for the Speakers whose face doesn't match their line yet" (4c-1 Alfil worried, 4c-2 Alfil pleading, 6a Regina smug, 10i Regina sly, 15e Caballo smug); the author: "4c-1 agreed", then "6a give me a preview with a friendlier face" (G1 friendly, brows raised; G2 cheerful, smiling eyes; G3 calm) and "G1 accept". Panel blocks 4c-1 and 6a (Characters) and manifest field 8 of both; old wording in Appendix A. |
 | 8.04 | Author: "Give me now a preview for '2. Listeners whose reaction the text invites'". Claude showed 9a (Caballo doubtful), 7a (Alfil and Regina uneasy), 15b (Alfil pleased, eyes closed), 1b-2 (Regina unimpressed), 10c and 10h (Regina sceptical), 11d (Regina unconvinced); the author: "9a, 7a accept" and, for 15b, "suggest an alternative where alfil has his eyes open" (A1 proud, A2 beaming, A3 pleased with himself), then "15b pick A2 beaming - accept". Panel blocks 9a, 7a and 15b (Characters) and manifest field 6 of each; old wording in Appendix A. |
 | 8.05 | Author: "For the scenes with the queen generate some suggestions where the queen doesn't look mean". Claude found the cause: her neutral face (about 35 panels) used the short, thick eyebrows of the other pieces, which sit just under the crown band and slant down, so she seemed to frown; prototypes R1 (soft arched brows), R2 (thin arched brows), R3 (R2 with lashes). Author: "Is R2 consitent with the rest of the story ?" Claude: yes with the character (elegant, regal, voice of reason), but thin brows only on the neutral face would flicker between panels; proposed thin brows in every expression and the arch on the neutral face, and asked about the Black Queen. Author: "Let's pick R2, apply the eyebrows consistenly and include the same rules to the black queen." Lines under Regina (Section 4) and in the Black Queen entry. SVG preview: the queens' eyebrows thinner in every expression, arched on a neutral face. |
+| 8.06 | Author, after Claude listed what a real comic still needs (back cover, title page and colophon, page numbers, page count, print-ready file, proofreading): on the proofreading, "11e has a stray quote mark: daar was “m toen -> make that daar was em toen; 15b ends with !. -> replace that with !; 11d has Dieje van de overkant, while every other balloon has van den -> fix that to Dieje van den overkant. Also make these changes to the original text." Changed everywhere: the play text in Section 1, the panel blocks and manifests of 11d, 11e and 15b, the script excerpts; the protocol line and the spelling-variants line now record the exception; old wording in Appendix A. SVG preview: the three balloon texts. |
 
 ---
 
@@ -1985,7 +1987,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - The bored c1 bishop (author decision in 7.61): the punchline: a big yawn, eyes squeezed shut, eyebrows raised at the inner ends; well-mannered, he holds one hand in front of his mouth, only the top of the yawning mouth peeks out.
 - Balloon placement: top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
 - Balloon shape (author decision in 7.97, balloon check): four lines, so Regina's crown is free.
-- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
+- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten.
 
 ### Panel 11e
 Approved in 7.33 (as shown in the SVG preview).
@@ -1994,7 +1996,7 @@ Approved in 7.33 (as shown in the SVG preview).
 - Characters: the King smug, eyes half closed, mouth open, looks at Regina. Regina looks back at the King, offended, mouth closed. The c1 bishop and the pawns look on, mouths closed.
 - The bored c1 bishop (author decision in 7.61): the joke is over: back to neutral, eyes open, mouth closed.
 - Balloon placement: top centre; its bottom edge touches the top of Regina's crown (accepted by the author as shown, 7.33); its curved tail ends just beside the King's mouth.
-- Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
+- Balloon (White King): Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
 
 ### Panel 11f
 Approved in 7.33 (as shown in the SVG preview).
@@ -2190,7 +2192,7 @@ Approved in 7.40.
 - Framing (author decision in 7.91): the camera of 7.46 turned a little round the King (14f the least, 15a more, 15b the most) and aimed lower, so the black d5 pawn and the white g2 pawn are out of frame and the white e3 pawn is fully in.
 - Balloon placement: top right, over the queenside pieces; its curved tail ends just beside the King's mouth.
 - Zoom and balloon (author decision in 7.92): the picture zoomed in a fifth, its left and bottom edges fixed, so the empty room above the King is mostly gone and the pieces stand larger; the balloon narrower (four lines), top right, clear of Alfil's mitre and over the white rook at the right edge so that rook's fragment does not show; its tail short to the King's mouth.
-- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
+- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !
 - No move box: the move to f6 is ordered, not played (Section 13, Move Box).
 
 ### Panel 15c
@@ -2470,13 +2472,13 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (proud, speaking, gesture raise-l); Regina (looks at White King).
-- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten.
+- Balloon (White King): Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten.
 
 ### Panel 11e (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
 - Camera: from Black's side (the white pieces face the camera), framed on e1, d1.
 - Characters: White King (smug, speaking, looks at Regina); Regina (offended, looks at White King).
-- Balloon (White King): Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
+- Balloon (White King): Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?
 
 ### Panel 11f (approved in 7.33: the approved panel block is in Section 18, Scene 11)
 - Board state: 6.
@@ -2638,7 +2640,7 @@ Added in 7.7. The author asked for the full comic as an SVG preview and chose to
 - Camera: from Black's side, off to the kingside, so the King (e1) and Alfil (d3) stand side by side.
 - Characters: White King (proud, speaking, gesture point-up-l); Alfil (looks at White King).
 - Beside the board: the captured black pawn (h7) stands beside the board on White's side, near the white h2 pawn (7.36); Regina stands beside the board next to the black rook on h8.
-- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !.
+- Balloon (White King): Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !
 
 ### Panel 15c (approved in 7.40: the approved panel block is in Section 18, Scene 15)
 - Board state: 12.
@@ -4324,7 +4326,7 @@ PANEL 11a   (sequence number 49)
 1.  Scene 11, panel a: the King challenges Regina.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
       Balloon 1: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?"
 4.  Balloon 1 -> Koning
@@ -4354,7 +4356,7 @@ PANEL 11b   (sequence number 50)
 1.  Scene 11, panel b: Regina's long moves.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
       Balloon 1: "Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is."
 4.  Balloon 1 -> Koning
@@ -4384,7 +4386,7 @@ PANEL 11c   (sequence number 51)
 1.  Scene 11, panel c: the King's endgame technique.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
       Balloon 1: "Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé."
 4.  Balloon 1 -> Koning
@@ -4414,9 +4416,9 @@ PANEL 11d   (sequence number 52)
 1.  Scene 11, panel d: the mate with two knights.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
-      Balloon 1: "Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten."
+      Balloon 1: "Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten."
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 11a.
 6.  Listening: Regina, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): a big yawn behind his hand (mouth open: the exception).
@@ -4426,7 +4428,7 @@ PANEL 11d   (sequence number 52)
 9.  Balloon 1 top right; it covers Regina's crown and the top of her head down to her eyebrows (accepted by the author as shown, 7.33); its curved tail ends just beside Koning's mouth. Round balloon.
 10. Stage directions: none.
 11. State 6. No move.
-12. Continuity: continues speech 29 from 11c. The quote mark spelling "Dieje van de overkant" (without n) is the play's own and is kept.
+12. Continuity: continues speech 29 from 11c. "Dieje van den overkant" as everywhere else (corrected by the author in 8.06).
 13. Must not appear: the two knights moving or a remembered game drawn in the panel; an open mouth on any listener.
 14. Dialogue length: 25 words, 138 characters.
 15. Segmentation: speech 29, sentence 5; continues in 11e with "Héhé, ...".
@@ -4444,9 +4446,9 @@ PANEL 11e   (sequence number 53)
 1.  Scene 11, panel e: the King gloats.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
-      Balloon 1: "Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?"
+      Balloon 1: "Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?"
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 11a.
 6.  Listening: Regina, offended, mouth closed, looking at the King; the c1 bishop and the pawns, mouths closed. The bored c1 bishop (7.61): back to neutral.
@@ -4474,7 +4476,7 @@ PANEL 11f   (sequence number 54)
 1.  Scene 11, panel f: the King sends Regina out to watch Caballo.
 2.  Script excerpt:
       Koning:
-      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van de overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was “m toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
+      Regina luistert: Wie kent da bord hier nu eigenlijk het beste ? Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is. Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé. Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om "Dieje van den overkant" met zijne laatste pluspion mat te zetten. Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ? Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden.
 3.  Dialogue:
       Balloon 1: "Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden."
 4.  Balloon 1 -> Koning
@@ -5034,9 +5036,9 @@ PANEL 15b   (sequence number 73)
 1.  Scene 15, panel b: the King orders Caballo to f6.
 2.  Script excerpt:
       Koning:
-      Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed   van zijn. Ridder Caballo onmiddellijk naar f6 !.
+      Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed   van zijn. Ridder Caballo onmiddellijk naar f6 !
 3.  Dialogue:
-      Balloon 1: "Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !."
+      Balloon 1: "Bedankt voor dieje info raadsheer Alfil, daar zal "Dieje van den overkant" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !"
 4.  Balloon 1 -> Koning
 5.  Visible: the same as 15a.
 6.  Listening: Alfil, beaming with a broad grin (8.04), looking at the King; the others neutral, mouths closed.
@@ -5529,6 +5531,7 @@ Kept for history. Do not use for generation.
 - Up to 8.02, panel 4c-1 (panel block Characters; manifest field 8): Alfil "earnest" -> Changed in 8.03 by author decision: Alfil earnest and worried (brows tilted up).
 - Up to 8.02, panel 6a (panel block Characters; manifest field 8): Regina "giving advice" (no expression named) -> Changed in 8.03 by author decision: Regina giving advice with a friendly face (brows raised, open eyes).
 - Up to 8.03, panels 9a, 7a and 15b (panel block Characters; manifest field 6): Caballo (9a), Alfil and Regina (7a), Alfil (15b, mouth closed) listen without a named expression -> Changed in 8.04 by author decision: Caballo doubtful in 9a; Alfil and Regina uneasy in 7a; Alfil beaming with a broad grin in 15b.
+- Up to 8.05, the play text (Section 1) and the dialogue of 11d, 11e and 15b (panel blocks, manifests, Script Coverage): "Dieje van de overkant" (speech 29, 11d); "daar was “m toen" (11e); "Ridder Caballo onmiddellijk naar f6 !." (15b); and the rules that kept them (Strict Adaptation Protocol, Section 4 spelling variants, manifest 52 field 12) -> Changed in 8.06 by author decision: "Dieje van den overkant", "daar was em toen", "naar f6 !", in the play text as well.
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5671,3 +5674,4 @@ Items that need a decision from the author.
 | 8.03 | - | 4c-1: Alfil worried. 6a: Regina friendly. |
 | 8.04 | - | 9a: Caballo doubtful. 7a: Alfil and Regina uneasy. 15b: Alfil beaming. |
 | 8.05 | - | Both queens: thinner eyebrows, arched on a neutral face. |
+| 8.06 | - | Proofreading: 11d "van den overkant", 11e "daar was em toen", 15b "naar f6 !", in the play text as well. |
