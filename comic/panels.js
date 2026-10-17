@@ -1,0 +1,260 @@
+// De Miniatuur - panel data for the SVG preview album.
+// Scenes 1-5: approved panel script (bible Section 18 / manifests 20.3). Scenes 6-16: PROPOSAL, awaiting author approval.
+// Balloon text is copied from the play (bible Section 1); only runs of spaces are collapsed. Verified against the play by script.
+(function () {
+const zb = (frame, o) => Object.assign({ frame, side: "b" }, o || {});          // camera from Black's side (sees the white pieces' faces)
+const zw = (frame, o) => Object.assign({ frame, side: "w" }, o || {});          // camera from White's side (sees the black pieces' faces)
+const A = "approved", Pr = "proposal";
+const KING_ALFIL = { from: [5.6, 5.2, 3.4], at: [3.6, 1.6, 1.0], f: 720 };   // from Black's side, off to the kingside, so Alfil on d3 does not hide the King
+// 14f, 15a, 15b: as KING_ALFIL, turned round the King a little further in each panel, aimed lower: the d5 and g2 pawns out of frame, the e3 pawn fully in (bible 7.91)
+const KING_ALFIL_T1 = { from: [4.84, 5.53, 3.4], at: [3.3, 1.6, 0.85], f: 730 };
+const KING_ALFIL_T2 = { from: [4.65, 5.58, 3.4], at: [3.3, 1.6, 0.85], f: 730 };
+const KING_ALFIL_T3 = { from: [4.45, 5.63, 3.2], at: [3.3, 1.6, 0.85], f: 730 };
+const BESIDE11 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }];   // captured by White: beside the board near the white h2 pawn (bible 7.36)
+const BESIDE12 = [{ id: "xh7", ch: "p", at: [9.15, 1.3] }, { id: "xQ", ch: "Q", role: "regina", at: [8.85, 7.45] }];   // Regina stands beside the board next to the h8 rook (bible 7.34)
+window.PANELS = [
+// ---------------------------------------------------------------- Scene 1 - Opening Speech (approved)
+{ id: "1a", scene: 1, status: A, state: 0, cam: zb(["d1", "e1", "f1", "g1"], { dist: 1.7, h: 1.25, th: 1.02, f: 600 }),
+  cast: { koning: { expr: "proud", talk: true, gest: "raise-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", w: 740, x: 30, text: "Wat is het vandaag toch een heuglijke dag. Aanschouw mijn troepen, van toren tot toren staan ze in perfecte slagorde opgesteld, klaar voor deze dappere strijd." }] },
+{ id: "1b-1", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
+  cast: { koning: { expr: "smug", talk: true, gest: "wave-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 3, text: "Dat \"Dieje van den overkant\" al maar zeker is dat hij nu al begint te bibberen." }] },
+{ id: "1b-2", scene: 1, status: A, state: 0, cam: zb(["f1", "e1"], { dist: 1.6, h: 1.3, th: 0.85, f: 620 }),
+  cast: { koning: { expr: "proud", talk: true, lookAt: "alfil", gest: "open-l" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 4, text: "Want, ik voel het aan mijn viltje, deze roemrijke partij win ik vandaag ! Alfil, zijn ook onze pionnen klaar voor deze heldhaftige strijd ?" }] },
+{ id: "1c", scene: 1, status: A, state: 0, cam: { from: [4.85, -1.55, 2.15], at: [4.1, 8, 0.05], f: 560 },
+  cast: { alfil: { talk: true, gest: "raise-r" }, koning: {}, a7: { expr: "worried" }, a8: { expr: "worried" }, b7: { expr: "worried" }, b8: { expr: "worried" }, c7: { expr: "worried" }, c8: { expr: "worried" }, d7: { expr: "worried" }, d8: { expr: "worried" }, e7: { expr: "worried" }, f7: { expr: "worried" }, f8: { expr: "worried" }, g7: { expr: "worried" }, g8: { expr: "worried" }, h7: { expr: "worried" }, h8: { expr: "worried" }, bking: { expr: "calm" } },  // black pieces a little scared (bible 7.21); the Black King stays calm
+  balloons: [{ who: "alfil", text: "Jawel Sire, zij wachten op uw bevel !" }] },
+// ---------------------------------------------------------------- Scene 2 - Ten Aanval (approved)
+{ id: "2a", scene: 2, status: A, state: 0, cam: zb(["e1"], { dist: 1.25, h: 1.35, th: 1.0, f: 760 }),
+  cast: { koning: { expr: "proud", talk: true, gest: "raise-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Wel laat ons dan niet langer talmen : glorie en eer wachten op ons. Ten aanval ! 1. e4" }] },
+{ id: "2b", scene: 2, status: A, crossArms: true, state: 0, wide: true, cam: { from: [5.4, 5.6, 2.3], at: [4.2, 1.2, 0.35], f: 820 },
+  cast: { a1: { expr: "yawn", lean: -6, bow: 1.42, gest: "stretch" }, a2: { expr: "stubborn" }, b2: { expr: "stubborn" }, c2: { expr: "stubborn" }, d2: { expr: "stubborn" }, e2: { expr: "stubborn" }, f2: { expr: "stubborn" }, g2: { expr: "stubborn" }, h2: { expr: "stubborn" },
+    // the officers react to the mutiny, each looking at the nearest of the f2, e2 and d2 pawns; the c1 bishop secretly sides with the pawns (bible 7.95)
+    e1: { expr: "offended", lookAt: "e2" }, d1: { expr: "surprised", mouthOpen: true, lookAt: "d2" }, f1: { expr: "worried", lookAt: "f2" }, g1: { expr: "offended", lookAt: "f2" },
+    c1: { expr: "sly", lookAt: "d2" }, h1: { expr: "surprised", mouthOpen: true, lookAt: "f2" }, b1: { expr: "surprised", mouthOpen: true, lookAt: "d2" } },
+  grumble: ["f2", "d2", "e2", "c2", "b2"], grumbleText: ["?!", "#!?", "#?!", "??", "??#"], grumbleAt: { b2: [1150, 200] }, caption: "(hoorbaar gemor vanop de tweede rij)", balloons: [] },  // bible 7.12: chess-symbol grumbles, stage direction caption
+{ id: "2c", scene: 2, status: A, crossArms: true, state: 0, cam: zb(["d1"], { dist: 1.25, h: 1.35, th: 1.0, f: 760 }),
+  cast: { regina: { expr: "puzzled", talk: true, lookAt: "koning" }, koning: { lookAt: "regina" } },
+  balloons: [{ who: "regina", lines: 1, text: "Awel ? Waarom gebeurt er niks ?" }] },
+// ---------------------------------------------------------------- Scene 3 - Alfil Sent to the Pawns (approved)
+{ id: "3a-1", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
+  cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { back: false, expr: "proud", talk: true, lookAt: "alfil" }, regina: {}, a7: { expr: "surprised" }, a8: { expr: "surprised" }, b7: { expr: "surprised" }, b8: { expr: "surprised" }, c7: { expr: "surprised" }, c8: { expr: "surprised" }, d7: { expr: "surprised" }, d8: { expr: "surprised" }, e7: { expr: "surprised" }, f7: { expr: "surprised" }, f8: { expr: "surprised" }, g7: { expr: "surprised" }, g8: { expr: "surprised" }, h7: { expr: "surprised" }, h8: { expr: "surprised" }, bking: { expr: "calm" } },  // black pieces a little surprised (bible 7.22); the Black King stays calm
+  balloons: [{ who: "koning", lines: 3, x: 200, text: "Alfil m’n raadsheer, ge weet dat ik als koning niet met dat lage boerenvolk spreek." }] },
+{ id: "3a-2", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [6.35, -1.9, 1.8], at: [4.3, 0.9, 0.7], f: 560 },
+  cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { back: false, expr: "proud", talk: true, lookAt: "alfil", gest: "point-r" } },
+  balloons: [{ who: "koning", x: 120, text: "Vraag aan die luie pitten op de tweede rij wat er aan de hand is." }] },
+{ id: "3b", scene: 3, status: A, crossArms: true, state: 0, cam: { from: [4.25, -1.35, 2.25], at: [4.5, 7.5, 0.25], f: 560 },
+  cast: { koning: { talk: true, gest: "point-up-r" }, a7: { expr: "amused" }, a8: { expr: "amused" }, b7: { expr: "amused" }, b8: { expr: "amused" }, c7: { expr: "amused" }, c8: { expr: "amused" }, d7: { expr: "amused" }, d8: { expr: "amused" }, e7: { expr: "amused" }, f7: { expr: "amused" }, f8: { expr: "amused" }, g7: { expr: "amused" }, g8: { expr: "amused" }, h7: { expr: "amused" }, h8: { expr: "amused" }, bking: { expr: "calm" } },  // black army visibly amused (bible 7.23); the Black King stays calm, not laughing
+  balloons: [{ who: "koning", x: 300, w: 500, bend: -0.5, text: "En maak voort want “Dieje van den overkant\" denkt nu natuurlijk dat wij schrik hebben en zit op dit moment waarschijnlijk al met ons te lachen." }] },
+// ---------------------------------------------------------------- Scene 4 - Pawn Mutiny (approved)
+{ id: "4a", scene: 4, status: A, crossArms: true, state: 0, cam: { from: [5.2, 5.9, 2.9], at: [5.3, 1.3, 0.6], f: 780 }, caption: "(Alfil overlegt met de pionnen)",
+  cast: { alfil: { expr: "pleading", talk: true, lean: 14, bow: 0.86, lookAt: "f2", gest: "both-open" }, e2: { back: true }, g2: { back: true }, f2: { back: true }, d2: { expr: "stubborn" }, c2: { expr: "stubborn" }, h2: { expr: "stubborn" }, koning: { lookAt: "alfil" }, regina: { lookAt: "alfil" } },
+  balloons: [] },
+{ id: "4b", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.25, h: 1.4, th: 1.0, f: 760 }),
+  cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "raise-l" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "alfil" } },
+  balloons: [{ who: "alfil", lines: 4, text: "Muiterij Sire! De pionnen willen niet opspelen naar een centrumveld omdat er daar naar 't schijnt nen boebel in het bord zit." }] },
+{ id: "4c-1", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
+  cast: { alfil: { expr: "worried", talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "worried", lookAt: "alfil" } },
+  balloons: [{ who: "alfil", w: 470, text: "Als ze de hele tijd bergop moeten marcheren zijn ze uitgeteld alvorens ze nog maar aan de strijd hebben deelgenomen." }] },
+{ id: "4c-2", scene: 4, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.15, h: 1.4, th: 1.24, f: 460 }),
+  cast: { alfil: { talk: true, lookAt: "koning", gest: "both-open" }, koning: { expr: "angry", flush: true, lookAt: "alfil" } },
+  balloons: [{ who: "alfil", text: "Als u de partij vandaag wil winnen zal u iets anders moeten spelen." }] },
+// ---------------------------------------------------------------- Scene 5 - The King's Outburst (approved)
+{ id: "5a", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["e1"], { dist: 1.35, h: 1.5, th: 1.45, f: 540 }),
+  cast: { koning: { expr: "furious", talk: true, lookAt: "alfil", gest: "fist-up-r", shake: true }, alfil: { expr: "surprised", lookAt: "koning", sweat: true }, regina: { expr: "worried", lookAt: "koning" } },
+  fx: [{ burst: "koning" }], balloons: [{ who: "koning", shout: true, text: "Wie is er hier nu godverdoemme eigenlijk koning ? Alfil, gene zever.", w: 360 }] },
+{ id: "5b-1", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-l", lean: -5 }, alfil: { expr: "stubborn", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Ik weet maar al te goed dat ge destijds liever tot dame waart gepromoveerd" }] },
+{ id: "5b-2", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { koning: { expr: "smug", talk: true, lookAt: "alfil", gest: "point-l" }, alfil: { expr: "offended", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "en dat complex van de minor promotie nog altijd in uwe kop speelt maar ik wil hier ‘gene slappen kak’." }] },
+{ id: "5c", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "worried", lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 4, text: "Ga buiten zien wat dat is met dieje boebel en zorgt ervoor dat die boeren “sito presto” het centrum in handen nemen." }] },
+{ id: "5d-1", scene: 5, status: A, crossArms: true, state: 0, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "both-open" }, koning: { expr: "angry", lookAt: "alfil" } },
+  balloons: [{ who: "alfil", text: "Vergeef me dat ik u tegenspreek Sire, maar ik kan hier voorlopig nog niet naar buiten." }] },
+{ id: "5d-2", scene: 5, status: A, crossArms: true, state: 0, cam: { from: [5.35, 3.7, 3.1], at: [5.3, 0.9, 0.95], f: 730 },
+  cast: { alfil: { expr: "pleading", talk: true, lookAt: "koning", gest: ["point-down-l", "point-down-r"] }, e2: { expr: "stubborn" }, g2: { expr: "stubborn" }, koning: { expr: "angry", lookAt: "alfil" } },
+  balloons: [{ who: "alfil", x: 16, w: 520, text: "Immers, zowel het veld e2 als g2 is nog door opstandige boeren bezet." }] },
+{ id: "5e", scene: 5, status: A, state: 0, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "despair", talk: true, gest: "hands-head" }, alfil: { expr: "worried", lookAt: "koning" }, regina: { expr: "worried", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Wel nondedju ! Heel mijn voorbereiding om zeep." }] },
+// ---------------------------------------------------------------- Scene 6 - Regina's Advice (PROPOSAL)
+{ id: "6a", scene: 6, status: A, state: 0, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { regina: { expr: "proud", talk: true, lookAt: "koning", gest: "open-l" }, koning: { expr: "puzzled", lookAt: "regina" } },
+  balloons: [{ who: "regina", text: "Speelt dan e3 Sire, dan kan Alfil toch al gaan zien." }] },
+{ id: "6b", scene: 6, status: A, state: 0, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { koning: { expr: "stubborn", talk: true, gest: "wave-l" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 4, text: "Allee goed dan, want \"Dieje van den overkant\" wordt precies al serieus ongeduldig." }] },
+{ id: "6c", scene: 6, status: A, movebox: "1. e3", state: 1, cam: { from: [7.4, -1.0, 4.4], at: [4.4, 3.4, 0.0], f: 560 }, fx: [{ move: ["e2", "e3"] }], cast: {}, balloons: [] },
+{ id: "6d", scene: 6, status: A, movebox: "1. ... d5", state: 2, cam: { from: [4.0, 2.4, 3.6], at: [4.0, 6.85, 0.5], f: 420 }, fx: [{ move: ["d7", "d5"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, d5: { expr: "calm" } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 7 - Black Takes the Centre (PROPOSAL)
+{ id: "7a", scene: 7, status: A, state: 2, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
+  cast: { koning: { expr: "angry", talk: true, gest: "point-down-l" }, alfil: { expr: "worried", lookAt: "koning" }, regina: { expr: "worried", lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 3, text: "Lap, ziet ge ’t nu ? Wat had ik jullie gezegd ? \"Dieje van den overkant\" pakt al direct het centrum in." }] },
+{ id: "7b", scene: 7, status: A, state: 2, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "open-r" }, koning: { expr: "angry", lookAt: "alfil" } },
+  balloons: [{ who: "alfil", lines: 2, text: "Jamaar Sire, met dieje boebel." }] },
+{ id: "7c", scene: 7, status: A, state: 2, cam: zb(["f1", "e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 740 }),
+  cast: { koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-up-l" }, alfil: { expr: "offended", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Alfil veegt dieje paprika chips van uwe mijter en maakt dat ge buiten zijt." }] },
+{ id: "7d", scene: 7, status: A, movebox: "2. Ld3", state: 3, cam: zb(["e1", "d3", "f1"], { dist: 2.2, h: 2.2, th: 0.5, f: 620 }), fx: [{ move: ["f1", "d3"] }],
+  cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, alfil: { expr: "calm" }, koning: { lookAt: "alfil" } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 8 - Stratego (PROPOSAL)
+{ id: "8a", scene: 8, status: A, state: 3, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "worried", talk: true, gest: "both-open" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Boebel, boebel." }] },
+{ id: "8b", scene: 8, status: A, state: 3, cam: zb(["e1", "f1"], { dist: 1.9, h: 1.6, th: 0.9, f: 680 }),
+  cast: { koning: { expr: "angry", talk: true, gest: "point-down-r" }, alfil: { lookAt: "koning" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Zo zullen we de partij wel winnen als \"Dieje van den overkant\" mag schaken en wijlle hier maar stratego zitten spelen en niet in het centrum mogen komen." }] },
+{ id: "8c", scene: 8, status: A, movebox: "2. ... e6", state: 4, cam: { from: [4.5, -1.0, 2.6], at: [4.5, 6.2, 0.2], f: 600 }, fx: [{ move: ["e7", "e6"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 9 - Caballo Refuses f3 (PROPOSAL)
+{ id: "9a", scene: 9, status: A, state: 4, cam: zb(["e1", "g1"], { dist: 1.5, h: 1.5, th: 0.95, f: 580 }),
+  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "stubborn", lookAt: "koning" } },
+  balloons: [{ who: "koning", x: 40, text: "Ridder Caballo, springt naar f3 zodat ik seffens kan rokeren." }] },
+{ id: "9b", scene: 9, status: A, movebox: "3. Ph3", state: 5, cam: { from: [8.6, 9.2, 6.4], at: [5.3, 1.6, 0.85], f: 1000 }, fx: [{ move: ["g1", "h3"] }], cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, caballo: { expr: "stubborn" }, koning: { expr: "surprised", mouthOpen: true, lookAt: "caballo", gest: "hands-head", sweat: true } }, balloons: [] },
+{ id: "9c", scene: 9, status: A, state: 5, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
+  cast: { koning: { expr: "furious", talk: true, lookAt: "caballo", gest: "fist-up-r" }, caballo: { expr: "stubborn" } },
+  balloons: [{ who: "koning", shout: true, text: "Maar Caballo, zijt gij nu een paard of nen stommen ezel ? Naar f3 had ik toch gezegd !" }] },
+{ id: "9d", scene: 9, status: A, state: 5, cam: zb(["h3", "f3"], { dist: 1.0, h: 0.95, th: 1.05, f: 760 }),
+  cast: { caballo: { expr: "angry", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
+  balloons: [{ who: "caballo", x: 330, y: 14, w: 360, text: "Daar op dat vies veld in die vettige plek gaan staan ? Geen sprake van Sire !" }] },
+{ id: "9e", scene: 9, status: A, state: 5, cam: zb(["h3", "f3", "e1"], { dist: 1.3, h: 1.3, th: 0.35, f: 680 }),
+  cast: { caballo: { expr: "offended", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
+  balloons: [{ who: "caballo", x: 16, y: 400, w: 560, text: "Dat ge uw voetvolk erdoor jaagt tot daar nog aan toe maar een officier laat ge niet met zijn voetstuk in zo'n vieze vuile plek staan verkommeren." }] },
+{ id: "9f", scene: 9, status: A, state: 5, cam: { from: [5.4, 5.0, 8.6], at: [5.2, -0.2, 0.2], f: 880 },
+  cast: { caballo: { expr: "smug", talk: true }, koning: { expr: "angry", lookAt: "caballo" } },
+  balloons: [{ who: "caballo", w: 560, snug: true, text: "Zie dat het opdroogt en ik straks geen vork meer kan geven omdat ik aan het bord vastplak? En daarbij, ge kunt zo even goed rokeren !" }] },
+{ id: "9g", scene: 9, status: A, movebox: "3. ... Ld7", state: 6, cam: { from: [1.6, -0.6, 4.8], at: [3.7, 6.0, 0.4], f: 720 }, fx: [{ move: ["c8", "d7"] }], cast: { bking: { expr: "calm" } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 10 - A Thousand Games (PROPOSAL)
+{ id: "10a", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "sigh", talk: true }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 5, text: "Al meer als duizend partijen heb ik nu al gespeeld en nog nooit heb ik zo ne zever meegemaakt." }] },
+{ id: "10b", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 0, lookAt: "koning" }, koning: { expr: "calm", talk: true, gest: "hand-chest" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 4, text: "In de eerste jaren, dat weet ik nog goed, dat was toen nog met houten borden. Uren en uren heb ik daar op gespeeld." }] },
+{ id: "10c", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.25, h: 1.4, th: 1.05, f: 800 }),
+  cast: { koning: { expr: "proud", talk: true, gest: "raise-r" } },
+  balloons: [{ who: "koning", text: "En veel gewonnen hé want dat was nog in mijne jongen tijd." }] },
+{ id: "10d", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 1, lookAt: "koning" }, koning: { expr: "angry", talk: true, gest: "both-open" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "En ineens was een houten bord niet goed genoeg meer en de stukken begonnen te zagen :" }] },
+{ id: "10e", scene: 10, status: A, state: 6, cam: zb(["e1", "e2"], { dist: 1.5, h: 1.6, th: 1.05, f: 600 }),
+  cast: { c1: { bored: 2, lookAt: "koning" }, koning: { expr: "angry", talk: true, gest: "point-down-l" } },
+  balloons: [{ who: "koning", text: "de lak is eraf, de zwarte velden zijn niet meer goed, er zitten splinters aan de rand." }] },
+{ id: "10f", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 3, lookAt: "koning" }, koning: { expr: "worried", talk: true, gest: "open-l" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Enfin, ze wilden er nimmer op spelen en het moest van dag op dag zo’n modern plastieken zijn." }] },
+{ id: "10g", scene: 10, status: A, state: 6, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "angry", talk: true, gest: "fist-up-r" } },
+  balloons: [{ who: "koning", lines: 6, x: 16, text: "En 't ergste van al : er kwam een nief bord maar we waren nog geen drie jaar verder of ze begonnen al vanhaar te zagen." }] },
+{ id: "10h", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 4, lookAt: "koning" }, koning: { expr: "stubborn", talk: true, lookAt: "regina", gest: "raise-l" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Die pasgepromoveerde officieren hebben totaal geen respect voor goei gerief. Dat zeg ik u." }] },
+{ id: "10i", scene: 10, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 5, lookAt: "koning" }, regina: { talk: true, lookAt: "koning", gest: "open-l" }, koning: { expr: "stubborn", lookAt: "regina" } },
+  balloons: [{ who: "regina", lines: 3, text: "Jamaar Sire, uw officieren hebben misschien wel een punt." }] },
+// ---------------------------------------------------------------- Scene 11 - Who Knows This Board Best (PROPOSAL)
+{ id: "11a", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }), fx: [{ burst: "koning" }],
+  cast: { c1: { bored: 6, lookAt: "koning" }, koning: { expr: "angry", talk: true, lookAt: "regina", gest: "point-up-l" }, regina: { expr: "surprised", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Regina luistert: Wie kent da bord hier nu eigenlijk het beste ?" }] },
+{ id: "11b", scene: 11, status: A, state: 6, cam: zb([[3.85, 0.5, 0]], { dist: 1.2, h: 1.75, th: 1.35, f: 640 }),
+  cast: { c1: { bored: 7, lookAt: "koning" }, koning: { expr: "smug", talk: true, lookAt: "regina", gest: "wave-l" }, regina: { expr: "offended", lookAt: "koning" } },
+  balloons: [{ who: "koning", x: 30, w: 740, text: "Gij loopt daar met uw lange zetten veel te gemakkelijk overheen en ge beseft volgens mij niet eens goe wat kwaliteit is." }] },
+{ id: "11c", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.4, f: 560 }),
+  cast: { c1: { bored: 8, lookAt: "koning", lean: 7 }, koning: { expr: "proud", talk: true, gest: "hand-chest" } },
+  balloons: [{ who: "koning", w: 540, text: "Daarentegen heb ik al meermaals, heel dat bord veld voor veld afgegaan, vierkanten gemaakt, driehoekskes gedraaid, oppositie gepakt. Ook verre oppositie hé." }] },
+{ id: "11d", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { c1: { bored: 9, lookAt: "koning", gest: "hand-mouth" }, koning: { expr: "proud", talk: true, gest: "raise-l" }, regina: { lookAt: "koning" } },
+  balloons: [{ who: "koning", lines: 4, text: "Ooit heb ik zelfs eens met onze twee paarden heel dat bord omgeploegd om \"Dieje van den overkant\" met zijne laatste pluspion mat te zetten." }] },
+{ id: "11e", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { koning: { expr: "smug", talk: true, lookAt: "regina" }, regina: { expr: "offended", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Héhé, daar was em toen nie goe van zelle. En nu doet gij alsof ik mijn bord nie ken ?" }] },
+{ id: "11f", scene: 11, status: A, state: 6, cam: zb(["e1", "d1"], { dist: 1.3, h: 1.45, th: 1.0, f: 740 }),
+  cast: { koning: { expr: "angry", talk: true, lookAt: "regina", gest: "point-down-l" }, regina: { expr: "worried", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Ga liever buiten dieje lompen ezel op h3 een beetje in 't oog houden." }] },
+{ id: "11g", scene: 11, status: A, movebox: "4. Dh5", state: 7, cam: { from: [5.6, -1.8, 3.4], at: [5.2, 3.4, 0.0], f: 560 }, fx: [{ move: ["d1", "h5"] }], cast: { regina: { expr: "calm" }, brookh8: { lookAt: "regina" } }, balloons: [] },
+{ id: "11h", scene: 11, status: A, movebox: "4. ... Pe7", state: 8, cam: { from: [5.6, 0.4, 2.6], at: [5.4, 6.6, 0.2], f: 620 }, fx: [{ move: ["g8", "e7"] }], cast: { bking: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 12 - The King Suspects f6 (PROPOSAL)
+{ id: "12a", scene: 12, status: A, state: 8, cam: Object.assign(zb(["e1"], { dist: 1.3, h: 1.45, th: 1.3, f: 560 }), { zoom: 1.4, pin: [400, 150] }),   // zoomed in on the King, no pawn faces at the bottom (bible 7.96)
+  cast: { koning: { expr: "wondering", look: -1, talk: true, gest: "point-up-l" } },
+  balloons: [{ who: "koning", w: 470, text: "Zou er op f6 misschien ook een plek zitten ? Want \"Dieje van den overkant\" zijnen ezel wilt precies ook niet goed mee." }] },
+{ id: "12b", scene: 12, status: A, state: 8, cam: zb(["e1"], { dist: 1.15, h: 1.45, th: 1.1, f: 840 }),
+  cast: { koning: { expr: "surprised", talk: true, gest: "point-up-r" } },
+  balloons: [{ who: "koning", text: "Seg, maar wacht eens effe … ." }] },
+{ id: "12c", scene: 12, status: A, state: 8, cam: zb(["e1", "h3"], { dist: 1.8, h: 1.6, th: 0.95, f: 660 }),
+  cast: { koning: { expr: "proud", talk: true, lookAt: "caballo", gest: "point-down-l" }, caballo: { expr: "heroic" }, regina: { blush: true, lookAt: "brookh8" } },
+  balloons: [{ who: "koning", text: "Ridder Caballo, hop naar g5. Allez vooruit, ju !" }] },
+{ id: "12d", scene: 12, status: A, movebox: "5. Pg5", state: 9, cam: { from: [5.8, -0.6, 9.0], at: [5.9, 5.6, 0.2], f: 760 }, fx: [{ move: ["h3", "g5"] }], cast: { caballo: { expr: "heroic" }, bking: { expr: "startled", sweat: true, lookAt: "regina" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+{ id: "12e", scene: 12, status: A, movebox: "5. ... g6", state: 10, cam: { from: [3.4, 3.0, 2.4], at: [6.7, 5.7, 0.7], f: 900 }, fx: [{ move: ["g7", "g6"] }], cast: { regina: { expr: "worried" }, g6: { expr: "calm" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 13 - Caballo's Charge (PROPOSAL)
+{ id: "13a", scene: 13, status: A, state: 10, cam: { from: [4.2, 7.9, 2.9], at: [6.5, 4.5, 1.05], f: 760 }, fx: [{ burst: "caballo" }],
+  cast: { caballo: { expr: "heroic", talk: true }, regina: { blush: true, lookAt: "brookh8" } },
+  balloons: [{ who: "caballo", shout: true, w: 500, text: "Voor de glorie en de overwinning ! Ten aanval !" }] },
+{ id: "13b", scene: 13, status: A, movebox: "6. Pxh7", state: 11, beside: BESIDE11, hopH: 0.85, cam: { from: [12.0, 3.4, 4.2], at: [6.8, 6.0, 0.5], f: 900 }, fx: [{ move: ["g5", "h7"] }], cast: { caballo: { expr: "heroic" }, bking: { expr: "amused", lookAt: "regina" }, regina: { blush: true, lookAt: "brookh8" }, brookh8: { lookAt: "regina", blush: true } }, balloons: [] },
+// ---------------------------------------------------------------- Scene 14 - Regina Captured (PROPOSAL)
+{ id: "14a", scene: 14, status: A, state: 11, beside: BESIDE11, cam: zb([[4.72, 0.5, 0]], { dist: 1.35, h: 1.5, th: 1.58, f: 640 }), fx: [{ burst: "koning" }],
+  cast: { koning: { expr: "furious", talk: true, gest: "fist-up-r", shake: true }, regina: { expr: "worried" } },
+  balloons: [{ who: "koning", shout: true, w: 420, x: 16, text: "Godverdoemme Caballo, gij se stommen ezel ! Hoe dikwijls moet ik nog zeggen dat ik hier het bevel voer tijdens de partij." }] },
+{ id: "14b", scene: 14, status: A, state: 11, beside: BESIDE11, cam: KING_ALFIL,
+  cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { expr: "angry", talk: true, lookAt: "alfil", gest: "point-down-r" }, alfil: { expr: "surprised", lookAt: "koning" } },
+  balloons: [{ who: "koning", text: "Alfil, staat daar nu toch niet zo stom te gapen, doe nu eens iets." }] },
+{ id: "14c", scene: 14, status: A, state: 11, beside: BESIDE11, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "worried", talk: true, gest: "point-up-l", sweat: true } },
+  balloons: [{ who: "koning", text: "Regina staat in, dat ziet ge zelf toch ook ? Dju miljaar, \"Dieje van den overkant\" is al aan zet." }] },
+// 14d: the capture staged close (bible 7.50): the h5 pawn pushes Regina off the board, she does not care, the h8 rook is delighted
+{ id: "14d", scene: 14, status: A, movebox: "6. ... gxh5", state: 12, beside: BESIDE12, cam: { from: [10.4, 2.8, 5.8], at: [7.9, 5.6, 0.8], f: 940 }, fx: [{ move: ["g6", "h5"] }, { burst: "h5" }], slide: { from: [7.5, 4.5], to: [8.85, 7.45], hop: 0.5 },
+  cast: { h5: { expr: "proud", gest: "fist-up-r" }, regina: { expr: "calm", lookAt: "h1", back: false }, brookh8: { expr: "amused", lookAt: "regina", blush: "strong" } }, balloons: [] },
+{ id: "14e", scene: 14, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "despair", talk: true } },
+  balloons: [{ who: "koning", text: "Lap, daar hebt ge’t al. Regina geslagen." }] },
+{ id: "14f", scene: 14, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T1,
+  cast: { a1: { expr: "asleep", zzz: true, lean: -8 }, koning: { expr: "angry", talk: true, gest: "both-open" }, alfil: { lookAt: "koning" } },
+  balloons: [{ who: "koning", x: 250, text: "En terwijl ik hier weer zit te zwoegen om de partij te winnen" }] },
+{ id: "14g", scene: 14, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [0.5, -3.5, 3.6], at: [6.9, 5.4, 0.2], f: 1500 },
+  cast: { koning: { talk: true, gest: "point-up-r" }, regina: { lookAt: "brookh8", expr: "smug", blush: "strong", back: false }, brookh8: { must: true, expr: "smug", lookAt: "regina", blush: true } },
+  balloons: [{ who: "koning", x: 1180, w: 440, text: "gaat ze daar van neffe 't bord waarschijnlijk weer heel de tijd zitten lonken naar dieje pipo van ne zwarten toren daar op h8." }] },
+{ id: "14h", scene: 14, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "smug", talk: true, gest: "wave-r" } },
+  balloons: [{ who: "koning", text: "Pff, die sul kan niet eens diagonaal gaan, wat ze daar toch in gezien heeft." }] },
+// ---------------------------------------------------------------- Scene 15 - Mate in One (PROPOSAL; the cola stain is explicit from here)
+{ id: "15a", scene: 15, status: A, state: 12, beside: BESIDE12, cam: KING_ALFIL_T2,
+  cast: { a1: { expr: "startled", jolt: "bold" }, alfil: { expr: "apologetic", talk: true, lookAt: "koning", gest: "point-up-l" }, koning: { expr: "surprised", lookAt: "alfil" } },
+  balloons: [{ who: "alfil", lines: 2, x: 16, text: "Vergeef me dat ik u onderbreek Sire, maar we hebben geloof ik, een mat in één." }] },
+{ id: "15b", scene: 15, status: A, state: 12, beside: BESIDE12, cam: Object.assign({}, KING_ALFIL_T3, { zoom: 1.2, pin: [0, 570] }),   // zoomed in, bottom-left corner fixed (bible 7.92)
+  cast: { koning: { expr: "proud", talk: true, gest: "point-up-l" }, alfil: { expr: "grin", lookAt: "koning" } },
+  balloons: [{ who: "koning", x: 360, w: 485, text: "Bedankt voor dieje info raadsheer Alfil, daar zal \"Dieje van den overkant\" niet goed van zijn. Ridder Caballo onmiddellijk naar f6 !" }] },
+{ id: "15c", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [9.6, 4.2, 3.4], at: [6.3, 6.3, 0.75], f: 700 },
+  cast: { caballo: { expr: "furious", talk: true, jump: 9, lean: 8 }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 }, e7: { expr: "smug", lookAt: "f6", lookDown: true } },
+  balloons: [{ who: "caballo", x: 30, w: 740, anchor: "centre", text: "Absoluut geen sprake van Sire ! Er is daar met cola gesmost en ik ga niet met mijn proper viltje in dieje natten drets staan." }] },
+{ id: "15d", scene: 15, status: A, colaStyle: ["#4a2214", "#311409", "#1d0a05"], state: 12, beside: BESIDE12, cam: { from: [6.6, 2.4, 2.6], at: [6.6, 6.8, 0.6], f: 760 },
+  cast: { caballo: { expr: "smug", talk: true }, bking: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, f8: { expr: "startled", sweat: true, shake: true, lookAt: "caballo" }, e6: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: -6 }, f7: { expr: "disgusted", lookAt: "f6", lookDown: true, lean: 6 } },
+  balloons: [{ who: "caballo", lines: 4, text: "Eventueel wil ik nog doorpakken op f8 want daar is het precies wel droog." }] },
+{ id: "15e", scene: 15, status: A, state: 12, beside: BESIDE12, wide: true, cam: { from: [6.4, 3.2, 2.1], at: [5.6, 7.4, 0.6], f: 640 },
+  cast: { caballo: { expr: "neutral", talk: true }, bking: { expr: "pleading", gest: "open-l", lookAt: "caballo" }, d5: { expr: "grin", gest: "wave-high", look: 0 }, e6: { lookAt: "f6", lookDown: true }, f7: { lookAt: "f6", lookDown: true } },
+  balloons: [{ who: "caballo", text: "Seg, \"Dieje van den overkant\" stelt trouwens remise voor." }, { who: "bking", x: 660, text: "(=) ?" }] },
+// ---------------------------------------------------------------- Scene 16 - Draw Accepted (PROPOSAL)
+// 16a: the final position seen nearly from above, half a page (two strips); both armies face up (bible 7.37)
+{ id: "16a", scene: 16, status: A, state: 12, beside: BESIDE12, wide: true, tall: true, cam: { from: [10.9, 4.0, 16.0], at: [4.75, 4.0, 0.3], f: 1880 },
+  cast: { koning: { expr: "sigh" }, bking: { expr: "calm" }, regina: { back: false } }, balloons: [] },
+// 16b: the King accepts the draw (bible 7.37)
+{ id: "16b", scene: 16, status: A, state: 12, beside: BESIDE12, cam: zb(["e1"], { dist: 1.3, h: 1.45, th: 1.05, f: 780 }),
+  cast: { koning: { expr: "sigh", talk: true } },
+  balloons: [{ who: "koning", text: "Pakt dat dan maar aan." }] },
+// 16c: the last panel: the two kings shake hands on the rise (author decisions, bible 7.37-7.39); the result 1/2 - 1/2 centred at the bottom
+{ id: "16c", scene: 16, status: A, movebox: "1/2 - 1/2", moveboxCenter: true, state: 0, omit: ["e1", "e8"], rise: 2.2, stage: [{ id: "wk", ch: "K", role: "koning", at: [4.5, 3.5] }, { id: "bk", ch: "k", role: "bking", at: [4.5, 4.5] }],
+  cam: { from: [8.6, 4.0, 5.0], at: [4.3, 4.0, 0.75], f: 820 },
+  cast: { koning: { expr: "disappointed", lookAt: "bking", gest: "shake-r", back: false, lean: -5 }, bking: { expr: "sly", lookAt: "koning", gest: "shake-l", back: false, lean: 5 } }, balloons: [] }
+];
+// The chess clock's lever (bible 7.93): the raised end is the side whose time runs. In a panel with a move box the move is being
+// made and the mover has not pressed yet, so the mover's end is up; from the next panel on the opponent's end is up.
+// Spoken or ordered moves (1. e4) change nothing. clockUp: "w" the white end (nearest rank 1) up, "b" the black end.
+{ let toMove = "w";
+  for (const P of window.PANELS) { const m = /^\d+\.\s*(\.\.\.)?/.exec(P.movebox || "");
+    if (m) { P.clockUp = m[1] ? "b" : "w"; toMove = m[1] ? "w" : "b"; } else P.clockUp = toMove; } }
+})();
