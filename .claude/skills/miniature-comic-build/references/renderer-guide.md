@@ -1,6 +1,6 @@
 # SVG Comic Renderer: Panel Data and Camera Guide
 
-The preview comic lives in `comic/`:
+The preview comic lives in `comic/flemish/` (the Flemish edition, port 8768) and `comic/english/` (the English edition, a copy with English texts, port 8769):
 
 | File | Role |
 |---|---|
@@ -9,7 +9,7 @@ The preview comic lives in `comic/`:
 | `index.html` | the album: cover plus A4 pages (2 columns × 4 rows; a wide or lone panel takes a whole strip), "Download SVG" per page; `?export=1` gives the export block |
 | `review.html` | `review.html?from=<id>&n=<count>`: panels one by one at a readable size, with id and status |
 | `serve.ps1` | local server (`-Port 8768`) |
-| `export-svg.ps1` | writes `comic/svg/pages/*.svg` and `comic/svg/panels/*.svg` |
+| `export-svg.ps1` | writes `comic/flemish/svg/pages/*.svg` and `comic/flemish/svg/panels/*.svg` |
 | `test.html` | four fixed panels (5a, 2b, 1c, 6d) for regression checks after a renderer change |
 
 ## Panel object

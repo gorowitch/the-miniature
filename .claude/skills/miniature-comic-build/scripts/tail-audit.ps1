@@ -1,6 +1,7 @@
 # Balloon-tail audit: lists every speech-balloon tail in the comic that crosses a face or hat.
-# Needs comic/serve.ps1 running on -Port. Prints one line per crossing tail and a total.
-param([int]$Port = 8768)
+# Needs the edition's preview server running (comic/flemish/serve.ps1 on 8768, comic/english/serve.ps1 on 8769). Prints one line per crossing tail and a total.
+param([ValidateSet("flemish", "english")][string]$Edition = "flemish", [int]$Port = 0)
+if (-not $Port) { $Port = $(if ($Edition -eq "english") { 8769 } else { 8768 }) }
 $edge = @("C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "C:\Program Files\Microsoft\Edge\Application\msedge.exe") | Where-Object { Test-Path $_ } | Select-Object -First 1
 $dump = Join-Path $env:TEMP "miniatuur-tail-audit.html"
 Start-Process -FilePath $edge -ArgumentList @("--headless=new", "--disable-gpu", "--user-data-dir=$env:TEMP\miniatuur-edge-audit", "--virtual-time-budget=6000", "--dump-dom", "http://localhost:$Port/audit.html?t=$(Get-Random)") -RedirectStandardOutput $dump -Wait -WindowStyle Hidden

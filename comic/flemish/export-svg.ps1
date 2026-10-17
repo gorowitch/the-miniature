@@ -1,4 +1,4 @@
-# Writes every album page and every panel of the SVG preview to comic/svg/ (pages/ and panels/).
+# Writes every album page and every panel of the SVG preview to comic/flemish/svg/ (pages/ and panels/).
 # Needs the preview server on -Port (default 8768) serving the comic folder, and Microsoft Edge.
 param([int]$Port = 8768)
 $ErrorActionPreference = "Stop"

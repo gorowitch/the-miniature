@@ -1,13 +1,16 @@
-# Bundles the album pages of the SVG preview (comic/svg/pages/*.svg: cover + A4 pages) into one PDF, one page per A4 sheet.
+# Bundles the album pages of one edition (comic/<edition>/svg/pages/*.svg: cover + A4 pages) into one PDF, one page per A4 sheet.
 # Uses headless Microsoft Edge (print to PDF); no Python or Node needed.
-#   make-pdf.ps1 [-Out <pdf>] [-Export] [-Port 8768]
-#   -Export   first re-export the SVGs from the current panels (needs the preview server on -Port: comic/serve.ps1)
-# Output default: comic/pdf/de-miniatuur.pdf. Prints the number of pages found in the PDF, so the caller can check it.
-param([string]$Out, [switch]$Export, [int]$Port = 8768)
+#   make-pdf.ps1 [-Edition flemish|english] [-Out <pdf>] [-Export] [-Port <port>]
+#   -Edition  flemish (default; comic/flemish, port 8768) or english (comic/english, port 8769)
+#   -Export   first re-export the SVGs from the current panels (starts the edition's preview server, comic/<edition>/serve.ps1, if none runs)
+# Output default: comic/flemish/pdf/de-miniatuur.pdf or comic/english/pdf/the-miniature.pdf. Prints the number of pages found in the PDF, so the caller can check it.
+param([ValidateSet("flemish", "english")][string]$Edition = "flemish", [string]$Out, [switch]$Export, [int]$Port = 0)
 $ErrorActionPreference = "Stop"
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path          # project root (.claude/skills/<skill>/scripts -> root)
-$comic = Join-Path $root "comic"
-if (-not $Out) { $Out = Join-Path $comic "pdf\de-miniatuur.pdf" }
+$comic = Join-Path $root "comic\$Edition"
+if (-not $Port) { $Port = $(if ($Edition -eq "english") { 8769 } else { 8768 }) }
+$title = $(if ($Edition -eq "english") { "The Miniature" } else { "De Miniatuur" })
+if (-not $Out) { $Out = Join-Path $comic $(if ($Edition -eq "english") { "pdf\the-miniature.pdf" } else { "pdf\de-miniatuur.pdf" }) }
 $Out = [IO.Path]::GetFullPath($Out)
 New-Item -ItemType Directory -Force -Path (Split-Path $Out) | Out-Null
 
@@ -26,11 +29,11 @@ if ($Export) {
 }
 
 $pages = Get-ChildItem (Join-Path $comic "svg\pages") -Filter "page-*.svg" | Sort-Object Name   # page-00-cover, page-01, ... in reading order
-if (-not $pages) { throw "No page SVGs in comic/svg/pages - run comic/export-svg.ps1 first (or pass -Export)." }
+if (-not $pages) { throw "No page SVGs in comic/$Edition/svg/pages - run comic/$Edition/export-svg.ps1 first (or pass -Export)." }
 
 # One HTML document with every page SVG inlined (inline, not <img>, so the Comic Neue web font in each SVG can load).
 $sb = New-Object Text.StringBuilder
-[void]$sb.Append('<!doctype html><html><head><meta charset="utf-8"><title>De Miniatuur</title><style>@page { size: A4; margin: 0 } html, body { margin: 0; padding: 0 } .p { width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; break-after: page } .p:last-child { page-break-after: auto; break-after: auto } .p > svg { display: block; width: 210mm; height: 297mm }</style></head><body>')
+[void]$sb.Append('<!doctype html><html><head><meta charset="utf-8"><title>' + $title + '</title><style>@page { size: A4; margin: 0 } html, body { margin: 0; padding: 0 } .p { width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; break-after: page } .p:last-child { page-break-after: auto; break-after: auto } .p > svg { display: block; width: 210mm; height: 297mm }</style></head><body>')
 foreach ($p in $pages) {
   $svg = [IO.File]::ReadAllText($p.FullName, [Text.Encoding]::UTF8) -replace '^\s*<\?xml[^>]*\?>\s*', ''
   [void]$sb.Append('<div class="p">').Append($svg).Append('</div>')

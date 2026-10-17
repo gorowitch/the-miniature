@@ -1,12 +1,13 @@
 #!/bin/bash
-# Checks every balloon text in comic/panels.js against the play (bible Section 1), letter for letter.
+# Checks every balloon text in comic/flemish/panels.js against the play (bible Section 1), letter for letter.
 # Runs of spaces are collapsed on both sides; nothing else is normalised.
 # Usage: bash check-panel-texts.sh [bible] [panels.js]      (run from the project root)
+#   English edition: bash check-panel-texts.sh the-miniature-cartoon-bible-en.md comic/english/panels.js
 BIBLE=${1:-the-miniature-cartoon-bible.md}
-PANELS=${2:-comic/panels.js}
+PANELS=${2:-comic/flemish/panels.js}
 PLAY=$(mktemp)
-S=$(grep -n '^# SECTION 1 - FULL PLAY' "$BIBLE" | cut -d: -f1)
-E=$(grep -n '^# SECTION 2 - ' "$BIBLE" | cut -d: -f1)
+S=$(grep -n -E '^# (SECTION 1|E1) - FULL PLAY' "$BIBLE" | cut -d: -f1)   # the Flemish bible (Section 1) or the English bible (E1)
+E=$(awk -v s="$S" 'NR>s && /^#{1,2} /{print NR; exit}' "$BIBLE")   # up to the next heading (Source Notes or Translation Notes)
 sed -n "${S},$((E-1))p" "$BIBLE" | tr '\n' ' ' | tr -s ' ' > "$PLAY"
 total=0; bad=0
 AUTHOR_BALLOONS=("(=) ?")   # panel 15e: the Black King offers a draw in chess notation, author decision (bible 7.84)
