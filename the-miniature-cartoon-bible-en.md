@@ -105,7 +105,7 @@ For glory and victory! Charge!
 6. Nxh7
 
 King:
-Goddamn it, Caballo, you stupid donkey! How many times must I tell you that I am the one in command during the game. Alfil, don't just stand there gaping like a fool, do something. Regina is hanging, surely you can see that for yourself? Damn and blast it, "The One Across the Board" is already to move.
+Goddamn it, Caballo, you stupid donkey! How many times must I tell you that I am the one in command during the game. Alfil, don't just stand there gaping, do something. Regina is hanging, surely you can see that yourself? Damn and blast it, "The One Across the Board" is already to move.
 6. ... gxh5
 
 King:
@@ -118,7 +118,7 @@ King:
 Thank you for that information, Counsellor Alfil; "The One Across the Board" won't like that one bit. Sir Caballo, to f6 at once!
 
 Caballo:
-Absolutely out of the question, Sire! Someone has spilled cola there, and I am not going to stand in that wet muck with my clean felt. If need be I'll capture on f8 instead, because that looks nice and dry. Oh, and by the way, "The One Across the Board" is offering a draw.
+Absolutely out of the question, Sire! Someone spilled cola there, and I am not going to stand in that wet muck with my clean felt. If need be I'll capture on f8, because that looks nice and dry. By the way, "The One Across the Board" is offering a draw.
 
 King: (sighs)
 Accept it, then.
