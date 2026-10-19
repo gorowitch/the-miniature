@@ -1,6 +1,6 @@
 # The Miniature Cartoon Bible
 
-Version 8.13
+Version 8.14
 
 ## Purpose
 Single canonical source of truth for all comic, cartoon, illustration, character-sheet and storyboard generation for "De Miniatuur".
@@ -120,6 +120,7 @@ Version 8.10 simplifies the closing page: the epilogue line at the top, the scor
 Version 8.11 adds the back cover: a blurb in cream on navy, "De Miniatuur" small at the foot (author decisions).
 Version 8.12 corrects stale statements: the proposal blocks of Scenes 6 to 16 are all approved, the closing page introduction, and the published edition (the PDF of the SVG album) recorded in P.1; the dossiers of the other pieces (Section 7) are approved (author decision).
 Version 8.13 records the new folder structure: the Flemish edition in comic/flemish/, the English edition in comic/english/ (author decision).
+Version 8.14 removes the outdated reference sketch of the boebel; the album's panel 2b is the reference image (author decision).
 
 ## Maintenance Rules
 - This file (`the-miniature-cartoon-bible.md`) is the artifact and the source of truth.
@@ -150,7 +151,7 @@ The approved source is immutable during production. It consists of:
 Approved staging is part of the approved source: the poses, gestures, gaze, listener reactions and camera of each panel are fixed in its approved panel block and manifest (Script Fidelity Rule, Section 13). The production process reproduces them; it does not add others.
 
 Not part of the approved source:
-- Previously generated images, sketches and layout previews. They are never an authority for story content, dialogue, panel structure or chess positions. The reference images in `references/` only illustrate canon that is written in this bible.
+- Previously generated images, sketches and layout previews. They are never an authority for story content, dialogue, panel structure or chess positions. Reference images (such as the album panels) only illustrate canon that is written in this bible.
 - Proposals that are not yet approved (none at present, 8.12: the dossiers of Section 7 and all panels are approved; any future proposal is marked "proposal").
 - Conversations, chat messages and tool output, until the author's decision is recorded in this bible.
 
@@ -450,7 +451,7 @@ An overconfident King attempts to conduct a glorious chess battle while his livi
 - Made readable only by light and shadow: one slope catches the light, the opposite slope is in soft shadow.
 - Smooth shading (author decision in 7.70): the light and shadow on the rise are soft and smooth, without visible steps or patches; the shadow side is clearly darker, the lit side has only a soft, warm highlight (not a white glare). The height of the rise is unchanged.
 - No outline, no rings or contour lines, no separate object, no dome with a hard edge.
-- Reference sketch: `references/boebel-panel-2b-sketch.png` (layout preview, not final art).
+- Reference image (8.14): panel 2b of the album, `comic/flemish/svg/panels/06-panel-2b.svg`, shows the rise in the approved style.
 
 ### Boebel Specification for Image Generation (added in 7.5)
 Image generators were confused by the boebel. Three causes: the word itself (Flemish dialect for a bump, which models do not know and read as "bubble"), descriptions that mostly say what it is not (naming "bubble" or "dome" in a prompt tends to produce one), and no dimensions. This subsection fixes the term, describes the boebel positively and gives its size.
@@ -1318,6 +1319,7 @@ Codes: A2 B2 C1 D3 E2 F2 G2 H2 I3 J2 K1 L2 M1 N2 O2 P2 Q3 R2
 | 8.11 | Author on page numbers: "Do I really need numbers ?"; Claude: not for a 12-page album read in one go (decision: none). Author: "What is your suggestion for the back cover ?"; Claude proposed navy and cream with a blurb and a vignette; the author: "Suggest me a somewhat more abstract blurb", "Don't give away that the game lasts only 6 moves", "Lets say I want more text - but don't use literal text from the story." (versions 1 and 2), "Generate a back cover based on Version 1", then "Personally I would leave out the vignette. For the text I would reformulate: 'Op de schaakclub' 'dat al heel wat partijen heeft overleefd.' 'Vandaag wil de witte koning schitteren' 'Alleen hebben zijn onderdanen daar zo hun eigen gedachten over.'", and "apply". New: Section 13, Back Cover. SVG preview: the back cover as the last album page (page-13-back.svg). |
 | 8.12 | Author: "make any corrections needed to the bible now", after "The idea is that this will be published as .pdf not with the intent of printing" (so the margin, bleed and colour points for printers do not apply). Corrections: the heading of the proposal blocks for Scenes 6 to 16 ("awaiting author approval") and the Move Box note "proposals until the panels are approved" (all 79 panels are approved); the Closing Page introduction ("from top to bottom" no longer matched the order of the list since 8.10); P.1 records the published edition (the PDF of the SVG album, drawn by Claude, as the colophon says). Also noted: the wink expression, said in the 8.10 row to stay in the SVG preview unused, was removed from the renderer after 8.11 (housekeeping, no change to any page). Old wording in Appendix A. Then the author, on the Proposed Dossiers of Section 7 (still marked "awaiting author approval"): "mark all as approved"; Section 7 (Other Pieces, the dossiers heading and introduction), the protocol line on proposals, Appendix B item 5 resolved. Still open, not changed: Appendix B item 14 (a piece on the slope of the raised centre, for an illustrated edition). |
 | 8.13 | Author, for the English edition: "I want the strip to be generated in a separate folder. This probably means we need to restructure the git repository a bit. How about moving the subfolders of comic to comic/flemmish so we can put comic/english next to it ?" Claude proposed shared code with output per edition; the author chose everything per edition: comic/ moved to comic/flemish/ (port 8768), comic/english/ is a copy of the code (port 8769) whose texts will follow the English bible (the-miniature-cartoon-bible-en.md); the drawings stay identical in both. Path references updated in P.1 and Section 18; old wording in Appendix A. |
+| 8.14 | Author: "It seems that the references folder is olding an unneeded artefact is that correct ? C:developmentprojects	he-miniatureeferencesboebel-panel-2b-sketch.png"; Claude: not used by the album, the export or the PDF, referred to once in the boebel section, and outdated (no crossed arms, grumbles with tails, old colours, old shading). Author: "if it is not needed to generate the final result then I want it removed". The file and the references/ folder removed; the boebel section points to panel 2b of the album instead, and the protocol line no longer names the folder; old wording in Appendix A. |
 
 ---
 
@@ -5580,6 +5582,8 @@ Kept for history. Do not use for generation.
 - 7.3 to 8.11, Appendix B item 5: "5. **Missing dossiers.** White rooks, White knight b1, White bishop c1, Black Queen, Black bishops, Black knights, Black rook a8. Status 7.3: proposals in Section 7 (Proposed Dossiers), awaiting author approval." -> Resolved in 8.12 by author decision.
 - 8.12, P.1: "The published edition (author decisions in 8.11, recorded in 8.12): the comic is published as a PDF (`comic/pdf/de-miniatuur.pdf`), not printed; it is the SVG album drawn by Claude (colophon: "Tekeningen: Claude (Anthropic)", Closing Page). The illustration process above, with Copilot or ChatGPT as the image generator, remains the process for a possible illustrated edition." -> Changed in 8.13: the PDF path is comic/flemish/pdf/de-miniatuur.pdf (the comic folder split per edition).
 - 7.7 to 8.12, Section 18 (proposal blocks): "Camera and character lines describe the SVG preview (`comic/panels.js`, rendered by `comic/index.html`); gesture names are the preview's (for example "point-down-l": arm pointing down, to the left as seen in the image)." -> Changed in 8.13: comic/flemish/panels.js, comic/flemish/index.html.
+- Up to 8.13, Section 3 (the boebel): "Reference sketch: `references/boebel-panel-2b-sketch.png` (layout preview, not final art)." -> Changed in 8.14 by author decision: the outdated sketch is removed from the project; the reference image is panel 2b of the album.
+- Up to 8.13, Strict Adaptation Protocol: "Previously generated images, sketches and layout previews. They are never an authority for story content, dialogue, panel structure or chess positions. The reference images in `references/` only illustrate canon that is written in this bible." -> Changed in 8.14: the references/ folder no longer exists; "Reference images (such as the album panels) only illustrate canon that is written in this bible."
 
 # APPENDIX B - OPEN QUESTIONS
 Items that need a decision from the author.
@@ -5730,3 +5734,4 @@ Items that need a decision from the author.
 | 8.11 | - | Back cover: the blurb on navy, "De Miniatuur" at the foot; no page numbers. |
 | 8.12 | - | Corrections: all panels approved (Section 18 proposal heading, Move Box note); Closing Page introduction; the published edition is the PDF of the SVG album (P.1). The dossiers of the other pieces approved (Section 7; Appendix B item 5). |
 | 8.13 | - | Folder structure: comic/flemish/ (this edition) and comic/english/. |
+| 8.14 | - | The outdated boebel sketch removed; the reference image is panel 2b of the album. |
