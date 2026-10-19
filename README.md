@@ -35,5 +35,6 @@ Requires Windows with PowerShell and Microsoft Edge (no Python or Node).
 ## Releases
 
 - `the-miniature-flemish-v1.0.0`: the finished Flemish edition.
+- `the-miniature-english-v1.0.0`: the finished English edition.
 
 © 2026 Sven Gorts. All rights reserved.
