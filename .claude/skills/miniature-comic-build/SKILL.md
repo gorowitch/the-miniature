@@ -34,7 +34,7 @@ Shoot the panels in batches with `review.html` (about 8-12 per screenshot) and c
 
 ### 3. Fix
 - **Panel defects** (camera, gesture, balloon placement): fix in `panels.js`. For approved panels, a fix may change how the preview shows the bible's description, never what the description says. If the bible's description itself seems wrong or impossible, do not "fix" it in the preview: add it to the report as a question for the author (Appendix B).
-- **Renderer defects** that affect many panels (a sprite, balloon placement, camera defaults): fix in `renderer.js`, then re-shoot `test.html` and a sample of different panel types to catch regressions.
+- **Renderer defects** that affect many panels (a sprite, balloon placement, camera defaults): fix in `renderer.js` (in both editions), then re-shoot a sample of different panel types with `review.html` to catch regressions.
 - Re-shoot every changed panel and check it again. Repeat until the defect list is empty or only contains items that need the author.
 
 ### 4. Export

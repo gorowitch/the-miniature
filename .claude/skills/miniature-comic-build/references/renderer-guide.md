@@ -10,7 +10,6 @@ The preview comic lives in `comic/flemish/` (the Flemish edition, port 8768) and
 | `review.html` | `review.html?from=<id>&n=<count>`: panels one by one at a readable size, with id and status |
 | `serve.ps1` | local server (`-Port 8768`) |
 | `export-svg.ps1` | writes `comic/flemish/svg/pages/*.svg` and `comic/flemish/svg/panels/*.svg` |
-| `test.html` | four fixed panels (5a, 2b, 1c, 6d) for regression checks after a renderer change |
 
 ## Panel object
 ```js
@@ -50,4 +49,4 @@ Lessons from earlier rounds:
 ## Pitfalls
 - **Edit `panels.js` and `renderer.js` with the Edit tool or sed.** Never round-trip them through PowerShell `Get-Content`/`Set-Content`: that double-encodes the UTF-8 (’ becomes â€™). `check-panel-texts.sh` warns about it.
 - The browser pane cannot screenshot a minimised window and caches scripts; use `shot.ps1` (headless Edge, fresh cache).
-- After a renderer change, re-shoot `test.html` and a few panels of different types: close-up, wide, from White's side, move panel.
+- After a renderer change, re-shoot a few panels of different types with `review.html` (close-up, wide, from White's side, move panel), in both editions.

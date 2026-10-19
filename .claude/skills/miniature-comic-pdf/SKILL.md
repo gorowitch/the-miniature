@@ -35,6 +35,6 @@ The PDF itself cannot be rendered on this machine (no poppler). For a visual che
 Send the PDF with SendUserFile (display "attach") and give its path, size and page count. Mention whether the pages were re-exported, and that proposal panels show their dashed orange frame in the PDF just as in the preview.
 
 ## Notes
-- The PDF is generated output, like the SVGs. Do not commit it unless the user asks; `comic/flemish/pdf/` stays out of commits.
+- The PDFs are the published result (`comic/flemish/pdf/de-miniatuur.pdf`, `comic/english/pdf/the-miniature.pdf`) and are committed together with the SVGs they are built from, when the user asks for a commit.
 - Fonts: the pages use the Comic Neue web font from Google Fonts. Without an internet connection Edge falls back to Comic Sans MS, which looks close but not identical; mention it if the check shows the fallback.
 - Size: about 12 MB for 12 pages, because every panel is vector art with many shapes. That is normal.
