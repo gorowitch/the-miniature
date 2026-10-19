@@ -1,6 +1,6 @@
 # The Miniature - The Making Of the English Edition
 
-Statistics on the effort that went into the English edition of "De Miniatuur", collected on 19 October 2026 (English bible en-0.4, commit `726c5f2`). For the Flemish original, see `the-miniature-the-making-of.md` in the project root.
+Statistics on the effort that went into the English edition of "De Miniatuur", collected on 19 October 2026 (English bible en-0.4, commit `726c5f2`). For the Flemish original, see `comic/flemish/de-miniatuur-the-making-of.md`.
 
 Most numbers are counted exactly from the project files, the git history and the session log. The hours are estimates (see the notes at the end).
 
