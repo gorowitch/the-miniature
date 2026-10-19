@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tail audit</title></head><body>
+<script src="font.js"></script><script src="renderer.js"></script><script src="panels.js"></script>
+<script>
+window.MINIATUUR_FONT_READY.then(() => {   // wait for the embedded font, so balloons are measured as in the album (bible 7.92)
+// Balloon-tail audit: renders every panel off screen and lists the tails that cross a face or hat.
+for (const P of window.PANELS) { const s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); window.MiniatuurRenderer.renderPanel(s, P, {}); }
+const pre = document.createElement("pre"); pre.id = "audit"; pre.textContent = JSON.stringify(window.__tailAudit); document.body.appendChild(pre);
+});
+</script></body></html>

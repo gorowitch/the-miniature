@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Miniature - SVG album</title>
+<script src="font.js"></script>
+<style>
+  body { margin: 0; background: #5b5047; font-family: system-ui, sans-serif; color: #eee; }
+  header { padding: 14px 20px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 18px; margin: 0; }
+  .legend span { display: inline-block; width: 22px; height: 12px; border: 2px dashed #e8862a; vertical-align: middle; margin-right: 6px; }
+  .page { width: min(900px, calc(100vw - 32px)); margin: 0 auto 28px; }
+  .page .bar { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 4px; }
+  .page svg { display: block; width: 100%; height: auto; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.45); }
+  button { font: inherit; font-size: 12px; padding: 3px 10px; cursor: pointer; }
+  #err { color: #ffb4a8; white-space: pre-wrap; padding: 0 20px; }
+</style></head><body>
+<header><h1>The Miniature - SVG album preview (English edition)</h1>
+  <div>All 79 panels approved; front cover, story, closing page and back cover.</div></header>
+<pre id="err"></pre>
+<div id="album"></div>
+<script>window.onerror = (m, s, l) => { document.getElementById("err").textContent += m + " @" + l + "\n"; };</script>
+<script src="renderer.js"></script>
+<script src="panels.js"></script>
+<script>
+// render only once the embedded font has loaded, so balloon text is measured in Comic Neue (bible 7.92)
+window.MINIATUUR_FONT_READY.then(() => {
+const NS = "http://www.w3.org/2000/svg", R = window.MiniatuurRenderer;
+const PW = 1700, PH = 2404, MX = 33, GX = 34, MY = 31, GY = 20, CW = 800, CH = 570;
+const el = (n, a, p) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+
+// Lay panels out in rows of two cells; a wide panel takes a whole row; a lone panel before a wide one takes the whole strip.
+// A tall panel (bible 7.37) takes two strips; a page holds four strips.
+const rows = []; let cur = [];
+for (const P of window.PANELS) {
+  if (P.wide) { if (cur.length) rows.push(cur); rows.push([P]); cur = []; continue; }
+  cur.push(P); if (cur.length === 2) { rows.push(cur); cur = []; }
+}
+if (cur.length) rows.push(cur);
+const strips = row => row[0].tall ? 2 : 1;
+const pages = []; let pg = [], used = 0;
+for (const row of rows) { if (used + strips(row) > 4) { pages.push(pg); pg = []; used = 0; } pg.push(row); used += strips(row); }
+if (pg.length) pages.push(pg);
+
+function newPage(label, scenes) {
+  const wrap = document.createElement("div"); wrap.className = "page";
+  const bar = document.createElement("div"); bar.className = "bar";
+  const t = document.createElement("span"); t.textContent = label + (scenes ? "  ·  scene " + scenes : ""); bar.appendChild(t);
+  const btn = document.createElement("button"); btn.textContent = "Download SVG"; bar.appendChild(btn);
+  wrap.appendChild(bar);
+  const svg = el("svg", { xmlns: NS, viewBox: `0 0 ${PW} ${PH}`, width: "210mm", height: "297mm" }); wrap.appendChild(svg);
+  el("style", {}, el("defs", {}, svg)).textContent = window.MINIATUUR_FONT_CSS || "";   // the font once per page; the panels on it leave it out (noFont)
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: "#fff" }, svg);
+  btn.onclick = () => {
+    const blob = new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "the-miniature-" + label.toLowerCase().replace(/\s+/g, "-") + ".svg"; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  };
+  document.getElementById("album").appendChild(wrap);
+  return svg;
+}
+function panelAt(page, P, x, y, w, h) {
+  const s = el("svg", { x, y, width: w, height: h, preserveAspectRatio: "xMidYMid slice", overflow: "hidden" }, page);
+  R.renderPanel(s, P, { mark: true, noFont: true });
+  return s;
+}
+
+// Cover: title and subtitle only here; the whole cast, the board and the raised centre visible; both kings.
+(function cover() {
+  const s = newPage("Cover"), CQ = new URLSearchParams(location.search), CV = { bg: CQ.get("bg") || "#1f3a5f", tf: CQ.get("tf") || "#f4e4c1", ts: CQ.get("ts") || "#0e1a2b", ink: CQ.get("ink") || "#f4e4c1" };   // cover colours: navy and cream (bible 7.77); ?bg=&tf=&ts=&ink= for colour previews
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: CV.bg }, s);
+  const t = el("text", { x: PW / 2, y: 560, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 230, fill: CV.tf, stroke: CV.ts, "stroke-width": 9, "paint-order": "stroke" }, s); t.textContent = "The Miniature";
+  const st = el("text", { x: PW / 2, y: 700, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 76, fill: CV.ink }, s); st.textContent = "A Modern Farce in One Act";
+  const C = { id: "cover", scene: 1, state: 0, clean: true, clock: false, cam: { from: [11.2, -1.93, 4.47], at: [4.0, 4.37, -0.93], f: 620 },   // whole board in view, no floor (bible 7.90)
+   
+    cast: { koning: { expr: "proud", gest: "raise-r" }, bking: { expr: "calm" }, regina: { lookAt: "koning" }, alfil: { lookAt: "koning" }, caballo: { expr: "heroic" }, brookh8: { expr: "proud" } } };
+  const box = el("svg", { x: 60, y: 880, width: PW - 120, height: 1126 }, s);
+  el("rect", { x: 56, y: 876, width: PW - 112, height: 1134, fill: "none", stroke: "#141414", "stroke-width": 8 }, s);
+  R.renderPanel(box, C, { noFont: true });
+  // author, right aligned below the board image (bible Section 13, Cover Direction; 7.18)
+  const au = el("text", { x: PW - 60, y: 2130, "text-anchor": "end", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": 84, fill: CV.ink }, s); au.textContent = "S. Gorts";
+})();
+
+pages.forEach((rowsOnPage, pi) => {
+  const sc = [...new Set(rowsOnPage.flat().map(p => p.scene))];
+  const s = newPage("Page " + (pi + 1), sc.length > 1 ? sc[0] + "-" + sc[sc.length - 1] : sc[0]);
+  let si = 0;  // strip index on the page
+  rowsOnPage.forEach(row => {
+    const y = MY + si * (CH + GY); si += strips(row);
+    if (row[0].tall) panelAt(s, row[0], MX, y, CW * 2 + GX, CH * 2 + GY);
+    else if (row[0].wide) panelAt(s, row[0], MX, y, CW * 2 + GX, CH);
+    else if (row.length === 1) panelAt(s, Object.assign({}, row[0], { wide: true }), MX, y, CW * 2 + GX, CH);  // a lone panel takes the whole strip
+    else row.forEach((P, ci) => panelAt(s, P, MX + ci * (CW + GX), y, CW, CH));
+  });
+});
+
+// Closing page (author decisions, bible 8.07 to 8.10): the epilogue line at the top, the game on a club scoresheet in the vertical centre
+// of the page, the colophon at the foot. It makes the inside of the album 12 pages (the cover already serves as the title page).
+// Layout (8.10): the headline and the colophon at equal distances from the top and bottom edges; no picture and no "Einde".
+(function closing() {
+  const s = newPage("Colophon"), F = "'Comic Neue','Comic Sans MS',cursive", INK = "#17110d", PEN = "#1f3f8f", GREY = "#4a4038", COL = 900, X0 = (PW - COL) / 2;
+  const txt = (t, x, y, fs, o, p) => { const e = el("text", Object.assign({ x, y, "text-anchor": "middle", "font-family": F, "font-weight": 700, "font-size": fs, fill: INK }, o || {}), p || s); e.textContent = t; return e; };
+  // the scoresheet: printed labels and lines in black and grey, the players' entries in blue ballpoint, the sheet turned a little
+  const SH = 770, sy = 817, K = 1.15, g = el("g", { transform: `translate(${PW / 2} ${sy + SH / 2}) rotate(-2) scale(${K}) translate(${-PW / 2} ${-(sy + SH / 2)})` }, s);   // the sheet a little larger, the centrepiece
+  el("rect", { x: X0 + 8, y: sy + 10, width: COL, height: SH, fill: "#000", opacity: .12 }, g);   // a soft shadow under the sheet
+  el("rect", { x: X0, y: sy, width: COL, height: SH, fill: "#fbf8ef", stroke: INK, "stroke-width": 2.5 }, g);
+  const L = X0 + 40, Rr = X0 + COL - 40, lab = { "text-anchor": "start", fill: GREY }, pen = { "text-anchor": "start", fill: PEN };
+  txt("SCORESHEET", PW / 2, sy + 52, 30, { "letter-spacing": 4 }, g);
+  const field = (label, value, y) => { txt(label, L, y, 26, lab, g); el("line", { x1: L + 110, y1: y + 8, x2: Rr, y2: y + 8, stroke: "#8a8178", "stroke-width": 1.5 }, g); txt(value, L + 122, y, 40, pen, g); };
+  field("Game", "The Miniature", sy + 118);   // the name of the game
+  field("White", "The King", sy + 178);
+  field("Black", "The One Across the Board", sy + 238);
+  // the move table: number, White, Black; six moves played, two rows left empty (a miniature)
+  const MOVES = [["e3", "d5"], ["Bd3", "e6"], ["Nh3", "Bd7"], ["Qh5", "Ne7"], ["Ng5", "g6"], ["Nxh7", "gxh5"], ["", ""], ["", ""]];
+  const ty = sy + 278, rh = 40, c1 = L + 70, c2 = L + 70 + (Rr - L - 70) / 2, tb = ty + rh * (MOVES.length + 1);
+  el("rect", { x: L, y: ty, width: Rr - L, height: rh * (MOVES.length + 1), fill: "none", stroke: INK, "stroke-width": 2 }, g);
+  for (let i = 1; i <= MOVES.length; i++) el("line", { x1: L, y1: ty + i * rh, x2: Rr, y2: ty + i * rh, stroke: "#8a8178", "stroke-width": i === 1 ? 2 : 1.2 }, g);
+  for (const x of [c1, c2]) el("line", { x1: x, y1: ty, x2: x, y2: tb, stroke: INK, "stroke-width": 1.6 }, g);
+  [["No.", (L + c1) / 2], ["White", (c1 + c2) / 2], ["Black", (c2 + Rr) / 2]].forEach(([t, x]) => txt(t, x, ty + 28, 24, { fill: GREY }, g));
+  MOVES.forEach(([w, b], i) => { const y = ty + (i + 1) * rh + 29; txt(String(i + 1), (L + c1) / 2, y, 24, { fill: GREY }, g); if (w) txt(w, (c1 + c2) / 2, y + 2, 34, { fill: PEN }, g); if (b) txt(b, (c2 + Rr) / 2, y + 2, 34, { fill: PEN }, g); });
+  // the result, written in and circled
+  const ry = tb + 50;
+  txt("Result", L, ry, 26, lab, g); txt("½ – ½", L + 210, ry + 2, 44, { fill: PEN }, g);
+  el("ellipse", { cx: L + 210, cy: ry - 12, rx: 82, ry: 30, fill: "none", stroke: PEN, "stroke-width": 2.5, transform: `rotate(-4 ${L + 210} ${ry - 12})` }, g);
+  // the epilogue line (the author's own wording, not in the article), as the headline at the top
+  ["A few weeks later", "the chess club bought", "new boards."].forEach((t, i) => txt(t, PW / 2, 248 + i * 82, 64));
+  // the colophon: small print, grey, left-aligned on the edge of the sheet, at the foot of the page
+  ["Text: Sven Gorts, based on the article De Miniatuur (2012)", "Drawings: Claude (Anthropic)", "Typeface: Comic Neue", "First English edition, October 2026", "© 2026 Sven Gorts. All rights reserved."]
+    .forEach((t, i) => txt(t, (PW - COL * K) / 2 + 20, 1997 + i * 50, 30, { "text-anchor": "start", fill: GREY }));
+})();
+
+// Back cover (author decisions, bible 8.11): the blurb in cream on the navy of the front cover, centred on the page; "The Miniature" small
+// at the foot; no picture and no author name (the name is on the front).
+(function backCover() {
+  const s = newPage("Back cover"), CQ = new URLSearchParams(location.search), CV = { bg: CQ.get("bg") || "#1f3a5f", tf: CQ.get("tf") || "#f4e4c1", ink: CQ.get("ink") || "#f4e4c1" };
+  el("rect", { x: 0, y: 0, width: PW, height: PH, fill: CV.bg }, s);
+  const txt = (t, x, y, fs, o) => { const e = el("text", Object.assign({ x, y, "text-anchor": "middle", "font-family": "'Comic Neue','Comic Sans MS',cursive", "font-weight": 700, "font-size": fs, fill: CV.ink }, o || {}), s); e.textContent = t; return e; };
+  const FS = 50, LH = 72, GAP = 40, MAXW = 1240;
+  const P = ["At the chess club there is a board that has survived quite a few games. The pieces know it like the back of their hand: every square, every corner, every spot where you would rather not stand.",
+    "Today the white king wants to shine. He has a plan, an opening and an unshakeable faith in himself. Only his subjects have their own ideas about that.",
+    "For what do you do when you have to obey orders on a board you would rather not set foot on?",
+    "A modern farce about pride, stubbornness and good advice that nobody wants to hear, played by the pieces themselves."];
+  const cv = document.createElement("canvas").getContext("2d"); cv.font = `700 ${FS}px 'Comic Neue'`;
+  const brk = (p, mw) => { const out = []; let line = ""; for (const w of p.split(" ")) { const t = line ? line + " " + w : w; if (cv.measureText(t).width > mw && line) { out.push(line); line = w; } else line = t; } if (line) out.push(line); return out; };
+  // balanced lines: the narrowest width that keeps the same number of lines, so no paragraph ends on a lone word
+  const bal = p => { const n = brk(p, MAXW).length; let mw = MAXW; while (mw > 400 && brk(p, mw - 10).length === n) mw -= 10; return brk(p, mw); };
+  const LINES = P.map(bal), hBlock = LINES.flat().length * LH + (P.length - 1) * GAP;
+  const xb = (PW - Math.max(...LINES.flat().map(l => cv.measureText(l).width))) / 2;   // the block centred on the page, the lines left-aligned
+  let y = (PH - hBlock) / 2 + 40;
+  LINES.forEach((ls, pi) => { ls.forEach(l => { txt(l, xb, y, FS, { "text-anchor": "start", "font-style": pi === P.length - 1 ? "italic" : "normal" }); y += LH; }); y += GAP; });   // the last paragraph, the tagline, in italics
+  txt("The Miniature", PW / 2, 2220, 64, { fill: CV.tf });
+})();
+
+// Export mode (index.html?export=1): every page and every panel as SVG source in one JSON block,
+// read by headless Edge (--dump-dom) and written to comic/svg/ by export-svg.ps1.
+if (new URLSearchParams(location.search).has("export")) {
+  const XML = '<?xml version="1.0" encoding="UTF-8"?>\n', ser = s => XML + new XMLSerializer().serializeToString(s);
+  const files = {};
+  const all = document.querySelectorAll(".page > svg");   // the first page is the front cover, the last the back cover (bible 8.11)
+  all.forEach((s, i) => { files["pages/page-" + String(i).padStart(2, "0") + (i ? (i === all.length - 1 ? "-back" : "") : "-cover") + ".svg"] = ser(s); });
+  window.PANELS.forEach((P, i) => {
+    const s = document.createElementNS(NS, "svg"); R.renderPanel(s, P, { mark: true });
+    const [, , w, h] = s.getAttribute("viewBox").split(" "); s.setAttribute("width", w); s.setAttribute("height", h);
+    files["panels/" + String(i + 1).padStart(2, "0") + "-panel-" + P.id + ".svg"] = ser(s);
+  });
+  const pre = document.createElement("pre"); pre.id = "export"; pre.textContent = JSON.stringify(files);
+  document.body.innerHTML = ""; document.body.appendChild(pre);
+}
+});
+</script></body></html>

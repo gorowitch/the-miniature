@@ -12,10 +12,10 @@ Read `../miniature-comic-build/references/renderer-guide.md` before changing pan
 ## The loop
 
 ### 1. Pick the unit
-One scene at a time works best (the author walks through scenes in order); a single panel when the author names one. "Next scene" means the first scene whose panels are not yet approved (`status: "proposal"` in `comic/panels.js`, or the Script Coverage Map in bible Section 22.E).
+One scene at a time works best (the author walks through scenes in order); a single panel when the author names one. "Next scene" means the first scene whose panels are not yet approved (`status: "proposal"` in `comic/flemish/panels.js`, or the Script Coverage Map in bible Section 22.E).
 
 ### 2. Render and self-check before showing
-Start the server if needed (`comic/serve.ps1 -Port 8768`, in the background), shoot the panels with `shot.ps1 -From <first id> -N <count>` and inspect the PNG against the visual checklist. Fix what you can (camera, gesture, balloon placement) and re-shoot. **Never show the author a panel you have not looked at yourself**; an earlier round showed a broken panel ("something went terribly wrong") because it was not checked first.
+Start the server if needed (`comic/flemish/serve.ps1 -Port 8768`, in the background), shoot the panels with `shot.ps1 -From <first id> -N <count>` and inspect the PNG against the visual checklist. Fix what you can (camera, gesture, balloon placement) and re-shoot. **Never show the author a panel you have not looked at yourself**; an earlier round showed a broken panel ("something went terribly wrong") because it was not checked first.
 
 ### 3. Show
 Show the panels so the author can judge them at a readable size. Use the SendUserFile tool with the screenshot, or the browser pane at `http://localhost:8768/review.html?from=<id>&n=<count>`. With each panel give, in a few lines:
@@ -33,7 +33,7 @@ For each remark decide what it is:
 If a remark is ambiguous, ask before changing anything.
 
 ### 5. Apply in both places
-- **Preview:** change `comic/panels.js` (or `renderer.js` for a general visual rule), re-shoot, and run the visual checklist again.
+- **Preview:** change `comic/flemish/panels.js` (or `renderer.js` for a general visual rule), re-shoot, and run the visual checklist again.
 - **Bible:** use the `miniature-bible-change` skill (snapshot, additive edit, verification, log in Section 15). Specifically:
   - panel-specific feedback updates that panel's block in Section 18 and its manifest in Section 20.3 (camera, characters, gaze, expression);
   - a general rule goes to the relevant canon section and the Common Prompt Block if the image generator must know it, and is logged as an author decision;
